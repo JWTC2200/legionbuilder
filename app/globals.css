@@ -1,27 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Graduate&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"] {
+    -webkit-appearance: none;
+    margin: 0;
+    -moz-appearance: textfield !important;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
+.dataslate_background {
+  background: rgb(176, 196, 183);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(176, 196, 183, 1) 0%,
+    rgba(242, 251, 247, 1) 57%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(176, 196, 183, 1) 0%,
+    rgba(242, 251, 247, 1) 57%
+  );
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    90deg,
+    rgba(176, 196, 183, 1) 0%,
+    rgba(242, 251, 247, 1) 57%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b0c4b7",endColorstr="#f2fbf7",GradientType=1);
 }
