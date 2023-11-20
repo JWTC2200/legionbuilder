@@ -1,4 +1,4 @@
-import { DETACHMENT, FACTION, ALLEGIANCE } from "../types";
+import { DETACHMENT, FACTION, ALLEGIANCE, DETACHMENT_TYPE } from "../types";
 
 // astartes 1000-1999, solar 2000-2999, knights-titans 4000-4999
 
@@ -8,6 +8,7 @@ export const detachmentData: DETACHMENT[] = [
     name: "Questoris Knight Banner",
     faction: FACTION.strategic,
     allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.knight,
     base_cost: 180,
     base_size: 1,
     max_size: 6,

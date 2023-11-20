@@ -38,6 +38,12 @@ export enum UNIT_TYPE {
 
 export const detachmentTypeArray = Object.values(DETACHMENT_TYPE);
 
+export enum SLOTSET {
+  compulsory = "compulsory",
+  optional = "optional",
+  choice = "choice",
+}
+
 export interface FORMATION {
   id: number;
   name: string;
@@ -61,13 +67,14 @@ export interface DETACHMENT {
   name: string;
   faction: FACTION;
   allegiance: ALLEGIANCE;
+  detachment_type: DETACHMENT_TYPE;
   base_cost: number;
   base_size: number;
   max_size: number;
   main_unit: number[];
   related_unit: number[];
   loadout: DETACHMENT_LOADOUT[];
-  upgrade_options: DETACHMENT_UPGRADE[];
+  upgrade_options: DETACHMENT_UPGRADE[] | null;
   datasheet_info: DETACHMENT_UPGRADE_DATASHEET[];
 }
 
@@ -134,10 +141,11 @@ export interface BUILDER_LIST {
 
 export interface BUILDER_FORMATION {
   name: string;
-  id: string;
-  choice: number[][];
-  compulsory: number[];
-  optional: number[];
+  ref_id: string;
+  id: number;
+  choice: number[][] | null;
+  compulsory: BUILDER_DETACHMENT_SLOT[] | null;
+  optional: BUILDER_DETACHMENT_SLOT[] | null;
 }
 
 export interface BUILDER_DETACHMENT_SLOT {
@@ -147,7 +155,7 @@ export interface BUILDER_DETACHMENT_SLOT {
   restricted?: boolean;
   options: number[];
   description?: string;
-  selected_unit: BUILDER_DETACHMENT_UNIT;
+  selected_unit: BUILDER_DETACHMENT_UNIT | null;
 }
 
 export interface BUILDER_DETACHMENT_UNIT {

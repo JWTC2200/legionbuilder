@@ -1,44 +1,46 @@
+import { formationData } from "../data/formation_data";
 import { formationSlotData } from "../data/formation_slot_data";
-import { BUILDER_FORMATION, FORMATION } from "../types";
+import { FORMATION_SLOT } from "../types";
 
-export const createBuilderFormation = (
-  formationData: FORMATION,
-  number: number
-): BUILDER_FORMATION => {
-  const createBuilderDetachmentSlots = (
-    slotArray: number[] | null,
-    reference: string
-  ) => {
-    if (slotArray) {
-      const detachmentSlotArray = slotArray.filter((slot, index) => {
-        const slotData = formationSlotData.find(
-          (slotData) => slotData.id === slot
-        );
-        if (slotData) {
-          return slotData.id;
-        }
-      });
-      return detachmentSlotArray;
-    }
-    return [];
-  };
+export const setBuilderDetachment = (
+  formationID: number,
+  formationRef: string
+) => {
+  const findFormation = formationData.find(
+    (formation) => formation.id === formationID
+  );
+  if (findFormation) {
+    return {
+      name: findFormation.name,
+      id: formationID,
+      compulsory: setBuilderDetachmentSlots(
+        findFormation.compulsory,
+        formationRef
+      ),
+      optional: setBuilderDetachmentSlots(findFormation.optional, formationRef),
+    };
+  }
+  return false;
+};
 
-  const formationChoiceSlots = formationData.choice
-    ? formationData.choice.map((choice, index) =>
-        createBuilderDetachmentSlots(choice, `${index}choice`)
-      )
-    : [];
-
-  const newFormation: BUILDER_FORMATION = {
-    name: formationData.name,
-    id: `formation${number}`,
-    choice: formationChoiceSlots,
-    compulsory: createBuilderDetachmentSlots(
-      formationData.compulsory,
-      "compulsory"
-    ),
-    optional: createBuilderDetachmentSlots(formationData.optional, "optional"),
-  };
-
-  return newFormation;
+export const setBuilderDetachmentSlots = (
+  slotArray: number[] | null,
+  formationRef: string
+) => {
+  if (slotArray) {
+    const slots: FORMATION_SLOT[] = slotArray
+      .map((id) => formationSlotData.find((slot) => slot.id === id))
+      .filter((exists) => {
+        return exists !== undefined;
+      }) as FORMATION_SLOT[];
+    const returnedSlots = slots.map((slot, index) => {
+      return {
+        ...slot,
+        slot_ref: formationRef + "compulsorySlot" + index,
+        selected_unit: null,
+      };
+    });
+    return returnedSlots;
+  }
+  return null;
 };

@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { formationData } from "../data/formation_data";
 import { BUILDER_FORMATION, BUILDER_LIST, FACTION } from "../types";
-import { createBuilderFormation } from "./utils";
 import BuilderFormation from "./components/BuilderFormation";
 
 const page = () => {
@@ -12,21 +11,18 @@ const page = () => {
     main_faction: FACTION.astartes,
     formations: [],
   });
-  const [selectedFormation, setSelectedFormation] = useState<number>(0);
   const [formationCounter, setFormationCounter] = useState(0);
 
   const addFormation = () => {
-    const formationInfo = formationData.find(
-      (formation) => formation.id === selectedFormation
-    );
-    if (!formationInfo) {
-      return;
-    }
     setFormationCounter((prev) => prev + 1);
-    const newFormation = createBuilderFormation(
-      formationInfo,
-      formationCounter
-    );
+    const newFormation: BUILDER_FORMATION = {
+      name: "",
+      ref_id: `formation${formationCounter}`,
+      id: 0,
+      choice: null,
+      compulsory: null,
+      optional: null,
+    };
     setArmyList((prev) => {
       return { ...prev, formations: [...prev.formations, newFormation] };
     });
@@ -79,18 +75,6 @@ const page = () => {
       </div>
       {/* DETACHMENT SELECTION */}
       <div className="w-full mt-4 p-4 bg-green-950 text-green-50 flex flex-wrap justify-center gap-8">
-        <select
-          value={selectedFormation}
-          onChange={(e) => setSelectedFormation(Number(e.target.value))}
-          className="bg-green-950 rounded-sm p-1 text-lg font-graduate"
-        >
-          <option value={0}>Select formation:</option>
-          {formationData.map((formation) => (
-            <option key={formation.name + formation.id} value={formation.id}>
-              {formation.name}
-            </option>
-          ))}
-        </select>
         <button onClick={addFormation} className="border-2 rounded-full p-1">
           Add formation
         </button>
@@ -104,7 +88,7 @@ const page = () => {
           <div className="p-4">
             {armyList.formations.map((formation) => (
               <BuilderFormation
-                key={formation.id}
+                key={formation.ref_id}
                 formation={formation}
                 setArmyList={setArmyList}
               />
