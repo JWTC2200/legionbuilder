@@ -125,3 +125,40 @@ export interface SPECIAL_RULE {
   name: string;
   description: string;
 }
+
+export interface BUILDER_LIST {
+  points: number;
+  main_faction: FACTION;
+  formations: BUILDER_FORMATION[];
+}
+
+export interface BUILDER_FORMATION {
+  name: string;
+  id: string;
+  choice: number[][];
+  compulsory: number[];
+  optional: number[];
+}
+
+export interface BUILDER_DETACHMENT_SLOT {
+  slot_ref: string;
+  id: number;
+  type: DETACHMENT_TYPE;
+  restricted?: boolean;
+  options: number[];
+  description?: string;
+  selected_unit: BUILDER_DETACHMENT_UNIT;
+}
+
+export interface BUILDER_DETACHMENT_UNIT {
+  id: number;
+  name: string;
+  upgrade_options: BUILDER_DETACHMENT_UNIT_UPGRADES[];
+}
+
+export interface BUILDER_DETACHMENT_UNIT_UPGRADES {
+  name: string;
+  number: number;
+  cost: number;
+  size: number;
+}

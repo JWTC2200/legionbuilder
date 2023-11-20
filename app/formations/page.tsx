@@ -5,7 +5,7 @@ import { factionTypeArray } from "../types";
 
 const page = () => {
   return (
-    <main className="flex flex-wrap gap-12 p-4">
+    <main className="flex flex-wrap gap-12 p-4 max-w-screen-xl">
       {factionTypeArray.map((faction) => (
         <div key={faction} className="flex flex-col">
           {" "}

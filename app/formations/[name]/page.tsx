@@ -12,7 +12,7 @@ const page = ({ params: { name } }: { params: { name: string } }) => {
     notFound();
   }
   return (
-    <main className="py-8">
+    <main className="py-8 max-w-screen-xl">
       <FormationDataslate {...formationEntry} />
     </main>
   );
