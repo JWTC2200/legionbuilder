@@ -95,33 +95,36 @@ const BuilderDetachment = ({
 
   return (
     <div className="border-2 border-black">
-      <h4 className="w-full bg-green-950 text-green-50 text-graduate text-center py-1">
+      <h4 className="w-full bg-green-950 text-green-50 text-graduate text-center py-1 text-xl font-graduate">
         {slot.type}
       </h4>
       {slot.description ? <p className="italic">*{slot.description}*</p> : null}
-      <select
-        value={slot.selected_unit ? slot.selected_unit.id : 0}
-        onChange={(e) => selectUnit(Number(e.target.value))}
-      >
-        <option value={0}>Select unit</option>
-        {selectOptions}
-      </select>
-      {/* UNIT UPGRADE SELECTIONS */}
-      {slot.selected_unit ? (
-        slot.selected_unit.upgrade_options ? (
-          <div>
-            {slot.selected_unit.upgrade_options.map((option, index) => (
-              <BuilderUnitUpgradeSelect
-                key={slot.slot_ref + "upgrades" + index}
-                unitId={slot.selected_unit!.id}
-                upgradeOption={option}
-                setSlotState={setSlotState}
-                keyId={slot.slot_ref}
-              />
-            ))}
-          </div>
-        ) : null
-      ) : null}
+      <div className="p-2">
+        <select
+          value={slot.selected_unit ? slot.selected_unit.id : 0}
+          onChange={(e) => selectUnit(Number(e.target.value))}
+          className="w-full text-center text-xl p-1 border border-green-950 font-graduate my-2"
+        >
+          <option value={0}>Select Detachment</option>
+          {selectOptions}
+        </select>
+        {/* UNIT UPGRADE SELECTIONS */}
+        {slot.selected_unit ? (
+          slot.selected_unit.upgrade_options ? (
+            <div>
+              {slot.selected_unit.upgrade_options.map((option, index) => (
+                <BuilderUnitUpgradeSelect
+                  key={slot.slot_ref + "upgrades" + index}
+                  unitId={slot.selected_unit!.id}
+                  upgradeOption={option}
+                  setSlotState={setSlotState}
+                  keyId={slot.slot_ref}
+                />
+              ))}
+            </div>
+          ) : null
+        ) : null}
+      </div>
     </div>
   );
 };

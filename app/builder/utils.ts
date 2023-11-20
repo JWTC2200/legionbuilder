@@ -1,6 +1,16 @@
 import { formationData } from "../data/formation_data";
 import { formationSlotData } from "../data/formation_slot_data";
-import { FORMATION_SLOT } from "../types";
+import { FORMATION, FORMATION_SLOT, DETACHMENT_TYPE } from "../types";
+
+interface builderdetach {
+  slot_ref: string;
+  selected_unit: null;
+  id: number;
+  type: DETACHMENT_TYPE;
+  restricted?: boolean | undefined;
+  options: number[];
+  description?: string | undefined;
+}
 
 export const setBuilderDetachment = (
   formationID: number,
@@ -42,5 +52,5 @@ export const setBuilderDetachmentSlots = (
     });
     return returnedSlots;
   }
-  return null;
+  return slotArray;
 };

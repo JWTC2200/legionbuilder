@@ -53,29 +53,27 @@ const BuilderFormation = ({
       </button>
       <select
         className="bg-green-950 rounded-t-lg w-full text-center text-xl py-2 font-graduate"
-        value={formationState.id}
+        value={formation.id}
         onChange={(e) => {
           chooseFormation(Number(e.target.value));
         }}
       >
         <option value="0">SELECT FORMATION</option>
-        {formationData.map((formation) => (
-          <option
-            key={formationState.ref_id + formation.name}
-            value={formation.id}
-          >
-            {formation.name}
+        {formationData.map((format) => (
+          <option key={formation.ref_id + format.name} value={format.id}>
+            {format.name}
           </option>
         ))}
       </select>
+      {/* COMPULSORY SECTION */}
       <div className="p-4 w-full">
-        {formationState.compulsory ? (
+        {formation.compulsory ? (
           <div className="w-full text-green-950 flex flex-col items-center border-2 border-black">
             <h1 className="w-full text-center bg-green-950 text-green-50 font-graduate">
               Compulsory slots
             </h1>
             <div className="flex flex-wrap gap-4 p-2">
-              {formationState.compulsory.map((slot) => (
+              {formation.compulsory.map((slot) => (
                 <BuilderDetachment
                   key={slot.slot_ref}
                   slot={slot}
@@ -87,14 +85,15 @@ const BuilderFormation = ({
           </div>
         ) : null}
       </div>
+      {/* OPTIONAL SECTION */}
       <div className="p-4 w-full">
-        {formationState.optional ? (
+        {formation.optional ? (
           <div className="w-full text-green-950 flex flex-col items-center border-2 border-black">
             <h1 className="w-full text-center bg-green-950 text-green-50 font-graduate">
               Compulsory slots
             </h1>
             <div className="flex flex-wrap gap-4 p-2">
-              {formationState.optional.map((slot) => (
+              {formation.optional.map((slot) => (
                 <BuilderDetachment
                   key={slot.slot_ref}
                   slot={slot}
@@ -106,6 +105,19 @@ const BuilderFormation = ({
           </div>
         ) : null}
       </div>
+      {/* CHOICE SECTIONS */}
+
+      {/* <div>
+        {formation.choice
+          ? formation.choice.map((choiceSet) => (
+              <div className="w-full text-green-950 flex flex-col items-center border-2 border-black">
+                <h1 className="w-full text-center bg-green-950 text-green-50 font-graduate">
+                  Compulsory slots
+                </h1>
+              </div>
+            ))
+          : null}
+      </div> */}
 
       <pre className="w-full border-2 border-green-950 text-green-950 p-8 font-semibold text-lg">
         {JSON.stringify(formationState, null, " ")}

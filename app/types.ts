@@ -143,7 +143,7 @@ export interface BUILDER_FORMATION {
   name: string;
   ref_id: string;
   id: number;
-  choice: number[][] | null;
+  choice: BUILDER_DETACHMENT_SLOT[][] | null;
   compulsory: BUILDER_DETACHMENT_SLOT[] | null;
   optional: BUILDER_DETACHMENT_SLOT[] | null;
 }
