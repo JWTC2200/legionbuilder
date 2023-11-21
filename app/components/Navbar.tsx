@@ -8,6 +8,9 @@ import { FaClipboardList } from "react-icons/fa";
 
 const Navbar = () => {
   const pathname = usePathname();
+  if (pathname === "/print") {
+    return null;
+  }
   return (
     <nav className="w-full bg-green-950 text-green-50 py-4 sm:py-8 px-4 sm:px-8 flex flex-col items-center  text-center font-subrayada">
       <Link href="/" className={`hover:text-cyan-700 active:text-cyan-600`}>

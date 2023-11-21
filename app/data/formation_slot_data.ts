@@ -60,7 +60,7 @@ export const formationSlotData: FORMATION_SLOT[] = [
     id: 1011,
     type: DETACHMENT_TYPE.transport,
     restricted: true,
-    options: [],
+    options: [1001],
     description: "Demi-company bonus transports",
   },
   {

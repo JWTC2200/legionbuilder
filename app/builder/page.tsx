@@ -12,6 +12,7 @@ const page = () => {
     formations: [],
   });
   const [formationCounter, setFormationCounter] = useState(0);
+  const armyPoints = listPoints(armyList);
 
   const addFormation = () => {
     setFormationCounter((prev) => prev + 1);
@@ -28,30 +29,6 @@ const page = () => {
       return { ...prev, formations: [...prev.formations, newFormation] };
     });
   };
-
-  const calculatepoints = () => {
-    const validFormations = armyList.formations.filter(
-      (formation) => formation.faction !== armyList.main_faction
-    );
-
-    const points = validFormations
-      .map((formation) => formation.compulsory)
-      .map((form2) =>
-        form2?.map((form3) => {
-          if (form3.selected_unit) {
-            form3.selected_unit.base_cost +
-              form3.selected_unit.upgrade_options.reduce(
-                (acc, pts) => acc + pts.cost,
-                0
-              );
-          }
-        })
-      );
-
-    console.log(points);
-  };
-
-  const armyPoints = listPoints(armyList);
 
   return (
     <main className="flex flex-col gap-2 w-full max-w-screen-2xl items-center dataslate_background mt-4 p-4 rounded-xl border-2 border-black">
@@ -142,12 +119,12 @@ const page = () => {
       {/* FORMATION DISPLAY */}
       <div className="w-full mt-4 text-green-50 border-2 border-black flex flex-col justify-center gap-2">
         <div className="bg-green-950 flex flex-wrap justify-center items-center text-center gap-4">
-          <h2 className="text-center bg-green-950 font-graduate text-lg sm:text-2xl">
+          {/* <h2 className="text-center bg-green-950 font-graduate text-lg sm:text-2xl">
             FORMATIONS
-          </h2>
+          </h2> */}
           <button
             onClick={addFormation}
-            className="p-1 hover:text-cyan-700 font-graduate"
+            className="p-1 hover:text-cyan-700 font-graduate sm:text-xl"
           >
             Add formation
           </button>
