@@ -5,8 +5,8 @@ export default function Home() {
         A list builder for the game Legions Imperiallis by Games Workshop
       </h2>
       <p className="text-xl">
-        For now the only the Legiones Astartes, Knights and Warhound have been
-        implemented.
+        I not everything has been implemented and I'm sure theres some
+        typos/bugs but please enjoy using it for now!
       </p>
     </div>
   );

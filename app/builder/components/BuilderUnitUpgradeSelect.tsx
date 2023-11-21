@@ -81,7 +81,7 @@ const BuilderUnitUpgradeSelect = ({
         onChange={(e) => {
           handleSelect(Number(e.target.value));
         }}
-        className="w-full text-center font-graduate p-1 rounded-full border border-green-950 pl-4"
+        className="w-full text-center text-sm font-graduate p-1 rounded-full border border-green-950"
       >
         <option value="0">{upgradeOption.name}: none</option>
         {upgradeObject.options.map((upgrade, index) => (

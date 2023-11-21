@@ -108,8 +108,8 @@ const BuilderDetachment = ({
   }, [slotState]);
 
   return (
-    <div className="border-2 border-black">
-      <h4 className="w-full justify-center bg-green-950 text-green-50 text-graduate text-center py-1 text-xl font-graduate">
+    <div className="sm:border-2 flex-grow border-black flex flex-col max-w-md">
+      <h4 className="w-full justify-center bg-green-950 text-green-50 text-graduate text-center py-1 sm:text-xl font-graduate">
         {slot.type}
       </h4>
 
@@ -120,32 +120,32 @@ const BuilderDetachment = ({
 
       {/* UNIT POINTS AND DETACHMENT SIZE */}
       {slot.selected_unit ? (
-        <div className="w-full flex flex-wrap gap-4 justify-center">
-          <p className="text-lg font-graduate font-bold">
-            Detachment size: {detachmentSize(slot.selected_unit)}
+        <div className="w-full flex flex-wrap gap-2 sm:gap-4 justify-center items-center px-1">
+          <p className="text-sm sm:text-base font-graduate font-bold">
+            Detachment size:{detachmentSize(slot.selected_unit)}
           </p>
-          <p className="text-lg font-graduate font-bold">
+          <p className="sm:text-sm font-graduate font-bold border-b underline">
             {detachmentPoints(slot.selected_unit)}
-            <span className="text-base font-normal"> points</span>
+            <span className="text-base font-normal ">points</span>
           </p>
         </div>
       ) : null}
 
-      {/* UNIT OVERSIZE WARNING */}
+      {/* UNIT OVER DETACHMENT SIZE WARNING */}
       {slot.selected_unit ? (
         detachmentSize(slot.selected_unit) > slot.selected_unit.max_size ? (
-          <p className="text-center text-red-500 text-xl">
+          <p className="text-center text-red-500 sm:text-xl">
             Detachment is to large!
           </p>
         ) : null
       ) : null}
 
       {/* SELECT SECTION */}
-      <div className="px-2 pb-2">
+      <div className="px-1 pb-2">
         <select
           value={slot.selected_unit ? slot.selected_unit.id : 0}
           onChange={(e) => selectUnit(Number(e.target.value))}
-          className="w-full text-center text-xl p-1 border border-green-950 font-graduate my-2"
+          className="w-full text-center my-2 py-1 border border-green-950 font-graduate "
         >
           <option value={0}>Select Detachment</option>
           {selectOptions}
@@ -154,7 +154,7 @@ const BuilderDetachment = ({
         {/* UNIT UPGRADE SELECTIONS */}
         {slot.selected_unit ? (
           slot.selected_unit.upgrade_options ? (
-            <div>
+            <div className="flex flex-col gap-1">
               {slot.selected_unit.upgrade_options.map((option, index) => (
                 <BuilderUnitUpgradeSelect
                   key={slot.slot_ref + "upgrades" + index}
