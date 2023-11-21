@@ -161,6 +161,7 @@ export interface BUILDER_DETACHMENT_SLOT {
 export interface BUILDER_DETACHMENT_UNIT {
   id: number;
   name: string;
+  base_cost: number;
   upgrade_options: BUILDER_DETACHMENT_UNIT_UPGRADES[];
 }
 

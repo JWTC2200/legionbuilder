@@ -62,6 +62,7 @@ const BuilderDetachment = ({
       const unitDataUnit: BUILDER_DETACHMENT_UNIT = {
         id: unitData.id,
         name: unitData.name,
+        base_cost: unitData.base_cost,
         upgrade_options: untDataUnitUpgrades,
       };
 
@@ -98,6 +99,20 @@ const BuilderDetachment = ({
       <h4 className="w-full bg-green-950 text-green-50 text-graduate text-center py-1 text-xl font-graduate">
         {slot.type}
       </h4>
+      <button
+        onClick={() => {
+          console.log(slotState);
+        }}
+      >
+        state
+      </button>
+      <button
+        onClick={() => {
+          console.log(slot);
+        }}
+      >
+        SLOT
+      </button>
 
       {/* DESCRIPTION  */}
       {slot.description ? (
