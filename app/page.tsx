@@ -12,8 +12,7 @@ export default function Home() {
         <h2 className="text-xl">UPDATES:</h2>
         <ul className="list-disc">
           <li>
-            21/11/2023: Added Knights, Warhound Titan. Astartes hq, core,
-            support, bastion
+            21/11/2023: Added Knights, Warhound Titan & Legiones Astartes.
           </li>
         </ul>
       </div>
