@@ -340,7 +340,7 @@ export const detachmentData: DETACHMENT[] = [
     ],
     upgrade_options: [
       {
-        name: "Additional Dreadnought",
+        name: "Additional Leviathan",
         options: [
           { number: 2, cost: 35, size: 2 },
           { number: 4, cost: 70, size: 4 },
@@ -351,8 +351,8 @@ export const detachmentData: DETACHMENT[] = [
       {
         text: "A Leviathan Siege Dreadnought Detachment can purchase the following upgrades.",
         options: [
-          { text: "2 Additional Dreadnought", cost: 35 },
-          { text: "4 Additional Dreadnought", cost: 70 },
+          { text: "2 Additional Leviathan", cost: 35 },
+          { text: "4 Additional Leviathan", cost: 70 },
         ],
       },
     ],
@@ -476,6 +476,128 @@ export const detachmentData: DETACHMENT[] = [
         options: [
           { text: "2 Additional Deredeo", cost: 40 },
           { text: "4 Additional Deredeo", cost: 80 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 1012,
+    name: "Legion Predator Squadron",
+    faction: FACTION.astartes,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.battle,
+    base_cost: 115,
+    base_size: 3,
+    max_size: 9,
+    main_unit: [1012],
+    related_unit: [],
+    loadout: [
+      {
+        text_option: [
+          "Predator cannon or Predator lascannon",
+          "Sponson Mounted heavy bolters or Sponson Mounted lascannon",
+        ],
+      },
+    ],
+    upgrade_options: [
+      {
+        name: "Additional Predators",
+        options: [
+          { number: 1, cost: 35, size: 2 },
+          { number: 3, cost: 95, size: 4 },
+          { number: 6, cost: 185, size: 6 },
+        ],
+      },
+    ],
+    datasheet_info: [
+      {
+        text: "Legion Predator Squadron can purchase the following upgrades.",
+        options: [
+          { text: "1 additional Predator", cost: 35 },
+          { text: "3 additional Predator", cost: 95 },
+          { text: "6 additional Predator", cost: 185 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 1013,
+    name: "Legion Sicaran Squadron",
+    faction: FACTION.astartes,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.battle,
+    base_cost: 105,
+    base_size: 2,
+    max_size: 6,
+    main_unit: [1013],
+    related_unit: [],
+    loadout: [
+      {
+        text_option: [
+          "Hull Mounted heavy bolter",
+          "Twin-linked accelerator autocannon or Omega plasma array",
+          "Sponson Mounted heavy bolters or Sponson Mounted lascannon",
+        ],
+      },
+    ],
+    upgrade_options: [
+      {
+        name: "Additional Sicaran",
+        options: [
+          { number: 1, cost: 40, size: 1 },
+          { number: 2, cost: 70, size: 2 },
+          { number: 4, cost: 140, size: 4 },
+        ],
+      },
+    ],
+    datasheet_info: [
+      {
+        text: "Legion Sicaran Squadron can purchase the following upgrades.",
+        options: [
+          { text: "1 additional Sicaran", cost: 40 },
+          { text: "2 additional Sicaran", cost: 70 },
+          { text: "4 additional Sicaran", cost: 140 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 1014,
+    name: "Legion Kratos Squadron",
+    faction: FACTION.astartes,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.heavy,
+    base_cost: 150,
+    base_size: 2,
+    max_size: 6,
+    main_unit: [1014],
+    related_unit: [],
+    loadout: [
+      {
+        text_option: [
+          "Kratos battlecannon with Co-axial autocannon or Melta blastgun with Co-axial autocannon",
+          "Two Hull Mounted heavy bolter or two Kratos lascannon or two Kratos autocannon",
+          "Sponson Mounted heavy bolters or Sponson Mounted lascannon",
+        ],
+      },
+    ],
+    upgrade_options: [
+      {
+        name: "Additional Kratos",
+        options: [
+          { number: 1, cost: 60, size: 1 },
+          { number: 2, cost: 110, size: 2 },
+          { number: 4, cost: 200, size: 4 },
+        ],
+      },
+    ],
+    datasheet_info: [
+      {
+        text: "Legion Kratos Squadron can purchase the following upgrades.",
+        options: [
+          { text: "1 additional Kratos", cost: 60 },
+          { text: "2 additional Kratos", cost: 110 },
+          { text: "4 additional Kratos", cost: 200 },
         ],
       },
     ],

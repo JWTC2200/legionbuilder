@@ -319,6 +319,170 @@ export const weaponData: WEAPON_DATASHEET[] = [
       },
     ],
   },
+  {
+    id: 1023,
+    name: "Predator cannon",
+    profiles: [
+      {
+        range: '18"',
+        dice: 2,
+        to_hit: 5,
+        ap: 1,
+        traits: ["Light-AT"],
+      },
+    ],
+  },
+  {
+    id: 1024,
+    name: "Sponson Mounted heavy bolter",
+    profiles: [
+      {
+        range: '12"',
+        dice: 2,
+        to_hit: 5,
+        ap: 0,
+        traits: ["Arc (Front)", "Light", "Point Defence"],
+      },
+    ],
+  },
+  {
+    id: 1025,
+    name: "Predator lascannon",
+    profiles: [
+      {
+        range: '22"',
+        dice: 1,
+        to_hit: 4,
+        ap: 1,
+        traits: ["Accurate", "Anti-tank"],
+      },
+    ],
+  },
+  {
+    id: 1026,
+    name: "Sponson Mounted lascannon",
+    profiles: [
+      {
+        range: '22"',
+        dice: 1,
+        to_hit: 5,
+        ap: 0,
+        traits: ["Arc (Front)", "Anti-tank"],
+      },
+    ],
+  },
+  {
+    id: 1027,
+    name: "Hull Mounted heavy bolter",
+    profiles: [
+      {
+        range: '12"',
+        dice: 2,
+        to_hit: 5,
+        ap: 0,
+        traits: ["Arc (Front)", "Light", "Point Defence"],
+      },
+    ],
+  },
+  {
+    id: 1028,
+    name: "Twin-linked accelerator autocannon",
+    profiles: [
+      {
+        range: '16"',
+        dice: 3,
+        to_hit: 5,
+        ap: 1,
+        traits: ["Tracking"],
+      },
+    ],
+  },
+  {
+    id: 1029,
+    name: "Omega plasma array",
+    profiles: [
+      {
+        range: '12"',
+        dice: 2,
+        to_hit: 4,
+        ap: 1,
+        traits: ["Accurate"],
+      },
+    ],
+  },
+  {
+    id: 1030,
+    name: "Kratos battlecannon",
+    profiles: [
+      {
+        range: '20"',
+        dice: 2,
+        to_hit: 4,
+        ap: 1,
+        traits: [],
+      },
+      {
+        range: '10"',
+        dice: 1,
+        to_hit: 4,
+        ap: 4,
+        traits: ["Anti-tank", "Armourbane"],
+      },
+    ],
+  },
+  {
+    id: 1031,
+    name: "Co-axial autocannon",
+    profiles: [
+      {
+        range: '16"',
+        dice: 2,
+        to_hit: 5,
+        ap: 1,
+        traits: ["Co-axial", "Light AT"],
+      },
+    ],
+  },
+  {
+    id: 1032,
+    name: "Melta blastgun",
+    profiles: [
+      {
+        range: '8"',
+        dice: 1,
+        to_hit: 4,
+        ap: 4,
+        traits: ["Anti-tank", "Armourbane", "Bunker Buster"],
+      },
+    ],
+  },
+  {
+    id: 1033,
+    name: "Kratos autocannon",
+    profiles: [
+      {
+        range: '16"',
+        dice: 2,
+        to_hit: 5,
+        ap: 1,
+        traits: ["Accurate", "Arc (Front)", "Light AT"],
+      },
+    ],
+  },
+  {
+    id: 1034,
+    name: "Kratos lascannon",
+    profiles: [
+      {
+        range: '22"',
+        dice: 1,
+        to_hit: 4,
+        ap: 1,
+        traits: ["Accurate", "Arc (Front)", "Anti-tank"],
+      },
+    ],
+  },
+
   // ********************************************************************
   // ***********************KNIGHT & TITAN WEAPONS **********************
   // ********************************************************************
