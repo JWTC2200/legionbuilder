@@ -1,9 +1,6 @@
 export default function Home() {
   return (
     <div className="flex flex-col items-center p-8 gap-2">
-      <h2 className="text-2xl">
-        A list builder for the game Legions Imperiallis by Games Workshop
-      </h2>
       <p className="text-xl">
         I not everything has been implemented and I'm sure theres some
         typos/bugs but please enjoy using it for now!
