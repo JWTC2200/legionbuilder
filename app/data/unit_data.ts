@@ -3,6 +3,9 @@ import { ALLEGIANCE, FACTION, UNIT_DATASHEET, UNIT_TYPE } from "../types";
 // astartes 1000-1999, solar 2000-2999, knights-titans 4000-4999
 
 export const unitData: UNIT_DATASHEET[] = [
+  // ********************************************************************
+  // *************************ASTARTES UNITS ****************************
+  // ********************************************************************
   {
     id: 1000,
     faction: FACTION.astartes,
@@ -85,7 +88,9 @@ export const unitData: UNIT_DATASHEET[] = [
     weapons: [1007],
     special_rules: ["Independant", "Jump Packs"],
   },
-
+  // ********************************************************************
+  // ************************** KNIGHT TITAN UNITS **********************
+  // ********************************************************************
   {
     id: 4000,
     faction: FACTION.strategic,

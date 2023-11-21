@@ -4,6 +4,7 @@ import {
   FORMATION,
   FORMATION_SLOT,
   DETACHMENT_TYPE,
+  BUILDER_DETACHMENT_UNIT,
   BUILDER_DETACHMENT_SLOT,
   BUILDER_FORMATION,
 } from "../types";
@@ -18,6 +19,56 @@ interface builderdetach {
   description?: string | undefined;
 }
 
+export const formationPoints = (formation: BUILDER_FORMATION) => {
+  const compulsorySlotPoints = formation.compulsory
+    ? formation.compulsory
+        .map((detachment) =>
+          detachment.selected_unit
+            ? detachmentPoints(detachment.selected_unit)
+            : 0
+        )
+        .reduce((acc, pts) => acc + pts, 0)
+    : 0;
+  const optionalSlotPoints = formation.optional
+    ? formation.optional
+        .map((detachment) =>
+          detachment.selected_unit
+            ? detachmentPoints(detachment.selected_unit)
+            : 0
+        )
+        .reduce((acc, pts) => acc + pts, 0)
+    : 0;
+  const choiceSlotPoints = formation.choice
+    ? formation.choice
+        .map((choice) =>
+          choice.map((detachment) => {
+            const dpoints = detachment.selected_unit
+              ? detachmentPoints(detachment.selected_unit)
+              : 0;
+            return dpoints;
+          })
+        )
+        .flat()
+        .reduce((acc, pts) => acc + pts, 0)
+    : 0;
+
+  return choiceSlotPoints + compulsorySlotPoints + optionalSlotPoints;
+};
+
+export const detachmentPoints = (detachment: BUILDER_DETACHMENT_UNIT) => {
+  return (
+    detachment.base_cost +
+    detachment.upgrade_options.reduce((acc, pts) => acc + pts.cost, 0)
+  );
+};
+
+export const detachmentSize = (detachment: BUILDER_DETACHMENT_UNIT) => {
+  return (
+    detachment.base_size +
+    detachment.upgrade_options.reduce((acc, size) => acc + size.size, 0)
+  );
+};
+
 export const setBuilderDetachment = (
   formationID: number,
   formationRef: string
@@ -30,6 +81,7 @@ export const setBuilderDetachment = (
       name: findFormation.name,
       ref_id: formationRef,
       id: formationID,
+      faction: findFormation.faction,
       compulsory: setBuilderDetachmentSlots(
         findFormation.compulsory,
         formationRef

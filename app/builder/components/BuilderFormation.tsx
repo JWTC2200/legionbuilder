@@ -1,10 +1,9 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { formationSlotData } from "@/app/data/formation_slot_data";
 import { BUILDER_FORMATION, BUILDER_LIST, SLOTSET } from "@/app/types";
 import BuilderDetachment from "./BuilderDetachment";
 import { formationData } from "@/app/data/formation_data";
-import { setBuilderDetachment } from "../utils";
+import { setBuilderDetachment, formationPoints } from "../utils";
 
 const BuilderFormation = ({
   formation,
@@ -14,8 +13,10 @@ const BuilderFormation = ({
   setArmyList: React.Dispatch<React.SetStateAction<BUILDER_LIST>>;
 }) => {
   const [formationState, setFormationState] = useState(formation);
+  const [formationSelected, setFormationSelected] = useState(false);
 
   const chooseFormation = (id: number) => {
+    setFormationSelected(true);
     if (!id) {
       setFormationState((prev) => {
         return {
@@ -65,25 +66,38 @@ const BuilderFormation = ({
         }),
       };
     });
-  }, [formationState]);
+  }, [formationState, formation]);
 
   return (
     <div className="border-2 border-black rounded-xl flex flex-col items-center">
       <div className="w-full bg-green-950 rounded-t-lg flex flex-wrap justify-center items-center text-center">
-        <select
-          className="bg-green-950 rounded-t-lg text-xl py-2 font-graduate text-center gap-8"
-          value={formation.id}
-          onChange={(e) => {
-            chooseFormation(Number(e.target.value));
-          }}
-        >
-          <option value="0">SELECT FORMATION</option>
-          {formationData.map((format) => (
-            <option key={formation.ref_id + format.name} value={format.id}>
-              {format.name}
-            </option>
-          ))}
-        </select>
+        {/* FORMATION SELECTOR -> DISABLED AFTER FIRST CHOICE */}
+        {formationSelected ? (
+          <h3 className="bg-green-950 rounded-t-lg text-2xl py-2 px-4 font-graduate text-center">
+            {formation.name}
+          </h3>
+        ) : (
+          <select
+            className="bg-green-950 rounded-t-lg text-xl py-2 font-graduate text-center gap-8"
+            value={formation.id}
+            onChange={(e) => {
+              chooseFormation(Number(e.target.value));
+            }}
+          >
+            <option value="0">SELECT FORMATION</option>
+            {formationData.map((format) => (
+              <option key={formation.ref_id + format.name} value={format.id}>
+                {format.name}
+              </option>
+            ))}
+          </select>
+        )}
+        {formationSelected ? (
+          <h3 className="bg-green-950 rounded-t-lg text-2xl py-2 px-4 font-graduate text-center">
+            {formationPoints(formation)} points
+          </h3>
+        ) : null}
+
         <button
           className="p-1 hover:text-cyan-700 font-graduate"
           onClick={removeFormation}
@@ -149,14 +163,14 @@ const BuilderFormation = ({
               className="w-full text-green-950 flex flex-col items-center border-2 border-black"
             >
               <h1 className="w-full text-center bg-green-950 text-green-50 font-graduate">
-                Compulsory slots
+                Choose up to one of the following:
               </h1>
               <div className="flex flex-wrap gap-4 py-4 px-2 justify-center">
                 {choiceSet.map((slot) => (
                   <BuilderDetachment
                     key={slot.slot_ref}
                     slot={slot}
-                    slotSet={SLOTSET.optional}
+                    slotSet={SLOTSET.choice}
                     setFormationState={setFormationState}
                   />
                 ))}

@@ -11,6 +11,7 @@ import {
 } from "@/app/types";
 import { detachmentData } from "@/app/data/detachment_data";
 import BuilderUnitUpgradeSelect from "./BuilderUnitUpgradeSelect";
+import { detachmentPoints, detachmentSize } from "../utils";
 
 const BuilderDetachment = ({
   slot,
@@ -63,6 +64,8 @@ const BuilderDetachment = ({
         id: unitData.id,
         name: unitData.name,
         base_cost: unitData.base_cost,
+        base_size: unitData.base_size,
+        max_size: unitData.max_size,
         upgrade_options: untDataUnitUpgrades,
       };
 
@@ -73,54 +76,72 @@ const BuilderDetachment = ({
     return;
   };
 
-  const updateUnitUpgrades = (value: number, upgrade: string) => {
-    console.log(`${value}${upgrade}`);
-  };
-
   useEffect(() => {
     if (slotSet === SLOTSET.compulsory || slotSet === SLOTSET.optional) {
       setFormationState((prev) => {
-        const toChange = prev[slotSet]?.map((slot) => {
-          if (slot.slot_ref === slotState.slot_ref) {
+        const toChange = prev[slotSet]?.map((prevSlot) => {
+          if (prevSlot.slot_ref === slotState.slot_ref) {
             return slotState;
           }
-          return slot;
+          return prevSlot;
         });
         return { ...prev, [slotSet]: toChange };
       });
     }
     if (slotSet === SLOTSET.choice) {
-      console.log("optional");
+      setFormationState((prev) => {
+        if (prev.choice && prev.choice.length) {
+          const newChoiceAray = prev.choice.map((array) =>
+            array.map((choice) => {
+              if (choice.slot_ref === slot.slot_ref) {
+                return slotState;
+              }
+              return choice;
+            })
+          );
+          return { ...prev, choice: newChoiceAray };
+        }
+
+        return prev;
+      });
     }
   }, [slotState]);
 
   return (
     <div className="border-2 border-black">
-      <h4 className="w-full bg-green-950 text-green-50 text-graduate text-center py-1 text-xl font-graduate">
+      <h4 className="w-full justify-center bg-green-950 text-green-50 text-graduate text-center py-1 text-xl font-graduate">
         {slot.type}
       </h4>
-      <button
-        onClick={() => {
-          console.log(slotState);
-        }}
-      >
-        state
-      </button>
-      <button
-        onClick={() => {
-          console.log(slot);
-        }}
-      >
-        SLOT
-      </button>
 
       {/* DESCRIPTION  */}
       {slot.description ? (
         <p className="italic text-center">*{slot.description}*</p>
       ) : null}
 
+      {/* UNIT POINTS AND DETACHMENT SIZE */}
+      {slot.selected_unit ? (
+        <div className="w-full flex flex-wrap gap-4 justify-center">
+          <p className="text-lg font-graduate font-bold">
+            Detachment size: {detachmentSize(slot.selected_unit)}
+          </p>
+          <p className="text-lg font-graduate font-bold">
+            {detachmentPoints(slot.selected_unit)}
+            <span className="text-base font-normal"> points</span>
+          </p>
+        </div>
+      ) : null}
+
+      {/* UNIT OVERSIZE WARNING */}
+      {slot.selected_unit ? (
+        detachmentSize(slot.selected_unit) > slot.selected_unit.max_size ? (
+          <p className="text-center text-red-500 text-xl">
+            Detachment is to large!
+          </p>
+        ) : null
+      ) : null}
+
       {/* SELECT SECTION */}
-      <div className="p-2">
+      <div className="px-2 pb-2">
         <select
           value={slot.selected_unit ? slot.selected_unit.id : 0}
           onChange={(e) => selectUnit(Number(e.target.value))}

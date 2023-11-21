@@ -2,7 +2,12 @@
 
 import React, { useState } from "react";
 import { formationData } from "../data/formation_data";
-import { BUILDER_FORMATION, BUILDER_LIST, FACTION } from "../types";
+import {
+  BUILDER_DETACHMENT_UNIT,
+  BUILDER_FORMATION,
+  BUILDER_LIST,
+  FACTION,
+} from "../types";
 import BuilderFormation from "./components/BuilderFormation";
 
 const page = () => {
@@ -19,6 +24,7 @@ const page = () => {
       name: "",
       ref_id: `formation${formationCounter}`,
       id: 0,
+      faction: null,
       choice: null,
       compulsory: null,
       optional: null,
@@ -28,8 +34,33 @@ const page = () => {
     });
   };
 
+  const calculatepoints = () => {
+    const validFormations = armyList.formations.filter(
+      (formation) => formation.faction !== armyList.main_faction
+    );
+
+    const points = validFormations
+      .map((formation) => formation.compulsory)
+      .map((form2) =>
+        form2?.map((form3) => {
+          if (form3.selected_unit) {
+            form3.selected_unit.base_cost +
+              form3.selected_unit.upgrade_options.reduce(
+                (acc, pts) => acc + pts.cost,
+                0
+              );
+          }
+        })
+      );
+
+    console.log(points);
+  };
+
   return (
     <main className="flex flex-col gap-2 w-full max-w-screen-2xl items-center dataslate_background mt-4 p-4 rounded-xl border-2 border-black">
+      <button onClick={calculatepoints} className="text-red-500">
+        ALLY POINTS
+      </button>
       {/* MAIN LIST OPTIONS */}
       <div className="w-full mx-4 p-4 bg-green-950 text-green-50 flex flex-wrap justify-center gap-8 text-center">
         <div>
@@ -73,14 +104,26 @@ const page = () => {
           </select>
         </div>
       </div>
-      {/* DETACHMENT SELECTION */}
-      <div className="w-full mt-4 p-4 bg-green-950 text-green-50 flex flex-wrap justify-center gap-8"></div>
+      {/* ARMYLIST POINTS */}
+      <div className="w-full mt-4 p-4 bg-green-950 text-green-50 flex flex-wrap justify-center gap-8">
+        <p className="font-graduate text-xl">
+          Formations: {armyList.formations.length}
+        </p>
+        <p className="font-graduate text-xl">
+          Main faction:{" "}
+          {
+            armyList.formations.filter(
+              (formation) => formation.faction === armyList.main_faction
+            ).length
+          }
+        </p>
+      </div>
       {/* FORMATION DISPLAY */}
       <div className="w-full mt-4 text-green-50 border-2 border-black flex flex-col justify-center gap-2">
         <div className="bg-green-950 flex flex-wrap justify-center text-center gap-4">
-          <h1 className="text-center bg-green-950 font-graduate text-2xl">
+          <h2 className="text-center bg-green-950 font-graduate text-2xl">
             FORMATIONS
-          </h1>
+          </h2>
           <button
             onClick={addFormation}
             className="p-1 hover:text-cyan-700 font-graduate"

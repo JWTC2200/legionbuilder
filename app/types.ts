@@ -143,6 +143,7 @@ export interface BUILDER_FORMATION {
   name: string;
   ref_id: string;
   id: number;
+  faction: FACTION | null;
   choice: BUILDER_DETACHMENT_SLOT[][] | null;
   compulsory: BUILDER_DETACHMENT_SLOT[] | null;
   optional: BUILDER_DETACHMENT_SLOT[] | null;
@@ -162,6 +163,8 @@ export interface BUILDER_DETACHMENT_UNIT {
   id: number;
   name: string;
   base_cost: number;
+  base_size: number;
+  max_size: number;
   upgrade_options: BUILDER_DETACHMENT_UNIT_UPGRADES[];
 }
 
