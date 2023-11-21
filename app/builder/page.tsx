@@ -1,14 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import { formationData } from "../data/formation_data";
-import {
-  BUILDER_DETACHMENT_UNIT,
-  BUILDER_FORMATION,
-  BUILDER_LIST,
-  FACTION,
-} from "../types";
+import { BUILDER_FORMATION, BUILDER_LIST, FACTION } from "../types";
 import BuilderFormation from "./components/BuilderFormation";
+import { listPoints } from "./utils";
 
 const page = () => {
   const [armyList, setArmyList] = useState<BUILDER_LIST>({
@@ -56,11 +51,10 @@ const page = () => {
     console.log(points);
   };
 
+  const armyPoints = listPoints(armyList);
+
   return (
     <main className="flex flex-col gap-2 w-full max-w-screen-2xl items-center dataslate_background mt-4 p-4 rounded-xl border-2 border-black">
-      <button onClick={calculatepoints} className="text-red-500">
-        ALLY POINTS
-      </button>
       {/* MAIN LIST OPTIONS */}
       <div className="w-full mx-4 p-4 bg-green-950 text-green-50 flex flex-wrap justify-center gap-8 text-center">
         <div>
@@ -105,18 +99,43 @@ const page = () => {
         </div>
       </div>
       {/* ARMYLIST POINTS */}
-      <div className="w-full mt-4 p-4 bg-green-950 text-green-50 flex flex-wrap justify-center gap-8">
-        <p className="font-graduate text-xl">
-          Formations: {armyList.formations.length}
-        </p>
-        <p className="font-graduate text-xl">
-          Main faction:{" "}
-          {
-            armyList.formations.filter(
-              (formation) => formation.faction === armyList.main_faction
-            ).length
-          }
-        </p>
+      <div className="w-full mt-4 p-4 bg-green-950 text-green-50 flex flex-wrap justify-center gap-4">
+        <div className="flex flex-col justify-center items-center gap-1">
+          <p className="font-graduate text-xl">
+            {armyList.main_faction} : {armyPoints.mainFactionPoints}pts
+          </p>
+          <p className="font-graduate text-xl">
+            Allies : {armyPoints.allyFactionPoints}pts
+          </p>
+        </div>
+        {armyPoints.allyFactionPoints > armyList.points * 0.3 ? (
+          <p className="text-red-600 text-center text-xl font-graduate font-bold">
+            Too many allies!
+          </p>
+        ) : null}
+        <div className="flex flex-col items-center justify-center gap-2">
+          <p className="font-graduate text-xl">
+            Formations: {armyList.formations.length}
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <p className="font-graduate text-xl">
+              {armyList.main_faction}:{" "}
+              {
+                armyList.formations.filter(
+                  (formation) => formation.faction === armyList.main_faction
+                ).length
+              }
+            </p>
+            <p className="font-graduate text-xl">
+              Allies:{" "}
+              {
+                armyList.formations.filter(
+                  (formation) => formation.faction !== armyList.main_faction
+                ).length
+              }
+            </p>
+          </div>
+        </div>
       </div>
       {/* FORMATION DISPLAY */}
       <div className="w-full mt-4 text-green-50 border-2 border-black flex flex-col justify-center gap-2">
@@ -145,9 +164,9 @@ const page = () => {
       </div>
       {/* object display */}
 
-      <pre className="w-full border-2 border-green-950 text-green-950 p-8 font-semibold text-lg">
+      {/* <pre className="w-full border-2 border-green-950 text-green-950 p-8 font-semibold text-lg">
         {JSON.stringify(armyList, null, " ")}
-      </pre>
+      </pre> */}
     </main>
   );
 };

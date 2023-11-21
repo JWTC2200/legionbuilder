@@ -7,17 +7,22 @@ import {
   BUILDER_DETACHMENT_UNIT,
   BUILDER_DETACHMENT_SLOT,
   BUILDER_FORMATION,
+  BUILDER_LIST,
 } from "../types";
 
-interface builderdetach {
-  slot_ref: string;
-  selected_unit: null;
-  id: number;
-  type: DETACHMENT_TYPE;
-  restricted?: boolean | undefined;
-  options: number[];
-  description?: string | undefined;
-}
+export const listPoints = (armyList: BUILDER_LIST) => {
+  const mainFactionPoints = armyList.formations
+    .filter((formation) => formation.faction === armyList.main_faction)
+    .map((formation2) => formationPoints(formation2))
+    .reduce((acc, pts) => acc + pts, 0);
+
+  const allyFactionPoints = armyList.formations
+    .filter((formation) => formation.faction !== armyList.main_faction)
+    .map((formation2) => formationPoints(formation2))
+    .reduce((acc, pts) => acc + pts, 0);
+
+  return { mainFactionPoints, allyFactionPoints };
+};
 
 export const formationPoints = (formation: BUILDER_FORMATION) => {
   const compulsorySlotPoints = formation.compulsory
