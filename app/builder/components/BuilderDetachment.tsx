@@ -24,9 +24,11 @@ const BuilderDetachment = ({
 }) => {
   const [slotState, setSlotState] = useState(slot);
 
+  // filtering for custom detachment slots
   const detachmentOptions: DETACHMENT[] = slot.restricted
-    ? detachmentData.filter(
-        (detachment) => detachment.detachment_type === slot.type
+    ? slot.options.map(
+        (option) =>
+          detachmentData.filter((detachment) => detachment.id === option)[0]
       )
     : detachmentData
         .filter((detachment) => detachment.detachment_type === slot.type)
