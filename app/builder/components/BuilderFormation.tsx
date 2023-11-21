@@ -165,10 +165,10 @@ const BuilderFormation = ({
           ))}
         </div>
       ) : null}
-
-      <pre className="w-full border-2 border-green-950 text-green-950 p-8 font-semibold text-lg">
+      {/* OBJECT DISPLAY */}
+      {/* <pre className="w-full border-2 border-green-950 text-green-950 p-8 font-semibold text-lg">
         {JSON.stringify(formationState, null, " ")}
-      </pre>
+      </pre> */}
     </div>
   );
 };
