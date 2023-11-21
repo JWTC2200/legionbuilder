@@ -89,6 +89,78 @@ export const detachmentData: DETACHMENT[] = [
       },
     ],
   },
+  {
+    id: 1002,
+    name: "Legion Tactical Detachment",
+    faction: FACTION.astartes,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.core,
+    base_cost: 35,
+    base_size: 4,
+    max_size: 12,
+    main_unit: [1002],
+    related_unit: [1003, 1004],
+    loadout: [{ text_option: ["Legion bolters"] }],
+    upgrade_options: [
+      {
+        name: "Additional Tactial Legionaries",
+        options: [
+          { number: 2, cost: 12, size: 2 },
+          { number: 4, cost: 24, size: 4 },
+          { number: 6, cost: 36, size: 6 },
+          { number: 8, cost: 48, size: 8 },
+        ],
+      },
+      {
+        name: "Additional Plasma Support",
+        options: [
+          { number: 2, cost: 15, size: 2 },
+          { number: 4, cost: 30, size: 4 },
+          { number: 6, cost: 45, size: 6 },
+          { number: 8, cost: 60, size: 8 },
+        ],
+      },
+      {
+        name: "Additional Heavy Support",
+        options: [
+          { number: 2, cost: 15, size: 2 },
+          { number: 4, cost: 30, size: 4 },
+          { number: 6, cost: 45, size: 6 },
+          { number: 8, cost: 60, size: 8 },
+        ],
+      },
+      {
+        name: "Additional Legion Terminators",
+        options: [
+          { number: 2, cost: 15, size: 2 },
+          { number: 4, cost: 30, size: 4 },
+          { number: 6, cost: 45, size: 6 },
+          { number: 8, cost: 60, size: 8 },
+        ],
+      },
+      {
+        name: "Additional Assault Marines",
+        options: [
+          { number: 2, cost: 12, size: 2 },
+          { number: 4, cost: 24, size: 4 },
+          { number: 6, cost: 36, size: 6 },
+          { number: 8, cost: 48, size: 8 },
+        ],
+      },
+    ],
+    datasheet_info: [
+      {
+        text: "A Legion Tactical Detachment can purchase up to four upgrades. It may purchase the same upgrade multiple times: Each upgrade increases the Detachment size by 2.",
+        options: [
+          { text: "Tactical Legionaries", cost: 12 },
+          { text: "Plasma Tactical Suport Legionaries", cost: 15 },
+          { text: "Missile Launcher Heavy Support Legionaries", cost: 15 },
+          { text: "Legion Terminators", cost: 15 },
+          { text: "Assault Marines", cost: 12 },
+        ],
+      },
+    ],
+  },
   // ********************************************************************
   // *********************KNIGHT & TITAN DETACHMENTS ********************
   // ********************************************************************
