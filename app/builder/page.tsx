@@ -16,7 +16,10 @@ const page = () => {
   });
   const armyPoints = listPoints(armyList);
 
-  const savedList = localStorage.getItem("legionbuilder");
+  const savedList =
+    typeof window !== "undefined"
+      ? localStorage.getItem("legionbuilder")
+      : null;
 
   const addFormation = () => {
     const newFormation: BUILDER_FORMATION = {
@@ -34,17 +37,21 @@ const page = () => {
   };
 
   const handlePrintList = () => {
-    localStorage.setItem("legionbuilder", JSON.stringify(armyList));
-    router.push("/print");
+    if (typeof window !== "undefined") {
+      localStorage.setItem("legionbuilder", JSON.stringify(armyList));
+      router.push("/print");
+    }
   };
 
   const handleClearList = () => {
-    localStorage.clear();
-    setArmyList({
-      points: 3000,
-      main_faction: FACTION.astartes,
-      formations: [],
-    });
+    if (typeof window !== "undefined") {
+      localStorage.clear();
+      setArmyList({
+        points: 3000,
+        main_faction: FACTION.astartes,
+        formations: [],
+      });
+    }
   };
 
   useEffect(() => {

@@ -15,7 +15,10 @@ import {
 } from "../builder/utils";
 
 const page = () => {
-  const armyList = localStorage.getItem("legionbuilder");
+  const armyList =
+    typeof window !== "undefined"
+      ? localStorage.getItem("legionbuilder")
+      : null;
   if (armyList) {
     const listJson: BUILDER_LIST = JSON.parse(armyList);
 
