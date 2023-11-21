@@ -32,6 +32,7 @@ export enum DETACHMENT_TYPE {
 export enum UNIT_TYPE {
   knight = "Knight",
   infantry = "Infantry",
+  walker = "Walker",
   titan = "Titan",
   vehicle = "Vehicle",
 }

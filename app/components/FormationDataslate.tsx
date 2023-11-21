@@ -16,7 +16,7 @@ const FormationDataslate = (formation: FORMATION) => {
             Compulsory Detachments:
           </h2>
           <div className="text-green-950 flex flex-wrap gap-4 m-2">
-            {formation.compulsory.map((detachment, index) => {
+            {formation.compulsory.sort().map((detachment, index) => {
               const foundSlot = formationSlotData.find(
                 (slot) => slot.id === detachment
               );
@@ -34,7 +34,7 @@ const FormationDataslate = (formation: FORMATION) => {
             Optional detachments:
           </h2>
           <div className="text-green-950 flex flex-wrap gap-4 m-2">
-            {formation.optional.map((detachment, index) => {
+            {formation.optional.sort().map((detachment, index) => {
               const foundSlot = formationSlotData.find(
                 (slot) => slot.id === detachment
               );
@@ -56,7 +56,7 @@ const FormationDataslate = (formation: FORMATION) => {
                 One of the following:
               </h2>
               <div className="text-green-950 flex flex-wrap gap-4 m-2">
-                {choice.map((detachment, index2) => {
+                {choice.sort().map((detachment, index2) => {
                   const foundSlot = formationSlotData.find(
                     (slot) => slot.id === detachment
                   );

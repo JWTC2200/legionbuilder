@@ -46,7 +46,7 @@ const DetachmentDataslate = (detachment: DETACHMENT) => {
   return (
     <article className="max-w-screen-xl p-2 border-2 border-black dataslate_background rounded-lg">
       {/* TITLE */}
-      <div className="flex justify-between border-2 border-black bg-green-950 text-green-50 py-1 px-3 mb-2">
+      <div className="flex justify-between items-center gap-2 border-2 border-black bg-green-950 text-green-50 py-1 px-3 mb-2">
         <h2 className="text-2xl font-graduate font-bold">{detachment.name}</h2>
         <h3 className="text-xl font-graduate">{detachment.base_cost} Points</h3>
       </div>

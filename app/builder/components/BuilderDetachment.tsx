@@ -38,7 +38,7 @@ const BuilderDetachment = ({
 
   const selectOptions = detachmentOptions.map((option, index) => (
     <option key={slot.slot_ref + "unitOption" + index} value={option.id}>
-      {option.name}
+      {option.name}: {option.base_cost}pts
     </option>
   ));
 

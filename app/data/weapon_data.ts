@@ -117,6 +117,208 @@ export const weaponData: WEAPON_DATASHEET[] = [
       },
     ],
   },
+  {
+    id: 1008,
+    name: "Laser destroyer array",
+    profiles: [
+      {
+        range: '15"',
+        dice: 2,
+        to_hit: 4,
+        ap: 2,
+        traits: ["Anti-tank"],
+      },
+    ],
+  },
+  {
+    id: 1009,
+    name: "Quad launcher",
+    profiles: [
+      {
+        range: '6"-30"',
+        dice: 2,
+        to_hit: 4,
+        ap: 1,
+        traits: ["Barrage", "Light"],
+      },
+      {
+        range: '16"',
+        dice: 2,
+        to_hit: 4,
+        ap: 1,
+        traits: ["Demolisher", "Light AT"],
+      },
+    ],
+  },
+  {
+    id: 1010,
+    name: "Leviathan storm cannon",
+    profiles: [
+      {
+        range: '10"',
+        dice: 2,
+        to_hit: 5,
+        ap: 1,
+        traits: ["Light AT", "Rapid Fire"],
+      },
+    ],
+  },
+  {
+    id: 1011,
+    name: "Cyclone melta lance",
+    profiles: [
+      {
+        range: '6"',
+        dice: 1,
+        to_hit: 4,
+        ap: 3,
+        traits: ["Anti-tank", "Demolisher"],
+      },
+    ],
+  },
+  {
+    id: 1012,
+    name: "Twin-linked volkite caliver",
+    profiles: [
+      {
+        range: '12"',
+        dice: 1,
+        to_hit: 4,
+        ap: 0,
+        traits: ["Accurate", "Deflagrate", "Light"],
+      },
+    ],
+  },
+  {
+    id: 1013,
+    name: "Leviathan siege claw",
+    profiles: [
+      {
+        range: "-",
+        dice: null,
+        to_hit: null,
+        ap: 4,
+        traits: ["Rend", "Wrecker (2)"],
+      },
+    ],
+  },
+  {
+    id: 1014,
+    name: "Kheres assault cannon",
+    profiles: [
+      {
+        range: '10"',
+        dice: 1,
+        to_hit: 5,
+        ap: 1,
+        traits: ["Light AT", "Rapid Fire"],
+      },
+    ],
+  },
+  {
+    id: 1015,
+    name: "Twin-linked lascannon",
+    profiles: [
+      {
+        range: '22"',
+        dice: 1,
+        to_hit: 4,
+        ap: 1,
+        traits: ["Accurate", "Anti-tank"],
+      },
+    ],
+  },
+  {
+    id: 1016,
+    name: "In-built twin-linked bolter",
+    profiles: [
+      {
+        range: '6"',
+        dice: 1,
+        to_hit: 5,
+        ap: 0,
+        traits: ["Assault", "Light", "Point Defence"],
+      },
+    ],
+  },
+  {
+    id: 1017,
+    name: "Tarantula lascannon battery",
+    profiles: [
+      {
+        range: '22"',
+        dice: 2,
+        to_hit: 5,
+        ap: 4,
+        traits: ["Anti-tank"],
+      },
+    ],
+  },
+  {
+    id: 1018,
+    name: "Hyperios air-defence missile launcher",
+    profiles: [
+      {
+        range: '20"',
+        dice: 1,
+        to_hit: 4,
+        ap: 1,
+        traits: ["Skyfire", "Tracking"],
+      },
+    ],
+  },
+  {
+    id: 1019,
+    name: "Sarcophagus Mounted weapons",
+    profiles: [
+      {
+        range: '6"',
+        dice: 1,
+        to_hit: 6,
+        ap: 0,
+        traits: ["Light", "Point Defence"],
+      },
+    ],
+  },
+  {
+    id: 1020,
+    name: "Aiolus missile launcher",
+    profiles: [
+      {
+        range: '25"',
+        dice: 1,
+        to_hit: 4,
+        ap: 2,
+        traits: ["Anti-tank", "Skyfire"],
+      },
+    ],
+  },
+  {
+    id: 1021,
+    name: "Hellfire plasma canonnade",
+    profiles: [
+      {
+        range: '14"',
+        dice: 2,
+        to_hit: 4,
+        ap: 2,
+        traits: ["Light-AT"],
+      },
+    ],
+  },
+  {
+    id: 1022,
+    name: "Anvilus autocannon battery",
+    profiles: [
+      {
+        range: '16"',
+        dice: 2,
+        to_hit: 5,
+        ap: 1,
+        traits: ["Accurate", "Light-AT"],
+      },
+    ],
+  },
   // ********************************************************************
   // ***********************KNIGHT & TITAN WEAPONS **********************
   // ********************************************************************

@@ -87,10 +87,7 @@ export const setBuilderDetachment = (
       ref_id: formationRef,
       id: formationID,
       faction: findFormation.faction,
-      compulsory: setBuilderDetachmentSlots(
-        findFormation.compulsory,
-        formationRef
-      ),
+      compulsory: getCompulsorySlots(findFormation.compulsory, formationRef),
       optional: getOptionalSlots(findFormation.optional, formationRef),
       choice: getChoiceSlots(findFormation.choice, formationRef),
     };
@@ -98,12 +95,13 @@ export const setBuilderDetachment = (
   return null;
 };
 
-const setBuilderDetachmentSlots = (
+const getCompulsorySlots = (
   slotArray: number[] | null,
   formationRef: string
 ) => {
   if (slotArray) {
     const slots: FORMATION_SLOT[] = slotArray
+      .sort()
       .map((id) => formationSlotData.find((slot) => slot.id === id))
       .filter((exists) => {
         return exists !== undefined;
@@ -125,9 +123,9 @@ const getOptionalSlots = (
   formationRef: string
 ): BUILDER_DETACHMENT_SLOT[] | null => {
   if (slotArray && slotArray.length) {
-    const slots: FORMATION_SLOT[] = slotArray.map(
-      (id) => formationSlotData.filter((slot) => slot.id === id)[0]
-    );
+    const slots: FORMATION_SLOT[] = slotArray
+      .sort()
+      .map((id) => formationSlotData.filter((slot) => slot.id === id)[0]);
     const optionalSlots = slots.map((slot, index) => {
       return {
         ...slot,
@@ -148,9 +146,9 @@ const getChoiceSlots = (
     // Need to get rid of this Typescript any
     const choiceArray: any = slotArray.map((secondaryArray, index) => {
       if (secondaryArray && secondaryArray.length) {
-        const slots: FORMATION_SLOT[] = secondaryArray.map(
-          (id) => formationSlotData.filter((slot) => slot.id === id)[0]
-        );
+        const slots: FORMATION_SLOT[] = secondaryArray
+          .sort()
+          .map((id) => formationSlotData.filter((slot) => slot.id === id)[0]);
 
         const choiceSlots = slots.map((slot, index2) => {
           return {

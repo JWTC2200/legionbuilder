@@ -161,6 +161,325 @@ export const detachmentData: DETACHMENT[] = [
       },
     ],
   },
+  {
+    id: 1003,
+    name: "Legion Plasma Gun Support Detachment",
+    faction: FACTION.astartes,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.support,
+    base_cost: 35,
+    base_size: 4,
+    max_size: 8,
+    main_unit: [1005],
+    related_unit: [],
+    loadout: [{ text_option: ["Plasma gun"] }],
+    upgrade_options: [
+      {
+        name: "Additional Legionaries",
+        options: [
+          { number: 2, cost: 15, size: 2 },
+          { number: 4, cost: 30, size: 4 },
+        ],
+      },
+    ],
+    datasheet_info: [
+      {
+        text: "A Legion Plasma Gun Support Detachment can purchase the following upgrades.",
+        options: [
+          { text: "2 additional Legionaries", cost: 15 },
+          { text: "4 additional Legionaries", cost: 30 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 1004,
+    name: "Legion Missile Launcher Support Detachment",
+    faction: FACTION.astartes,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.support,
+    base_cost: 35,
+    base_size: 4,
+    max_size: 8,
+    main_unit: [1006],
+    related_unit: [],
+    loadout: [{ text_option: ["Missile launchers"] }],
+    upgrade_options: [
+      {
+        name: "Additional Legionaries",
+        options: [
+          { number: 2, cost: 15, size: 2 },
+          { number: 4, cost: 30, size: 4 },
+        ],
+      },
+    ],
+    datasheet_info: [
+      {
+        text: "A Legion Missile Launcher Support Detachment can purchase the following upgrades.",
+        options: [
+          { text: "2 additional Legionaries", cost: 15 },
+          { text: "4 additional Legionaries", cost: 30 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 1005,
+    name: "Legion Assault Detachment",
+    faction: FACTION.astartes,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.support,
+    base_cost: 30,
+    base_size: 4,
+    max_size: 8,
+    main_unit: [1004],
+    related_unit: [],
+    loadout: [{ text_option: ["Legion bolt pistols"] }],
+    upgrade_options: [
+      {
+        name: "Additional Legionaries",
+        options: [
+          { number: 2, cost: 12, size: 2 },
+          { number: 4, cost: 24, size: 4 },
+        ],
+      },
+    ],
+    datasheet_info: [
+      {
+        text: "A Legion Assault Detachment can purchase the following upgrades.",
+        options: [
+          { text: "2 additional Legionaries", cost: 12 },
+          { text: "4 additional Legionaries", cost: 24 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 1006,
+    name: "Legion Terminator Detachment",
+    faction: FACTION.astartes,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.support,
+    base_cost: 50,
+    base_size: 4,
+    max_size: 8,
+    main_unit: [1003],
+    related_unit: [],
+    loadout: [{ text_option: ["Legion combi-bolters"] }],
+    upgrade_options: [
+      {
+        name: "Additional Legionaries",
+        options: [
+          { number: 2, cost: 15, size: 2 },
+          { number: 4, cost: 30, size: 4 },
+        ],
+      },
+    ],
+    datasheet_info: [
+      {
+        text: "A Legion Terminator Detachment can purchase the following upgrades.",
+        options: [
+          { text: "2 additional Legionaries", cost: 15 },
+          { text: "4 additional Legionaries", cost: 30 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 1007,
+    name: "Legion Rapier Battery Detachment",
+    faction: FACTION.astartes,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.support,
+    base_cost: 40,
+    base_size: 2,
+    max_size: 8,
+    main_unit: [1007],
+    related_unit: [],
+    loadout: [{ text_option: ["Laser destroyer array or quad launcher"] }],
+    upgrade_options: [
+      {
+        name: "Additional Rapiers",
+        options: [
+          { number: 2, cost: 30, size: 2 },
+          { number: 4, cost: 60, size: 4 },
+          { number: 6, cost: 90, size: 6 },
+        ],
+      },
+    ],
+    datasheet_info: [
+      {
+        text: "A Legion Rapier Battery Detachment can purchase the following upgrades.",
+        options: [
+          { text: "2 additional Rapiers", cost: 30 },
+          { text: "4 additional Rapiers", cost: 60 },
+          { text: "6 additional Rapiers", cost: 90 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 1008,
+    name: "Leviathan Siege Dreadnought Detachment",
+    faction: FACTION.astartes,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.support,
+    base_cost: 75,
+    base_size: 4,
+    max_size: 8,
+    main_unit: [1008],
+    related_unit: [],
+    loadout: [
+      {
+        text_option: [
+          "Leviathan storm cannon or cyclone melta lance",
+          "Twin-linked volkite caliver",
+          "Leviathan siege claw",
+        ],
+      },
+    ],
+    upgrade_options: [
+      {
+        name: "Additional Dreadnought",
+        options: [
+          { number: 2, cost: 35, size: 2 },
+          { number: 4, cost: 70, size: 4 },
+        ],
+      },
+    ],
+    datasheet_info: [
+      {
+        text: "A Leviathan Siege Dreadnought Detachment can purchase the following upgrades.",
+        options: [
+          { text: "2 Additional Dreadnought", cost: 35 },
+          { text: "4 Additional Dreadnought", cost: 70 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 1009,
+    name: "Legion Dreadnought Talon",
+    faction: FACTION.astartes,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.support,
+    base_cost: 70,
+    base_size: 4,
+    max_size: 10,
+    main_unit: [1009],
+    related_unit: [1008],
+    loadout: [
+      {
+        text_option: [
+          "Kheres assault cannon or Twin-linked lascannons",
+          "In-built twin-linked bolters",
+        ],
+      },
+    ],
+    upgrade_options: [
+      {
+        name: "Additional Contemptor",
+        options: [
+          { number: 2, cost: 30, size: 2 },
+          { number: 4, cost: 60, size: 4 },
+          { number: 6, cost: 90, size: 6 },
+        ],
+      },
+      {
+        name: "Additional Leviathan",
+        options: [
+          { number: 2, cost: 35, size: 2 },
+          { number: 4, cost: 70, size: 4 },
+          { number: 6, cost: 105, size: 6 },
+        ],
+      },
+    ],
+    datasheet_info: [
+      {
+        text: "A Legion Dreadnought Talon can purchase up to three upgrades. It may purchase the same upgrade multiple times: Each upgrade increases the Detachment size by 2.",
+        options: [
+          { text: "2 Additional Contemptors", cost: 30 },
+          { text: "2 Additional Leviathans", cost: 35 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 1010,
+    name: "Legion Tarantula Battery",
+    faction: FACTION.astartes,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.bastion,
+    base_cost: 36,
+    base_size: 4,
+    max_size: 8,
+    main_unit: [1010],
+    related_unit: [],
+    loadout: [
+      {
+        text_option: [
+          "Tarantula lascannon battery or Hyperios air-defence missile launcher",
+        ],
+      },
+    ],
+    upgrade_options: [
+      {
+        name: "Additional Tarantulas",
+        options: [
+          { number: 2, cost: 15, size: 2 },
+          { number: 4, cost: 30, size: 4 },
+        ],
+      },
+    ],
+    datasheet_info: [
+      {
+        text: "A Legion Tarantula Battery can purchase the following upgrades.",
+        options: [
+          { text: "2 additional Tarantulas", cost: 15 },
+          { text: "4 additional Tarantulas", cost: 30 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 1011,
+    name: "Legion Deredeo Dreadnought Detachment",
+    faction: FACTION.astartes,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.bastion,
+    base_cost: 85,
+    base_size: 4,
+    max_size: 8,
+    main_unit: [1011],
+    related_unit: [],
+    loadout: [
+      {
+        text_option: [
+          "Hellfire plasma cannonade or Anvilus autocannon battery",
+          "Aiolos missile launcher",
+          "Sarcophagus Mounted weapons",
+        ],
+      },
+    ],
+    upgrade_options: [
+      {
+        name: "Additional Deredeo",
+        options: [
+          { number: 2, cost: 40, size: 2 },
+          { number: 4, cost: 80, size: 4 },
+        ],
+      },
+    ],
+    datasheet_info: [
+      {
+        text: "A Legion Deredeo Dreadnought Detachmentcan purchase the following upgrades.",
+        options: [
+          { text: "2 Additional Deredeo", cost: 40 },
+          { text: "4 Additional Deredeo", cost: 80 },
+        ],
+      },
+    ],
+  },
   // ********************************************************************
   // *********************KNIGHT & TITAN DETACHMENTS ********************
   // ********************************************************************
