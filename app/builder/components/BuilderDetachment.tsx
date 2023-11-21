@@ -98,7 +98,13 @@ const BuilderDetachment = ({
       <h4 className="w-full bg-green-950 text-green-50 text-graduate text-center py-1 text-xl font-graduate">
         {slot.type}
       </h4>
-      {slot.description ? <p className="italic">*{slot.description}*</p> : null}
+
+      {/* DESCRIPTION  */}
+      {slot.description ? (
+        <p className="italic text-center">*{slot.description}*</p>
+      ) : null}
+
+      {/* SELECT SECTION */}
       <div className="p-2">
         <select
           value={slot.selected_unit ? slot.selected_unit.id : 0}
@@ -108,6 +114,7 @@ const BuilderDetachment = ({
           <option value={0}>Select Detachment</option>
           {selectOptions}
         </select>
+
         {/* UNIT UPGRADE SELECTIONS */}
         {slot.selected_unit ? (
           slot.selected_unit.upgrade_options ? (

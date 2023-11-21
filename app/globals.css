@@ -34,3 +34,7 @@
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b0c4b7",endColorstr="#f2fbf7",GradientType=1);
 }
+
+select {
+  @apply cursor-pointer;
+}

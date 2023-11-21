@@ -42,8 +42,11 @@ export const getUnitWeaponRows = (unit: number[]) => {
           <td className="text-center">
             {weaponEntry.profiles.map((profile, index) => (
               <p key={weaponEntry.name + "ap" + index}>
-                {profile.ap ? "-" : null}
-                {profile.ap}
+                {typeof profile.ap === "number"
+                  ? profile.ap
+                    ? `-${profile.ap}`
+                    : profile.ap
+                  : profile.ap}
               </p>
             ))}
           </td>

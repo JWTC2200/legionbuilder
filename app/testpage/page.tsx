@@ -21,11 +21,52 @@ const page = () => {
     choice: null,
     compulsory: [
       {
-        id: 4000,
-        type: DETACHMENT_TYPE.knight,
+        id: 1000,
+        type: DETACHMENT_TYPE.hq,
         options: [],
         slot_ref: "formation0compulsorySlot0",
-        selected_unit: null,
+        selected_unit: {
+          id: 4000,
+          name: "Questoris Knight Banner",
+          upgrade_options: [
+            {
+              name: "Additional Knight",
+              number: 0,
+              cost: 0,
+              size: 0,
+            },
+            {
+              name: "Knight Styrix/Magaera upgrade",
+              number: 0,
+              cost: 0,
+              size: 0,
+            },
+            {
+              name: "Rocket pods",
+              number: 0,
+              cost: 0,
+              size: 0,
+            },
+            {
+              name: "Thunderstrike gauntlets",
+              number: 1,
+              cost: 2,
+              size: 0,
+            },
+            {
+              name: "Armiger Talon",
+              number: 1,
+              cost: 180,
+              size: 3,
+            },
+            {
+              name: "Moriax Talon",
+              number: 0,
+              cost: 0,
+              size: 0,
+            },
+          ],
+        },
       },
     ],
     optional: null,

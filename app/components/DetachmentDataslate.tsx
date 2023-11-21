@@ -86,7 +86,7 @@ const DetachmentDataslate = (detachment: DETACHMENT) => {
             >
               {loadout.text ? <p>{loadout.text}</p> : null}
               {loadout.text_option ? (
-                <ul className="list-disc">
+                <ul className="list-disc grid sm:grid-cols-2">
                   {loadout.text_option.map((option) => (
                     <li key={option} className="ml-4">
                       {option}

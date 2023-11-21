@@ -118,7 +118,7 @@ export interface WEAPON_DATASHEET {
     range: string;
     dice: number | null;
     to_hit: number | null;
-    ap: number;
+    ap: number | string;
     traits: string[];
   }[];
 }

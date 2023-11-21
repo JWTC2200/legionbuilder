@@ -29,9 +29,9 @@ const page = () => {
   };
 
   return (
-    <main className="flex flex-col gap-2 w-full max-w-screen-xl items-center dataslate_background mt-4 p-4 rounded-xl border-2 border-black">
+    <main className="flex flex-col gap-2 w-full max-w-screen-2xl items-center dataslate_background mt-4 p-4 rounded-xl border-2 border-black">
       {/* MAIN LIST OPTIONS */}
-      <div className="w-full mx-4 p-4 bg-green-950 text-green-50 flex flex-wrap justify-center gap-8 ">
+      <div className="w-full mx-4 p-4 bg-green-950 text-green-50 flex flex-wrap justify-center gap-8 text-center">
         <div>
           <label htmlFor="game_size" className="text-xl font-graduate mr-1">
             Game size:
@@ -66,7 +66,7 @@ const page = () => {
                 return { ...prev, main_faction: e.target.value as FACTION };
               })
             }
-            className="bg-green-950 rounded-sm p-1 text-lg "
+            className="bg-green-950 rounded-sm p-1 text-lg font-graduate"
           >
             <option value="Legiones Astartes">Legiones Astartes</option>
             <option value="Solar Auxillia">Solar Auxillia</option>
@@ -74,16 +74,20 @@ const page = () => {
         </div>
       </div>
       {/* DETACHMENT SELECTION */}
-      <div className="w-full mt-4 p-4 bg-green-950 text-green-50 flex flex-wrap justify-center gap-8">
-        <button onClick={addFormation} className="border-2 rounded-full p-1">
-          Add formation
-        </button>
-      </div>
+      <div className="w-full mt-4 p-4 bg-green-950 text-green-50 flex flex-wrap justify-center gap-8"></div>
       {/* FORMATION DISPLAY */}
       <div className="w-full mt-4 text-green-50 border-2 border-black flex flex-col justify-center gap-2">
-        <h1 className="text-center bg-green-950 font-graduate text-2xl">
-          FORMATIONS
-        </h1>
+        <div className="bg-green-950 flex flex-wrap justify-center text-center gap-4">
+          <h1 className="text-center bg-green-950 font-graduate text-2xl">
+            FORMATIONS
+          </h1>
+          <button
+            onClick={addFormation}
+            className="p-1 hover:text-cyan-700 font-graduate"
+          >
+            Add formation
+          </button>
+        </div>
         {armyList.formations.length ? (
           <div className="p-4">
             {armyList.formations.map((formation) => (
