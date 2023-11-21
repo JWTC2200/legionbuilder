@@ -38,6 +38,15 @@ const page = () => {
     router.push("/print");
   };
 
+  const handleClearList = () => {
+    localStorage.clear();
+    setArmyList({
+      points: 3000,
+      main_faction: FACTION.astartes,
+      formations: [],
+    });
+  };
+
   useEffect(() => {
     if (savedList) {
       const list = JSON.parse(savedList);
@@ -47,20 +56,21 @@ const page = () => {
 
   return (
     <main className="flex flex-col gap-2 w-full max-w-screen-2xl items-center dataslate_background mt-4 p-4 rounded-xl border-2 border-black">
-      <button
-        onClick={handlePrintList}
-        className=" bg-green-950 text-green-50 "
-      >
-        PRINT LIST
-      </button>
-      <button
-        onClick={() => {
-          localStorage.clear();
-        }}
-        className=" bg-green-950 text-green-50 "
-      >
-        CLEAR
-      </button>
+      <div className="flex flex-wrap gap-4">
+        {" "}
+        <button
+          onClick={handlePrintList}
+          className=" bg-green-950 text-green-50 px-2 py-1 font-bold font-graduate rounded-lg hover:text-cyan-700"
+        >
+          PRINT LIST
+        </button>
+        <button
+          onClick={handleClearList}
+          className=" bg-green-950 text-green-50 px-2 py-1 font-bold font-graduate rounded-lg hover:text-cyan-700"
+        >
+          CLEAR LIST
+        </button>
+      </div>
 
       {/* MAIN LIST OPTIONS */}
       <div className="w-full mx-4 p-4 bg-green-950 text-green-50 flex flex-wrap justify-center gap-4 text-center">
@@ -173,9 +183,9 @@ const page = () => {
       </div>
       {/* object display */}
 
-      <pre className="w-full border-2 border-green-950 text-green-950 p-8 font-semibold text-lg">
+      {/* <pre className="w-full border-2 border-green-950 text-green-950 p-8 font-semibold text-lg">
         {JSON.stringify(armyList, null, " ")}
-      </pre>
+      </pre> */}
     </main>
   );
 };
