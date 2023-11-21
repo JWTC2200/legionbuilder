@@ -1,24 +1,27 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { BUILDER_FORMATION, BUILDER_LIST, FACTION } from "../types";
 import BuilderFormation from "./components/BuilderFormation";
 import { listPoints } from "./utils";
+import { nanoid } from "nanoid";
 
 const page = () => {
+  const router = useRouter();
   const [armyList, setArmyList] = useState<BUILDER_LIST>({
     points: 3000,
     main_faction: FACTION.astartes,
     formations: [],
   });
-  const [formationCounter, setFormationCounter] = useState(0);
   const armyPoints = listPoints(armyList);
 
+  const savedList = localStorage.getItem("legionbuilder");
+
   const addFormation = () => {
-    setFormationCounter((prev) => prev + 1);
     const newFormation: BUILDER_FORMATION = {
       name: "",
-      ref_id: `formation${formationCounter}`,
+      ref_id: `formation${nanoid()}`,
       id: 0,
       faction: null,
       choice: null,
@@ -30,8 +33,35 @@ const page = () => {
     });
   };
 
+  const handlePrintList = () => {
+    localStorage.setItem("legionbuilder", JSON.stringify(armyList));
+    router.push("/print");
+  };
+
+  useEffect(() => {
+    if (savedList) {
+      const list = JSON.parse(savedList);
+      setArmyList(list);
+    }
+  }, []);
+
   return (
     <main className="flex flex-col gap-2 w-full max-w-screen-2xl items-center dataslate_background mt-4 p-4 rounded-xl border-2 border-black">
+      <button
+        onClick={handlePrintList}
+        className=" bg-green-950 text-green-50 "
+      >
+        PRINT LIST
+      </button>
+      <button
+        onClick={() => {
+          localStorage.clear();
+        }}
+        className=" bg-green-950 text-green-50 "
+      >
+        CLEAR
+      </button>
+
       {/* MAIN LIST OPTIONS */}
       <div className="w-full mx-4 p-4 bg-green-950 text-green-50 flex flex-wrap justify-center gap-4 text-center">
         <div>
@@ -143,9 +173,9 @@ const page = () => {
       </div>
       {/* object display */}
 
-      {/* <pre className="w-full border-2 border-green-950 text-green-950 p-8 font-semibold text-lg">
+      <pre className="w-full border-2 border-green-950 text-green-950 p-8 font-semibold text-lg">
         {JSON.stringify(armyList, null, " ")}
-      </pre> */}
+      </pre>
     </main>
   );
 };

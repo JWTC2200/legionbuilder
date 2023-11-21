@@ -482,7 +482,188 @@ export const weaponData: WEAPON_DATASHEET[] = [
       },
     ],
   },
-
+  {
+    id: 1035,
+    name: "Xiphon lascannon array",
+    profiles: [
+      {
+        range: '22"',
+        dice: 2,
+        to_hit: 4,
+        ap: 1,
+        traits: ["Arc (Front)", "Accurate", "Anti-tank", "Skyfire"],
+      },
+    ],
+  },
+  {
+    id: 1036,
+    name: "Xiphon rotary missile launcher",
+    profiles: [
+      {
+        range: '24"',
+        dice: 2,
+        to_hit: 4,
+        ap: 1,
+        traits: ["Arc (Front)", "Skyfire", "Tracking"],
+      },
+    ],
+  },
+  {
+    id: 1037,
+    name: "Storm Eagle heavy bolter",
+    profiles: [
+      {
+        range: '12"',
+        dice: 3,
+        to_hit: 5,
+        ap: 0,
+        traits: ["Arc (Front)", "Light", "Point defence", "Skyfire"],
+      },
+    ],
+  },
+  {
+    id: 1038,
+    name: "Vengeance launcher",
+    profiles: [
+      {
+        range: '15"',
+        dice: 2,
+        to_hit: 4,
+        ap: 1,
+        traits: ["Arc (Front)", "Light AT"],
+      },
+    ],
+  },
+  {
+    id: 1039,
+    name: "Tempest rockets",
+    profiles: [
+      {
+        range: '35"',
+        dice: 1,
+        to_hit: 2,
+        ap: 2,
+        traits: ["Arc (Front)", "Skyfire"],
+      },
+    ],
+  },
+  {
+    id: 1040,
+    name: "Wing Mounted lascannon",
+    profiles: [
+      {
+        range: '22"',
+        dice: 2,
+        to_hit: 4,
+        ap: 1,
+        traits: ["Anti-tank", "Arc (Front)", "Skyfire"],
+      },
+    ],
+  },
+  {
+    id: 1041,
+    name: "Avenger bolt cannon",
+    profiles: [
+      {
+        range: '16"',
+        dice: 5,
+        to_hit: 5,
+        ap: 1,
+        traits: ["Arc (Front)", "Light AT", "Rapid Fire", "Skyfire"],
+      },
+    ],
+  },
+  {
+    id: 1042,
+    name: "Quad heavy bolter batteries",
+    profiles: [
+      {
+        range: '12"',
+        dice: 4,
+        to_hit: 5,
+        ap: 0,
+        traits: ["Light", "Point Defence", "Skyfire"],
+      },
+    ],
+  },
+  {
+    id: 1043,
+    name: "Gravis autocannon batteries",
+    profiles: [
+      {
+        range: '16"',
+        dice: 3,
+        to_hit: 5,
+        ap: 1,
+        traits: ["Light AT", "Skyfire"],
+      },
+    ],
+  },
+  {
+    id: 1044,
+    name: "Lascannon batteries ",
+    profiles: [
+      {
+        range: '22"',
+        dice: 2,
+        to_hit: 4,
+        ap: 1,
+        traits: ["Anti-tank", "Skyfire"],
+      },
+    ],
+  },
+  {
+    id: 1045,
+    name: "Turbo-laser destructor",
+    profiles: [
+      {
+        range: '40"',
+        dice: 2,
+        to_hit: 4,
+        ap: 3,
+        traits: ["Accurate", "Arc (Front)"],
+      },
+    ],
+  },
+  {
+    id: 1046,
+    name: "Thunderhawk heavy bolters",
+    profiles: [
+      {
+        range: '12"',
+        dice: 3,
+        to_hit: 5,
+        ap: 0,
+        traits: ["Arc (Front)", "Light", "Point Defence", "Skyfire"],
+      },
+    ],
+  },
+  {
+    id: 1047,
+    name: "Thunderhawk lascannon",
+    profiles: [
+      {
+        range: '22"',
+        dice: 2,
+        to_hit: 4,
+        ap: 1,
+        traits: ["Anti-tank", "Arc (Front)", "Skyfire"],
+      },
+    ],
+  },
+  {
+    id: 1048,
+    name: "Hellstrike missiles",
+    profiles: [
+      {
+        range: '30"',
+        dice: 2,
+        to_hit: 4,
+        ap: 1,
+        traits: ["Arc (Front)", "Armourbane"],
+      },
+    ],
+  },
   // ********************************************************************
   // ***********************KNIGHT & TITAN WEAPONS **********************
   // ********************************************************************

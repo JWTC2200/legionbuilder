@@ -602,6 +602,165 @@ export const detachmentData: DETACHMENT[] = [
       },
     ],
   },
+  {
+    id: 1015,
+    name: "Legion Xiphon Interceptor Squadron",
+    faction: FACTION.astartes,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.air,
+    base_cost: 95,
+    base_size: 1,
+    max_size: 4,
+    main_unit: [1015],
+    related_unit: [],
+    loadout: [
+      {
+        text_option: [
+          "Xiphon lascannon array",
+          "Xiphon rotary missile launcher",
+        ],
+      },
+    ],
+    upgrade_options: [
+      {
+        name: "Additional Xiphon",
+        options: [
+          { number: 1, cost: 60, size: 1 },
+          { number: 2, cost: 110, size: 2 },
+          { number: 3, cost: 200, size: 3 },
+        ],
+      },
+    ],
+    datasheet_info: [
+      {
+        text: "Legion Xiphon Interceptor Squadron can purchase the following upgrades.",
+        options: [
+          { text: "1 additional Xiphon", cost: 85 },
+          { text: "2 additional Xiphon", cost: 160 },
+          { text: "3 additional Xiphon", cost: 215 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 1016,
+    name: "Legion Storm Eagle Squadron",
+    faction: FACTION.astartes,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.air,
+    base_cost: 100,
+    base_size: 1,
+    max_size: 4,
+    main_unit: [1016],
+    related_unit: [],
+    loadout: [
+      {
+        text_option: [
+          "Storm Eagle heavy bolter",
+          "Vengeance launcher",
+          "Wing Mounted lascannon",
+          "Tempest rockets",
+        ],
+      },
+    ],
+    upgrade_options: [
+      {
+        name: "Additional Storm Eagle",
+        options: [
+          { number: 1, cost: 100, size: 1 },
+          { number: 2, cost: 190, size: 2 },
+        ],
+      },
+    ],
+    datasheet_info: [
+      {
+        text: "Legion Storm Eagle Squadron can purchase the following upgrades.",
+        options: [
+          { text: "1 additional Storm Eagle", cost: 100 },
+          { text: "2 additional Storm Eagle", cost: 190 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 1017,
+    name: "Legion Fire Raptor Squadron",
+    faction: FACTION.astartes,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.air,
+    base_cost: 100,
+    base_size: 1,
+    max_size: 4,
+    main_unit: [1017],
+    related_unit: [],
+    loadout: [
+      {
+        text_option: [
+          "Avenger bolt cannon",
+          "Tempest rockets",
+          "Quad heavy bolter batteries, Lascannon batteries or Gravis autocannon batteries",
+        ],
+      },
+    ],
+    upgrade_options: [
+      {
+        name: "Additional Fire Raptor",
+        options: [
+          { number: 1, cost: 100, size: 1 },
+          { number: 2, cost: 190, size: 2 },
+        ],
+      },
+    ],
+    datasheet_info: [
+      {
+        text: "Legion Storm Eagle Squadron can purchase the following upgrades.",
+        options: [
+          { text: "1 additional Fire Raptor", cost: 100 },
+          { text: "2 additional Fire Raptor", cost: 190 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 1017,
+    name: "Legion Thunderhawk Gunship",
+    faction: FACTION.astartes,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.air,
+    base_cost: 150,
+    base_size: 1,
+    max_size: 4,
+    main_unit: [1017],
+    related_unit: [],
+    loadout: [
+      {
+        text_option: [
+          "Turbo-laser destructor",
+          "Thunderhawk heavy bolters",
+          "Thunderhawk lascannon",
+          "Hellstrike missiles",
+        ],
+      },
+    ],
+    upgrade_options: [
+      {
+        name: "Additional Thunderhawk Gunship",
+        options: [
+          { number: 1, cost: 150, size: 1 },
+          { number: 2, cost: 280, size: 2 },
+        ],
+      },
+    ],
+    datasheet_info: [
+      {
+        text: "Legion Storm Eagle Squadron can purchase the following upgrades.",
+        options: [
+          { text: "1 additional Thunderhawk Gunship", cost: 150 },
+          { text: "2 additional Thunderhawk Gunship", cost: 280 },
+        ],
+      },
+    ],
+  },
   // ********************************************************************
   // *********************KNIGHT & TITAN DETACHMENTS ********************
   // ********************************************************************
