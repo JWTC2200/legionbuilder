@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { GiChewedSkull, GiTank } from "react-icons/gi";
+import { GiChewedSkull, GiTank, GiVerticalBanner } from "react-icons/gi";
 import { FaClipboardList } from "react-icons/fa";
 
 const Navbar = () => {
@@ -16,7 +16,7 @@ const Navbar = () => {
       <Link href="/" className={`hover:text-cyan-700 active:text-cyan-600`}>
         <h1 className="text-4xl font-bold mb-4">Legion Imperiallis</h1>
       </Link>
-      <div className="max-w-screen-sm flex flex-wrap gap-4">
+      <div className="max-w-screen-sm flex flex-wrap items-center text-center justify-center gap-4">
         <Link
           href="/units"
           className={`flex gap-1 items-center hover:text-cyan-700 active:text-cyan-600 ${
@@ -41,8 +41,8 @@ const Navbar = () => {
             pathname === "/formations" ? " text-cyan-700" : ""
           }`}
         >
-          <GiTank /> Formations
-          <GiTank />
+          <GiVerticalBanner /> Formations
+          <GiVerticalBanner />
         </Link>
         <Link
           href="/builder"

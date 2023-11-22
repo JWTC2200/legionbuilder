@@ -1,6 +1,7 @@
 import React from "react";
 import { FORMATION } from "../types";
 import { formationSlotData } from "../data/formation_slot_data";
+import { getDetachmentIcons } from "../utils/detachmentIcons";
 
 const FormationDataslate = (formation: FORMATION) => {
   return (
@@ -11,11 +12,11 @@ const FormationDataslate = (formation: FORMATION) => {
         </h2>
       </div>
       {formation.compulsory ? (
-        <div className="flex flex-col border-2 border-black items-center">
+        <div className="flex flex-col items-center ">
           <h2 className="text-2xl w-full text-center font-graduate font-bold bg-green-950 text-green-50 py-1 px-3 mb-2">
             Compulsory Detachments:
           </h2>
-          <div className="text-green-950 flex flex-wrap gap-4 m-2">
+          <div className="text-green-950 flex flex-wrap justify-center items-center gap-4 m-2">
             {formation.compulsory.sort().map((detachment, index) => {
               const foundSlot = formationSlotData.find(
                 (slot) => slot.id === detachment
@@ -24,10 +25,14 @@ const FormationDataslate = (formation: FORMATION) => {
                 return (
                   <div
                     key={"compulsory" + index}
-                    className="flex flex-col items-center text-center"
+                    className="flex flex-col justify-center items-center text-center bg-green-950 text-green-950 w-40 h-32 p-2 border-2 border-black rounded-xl dataslate_background"
                   >
-                    {" "}
-                    <p>{foundSlot.type}</p>
+                    <span className="text-3xl">
+                      {getDetachmentIcons(foundSlot.type)}
+                    </span>
+                    <p className="font-semibold font-graduate">
+                      {foundSlot.type}
+                    </p>
                     {foundSlot.description ? (
                       <p className="italic text-sm">{foundSlot.description}</p>
                     ) : null}
@@ -40,11 +45,11 @@ const FormationDataslate = (formation: FORMATION) => {
         </div>
       ) : null}
       {formation.optional ? (
-        <div className="flex flex-col border-2 border-black items-center">
+        <div className="flex flex-col items-center ">
           <h2 className="text-xl w-full text-center font-graduate font-bold bg-green-950 text-green-50 py-1 px-3 mb-2">
             Optional detachments:
           </h2>
-          <div className="text-green-950 flex flex-wrap gap-4 m-2">
+          <div className="text-green-950 flex flex-wrap justify-center items-center gap-4 m-2">
             {formation.optional.sort().map((detachment, index) => {
               const foundSlot = formationSlotData.find(
                 (slot) => slot.id === detachment
@@ -53,10 +58,14 @@ const FormationDataslate = (formation: FORMATION) => {
                 return (
                   <div
                     key={"optional" + index}
-                    className="flex flex-col items-center text-center"
+                    className="flex flex-col justify-center items-center text-center bg-green-950 text-green-950 w-40 h-32 p-2 border-2 border-black rounded-xl dataslate_background"
                   >
-                    {" "}
-                    <p>{foundSlot.type}</p>
+                    <span className="text-3xl">
+                      {getDetachmentIcons(foundSlot.type)}
+                    </span>
+                    <p className="font-semibold font-graduate">
+                      {foundSlot.type}
+                    </p>
                     {foundSlot.description ? (
                       <p className="italic text-sm">{foundSlot.description}</p>
                     ) : null}
@@ -72,12 +81,13 @@ const FormationDataslate = (formation: FORMATION) => {
         ? formation.choice.map((choice, index) => (
             <div
               key={"choiceset" + index}
-              className="flex flex-col border-2 border-black items-center"
+              className="flex flex-col items-center "
             >
               <h2 className="text-xl w-full text-center font-graduate font-bold bg-green-950 text-green-50 py-1 px-3 mb-2">
                 One of the following:
               </h2>
-              <div className="text-green-950 flex flex-wrap gap-4 m-2">
+              justify-center{" "}
+              <div className="text-green-950 flex flex-wrap justify-center items-center gap-4 m-2">
                 {choice.sort().map((detachment, index2) => {
                   const foundSlot = formationSlotData.find(
                     (slot) => slot.id === detachment
@@ -86,9 +96,14 @@ const FormationDataslate = (formation: FORMATION) => {
                     return (
                       <div
                         key={"choice" + index2}
-                        className="flex flex-col items-center text-center"
+                        className="flex flex-col justify-center items-center text-center text-green-950 w-40 h-32 p-2 border-2 border-black rounded-xl dataslate_background"
                       >
-                        <p>{foundSlot.type}</p>
+                        <span className="text-3xl">
+                          {getDetachmentIcons(foundSlot.type)}
+                        </span>
+                        <p className="font-semibold font-graduate">
+                          {foundSlot.type}
+                        </p>
                         {foundSlot.description ? (
                           <p className="italic text-sm">
                             {foundSlot.description}

@@ -9,10 +9,12 @@ import {
   BUILDER_DETACHMENT_UNIT,
   BUILDER_DETACHMENT_UNIT_UPGRADES,
   FACTION,
+  DETACHMENT_TYPE,
 } from "@/app/types";
 import { detachmentData } from "@/app/data/detachment_data";
 import BuilderUnitUpgradeSelect from "./BuilderUnitUpgradeSelect";
 import { detachmentPoints, detachmentSize } from "../utils";
+import { getDetachmentIcons } from "@/app/utils/detachmentIcons";
 
 const BuilderDetachment = ({
   slot,
@@ -117,8 +119,9 @@ const BuilderDetachment = ({
 
   return (
     <div className="sm:border-2 flex-grow border-black flex flex-col max-w-md">
-      <h4 className="w-full justify-center bg-green-950 text-green-50 text-graduate text-center py-1 sm:text-xl font-graduate">
-        {slot.type}
+      <h4 className="w-full flex gap-1 items-center justify-center bg-green-950 text-green-50 text-graduate text-center py-1 sm:text-xl font-graduate px-2">
+        {getDetachmentIcons(slot.type)} {slot.type}
+        {getDetachmentIcons(slot.type)}
       </h4>
 
       {/* DESCRIPTION  */}

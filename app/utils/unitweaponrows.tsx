@@ -1,5 +1,4 @@
 import { weaponData } from "../data/weapon_data";
-import { UNIT_DATASHEET } from "../types";
 import TraitBox from "../components/Traitbox";
 
 export const getUnitWeaponRows = (unit: number[]) => {

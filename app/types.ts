@@ -26,7 +26,6 @@ export enum DETACHMENT_TYPE {
   transport = "Transport",
   titan = "Titan",
   knight = "Knight",
-  unique = "Unique",
 }
 
 export enum UNIT_TYPE {
