@@ -12,7 +12,9 @@ const page = () => {
             <h3 className="font-subrayada text-2xl text-center">{faction}</h3>
             {detachmentData
               .filter(
-                (detachmentFaction) => detachmentFaction.faction === faction
+                (detachmentFaction) =>
+                  detachmentFaction.faction === faction &&
+                  !detachmentFaction.unique
               )
               .map((detachment) => (
                 <Link

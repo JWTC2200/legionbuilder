@@ -1,6 +1,6 @@
 import { DETACHMENT, FACTION, ALLEGIANCE, DETACHMENT_TYPE } from "../types";
 
-// astartes 1000-1999, solar 2000-2999, knights-titans 4000-4999
+// astartes 1000-1999, solar 2000-2999, knights-titans 4000-4999, unique detachments 9000-9999
 
 export const detachmentData: DETACHMENT[] = [
   // ********************************************************************
@@ -980,6 +980,203 @@ export const detachmentData: DETACHMENT[] = [
             text: "Increase the Detachment size by 2",
             cost: 640,
           },
+        ],
+      },
+    ],
+  },
+  // ********************************************************************
+  // ************************* UNIQUE DETACHMENTS ***********************
+  // ********************************************************************
+  {
+    id: 9000,
+    name: "Demi-company Rhinos",
+    faction: FACTION.astartes,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.transport,
+    unique: true,
+    base_cost: 10,
+    base_size: 1,
+    max_size: 20,
+    main_unit: [1001],
+    related_unit: [],
+    loadout: [{ text_option: ["Pintle Mounted twin-linked bolter"] }],
+    upgrade_options: [
+      {
+        name: "Additional Rhino",
+        options: [
+          { number: 1, cost: 10, size: 1 },
+          { number: 2, cost: 20, size: 2 },
+          { number: 3, cost: 30, size: 3 },
+          { number: 4, cost: 40, size: 4 },
+          { number: 5, cost: 50, size: 5 },
+          { number: 6, cost: 60, size: 6 },
+          { number: 7, cost: 70, size: 7 },
+          { number: 8, cost: 80, size: 8 },
+          { number: 9, cost: 90, size: 9 },
+          { number: 10, cost: 100, size: 10 },
+          { number: 11, cost: 110, size: 11 },
+          { number: 12, cost: 120, size: 12 },
+          { number: 13, cost: 130, size: 13 },
+          { number: 14, cost: 140, size: 14 },
+          { number: 15, cost: 150, size: 15 },
+          { number: 16, cost: 160, size: 16 },
+          { number: 17, cost: 170, size: 17 },
+          { number: 18, cost: 180, size: 18 },
+          { number: 19, cost: 190, size: 19 },
+        ],
+      },
+      {
+        name: "Havoc launcher",
+        options: [
+          { number: 1, cost: 2, size: 0 },
+          { number: 3, cost: 4, size: 0 },
+          { number: 2, cost: 6, size: 0 },
+          { number: 4, cost: 8, size: 0 },
+          { number: 5, cost: 10, size: 0 },
+          { number: 6, cost: 12, size: 0 },
+          { number: 7, cost: 14, size: 0 },
+          { number: 8, cost: 16, size: 0 },
+          { number: 9, cost: 18, size: 0 },
+          { number: 10, cost: 20, size: 0 },
+          { number: 11, cost: 22, size: 0 },
+          { number: 12, cost: 24, size: 0 },
+          { number: 13, cost: 26, size: 0 },
+          { number: 14, cost: 28, size: 0 },
+          { number: 15, cost: 30, size: 0 },
+          { number: 16, cost: 32, size: 0 },
+          { number: 17, cost: 34, size: 0 },
+          { number: 18, cost: 36, size: 0 },
+          { number: 19, cost: 39, size: 0 },
+          { number: 20, cost: 40, size: 0 },
+        ],
+      },
+      {
+        name: "Multi-melta",
+        options: [
+          { number: 1, cost: 5, size: 0 },
+          { number: 3, cost: 10, size: 0 },
+          { number: 2, cost: 15, size: 0 },
+          { number: 4, cost: 20, size: 0 },
+          { number: 5, cost: 25, size: 0 },
+          { number: 6, cost: 30, size: 0 },
+          { number: 7, cost: 35, size: 0 },
+          { number: 8, cost: 30, size: 0 },
+          { number: 9, cost: 45, size: 0 },
+          { number: 10, cost: 50, size: 0 },
+          { number: 11, cost: 55, size: 0 },
+          { number: 12, cost: 60, size: 0 },
+          { number: 13, cost: 65, size: 0 },
+          { number: 14, cost: 70, size: 0 },
+          { number: 15, cost: 75, size: 0 },
+          { number: 16, cost: 80, size: 0 },
+          { number: 17, cost: 85, size: 0 },
+          { number: 18, cost: 90, size: 0 },
+          { number: 19, cost: 95, size: 0 },
+          { number: 20, cost: 100, size: 0 },
+        ],
+      },
+    ],
+    datasheet_info: [
+      {
+        text: "A Rhino may change its Pintle Mounted twin-linked bolter for one of the following",
+        options: [
+          { text: "Pintle mounted havoc launcher", cost: 2 },
+          { text: "Pintle mounted multi-melta", cost: 5 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 9001,
+    name: "Storm Eagle Dedicated Transports",
+    faction: FACTION.astartes,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.air,
+    unique: true,
+    base_cost: 100,
+    base_size: 1,
+    max_size: 10,
+    main_unit: [1016],
+    related_unit: [],
+    loadout: [
+      {
+        text_option: [
+          "Storm Eagle heavy bolter",
+          "Vengeance launcher",
+          "Wing Mounted lascannon",
+          "Tempest rockets",
+        ],
+      },
+    ],
+    upgrade_options: [
+      {
+        name: "Additional Storm Eagle",
+        options: [
+          { number: 1, cost: 100, size: 1 },
+          { number: 2, cost: 200, size: 2 },
+          { number: 3, cost: 300, size: 3 },
+          { number: 4, cost: 400, size: 4 },
+          { number: 5, cost: 500, size: 5 },
+          { number: 6, cost: 600, size: 6 },
+          { number: 7, cost: 700, size: 7 },
+          { number: 8, cost: 800, size: 8 },
+          { number: 9, cost: 900, size: 9 },
+        ],
+      },
+    ],
+    datasheet_info: [
+      {
+        text: "Legion Storm Eagle Squadron can purchase the following upgrades.",
+        options: [
+          { text: "1 additional Storm Eagle", cost: 100 },
+          { text: "2 additional Storm Eagle", cost: 200 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 9002,
+    name: "Thunderhawk Dedicated Transports",
+    faction: FACTION.astartes,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.air,
+    base_cost: 150,
+    base_size: 1,
+    max_size: 10,
+    main_unit: [1018],
+    related_unit: [],
+    loadout: [
+      {
+        text_option: [
+          "Turbo-laser destructor",
+          "Thunderhawk heavy bolters",
+          "Thunderhawk lascannon",
+          "Hellstrike missiles",
+        ],
+      },
+    ],
+    upgrade_options: [
+      {
+        name: "Additional Thunderhawk Gunship",
+        options: [
+          { number: 1, cost: 150, size: 1 },
+          { number: 2, cost: 300, size: 2 },
+          { number: 3, cost: 450, size: 3 },
+          { number: 4, cost: 600, size: 4 },
+          { number: 5, cost: 750, size: 5 },
+          { number: 6, cost: 900, size: 6 },
+          { number: 7, cost: 1050, size: 7 },
+          { number: 8, cost: 1200, size: 8 },
+          { number: 9, cost: 1350, size: 9 },
+        ],
+      },
+    ],
+    datasheet_info: [
+      {
+        text: "Legion Storm Eagle Squadron can purchase the following upgrades.",
+        options: [
+          { text: "1 additional Thunderhawk Gunship", cost: 150 },
+          { text: "2 additional Thunderhawk Gunship", cost: 280 },
         ],
       },
     ],

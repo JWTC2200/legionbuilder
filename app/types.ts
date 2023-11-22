@@ -68,6 +68,7 @@ export interface DETACHMENT {
   name: string;
   faction: FACTION;
   allegiance: ALLEGIANCE;
+  unique?: boolean;
   detachment_type: DETACHMENT_TYPE;
   base_cost: number;
   base_size: number;

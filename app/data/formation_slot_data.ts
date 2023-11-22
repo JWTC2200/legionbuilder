@@ -56,13 +56,7 @@ export const formationSlotData: FORMATION_SLOT[] = [
     type: DETACHMENT_TYPE.transport,
     options: [],
   },
-  {
-    id: 1011,
-    type: DETACHMENT_TYPE.transport,
-    restricted: true,
-    options: [1001],
-    description: "Demi-company bonus transports",
-  },
+
   {
     id: 4000,
 
@@ -73,5 +67,29 @@ export const formationSlotData: FORMATION_SLOT[] = [
     id: 4001,
     type: DETACHMENT_TYPE.titan,
     options: [],
+  },
+  // ********************************************************************
+  // ******************************* UNIQUE SLOTS ***********************
+  // ********************************************************************
+  {
+    id: 9000,
+    type: DETACHMENT_TYPE.transport,
+    restricted: true,
+    options: [9000],
+    description: "Dedicated transport Rhinos",
+  },
+  {
+    id: 9001,
+    type: DETACHMENT_TYPE.air,
+    restricted: true,
+    options: [9001],
+    description: "Dedicated transport Storm Eagles",
+  },
+  {
+    id: 9002,
+    type: DETACHMENT_TYPE.air,
+    restricted: true,
+    options: [9002],
+    description: "Dedicated transport Thunderhawks",
   },
 ];

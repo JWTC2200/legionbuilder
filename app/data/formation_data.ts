@@ -10,7 +10,7 @@ export const formationData: FORMATION[] = [
     faction: FACTION.astartes,
     allegiance: ALLEGIANCE.neutral,
     compulsory: [1000, 1002, 1001, 1001],
-    optional: [1009, 1001, 1010, 1010, 1002, 1002, 1003, 1011],
+    optional: [1009, 1001, 1010, 1010, 1002, 1002, 1003, 9000],
     choice: [
       [1004, 1008],
       [1007, 1005, 1006],
@@ -40,7 +40,7 @@ export const formationData: FORMATION[] = [
     faction: FACTION.astartes,
     allegiance: ALLEGIANCE.neutral,
     compulsory: [1000, 1001, 1001, 1002],
-    optional: [1001, 1002, 1002, 1003, 1008, 1008],
+    optional: [1001, 1002, 1002, 1003, 1008, 1008, 9001, 9002],
     choice: null,
   },
   // ********************************************************************
