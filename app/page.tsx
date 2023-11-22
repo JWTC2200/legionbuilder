@@ -8,6 +8,7 @@ export default function Home() {
       <div className="mt-8">
         <h2 className="text-xl">UPDATES:</h2>
         <ul className="list-disc">
+          <li>22/11/2023: Added Solar Auxilia</li>
           <li>
             21/11/2023: Added Knights, Warhound Titan & Legiones Astartes.
           </li>
