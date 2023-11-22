@@ -80,6 +80,7 @@ export const detachmentData: DETACHMENT[] = [
       },
     ],
     datasheet_info: [
+      { text: "Additional Rhino at 10pts per model." },
       {
         text: "A Rhino may change its Pintle Mounted twin-linked bolter for one of the following",
         options: [
@@ -1204,7 +1205,7 @@ export const detachmentData: DETACHMENT[] = [
         options: [
           { number: 1, cost: 80, size: 1 },
           { number: 2, cost: 150, size: 2 },
-          { number: 3, cost: 220, size: 3 },
+          { number: 3, cost: 210, size: 3 },
         ],
       },
     ],
@@ -1217,8 +1218,211 @@ export const detachmentData: DETACHMENT[] = [
         options: [
           { text: "1 additional Thunderbolt", cost: 80 },
           { text: "2 additional Thunderbolt", cost: 150 },
-          { text: "3 additional Thunderbolt", cost: 220 },
+          { text: "3 additional Thunderbolt", cost: 210 },
         ],
+      },
+    ],
+  },
+  {
+    id: 2012,
+    name: "Auxilia Avenger Strike Fighter Squadron",
+    faction: FACTION.solar,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.air,
+    base_cost: 85,
+    base_size: 1,
+    max_size: 4,
+    main_unit: [2012],
+    related_unit: [],
+    loadout: [
+      {
+        text_option: [
+          "Avenger bolt cannon",
+          "Heavy stubber tail gun",
+          "Avenger lascannon or Avenger autocannon",
+          "Hellstrike missiles or Skystrike missiles or Wing bombs",
+        ],
+      },
+    ],
+    upgrade_options: [
+      {
+        name: "Additional Avenger",
+        options: [
+          { number: 1, cost: 85, size: 1 },
+          { number: 2, cost: 160, size: 2 },
+          { number: 3, cost: 220, size: 3 },
+        ],
+      },
+    ],
+    datasheet_info: [
+      {
+        text: "A Auxilia Avenger Strike Fighter Squadron can purchase the following upgrades.",
+        options: [
+          { text: "1 additional Avenger", cost: 85 },
+          { text: "2 additional Avenger", cost: 160 },
+          { text: "3 additional Avenger", cost: 220 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 2013,
+    name: "Auxilia Lightning Fighter Squadron",
+    faction: FACTION.solar,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.air,
+    base_cost: 85,
+    base_size: 1,
+    max_size: 4,
+    main_unit: [2013],
+    related_unit: [],
+    loadout: [
+      {
+        text_option: [
+          "Lightning twin lascannons or Lightning twin multi-laser",
+          "Any two of the following: Hellstrike missiles, Skyfire missiles or Phosphex bomb clusters",
+        ],
+      },
+    ],
+    upgrade_options: [
+      {
+        name: "Additional Lightning",
+        options: [
+          { number: 1, cost: 85, size: 1 },
+          { number: 2, cost: 160, size: 2 },
+          { number: 3, cost: 220, size: 3 },
+        ],
+      },
+    ],
+    datasheet_info: [
+      {
+        text: "A Auxilia Lightning Fighter Squadron can purchase the following upgrades.",
+        options: [
+          { text: "1 additional Lightning", cost: 85 },
+          { text: "2 additional Lightning", cost: 160 },
+          { text: "3 additional Lightning", cost: 220 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 2014,
+    name: "Auxilia Marauder Bomber Squadron",
+    faction: FACTION.solar,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.air,
+    base_cost: 85,
+    base_size: 1,
+    max_size: 4,
+    main_unit: [2014],
+    related_unit: [2015, 2016, 2017],
+    loadout: [
+      {
+        text_option: [
+          "Nose Mounted lascannon",
+          "Marauder heavy bolter turrets",
+          "Marauder bomb bay",
+          "Any two of the following: Hellstrike missiles, Skystrike missiles or Wing bombs",
+        ],
+      },
+    ],
+    upgrade_options: [
+      {
+        name: "Additional Marauder",
+        options: [
+          { number: 1, cost: 85, size: 1 },
+          { number: 2, cost: 160, size: 2 },
+          { number: 3, cost: 220, size: 3 },
+        ],
+      },
+      {
+        name: "Marauder Pathfider",
+        options: [
+          { number: 1, cost: 0, size: 0 },
+          { number: 2, cost: 0, size: 0 },
+          { number: 3, cost: 0, size: 0 },
+          { number: 4, cost: 0, size: 0 },
+        ],
+      },
+      {
+        name: "Marauder Colossus",
+        options: [
+          { number: 1, cost: 0, size: 0 },
+          { number: 2, cost: 0, size: 0 },
+          { number: 3, cost: 0, size: 0 },
+          { number: 4, cost: 0, size: 0 },
+        ],
+      },
+      {
+        name: "Marauder Destroyer",
+        options: [
+          { number: 1, cost: 10, size: 0 },
+          { number: 2, cost: 20, size: 0 },
+          { number: 3, cost: 30, size: 0 },
+          { number: 4, cost: 40, size: 0 },
+        ],
+      },
+    ],
+    datasheet_info: [
+      {
+        text: "Any Marauder be upgraded to  one of the following Marauder variants:",
+        options: [
+          { text: "Marauder Pathfinder", cost: 0 },
+          { text: "Marauder Colossus", cost: 0 },
+          { text: "Marauder Destroyer", cost: 10 },
+        ],
+      },
+      {
+        text: "A Auxilia Marauder Bomber Squadron can purchase the following upgrades.",
+        options: [
+          { text: "1 additional Marauder", cost: 85 },
+          { text: "2 additional Marauder", cost: 160 },
+          { text: "3 additional Marauder", cost: 220 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 2015,
+    name: "Auxilia Arvus Lighter",
+    faction: FACTION.solar,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.transport,
+    base_cost: 12,
+    base_size: 1,
+    max_size: 20,
+    main_unit: [2018],
+    related_unit: [],
+    loadout: [],
+    upgrade_options: [
+      {
+        name: "Additional Arvus Lighter",
+        options: [
+          { number: 1, cost: 85, size: 1 },
+          { number: 2, cost: 160, size: 2 },
+          { number: 3, cost: 220, size: 3 },
+          { number: 4, cost: 220, size: 4 },
+          { number: 5, cost: 85, size: 5 },
+          { number: 6, cost: 160, size: 6 },
+          { number: 7, cost: 220, size: 7 },
+          { number: 8, cost: 85, size: 8 },
+          { number: 9, cost: 160, size: 9 },
+          { number: 10, cost: 220, size: 10 },
+          { number: 11, cost: 85, size: 11 },
+          { number: 12, cost: 160, size: 12 },
+          { number: 13, cost: 220, size: 13 },
+          { number: 14, cost: 85, size: 14 },
+          { number: 15, cost: 220, size: 15 },
+          { number: 16, cost: 85, size: 16 },
+          { number: 17, cost: 160, size: 17 },
+          { number: 18, cost: 220, size: 18 },
+          { number: 19, cost: 85, size: 19 },
+        ],
+      },
+    ],
+    datasheet_info: [
+      {
+        text: "Additional Arvus Lighter +12pts per model",
       },
     ],
   },

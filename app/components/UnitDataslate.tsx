@@ -53,6 +53,33 @@ const UnitDataslate = (unit: UNIT_DATASHEET) => {
           </tr>
         </tbody>
       </table>
+
+      {/* LOADOUT ?  SECTION */}
+      {unit.loadout ? (
+        <div className="mt-2 border-2 border-black">
+          <h3 className="bg-green-950 text-green-50 px-2 py-1 font-bold">
+            Weapons
+          </h3>
+          {unit.loadout.map((weapon) => (
+            <div
+              key={weapon.text}
+              className="text-green-950 p-2 flex flex-col gap-1"
+            >
+              {weapon.text ? <p>{weapon.text}</p> : null}
+              {weapon.options ? (
+                <ul className="list-disc grid sm:grid-cols-2">
+                  {weapon.options.map((option) => (
+                    <li key={option} className="ml-4">
+                      {option}
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
+            </div>
+          ))}
+        </div>
+      ) : null}
+
       {/* WEAPON STATS SECTION */}
       {unitWeaponRows.length ? (
         <table className="w-full mt-4 border-2 border-black">

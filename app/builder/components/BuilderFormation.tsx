@@ -72,7 +72,7 @@ const BuilderFormation = ({
     <div className="sm:border-2 border-black sm:rounded-xl flex flex-col items-center">
       <div className="w-full bg-green-950 sm:rounded-t-lg flex flex-wrap justify-center items-center text-center px-2">
         {/* FORMATION SELECTOR -> DISABLED AFTER FIRST CHOICE */}
-        {formationSelected ? (
+        {formation.id ? (
           <h3 className="bg-green-950 rounded-t-lg text-2xl py-2 px-4 font-graduate text-center">
             {formation.name}
           </h3>

@@ -111,6 +111,7 @@ export interface UNIT_DATASHEET {
   morale: number | null;
   wounds: number;
   weapons: number[];
+  loadout?: [{ text?: string; options?: string[] }];
   special_rules: string[];
 }
 

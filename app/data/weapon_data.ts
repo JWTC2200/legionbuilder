@@ -763,7 +763,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
     name: "Mole mortar",
     profiles: [
       {
-        range: "20",
+        range: '20"',
         dice: 1,
         to_hit: 4,
         ap: 1,
@@ -776,7 +776,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
     name: "Multi-laser",
     profiles: [
       {
-        range: "24",
+        range: '24"',
         dice: 2,
         to_hit: 5,
         ap: 0,
@@ -789,14 +789,14 @@ export const weaponData: WEAPON_DATASHEET[] = [
     name: "Sentinel missile launcher",
     profiles: [
       {
-        range: "20",
+        range: '20"',
         dice: 2,
         to_hit: 4,
         ap: 0,
         traits: ["Light", "Ignores Cover"],
       },
       {
-        range: "20",
+        range: '20"',
         dice: 1,
         to_hit: 4,
         ap: 1,
@@ -809,7 +809,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
     name: "Leman Russ battlecannon",
     profiles: [
       {
-        range: "25",
+        range: '25"',
         dice: 1,
         to_hit: 4,
         ap: 1,
@@ -822,7 +822,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
     name: "Vanquisher battlecannon",
     profiles: [
       {
-        range: "32",
+        range: '32"',
         dice: 1,
         to_hit: 4,
         ap: 2,
@@ -835,7 +835,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
     name: "Hull Mounted lascannon",
     profiles: [
       {
-        range: "22",
+        range: '22"',
         dice: 1,
         to_hit: 4,
         ap: 1,
@@ -848,7 +848,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
     name: "Malcador battlecannon",
     profiles: [
       {
-        range: "25",
+        range: '25"',
         dice: 1,
         to_hit: 4,
         ap: 1,
@@ -861,7 +861,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
     name: "Malcador Vanquisher battlecannon",
     profiles: [
       {
-        range: "32",
+        range: '32"',
         dice: 1,
         to_hit: 4,
         ap: 2,
@@ -874,7 +874,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
     name: "Malcador lascannon turret",
     profiles: [
       {
-        range: "22",
+        range: '22"',
         dice: 2,
         to_hit: 4,
         ap: 1,
@@ -887,7 +887,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
     name: "Malcador heavy bolter sponsons",
     profiles: [
       {
-        range: "12",
+        range: '12"',
         dice: 2,
         to_hit: 5,
         ap: 0,
@@ -900,7 +900,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
     name: "Malcador lascannon sponsons",
     profiles: [
       {
-        range: "22",
+        range: '22"',
         dice: 1,
         to_hit: 4,
         ap: 1,
@@ -913,7 +913,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
     name: "Malcador autocannon sponsons",
     profiles: [
       {
-        range: "16",
+        range: '16"',
         dice: 2,
         to_hit: 5,
         ap: 1,
@@ -926,7 +926,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
     name: "Hull Mounted autocannon",
     profiles: [
       {
-        range: "16",
+        range: '16"',
         dice: 2,
         to_hit: 5,
         ap: 1,
@@ -939,7 +939,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
     name: "Hull Mounted demolisher cannon",
     profiles: [
       {
-        range: "12",
+        range: '12"',
         dice: 1,
         to_hit: 4,
         ap: 3,
@@ -952,7 +952,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
     name: "Baneblade cannon",
     profiles: [
       {
-        range: "25",
+        range: '25"',
         dice: 1,
         to_hit: 4,
         ap: 3,
@@ -965,7 +965,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
     name: "Hellhammer cannon",
     profiles: [
       {
-        range: "14",
+        range: '14"',
         dice: 1,
         to_hit: 4,
         ap: 3,
@@ -978,7 +978,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
     name: "Lascannon sponson turrets",
     profiles: [
       {
-        range: "22",
+        range: '22"',
         dice: 2,
         to_hit: 4,
         ap: 1,
@@ -991,7 +991,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
     name: "Baneblade heavy bolter sponsons",
     profiles: [
       {
-        range: "12",
+        range: '12"',
         dice: 4,
         to_hit: 5,
         ap: 0,
@@ -1004,7 +1004,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
     name: "Baneblade autocannon sponsons",
     profiles: [
       {
-        range: "16",
+        range: '16"',
         dice: 2,
         to_hit: 5,
         ap: 1,
@@ -1017,7 +1017,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
     name: "Baneblade heavy flamer sponsons",
     profiles: [
       {
-        range: "6",
+        range: '6"',
         dice: 2,
         to_hit: 4,
         ap: 0,
@@ -1030,7 +1030,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
     name: "Quad autocannons",
     profiles: [
       {
-        range: "16",
+        range: '16"',
         dice: 4,
         to_hit: 5,
         ap: 1,
@@ -1043,7 +1043,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
     name: "Thunderbolt twin-linked lascannon",
     profiles: [
       {
-        range: "22",
+        range: '22"',
         dice: 2,
         to_hit: 4,
         ap: 1,
@@ -1056,7 +1056,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
     name: "Avenger bolt cannon",
     profiles: [
       {
-        range: "16",
+        range: '16"',
         dice: 5,
         to_hit: 5,
         ap: 1,
@@ -1069,7 +1069,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
     name: "Hellstrike missiles",
     profiles: [
       {
-        range: "30",
+        range: '30"',
         dice: 2,
         to_hit: 4,
         ap: 4,
@@ -1082,7 +1082,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
     name: "Skystrike missiles",
     profiles: [
       {
-        range: "30",
+        range: '30"',
         dice: 2,
         to_hit: 4,
         ap: 1,
@@ -1103,6 +1103,202 @@ export const weaponData: WEAPON_DATASHEET[] = [
       },
     ],
   },
+  {
+    id: 2033,
+    name: "Avenger autocannon",
+    profiles: [
+      {
+        range: '16"',
+        dice: 4,
+        to_hit: 5,
+        ap: 1,
+        traits: ["Arc (Front)", "Light AT", "Skyfire"],
+      },
+    ],
+  },
+  {
+    id: 2034,
+    name: "Avenger lascannon",
+    profiles: [
+      {
+        range: '22"',
+        dice: 2,
+        to_hit: 4,
+        ap: 1,
+        traits: ["Anti-tank", "Arc (Front)", "Skyfire"],
+      },
+    ],
+  },
+  {
+    id: 2035,
+    name: "Heavy stubber tail gun",
+    profiles: [
+      {
+        range: '14"',
+        dice: 2,
+        to_hit: 6,
+        ap: 0,
+        traits: ["Arc (Rear)", "Light AT", "Point Defence", "Skyfire"],
+      },
+    ],
+  },
+  {
+    id: 2036,
+    name: "Lightning twin lascannon",
+    profiles: [
+      {
+        range: '22"',
+        dice: 2,
+        to_hit: 4,
+        ap: 1,
+        traits: ["Anti-tank", "Arc (Front)", "Skyfire"],
+      },
+    ],
+  },
+  {
+    id: 2037,
+    name: "Lightning twin multi-laser",
+    profiles: [
+      {
+        range: '14"',
+        dice: 4,
+        to_hit: 5,
+        ap: 0,
+        traits: ["Arc (Front)", "Light AT", "Skyfire"],
+      },
+    ],
+  },
+  {
+    id: 2038,
+    name: "Phosphex bomb clusters",
+    profiles: [
+      {
+        range: "-",
+        dice: 2,
+        to_hit: 4,
+        ap: 2,
+        traits: ["Arc (Rear)", "Bombing Run", "Light AT", "Ignores Cover"],
+      },
+    ],
+  },
+  {
+    id: 2039,
+    name: "Nose Mounted lascannon",
+    profiles: [
+      {
+        range: '22"',
+        dice: 2,
+        to_hit: 4,
+        ap: 1,
+        traits: ["Anti-tank", "Arc (Front)", "Skyfire"],
+      },
+    ],
+  },
+  {
+    id: 2040,
+    name: "Marauder heavy bolter turrets",
+    profiles: [
+      {
+        range: '12"',
+        dice: 3,
+        to_hit: 6,
+        ap: 0,
+        traits: ["Arc (Rear)", "Light AT", "Point Defence", "Skyfire"],
+      },
+    ],
+  },
+  {
+    id: 2041,
+    name: "Marauder bomb bay",
+    profiles: [
+      {
+        range: "-",
+        dice: 2,
+        to_hit: 4,
+        ap: 2,
+        traits: ["Arc (Rear)", "Bombing Run"],
+      },
+    ],
+  },
+  {
+    id: 2042,
+    name: "Nose Mounted heavy bolter",
+    profiles: [
+      {
+        range: '12"',
+        dice: 3,
+        to_hit: 6,
+        ap: 0,
+        traits: ["Arc (Front)", "Light AT", "Point Defence", "Skyfire"],
+      },
+    ],
+  },
+  {
+    id: 2043,
+    name: "Rear Mounted heavy bolter",
+    profiles: [
+      {
+        range: '12"',
+        dice: 3,
+        to_hit: 6,
+        ap: 0,
+        traits: ["Arc (Rear)", "Light AT", "Point Defence", "Skyfire"],
+      },
+    ],
+  },
+  {
+    id: 2044,
+    name: "Colossus bomb",
+    profiles: [
+      {
+        range: "-",
+        dice: 6,
+        to_hit: 3,
+        ap: 4,
+        traits: ["Arc (Rear)", "Bombing Run", "Bunker Buster", "Limited (1)"],
+      },
+    ],
+  },
+  {
+    id: 2045,
+    name: "Nose Mounted autocannon array",
+    profiles: [
+      {
+        range: '16"',
+        dice: 6,
+        to_hit: 5,
+        ap: 1,
+        traits: ["Arc (Front)", "Light AT", "Skyfire"],
+      },
+    ],
+  },
+  {
+    id: 2046,
+    name: "Marauder assault cannons",
+    profiles: [
+      {
+        range: '12"',
+        dice: 3,
+        to_hit: 5,
+        ap: 1,
+        traits: ["Arc (Front)", "Light AT", "Rapid Fire", "Skyfire"],
+      },
+    ],
+  },
+  {
+    id: 2047,
+    name: "Destroyer bomb bay",
+    profiles: [
+      {
+        range: "-",
+        dice: 2,
+        to_hit: 4,
+        ap: 2,
+        traits: ["Arc (Rear)", "Bombing Run"],
+      },
+    ],
+  },
+
   // ********************************************************************
   // ***********************KNIGHT & TITAN WEAPONS **********************
   // ********************************************************************
