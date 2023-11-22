@@ -70,7 +70,7 @@ const UnitDataslate = (unit: UNIT_DATASHEET) => {
           <h3 className="bg-green-950 text-green-50 px-2 py-1 font-bold">
             Special Rules
           </h3>
-          <div className="px-2 flex gap-1 text-stone-900">
+          <div className="px-2 flex flex-wrap justify-start gap-1 text-stone-900">
             {" "}
             {unit.special_rules.sort().map((rule, index) => (
               <div key={rule + index} className="flex">
