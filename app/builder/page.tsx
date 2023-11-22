@@ -16,6 +16,8 @@ const page = () => {
   });
   const armyPoints = listPoints(armyList);
 
+  const gameSizes: number[] = [3000, 2500, 2000, 1500, 1000];
+
   const savedList =
     typeof window !== "undefined"
       ? localStorage.getItem("legionbuilder")
@@ -95,9 +97,11 @@ const page = () => {
             }
             className="bg-green-950 rounded-sm p-1 sm:text-lg font-semibold "
           >
-            <option value={3000}>3000pts</option>
-            <option value={2500}>2500pts</option>
-            <option value={2000}>2000pts</option>
+            {gameSizes.map((size) => (
+              <option value={size} key={"gameSize" + size}>
+                {size}pts
+              </option>
+            ))}
           </select>
         </div>
         <div>

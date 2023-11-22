@@ -38,8 +38,8 @@ export const detachmentData: DETACHMENT[] = [
         name: "Additional Rhino",
         options: [
           { number: 1, cost: 10, size: 1 },
-          { number: 3, cost: 20, size: 2 },
-          { number: 2, cost: 30, size: 3 },
+          { number: 2, cost: 20, size: 2 },
+          { number: 3, cost: 30, size: 3 },
           { number: 4, cost: 40, size: 4 },
           { number: 5, cost: 50, size: 5 },
           { number: 6, cost: 60, size: 6 },
@@ -103,7 +103,7 @@ export const detachmentData: DETACHMENT[] = [
     loadout: [{ text_option: ["Legion bolters"] }],
     upgrade_options: [
       {
-        name: "Additional Tactial Legionaries",
+        name: "Additional Tactical Legionaries",
         options: [
           { number: 2, cost: 12, size: 2 },
           { number: 4, cost: 24, size: 4 },
@@ -722,7 +722,7 @@ export const detachmentData: DETACHMENT[] = [
     ],
   },
   {
-    id: 1017,
+    id: 1018,
     name: "Legion Thunderhawk Gunship",
     faction: FACTION.astartes,
     allegiance: ALLEGIANCE.neutral,
@@ -730,7 +730,7 @@ export const detachmentData: DETACHMENT[] = [
     base_cost: 150,
     base_size: 1,
     max_size: 4,
-    main_unit: [1017],
+    main_unit: [1018],
     related_unit: [],
     loadout: [
       {
