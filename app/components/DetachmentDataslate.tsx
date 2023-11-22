@@ -53,8 +53,7 @@ const DetachmentDataslate = (detachment: DETACHMENT) => {
 
       <div className="flex justify-between border-2 border-black bg-green-950 text-green-50 px-2 py-1 font-bold font-graduate">
         <p>
-          {mainUnit[0].unit_type.type}
-          {`(${mainUnit[0].unit_type.value})`}
+          {mainUnit[0].unit_type.type} {`(${mainUnit[0].unit_type.value})`}
         </p>
         <p>Detachment size: {detachment.base_size}</p>
       </div>

@@ -2394,6 +2394,157 @@ export const weaponData: WEAPON_DATASHEET[] = [
       },
     ],
   },
+  {
+    id: 4076,
+    name: "Suzerain class plasma destructor",
+    profiles: [
+      {
+        range: '26"',
+        dice: 4,
+        to_hit: 3,
+        ap: 4,
+        traits: ["Arc (Front)", "Demolisher"],
+      },
+      {
+        range: '16"',
+        dice: 2,
+        to_hit: 2,
+        ap: 4,
+        traits: ["Arc (Front)", "Demolisher", "Engine Killer (2)"],
+      },
+    ],
+  },
+  {
+    id: 4077,
+    name: "Revalator missile launcher",
+    profiles: [
+      {
+        range: '40"',
+        dice: 2,
+        to_hit: 4,
+        ap: 2,
+        traits: ["Arc (Front)", "Blast (5)"],
+      },
+    ],
+  },
+  {
+    id: 4078,
+    name: "Apocalypse missile array",
+    profiles: [
+      {
+        range: '8"-100"',
+        dice: 4,
+        to_hit: 4,
+        ap: 1,
+        traits: ["Arc (Front)", "Heavy Barrage"],
+      },
+    ],
+  },
+  {
+    id: 4079,
+    name: "Melta cannon",
+    profiles: [
+      {
+        range: '14"',
+        dice: 2,
+        to_hit: 4,
+        ap: 3,
+        traits: ["Anti-tank", "Arc (Front)", "Demolisher"],
+      },
+      {
+        range: '8"',
+        dice: 2,
+        to_hit: 3,
+        ap: 4,
+        traits: ["Anti-tank", "Arc (Front)", "Demolisher", "Engine Killer (2)"],
+      },
+    ],
+  },
+  {
+    id: 4080,
+    name: "Ardex-defensor bombard turrets",
+    profiles: [
+      {
+        range: '15"',
+        dice: 4,
+        to_hit: 5,
+        ap: 2,
+        traits: ["Barrage", "Light AT", "Ignores Cover"],
+      },
+    ],
+  },
+  {
+    id: 4081,
+    name: "Anvilus pattern defence batteries",
+    profiles: [
+      {
+        range: '20"',
+        dice: 5,
+        to_hit: 5,
+        ap: 1,
+        traits: ["Point Defence", "Skyfire"],
+      },
+    ],
+  },
+  {
+    id: 4082,
+    name: "Desolator chainsword",
+    profiles: [
+      {
+        range: "-",
+        dice: null,
+        to_hit: null,
+        ap: "-",
+        traits: ["Engine Killer (2)", "Reach", "Rend"],
+      },
+    ],
+  },
+  {
+    id: 4083,
+    name: "Kirus siege drill",
+    profiles: [
+      {
+        range: "-",
+        dice: null,
+        to_hit: null,
+        ap: 7,
+        traits: ["Rend", "Wrecker (8)"],
+      },
+    ],
+  },
+  {
+    id: 4084,
+    name: "Cruciator gatling array",
+    profiles: [
+      {
+        range: '24"',
+        dice: 14,
+        to_hit: 5,
+        ap: 1,
+        traits: ["Arc (Front)", "Light AT", "Shieldbane", "Shred"],
+      },
+    ],
+  },
+  {
+    id: 4085,
+    name: "Kirus grav imploder",
+    profiles: [
+      {
+        range: '6"',
+        dice: 2,
+        to_hit: 3,
+        ap: 3,
+        traits: ["Demolisher", "Ignores Cover", "Quake"],
+      },
+      {
+        range: "-",
+        dice: null,
+        to_hit: null,
+        ap: 5,
+        traits: ["Rend", "Wrecker (5)"],
+      },
+    ],
+  },
 ];
 
 // {

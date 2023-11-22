@@ -1835,6 +1835,87 @@ export const detachmentData: DETACHMENT[] = [
     upgrade_options: [],
     datasheet_info: [],
   },
+  {
+    id: 4008,
+    name: "Warmaster Heavy Battle Titan",
+    faction: FACTION.strategic,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.titan,
+    base_cost: 750,
+    base_size: 1,
+    max_size: 1,
+    main_unit: [4012],
+    related_unit: [],
+    loadout: [
+      {
+        text_option: [
+          "Two Suzerain class plasma destructors",
+          "Revalator missile launcher",
+          "Ardex-defensor mauler bolt cannon turrets",
+          "Ardex-defensor lascannon turrets",
+          "Anvilus pattern defence batteries or Ardex-defensor bomard turrets",
+        ],
+      },
+      {
+        text: "In addition, a Warmaster Titan has two weapons chosen from the list below - it may choose two of the same weapon",
+        text_option: [
+          "Apocalypse missile array",
+          "Melta cannon",
+          "Inferno gun",
+          "Vulcan mega-bolter",
+          "Turbo-laser destructor",
+          "Plasma blastun",
+        ],
+      },
+    ],
+    upgrade_options: [],
+    datasheet_info: [],
+  },
+  {
+    id: 4009,
+    name: "Warmaster Iconoclast Titan",
+    faction: FACTION.strategic,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.titan,
+    base_cost: 750,
+    base_size: 1,
+    max_size: 1,
+    main_unit: [4013],
+    related_unit: [],
+    loadout: [
+      {
+        text_option: [
+          "Desolator chainsword",
+          "Kirius siege drill",
+          "Ardex-defensor mauler bolt cannon turrets",
+          "Ardex-defensor lascannon turrets",
+          "Anvilus pattern defence batteries or Ardex-defensor bomard turrets",
+          "Cruciator gatling array",
+        ],
+      },
+      {
+        text: "In addition, a Warmaster Iconoclast has two weapons chosen from the list below - it may choose two of the same weapon",
+        text_option: [
+          "Apocalypse missile array",
+          "Melta cannon",
+          "Inferno gun",
+          "Vulcan mega-bolter",
+          "Turbo-laser destructor",
+          "Plasma blastun",
+        ],
+      },
+      {
+        text: "A Warmaster Iconoclast ca exchange its Kirus siege drill for a Kirus grav iploder for +10pts",
+      },
+    ],
+    upgrade_options: [
+      {
+        name: "Kirus grav imploder",
+        options: [{ number: 1, cost: 10, size: 0 }],
+      },
+    ],
+    datasheet_info: [],
+  },
   // ********************************************************************
   // ************************* UNIQUE DETACHMENTS ***********************
   // ********************************************************************
