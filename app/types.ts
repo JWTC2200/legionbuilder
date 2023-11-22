@@ -35,6 +35,7 @@ export enum UNIT_TYPE {
   walker = "Walker",
   titan = "Titan",
   vehicle = "Vehicle",
+  heavy = "Super-Heavy Vehicle",
 }
 
 export const detachmentTypeArray = Object.values(DETACHMENT_TYPE);

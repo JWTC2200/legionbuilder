@@ -38,6 +38,12 @@ const page = () => {
     });
   };
 
+  const handleSaveList = () => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("legionbuilder", JSON.stringify(armyList));
+    }
+  };
+
   const handlePrintList = () => {
     if (typeof window !== "undefined") {
       localStorage.setItem("legionbuilder", JSON.stringify(armyList));
@@ -65,8 +71,27 @@ const page = () => {
 
   return (
     <main className="flex flex-col gap-2 w-full max-w-screen-2xl items-center dataslate_background mt-4 p-4 rounded-xl border-2 border-black">
+      <div className="text-red-600 text-center">
+        <ul>
+          <li>There are currently some bugs with the builder</li>
+          <li>
+            If you change the selected detachment within a slot. Any futher
+            upgrade changes may not update. As a temporary work around please
+            save the list and refresh the page.
+          </li>
+          <li>
+            Print List will automatically save the list and take you to a new
+            blank page with an easier to read format
+          </li>
+        </ul>
+      </div>
       <div className="flex flex-wrap gap-4">
-        {" "}
+        <button
+          onClick={handleSaveList}
+          className=" bg-green-950 text-green-50 px-2 py-1 font-bold font-graduate rounded-lg hover:text-cyan-700"
+        >
+          SAVE LIST
+        </button>
         <button
           onClick={handlePrintList}
           className=" bg-green-950 text-green-50 px-2 py-1 font-bold font-graduate rounded-lg hover:text-cyan-700"

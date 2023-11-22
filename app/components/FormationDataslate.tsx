@@ -21,7 +21,18 @@ const FormationDataslate = (formation: FORMATION) => {
                 (slot) => slot.id === detachment
               );
               if (foundSlot) {
-                return <p key={"compulsory" + index}>{foundSlot.type}</p>;
+                return (
+                  <div
+                    key={"compulsory" + index}
+                    className="flex flex-col items-center text-center"
+                  >
+                    {" "}
+                    <p>{foundSlot.type}</p>
+                    {foundSlot.description ? (
+                      <p className="italic text-sm">{foundSlot.description}</p>
+                    ) : null}
+                  </div>
+                );
               }
               return null;
             })}
@@ -39,7 +50,18 @@ const FormationDataslate = (formation: FORMATION) => {
                 (slot) => slot.id === detachment
               );
               if (foundSlot) {
-                return <p key={"optional" + index}>{foundSlot.type}</p>;
+                return (
+                  <div
+                    key={"optional" + index}
+                    className="flex flex-col items-center text-center"
+                  >
+                    {" "}
+                    <p>{foundSlot.type}</p>
+                    {foundSlot.description ? (
+                      <p className="italic text-sm">{foundSlot.description}</p>
+                    ) : null}
+                  </div>
+                );
               }
               return null;
             })}
@@ -61,7 +83,19 @@ const FormationDataslate = (formation: FORMATION) => {
                     (slot) => slot.id === detachment
                   );
                   if (foundSlot) {
-                    return <p key={"choice" + index2}>{foundSlot.type}</p>;
+                    return (
+                      <div
+                        key={"choice" + index2}
+                        className="flex flex-col items-center text-center"
+                      >
+                        <p>{foundSlot.type}</p>
+                        {foundSlot.description ? (
+                          <p className="italic text-sm">
+                            {foundSlot.description}
+                          </p>
+                        ) : null}
+                      </div>
+                    );
                   }
                   return null;
                 })}

@@ -92,4 +92,18 @@ export const formationSlotData: FORMATION_SLOT[] = [
     options: [9002],
     description: "Dedicated transport Thunderhawks",
   },
+  {
+    id: 9003,
+    type: DETACHMENT_TYPE.core,
+    restricted: true,
+    options: [2002],
+    description: "Lasrifle detachment",
+  },
+  {
+    id: 9004,
+    type: DETACHMENT_TYPE.hq,
+    restricted: true,
+    options: [9003],
+    description: "Tank Commander",
+  },
 ];

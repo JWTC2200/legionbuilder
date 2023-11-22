@@ -132,7 +132,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
   },
   {
     id: 1009,
-    name: "Quad launcher",
+    name: "Quad-launcher",
     profiles: [
       {
         range: '6"-30"',
@@ -661,6 +661,445 @@ export const weaponData: WEAPON_DATASHEET[] = [
         to_hit: 4,
         ap: 1,
         traits: ["Arc (Front)", "Armourbane"],
+      },
+    ],
+  },
+  // ********************************************************************
+  // ************************ SOlAR AUXLIA WEAPONS **********************
+  // ********************************************************************
+  {
+    id: 2000,
+    name: "Archeotech istol",
+    profiles: [
+      {
+        range: '6"',
+        dice: 1,
+        to_hit: 5,
+        ap: 1,
+        traits: ["Accurate", "Light"],
+      },
+    ],
+  },
+  {
+    id: 2001,
+    name: "Volkite chargers",
+    profiles: [
+      {
+        range: '8"',
+        dice: 1,
+        to_hit: 5,
+        ap: 0,
+        traits: ["Deflagrate", "Light"],
+      },
+    ],
+  },
+  {
+    id: 2002,
+    name: "Auxillia lasfirles",
+    profiles: [
+      {
+        range: '10"',
+        dice: 1,
+        to_hit: 5,
+        ap: 0,
+        traits: ["Light"],
+      },
+    ],
+  },
+  {
+    id: 2003,
+    name: "Flamers",
+    profiles: [
+      {
+        range: '6"',
+        dice: 1,
+        to_hit: 4,
+        ap: 0,
+        traits: ["Ignores Cover", "Light"],
+      },
+    ],
+  },
+  {
+    id: 2004,
+    name: "Auxilia laspistols",
+    profiles: [
+      {
+        range: '6"',
+        dice: 1,
+        to_hit: 5,
+        ap: 0,
+        traits: ["Light"],
+      },
+    ],
+  },
+  {
+    id: 2005,
+    name: "Power axes",
+    profiles: [
+      {
+        range: "-",
+        dice: null,
+        to_hit: null,
+        ap: "-",
+        traits: ["Rend"],
+      },
+    ],
+  },
+  {
+    id: 2006,
+    name: "Charonite claws",
+    profiles: [
+      {
+        range: "-",
+        dice: null,
+        to_hit: null,
+        ap: "-",
+        traits: ["Rend"],
+      },
+    ],
+  },
+  {
+    id: 2007,
+    name: "Mole mortar",
+    profiles: [
+      {
+        range: "20",
+        dice: 1,
+        to_hit: 4,
+        ap: 1,
+        traits: ["Burrowing"],
+      },
+    ],
+  },
+  {
+    id: 2008,
+    name: "Multi-laser",
+    profiles: [
+      {
+        range: "24",
+        dice: 2,
+        to_hit: 5,
+        ap: 0,
+        traits: ["Light AT"],
+      },
+    ],
+  },
+  {
+    id: 2009,
+    name: "Sentinel missile launcher",
+    profiles: [
+      {
+        range: "20",
+        dice: 2,
+        to_hit: 4,
+        ap: 0,
+        traits: ["Light", "Ignores Cover"],
+      },
+      {
+        range: "20",
+        dice: 1,
+        to_hit: 4,
+        ap: 1,
+        traits: ["Anti-tank"],
+      },
+    ],
+  },
+  {
+    id: 2010,
+    name: "Leman Russ battlecannon",
+    profiles: [
+      {
+        range: "25",
+        dice: 1,
+        to_hit: 4,
+        ap: 1,
+        traits: [],
+      },
+    ],
+  },
+  {
+    id: 2011,
+    name: "Vanquisher battlecannon",
+    profiles: [
+      {
+        range: "32",
+        dice: 1,
+        to_hit: 4,
+        ap: 2,
+        traits: ["Anti-tank", "Armourbane"],
+      },
+    ],
+  },
+  {
+    id: 2012,
+    name: "Hull Mounted lascannon",
+    profiles: [
+      {
+        range: "22",
+        dice: 1,
+        to_hit: 4,
+        ap: 1,
+        traits: ["Anti-tank", "Arc (Front)"],
+      },
+    ],
+  },
+  {
+    id: 2013,
+    name: "Malcador battlecannon",
+    profiles: [
+      {
+        range: "25",
+        dice: 1,
+        to_hit: 4,
+        ap: 1,
+        traits: ["Arc (Front)"],
+      },
+    ],
+  },
+  {
+    id: 2014,
+    name: "Malcador Vanquisher battlecannon",
+    profiles: [
+      {
+        range: "32",
+        dice: 1,
+        to_hit: 4,
+        ap: 2,
+        traits: ["Arc (Front)", "Anti-tank", "Armourbane"],
+      },
+    ],
+  },
+  {
+    id: 2015,
+    name: "Malcador lascannon turret",
+    profiles: [
+      {
+        range: "22",
+        dice: 2,
+        to_hit: 4,
+        ap: 1,
+        traits: ["Arc (Front)", "Anti-tank"],
+      },
+    ],
+  },
+  {
+    id: 2016,
+    name: "Malcador heavy bolter sponsons",
+    profiles: [
+      {
+        range: "12",
+        dice: 2,
+        to_hit: 5,
+        ap: 0,
+        traits: ["Light", "Point Defence"],
+      },
+    ],
+  },
+  {
+    id: 2017,
+    name: "Malcador lascannon sponsons",
+    profiles: [
+      {
+        range: "22",
+        dice: 1,
+        to_hit: 4,
+        ap: 1,
+        traits: ["Anti-tank"],
+      },
+    ],
+  },
+  {
+    id: 2018,
+    name: "Malcador autocannon sponsons",
+    profiles: [
+      {
+        range: "16",
+        dice: 2,
+        to_hit: 5,
+        ap: 1,
+        traits: ["Light AT"],
+      },
+    ],
+  },
+  {
+    id: 2019,
+    name: "Hull Mounted autocannon",
+    profiles: [
+      {
+        range: "16",
+        dice: 2,
+        to_hit: 5,
+        ap: 1,
+        traits: ["Arc (Front)", "Light AT"],
+      },
+    ],
+  },
+  {
+    id: 2020,
+    name: "Hull Mounted demolisher cannon",
+    profiles: [
+      {
+        range: "12",
+        dice: 1,
+        to_hit: 4,
+        ap: 3,
+        traits: ["Arc (Front)", "Demolisher", "Ignores Cover"],
+      },
+    ],
+  },
+  {
+    id: 2021,
+    name: "Baneblade cannon",
+    profiles: [
+      {
+        range: "25",
+        dice: 1,
+        to_hit: 4,
+        ap: 3,
+        traits: [],
+      },
+    ],
+  },
+  {
+    id: 2022,
+    name: "Hellhammer cannon",
+    profiles: [
+      {
+        range: "14",
+        dice: 1,
+        to_hit: 4,
+        ap: 3,
+        traits: ["Demolisher", "Ignores Cover"],
+      },
+    ],
+  },
+  {
+    id: 2023,
+    name: "Lascannon sponson turrets",
+    profiles: [
+      {
+        range: "22",
+        dice: 2,
+        to_hit: 4,
+        ap: 1,
+        traits: ["Anti-tank"],
+      },
+    ],
+  },
+  {
+    id: 2024,
+    name: "Baneblade heavy bolter sponsons",
+    profiles: [
+      {
+        range: "12",
+        dice: 4,
+        to_hit: 5,
+        ap: 0,
+        traits: ["Light", "Point Defence"],
+      },
+    ],
+  },
+  {
+    id: 2025,
+    name: "Baneblade autocannon sponsons",
+    profiles: [
+      {
+        range: "16",
+        dice: 2,
+        to_hit: 5,
+        ap: 1,
+        traits: ["Light AT", "Point Defence"],
+      },
+    ],
+  },
+  {
+    id: 2026,
+    name: "Baneblade heavy flamer sponsons",
+    profiles: [
+      {
+        range: "6",
+        dice: 2,
+        to_hit: 4,
+        ap: 0,
+        traits: ["Light", "Ignores Cover", "Point Defence"],
+      },
+    ],
+  },
+  {
+    id: 2027,
+    name: "Quad autocannons",
+    profiles: [
+      {
+        range: "16",
+        dice: 4,
+        to_hit: 5,
+        ap: 1,
+        traits: ["Arc (Front)", "Light AT", "Skyfire"],
+      },
+    ],
+  },
+  {
+    id: 2028,
+    name: "Thunderbolt twin-linked lascannon",
+    profiles: [
+      {
+        range: "22",
+        dice: 2,
+        to_hit: 4,
+        ap: 1,
+        traits: ["Anti-tank", "Arc (Front)", "Skyfire"],
+      },
+    ],
+  },
+  {
+    id: 2029,
+    name: "Avenger bolt cannon",
+    profiles: [
+      {
+        range: "16",
+        dice: 5,
+        to_hit: 5,
+        ap: 1,
+        traits: ["Arc (Front)", "Light AT", "Skyfire", "Rapid Fires"],
+      },
+    ],
+  },
+  {
+    id: 2030,
+    name: "Hellstrike missiles",
+    profiles: [
+      {
+        range: "30",
+        dice: 2,
+        to_hit: 4,
+        ap: 4,
+        traits: ["Arc (Front)", "Armourbane"],
+      },
+    ],
+  },
+  {
+    id: 2031,
+    name: "Skystrike missiles",
+    profiles: [
+      {
+        range: "30",
+        dice: 2,
+        to_hit: 4,
+        ap: 1,
+        traits: ["Anti-tank", "Arc (Front)", "Skyfire", "Tracking"],
+      },
+    ],
+  },
+  {
+    id: 2032,
+    name: "Wing bombs",
+    profiles: [
+      {
+        range: "-",
+        dice: 2,
+        to_hit: 4,
+        ap: 2,
+        traits: ["Anti-tank", "Arc (Rear)", "Bombing Run"],
       },
     ],
   },

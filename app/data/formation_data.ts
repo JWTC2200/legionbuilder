@@ -44,6 +44,39 @@ export const formationData: FORMATION[] = [
     choice: null,
   },
   // ********************************************************************
+  // ******************* SOLAR AUXILIA FORMATIONS **********************
+  // ********************************************************************
+  {
+    id: 2000,
+    name: "Solar Auxilia Sub-Cohort",
+    faction: FACTION.solar,
+    allegiance: ALLEGIANCE.neutral,
+    compulsory: [1000, 9003, 9003, 1002],
+    optional: [1010, 1010, 1010, 1002, 1002, 1005, 1001],
+    choice: [
+      [1004, 1003],
+      [1007, 1005, 1008],
+    ],
+  },
+  {
+    id: 2001,
+    name: "Solar Auxilia Armoured Company",
+    faction: FACTION.solar,
+    allegiance: ALLEGIANCE.neutral,
+    compulsory: [1005, 1005, 1006],
+    optional: [1005, 1005, 1006, 9004],
+    choice: [[1005, 1007, 1008]],
+  },
+  {
+    id: 2002,
+    name: "Solar Auxilia Pioneer Company",
+    faction: FACTION.solar,
+    allegiance: ALLEGIANCE.neutral,
+    compulsory: [1000, 9003, 1009, 1009],
+    optional: [1002, 1001, 1008, 10003, 1003],
+    choice: [[1005, 1007, 1008]],
+  },
+  // ********************************************************************
   // ******************** KNIGHTS/TITAN FORMATIONS **********************
   // ********************************************************************
   {

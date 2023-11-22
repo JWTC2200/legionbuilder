@@ -762,6 +762,467 @@ export const detachmentData: DETACHMENT[] = [
     ],
   },
   // ********************************************************************
+  // ********************** SOlAR AUXLIA DETACHMENTS ********************
+  // ********************************************************************
+  {
+    id: 2000,
+    name: "Legate Commander Detachment",
+    faction: FACTION.solar,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.hq,
+    base_cost: 16,
+    base_size: 1,
+    max_size: 1,
+    main_unit: [2000],
+    related_unit: [],
+    loadout: [
+      {
+        text_option: ["Archeotech pistol", "Volkite chargers"],
+      },
+    ],
+    upgrade_options: [],
+    datasheet_info: [],
+  },
+  {
+    id: 2001,
+    name: "Auxilia Tactical Command",
+    faction: FACTION.solar,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.hq,
+    base_cost: 10,
+    base_size: 1,
+    max_size: 1,
+    main_unit: [2001],
+    related_unit: [],
+    loadout: [
+      {
+        text_option: ["Auxillia lasfirles"],
+      },
+    ],
+    upgrade_options: [],
+    datasheet_info: [],
+  },
+  {
+    id: 2002,
+    name: "Auxilia Lasrifle Tercio",
+    faction: FACTION.solar,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.core,
+    base_cost: 30,
+    base_size: 4,
+    max_size: 16,
+    main_unit: [2002],
+    related_unit: [2003, 2004],
+    loadout: [
+      {
+        text_option: ["Auxillia lasfirles"],
+      },
+    ],
+    upgrade_options: [
+      {
+        name: "Additional Auxiliaries",
+        options: [
+          { number: 2, cost: 12, size: 2 },
+          { number: 4, cost: 24, size: 4 },
+          { number: 6, cost: 36, size: 6 },
+          { number: 8, cost: 48, size: 8 },
+          { number: 10, cost: 60, size: 10 },
+          { number: 12, cost: 72, size: 12 },
+        ],
+      },
+      {
+        name: "Additional Auxiliaries with Flamers",
+        options: [
+          { number: 2, cost: 12, size: 2 },
+          { number: 4, cost: 24, size: 4 },
+          { number: 6, cost: 36, size: 6 },
+          { number: 8, cost: 48, size: 8 },
+          { number: 10, cost: 60, size: 10 },
+          { number: 12, cost: 72, size: 12 },
+        ],
+      },
+      {
+        name: "Additional Veletarii",
+        options: [
+          { number: 2, cost: 12, size: 2 },
+          { number: 4, cost: 24, size: 4 },
+          { number: 6, cost: 36, size: 6 },
+          { number: 8, cost: 48, size: 8 },
+          { number: 10, cost: 60, size: 10 },
+          { number: 12, cost: 72, size: 12 },
+        ],
+      },
+      {
+        name: "Additional Charonite Ogryns",
+        options: [
+          { number: 2, cost: 12, size: 2 },
+          { number: 4, cost: 24, size: 4 },
+          { number: 6, cost: 36, size: 6 },
+          { number: 8, cost: 48, size: 8 },
+          { number: 10, cost: 60, size: 10 },
+          { number: 12, cost: 72, size: 12 },
+        ],
+      },
+    ],
+    datasheet_info: [
+      {
+        text: "A Auxilia Lasrifle Tercio can purchase up to six upgrades. It may purchase the same upgrade multiple times: Each upgrade increases the Detachment size by 2.",
+        options: [
+          { text: "Auxiliaries", cost: 12 },
+          { text: "Auxiliaries with Flamers", cost: 12 },
+          { text: "Veletarii", cost: 12 },
+          { text: "Charonite Ogryns", cost: 15 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 2003,
+    name: "Auxilia Ogryn Charonite Section",
+    faction: FACTION.solar,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.support,
+    base_cost: 50,
+    base_size: 4,
+    max_size: 8,
+    main_unit: [2004],
+    related_unit: [],
+    loadout: [
+      {
+        text_option: ["Charonite claws"],
+      },
+    ],
+    upgrade_options: [
+      {
+        name: "Additional Charonite Ogryn",
+        options: [
+          { number: 2, cost: 15, size: 2 },
+          { number: 4, cost: 30, size: 4 },
+        ],
+      },
+    ],
+    datasheet_info: [
+      {
+        text: "A Auxilia Charonite Ogryn Section can purchase the following upgrades.",
+        options: [
+          { text: "1 additional Charonite Ogryn", cost: 15 },
+          { text: "2 additional Charonite Ogryn", cost: 30 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 2004,
+    name: "Auxilia Veletaris Storm Section",
+    faction: FACTION.solar,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.support,
+    base_cost: 40,
+    base_size: 4,
+    max_size: 8,
+    main_unit: [2003],
+    related_unit: [],
+    loadout: [
+      {
+        text_option: ["Auxilia laspistols", "Power axes"],
+      },
+    ],
+    upgrade_options: [
+      {
+        name: "Additional Veletarii",
+        options: [
+          { number: 2, cost: 10, size: 2 },
+          { number: 4, cost: 20, size: 4 },
+        ],
+      },
+    ],
+    datasheet_info: [
+      {
+        text: "A Auxilia Veletaris Storm Section can purchase the following upgrades.",
+        options: [
+          { text: "1 additional Veletarii", cost: 15 },
+          { text: "2 additional Veletarii", cost: 30 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 2005,
+    name: "Auxilia Rapier Battery",
+    faction: FACTION.solar,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.bastion,
+    base_cost: 50,
+    base_size: 3,
+    max_size: 9,
+    main_unit: [2005],
+    related_unit: [],
+    loadout: [
+      {
+        text_option: ["Laser destroyer array, quad-launcher or mole mortar"],
+      },
+    ],
+    upgrade_options: [
+      {
+        name: "Additional Rapier",
+        options: [
+          { number: 3, cost: 40, size: 3 },
+          { number: 6, cost: 70, size: 6 },
+        ],
+      },
+    ],
+    datasheet_info: [
+      {
+        text: "A Auxilia Rapier Battery can purchase the following upgrades.",
+        options: [
+          { text: "3 additional Rapier", cost: 40 },
+          { text: "6 additional Rapier", cost: 70 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 2006,
+    name: "Auxilia Tarantula Battery",
+    faction: FACTION.solar,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.bastion,
+    base_cost: 36,
+    base_size: 4,
+    max_size: 8,
+    main_unit: [2006],
+    related_unit: [],
+    loadout: [
+      {
+        text_option: [
+          "Tarantula lascannon battery or Hyperios air-defence missile launcher",
+        ],
+      },
+    ],
+    upgrade_options: [
+      {
+        name: "Additional Tarantula",
+        options: [
+          { number: 2, cost: 25, size: 2 },
+          { number: 4, cost: 25, size: 4 },
+        ],
+      },
+    ],
+    datasheet_info: [
+      {
+        text: "A Auxilia Tarantula Battery can purchase the following upgrades.",
+        options: [
+          { text: "2 additional Tarantula", cost: 15 },
+          { text: "4 additional Tarantula", cost: 25 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 2007,
+    name: "Auxilia Aethon Heavy Sentinel Patrol",
+    faction: FACTION.solar,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.vanguard,
+    base_cost: 35,
+    base_size: 2,
+    max_size: 8,
+    main_unit: [2007],
+    related_unit: [],
+    loadout: [
+      {
+        text_option: ["Multi-laser", "Sentinel missile launcher"],
+      },
+    ],
+    upgrade_options: [
+      {
+        name: "Additional Sentinel",
+        options: [
+          { number: 2, cost: 25, size: 2 },
+          { number: 4, cost: 45, size: 4 },
+          { number: 6, cost: 65, size: 6 },
+        ],
+      },
+    ],
+    datasheet_info: [
+      {
+        text: "A Auxilia Tarantula Battery can purchase the following upgrades.",
+        options: [
+          { text: "2 additional Sentinel", cost: 25 },
+          { text: "4 additional Sentinel", cost: 45 },
+          { text: "6 additional Sentinel", cost: 65 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 2008,
+    name: "Leman Russ Strike Squadron",
+    faction: FACTION.solar,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.battle,
+    base_cost: 175,
+    base_size: 4,
+    max_size: 10,
+    main_unit: [2008],
+    related_unit: [],
+    loadout: [
+      {
+        text_option: [
+          "Leman Russ battlecannon or Vanquisher battlecannon",
+          "Hull Mounted heavy bolter or Hull Mounted lascannon",
+        ],
+      },
+    ],
+    upgrade_options: [
+      {
+        name: "Additional Leman Russ",
+        options: [
+          { number: 2, cost: 85, size: 2 },
+          { number: 4, cost: 160, size: 4 },
+          { number: 6, cost: 220, size: 6 },
+        ],
+      },
+    ],
+    datasheet_info: [
+      {
+        text: "A Leman Russ Strike Squadron can purchase the following upgrades.",
+        options: [
+          { text: "2 additional Leman Russ", cost: 85 },
+          { text: "4 additional Leman Russ", cost: 160 },
+          { text: "6 additional Leman Russ", cost: 220 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 2009,
+    name: "Malcador Tank Squadron",
+    faction: FACTION.solar,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.battle,
+    base_cost: 165,
+    base_size: 2,
+    max_size: 6,
+    main_unit: [2009],
+    related_unit: [],
+    loadout: [
+      {
+        text_option: [
+          "Hull Mounted heavy bolter or Hull Mounted lascannon or Hull Mounted autocannon or Hull Mounted demolisher cannon",
+          "Malcador battlecannon or Malcador Vanquisher battlecannon or Malcador lascannon turret",
+          "Malcador heavy bolter sponsons or Malcador lascannon sponsons or Malcador autocannon sponsons",
+        ],
+      },
+    ],
+    upgrade_options: [
+      {
+        name: "Additional Malcador",
+        options: [
+          { number: 1, cost: 70, size: 1 },
+          { number: 2, cost: 130, size: 2 },
+          { number: 4, cost: 240, size: 4 },
+        ],
+      },
+    ],
+    datasheet_info: [
+      {
+        text: "A Malcador Tank Squadron can purchase the following upgrades.",
+        options: [
+          { text: "1 additional Malcador", cost: 70 },
+          { text: "2 additional Malcador", cost: 130 },
+          { text: "4 additional Malcador", cost: 240 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 2010,
+    name: "Auxilia Super-Heavy Tank Squadron",
+    faction: FACTION.solar,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.heavy,
+    base_cost: 100,
+    base_size: 1,
+    max_size: 6,
+    main_unit: [2010],
+    related_unit: [],
+    loadout: [
+      {
+        text_option: [
+          "Hull Mounted demolisher cannon and Hull Mounted heavy bolter",
+          "Baneblade cannon with Co-axial autocannon or Hellhammer cannon with Co-axial autocannon",
+          "Baneblade heavy bolter sponsons or Baneblade autocannon sponsons or Baneblade heavy flamer sponsons",
+          "Lascannon sponson turrets",
+        ],
+      },
+    ],
+    upgrade_options: [
+      {
+        name: "Additional Super-heavy",
+        options: [
+          { number: 1, cost: 90, size: 1 },
+          { number: 3, cost: 255, size: 3 },
+          { number: 5, cost: 390, size: 5 },
+        ],
+      },
+    ],
+    datasheet_info: [
+      {
+        text: "A Auxilia Super-Heavy Tank Squadron can purchase the following upgrades.",
+        options: [
+          { text: "1 additional Super-heavy", cost: 90 },
+          { text: "3 additional Super-heavy", cost: 255 },
+          { text: "5 additional Super-heavy", cost: 390 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 2011,
+    name: "Auxilia Thunderbolt Squadron",
+    faction: FACTION.solar,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.air,
+    base_cost: 80,
+    base_size: 1,
+    max_size: 4,
+    main_unit: [2011],
+    related_unit: [],
+    loadout: [
+      {
+        text_option: [
+          "Quad autocannon",
+          "Thunderbolt twin-linked lascannon",
+          "Hellstrike missiles or Skystrike missiles or Wing bombs",
+        ],
+      },
+    ],
+    upgrade_options: [
+      {
+        name: "Additional Thunderbolt",
+        options: [
+          { number: 1, cost: 80, size: 1 },
+          { number: 2, cost: 150, size: 2 },
+          { number: 3, cost: 220, size: 3 },
+        ],
+      },
+    ],
+    datasheet_info: [
+      {
+        text: "Any Thunderbolt Fighter can exchange its Quad autocannon for an Avenger bolt cannon for +3pts per model",
+      },
+      {
+        text: "A Auxilia Thunderbolt Squadron can purchase the following upgrades.",
+        options: [
+          { text: "1 additional Thunderbolt", cost: 80 },
+          { text: "2 additional Thunderbolt", cost: 150 },
+          { text: "3 additional Thunderbolt", cost: 220 },
+        ],
+      },
+    ],
+  },
+  // ********************************************************************
   // *********************KNIGHT & TITAN DETACHMENTS ********************
   // ********************************************************************
   {
@@ -1140,6 +1601,7 @@ export const detachmentData: DETACHMENT[] = [
     faction: FACTION.astartes,
     allegiance: ALLEGIANCE.neutral,
     detachment_type: DETACHMENT_TYPE.air,
+    unique: true,
     base_cost: 150,
     base_size: 1,
     max_size: 10,
@@ -1180,5 +1642,21 @@ export const detachmentData: DETACHMENT[] = [
         ],
       },
     ],
+  },
+  {
+    id: 9003,
+    name: "Tank Commander",
+    faction: FACTION.solar,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.battle,
+    unique: true,
+    base_cost: 10,
+    base_size: 1,
+    max_size: 1,
+    main_unit: [],
+    related_unit: [],
+    loadout: [],
+    upgrade_options: [],
+    datasheet_info: [],
   },
 ];

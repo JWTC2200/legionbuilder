@@ -8,6 +8,7 @@ import {
   DETACHMENT,
   BUILDER_DETACHMENT_UNIT,
   BUILDER_DETACHMENT_UNIT_UPGRADES,
+  FACTION,
 } from "@/app/types";
 import { detachmentData } from "@/app/data/detachment_data";
 import BuilderUnitUpgradeSelect from "./BuilderUnitUpgradeSelect";
@@ -15,10 +16,12 @@ import { detachmentPoints, detachmentSize } from "../utils";
 
 const BuilderDetachment = ({
   slot,
+  faction,
   slotSet,
   setFormationState,
 }: {
   slot: BUILDER_DETACHMENT_SLOT;
+  faction: FACTION | null;
   slotSet: SLOTSET;
   setFormationState: React.Dispatch<React.SetStateAction<BUILDER_FORMATION>>;
 }) => {
@@ -31,7 +34,12 @@ const BuilderDetachment = ({
           detachmentData.filter((detachment) => detachment.id === option)[0]
       )
     : detachmentData
-        .filter((detachment) => detachment.detachment_type === slot.type)
+        .filter(
+          (detachment) =>
+            detachment.detachment_type === slot.type &&
+            detachment.faction === faction &&
+            !detachment.unique
+        )
         .concat(
           slot.options.map(
             (id) => detachmentData.find((entry) => entry.id === id)!

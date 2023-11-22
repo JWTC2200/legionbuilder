@@ -42,7 +42,10 @@ const UnitDataslate = (unit: UNIT_DATASHEET) => {
             </td>
             <td className="text-center">{unit.movement}"</td>
             <td className="text-center">{unit.save}+</td>
-            <td className="text-center">+{unit.caf}</td>
+            <td className="text-center">
+              {Number(unit.caf) > 0 ? "+" : null}
+              {unit.caf}
+            </td>
             <td className="text-center">
               {unit.morale ? unit.morale + "+" : "-"}
             </td>
@@ -51,19 +54,22 @@ const UnitDataslate = (unit: UNIT_DATASHEET) => {
         </tbody>
       </table>
       {/* WEAPON STATS SECTION */}
-      <table className="w-full mt-4 border-2 border-black">
-        <thead className="bg-green-950 text-green-50">
-          <tr>
-            <th className="text-start px-2">Weapon</th>
-            <th className="text-center">Range</th>
-            <th className="text-center">Dice</th>
-            <th className="text-center">To Hit</th>
-            <th className="text-center">AP</th>
-            <th className="text-start px-2">Traits</th>
-          </tr>
-        </thead>
-        <tbody className="text-stone-900">{unitWeaponRows}</tbody>
-      </table>
+      {unitWeaponRows.length ? (
+        <table className="w-full mt-4 border-2 border-black">
+          <thead className="bg-green-950 text-green-50">
+            <tr>
+              <th className="text-start px-2">Weapon</th>
+              <th className="text-center">Range</th>
+              <th className="text-center">Dice</th>
+              <th className="text-center">To Hit</th>
+              <th className="text-center">AP</th>
+              <th className="text-start px-2">Traits</th>
+            </tr>
+          </thead>
+          <tbody className="text-stone-900">{unitWeaponRows}</tbody>
+        </table>
+      ) : null}
+
       {/* SPECIAL RULES SECTION */}
       {unit.special_rules.length ? (
         <div className="mt-2 border-2 border-black">

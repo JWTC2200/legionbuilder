@@ -122,6 +122,7 @@ const BuilderFormation = ({
                 <BuilderDetachment
                   key={slot.slot_ref}
                   slot={slot}
+                  faction={formation.faction}
                   slotSet={SLOTSET.compulsory}
                   setFormationState={setFormationState}
                 />
@@ -144,6 +145,7 @@ const BuilderFormation = ({
                 <BuilderDetachment
                   key={slot.slot_ref}
                   slot={slot}
+                  faction={formation.faction}
                   slotSet={SLOTSET.optional}
                   setFormationState={setFormationState}
                 />
@@ -170,6 +172,7 @@ const BuilderFormation = ({
                   <BuilderDetachment
                     key={slot.slot_ref}
                     slot={slot}
+                    faction={formation.faction}
                     slotSet={SLOTSET.choice}
                     setFormationState={setFormationState}
                   />
