@@ -781,7 +781,7 @@ export const unitData: UNIT_DATASHEET[] = [
     faction: FACTION.strategic,
     allegiance: ALLEGIANCE.loyalist,
     unit_type: { type: UNIT_TYPE.titan, value: 5 },
-    name: "Warlord-sinister Battle Titan",
+    name: "Warlord-Sinister",
     movement: 5,
     save: 2,
     caf: 14,
