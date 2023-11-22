@@ -73,7 +73,7 @@ export const formationData: FORMATION[] = [
     faction: FACTION.solar,
     allegiance: ALLEGIANCE.neutral,
     compulsory: [1000, 9003, 1009, 1009],
-    optional: [1002, 1001, 1008, 10003, 1003],
+    optional: [1002, 1001, 1008, 1003, 1003],
     choice: [[1005, 1007, 1008]],
   },
   // ********************************************************************
