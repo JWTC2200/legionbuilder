@@ -431,7 +431,7 @@ export const unitData: UNIT_DATASHEET[] = [
     unit_type: { type: UNIT_TYPE.vehicle, value: 2 },
     name: "Malcador Tank",
     movement: 9,
-    save: 2,
+    save: 3,
     caf: 2,
     morale: 4,
     wounds: 2,
