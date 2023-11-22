@@ -41,9 +41,7 @@ const BuilderDetachment = ({
             !detachment.unique
         )
         .concat(
-          slot.options.map(
-            (id) => detachmentData.find((entry) => entry.id === id)!
-          )
+          detachmentData.filter((detach) => slot.options?.includes(detach.id))
         );
 
   const selectOptions = detachmentOptions.map((option, index) => (

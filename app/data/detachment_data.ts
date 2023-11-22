@@ -797,7 +797,7 @@ export const detachmentData: DETACHMENT[] = [
     related_unit: [],
     loadout: [
       {
-        text_option: ["Auxillia lasfirles"],
+        text_option: ["Auxillia lasrifles"],
       },
     ],
     upgrade_options: [],
@@ -816,7 +816,7 @@ export const detachmentData: DETACHMENT[] = [
     related_unit: [2003, 2004],
     loadout: [
       {
-        text_option: ["Auxillia lasfirles"],
+        text_option: ["Auxillia lasrifles"],
       },
     ],
     upgrade_options: [

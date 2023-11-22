@@ -695,7 +695,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
   },
   {
     id: 2002,
-    name: "Auxillia lasfirles",
+    name: "Auxillia lasrifles",
     profiles: [
       {
         range: '10"',

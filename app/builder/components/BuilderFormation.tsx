@@ -140,7 +140,7 @@ const BuilderFormation = ({
             <h1 className="w-full text-center bg-green-950 text-green-50 font-graduate">
               Optional slots
             </h1>
-            <div className="flex flex-wrap  gap-4 py-2 sm:py-4 sm:px-2 justify-center">
+            <div className="flex flex-wrap gap-4 py-2 sm:py-4 sm:px-2 justify-center">
               {formation.optional.map((slot) => (
                 <BuilderDetachment
                   key={slot.slot_ref}
