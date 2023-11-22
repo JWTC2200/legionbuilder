@@ -85,7 +85,7 @@ const page = () => {
           </li>
         </ul>
       </div>
-      <div className="flex flex-wrap gap-4">
+      <div className="flex flex-wrap gap-2 justify-center text-center">
         <button
           onClick={handleSaveList}
           className=" bg-green-950 text-green-50 px-2 py-1 font-bold font-graduate rounded-lg hover:text-cyan-700"
