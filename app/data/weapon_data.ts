@@ -1870,6 +1870,530 @@ export const weaponData: WEAPON_DATASHEET[] = [
       },
     ],
   },
+  {
+    id: 4040,
+    name: "Neutron laser",
+    profiles: [
+      {
+        range: '38"',
+        dice: 1,
+        to_hit: 4,
+        ap: 3,
+        traits: ["Arc(Front)", "Shock Pulse"],
+      },
+    ],
+  },
+  {
+    id: 4041,
+    name: "Volcano cannon",
+    profiles: [
+      {
+        range: '70"',
+        dice: 1,
+        to_hit: 3,
+        ap: 4,
+        traits: ["Arc(Front)", "Engine Killer(2)"],
+      },
+    ],
+  },
+  {
+    id: 4042,
+    name: "Ardex mega-bolter",
+    profiles: [
+      {
+        range: '12"',
+        dice: 9,
+        to_hit: 5,
+        ap: 1,
+        traits: ["Light AT", "Point Defence", "Rapid Fire", "Shieldbane"],
+      },
+    ],
+  },
+  {
+    id: 4043,
+    name: "Coversion beam dissipator",
+    profiles: [
+      {
+        range: '6"',
+        dice: 2,
+        to_hit: 3,
+        ap: 2,
+        traits: ["Arc (Front)", "Accurate"],
+      },
+      {
+        range: '6"-18"',
+        dice: 3,
+        to_hit: 3,
+        ap: 3,
+        traits: ["Arc (Front)", "Accurate", "Demolisher"],
+      },
+      {
+        range: '18"-35"',
+        dice: 3,
+        to_hit: 3,
+        ap: 4,
+        traits: ["Arc (Front)", "Accurate", "Demolisher"],
+      },
+    ],
+  },
+  {
+    id: 4044,
+    name: "Reaver laser blaster",
+    profiles: [
+      {
+        range: '40"',
+        dice: 3,
+        to_hit: 4,
+        ap: 3,
+        traits: ["Arc (Front)"],
+      },
+    ],
+  },
+  {
+    id: 4045,
+    name: "Reaver gatling blaster",
+    profiles: [
+      {
+        range: '35"',
+        dice: 4,
+        to_hit: 4,
+        ap: 2,
+        traits: ["Arc (Front)"],
+      },
+    ],
+  },
+  {
+    id: 4046,
+    name: "Reaver volcano cannon",
+    profiles: [
+      {
+        range: '60"',
+        dice: 1,
+        to_hit: 2,
+        ap: 4,
+        traits: ["Arc (Front)", "Engine Killer (3)"],
+      },
+    ],
+  },
+  {
+    id: 4047,
+    name: "Reaver melta cannon",
+    profiles: [
+      {
+        range: '14"',
+        dice: 2,
+        to_hit: 4,
+        ap: 3,
+        traits: ["Anti-tank", "Arc (Front)", "Demolisher"],
+      },
+      {
+        range: '8"',
+        dice: 2,
+        to_hit: 3,
+        ap: 4,
+        traits: ["Anti-tank", "Arc (Front)", "Demolisher", "Engine Killer (4)"],
+      },
+    ],
+  },
+  {
+    id: 4048,
+    name: "Reaver power fist",
+    profiles: [
+      {
+        range: "-",
+        dice: null,
+        to_hit: null,
+        ap: 4,
+        traits: ["Engine Killer (1)", "Rend", "Wrecker(4)"],
+      },
+    ],
+  },
+  {
+    id: 4049,
+    name: "Reaver chain fist",
+    profiles: [
+      {
+        range: "-",
+        dice: null,
+        to_hit: null,
+        ap: 4,
+        traits: ["Engine Killer (2)", "Rend", "Wrecker(4)"],
+      },
+    ],
+  },
+  {
+    id: 4050,
+    name: "Reaver volkite eradicator",
+    profiles: [
+      {
+        range: '16"',
+        dice: 3,
+        to_hit: 4,
+        ap: 2,
+        traits: ["Beam", "Deflagrate", "Light AT", "Shieldbane"],
+      },
+    ],
+  },
+  {
+    id: 4051,
+    name: "Reaver apocalypse missile launcher",
+    profiles: [
+      {
+        range: '8"-100"',
+        dice: 5,
+        to_hit: 4,
+        ap: 1,
+        traits: ["Heavy Barrage"],
+      },
+    ],
+  },
+  {
+    id: 4052,
+    name: "Reaver vulcan mega-bolter",
+    profiles: [
+      {
+        range: '22"',
+        dice: 9,
+        to_hit: 5,
+        ap: 1,
+        traits: ["Light AT", "Rapid Fire", "Shieldbane"],
+      },
+    ],
+  },
+  {
+    id: 4053,
+    name: "Reaver turbo-laser destructor",
+    profiles: [
+      {
+        range: '40"',
+        dice: 2,
+        to_hit: 4,
+        ap: 3,
+        traits: ["Accurate"],
+      },
+    ],
+  },
+  {
+    id: 4054,
+    name: "Reaver titan warp missile",
+    profiles: [
+      {
+        range: '8"-75"',
+        dice: null,
+        to_hit: 2,
+        ap: 3,
+        traits: ["Arc (Front)", "Engine Killer (3)", "Limited (1)", "Warp"],
+      },
+    ],
+  },
+  {
+    id: 4055,
+    name: "Reaver graviton eradicator",
+    profiles: [
+      {
+        range: '30"',
+        dice: 2,
+        to_hit: null,
+        ap: 2,
+        traits: ["Demolisher", "Graviton Pulse"],
+      },
+    ],
+  },
+  {
+    id: 4056,
+    name: "Reaver conversion beam dissolutor",
+    profiles: [
+      {
+        range: '6"',
+        dice: 2,
+        to_hit: 4,
+        ap: 2,
+        traits: [],
+      },
+      {
+        range: '6"-18"',
+        dice: 2,
+        to_hit: 3,
+        ap: 3,
+        traits: ["Demolisher"],
+      },
+      {
+        range: '18"-35',
+        dice: 2,
+        to_hit: 3,
+        ap: 4,
+        traits: ["Demolisher"],
+      },
+    ],
+  },
+  {
+    id: 4057,
+    name: "Mori quake cannon",
+    profiles: [
+      {
+        range: '80"',
+        dice: 1,
+        to_hit: 3,
+        ap: 2,
+        traits: ["Arc (Front)", 'Blast (5")', "Quake"],
+      },
+    ],
+  },
+  {
+    id: 4058,
+    name: "Belicosa volcano cannon",
+    profiles: [
+      {
+        range: '70"',
+        dice: 1,
+        to_hit: 2,
+        ap: 5,
+        traits: ["Arc (Front)", "Engine Killer (4)"],
+      },
+    ],
+  },
+  {
+    id: 4059,
+    name: "Ardex-defensor mauler bolt cannon turrets",
+    profiles: [
+      {
+        range: '8"',
+        dice: 5,
+        to_hit: 5,
+        ap: 2,
+        traits: ["Light AT", "Point Defence"],
+      },
+    ],
+  },
+  {
+    id: 4060,
+    name: "Anvillus pattern defence batteries",
+    profiles: [
+      {
+        range: '20"',
+        dice: 5,
+        to_hit: 5,
+        ap: 1,
+        traits: ["Point Defence", "Skyfire"],
+      },
+    ],
+  },
+  {
+    id: 4061,
+    name: "Sunfury plasma annihilator",
+    profiles: [
+      {
+        range: '25"',
+        dice: 3,
+        to_hit: 3,
+        ap: 3,
+        traits: ["Arc (Front)"],
+      },
+    ],
+  },
+  {
+    id: 4062,
+    name: "Macro-gatling blaster",
+    profiles: [
+      {
+        range: '35"',
+        dice: 5,
+        to_hit: 3,
+        ap: 2,
+        traits: ["Arc (Front)", "Rapid Fire"],
+      },
+    ],
+  },
+  {
+    id: 4063,
+    name: "Arioch power claw",
+    profiles: [
+      {
+        range: '18"',
+        dice: 8,
+        to_hit: 5,
+        ap: 1,
+        traits: ["Arc (Front)", "Light AT", "Rapid Fire", "Shieldbane"],
+      },
+      {
+        range: "-",
+        dice: null,
+        to_hit: null,
+        ap: 4,
+        traits: ["Engine Killer (1)", "Rend", "Wrecker"],
+      },
+    ],
+  },
+  {
+    id: 4064,
+    name: "Apocalypse missile launcher",
+    profiles: [
+      {
+        range: '8"-100"',
+        dice: 10,
+        to_hit: 4,
+        ap: 1,
+        traits: ["Arc (Front)", "Heavy Barrage"],
+      },
+    ],
+  },
+  {
+    id: 4065,
+    name: "Paired gatling blasters",
+    profiles: [
+      {
+        range: '35"',
+        dice: 8,
+        to_hit: 4,
+        ap: 2,
+        traits: ["Arc (Front)"],
+      },
+    ],
+  },
+  {
+    id: 4066,
+    name: "Paired turbo-laser destructors",
+    profiles: [
+      {
+        range: '40"',
+        dice: 4,
+        to_hit: 4,
+        ap: 3,
+        traits: ["Accurate", "Arc (Front)"],
+      },
+    ],
+  },
+  {
+    id: 4067,
+    name: "Vulcan mega-bolter array",
+    profiles: [
+      {
+        range: '22"',
+        dice: 20,
+        to_hit: 5,
+        ap: 1,
+        traits: ["Arc (Front)", "Light AT", "Rapid Fire", "Shieldbane"],
+      },
+    ],
+  },
+  {
+    id: 4068,
+    name: "Paired laser blasters",
+    profiles: [
+      {
+        range: '40"',
+        dice: 6,
+        to_hit: 4,
+        ap: 3,
+        traits: ["Arc (Front)"],
+      },
+    ],
+  },
+  {
+    id: 4069,
+    name: "Ardex-defensor lascannon turrets",
+    profiles: [
+      {
+        range: '16"',
+        dice: 2,
+        to_hit: 5,
+        ap: 1,
+        traits: ["Anti-tank", "Arc (Rear)", "Point Defence"],
+      },
+    ],
+  },
+  {
+    id: 4070,
+    name: "Warlord graviton ruinator",
+    profiles: [
+      {
+        range: '30"',
+        dice: 3,
+        to_hit: null,
+        ap: 3,
+        traits: ["Arc (Front)", "Demolisher", "Gaviton Pulse"],
+      },
+    ],
+  },
+  {
+    id: 4071,
+    name: "Conversion beam extripator",
+    profiles: [
+      {
+        range: '6"',
+        dice: 2,
+        to_hit: 3,
+        ap: 2,
+        traits: ["Arc (Front)"],
+      },
+      {
+        range: '6"-18"',
+        dice: 3,
+        to_hit: 3,
+        ap: 3,
+        traits: ["Arc (Front)", "Demolisher"],
+      },
+      {
+        range: '18"-35"',
+        dice: 3,
+        to_hit: 3,
+        ap: 4,
+        traits: ["Arc (Front)", "Demolisher"],
+      },
+    ],
+  },
+  {
+    id: 4072,
+    name: "Volkite destructor",
+    profiles: [
+      {
+        range: '16"',
+        dice: 4,
+        to_hit: 4,
+        ap: 2,
+        traits: ["Arc (Front)", "Beam", "Deflagrate", "Light AT", "Shieldbane"],
+      },
+    ],
+  },
+  {
+    id: 4073,
+    name: "Sinistramanus Tenebrae",
+    profiles: [
+      {
+        range: '40"',
+        dice: 3,
+        to_hit: 4,
+        ap: 4,
+        traits: ["Arc (Front)", "Heavy Beam", "Psi"],
+      },
+    ],
+  },
+  {
+    id: 4074,
+    name: "Death pulse",
+    profiles: [
+      {
+        range: '7"',
+        dice: "D3+1",
+        to_hit: 4,
+        ap: 1,
+        traits: ["Psi", "Saturaton Fire"],
+      },
+    ],
+  },
+  {
+    id: 4075,
+    name: "Antipathic tempest",
+    profiles: [
+      {
+        range: '20"',
+        dice: 1,
+        to_hit: 4,
+        ap: 1,
+        traits: ["Blast (5)", "Ignores Cover", "Psi", "Quake"],
+      },
+    ],
+  },
 ];
 
 // {

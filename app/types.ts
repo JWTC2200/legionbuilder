@@ -120,7 +120,7 @@ export interface WEAPON_DATASHEET {
   name: string;
   profiles: {
     range: string;
-    dice: number | null;
+    dice: number | string | null;
     to_hit: number | null;
     ap: number | string;
     traits: string[];
