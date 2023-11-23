@@ -76,7 +76,7 @@ export interface DETACHMENT {
   main_unit: number[];
   related_unit: number[];
   loadout: DETACHMENT_LOADOUT[];
-  upgrade_options: DETACHMENT_UPGRADE[] | null;
+  upgrade_options: DETACHMENT_UPGRADE[];
   datasheet_info: DETACHMENT_UPGRADE_DATASHEET[];
 }
 
@@ -155,6 +155,7 @@ export interface BUILDER_FORMATION {
 }
 
 export interface BUILDER_DETACHMENT_SLOT {
+  ref_id: string;
   slot_ref: string;
   id: number;
   type: DETACHMENT_TYPE;

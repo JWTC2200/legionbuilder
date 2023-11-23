@@ -12,30 +12,27 @@ const BuilderFormation = ({
   formation: BUILDER_FORMATION;
   setArmyList: React.Dispatch<React.SetStateAction<BUILDER_LIST>>;
 }) => {
-  const [formationState, setFormationState] = useState(formation);
-  const [formationSelected, setFormationSelected] = useState(false);
-
   const chooseFormation = (id: number) => {
-    setFormationSelected(true);
-    if (!id) {
-      setFormationState((prev) => {
-        return {
-          ...prev,
+    const selectedFormation = id
+      ? setBuilderDetachment(id, formation.ref_id)
+      : {
+          ...formation,
           name: "",
           id: 0,
           choice: null,
           compulsory: null,
           optional: null,
         };
-      });
-      return;
-    }
-    const selectedFormation = setBuilderDetachment(id, formation.ref_id);
     if (selectedFormation) {
-      setFormationState((prev) => {
+      setArmyList((prev) => {
         return {
           ...prev,
-          ...selectedFormation,
+          formations: [...prev.formations].map((forma) => {
+            if (forma.ref_id === formation.ref_id) {
+              return { ...forma, ...selectedFormation };
+            }
+            return forma;
+          }),
         };
       });
     }
@@ -54,45 +51,26 @@ const BuilderFormation = ({
     });
   };
 
-  useEffect(() => {
-    setArmyList((prev) => {
-      return {
-        ...prev,
-        formations: [...prev.formations].map((formation) => {
-          if (formation.ref_id === formationState.ref_id) {
-            return formationState;
-          }
-          return formation;
-        }),
-      };
-    });
-  }, [formationState, formation]);
-
   return (
     <div className="sm:border-2 border-black sm:rounded-xl flex flex-col items-center">
       <div className="w-full bg-green-950 sm:rounded-t-lg flex flex-wrap justify-center items-center text-center px-2">
         {/* FORMATION SELECTOR -> DISABLED AFTER FIRST CHOICE */}
+
+        <select
+          className="bg-green-950 sm:rounded-t-lg sm:text-xl py-2 font-graduate text-center gap-8"
+          value={formation.id}
+          onChange={(e) => {
+            chooseFormation(Number(e.target.value));
+          }}
+        >
+          <option value="0">SELECT FORMATION</option>
+          {formationData.map((format) => (
+            <option key={formation.ref_id + format.name} value={format.id}>
+              {format.name}
+            </option>
+          ))}
+        </select>
         {formation.id ? (
-          <h3 className="bg-green-950 rounded-t-lg text-2xl py-2 px-4 font-graduate text-center">
-            {formation.name}
-          </h3>
-        ) : (
-          <select
-            className="bg-green-950 sm:rounded-t-lg sm:text-xl py-2 font-graduate text-center gap-8"
-            value={formation.id}
-            onChange={(e) => {
-              chooseFormation(Number(e.target.value));
-            }}
-          >
-            <option value="0">SELECT FORMATION</option>
-            {formationData.map((format) => (
-              <option key={formation.ref_id + format.name} value={format.id}>
-                {format.name}
-              </option>
-            ))}
-          </select>
-        )}
-        {formationSelected ? (
           <h3 className="bg-green-950 sm:rounded-t-lg text-lg sm:text-2xl py-2 px-4 font-graduate text-center">
             {formationPoints(formation)} points
           </h3>
@@ -124,7 +102,7 @@ const BuilderFormation = ({
                   slot={slot}
                   faction={formation.faction}
                   slotSet={SLOTSET.compulsory}
-                  setFormationState={setFormationState}
+                  setArmyList={setArmyList}
                 />
               ))}
             </div>
@@ -147,7 +125,7 @@ const BuilderFormation = ({
                   slot={slot}
                   faction={formation.faction}
                   slotSet={SLOTSET.optional}
-                  setFormationState={setFormationState}
+                  setArmyList={setArmyList}
                 />
               ))}
             </div>
@@ -174,7 +152,7 @@ const BuilderFormation = ({
                     slot={slot}
                     faction={formation.faction}
                     slotSet={SLOTSET.choice}
-                    setFormationState={setFormationState}
+                    setArmyList={setArmyList}
                   />
                 ))}
               </div>

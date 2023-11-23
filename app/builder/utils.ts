@@ -8,6 +8,7 @@ import {
   BUILDER_DETACHMENT_SLOT,
   BUILDER_FORMATION,
   BUILDER_LIST,
+  DETACHMENT_UPGRADE,
 } from "../types";
 
 export const listPoints = (armyList: BUILDER_LIST) => {
@@ -109,6 +110,7 @@ const getCompulsorySlots = (
     const returnedSlots = slots.map((slot, index) => {
       return {
         ...slot,
+        ref_id: formationRef,
         slot_ref: formationRef + "compulsorySlot" + index,
         selected_unit: null,
       };
@@ -129,6 +131,7 @@ const getOptionalSlots = (
     const optionalSlots = slots.map((slot, index) => {
       return {
         ...slot,
+        ref_id: formationRef,
         slot_ref: formationRef + "optionalSlot" + index,
         selected_unit: null,
       };
@@ -153,6 +156,7 @@ const getChoiceSlots = (
         const choiceSlots = slots.map((slot, index2) => {
           return {
             ...slot,
+            ref_id: formationRef,
             slot_ref: formationRef + "choice" + index + "Slot" + index2,
             selected_unit: null,
           };

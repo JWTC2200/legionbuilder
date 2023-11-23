@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import {
-  BUILDER_FORMATION,
+  BUILDER_LIST,
   BUILDER_DETACHMENT_SLOT,
   SLOTSET,
   DETACHMENT,
@@ -20,14 +20,14 @@ const BuilderDetachment = ({
   slot,
   faction,
   slotSet,
-  setFormationState,
+  setArmyList,
 }: {
   slot: BUILDER_DETACHMENT_SLOT;
   faction: FACTION | null;
   slotSet: SLOTSET;
-  setFormationState: React.Dispatch<React.SetStateAction<BUILDER_FORMATION>>;
+  setArmyList: React.Dispatch<React.SetStateAction<BUILDER_LIST>>;
 }) => {
-  const [slotState, setSlotState] = useState(slot);
+  // const [slotState, setSlotState] = useState(slot);
 
   // filtering for custom detachment slots
   const detachmentOptions: DETACHMENT[] = slot.restricted
@@ -52,15 +52,74 @@ const BuilderDetachment = ({
     </option>
   ));
 
-  const selectUnit = (id: number) => {
-    if (!id) {
-      setSlotState((prev) => {
-        return { ...prev, selected_unit: null };
-      });
-      return;
-    }
-    const unitData = detachmentOptions.find((unit) => unit.id === id)!;
-    if (unitData.upgrade_options) {
+  // const selectUnit = (id: number) => {
+  //   if (!id) {
+  //     setSlotState((prev) => {
+  //       return { ...prev, selected_unit: null };
+  //     });
+  //     return;
+  //   }
+  //   const unitData = detachmentOptions.find((unit) => unit.id === id)!;
+  //   if (unitData.upgrade_options) {
+  //     const untDataUnitUpgrades: BUILDER_DETACHMENT_UNIT_UPGRADES[] =
+  //       unitData.upgrade_options.map((option) => {
+  //         return {
+  //           name: option.name,
+  //           number: 0,
+  //           cost: 0,
+  //           size: 0,
+  //         };
+  //       });
+  //     const unitDataUnit: BUILDER_DETACHMENT_UNIT = {
+  //       id: unitData.id,
+  //       name: unitData.name,
+  //       base_cost: unitData.base_cost,
+  //       base_size: unitData.base_size,
+  //       max_size: unitData.max_size,
+  //       upgrade_options: untDataUnitUpgrades,
+  //     };
+
+  //     setSlotState((prev) => {
+  //       return { ...prev, selected_unit: unitDataUnit };
+  //     });
+  //   }
+  //   return;
+  // };
+
+  // useEffect(() => {
+  //   if (slotSet === SLOTSET.compulsory || slotSet === SLOTSET.optional) {
+  //     setArmyList((prev) => {
+  //       const toChange = prev[slotSet]?.map((prevSlot) => {
+  //         if (prevSlot.slot_ref === slotState.slot_ref) {
+  //           return slotState;
+  //         }
+  //         return prevSlot;
+  //       });
+  //       return { ...prev, [slotSet]: toChange };
+  //     });
+  //   }
+  //   if (slotSet === SLOTSET.choice) {
+  //     setArmyList((prev) => {
+  //       if (prev.choice && prev.choice.length) {
+  //         const newChoiceAray = prev.choice.map((array) =>
+  //           array.map((choice) => {
+  //             if (choice.slot_ref === slot.slot_ref) {
+  //               return slotState;
+  //             }
+  //             return choice;
+  //           })
+  //         );
+  //         return { ...prev, choice: newChoiceAray };
+  //       }
+
+  //       return prev;
+  //     });
+  //   }
+  // }, [slotState]);
+
+  const createNewUnit = (newId: number): BUILDER_DETACHMENT_UNIT | null => {
+    if (newId) {
+      const unitData = detachmentOptions.find((unit) => unit.id === newId)!;
       const untDataUnitUpgrades: BUILDER_DETACHMENT_UNIT_UPGRADES[] =
         unitData.upgrade_options.map((option) => {
           return {
@@ -78,44 +137,49 @@ const BuilderDetachment = ({
         max_size: unitData.max_size,
         upgrade_options: untDataUnitUpgrades,
       };
-
-      setSlotState((prev) => {
-        return { ...prev, selected_unit: unitDataUnit };
-      });
+      return unitDataUnit;
     }
-    return;
+    return null;
   };
 
-  useEffect(() => {
-    if (slotSet === SLOTSET.compulsory || slotSet === SLOTSET.optional) {
-      setFormationState((prev) => {
-        const toChange = prev[slotSet]?.map((prevSlot) => {
-          if (prevSlot.slot_ref === slotState.slot_ref) {
-            return slotState;
-          }
-          return prevSlot;
-        });
-        return { ...prev, [slotSet]: toChange };
-      });
-    }
-    if (slotSet === SLOTSET.choice) {
-      setFormationState((prev) => {
-        if (prev.choice && prev.choice.length) {
-          const newChoiceAray = prev.choice.map((array) =>
-            array.map((choice) => {
-              if (choice.slot_ref === slot.slot_ref) {
-                return slotState;
-              }
-              return choice;
-            })
-          );
-          return { ...prev, choice: newChoiceAray };
-        }
+  const updateSlotArray = (
+    detachmentArray: BUILDER_DETACHMENT_SLOT[],
+    newUnit: BUILDER_DETACHMENT_UNIT | null
+  ): BUILDER_DETACHMENT_SLOT[] => {
+    const newArray = detachmentArray.map((detach) => {
+      if (detach.slot_ref === slot.slot_ref) {
+        return { ...detach, selected_unit: newUnit };
+      }
+      return detach;
+    });
+    return newArray;
+  };
 
-        return prev;
-      });
-    }
-  }, [slotState]);
+  const changeDetachment = (id: number) => {
+    const newUnit = createNewUnit(id);
+    console.log(newUnit);
+    setArmyList((prev) => {
+      if (slotSet === SLOTSET.compulsory || slotSet === SLOTSET.optional) {
+        const newArmyList = {
+          ...prev,
+          formations: prev.formations.map((form) => {
+            if (form.ref_id === slot.ref_id) {
+              return {
+                ...form,
+                [slotSet]: form[slotSet]
+                  ? updateSlotArray(form[slotSet]!, newUnit)
+                  : null,
+              };
+            }
+            return form;
+          }),
+        };
+        return newArmyList;
+      }
+
+      return prev;
+    });
+  };
 
   return (
     <div className="sm:border-2 flex-grow border-black flex flex-col max-w-md">
@@ -155,7 +219,7 @@ const BuilderDetachment = ({
       <div className="px-1 pb-2">
         <select
           value={slot.selected_unit ? slot.selected_unit.id : 0}
-          onChange={(e) => selectUnit(Number(e.target.value))}
+          onChange={(e) => changeDetachment(Number(e.target.value))}
           className="w-full text-center my-2 py-1 border border-green-950 font-graduate "
         >
           <option value={0}>Select Detachment</option>
@@ -171,8 +235,10 @@ const BuilderDetachment = ({
                   key={slot.slot_ref + "upgrades" + index}
                   unitId={slot.selected_unit!.id}
                   upgradeOption={option}
-                  setSlotState={setSlotState}
-                  keyId={slot.slot_ref}
+                  setArmyList={setArmyList}
+                  slotSet={slotSet}
+                  refId={slot.ref_id}
+                  slotRef={slot.slot_ref}
                 />
               ))}
             </div>
