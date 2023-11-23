@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center p-8 gap-2 max-w-screen-md ">
       <p className="text-xl text-center">
-        I not everything has been implemented and I'm sure theres some
+        Not everything has been implemented and I'm sure there are some
         typos/bugs but please enjoy using it for now!
       </p>
       <Link
