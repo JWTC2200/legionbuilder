@@ -136,6 +136,8 @@ export interface SPECIAL_RULE {
   description: string;
 }
 
+// List builder specific types ( effecively mirrors of above types)
+
 export interface BUILDER_LIST {
   points: number;
   main_faction: FACTION;

@@ -505,7 +505,7 @@ export const detachmentData: DETACHMENT[] = [
         name: "Additional Predators",
         options: [
           { number: 1, cost: 35, size: 2 },
-          { number: 3, cost: 95, size: 4 },
+          { number: 3, cost: 95, size: 3 },
           { number: 6, cost: 185, size: 6 },
         ],
       },
