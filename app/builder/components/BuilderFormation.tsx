@@ -1,9 +1,12 @@
 "use client";
 import React, { useState, useEffect } from "react";
+
 import { BUILDER_FORMATION, BUILDER_LIST, SLOTSET } from "@/app/types";
 import BuilderDetachment from "./BuilderDetachment";
 import { formationData } from "@/app/data/formation_data";
 import { setBuilderDetachment, formationPoints } from "../utils";
+
+import { ToastContainer, toast } from "react-toastify";
 
 const BuilderFormation = ({
   formation,
@@ -49,10 +52,12 @@ const BuilderFormation = ({
         formations: filteredList,
       };
     });
+    toast.warning("Formation removed");
   };
 
   return (
     <div className="sm:border-2 border-black sm:rounded-xl flex flex-col items-center">
+      <ToastContainer autoClose={1000} closeOnClick />
       <div className="w-full bg-green-950 sm:rounded-t-lg flex flex-wrap justify-center items-center text-center px-2">
         {/* FORMATION SELECTOR -> DISABLED AFTER FIRST CHOICE */}
 

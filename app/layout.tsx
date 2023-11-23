@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
+
 import "./globals.css";
+import "react-toastify/dist/ReactToastify.css";
+
 import Navbar from "./components/Navbar";
 
 export const metadata: Metadata = {

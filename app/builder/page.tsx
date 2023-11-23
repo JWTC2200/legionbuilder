@@ -2,16 +2,20 @@
 
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+
+import { ToastContainer, toast } from "react-toastify";
+
 import { BUILDER_FORMATION, BUILDER_LIST, FACTION } from "../types";
 import BuilderFormation from "./components/BuilderFormation";
 import { listPoints } from "./utils";
+
 import { nanoid } from "nanoid";
+
 import { FiPlus, FiSave } from "react-icons/fi";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa6";
 import { MdKeyboardDoubleArrowUp } from "react-icons/md";
 import { TbChevronCompactLeft, TbChevronCompactRight } from "react-icons/tb";
 import { ImBin } from "react-icons/im";
-
 import { FiPrinter } from "react-icons/fi";
 
 const page = () => {
@@ -48,11 +52,13 @@ const page = () => {
     setArmyList((prev) => {
       return { ...prev, formations: [...prev.formations, newFormation] };
     });
+    toast.success("Added formation");
   };
 
   const handleSaveList = () => {
     if (typeof window !== "undefined") {
       localStorage.setItem("legionbuilder", JSON.stringify(armyList));
+      toast.success("List saved");
     }
   };
 
@@ -71,6 +77,7 @@ const page = () => {
         main_faction: FACTION.astartes,
         formations: [],
       });
+      toast.error("List deleted");
     }
   };
 
@@ -89,6 +96,7 @@ const page = () => {
 
   return (
     <main className="flex flex-col gap-2 w-full max-w-screen-2xl items-center dataslate_background mt-4 mb-20 sm:p-4 rounded-xl">
+      <ToastContainer autoClose={1000} closeOnClick />
       {/* NOTICES / WARNINGS */}
       <div className="text-red-600 text-center">
         <ul>
