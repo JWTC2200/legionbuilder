@@ -179,3 +179,11 @@ export interface BUILDER_DETACHMENT_UNIT_UPGRADES {
   cost: number;
   size: number;
 }
+
+// CONTACT FORM
+
+export interface CONTACT_FORM_DATA {
+  email: string;
+  title: string;
+  message: string;
+}
