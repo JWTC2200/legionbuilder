@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import {
   BUILDER_DETACHMENT_UNIT_UPGRADES,
   BUILDER_LIST,
@@ -25,8 +25,6 @@ const BuilderUnitUpgradeSelect = ({
   refId: string;
   slotRef: string;
 }) => {
-  const [selectState, setSelectState] = useState(upgradeOption);
-
   const detachmentUpgrades = detachmentData.find(
     (detachment) => detachment.id === unitId
   );
@@ -42,44 +40,6 @@ const BuilderUnitUpgradeSelect = ({
   if (!upgradeObject) {
     return null;
   }
-
-  const handleSelect = (id: number) => {};
-  //   if (!id) {
-  //     setSelectState((prev) => {
-  //       return {
-  //         ...prev,
-  //         number: 0,
-  //         cost: 0,
-  //         size: 0,
-  //       };
-  //     });
-  //     return;
-  //   }
-
-  // setSelectState((prev) => {
-  //   return {
-  //     ...prev,
-  //     number: id,
-  //     cost: upgradeObject.options.find((cost) => cost.number === id)!.cost,
-  //     size: upgradeObject.options.find((size) => size.number === id)!.size,
-  //   };
-  // });
-  // };
-
-  // useEffect(() => {
-  //   setSlotState((prev) => {
-  //     const findUpgrade = prev.selected_unit!.upgrade_options.map((option) => {
-  //       if (option.name === selectState.name) {
-  //         return selectState;
-  //       }
-  //       return option;
-  //     });
-  //     return {
-  //       ...prev,
-  //       selected_unit: { ...prev.selected_unit!, upgrade_options: findUpgrade },
-  //     };
-  //   });
-  // }, [selectState]);
 
   const newUpgradeObject = (
     upgradeId: number

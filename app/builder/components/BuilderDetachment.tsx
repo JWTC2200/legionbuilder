@@ -1,6 +1,4 @@
-"use client";
-
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {
   BUILDER_LIST,
   BUILDER_DETACHMENT_SLOT,
@@ -9,7 +7,6 @@ import {
   BUILDER_DETACHMENT_UNIT,
   BUILDER_DETACHMENT_UNIT_UPGRADES,
   FACTION,
-  DETACHMENT_TYPE,
 } from "@/app/types";
 import { detachmentData } from "@/app/data/detachment_data";
 import BuilderUnitUpgradeSelect from "./BuilderUnitUpgradeSelect";
@@ -27,8 +24,6 @@ const BuilderDetachment = ({
   slotSet: SLOTSET;
   setArmyList: React.Dispatch<React.SetStateAction<BUILDER_LIST>>;
 }) => {
-  // const [slotState, setSlotState] = useState(slot);
-
   // filtering for custom detachment slots
   const detachmentOptions: DETACHMENT[] = detachmentSlot.restricted
     ? detachmentSlot.options.map(
@@ -56,71 +51,6 @@ const BuilderDetachment = ({
       {option.name}: {option.base_cost}pts
     </option>
   ));
-
-  // const selectUnit = (id: number) => {
-  //   if (!id) {
-  //     setSlotState((prev) => {
-  //       return { ...prev, selected_unit: null };
-  //     });
-  //     return;
-  //   }
-  //   const unitData = detachmentOptions.find((unit) => unit.id === id)!;
-  //   if (unitData.upgrade_options) {
-  //     const untDataUnitUpgrades: BUILDER_DETACHMENT_UNIT_UPGRADES[] =
-  //       unitData.upgrade_options.map((option) => {
-  //         return {
-  //           name: option.name,
-  //           number: 0,
-  //           cost: 0,
-  //           size: 0,
-  //         };
-  //       });
-  //     const unitDataUnit: BUILDER_DETACHMENT_UNIT = {
-  //       id: unitData.id,
-  //       name: unitData.name,
-  //       base_cost: unitData.base_cost,
-  //       base_size: unitData.base_size,
-  //       max_size: unitData.max_size,
-  //       upgrade_options: untDataUnitUpgrades,
-  //     };
-
-  //     setSlotState((prev) => {
-  //       return { ...prev, selected_unit: unitDataUnit };
-  //     });
-  //   }
-  //   return;
-  // };
-
-  // useEffect(() => {
-  //   if (slotSet === SLOTSET.compulsory || slotSet === SLOTSET.optional) {
-  //     setArmyList((prev) => {
-  //       const toChange = prev[slotSet]?.map((prevSlot) => {
-  //         if (prevSlot.slot_ref === slotState.slot_ref) {
-  //           return slotState;
-  //         }
-  //         return prevSlot;
-  //       });
-  //       return { ...prev, [slotSet]: toChange };
-  //     });
-  //   }
-  //   if (slotSet === SLOTSET.choice) {
-  //     setArmyList((prev) => {
-  //       if (prev.choice && prev.choice.length) {
-  //         const newChoiceAray = prev.choice.map((array) =>
-  //           array.map((choice) => {
-  //             if (choice.slot_ref === slot.slot_ref) {
-  //               return slotState;
-  //             }
-  //             return choice;
-  //           })
-  //         );
-  //         return { ...prev, choice: newChoiceAray };
-  //       }
-
-  //       return prev;
-  //     });
-  //   }
-  // }, [slotState]);
 
   const createNewUnit = (newId: number): BUILDER_DETACHMENT_UNIT | null => {
     if (newId) {

@@ -1,14 +1,11 @@
 import { formationData } from "../data/formation_data";
 import { formationSlotData } from "../data/formation_slot_data";
 import {
-  FORMATION,
   FORMATION_SLOT,
-  DETACHMENT_TYPE,
   BUILDER_DETACHMENT_UNIT,
   BUILDER_DETACHMENT_SLOT,
   BUILDER_FORMATION,
   BUILDER_LIST,
-  DETACHMENT_UPGRADE,
 } from "../types";
 
 export const listPoints = (armyList: BUILDER_LIST) => {
