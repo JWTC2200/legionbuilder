@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { TfiEmail } from "react-icons/tfi";
+import { FaGithub } from "react-icons/fa6";
 
 export default function Home() {
   return (
@@ -14,9 +15,20 @@ export default function Home() {
       >
         Contact me <TfiEmail />
       </Link>
+      <Link
+        href="https://github.com/JWTC2200/legionbuilder"
+        className="hover:underline text-xl flex items-center gap-1
+        hover:text-cyan-700 active:text-cyan-700 focus:text-cyan-700"
+      >
+        Github <FaGithub />
+      </Link>
       <div className="mt-8">
         <h2 className="text-xl text-center">UPDATES:</h2>
         <ul className="list-disc">
+          <li>
+            23/11/2023: Added a couple widgets to make using the builder easier.
+            Changed the style so hopefully it's easier for mobile users.
+          </li>
           <li>
             23/11/2023: Hopefully fixed the issue with changing detachments &
             uprades without breaking anything else. Added a contact link above.{" "}
