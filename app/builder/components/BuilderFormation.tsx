@@ -57,7 +57,7 @@ const BuilderFormation = ({
         {/* FORMATION SELECTOR -> DISABLED AFTER FIRST CHOICE */}
 
         <select
-          className="bg-green-950 sm:rounded-t-lg sm:text-xl py-2 font-graduate text-center gap-8"
+          className="bg-green-950 sm:rounded-t-lg sm:text-xl py-2 font-graduate text-center"
           value={formation.id}
           onChange={(e) => {
             chooseFormation(Number(e.target.value));
@@ -71,7 +71,7 @@ const BuilderFormation = ({
           ))}
         </select>
         {formation.id ? (
-          <h3 className="bg-green-950 sm:rounded-t-lg text-lg sm:text-2xl py-2 px-4 font-graduate text-center">
+          <h3 className="bg-green-950 sm:rounded-t-lg sm:text-xl py-2 px-4 font-graduate text-center">
             {formationPoints(formation)} points
           </h3>
         ) : null}
@@ -90,12 +90,12 @@ const BuilderFormation = ({
       {/* COMPULSORY SECTION */}
 
       {formation.compulsory ? (
-        <div className="py-4 w-full">
+        <div className="w-full mt-2">
           <div className="w-full text-green-950 flex flex-col items-center">
             <h1 className="w-full text-center bg-green-950 text-green-50 font-graduate">
-              Compulsory slots
+              ~ Compulsory slots ~
             </h1>
-            <div className="flex flex-wrap gap-4 py-2 sm:py-4 sm:px-2 justify-center">
+            <div className="flex flex-wrap gap-2 py-2 sm:py-4 sm:px-2 justify-center">
               {formation.compulsory.map((slot) => (
                 <BuilderDetachment
                   key={slot.slot_ref}
@@ -113,12 +113,12 @@ const BuilderFormation = ({
       {/* OPTIONAL SECTION */}
 
       {formation.optional ? (
-        <div className="py-4 w-full">
+        <div className="w-full">
           <div className="w-full text-green-950 flex flex-col items-center">
             <h1 className="w-full text-center bg-green-950 text-green-50 font-graduate">
-              Optional slots
+              ~ Optional slots ~
             </h1>
-            <div className="flex flex-wrap gap-4 py-2 sm:py-4 sm:px-2 justify-center">
+            <div className="flex flex-wrap gap-2 py-2 sm:py-4 sm:px-2 justify-center">
               {formation.optional.map((slot) => (
                 <BuilderDetachment
                   key={slot.slot_ref}
@@ -136,16 +136,16 @@ const BuilderFormation = ({
       {/* CHOICE SECTIONS */}
 
       {formation.choice ? (
-        <div className="w-full flex flex-col gap-2">
+        <div className="w-full flex flex-col">
           {formation.choice.map((choiceSet, index) => (
             <div
               key={formation.ref_id + "choiceSet" + index}
               className="w-full text-green-950 flex flex-col items-center "
             >
               <h1 className="w-full text-center bg-green-950 text-green-50 font-graduate">
-                Choose up to one of the following:
+                ~ Choose up to one of the following ~
               </h1>
-              <div className="flex flex-wrap gap-4 py-2 sm:py-4 sm:px-2 justify-center">
+              <div className="flex flex-wrap gap-2 py-2 sm:py-4 sm:px-2 justify-center">
                 {choiceSet.map((slot) => (
                   <BuilderDetachment
                     key={slot.slot_ref}

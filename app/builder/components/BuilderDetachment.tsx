@@ -48,7 +48,7 @@ const BuilderDetachment = ({
       key={detachmentSlot.slot_ref + "unitOption" + index}
       value={option.id}
     >
-      {option.name}: {option.base_cost}pts
+      {option.base_cost}pts: {option.name}
     </option>
   ));
 
@@ -137,14 +137,16 @@ const BuilderDetachment = ({
   };
 
   return (
-    <div className="sm:border-2 flex-grow border-black flex flex-col max-w-md">
-      <h4 className="w-full flex gap-1 items-center justify-center bg-green-950 text-green-50 text-graduate text-center py-1 sm:text-xl font-graduate px-2">
+    <div className="flex-grow flex flex-col max-w-md">
+      <h4 className="sm:w-full flex gap-1 items-center justify-center bg-green-950 text-green-50 text-graduate text-center py-1 sm:text-xl font-graduate px-2 mx-2 sm:mx-0">
         {getDetachmentIcons(detachmentSlot.type)} {detachmentSlot.type}
         {getDetachmentIcons(detachmentSlot.type)}
       </h4>
       {/* DESCRIPTION  */}
       {detachmentSlot.description ? (
-        <p className="italic text-center">*{detachmentSlot.description}*</p>
+        <p className="italic text-center pt-1">
+          *{detachmentSlot.description}*
+        </p>
       ) : null}
 
       {/* UNIT POINTS AND DETACHMENT SIZE */}
@@ -171,13 +173,13 @@ const BuilderDetachment = ({
       ) : null}
 
       {/* SELECT SECTION */}
-      <div className="px-1 pb-2">
+      <div className="px-2">
         <select
           value={
             detachmentSlot.selected_unit ? detachmentSlot.selected_unit.id : 0
           }
           onChange={(e) => changeDetachment(Number(e.target.value))}
-          className="w-full text-center my-2 py-1 border border-green-950 font-graduate "
+          className="w-full text-center my-1 py-1 border border-green-950 font-graduate "
         >
           <option value={0}>Select Detachment</option>
           {selectOptions}
