@@ -111,6 +111,26 @@ const BuilderDetachment = ({
         };
         return newArmyList;
       }
+      if (slotSet === SLOTSET.choice) {
+        const newArmyList = {
+          ...prev,
+          formations: prev.formations.map((form) => {
+            if (form.ref_id === detachmentSlot.ref_id) {
+              if (!form.choice) {
+                return { ...form };
+              }
+              return {
+                ...form,
+                choice: form.choice.map((array) =>
+                  updateSlotArray(array, newUnit)
+                ),
+              };
+            }
+            return form;
+          }),
+        };
+        return newArmyList;
+      }
 
       return prev;
     });

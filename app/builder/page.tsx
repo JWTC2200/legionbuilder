@@ -70,18 +70,16 @@ const page = () => {
   }, []);
 
   return (
-    <main className="flex flex-col gap-2 w-full max-w-screen-2xl items-center dataslate_background mt-4 p-4 rounded-xl border-2 border-black">
+    <main className="relative flex flex-col gap-2 w-full max-w-screen-2xl items-center dataslate_background mt-4 p-4 rounded-xl border-2 border-black">
       <div className="text-red-600 text-center">
         <ul>
-          <li>There are currently some bugs with the builder</li>
           <li>
-            If you change the selected detachment within a slot. Any futher
-            upgrade changes may not update. As a temporary work around please
-            save the list and refresh the page.
+            I should have fixed the detachment swapping issue. If it still pops
+            up please let me know!{" "}
           </li>
           <li>
             Print List will automatically save the list and take you to a new
-            blank page with an easier to read format
+            blank page with a formatted list that should be easier to read.
           </li>
         </ul>
       </div>
@@ -154,7 +152,7 @@ const page = () => {
 
       {/* ARMYLIST POINTS */}
       <div className="w-full mt-4 p-4 bg-green-950 text-green-50 flex flex-wrap justify-center gap-4">
-        <div className="flex flex-col justify-center items-center gap-1">
+        <div className="flex flex-col justify-center items-center gap-1 border-2">
           <p className="font-graduate sm:text-xl">
             {armyList.main_faction} : {armyPoints.mainFactionPoints}pts
           </p>
@@ -167,7 +165,7 @@ const page = () => {
             Too many allies!
           </p>
         ) : null}
-        <div className="flex flex-col items-center justify-center gap-2">
+        <div className="flex flex-col items-center justify-center gap-2 border-2">
           <p className="font-graduate sm:text-xl">
             Formations: {armyList.formations.length}
           </p>
@@ -191,6 +189,9 @@ const page = () => {
           </div>
         </div>
       </div>
+
+      {/* FOOTER */}
+      <div></div>
 
       {/* FORMATION DISPLAY */}
       <div className="w-full mt-4 text-green-50 border-2 border-black flex flex-col justify-center gap-2">

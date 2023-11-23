@@ -108,6 +108,27 @@ const BuilderUnitUpgradeSelect = ({
         };
         return newArmyList;
       }
+      if (slotSet === SLOTSET.choice) {
+        const newArmyList = {
+          ...prev,
+          formations: prev.formations.map((form) => {
+            if (form.ref_id === refId) {
+              if (!form.choice) {
+                return { ...form };
+              }
+              return {
+                ...form,
+                choice: form.choice.map((array) =>
+                  updateUpgradeSlotArray(array, newUpgrade)
+                ),
+              };
+            }
+            return form;
+          }),
+        };
+        return newArmyList;
+      }
+
       return prev;
     });
   };
