@@ -26,8 +26,9 @@ export default function Home() {
         <h2 className="text-xl text-center">UPDATES:</h2>
         <ul className="list-disc">
           <li>
-            23/11/2023: Added a couple widgets to make using the builder easier.
-            Changed the style so hopefully it's easier for mobile users.
+            23/11/2023: Added a couple widgets and navigation links to make
+            using the builder easier for mobiles. Changed the style so hopefully
+            it's easier for mobile users.
           </li>
           <li>
             23/11/2023: Hopefully fixed the issue with changing detachments &
