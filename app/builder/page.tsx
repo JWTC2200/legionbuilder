@@ -152,7 +152,7 @@ const page = () => {
 
       {/* ARMYLIST POINTS */}
       <div className="w-full mt-4 p-4 bg-green-950 text-green-50 flex flex-wrap justify-center gap-4">
-        <div className="flex flex-col justify-center items-center gap-1 border-2">
+        <div className="flex flex-col justify-center items-center gap-1">
           <p className="font-graduate sm:text-xl">
             {armyList.main_faction} : {armyPoints.mainFactionPoints}pts
           </p>
@@ -165,7 +165,7 @@ const page = () => {
             Too many allies!
           </p>
         ) : null}
-        <div className="flex flex-col items-center justify-center gap-2 border-2">
+        <div className="flex flex-col items-center justify-center gap-2">
           <p className="font-graduate sm:text-xl">
             Formations: {armyList.formations.length}
           </p>
