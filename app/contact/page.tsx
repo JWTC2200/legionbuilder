@@ -58,12 +58,13 @@ const page = () => {
             </label>
             <input
               type="email"
+              required
               name="email"
               id="email"
               value={formData.email}
               onChange={handleFormChange}
               className="border border-green-950 w-full p-1 rounded-lg"
-              placeholder="Only if you want a reply"
+              placeholder="Email"
             />
           </div>
           <div className="w-full flex justify-between items-center">
@@ -78,7 +79,7 @@ const page = () => {
               value={formData.title}
               onChange={handleFormChange}
               className="border border-green-950 w-full p-1 rounded-lg"
-              placeholder="Required"
+              placeholder="Title"
             />
           </div>
         </div>
