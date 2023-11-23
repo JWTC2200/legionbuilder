@@ -99,7 +99,7 @@ const BuilderFormation = ({
               {formation.compulsory.map((slot) => (
                 <BuilderDetachment
                   key={slot.slot_ref}
-                  slot={slot}
+                  detachmentSlot={slot}
                   faction={formation.faction}
                   slotSet={SLOTSET.compulsory}
                   setArmyList={setArmyList}
@@ -122,7 +122,7 @@ const BuilderFormation = ({
               {formation.optional.map((slot) => (
                 <BuilderDetachment
                   key={slot.slot_ref}
-                  slot={slot}
+                  detachmentSlot={slot}
                   faction={formation.faction}
                   slotSet={SLOTSET.optional}
                   setArmyList={setArmyList}
@@ -149,7 +149,7 @@ const BuilderFormation = ({
                 {choiceSet.map((slot) => (
                   <BuilderDetachment
                     key={slot.slot_ref}
-                    slot={slot}
+                    detachmentSlot={slot}
                     faction={formation.faction}
                     slotSet={SLOTSET.choice}
                     setArmyList={setArmyList}
