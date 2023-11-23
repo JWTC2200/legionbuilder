@@ -142,7 +142,6 @@ const BuilderDetachment = ({
         {getDetachmentIcons(detachmentSlot.type)} {detachmentSlot.type}
         {getDetachmentIcons(detachmentSlot.type)}
       </h4>
-      <button onClick={() => console.log(detachmentSlot)}>TEST</button>
       {/* DESCRIPTION  */}
       {detachmentSlot.description ? (
         <p className="italic text-center">*{detachmentSlot.description}*</p>
