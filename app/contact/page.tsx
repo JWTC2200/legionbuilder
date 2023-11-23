@@ -23,7 +23,6 @@ const page = () => {
 
   const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
-    console.log("sent");
     setEmailSuccess(false);
     setSending(true);
     try {
@@ -32,8 +31,8 @@ const page = () => {
         body: JSON.stringify(formData),
       });
       const data = await res.json();
-      if (data.id) {
-        console.log(data);
+      console.log(data.error);
+      if (!data.error) {
         setEmailSuccess(true);
         setTimeout(() => {
           router.replace("/");
@@ -42,7 +41,6 @@ const page = () => {
       }
     } catch (error) {
       console.log(error);
-      setSending(false);
     }
     setSending(false);
   };
@@ -52,7 +50,7 @@ const page = () => {
       <h2 className="text-green-950 font-graduate text-center sm:text-xl">
         If you have any feedback or requests feel free to send me a message!
       </h2>
-      <form className="flex flex-col text-green-950 border-2 border-green-950 p-2 rounded-xl">
+      <form className="flex flex-col text-green-950 items-center border-2 border-green-950 p-2 rounded-xl">
         <div className="flex flex-wrap justify-center items-center text-center gap-1">
           <div className="w-full flex justify-between items-center">
             <label htmlFor="email" className="w-24 font-graduate">
@@ -95,19 +93,22 @@ const page = () => {
           placeholder="Message"
         />
         <button
-          type="button"
+          type="submit"
           onClick={handleSubmit}
-          className="text-center font-graduate font-semibold border border-green-950 rounded-xl p-1 m-2 hover:bg-green-950 hover:text-green-50 active:bg-green-950 active:text-cyan-700"
+          className="flex gap-2 text-center font-graduate font-semibold border max-w-min border-green-950 rounded-xl p-1 m-2 hover:bg-green-950 hover:text-green-50 active:bg-green-950 active:text-cyan-700"
         >
-          Submit
+          Submit{" "}
+          {sending ? (
+            <span className="border-4 border-t-rose-500 dark:border-t-emerald-500 border-blue-100 h-6 w-6 rounded-full animate-spin"></span>
+          ) : null}
         </button>
+        {emailSuccess ? (
+          <h4 className="max-w-sm text-green-850 text-center">
+            Message sent! Thank you for your feedback. You will now be
+            redirected to the front page.
+          </h4>
+        ) : null}
       </form>
-      {emailSuccess ? (
-        <h4 className="max-w-sm text-green-700 mt-4">
-          Message sent! Thank you for your feedback. You will now be redirected
-          to the front page.
-        </h4>
-      ) : null}
     </main>
   );
 };
