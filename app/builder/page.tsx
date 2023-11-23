@@ -219,9 +219,9 @@ const page = () => {
       </div>
       {/* object display */}
 
-      <pre className="w-full border-2 border-green-950 text-green-950 p-8 font-semibold text-lg">
+      {/* <pre className="w-full border-2 border-green-950 text-green-950 p-8 font-semibold text-lg">
         {JSON.stringify(armyList, null, " ")}
-      </pre>
+      </pre> */}
     </main>
   );
 };
