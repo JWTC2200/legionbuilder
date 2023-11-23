@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 import { ToastContainer, toast } from "react-toastify";
 
@@ -16,7 +17,7 @@ import { FaChevronDown, FaChevronUp } from "react-icons/fa6";
 import { MdKeyboardDoubleArrowUp } from "react-icons/md";
 import { TbChevronCompactLeft, TbChevronCompactRight } from "react-icons/tb";
 import { ImBin } from "react-icons/im";
-import { FiPrinter } from "react-icons/fi";
+import { FiPrinter, FiChevronDown } from "react-icons/fi";
 
 const page = () => {
   const router = useRouter();
@@ -277,8 +278,8 @@ const page = () => {
         </div>
       </div>
 
-      {/* FORMATION DISPLAY */}
-      <div className="w-full text-green-50 flex flex-col justify-center gap-2 ">
+      {/* ADD FORMATION AND FORMATION QUICK NAV LINKS */}
+      <div className="w-full text-green-50 flex flex-col justify-center gap-2">
         <div className="bg-green-950 flex flex-wrap justify-center items-center text-center gap-4">
           {/* <h2 className="text-center bg-green-950 font-graduate text-lg sm:text-2xl">
             FORMATIONS
@@ -291,6 +292,25 @@ const page = () => {
             <FiPlus />
           </button>
         </div>
+
+        {armyList.formations.length ? (
+          <div className="w-full text-green-50 bg-green-950 flex flex-col justify-center items-center">
+            {armyList.formations.map((formation, index) => (
+              <Link
+                href={`#${formation.ref_id}`}
+                key={formation.ref_id + "link"}
+                className="flex items-center gap-1 hover:text-cyan-700 active:text-cyan-700 focus:text-cyan-700"
+              >
+                <FiChevronDown />
+                Formation {index + 1}{" "}
+                {formation.name ? `: ${formation.name}` : null}
+                <FiChevronDown />
+              </Link>
+            ))}
+          </div>
+        ) : null}
+
+        {/* FORMATION DISPLAY */}
         {armyList.formations.length ? (
           <div className="pb-4 sm:p-4 flex flex-col gap-4">
             {armyList.formations.map((formation) => (

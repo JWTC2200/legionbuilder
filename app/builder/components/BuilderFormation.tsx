@@ -56,7 +56,10 @@ const BuilderFormation = ({
   };
 
   return (
-    <div className="sm:border-2 border-black sm:rounded-xl flex flex-col items-center">
+    <div
+      id={formation.ref_id}
+      className="sm:border-2 border-black sm:rounded-xl flex flex-col items-center"
+    >
       <ToastContainer autoClose={1000} closeOnClick />
       <div className="w-full bg-green-950 sm:rounded-t-lg flex flex-wrap justify-center items-center text-center px-2">
         {/* FORMATION SELECTOR -> DISABLED AFTER FIRST CHOICE */}
