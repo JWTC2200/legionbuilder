@@ -96,7 +96,7 @@ const page = () => {
   }, []);
 
   return (
-    <main className="flex flex-col gap-2 w-full max-w-screen-2xl items-center dataslate_background mt-4 mb-20 sm:px-4 lg:rounded-xl">
+    <main className="flex flex-col gap-2 w-full max-w-screen-2xl items-center dataslate_background pb-2 mt-4 mb-28 sm:px-4 lg:rounded-xl">
       <ToastContainer autoClose={1000} closeOnClick />
       {/* NOTICES / WARNINGS */}
       {/* <div className="text-red-600 text-center">
