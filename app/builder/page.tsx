@@ -32,7 +32,7 @@ const page = () => {
   const [infoWidget, setInfoWidget] = useState(true);
   const [sideWidget, setSideWidget] = useState(false);
 
-  const widgetHeight = infoWidget ? "h-28" : "h-12";
+  const widgetHeight = infoWidget ? "h-28 sm:h-32" : "h-12 sm:h-16";
   const widgetWidth = sideWidget ? "w-80" : "w-8";
 
   const savedList =
