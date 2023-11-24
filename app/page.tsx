@@ -25,6 +25,7 @@ export default function Home() {
       <div className="mt-8">
         <h2 className="text-xl text-center">UPDATES:</h2>
         <ul className="list-disc">
+          <li>24/11/2023: Oops! Added in Cerastus Knights!</li>
           <li>
             23/11/2023: Added a couple widgets and navigation links to make
             using the builder easier for mobiles. Changed the style so hopefully

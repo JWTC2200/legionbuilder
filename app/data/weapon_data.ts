@@ -365,8 +365,8 @@ export const weaponData: WEAPON_DATASHEET[] = [
       {
         range: '22"',
         dice: 1,
-        to_hit: 5,
-        ap: 0,
+        to_hit: 4,
+        ap: 1,
         traits: ["Arc (Front)", "Anti-tank"],
       },
     ],
@@ -2542,6 +2542,123 @@ export const weaponData: WEAPON_DATASHEET[] = [
         to_hit: null,
         ap: 5,
         traits: ["Rend", "Wrecker (5)"],
+      },
+    ],
+  },
+  {
+    id: 4086,
+    name: "Acheron pattern flame cannon",
+    profiles: [
+      {
+        range: '8"',
+        dice: 3,
+        to_hit: 4,
+        ap: 2,
+        traits: ["Arc (Front)", "Ignores Cover", "Light AT"],
+      },
+    ],
+  },
+  {
+    id: 4087,
+    name: "In-built twin-linked heavy bolters",
+    profiles: [
+      {
+        range: '12"',
+        dice: 2,
+        to_hit: 5,
+        ap: 0,
+        traits: ["Arc (Front)", "Light", "Point Defence"],
+      },
+    ],
+  },
+  {
+    id: 4088,
+    name: "Reaper chainfist",
+    profiles: [
+      {
+        range: "-",
+        dice: null,
+        to_hit: null,
+        ap: "-",
+        traits: ["Rend"],
+      },
+    ],
+  },
+  {
+    id: 4089,
+    name: "Castigator pattern bolt cannon",
+    profiles: [
+      {
+        range: '14"',
+        dice: 4,
+        to_hit: 5,
+        ap: 2,
+        traits: ["Arc (Front)", "Light AT", "Rapid Fire", "Shieldbane"],
+      },
+    ],
+  },
+  {
+    id: 4090,
+    name: "Tempest warblade",
+    profiles: [
+      {
+        range: "-",
+        dice: null,
+        to_hit: null,
+        ap: "-",
+        traits: ["Rend"],
+      },
+    ],
+  },
+  {
+    id: 4091,
+    name: "Shock Lance",
+    profiles: [
+      {
+        range: "-",
+        dice: null,
+        to_hit: null,
+        ap: "-",
+        traits: ["Reach", "Rend"],
+      },
+    ],
+  },
+  {
+    id: 4092,
+    name: "Ion gauntlet shield",
+    profiles: [
+      {
+        range: '6"',
+        dice: 2,
+        to_hit: 5,
+        ap: 2,
+        traits: ["Arc (Front)"],
+      },
+    ],
+  },
+  {
+    id: 4093,
+    name: "Graviton singularity cannon",
+    profiles: [
+      {
+        range: '16"',
+        dice: 2,
+        to_hit: 3,
+        ap: 3,
+        traits: ["Arc (Front)", "Armourbane", "Collapsing Singularity"],
+      },
+    ],
+  },
+  {
+    id: 4094,
+    name: "Atrapos lascutter",
+    profiles: [
+      {
+        range: '6"',
+        dice: 1,
+        to_hit: 2,
+        ap: 4,
+        traits: ["Arc (Front)", "Engine Killer (1)", "Rend", "Wrecker (3)"],
       },
     ],
   },

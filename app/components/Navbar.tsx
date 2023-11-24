@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <nav className="w-full bg-green-950 text-green-50 py-4 sm:py-8 px-4 sm:px-8 flex flex-col items-center  text-center font-subrayada">
       <Link href="/" className={`hover:text-cyan-700 active:text-cyan-600`}>
-        <h1 className="text-4xl font-bold mb-4">Legion Imperiallis</h1>
+        <h1 className="text-4xl font-bold mb-4">Legion Builder</h1>
       </Link>
       <div className="max-w-screen-sm flex flex-wrap items-center text-center justify-center gap-4">
         <Link

@@ -32,8 +32,8 @@ const page = () => {
   const [infoWidget, setInfoWidget] = useState(true);
   const [sideWidget, setSideWidget] = useState(false);
 
-  const widgetHeight = infoWidget ? "h-24" : "h-10";
-  const widgetWidth = sideWidget ? "w-80" : "w-12";
+  const widgetHeight = infoWidget ? "h-28" : "h-12";
+  const widgetWidth = sideWidget ? "w-80" : "w-8";
 
   const savedList =
     typeof window !== "undefined"
@@ -96,80 +96,78 @@ const page = () => {
   }, []);
 
   return (
-    <main className="flex flex-col gap-2 w-full max-w-screen-2xl items-center dataslate_background mt-4 mb-20 sm:p-4 rounded-xl">
+    <main className="flex flex-col gap-2 w-full max-w-screen-2xl items-center dataslate_background mt-4 mb-20 sm:px-4 lg:rounded-xl">
       <ToastContainer autoClose={1000} closeOnClick />
       {/* NOTICES / WARNINGS */}
-      <div className="text-red-600 text-center">
-        <ul>
-          <li>
-            I should have fixed the detachment swapping issue. If it still pops
-            up please let me know!{" "}
-          </li>
-          <li>
-            Print List will automatically save the list and take you to a new
-            blank page with a formatted list that should be easier to read.
-          </li>
-        </ul>
-      </div>
+      {/* <div className="text-red-600 text-center">
+        <ul></ul>
+      </div> */}
       {/* INFORMATION WIDGET BOTTOM */}
       <div
-        className={`fixed w-full max-w-screen-2xl bg-stone-800 text-stone-50 font-graduate bottom-0 p-2 flex text-sm sm:text-lg shadow-[0_-3px_4px_0px_#292524] transition-all ${
+        className={`fixed w-full max-w-screen-2xl bg-stone-800 text-stone-50 font-graduate bottom-0 px-2 flex flex-col text-sm sm:text-lg transition-all ${
           " " + widgetHeight
         }`}
       >
-        <div className="w-1/2 sm:w-5/12 flex flex-col justify-center items-center">
-          <div>
-            {infoWidget ? <p>{armyList.main_faction}</p> : null}
-            <p>Formations: {armyList.formations.length}</p>
-            {infoWidget ? (
-              <p>
-                Allies:{" "}
-                {
-                  armyList.formations.filter(
-                    (formation) => formation.faction !== armyList.main_faction
-                  ).length
-                }
-              </p>
-            ) : null}
-          </div>
-        </div>
-        <div className="w-4/12 sm:w-5/12 flex flex-col justify-center items-center">
-          <div>
-            <p>
-              Total:{" "}
-              {armyPoints.allyFactionPoints + armyPoints.mainFactionPoints}
-              pts
-            </p>
-            {infoWidget ? <p>Main: {armyPoints.mainFactionPoints}pts</p> : null}
-            {infoWidget ? (
-              <p>Allies: {armyPoints.allyFactionPoints}pts</p>
-            ) : null}
-          </div>
-        </div>
-        <div className="w-2/12 flex flex-col justify-evenly items-center py-2">
+        <div className="text-center">
+          {" "}
           <button
             type="button"
             onClick={() => {
               setInfoWidget((prev) => !prev);
             }}
-            className="hover:text-cyan-700 active:text-cyan-700 focus:text-cyan-700"
+            className="hover:text-cyan-700 active:text-cyan-700"
           >
             {infoWidget ? <FaChevronDown /> : <FaChevronUp />}
           </button>
-          <button
-            type="button"
-            onClick={returnToTop}
-            className="hover:text-cyan-700 active:text-cyan-700 focus:text-cyan-700 text-xl"
-          >
-            {infoWidget ? <MdKeyboardDoubleArrowUp /> : null}
-          </button>
+        </div>
+        <div className="flex ">
+          <div className="w-1/2 sm:w-5/12 flex flex-col justify-center items-center">
+            <div>
+              {infoWidget ? <p>{armyList.main_faction}</p> : null}
+              <p>Formations: {armyList.formations.length}</p>
+              {infoWidget ? (
+                <p>
+                  Allies:{" "}
+                  {
+                    armyList.formations.filter(
+                      (formation) => formation.faction !== armyList.main_faction
+                    ).length
+                  }
+                </p>
+              ) : null}
+            </div>
+          </div>
+          <div className="w-4/12 sm:w-5/12 flex flex-col justify-center items-center">
+            <div>
+              <p>
+                Total:{" "}
+                {armyPoints.allyFactionPoints + armyPoints.mainFactionPoints}
+                pts
+              </p>
+              {infoWidget ? (
+                <p>Main: {armyPoints.mainFactionPoints}pts</p>
+              ) : null}
+              {infoWidget ? (
+                <p>Allies: {armyPoints.allyFactionPoints}pts</p>
+              ) : null}
+            </div>
+          </div>
+          <div className="w-2/12 flex flex-col justify-evenly items-center py-2">
+            <button
+              type="button"
+              onClick={returnToTop}
+              className="hover:text-cyan-700 active:text-cyan-700 text-xl"
+            >
+              {infoWidget ? <MdKeyboardDoubleArrowUp /> : null}
+            </button>
+          </div>
         </div>
       </div>
 
       {/* INFORMATION WIDGET SIDE */}
       <div
         className={
-          `fixed flex flex-wrap justify-center items-center lg:hidden bg-green-950 bg-opacity-30 text-black h-24  right-0 bottom-32 rounded-l-lg text-3xl transition-all z-20` +
+          `fixed flex flex-wrap justify-center items-center lg:hidden bg-stone-800 text-stone-50  h-24  right-0 bottom-32 rounded-l-lg text-3xl transition-all z-20` +
           " " +
           widgetWidth
         }
@@ -178,19 +176,19 @@ const page = () => {
           <div className="flex flex-wrap justify-evenly items-center text-center w-10/12 transition-all">
             <button
               onClick={handleSaveList}
-              className="bg-white p-2 rounded-full hover:bg-cyan-700 active:bg-cyan-700 focus:bg-cyan-600 z-50"
+              className="bg-white p-2 rounded-full hover:bg-cyan-700 active:bg-cyan-700 z-50 text-stone-800"
             >
               <FiSave />
             </button>
             <button
               onClick={handlePrintList}
-              className="bg-white p-2 rounded-full hover:bg-cyan-700 active:bg-cyan-700 focus:bg-cyan-600 z-50"
+              className="bg-white p-2 rounded-full hover:bg-cyan-700 active:bg-cyan-700 z-50 text-stone-800"
             >
               <FiPrinter />
             </button>
             <button
               onClick={handleClearList}
-              className="bg-white p-2 rounded-full hover:bg-cyan-700 active:bg-cyan-700 focus:bg-cyan-600 z-50"
+              className="bg-white p-2 rounded-full hover:bg-cyan-700 active:bg-cyan-700 z-50 text-stone-800"
             >
               <ImBin />
             </button>
@@ -203,7 +201,7 @@ const page = () => {
             setSideWidget((prev) => !prev);
           }}
           className={
-            "p-2 rounded-full hover:text-cyan-700 active:text-cyan-700 focus:text-cyan-600 text-white"
+            "p-2 rounded-full hover:text-cyan-700 active:text-cyan-700 text-white"
           }
         >
           {sideWidget ? <TbChevronCompactRight /> : <TbChevronCompactLeft />}
@@ -299,7 +297,7 @@ const page = () => {
               <Link
                 href={`#${formation.ref_id}`}
                 key={formation.ref_id + "link"}
-                className="flex items-center gap-1 hover:text-cyan-700 active:text-cyan-700 focus:text-cyan-700"
+                className="flex items-center gap-1 hover:text-cyan-700 active:text-cyan-700"
               >
                 <FiChevronDown />
                 Formation {index + 1}{" "}

@@ -1916,6 +1916,84 @@ export const detachmentData: DETACHMENT[] = [
     ],
     datasheet_info: [],
   },
+  {
+    id: 4010,
+    name: "Cerastus Knight Banner",
+    faction: FACTION.strategic,
+    allegiance: ALLEGIANCE.neutral,
+    detachment_type: DETACHMENT_TYPE.knight,
+    base_cost: 215,
+    base_size: 1,
+    max_size: 6,
+    main_unit: [4014],
+    related_unit: [4015, 4003, 4004],
+    loadout: [
+      {
+        text: "Each Cerastus Knight has one of the following weapon loadouts:",
+        text_option: [
+          "Knight Acheron: Acheron pettern flame cannon, Reaper chainfist and in-build twin-linked heavy bolters",
+          "Knight Castigator: Castigator pattern bolt cannon and a Tempest Warblade",
+          "Knight Lancer: Shock Lance and an Ion gauntlet shield",
+        ],
+      },
+      {
+        text: "For +20 points, a Cerastus Knight may have one of the following loadouts instead:",
+        text_option: ["Cerastus Knight Atrapos"],
+      },
+      {
+        itallic_text:
+          "A Knight Lancer exchanges the Ion Shield (4+) special rule for Ion Shield (3+)",
+      },
+    ],
+    upgrade_options: [
+      {
+        name: "Additional Knight",
+        options: [
+          { number: 1, cost: 200, size: 1 },
+          { number: 2, cost: 390, size: 2 },
+        ],
+      },
+      {
+        name: "Atropos upgrade",
+        options: [
+          { number: 1, cost: 20, size: 0 },
+          { number: 2, cost: 40, size: 0 },
+          { number: 3, cost: 60, size: 0 },
+        ],
+      },
+      {
+        name: "Armiger Talon",
+        options: [{ number: 1, cost: 180, size: 3 }],
+      },
+      {
+        name: "Moriax Talon",
+        options: [{ number: 1, cost: 200, size: 3 }],
+      },
+    ],
+    datasheet_info: [
+      {
+        text: "A Cerastus Knight Banner can purchase one of the following upgrades:",
+        options: [
+          {
+            text: "1 additional Knight",
+            cost: 200,
+          },
+          { text: "2 additional Knights", cost: 390 },
+        ],
+      },
+      {
+        text: "In addition, a Cerastus Knight Banner may purchase one of the following upgrades",
+        options: [
+          {
+            text: "Questoris Knight Armiger Talon",
+            cost: 180,
+          },
+          { text: "Mechanicum Knight Moriax Talon", cost: 200 },
+        ],
+        info: "This upgrade increases the Detachment size by 3",
+      },
+    ],
+  },
   // ********************************************************************
   // ************************* UNIQUE DETACHMENTS ***********************
   // ********************************************************************
