@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { unitData } from "../data/unit_data";
-import { factionTypeArray } from "../types";
+import { unitData } from "../../data/unit_data";
+import { factionTypeArray } from "../../types";
 
 const page = () => {
   return (
@@ -15,7 +15,7 @@ const page = () => {
               .map((unit) => (
                 <Link
                   key={unit.name}
-                  href={`/units/${unit.name.replaceAll(" ", "_")} `}
+                  href={`/reference/units/${unit.name.replaceAll(" ", "_")} `}
                   className="text-lg hover:text-cyan-700 active:text-cyan-600"
                 >
                   {unit.name}

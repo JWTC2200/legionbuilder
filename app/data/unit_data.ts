@@ -463,7 +463,7 @@ export const unitData: UNIT_DATASHEET[] = [
     caf: 0,
     morale: null,
     wounds: 1,
-    weapons: [2027, 2028, 2029, 2030, 2031, 2032],
+    weapons: [2027, 2028, 1041, 1048, 2031, 2032],
     special_rules: ["Flyer", "Interceptor", "Jink (5+)"],
   },
   {
@@ -477,7 +477,7 @@ export const unitData: UNIT_DATASHEET[] = [
     caf: 0,
     morale: null,
     wounds: 1,
-    weapons: [2029, 2033, 2034, 2035, 2030, 2031, 2032],
+    weapons: [1041, 2033, 2034, 2035, 1048, 2031, 2032],
     special_rules: ["Flyer", "Interceptor", "Jink (5+)"],
   },
   {
@@ -491,7 +491,7 @@ export const unitData: UNIT_DATASHEET[] = [
     caf: 0,
     morale: null,
     wounds: 1,
-    weapons: [2036, 2037, 2030, 2031, 2038],
+    weapons: [2036, 2037, 1048, 2031, 2038],
     special_rules: ["Flyer", "Interceptor", "Jink (5+)"],
   },
   {
@@ -505,7 +505,7 @@ export const unitData: UNIT_DATASHEET[] = [
     caf: 0,
     morale: null,
     wounds: 1,
-    weapons: [2039, 2040, 2041, 2030, 2031, 2032],
+    weapons: [2039, 2040, 2041, 1048, 2031, 2032],
     special_rules: ["Flyer", "Jink (5+)"],
   },
   {
@@ -624,6 +624,11 @@ export const unitData: UNIT_DATASHEET[] = [
     morale: 2,
     wounds: 3,
     weapons: [4008, 4009, 4010],
+    loadout: [
+      {
+        options: ["Volkite chieorovile", "Hekaton siege claw", "Graviton gun"],
+      },
+    ],
     special_rules: [
       "Blessed Auto-simulacra",
       "Independant",
@@ -644,6 +649,15 @@ export const unitData: UNIT_DATASHEET[] = [
     morale: 2,
     wounds: 3,
     weapons: [4008, 4009, 4010],
+    loadout: [
+      {
+        options: [
+          "Lightning cannon",
+          "Hekaton siege claw",
+          "Phased plasma-fusil",
+        ],
+      },
+    ],
     special_rules: [
       "Blessed Auto-simulacra",
       "Independant",
@@ -664,6 +678,13 @@ export const unitData: UNIT_DATASHEET[] = [
     morale: 2,
     wounds: 2,
     weapons: [4014, 4015, 4016],
+    loadout: [
+      {
+        options: [
+          "Thermal spear and Reaper chain-cleaver or Armiger autocannon",
+        ],
+      },
+    ],
     special_rules: ["Ion Shields (5+)", "Nimble"],
   },
   {
@@ -678,6 +699,13 @@ export const unitData: UNIT_DATASHEET[] = [
     morale: 2,
     wounds: 2,
     weapons: [4017, 4018, 4019],
+    loadout: [
+      {
+        options: [
+          "Armiger lightning locks or a volkite veuglaire and a Gyges siege claw",
+        ],
+      },
+    ],
     special_rules: ["Ionic Flare Shield", "Ion Shields (5+)", "Nimble"],
   },
   {
@@ -810,7 +838,7 @@ export const unitData: UNIT_DATASHEET[] = [
     morale: null,
     wounds: 7,
     weapons: [
-      4076, 4077, 4030, 4078, 4028, 1045, 4031, 4079, 4059, 4069, 4080, 4081,
+      4076, 4077, 4030, 4078, 4028, 1045, 4031, 4079, 4059, 4069, 4080, 4060,
     ],
     special_rules: ["Void Shields (12)"],
   },
@@ -827,7 +855,7 @@ export const unitData: UNIT_DATASHEET[] = [
     wounds: 7,
     weapons: [
       4082, 4083, 4084, 4085, 4030, 4078, 4028, 1045, 4031, 4079, 4059, 4069,
-      4080, 4081,
+      4080, 4060,
     ],
     special_rules: ["Void Shields (12)"],
   },

@@ -18,9 +18,9 @@ const Navbar = () => {
       </Link>
       <div className="max-w-screen-sm flex flex-wrap items-center text-center justify-center gap-4">
         <Link
-          href="/units"
+          href="/reference/units"
           className={`flex gap-1 items-center hover:text-cyan-700 active:text-cyan-600 ${
-            pathname === "/units" ? " text-cyan-700" : ""
+            pathname.startsWith("/reference/units") ? " text-cyan-700" : ""
           }`}
         >
           <GiChewedSkull /> Units
@@ -29,7 +29,7 @@ const Navbar = () => {
         <Link
           href="/detachments"
           className={`flex gap-1 items-center hover:text-cyan-700 active:text-cyan-600 ${
-            pathname === "/detachments" ? " text-cyan-700" : ""
+            pathname.startsWith("/detachments") ? " text-cyan-700" : ""
           }`}
         >
           <GiTank /> Detachments
@@ -38,7 +38,7 @@ const Navbar = () => {
         <Link
           href="/formations"
           className={`flex gap-1 items-center hover:text-cyan-700 active:text-cyan-600 ${
-            pathname === "/formations" ? " text-cyan-700" : ""
+            pathname.startsWith("/formations") ? " text-cyan-700" : ""
           }`}
         >
           <GiVerticalBanner /> Formations
@@ -47,7 +47,7 @@ const Navbar = () => {
         <Link
           href="/builder"
           className={`flex gap-1 items-center hover:text-cyan-700 active:text-cyan-600 ${
-            pathname === "/builder" ? " text-cyan-700" : ""
+            pathname.startsWith("/builder") ? " text-cyan-700" : ""
           }`}
         >
           <FaClipboardList />

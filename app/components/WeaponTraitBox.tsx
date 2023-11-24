@@ -1,7 +1,7 @@
 import React from "react";
 import { weaponTraitsData } from "../data/weapon_traits_data";
 
-const TraitBox = ({ trait }: { trait: string }) => {
+const WeaponTraitBox = ({ trait }: { trait: string }) => {
   const description = weaponTraitsData.find(
     (weapon) => weapon.name.toLowerCase() === trait.toLowerCase()
   );
@@ -18,4 +18,4 @@ const TraitBox = ({ trait }: { trait: string }) => {
   );
 };
 
-export default TraitBox;
+export default WeaponTraitBox;

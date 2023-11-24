@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { UNIT_DATASHEET } from "../types";
 import { getUnitWeaponRows } from "../utils/unitweaponrows";
-import RuleBox from "./Rulebox";
+import SpecialRuleBox from "./SpecialRuleBox";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 const UnitDataslate = (unit: UNIT_DATASHEET) => {
@@ -34,7 +34,7 @@ const UnitDataslate = (unit: UNIT_DATASHEET) => {
             <td className="text-start px-2">
               {" "}
               <Link
-                href={`/units/${unit.name.replaceAll(" ", "_")}`}
+                href={`/reference/units/${unit.name.replaceAll(" ", "_")}`}
                 className="flex items-center gap-2 hover:text-cyan-700 active:text-cyan-600"
               >
                 {unit.name} <FaExternalLinkAlt />
@@ -107,7 +107,7 @@ const UnitDataslate = (unit: UNIT_DATASHEET) => {
             {" "}
             {unit.special_rules.sort().map((rule, index) => (
               <div key={rule + index} className="flex">
-                <RuleBox rule={rule} />
+                <SpecialRuleBox rule={rule} />
                 {index < unit.special_rules.length - 1 ? "," : ""}
               </div>
             ))}

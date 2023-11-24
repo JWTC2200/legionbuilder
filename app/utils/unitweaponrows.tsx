@@ -1,5 +1,5 @@
 import { weaponData } from "../data/weapon_data";
-import TraitBox from "../components/Traitbox";
+import WeaponTraitBox from "../components/WeaponTraitBox";
 
 export const getUnitWeaponRows = (unit: number[]) => {
   return unit.map((weapon) => {
@@ -61,7 +61,7 @@ export const getUnitWeaponRows = (unit: number[]) => {
                       key={weaponEntry.name + "traits" + index}
                       className="flex"
                     >
-                      <TraitBox trait={trait} />
+                      <WeaponTraitBox trait={trait} />
                       {index < profile.traits.length - 1 ? "," : "."}
                     </div>
                   ))

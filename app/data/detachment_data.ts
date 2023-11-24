@@ -2197,7 +2197,7 @@ export const detachmentData: DETACHMENT[] = [
     name: "Tank Commander",
     faction: FACTION.solar,
     allegiance: ALLEGIANCE.neutral,
-    detachment_type: DETACHMENT_TYPE.battle,
+    detachment_type: DETACHMENT_TYPE.hq,
     unique: true,
     base_cost: 10,
     base_size: 1,

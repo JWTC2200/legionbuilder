@@ -669,7 +669,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
   // ********************************************************************
   {
     id: 2000,
-    name: "Archeotech istol",
+    name: "Archeotech pistol",
     profiles: [
       {
         range: '6"',
@@ -695,7 +695,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
   },
   {
     id: 2002,
-    name: "Auxillia lasrifles",
+    name: "Auxilia lasrifles",
     profiles: [
       {
         range: '10"',
@@ -1052,32 +1052,6 @@ export const weaponData: WEAPON_DATASHEET[] = [
     ],
   },
   {
-    id: 2029,
-    name: "Avenger bolt cannon",
-    profiles: [
-      {
-        range: '16"',
-        dice: 5,
-        to_hit: 5,
-        ap: 1,
-        traits: ["Arc (Front)", "Light AT", "Skyfire", "Rapid Fires"],
-      },
-    ],
-  },
-  {
-    id: 2030,
-    name: "Hellstrike missiles",
-    profiles: [
-      {
-        range: '30"',
-        dice: 2,
-        to_hit: 4,
-        ap: 4,
-        traits: ["Arc (Front)", "Armourbane"],
-      },
-    ],
-  },
-  {
     id: 2031,
     name: "Skystrike missiles",
     profiles: [
@@ -1415,7 +1389,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
   },
   {
     id: 4008,
-    name: "Volkite chicorovile",
+    name: "Volkite chieorovile",
     profiles: [
       {
         range: '12"',
@@ -1428,7 +1402,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
   },
   {
     id: 4009,
-    name: "Hekaton sige claw",
+    name: "Hekaton siege claw",
     profiles: [
       {
         range: "-",
@@ -1454,7 +1428,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
   },
   {
     id: 4011,
-    name: "Lightning cannone",
+    name: "Lightning cannon",
     profiles: [
       {
         range: '22"',
@@ -1462,19 +1436,6 @@ export const weaponData: WEAPON_DATASHEET[] = [
         to_hit: 5,
         ap: 2,
         traits: ["Arc (Front)", 'Blast (3")'],
-      },
-    ],
-  },
-  {
-    id: 4012,
-    name: "Hekaton siege claw",
-    profiles: [
-      {
-        range: "-",
-        dice: null,
-        to_hit: null,
-        ap: 5,
-        traits: ["Rend", "Wrecker (3)"],
       },
     ],
   },
@@ -2167,7 +2128,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
   },
   {
     id: 4060,
-    name: "Anvillus pattern defence batteries",
+    name: "Anvilus pattern defence batteries",
     profiles: [
       {
         range: '20"',
@@ -2470,19 +2431,6 @@ export const weaponData: WEAPON_DATASHEET[] = [
         to_hit: 5,
         ap: 2,
         traits: ["Barrage", "Light AT", "Ignores Cover"],
-      },
-    ],
-  },
-  {
-    id: 4081,
-    name: "Anvilus pattern defence batteries",
-    profiles: [
-      {
-        range: '20"',
-        dice: 5,
-        to_hit: 5,
-        ap: 1,
-        traits: ["Point Defence", "Skyfire"],
       },
     ],
   },

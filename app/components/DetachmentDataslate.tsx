@@ -5,7 +5,7 @@ import { unitData } from "../data/unit_data";
 import { notFound } from "next/navigation";
 import { weaponData } from "../data/weapon_data";
 import { getUnitWeaponRows } from "../utils/unitweaponrows";
-import RuleBox from "./Rulebox";
+import SpecialRuleBox from "./SpecialRuleBox";
 import UnitDataslate from "./UnitDataslate";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
@@ -22,7 +22,7 @@ const DetachmentDataslate = (detachment: DETACHMENT) => {
       <tr key={unit.name}>
         <td className="text-start px-2">
           <Link
-            href={`/units/${unit.name.replaceAll(" ", "_")}`}
+            href={`/reference/units/${unit.name.replaceAll(" ", "_")}`}
             className="flex items-center gap-2 hover:text-cyan-700 active:text-cyan-600"
           >
             {unit.name} <FaExternalLinkAlt />
@@ -163,11 +163,11 @@ const DetachmentDataslate = (detachment: DETACHMENT) => {
           <h3 className="bg-green-950 text-green-50 px-2 py-1 font-bold">
             Special Rules
           </h3>
-          <div className="px-2 flex gap-1 text-stone-900">
+          <div className="px-2 flex flex-wrap gap-1 text-stone-900">
             {" "}
             {mainUnit[0].special_rules.sort().map((rule, index) => (
               <div key={rule + index} className="flex">
-                <RuleBox rule={rule} />
+                <SpecialRuleBox rule={rule} />
                 {index < mainUnit[0].special_rules.length - 1 ? "," : ""}
               </div>
             ))}

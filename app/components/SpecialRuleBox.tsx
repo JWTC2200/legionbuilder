@@ -1,7 +1,7 @@
 import React from "react";
 import { specialRulesData } from "../data/special_rule_data";
 
-const RuleBox = ({ rule }: { rule: string }) => {
+const SpecialRuleBox = ({ rule }: { rule: string }) => {
   const description = specialRulesData.find(
     (ruleEntry) => ruleEntry.name.toLowerCase() === rule.toLowerCase()
   );
@@ -17,4 +17,4 @@ const RuleBox = ({ rule }: { rule: string }) => {
   );
 };
 
-export default RuleBox;
+export default SpecialRuleBox;
