@@ -9,10 +9,10 @@ import {
   GiGothicCross,
   GiTankTread,
   GiCrackedShield,
+  GiApc,
 } from "react-icons/gi";
 import { IoSkullSharp } from "react-icons/io5";
 import { PiArrowFatUpFill } from "react-icons/pi";
-import { TbTank } from "react-icons/tb";
 import { DETACHMENT_TYPE } from "../types";
 
 export const getDetachmentIcons = (type: DETACHMENT_TYPE) => {
@@ -30,7 +30,7 @@ export const getDetachmentIcons = (type: DETACHMENT_TYPE) => {
     return <GiGothicCross />;
   }
   if (type === DETACHMENT_TYPE.light) {
-    return <TbTank />;
+    return <GiApc />;
   }
   if (type === DETACHMENT_TYPE.battle) {
     return <GiBattleTank />;

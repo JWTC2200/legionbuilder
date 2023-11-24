@@ -310,7 +310,7 @@ const page = () => {
 
         {/* FORMATION DISPLAY */}
         {armyList.formations.length ? (
-          <div className="pb-4 sm:p-4 flex flex-col gap-4">
+          <div className="pb-4 flex flex-col gap-4">
             {armyList.formations.map((formation) => (
               <BuilderFormation
                 key={formation.ref_id}

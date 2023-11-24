@@ -89,7 +89,7 @@ const page = () => {
   ));
 
   return (
-    <main className="max-w-screen-xl w-full h-full dataslate_background p-4 flex flex-col items-center">
+    <main className="h-full dataslate_background p-4 flex flex-col items-center">
       <h2 className="font-graduate font-semibold text-2xl text-center text-green-950">
         WEAPON LIST:
       </h2>

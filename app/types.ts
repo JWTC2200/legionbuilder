@@ -111,7 +111,7 @@ export interface UNIT_DATASHEET {
   wounds: number;
   weapons: number[];
   loadout?: [{ text?: string; options?: string[] }];
-  special_rules: string[];
+  special_rules: SPECIAL_RULE[];
 }
 
 export interface WEAPON_DATASHEET {
@@ -122,18 +122,18 @@ export interface WEAPON_DATASHEET {
     dice: number | string | null;
     to_hit: number | null;
     ap: number | string;
-    traits: string[];
+    traits: WEAPON_TRAIT[];
   }[];
 }
 
 export interface WEAPON_TRAIT {
   name: string;
-  description: string;
+  value?: number | string;
 }
 
 export interface SPECIAL_RULE {
   name: string;
-  description: string;
+  value?: number | string;
 }
 
 // List builder specific types ( effecively mirrors of above types)

@@ -137,8 +137,8 @@ const BuilderDetachment = ({
   };
 
   return (
-    <div className="flex-grow flex flex-col max-w-md">
-      <h4 className="sm:w-full flex gap-1 items-center justify-center bg-green-950 text-green-50 text-graduate text-center py-1 sm:text-xl font-graduate px-2 mx-2 sm:mx-0">
+    <div className="flex flex-col w-full sm:w-[450px]">
+      <h4 className="sm:w-full flex gap-1 items-center justify-center bg-green-950 rounded-md text-green-50 text-graduate text-center py-1 sm:text-xl font-graduate px-2 mx-2 sm:mx-0">
         {getDetachmentIcons(detachmentSlot.type)} {detachmentSlot.type}
         {getDetachmentIcons(detachmentSlot.type)}
       </h4>
@@ -179,7 +179,7 @@ const BuilderDetachment = ({
             detachmentSlot.selected_unit ? detachmentSlot.selected_unit.id : 0
           }
           onChange={(e) => changeDetachment(Number(e.target.value))}
-          className="w-full text-center my-1 py-1 border border-green-950 font-graduate "
+          className="w-full text-center my-1 py-1 px-2 border border-green-950 font-graduate "
         >
           <option value={0}>Select Detachment</option>
           {selectOptions}

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import { BUILDER_FORMATION, BUILDER_LIST, SLOTSET } from "@/app/types";
 import BuilderDetachment from "./BuilderDetachment";
@@ -58,14 +58,14 @@ const BuilderFormation = ({
   return (
     <div
       id={formation.ref_id}
-      className="sm:border-2 border-black sm:rounded-xl flex flex-col items-center"
+      className="sm:border-4 border-green-950 sm:rounded-xl flex flex-col items-center"
     >
       <ToastContainer autoClose={1000} closeOnClick />
-      <div className="w-full bg-green-950 sm:rounded-t-lg flex flex-wrap justify-center items-center text-center px-2">
-        {/* FORMATION SELECTOR -> DISABLED AFTER FIRST CHOICE */}
 
+      {/* FORMATION SELECTOR*/}
+      <div className="w-full bg-green-950 sm:rounded-t-lg flex flex-wrap justify-center items-center text-center px-2">
         <select
-          className="bg-green-950 sm:rounded-t-lg sm:text-xl py-2 font-graduate text-center"
+          className="bg-green-950 sm:text-xl py-2 font-graduate text-center"
           value={formation.id}
           onChange={(e) => {
             chooseFormation(Number(e.target.value));

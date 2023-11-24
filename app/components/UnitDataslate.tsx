@@ -11,7 +11,7 @@ const UnitDataslate = (unit: UNIT_DATASHEET) => {
   return (
     <article className="max-w-screen-xl p-2 border-2 border-black dataslate_background rounded-lg">
       {/* TITLE */}
-      <div className="flex justify-between items-center gap-4 border-2 border-black bg-green-950 text-green-50 py-1 px-3 mb-2">
+      <div className="flex justify-between items-center border-black bg-green-950 text-green-50 py-1 px-3 mb-2">
         <h2 className="text-2xl font-graduate font-bold">{unit.name}</h2>
         <h3 className="text-xl font-graduate">
           {unit.unit_type.type} {`(${unit.unit_type.value})`}
@@ -35,7 +35,7 @@ const UnitDataslate = (unit: UNIT_DATASHEET) => {
               {" "}
               <Link
                 href={`/reference/units/${unit.name.replaceAll(" ", "_")}`}
-                className="flex items-center gap-2 hover:text-cyan-700 active:text-cyan-600"
+                className="flex flex-wrap items-center gap-2 hover:text-cyan-700 active:text-cyan-600"
               >
                 {unit.name} <FaExternalLinkAlt />
               </Link>
@@ -106,7 +106,7 @@ const UnitDataslate = (unit: UNIT_DATASHEET) => {
           <div className="px-2 flex flex-wrap justify-start gap-1 text-stone-900">
             {" "}
             {unit.special_rules.sort().map((rule, index) => (
-              <div key={rule + index} className="flex">
+              <div key={rule.name + index} className="flex">
                 <SpecialRuleBox rule={rule} />
                 {index < unit.special_rules.length - 1 ? "," : ""}
               </div>

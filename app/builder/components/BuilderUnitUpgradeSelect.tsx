@@ -148,7 +148,10 @@ const BuilderUnitUpgradeSelect = ({
             key={slotRef + "upgrade" + upgradeOption.name + index}
             value={upgrade.number}
           >
-            {upgradeOption.name}: {upgrade.number}, {upgrade.cost}pts
+            {upgradeOption.name}
+            {upgrade.number > 900
+              ? null
+              : `: ${upgrade.number}, ${upgrade.cost}pts`}
           </option>
         ))}
       </select>

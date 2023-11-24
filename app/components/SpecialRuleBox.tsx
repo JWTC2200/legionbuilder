@@ -1,18 +1,15 @@
 import React from "react";
 import { specialRulesData } from "../data/special_rule_data";
+import { SPECIAL_RULE } from "../types";
 
-const SpecialRuleBox = ({ rule }: { rule: string }) => {
+const SpecialRuleBox = ({ rule }: { rule: SPECIAL_RULE }) => {
   const description = specialRulesData.find(
-    (ruleEntry) => ruleEntry.name.toLowerCase() === rule.toLowerCase()
+    (ruleEntry) => ruleEntry.name.toLowerCase() === rule.name.toLowerCase()
   );
   return (
-    <p className="cursor-pointer underline decoration-dotted hover:text-green-800 active:text-green-800 relative group capitalize">
-      {rule}
-      {description ? (
-        <span className="absolute bottom-0 left-0 bg-white hidden group-hover:block group-active:block group-hover:text-black group-active:text-black translate-y-full z-20">
-          {description.description}
-        </span>
-      ) : null}
+    <p className="cursor-pointer hover:text-green-800 active:text-green-800 relative group capitalize">
+      {rule.name}
+      {rule.value ? ` (${rule.value})` : null}
     </p>
   );
 };

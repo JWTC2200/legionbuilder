@@ -166,7 +166,7 @@ const DetachmentDataslate = (detachment: DETACHMENT) => {
           <div className="px-2 flex flex-wrap gap-1 text-stone-900">
             {" "}
             {mainUnit[0].special_rules.sort().map((rule, index) => (
-              <div key={rule + index} className="flex">
+              <div key={rule.name + index} className="flex">
                 <SpecialRuleBox rule={rule} />
                 {index < mainUnit[0].special_rules.length - 1 ? "," : ""}
               </div>

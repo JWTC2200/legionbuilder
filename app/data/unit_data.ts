@@ -19,11 +19,11 @@ export const unitData: UNIT_DATASHEET[] = [
     wounds: 1,
     weapons: [1000],
     special_rules: [
-      "Commander",
-      'Inspire (5")',
-      "Invulnerable Save (6+)",
-      "Master Tactitian",
-      "Medicae",
+      { name: "Commander" },
+      { name: "Inspire", value: '5"' },
+      { name: "Invulnerable Save", value: "6+" },
+      { name: "Master Tactitian" },
+      { name: "Medicae" },
     ],
   },
   {
@@ -38,7 +38,7 @@ export const unitData: UNIT_DATASHEET[] = [
     morale: 3,
     wounds: 1,
     weapons: [1001, 1002, 1003],
-    special_rules: ["Transport (2)"],
+    special_rules: [{ name: "Transport", value: 2 }],
   },
   {
     id: 1002,
@@ -67,11 +67,11 @@ export const unitData: UNIT_DATASHEET[] = [
     wounds: 1,
     weapons: [1000],
     special_rules: [
-      "Bulky",
-      "Deep Strike",
-      "Implacable",
-      "Invulnerable Save (6+)",
-      "Steadfast",
+      { name: "Bulky" },
+      { name: "Deep Strike" },
+      { name: "Implacable" },
+      { name: "Invulnerable Save", value: "6+" },
+      { name: "Steadfast" },
     ],
   },
   {
@@ -86,7 +86,7 @@ export const unitData: UNIT_DATASHEET[] = [
     morale: 3,
     wounds: 1,
     weapons: [1007],
-    special_rules: ["Independant", "Jump Packs"],
+    special_rules: [{ name: "Independant" }, { name: "Jump Packs" }],
   },
   {
     id: 1005,
@@ -128,7 +128,7 @@ export const unitData: UNIT_DATASHEET[] = [
     morale: 3,
     wounds: 1,
     weapons: [1008, 1009],
-    special_rules: ["Bulky"],
+    special_rules: [{ name: "Bulky" }],
   },
   {
     id: 1008,
@@ -142,7 +142,10 @@ export const unitData: UNIT_DATASHEET[] = [
     morale: 3,
     wounds: 1,
     weapons: [1010, 1011, 1012, 1013],
-    special_rules: ["Armoured", "Invunerable Save (5+)"],
+    special_rules: [
+      { name: "Armoured" },
+      { name: "Invunerable Save", value: "5+" },
+    ],
   },
   {
     id: 1009,
@@ -156,7 +159,10 @@ export const unitData: UNIT_DATASHEET[] = [
     morale: 3,
     wounds: 1,
     weapons: [1014, 1015, 1016],
-    special_rules: ["Armoured", "Invunerable Save (6+)"],
+    special_rules: [
+      { name: "Armoured" },
+      { name: "Invunerable Save", value: "6+" },
+    ],
   },
   {
     id: 1010,
@@ -170,7 +176,7 @@ export const unitData: UNIT_DATASHEET[] = [
     morale: null,
     wounds: 1,
     weapons: [1017, 1018],
-    special_rules: ["Automated Sentry"],
+    special_rules: [{ name: "Automated Sentry" }],
   },
   {
     id: 1011,
@@ -184,7 +190,11 @@ export const unitData: UNIT_DATASHEET[] = [
     morale: 3,
     wounds: 1,
     weapons: [1019, 1020, 1021, 1022],
-    special_rules: ["Armoured", "Invunerable Save (5+)", "Tracking Array"],
+    special_rules: [
+      { name: "Armoured" },
+      { name: "Invunerable Save", value: "5+" },
+      { name: "Tracking Array" },
+    ],
   },
   {
     id: 1012,
@@ -240,7 +250,11 @@ export const unitData: UNIT_DATASHEET[] = [
     morale: null,
     wounds: 1,
     weapons: [1035, 1036],
-    special_rules: ["Flyer", "Interceptor", "Jink (5+)"],
+    special_rules: [
+      { name: "Flyer" },
+      { name: "Interceptor" },
+      { name: "Jink", value: "5+" },
+    ],
   },
   {
     id: 1016,
@@ -254,7 +268,12 @@ export const unitData: UNIT_DATASHEET[] = [
     morale: null,
     wounds: 1,
     weapons: [1037, 1038, 1039, 1040],
-    special_rules: ["Assault Transport (5)", "Flyer", "Hover", "Jink (5+)"],
+    special_rules: [
+      { name: "Assault Transport", value: 5 },
+      { name: "Flyer" },
+      { name: "Hover" },
+      { name: "Jink", value: "5+" },
+    ],
   },
   {
     id: 1017,
@@ -268,7 +287,11 @@ export const unitData: UNIT_DATASHEET[] = [
     morale: null,
     wounds: 1,
     weapons: [1041, 1039, 1042, 1043, 1044],
-    special_rules: ["Flyer", "Hover", "Jink (5+)"],
+    special_rules: [
+      { name: "Flyer" },
+      { name: "Hover" },
+      { name: "Jink", value: "5+" },
+    ],
   },
   {
     id: 1018,
@@ -283,10 +306,10 @@ export const unitData: UNIT_DATASHEET[] = [
     wounds: 2,
     weapons: [1045, 1046, 1047, 1048],
     special_rules: [
-      "Flyer",
-      "Hover",
-      "Jink (5+)",
-      "Large Assault Transport (8)",
+      { name: "Flyer" },
+      { name: "Hover" },
+      { name: "Jink", value: "5+" },
+      { name: "Large Assault Transport", value: 8 },
     ],
   },
   // ********************************************************************
@@ -305,11 +328,11 @@ export const unitData: UNIT_DATASHEET[] = [
     wounds: 1,
     weapons: [2000, 2001],
     special_rules: [
-      "Commander",
-      'Inspire (8")',
-      "Invulnerable Save (6+)",
-      "Master Tactitian",
-      'Solar Auxilia HQ (10")',
+      { name: "Commander" },
+      { name: "Inspire", value: '8"' },
+      { name: "Invulnerable Save", value: "6+" },
+      { name: "Master Tactitian" },
+      { name: "Solar Auxilia HQ", value: '10"' },
     ],
   },
   {
@@ -324,7 +347,11 @@ export const unitData: UNIT_DATASHEET[] = [
     morale: 3,
     wounds: 1,
     weapons: [2002],
-    special_rules: ["Commander", 'Inspire (8")', 'Solar Auxilia HQ (6")'],
+    special_rules: [
+      { name: "Commander" },
+      { name: "Inspire", value: '8"' },
+      { name: "Solar Auxilia HQ", value: '6"' },
+    ],
   },
   {
     id: 2002,
@@ -338,7 +365,7 @@ export const unitData: UNIT_DATASHEET[] = [
     morale: 4,
     wounds: 1,
     weapons: [2002, 2003],
-    special_rules: ["Chain of Command", "Line"],
+    special_rules: [{ name: "Chain of Command" }, { name: "Line" }],
   },
   {
     id: 2003,
@@ -352,7 +379,7 @@ export const unitData: UNIT_DATASHEET[] = [
     morale: 4,
     wounds: 1,
     weapons: [2004, 2005],
-    special_rules: ["Independant", "Line"],
+    special_rules: [{ name: "Independant" }, { name: "Line" }],
   },
   {
     id: 2004,
@@ -366,7 +393,7 @@ export const unitData: UNIT_DATASHEET[] = [
     morale: 4,
     wounds: 1,
     weapons: [2006],
-    special_rules: ["Furious Charge", "Independant"],
+    special_rules: [{ name: "Furious Charge" }, { name: "Independant" }],
   },
   {
     id: 2005,
@@ -380,7 +407,7 @@ export const unitData: UNIT_DATASHEET[] = [
     morale: 4,
     wounds: 1,
     weapons: [1008, 1009, 2007],
-    special_rules: ["Bulky", "Chain of Command"],
+    special_rules: [{ name: "Bulky" }, { name: "Chain of Command" }],
   },
   {
     id: 2006,
@@ -394,7 +421,7 @@ export const unitData: UNIT_DATASHEET[] = [
     morale: null,
     wounds: 1,
     weapons: [1017, 1018],
-    special_rules: ["Automated Sentry"],
+    special_rules: [{ name: "Automated Sentry" }],
   },
   {
     id: 2007,
@@ -408,7 +435,7 @@ export const unitData: UNIT_DATASHEET[] = [
     morale: 4,
     wounds: 1,
     weapons: [2008, 2009],
-    special_rules: ["Forward Deployment"],
+    special_rules: [{ name: "Forward Deployment" }],
   },
   {
     id: 2008,
@@ -422,7 +449,10 @@ export const unitData: UNIT_DATASHEET[] = [
     morale: 4,
     wounds: 1,
     weapons: [2010, 2011, 1027, 2012],
-    special_rules: ["Chain of Command", "Explorator Adaptation"],
+    special_rules: [
+      { name: "Chain of Command" },
+      { name: "Explorator Adaptation" },
+    ],
   },
   {
     id: 2009,
@@ -436,7 +466,10 @@ export const unitData: UNIT_DATASHEET[] = [
     morale: 4,
     wounds: 2,
     weapons: [2013, 2014, 2015, 2016, 2017, 2018, 1027, 2012, 2019, 2020],
-    special_rules: ["Chain of Command", "Explorator Adaptation"],
+    special_rules: [
+      { name: "Chain of Command" },
+      { name: "Explorator Adaptation" },
+    ],
   },
   {
     id: 2010,
@@ -450,7 +483,10 @@ export const unitData: UNIT_DATASHEET[] = [
     morale: 4,
     wounds: 2,
     weapons: [2021, 2022, 1031, 2020, 1027, 2023, 2024, 2025, 2026],
-    special_rules: ["Chain of Command", "Explorator Adaptation"],
+    special_rules: [
+      { name: "Chain of Command" },
+      { name: "Explorator Adaptation" },
+    ],
   },
   {
     id: 2011,
@@ -464,7 +500,11 @@ export const unitData: UNIT_DATASHEET[] = [
     morale: null,
     wounds: 1,
     weapons: [2027, 2028, 1041, 1048, 2031, 2032],
-    special_rules: ["Flyer", "Interceptor", "Jink (5+)"],
+    special_rules: [
+      { name: "Flyer" },
+      { name: "Interceptor" },
+      { name: "Jink", value: "5+" },
+    ],
   },
   {
     id: 2012,
@@ -478,7 +518,11 @@ export const unitData: UNIT_DATASHEET[] = [
     morale: null,
     wounds: 1,
     weapons: [1041, 2033, 2034, 2035, 1048, 2031, 2032],
-    special_rules: ["Flyer", "Interceptor", "Jink (5+)"],
+    special_rules: [
+      { name: "Flyer" },
+      { name: "Interceptor" },
+      { name: "Jink", value: "5+" },
+    ],
   },
   {
     id: 2013,
@@ -492,7 +536,11 @@ export const unitData: UNIT_DATASHEET[] = [
     morale: null,
     wounds: 1,
     weapons: [2036, 2037, 1048, 2031, 2038],
-    special_rules: ["Flyer", "Interceptor", "Jink (5+)"],
+    special_rules: [
+      { name: "Flyer" },
+      { name: "Interceptor" },
+      { name: "Jink", value: "5+" },
+    ],
   },
   {
     id: 2014,
@@ -506,7 +554,7 @@ export const unitData: UNIT_DATASHEET[] = [
     morale: null,
     wounds: 1,
     weapons: [2039, 2040, 2041, 1048, 2031, 2032],
-    special_rules: ["Flyer", "Jink (5+)"],
+    special_rules: [{ name: "Flyer" }, { name: "Jink", value: "5+" }],
   },
   {
     id: 2015,
@@ -529,7 +577,11 @@ export const unitData: UNIT_DATASHEET[] = [
         ],
       },
     ],
-    special_rules: ["Auger Array", "Flyer", "Jink (5+)"],
+    special_rules: [
+      { name: "Auger Array" },
+      { name: "Flyer" },
+      { name: "Jink", value: "5+" },
+    ],
   },
   {
     id: 2016,
@@ -553,7 +605,7 @@ export const unitData: UNIT_DATASHEET[] = [
         ],
       },
     ],
-    special_rules: ["Flyer", "Jink (5+)"],
+    special_rules: [{ name: "Flyer" }, { name: "Jink", value: "5+" }],
   },
   {
     id: 2017,
@@ -578,7 +630,7 @@ export const unitData: UNIT_DATASHEET[] = [
         ],
       },
     ],
-    special_rules: ["Flyer", "Jink (5+)"],
+    special_rules: [{ name: "Flyer" }, { name: "Jink", value: "5+" }],
   },
   {
     id: 2018,
@@ -592,7 +644,12 @@ export const unitData: UNIT_DATASHEET[] = [
     morale: null,
     wounds: 1,
     weapons: [],
-    special_rules: ["Flyer", "Hover", "Jink (5+)", "Transport (2)"],
+    special_rules: [
+      { name: "Flyer" },
+      { name: "Hover" },
+      { name: "Jink", value: "5+" },
+      { name: "Transport", value: 2 },
+    ],
   },
 
   // ********************************************************************
@@ -610,7 +667,11 @@ export const unitData: UNIT_DATASHEET[] = [
     morale: 2,
     wounds: 3,
     weapons: [4000, 4001, 4002, 4003, 4004, 4005, 4006, 4007],
-    special_rules: ["Independant", "Ion Shields (4+)", "Nimble"],
+    special_rules: [
+      { name: "Independant" },
+      { name: "Ion Shields", value: "4+" },
+      { name: "Nimble" },
+    ],
   },
   {
     id: 4001,
@@ -630,11 +691,11 @@ export const unitData: UNIT_DATASHEET[] = [
       },
     ],
     special_rules: [
-      "Blessed Auto-simulacra",
-      "Independant",
-      "Ionic Flare Shield",
-      "Ion Shields (4+)",
-      "Nimble",
+      { name: "Blessed Auto-simulacra" },
+      { name: "Independant" },
+      { name: "Ionic Flare Shield" },
+      { name: "Ion Shields", value: "4+" },
+      { name: "Nimble" },
     ],
   },
   {
@@ -659,11 +720,11 @@ export const unitData: UNIT_DATASHEET[] = [
       },
     ],
     special_rules: [
-      "Blessed Auto-simulacra",
-      "Independant",
-      "Ionic Flare Shield",
-      "Ion Shields (4+)",
-      "Nimble",
+      { name: "Blessed Auto-simulacra" },
+      { name: "Independant" },
+      { name: "Ionic Flare Shield" },
+      { name: "Ion Shields", value: "4+" },
+      { name: "Nimble" },
     ],
   },
   {
@@ -685,7 +746,7 @@ export const unitData: UNIT_DATASHEET[] = [
         ],
       },
     ],
-    special_rules: ["Ion Shields (5+)", "Nimble"],
+    special_rules: [{ name: "Ion Shields", value: "5+" }, { name: "Nimble" }],
   },
   {
     id: 4004,
@@ -706,7 +767,11 @@ export const unitData: UNIT_DATASHEET[] = [
         ],
       },
     ],
-    special_rules: ["Ionic Flare Shield", "Ion Shields (5+)", "Nimble"],
+    special_rules: [
+      { name: "Ionic Flare Shield" },
+      { name: "Ion Shields", value: "5+" },
+      { name: "Nimble" },
+    ],
   },
   {
     id: 4005,
@@ -721,9 +786,9 @@ export const unitData: UNIT_DATASHEET[] = [
     wounds: 2,
     weapons: [4020, 4021, 4022, 4023, 4024, 4025, 4026, 4027],
     special_rules: [
-      "Blessed Auto-simulacra",
-      "Independant",
-      "Ion Shields (4+)",
+      { name: "Blessed Auto-simulacra" },
+      { name: "Independant" },
+      { name: "Ion Shields", value: "4+" },
     ],
   },
   {
@@ -740,7 +805,7 @@ export const unitData: UNIT_DATASHEET[] = [
     weapons: [
       4028, 4029, 4030, 4031, 4032, 4033, 4034, 4035, 4036, 4037, 4038, 4039,
     ],
-    special_rules: ["Agile", "Void Shields (2)"],
+    special_rules: [{ name: "Agile" }, { name: "Void Shields", value: 2 }],
   },
   {
     id: 4007,
@@ -754,7 +819,11 @@ export const unitData: UNIT_DATASHEET[] = [
     morale: null,
     wounds: 4,
     weapons: [4040, 4041, 4042, 4040],
-    special_rules: ["Agile", "Infiltrate", "Void Shields (2)"],
+    special_rules: [
+      { name: "Agile" },
+      { name: "Infiltrate" },
+      { name: "Void Shields", value: 2 },
+    ],
   },
   {
     id: 4008,
@@ -771,7 +840,7 @@ export const unitData: UNIT_DATASHEET[] = [
       4044, 4045, 4046, 4047, 4048, 4049, 4050, 4051, 4052, 4053, 4054, 4055,
       4056,
     ],
-    special_rules: ["Void Shields (4)"],
+    special_rules: [{ name: "Void Shields", value: 4 }],
   },
   {
     id: 4009,
@@ -785,7 +854,7 @@ export const unitData: UNIT_DATASHEET[] = [
     morale: null,
     wounds: 5,
     weapons: [4044, 4045, 4046, 4047, 4057, 4058, 4059, 4060],
-    special_rules: ["Void Shields (6)"],
+    special_rules: [{ name: "Void Shields", value: 6 }],
   },
   {
     id: 4010,
@@ -802,7 +871,7 @@ export const unitData: UNIT_DATASHEET[] = [
       4058, 4061, 4062, 4057, 4063, 4072, 4064, 4065, 4066, 4067, 4068, 4059,
       4069, 4070, 4071,
     ],
-    special_rules: ["Void Shields (6)"],
+    special_rules: [{ name: "Void Shields", value: 6 }],
   },
   {
     id: 4011,
@@ -820,10 +889,10 @@ export const unitData: UNIT_DATASHEET[] = [
       4068, 4059, 4069, 4070, 4071, 4074, 4075,
     ],
     special_rules: [
-      "Dread Aura",
-      "Loyalist",
-      "Necrotechia",
-      "Void Shields (6)",
+      { name: "Dread Aura" },
+      { name: "Loyalist" },
+      { name: "Necrotechia" },
+      { name: "Void Shields", value: 6 },
     ],
   },
   {
@@ -840,7 +909,7 @@ export const unitData: UNIT_DATASHEET[] = [
     weapons: [
       4076, 4077, 4030, 4078, 4028, 1045, 4031, 4079, 4059, 4069, 4080, 4060,
     ],
-    special_rules: ["Void Shields (12)"],
+    special_rules: [{ name: "Void Shields", value: 12 }],
   },
   {
     id: 4013,
@@ -857,7 +926,7 @@ export const unitData: UNIT_DATASHEET[] = [
       4082, 4083, 4084, 4085, 4030, 4078, 4028, 1045, 4031, 4079, 4059, 4069,
       4080, 4060,
     ],
-    special_rules: ["Void Shields (12)"],
+    special_rules: [{ name: "Void Shields", value: 12 }],
   },
   {
     id: 4014,
@@ -872,10 +941,10 @@ export const unitData: UNIT_DATASHEET[] = [
     wounds: 3,
     weapons: [4086, 4087, 4088, 4089, 4090, 4091, 4092],
     special_rules: [
-      "Furious Charge",
-      "Independant",
-      "Ion Shields (4+)",
-      "Nimble",
+      { name: "Furious Charge" },
+      { name: "Independant" },
+      { name: "Ion Shields", value: "4+" },
+      { name: "Nimble" },
     ],
   },
   {
@@ -894,11 +963,11 @@ export const unitData: UNIT_DATASHEET[] = [
       { options: ["Graviton singularity cannon", "Atropos lascutter"] },
     ],
     special_rules: [
-      "Furious Charge",
-      "Independant",
-      "Ion Shields (3+)",
-      "Macro-extinction Targeting protocols",
-      "Nimble",
+      { name: "Furious Charge" },
+      { name: "Independant" },
+      { name: "Ion Shields", value: "3+" },
+      { name: "Macro-extinction Targeting protocols" },
+      { name: "Nimble" },
     ],
   },
 ];
