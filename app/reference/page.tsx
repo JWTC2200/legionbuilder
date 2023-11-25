@@ -26,6 +26,7 @@ const page = () => {
         >
           <GiFist className="text-5xl" />
           Special Rules
+          <span className="italic">Not ready</span>
         </Link>
         <Link
           href="/reference/weapons"
@@ -41,6 +42,7 @@ const page = () => {
         >
           <GiFlamedLeaf className="text-5xl" />
           Weapon Traits
+          <span className="italic">Not ready</span>
         </Link>
       </nav>
     </main>

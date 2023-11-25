@@ -534,7 +534,7 @@ export const detachmentData: DETACHMENT[] = [
       {
         name: "Additional Predators",
         options: [
-          { number: 1, cost: 35, size: 2 },
+          { number: 1, cost: 35, size: 1 },
           { number: 3, cost: 95, size: 3 },
           { number: 6, cost: 185, size: 6 },
         ],
@@ -1152,13 +1152,14 @@ export const detachmentData: DETACHMENT[] = [
         options: [
           { number: 1, cost: 70, size: 1 },
           { number: 2, cost: 130, size: 2 },
+          { number: 3, cost: 200, size: 3 },
           { number: 4, cost: 240, size: 4 },
         ],
       },
     ],
     datasheet_info: [
       {
-        text: "A Malcador Tank Squadron can purchase the following upgrades.",
+        text: "A Malcador Tank Squadron can purchase any of the following upgrades. The same upgrade may be taken more than once",
         options: [
           { text: "1 additional Malcador", cost: 70 },
           { text: "2 additional Malcador", cost: 130 },
@@ -1193,14 +1194,16 @@ export const detachmentData: DETACHMENT[] = [
         name: "Additional Super-heavy",
         options: [
           { number: 1, cost: 90, size: 1 },
+          { number: 2, cost: 180, size: 2 },
           { number: 3, cost: 255, size: 3 },
+          { number: 4, cost: 345, size: 4 },
           { number: 5, cost: 390, size: 5 },
         ],
       },
     ],
     datasheet_info: [
       {
-        text: "A Auxilia Super-Heavy Tank Squadron can purchase the following upgrades.",
+        text: "An Auxilia Super-Heavy Tank Squadron can purchase any of the following upgrades. The same upgrade may be taken more than once",
         options: [
           { text: "1 additional Super-heavy", cost: 90 },
           { text: "3 additional Super-heavy", cost: 255 },
