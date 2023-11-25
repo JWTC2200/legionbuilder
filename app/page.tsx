@@ -24,7 +24,12 @@ export default function Home() {
       </Link>
       <div className="mt-8">
         <h2 className="text-xl text-center">UPDATES:</h2>
-        <ul className="list-disc">
+        <ul className="list-disc flex flex-col gap-2">
+          <li>
+            25/11/2023: A few fixes. Also updated the builder to highlight
+            detachments & upgrades if one has been selected. Hope this makes it
+            easier to view and use.
+          </li>
           <li>24/11/2023: Oops! Added in Cerastus Knights!</li>
           <li>
             23/11/2023: Added a couple widgets and navigation links to make

@@ -24,6 +24,10 @@ const BuilderDetachment = ({
   slotSet: SLOTSET;
   setArmyList: React.Dispatch<React.SetStateAction<BUILDER_LIST>>;
 }) => {
+  const detachmentSelectedHighlight = detachmentSlot.selected_unit
+    ? " text-sky-800"
+    : "";
+
   // filtering for custom detachment slots
   const detachmentOptions: DETACHMENT[] = detachmentSlot.restricted
     ? detachmentSlot.options.map(
@@ -47,6 +51,7 @@ const BuilderDetachment = ({
     <option
       key={detachmentSlot.slot_ref + "unitOption" + index}
       value={option.id}
+      className="text-black"
     >
       {option.base_cost}pts: {option.name}
     </option>
@@ -152,12 +157,12 @@ const BuilderDetachment = ({
       {/* UNIT POINTS AND DETACHMENT SIZE */}
       {detachmentSlot.selected_unit ? (
         <div className="w-full flex flex-wrap gap-2 sm:gap-4 justify-center items-center px-1">
-          <p className="text-sm sm:text-base font-graduate font-bold">
-            Detachment size:{detachmentSize(detachmentSlot.selected_unit)}
+          <p className="text-sm sm:text-base font-graduate ">
+            Detachment size: {detachmentSize(detachmentSlot.selected_unit)}
           </p>
-          <p className="sm:text-sm font-graduate font-bold border-b underline">
+          <p className="text-sm font-graduate font-bold border-b underline">
             {detachmentPoints(detachmentSlot.selected_unit)}
-            <span className="text-base font-normal ">points</span>
+            <span className="font-normal">pts</span>
           </p>
         </div>
       ) : null}
@@ -179,9 +184,14 @@ const BuilderDetachment = ({
             detachmentSlot.selected_unit ? detachmentSlot.selected_unit.id : 0
           }
           onChange={(e) => changeDetachment(Number(e.target.value))}
-          className="w-full text-center my-1 py-1 px-2 border border-green-950 font-graduate "
+          className={
+            "w-full text-center my-1 py-1 px-2 border border-green-950 font-graduate" +
+            detachmentSelectedHighlight
+          }
         >
-          <option value={0}>Select Detachment</option>
+          <option value={0} className="text-black">
+            Select Detachment
+          </option>
           {selectOptions}
         </select>
 

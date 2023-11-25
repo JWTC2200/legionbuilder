@@ -41,6 +41,9 @@ const BuilderUnitUpgradeSelect = ({
     return null;
   }
 
+  const upgradeSelectedHighlight =
+    upgradeOption.number > 0 ? " text-sky-800" : "";
+
   const newUpgradeObject = (
     upgradeId: number
   ): BUILDER_DETACHMENT_UNIT_UPGRADES => {
@@ -140,13 +143,19 @@ const BuilderUnitUpgradeSelect = ({
         onChange={(e) => {
           updateUpgradeChoice(Number(e.target.value));
         }}
-        className="w-full text-center text-sm font-graduate p-1 rounded-full border border-green-950"
+        className={
+          "w-full text-center text-sm font-graduate p-1 rounded-full border border-green-950" +
+          upgradeSelectedHighlight
+        }
       >
-        <option value="0">{upgradeOption.name}: none</option>
+        <option value="0" className="text-black">
+          {upgradeOption.name}: none
+        </option>
         {upgradeObject.options.map((upgrade, index) => (
           <option
             key={slotRef + "upgrade" + upgradeOption.name + index}
             value={upgrade.number}
+            className="text-black"
           >
             {upgradeOption.name}
             {upgrade.number > 900

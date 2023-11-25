@@ -136,7 +136,7 @@ export interface SPECIAL_RULE {
   value?: number | string;
 }
 
-// List builder specific types ( effecively mirrors of above types)
+// List builder specific types ( effectively mirrors of above types)
 
 export interface BUILDER_LIST {
   points: number;

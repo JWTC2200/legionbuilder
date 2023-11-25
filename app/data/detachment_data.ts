@@ -268,7 +268,7 @@ export const detachmentData: DETACHMENT[] = [
     loadout: [{ text_option: ["Legion bolt pistols"] }],
     upgrade_options: [
       {
-        name: "Additional Legionaries",
+        name: "Additional Assault Marines",
         options: [
           { number: 2, cost: 12, size: 2 },
           { number: 4, cost: 24, size: 4 },
@@ -279,8 +279,8 @@ export const detachmentData: DETACHMENT[] = [
       {
         text: "A Legion Assault Detachment can purchase the following upgrades.",
         options: [
-          { text: "2 additional Legionaries", cost: 12 },
-          { text: "4 additional Legionaries", cost: 24 },
+          { text: "2 additional Assault Marines", cost: 12 },
+          { text: "4 additional Assault Marines", cost: 24 },
         ],
       },
     ],
@@ -299,7 +299,7 @@ export const detachmentData: DETACHMENT[] = [
     loadout: [{ text_option: ["Legion combi-bolters"] }],
     upgrade_options: [
       {
-        name: "Additional Legionaries",
+        name: "Additional Terminators",
         options: [
           { number: 2, cost: 15, size: 2 },
           { number: 4, cost: 30, size: 4 },
@@ -310,8 +310,8 @@ export const detachmentData: DETACHMENT[] = [
       {
         text: "A Legion Terminator Detachment can purchase the following upgrades.",
         options: [
-          { text: "2 additional Legionaries", cost: 15 },
-          { text: "4 additional Legionaries", cost: 30 },
+          { text: "2 additional Terminators", cost: 15 },
+          { text: "4 additional Terminators", cost: 30 },
         ],
       },
     ],
