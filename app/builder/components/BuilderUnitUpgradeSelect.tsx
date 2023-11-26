@@ -48,13 +48,17 @@ const BuilderUnitUpgradeSelect = ({
     upgradeId: number
   ): BUILDER_DETACHMENT_UNIT_UPGRADES => {
     if (upgradeId) {
+      const newUpgrade = upgradeObject.options.find(
+        (upgrade) => upgrade.number === upgradeId
+      )!;
       return {
         ...upgradeOption,
+        ...newUpgrade,
         number: upgradeId,
-        cost: upgradeObject.options.find((cost) => cost.number === upgradeId)!
-          .cost,
-        size: upgradeObject.options.find((size) => size.number === upgradeId)!
-          .size,
+        // cost: upgradeObject.options.find((cost) => cost.number === upgradeId)!
+        //   .cost,
+        // size: upgradeObject.options.find((size) => size.number === upgradeId)!
+        //   .size,
       };
     }
     return { ...upgradeOption, number: 0, cost: 0, size: 0 };
@@ -157,10 +161,9 @@ const BuilderUnitUpgradeSelect = ({
             value={upgrade.number}
             className="text-black"
           >
-            {upgradeOption.name}
-            {upgrade.number > 900
-              ? null
-              : `: ${upgrade.number}, ${upgrade.cost}pts`}
+            {upgrade.text
+              ? `${upgrade.text}`
+              : `${upgradeOption.name}: ${upgrade.number}, ${upgrade.cost}pts`}
           </option>
         ))}
       </select>

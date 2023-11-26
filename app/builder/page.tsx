@@ -99,9 +99,18 @@ const page = () => {
     <main className="flex flex-col gap-2 w-full max-w-screen-2xl items-center dataslate_background pb-2 mt-4 mb-28 sm:px-4 lg:rounded-xl">
       <ToastContainer autoClose={1000} closeOnClick />
       {/* NOTICES / WARNINGS */}
-      {/* <div className="text-red-600 text-center">
-        <ul></ul>
-      </div> */}
+      <div className="text-red-600 text-center">
+        <ul>
+          <li>
+            For fun I've added in titan weapon options if they're a single
+            purchase titan (so not the warhounds).
+          </li>
+          <li>
+            Doesn't add much unless you like to see your titan weapons on the
+            print page :D
+          </li>
+        </ul>
+      </div>
       {/* INFORMATION WIDGET BOTTOM */}
       <div
         className={`fixed w-full max-w-screen-2xl bg-stone-800 text-stone-50 font-graduate bottom-0 px-2 flex flex-col text-sm sm:text-lg transition-all ${

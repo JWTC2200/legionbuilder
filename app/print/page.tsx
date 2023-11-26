@@ -80,12 +80,12 @@ const page = () => {
       const upgrades = upgradeArray
         .filter((upgrade) => upgrade.number)
         .map((upgr) => (
-          <p key={slot_ref + upgr.name}>
-            {upgr.number} {upgr.name}
-          </p>
+          <li key={slot_ref + upgr.name}>
+            {upgr.text ? upgr.text : `${upgr.number} ${upgr.name}`}
+          </li>
         ));
       if (upgrades.length) {
-        return <div className="text-xs">{upgrades}</div>;
+        return <ul className="text-xs">{upgrades}</ul>;
       }
       return null;
     };

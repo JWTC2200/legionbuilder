@@ -89,7 +89,7 @@ export interface DETACHMENT_LOADOUT {
 
 export interface DETACHMENT_UPGRADE {
   name: string;
-  options: { number: number; cost: number; size: number }[];
+  options: { number: number; cost: number; size: number; text?: string }[];
 }
 
 export interface DETACHMENT_UPGRADE_DATASHEET {
@@ -179,6 +179,7 @@ export interface BUILDER_DETACHMENT_UNIT_UPGRADES {
   number: number;
   cost: number;
   size: number;
+  text?: string;
 }
 
 // CONTACT FORM

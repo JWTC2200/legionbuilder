@@ -26,6 +26,11 @@ export default function Home() {
         <h2 className="text-xl text-center">UPDATES:</h2>
         <ul className="list-disc flex flex-col gap-2">
           <li>
+            26/11/2023: For fun I've added in titan weapon options if they're a
+            single purchase titan (so not the warhounds). Doesn't add much
+            unless you like to see your titan weapons on the print page :D
+          </li>
+          <li>
             25/11/2023: A few fixes. Also updated the builder to highlight
             detachments & upgrades if one has been selected. Hope this makes it
             easier to view and use.

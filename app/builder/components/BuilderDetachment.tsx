@@ -97,7 +97,6 @@ const BuilderDetachment = ({
 
   const changeDetachment = (id: number) => {
     const newUnit = createNewUnit(id);
-    console.log(newUnit);
     setArmyList((prev) => {
       if (slotSet === SLOTSET.compulsory || slotSet === SLOTSET.optional) {
         const newArmyList = {

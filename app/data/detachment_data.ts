@@ -1731,7 +1731,7 @@ export const detachmentData: DETACHMENT[] = [
         text: "Reaver Titans also have one weapon chosen from the list below:",
         text_option: [
           "Reaver apocalypse missile launcher",
-          "Reaver Vulcan mega-bolter",
+          "Reaver vulcan mega-bolter",
           "Reaver titan warp missile",
           "Reaver turbo-laser destructor",
           "Reaver volkite eradicator",
@@ -1740,7 +1740,57 @@ export const detachmentData: DETACHMENT[] = [
         ],
       },
     ],
-    upgrade_options: [],
+    upgrade_options: [
+      {
+        name: "Arm 1",
+        options: [
+          { number: 1, cost: 0, size: 0, text: "Reaver laser blaster" },
+          { number: 2, cost: 0, size: 0, text: "Reaver gatling blaster" },
+          { number: 3, cost: 0, size: 0, text: "Reaver volcano cannon" },
+          { number: 4, cost: 0, size: 0, text: "Reaver melta cannon" },
+          { number: 5, cost: 0, size: 0, text: "Reaver power fist" },
+          { number: 6, cost: 0, size: 0, text: "Reaver chainfist" },
+        ],
+      },
+      {
+        name: "Arm 2",
+        options: [
+          { number: 1, cost: 0, size: 0, text: "Reaver laser blaster" },
+          { number: 2, cost: 0, size: 0, text: "Reaver gatling blaster" },
+          { number: 3, cost: 0, size: 0, text: "Reaver volcano cannon" },
+          { number: 4, cost: 0, size: 0, text: "Reaver melta cannon" },
+          { number: 5, cost: 0, size: 0, text: "Reaver power fist" },
+          { number: 6, cost: 0, size: 0, text: "Reaver chainfist" },
+        ],
+      },
+      {
+        name: "Carapace",
+        options: [
+          {
+            number: 1,
+            cost: 0,
+            size: 0,
+            text: "Reaver apocalypse missile launcher",
+          },
+          { number: 2, cost: 0, size: 0, text: "Reaver vulcan mega-bolter" },
+          { number: 3, cost: 0, size: 0, text: "Reaver titan warp missile" },
+          {
+            number: 4,
+            cost: 0,
+            size: 0,
+            text: "Reaver turbo-laser destructor",
+          },
+          { number: 5, cost: 0, size: 0, text: "Reaver volkite eradicator" },
+          { number: 6, cost: 0, size: 0, text: "Reaver graviton ceradicator" },
+          {
+            number: 7,
+            cost: 0,
+            size: 0,
+            text: "Reaver conversion beam dissolutor",
+          },
+        ],
+      },
+    ],
     datasheet_info: [],
   },
   {
@@ -1772,7 +1822,33 @@ export const detachmentData: DETACHMENT[] = [
         ],
       },
     ],
-    upgrade_options: [],
+    upgrade_options: [
+      {
+        name: "Arm 1",
+        options: [
+          { number: 1, cost: 0, size: 0, text: "Reaver laser blaster" },
+          { number: 2, cost: 0, size: 0, text: "Reaver gatling blaster" },
+          { number: 3, cost: 0, size: 0, text: "Reaver volcano cannon" },
+          { number: 4, cost: 0, size: 0, text: "Reaver melta cannon" },
+        ],
+      },
+      {
+        name: "Arm 2",
+        options: [
+          { number: 1, cost: 0, size: 0, text: "Reaver laser blaster" },
+          { number: 2, cost: 0, size: 0, text: "Reaver gatling blaster" },
+          { number: 3, cost: 0, size: 0, text: "Reaver volcano cannon" },
+          { number: 4, cost: 0, size: 0, text: "Reaver melta cannon" },
+        ],
+      },
+      {
+        name: "Carapace",
+        options: [
+          { number: 1, cost: 0, size: 0, text: "Mori quake cannon" },
+          { number: 2, cost: 0, size: 0, text: "Belicosa volcano cannon" },
+        ],
+      },
+    ],
     datasheet_info: [],
   },
   {
@@ -1817,7 +1893,49 @@ export const detachmentData: DETACHMENT[] = [
         ],
       },
     ],
-    upgrade_options: [],
+    upgrade_options: [
+      {
+        name: "Arm 1",
+        options: [
+          { number: 1, cost: 0, size: 0, text: "Belicosa Volcano Cannon" },
+          { number: 2, cost: 0, size: 0, text: "Sunfury plasma annihilator" },
+          { number: 3, cost: 0, size: 0, text: "Macro-gatling blaster" },
+          { number: 4, cost: 0, size: 0, text: "Mori quake cannon" },
+          { number: 5, cost: 0, size: 0, text: "Arioch power claw" },
+          { number: 6, cost: 0, size: 0, text: "Volkite destructor" },
+          { number: 7, cost: 0, size: 0, text: "Warlord graviton ruinator" },
+          { number: 8, cost: 0, size: 0, text: "Conversion beam extripator" },
+        ],
+      },
+      {
+        name: "Arm 2",
+        options: [
+          { number: 1, cost: 0, size: 0, text: "Belicosa Volcano Cannon" },
+          { number: 2, cost: 0, size: 0, text: "Sunfury plasma annihilator" },
+          { number: 3, cost: 0, size: 0, text: "Macro-gatling blaster" },
+          { number: 4, cost: 0, size: 0, text: "Mori quake cannon" },
+          { number: 5, cost: 0, size: 0, text: "Arioch power claw" },
+          { number: 6, cost: 0, size: 0, text: "Volkite destructor" },
+          { number: 7, cost: 0, size: 0, text: "Warlord graviton ruinator" },
+          { number: 8, cost: 0, size: 0, text: "Conversion beam extripator" },
+        ],
+      },
+      {
+        name: "Carapace",
+        options: [
+          { number: 1, cost: 0, size: 0, text: "Apocalypse missile launchers" },
+          { number: 2, cost: 0, size: 0, text: "Paired gatling blasters" },
+          {
+            number: 3,
+            cost: 0,
+            size: 0,
+            text: "Paired turbo-laser destructors",
+          },
+          { number: 4, cost: 0, size: 0, text: "Vulcan mega-bolter array" },
+          { number: 5, cost: 0, size: 0, text: "Paired laser blasters" },
+        ],
+      },
+    ],
     datasheet_info: [],
   },
   {
@@ -1865,7 +1983,36 @@ export const detachmentData: DETACHMENT[] = [
         ],
       },
     ],
-    upgrade_options: [],
+    upgrade_options: [
+      {
+        name: "Arm weapon",
+        options: [
+          { number: 1, cost: 0, size: 0, text: "Belicosa Volcano Cannon" },
+          { number: 2, cost: 0, size: 0, text: "Sunfury plasma annihilator" },
+          { number: 3, cost: 0, size: 0, text: "Macro-gatling blaster" },
+          { number: 4, cost: 0, size: 0, text: "Mori quake cannon" },
+          { number: 5, cost: 0, size: 0, text: "Arioch power claw" },
+          { number: 6, cost: 0, size: 0, text: "Volkite destructor" },
+          { number: 7, cost: 0, size: 0, text: "Warlord graviton ruinator" },
+          { number: 8, cost: 0, size: 0, text: "Conversion beam extripator" },
+        ],
+      },
+      {
+        name: "Carapace",
+        options: [
+          { number: 1, cost: 0, size: 0, text: "Apocalypse missile launchers" },
+          { number: 2, cost: 0, size: 0, text: "Paired gatling blasters" },
+          {
+            number: 3,
+            cost: 0,
+            size: 0,
+            text: "Paired turbo-laser destructors",
+          },
+          { number: 4, cost: 0, size: 0, text: "Vulcan mega-bolter array" },
+          { number: 5, cost: 0, size: 0, text: "Paired laser blasters" },
+        ],
+      },
+    ],
     datasheet_info: [],
   },
   {
@@ -1901,7 +2048,47 @@ export const detachmentData: DETACHMENT[] = [
         ],
       },
     ],
-    upgrade_options: [],
+    upgrade_options: [
+      {
+        name: "Shoulder 1",
+        options: [
+          { number: 1, cost: 0, size: 0, text: "Apocalypse missile array" },
+          { number: 2, cost: 0, size: 0, text: "Melta cannon" },
+          { number: 3, cost: 0, size: 0, text: "Inferno gun" },
+          { number: 4, cost: 0, size: 0, text: "Vulcan mega-bolter" },
+          { number: 5, cost: 0, size: 0, text: "Turbo-laser destructor" },
+          { number: 6, cost: 0, size: 0, text: "Plasma blastun" },
+        ],
+      },
+      {
+        name: "Shoulder 2",
+        options: [
+          { number: 1, cost: 0, size: 0, text: "Apocalypse missile array" },
+          { number: 2, cost: 0, size: 0, text: "Melta cannon" },
+          { number: 3, cost: 0, size: 0, text: "Inferno gun" },
+          { number: 4, cost: 0, size: 0, text: "Vulcan mega-bolter" },
+          { number: 5, cost: 0, size: 0, text: "Turbo-laser destructor" },
+          { number: 6, cost: 0, size: 0, text: "Plasma blastun" },
+        ],
+      },
+      {
+        name: "Turrets",
+        options: [
+          {
+            number: 1,
+            cost: 0,
+            size: 0,
+            text: "Anvilus pattern defence batteries",
+          },
+          {
+            number: 2,
+            cost: 0,
+            size: 0,
+            text: "Ardex-defensor bomard turrets",
+          },
+        ],
+      },
+    ],
     datasheet_info: [],
   },
   {
@@ -1942,6 +2129,45 @@ export const detachmentData: DETACHMENT[] = [
       },
     ],
     upgrade_options: [
+      {
+        name: "Shoulder 1",
+        options: [
+          { number: 1, cost: 0, size: 0, text: "Apocalypse missile array" },
+          { number: 2, cost: 0, size: 0, text: "Melta cannon" },
+          { number: 3, cost: 0, size: 0, text: "Inferno gun" },
+          { number: 4, cost: 0, size: 0, text: "Vulcan mega-bolter" },
+          { number: 5, cost: 0, size: 0, text: "Turbo-laser destructor" },
+          { number: 6, cost: 0, size: 0, text: "Plasma blastun" },
+        ],
+      },
+      {
+        name: "Shoulder 2",
+        options: [
+          { number: 1, cost: 0, size: 0, text: "Apocalypse missile array" },
+          { number: 2, cost: 0, size: 0, text: "Melta cannon" },
+          { number: 3, cost: 0, size: 0, text: "Inferno gun" },
+          { number: 4, cost: 0, size: 0, text: "Vulcan mega-bolter" },
+          { number: 5, cost: 0, size: 0, text: "Turbo-laser destructor" },
+          { number: 6, cost: 0, size: 0, text: "Plasma blastun" },
+        ],
+      },
+      {
+        name: "Turrets",
+        options: [
+          {
+            number: 1,
+            cost: 0,
+            size: 0,
+            text: "Anvilus pattern defence batteries",
+          },
+          {
+            number: 2,
+            cost: 0,
+            size: 0,
+            text: "Ardex-defensor bomard turrets",
+          },
+        ],
+      },
       {
         name: "Kirus grav imploder",
         options: [{ number: 1, cost: 10, size: 0 }],
