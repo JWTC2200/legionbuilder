@@ -9,16 +9,18 @@ const UnitDataslate = (unit: UNIT_DATASHEET) => {
   const unitWeaponRows = getUnitWeaponRows(unit.weapons);
 
   return (
-    <article className="max-w-screen-xl p-2 border-2 border-black dataslate_background rounded-lg">
+    <article className="max-w-screen-xl sm:p-2 text-sm sm:text-base dataslate_background sm:rounded-lg">
       {/* TITLE */}
-      <div className="flex justify-between items-center border-black bg-green-950 text-green-50 py-1 px-3 mb-2">
-        <h2 className="text-2xl font-graduate font-bold">{unit.name}</h2>
-        <h3 className="text-xl font-graduate">
+      <div className="flex gap-2 justify-between items-center bg-green-950 text-green-50 py-1 px-2 mb-2">
+        <h2 className="text-xl sm:text-2xl font-graduate font-bold">
+          {unit.name}
+        </h2>
+        <h3 className="text-lg sm:text-xl font-graduate">
           {unit.unit_type.type} {`(${unit.unit_type.value})`}
         </h3>
       </div>
       {/* UNIT BASIC STATS */}
-      <table className="w-full border-2 border-black">
+      <table className="w-full border-t-2 border-b-2 sm:border-2 border-black">
         <thead className="bg-green-950 text-green-50">
           <tr>
             <th className="text-start px-2">Name</th>
@@ -56,7 +58,7 @@ const UnitDataslate = (unit: UNIT_DATASHEET) => {
 
       {/* LOADOUT ?  SECTION */}
       {unit.loadout ? (
-        <div className="mt-2 border-2 border-black">
+        <div className="mt-2 border-t-2 border-b-2 sm:border-2 border-black">
           <h3 className="bg-green-950 text-green-50 px-2 py-1 font-bold">
             Weapons
           </h3>
@@ -82,7 +84,7 @@ const UnitDataslate = (unit: UNIT_DATASHEET) => {
 
       {/* WEAPON STATS SECTION */}
       {unitWeaponRows.length ? (
-        <table className="w-full mt-4 border-2 border-black">
+        <table className="w-full mt-4 border-t-2 border-b-2 sm:border-2 border-black">
           <thead className="bg-green-950 text-green-50">
             <tr>
               <th className="text-start px-2">Weapon</th>
@@ -99,7 +101,7 @@ const UnitDataslate = (unit: UNIT_DATASHEET) => {
 
       {/* SPECIAL RULES SECTION */}
       {unit.special_rules.length ? (
-        <div className="mt-2 border-2 border-black">
+        <div className="mt-2 border-t-2 sm:border-2 border-black">
           <h3 className="bg-green-950 text-green-50 px-2 py-1 font-bold">
             Special Rules
           </h3>

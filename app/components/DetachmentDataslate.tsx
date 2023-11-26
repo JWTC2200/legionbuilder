@@ -44,14 +44,18 @@ const DetachmentDataslate = (detachment: DETACHMENT) => {
   const weaponRows = getUnitWeaponRows(mainUnitWeaponsArray);
 
   return (
-    <article className="max-w-screen-xl p-2 border-2 border-black dataslate_background rounded-lg">
+    <article className="max-w-screen-xl sm:p-2 sm:border-2 border-black dataslate_background rounded-lg text-sm sm:text-base">
       {/* TITLE */}
-      <div className="flex justify-between items-center gap-2 border-2 border-black bg-green-950 text-green-50 py-1 px-3 mb-2">
-        <h2 className="text-2xl font-graduate font-bold">{detachment.name}</h2>
-        <h3 className="text-xl font-graduate">{detachment.base_cost} Points</h3>
+      <div className="flex justify-between items-center gap-2 sm:border-2 border-black bg-green-950 text-green-50 py-1 px-3 mb-2">
+        <h2 className="text-xl sm:text-xl sm:text-2xl font-graduate font-bold">
+          {detachment.name}
+        </h2>
+        <h3 className="text-lg sm:text-xl font-graduate">
+          {detachment.base_cost} Points
+        </h3>
       </div>
 
-      <div className="flex justify-between border-2 border-black bg-green-950 text-green-50 px-2 py-1 font-bold font-graduate">
+      <div className="flex justify-between sm:border-2 border-black bg-green-950 text-green-50 px-2 py-1 font-bold font-graduate">
         <p>
           {mainUnit[0].unit_type.type} {`(${mainUnit[0].unit_type.value})`}
         </p>
@@ -59,7 +63,7 @@ const DetachmentDataslate = (detachment: DETACHMENT) => {
       </div>
 
       {/* UNIT BASIC STATS */}
-      <table className="w-full border-2 border-black mt-2">
+      <table className="w-full border-t-2 border-b-2 sm:border-2 border-black mt-2">
         <thead className="bg-green-950 text-green-50">
           <tr>
             <th className="text-start px-2">Name</th>
@@ -74,7 +78,7 @@ const DetachmentDataslate = (detachment: DETACHMENT) => {
       </table>
       {/* DETACHMENT WEAPONS INFO */}
       {detachment.loadout.length ? (
-        <div className="mt-2 border-2 border-black">
+        <div className="mt-2 border-t-2 border-b-2 sm:border-2 border-black">
           <h3 className="bg-green-950 text-green-50 px-2 py-1 font-bold">
             Weapons
           </h3>
@@ -118,7 +122,7 @@ const DetachmentDataslate = (detachment: DETACHMENT) => {
         </div>
       ) : null}
       {/* WEAPON STATS SECTION */}
-      <table className="w-full mt-4 border-2 border-black">
+      <table className="w-full mt-4 sm:border-2 border-black">
         <thead className="bg-green-950 text-green-50">
           <tr>
             <th className="text-start px-2">Weapon</th>
@@ -133,7 +137,7 @@ const DetachmentDataslate = (detachment: DETACHMENT) => {
       </table>
       {/* DATASHEET INFO */}
       {detachment.datasheet_info.length ? (
-        <div className="mt-2 border-2 border-black">
+        <div className="mt-2 border-t-2 border-b-2 sm:border-2 border-black">
           <h3 className="bg-green-950 text-green-50 px-2 py-1 font-bold">
             Upgrades
           </h3>
@@ -159,7 +163,7 @@ const DetachmentDataslate = (detachment: DETACHMENT) => {
         </div>
       ) : null}
       {mainUnit[0].special_rules.length ? (
-        <div className="mt-2 border-2 border-black">
+        <div className="mt-2 border-t-2 border-b-2 sm:border-2 border-black">
           <h3 className="bg-green-950 text-green-50 px-2 py-1 font-bold">
             Special Rules
           </h3>
@@ -175,11 +179,11 @@ const DetachmentDataslate = (detachment: DETACHMENT) => {
         </div>
       ) : null}
       {detachment.related_unit.length ? (
-        <div className="mt-2 border-2 border-black bg-green-950">
-          <h3 className="bg-green-950 text-green-50 px-2 py-1 font-bold">
+        <div className="mt-2 sm:border-2 border-black">
+          <h3 className="bg-green-950 text-green-50 px-2 py-1 mb-2 font-bold">
             Additional units
           </h3>
-          <div className="flex flex-col gap-4 p-4">
+          <div className="flex flex-col gap-4">
             {detachment.related_unit.map((unitNo) => {
               const foundUnit = unitData.find((unit) => unit.id === unitNo);
               if (foundUnit) {
