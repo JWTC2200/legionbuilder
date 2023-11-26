@@ -102,8 +102,8 @@ const page = () => {
       <div className="text-red-600 text-center">
         <ul>
           <li>
-            For fun I've added in titan weapon options if they're a single
-            purchase titan (so not the warhounds).
+            For fun I've added in titan weapon options if they're a single unit
+            titan (so not the warhounds).
           </li>
           <li>
             Doesn't add much unless you like to see your titan weapons on the
