@@ -21,7 +21,7 @@ const page = () => {
           Units
         </Link>
         <Link
-          href="/reference/specialrules"
+          href=""
           className="flex flex-col justify-center items-center text-center font-graduate font-semibold bg-green-950 text-green-950 w-40 h-32 p-2 rounded-xl dataslate_background hover:text-cyan-700 active:text-cyan-700 hover:border-2 hover:border-cyan-700"
         >
           <GiFist className="text-5xl" />
@@ -37,7 +37,7 @@ const page = () => {
         </Link>
 
         <Link
-          href="/reference/weapontraits"
+          href=""
           className="flex flex-col justify-center items-center text-center font-graduate font-semibold bg-green-950 text-green-950 w-40 h-32 p-2 rounded-xl dataslate_background hover:text-cyan-700 active:text-cyan-700 hover:border-2 hover:border-cyan-700"
         >
           <GiFlamedLeaf className="text-5xl" />

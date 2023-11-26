@@ -803,7 +803,7 @@ export const unitData: UNIT_DATASHEET[] = [
     morale: null,
     wounds: 4,
     weapons: [
-      4028, 4029, 4030, 4031, 4032, 4033, 4034, 4035, 4036, 4037, 4038, 4039,
+      4028, 1045, 4030, 4031, 4032, 4033, 4034, 4035, 4036, 4037, 4038, 4039,
     ],
     special_rules: [{ name: "Agile" }, { name: "Void Shields", value: 2 }],
   },

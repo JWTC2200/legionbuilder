@@ -16,14 +16,14 @@ const Navbar = () => {
       <Link href="/" className={`hover:text-cyan-700 active:text-cyan-600`}>
         <h1 className="text-4xl font-bold mb-4">Legion Builder</h1>
       </Link>
-      <div className="max-w-screen-sm flex flex-wrap items-center text-center justify-center gap-4">
+      <div className="max-w-screen-md flex flex-wrap items-center text-center justify-center gap-4">
         <Link
-          href="/reference/units"
+          href="/reference"
           className={`flex gap-1 items-center hover:text-cyan-700 active:text-cyan-600 ${
-            pathname.startsWith("/reference/units") ? " text-cyan-700" : ""
+            pathname.startsWith("/reference") ? " text-cyan-700" : ""
           }`}
         >
-          <GiChewedSkull /> Units
+          <GiChewedSkull /> Reference
           <GiChewedSkull />
         </Link>
         <Link

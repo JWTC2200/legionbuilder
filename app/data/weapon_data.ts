@@ -1878,19 +1878,6 @@ export const weaponData: WEAPON_DATASHEET[] = [
     ],
   },
   {
-    id: 4029,
-    name: "Turbo-laser destructor",
-    profiles: [
-      {
-        range: '40"',
-        dice: 2,
-        to_hit: 4,
-        ap: 3,
-        traits: [{ name: "Accurate" }, { name: "Arc", value: "Front" }],
-      },
-    ],
-  },
-  {
     id: 4030,
     name: "Plasma blastgun",
     profiles: [

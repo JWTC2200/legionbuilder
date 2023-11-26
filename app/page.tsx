@@ -4,10 +4,20 @@ import { FaGithub } from "react-icons/fa6";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center p-8 gap-2 max-w-screen-md ">
-      <p className="text-xl text-center">
-        Not everything has been implemented and I'm sure there are some
-        typos/bugs but please enjoy using it for now!
+    <div className="flex flex-col items-center p-8 gap-2 max-w-screen-md text-brown-50">
+      <p className="sm:text-xl text-center">
+        So at this point I think the builder part of this site is pretty much
+        done. I can't really think of much else to do other than tweak how it
+        looks.
+      </p>
+      <p className="sm:text-xl text-center mt-2">
+        Moving on I'll add pages for special rules and weapon traits as well as
+        links to each on the unit and detachment dataslates. Which might have to
+        wait until I can get my hands on the actual book.
+      </p>
+      <p className="sm:text-xl text-center mt-2">
+        If there's anything you'd like added please feel free to contact me
+        below. Thank you!
       </p>
       <Link
         href="/contact"

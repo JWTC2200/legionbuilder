@@ -4,12 +4,6 @@
 
 #### todo - pages
 
-remove /units /units/[name]
-
-replace with
-/references - navigation page?
-/references/units - units sorted by faction, links to /units/[name]
-/references/weapons - all weapon data as table. Need to remove duplicates. Sort by name a-z
 /references/specialrules - list - links to /[name] ? hover info display?
 /references/weapontraits - list
 /references/damagecalculator? - choose a weapon vs a unit av damage per shot?
