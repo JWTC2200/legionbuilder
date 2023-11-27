@@ -16,28 +16,29 @@ export enum DETACHMENT_TYPE {
   hq = "HQ",
   core = "Core",
   support = "Support",
+  transport = "Transport",
   vanguard = "Vanguard",
   light = "Light Armour",
   battle = "Battle Tank",
   heavy = "Heavy Armour",
   artillery = "Artillery",
-  air = "Air Support",
   bastion = "Bastion",
-  transport = "Transport",
+  air = "Air Support",
   titan = "Titan",
   knight = "Knight",
 }
 
+export const detachmentTypeArray = Object.values(DETACHMENT_TYPE);
+
 export enum UNIT_TYPE {
   knight = "Knight",
   infantry = "Infantry",
+  cavalry = "Cavalry",
   walker = "Walker",
   titan = "Titan",
   vehicle = "Vehicle",
   heavy = "Super-Heavy Vehicle",
 }
-
-export const detachmentTypeArray = Object.values(DETACHMENT_TYPE);
 
 export enum SLOTSET {
   compulsory = "compulsory",
@@ -126,6 +127,8 @@ export interface WEAPON_DATASHEET {
   }[];
 }
 
+// Weapon trait / special rules
+
 export interface WEAPON_TRAIT {
   name: string;
   value?: number | string;
@@ -134,6 +137,18 @@ export interface WEAPON_TRAIT {
 export interface SPECIAL_RULE {
   name: string;
   value?: number | string;
+}
+
+export interface WEAPON_TRAIT_INFO {
+  name: string;
+  tooltip?: string;
+  descripton: string;
+}
+
+export interface SPECIAL_RULE_INFO {
+  name: string;
+  tooltip?: string;
+  descripton: string;
 }
 
 // List builder specific types ( effectively mirrors of above types)

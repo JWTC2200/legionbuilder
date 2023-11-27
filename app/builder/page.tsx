@@ -97,7 +97,16 @@ const page = () => {
 
   return (
     <main className="flex flex-col gap-2 w-full max-w-screen-2xl items-center dataslate_background pb-2 mt-4 mb-28 sm:px-4 lg:rounded-xl">
-      <ToastContainer autoClose={1000} closeOnClick />
+      <ToastContainer
+        autoClose={1000}
+        closeOnClick
+        toastStyle={{
+          backgroundColor: "#052e16",
+          border: "white 2px solid",
+          borderRadius: "5px",
+          color: "#f0fdf4",
+        }}
+      />
       {/* NOTICES / WARNINGS */}
       <div className="text-red-600 text-center">
         <ul>
@@ -330,8 +339,8 @@ const page = () => {
           </div>
         ) : null}
       </div>
-      {/* object display */}
 
+      {/* object display */}
       {/* <pre className="w-full border-2 border-green-950 text-green-950 p-8 font-semibold text-lg">
         {JSON.stringify(armyList, null, " ")}
       </pre> */}

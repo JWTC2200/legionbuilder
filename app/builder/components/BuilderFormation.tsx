@@ -60,8 +60,6 @@ const BuilderFormation = ({
       id={formation.ref_id}
       className="sm:border-4 border-green-950 sm:rounded-xl flex flex-col items-center"
     >
-      <ToastContainer autoClose={1000} closeOnClick />
-
       {/* FORMATION SELECTOR*/}
       <div className="w-full bg-green-950 sm:rounded-t-lg flex flex-wrap justify-center items-center text-center px-2">
         <select
@@ -92,7 +90,9 @@ const BuilderFormation = ({
         </button>
       </div>
       {formation.id ? null : (
-        <p className="text-green-950 my-4">Please select a formation</p>
+        <p className="text-red-600 font-semibold mt-4">
+          Please select a formation
+        </p>
       )}
 
       {/* COMPULSORY SECTION */}
@@ -103,7 +103,13 @@ const BuilderFormation = ({
             <h1 className="w-full text-center bg-green-950 text-green-50 font-graduate">
               ~ Compulsory slots ~
             </h1>
-            <div className="flex flex-wrap gap-2 py-2 sm:py-4 sm:px-2 justify-center">
+            {formation.compulsory.filter((compSlot) => compSlot.selected_unit)
+              .length < formation.compulsory.length ? (
+              <div className="text-red-600 pt-2 font-semibold">
+                Compulsory detachments missing!
+              </div>
+            ) : null}
+            <div className="flex flex-wrap gap-2 py-2 sm:px-2 justify-center">
               {formation.compulsory.map((slot) => (
                 <BuilderDetachment
                   key={slot.slot_ref}
@@ -153,6 +159,13 @@ const BuilderFormation = ({
               <h1 className="w-full text-center bg-green-950 text-green-50 font-graduate">
                 ~ Choose up to one of the following ~
               </h1>
+              {formation.choice![index].filter(
+                (choiceSlot) => choiceSlot.selected_unit
+              ).length > 1 ? (
+                <div className="text-red-600 pt-2 font-semibold">
+                  Selected too many detachments!
+                </div>
+              ) : null}
               <div className="flex flex-wrap gap-2 py-2 sm:py-4 sm:px-2 justify-center">
                 {choiceSet.map((slot) => (
                   <BuilderDetachment
