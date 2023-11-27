@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { TfiEmail } from "react-icons/tfi";
 import { FaGithub } from "react-icons/fa6";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -12,8 +13,8 @@ export default function Home() {
       </p>
       <p className="sm:text-xl text-center mt-2">
         Moving on I'll add pages for special rules and weapon traits as well as
-        links to each on the unit and detachment dataslates. Which might have to
-        wait until I can get my hands on the actual book.
+        tooltips to each on the unit and detachment dataslates. Which might have
+        to wait until I can get my hands on the actual book.
       </p>
       <p className="sm:text-xl text-center mt-2">
         If there's anything you'd like added please feel free to contact me
@@ -32,9 +33,25 @@ export default function Home() {
       >
         Github <FaGithub />
       </Link>
+
+      <div className="text-xl ">
+        <Link
+          href="https://www.youtube.com/@blackbriargaming5483"
+          className="text-cyan-700"
+        >
+          <p className="flex items-center gap-2 hover:text-cyan-500 active:text-cyan-500">
+            Thanks to Black Briar Gaming for making a video about this site!
+            <FaExternalLinkAlt />
+          </p>
+        </Link>
+      </div>
       <div className="mt-8">
         <h2 className="text-xl text-center">UPDATES:</h2>
         <ul className="list-disc flex flex-col gap-2">
+          <li>
+            26/11/2023: Fixes here and there, huge thanks to everyone who helped
+            and messaged me! Added some warnings/reminders when buildings lists.
+          </li>
           <li>
             26/11/2023: For fun I've added in titan weapon options if they're a
             single unit titan (so not the warhounds). Doesn't add much unless

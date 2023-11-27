@@ -783,7 +783,7 @@ export const unitData: UNIT_DATASHEET[] = [
     save: 3,
     caf: 7,
     morale: 2,
-    wounds: 2,
+    wounds: 3,
     weapons: [4020, 4021, 4022, 4023, 4024, 4025, 4026, 4027],
     special_rules: [
       { name: "Blessed Auto-simulacra" },

@@ -24,8 +24,8 @@ export enum DETACHMENT_TYPE {
   artillery = "Artillery",
   bastion = "Bastion",
   air = "Air Support",
-  titan = "Titan",
   knight = "Knight",
+  titan = "Titan",
 }
 
 export const detachmentTypeArray = Object.values(DETACHMENT_TYPE);
