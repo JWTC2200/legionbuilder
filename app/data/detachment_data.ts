@@ -656,9 +656,9 @@ export const detachmentData: DETACHMENT[] = [
       {
         name: "Additional Xiphon",
         options: [
-          { number: 1, cost: 60, size: 1 },
-          { number: 2, cost: 110, size: 2 },
-          { number: 3, cost: 200, size: 3 },
+          { number: 1, cost: 85, size: 1 },
+          { number: 2, cost: 160, size: 2 },
+          { number: 3, cost: 215, size: 3 },
         ],
       },
     ],
