@@ -1077,7 +1077,7 @@ export const detachmentData: DETACHMENT[] = [
     ],
     datasheet_info: [
       {
-        text: "A Auxilia Tarantula Battery can purchase the following upgrades.",
+        text: "An Auxilia Aethon Heavy Sentinel Patrol can purchase the following upgrades.",
         options: [
           { text: "2 additional Sentinel", cost: 25 },
           { text: "4 additional Sentinel", cost: 45 },
