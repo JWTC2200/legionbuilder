@@ -46,9 +46,10 @@ const page = () => {
       <ul className="list-disc text-green-950 ml-4">
         {filteredRules.map((rule) => (
           <Link
+            key={rule.name}
             href={`/reference/specialrules/${rule.name.replaceAll(" ", "_")}`}
           >
-            <li key={rule.name}>{rule.name}</li>
+            <li>{rule.name}</li>
           </Link>
         ))}
       </ul>

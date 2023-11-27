@@ -248,6 +248,13 @@ const page = () => {
         </button>
       </div>
 
+      {/* TO MANY ALLIES WARNING */}
+      {armyPoints.allyFactionPoints > armyPoints.mainFactionPoints * 0.3 ? (
+        <div className="text-red-600 font-bold text-xl font-graduate text-center">
+          Too many allies!
+        </div>
+      ) : null}
+
       {/* MAIN LIST OPTIONS */}
       <div className="w-full mx-4 p-4 bg-green-950 text-green-50 flex flex-wrap justify-center gap-4 text-center">
         <div>
@@ -297,9 +304,6 @@ const page = () => {
       {/* ADD FORMATION AND FORMATION QUICK NAV LINKS */}
       <div className="w-full text-green-50 flex flex-col justify-center gap-2">
         <div className="bg-green-950 flex flex-wrap justify-center items-center text-center gap-4">
-          {/* <h2 className="text-center bg-green-950 font-graduate text-lg sm:text-2xl">
-            FORMATIONS
-          </h2> */}
           <button
             onClick={addFormation}
             className="p-1 hover:text-cyan-700 font-graduate sm:text-xl flex items-center gap-1"

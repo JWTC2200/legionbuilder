@@ -2,6 +2,8 @@ import { DETACHMENT, FACTION, ALLEGIANCE, DETACHMENT_TYPE } from "../types";
 
 // astartes 1000-1999, solar 2000-2999, knights-titans 4000-4999, unique detachments 9000-9999
 
+// Detachments require a unique key if they're one-offs. E.g. dedicated transports like multiple Thunderhawks that break standard detachment rules. id: 9000+
+
 export const detachmentData: DETACHMENT[] = [
   // ********************************************************************
   // *********************** ASTARTES DETACHMENTS ***********************
@@ -535,14 +537,17 @@ export const detachmentData: DETACHMENT[] = [
         name: "Additional Predators",
         options: [
           { number: 1, cost: 35, size: 1 },
+          { number: 2, cost: 70, size: 2 },
           { number: 3, cost: 95, size: 3 },
+          { number: 4, cost: 130, size: 4 },
+          { number: 5, cost: 165, size: 5 },
           { number: 6, cost: 185, size: 6 },
         ],
       },
     ],
     datasheet_info: [
       {
-        text: "Legion Predator Squadron can purchase the following upgrades.",
+        text: "Legion Predator Squadron can purchase the following upgrades. The same upgrade may be taken more than once",
         options: [
           { text: "1 additional Predator", cost: 35 },
           { text: "3 additional Predator", cost: 95 },
@@ -577,13 +582,14 @@ export const detachmentData: DETACHMENT[] = [
         options: [
           { number: 1, cost: 40, size: 1 },
           { number: 2, cost: 70, size: 2 },
+          { number: 3, cost: 110, size: 3 },
           { number: 4, cost: 140, size: 4 },
         ],
       },
     ],
     datasheet_info: [
       {
-        text: "Legion Sicaran Squadron can purchase the following upgrades.",
+        text: "Legion Sicaran Squadron can purchase the following upgrades. The same upgrade may be taken more than once",
         options: [
           { text: "1 additional Sicaran", cost: 40 },
           { text: "2 additional Sicaran", cost: 70 },
@@ -618,13 +624,14 @@ export const detachmentData: DETACHMENT[] = [
         options: [
           { number: 1, cost: 60, size: 1 },
           { number: 2, cost: 110, size: 2 },
+          { number: 3, cost: 170, size: 3 },
           { number: 4, cost: 200, size: 4 },
         ],
       },
     ],
     datasheet_info: [
       {
-        text: "Legion Kratos Squadron can purchase the following upgrades.",
+        text: "Legion Kratos Squadron can purchase the following upgrades. The same upgrade may be taken more than once",
         options: [
           { text: "1 additional Kratos", cost: 60 },
           { text: "2 additional Kratos", cost: 110 },

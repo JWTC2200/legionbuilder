@@ -45,9 +45,10 @@ const page = () => {
       <ul className="list-disc text-green-950 ml-4">
         {filteredTraits.map((trait) => (
           <Link
+            key={trait.name}
             href={`/reference/weapontraits/${trait.name.replaceAll(" ", "_")}`}
           >
-            <li key={trait.name}>{trait.name}</li>
+            <li>{trait.name}</li>
           </Link>
         ))}
       </ul>

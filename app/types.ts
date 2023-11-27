@@ -31,13 +31,13 @@ export enum DETACHMENT_TYPE {
 export const detachmentTypeArray = Object.values(DETACHMENT_TYPE);
 
 export enum UNIT_TYPE {
-  knight = "Knight",
   infantry = "Infantry",
   cavalry = "Cavalry",
   walker = "Walker",
-  titan = "Titan",
   vehicle = "Vehicle",
   heavy = "Super-Heavy Vehicle",
+  knight = "Knight",
+  titan = "Titan",
 }
 
 export enum SLOTSET {
