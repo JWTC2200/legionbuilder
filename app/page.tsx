@@ -50,7 +50,8 @@ export default function Home() {
         <ul className="list-disc flex flex-col gap-2">
           <li>
             26/11/2023: Fixes here and there, huge thanks to everyone who helped
-            and messaged me! Added some warnings/reminders when buildings lists.
+            and messaged me! Added some warnings/reminders when buildings lists
+            and a minimise formation button for easier viewing/use.
           </li>
           <li>
             26/11/2023: For fun I've added in titan weapon options if they're a
