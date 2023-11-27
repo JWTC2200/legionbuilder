@@ -106,4 +106,11 @@ export const formationSlotData: FORMATION_SLOT[] = [
     options: [9003],
     description: "Tank Commander",
   },
+  {
+    id: 9005,
+    type: DETACHMENT_TYPE.core,
+    restricted: true,
+    options: [2004],
+    description: "Storm Section",
+  },
 ];
