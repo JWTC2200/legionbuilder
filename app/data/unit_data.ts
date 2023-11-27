@@ -709,7 +709,7 @@ export const unitData: UNIT_DATASHEET[] = [
     caf: 8,
     morale: 2,
     wounds: 3,
-    weapons: [4008, 4009, 4010],
+    weapons: [4011, 4009, 4013],
     loadout: [
       {
         options: [

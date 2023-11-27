@@ -229,7 +229,7 @@ export const detachmentData: DETACHMENT[] = [
     faction: FACTION.astartes,
     allegiance: ALLEGIANCE.neutral,
     detachment_type: DETACHMENT_TYPE.support,
-    base_cost: 35,
+    base_cost: 40,
     base_size: 4,
     max_size: 8,
     main_unit: [1006],
