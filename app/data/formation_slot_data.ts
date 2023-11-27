@@ -59,7 +59,6 @@ export const formationSlotData: FORMATION_SLOT[] = [
 
   {
     id: 4000,
-
     type: DETACHMENT_TYPE.knight,
     options: [],
   },

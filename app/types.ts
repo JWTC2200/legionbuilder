@@ -142,13 +142,13 @@ export interface SPECIAL_RULE {
 export interface WEAPON_TRAIT_INFO {
   name: string;
   tooltip?: string;
-  descripton: string;
+  description: string[];
 }
 
 export interface SPECIAL_RULE_INFO {
   name: string;
   tooltip?: string;
-  descripton: string;
+  description: string[];
 }
 
 // List builder specific types ( effectively mirrors of above types)

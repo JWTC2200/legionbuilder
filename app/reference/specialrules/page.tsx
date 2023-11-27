@@ -2,6 +2,7 @@
 
 import { specialRulesData } from "@/app/data/special_rule_data";
 import React, { useState } from "react";
+import Link from "next/link";
 
 const page = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -43,8 +44,12 @@ const page = () => {
         />
       </div>
       <ul className="list-disc text-green-950 ml-4">
-        {filteredRules.map((trait) => (
-          <li key={trait.name}>{trait.name}</li>
+        {filteredRules.map((rule) => (
+          <Link
+            href={`/reference/specialrules/${rule.name.replaceAll(" ", "_")}`}
+          >
+            <li key={rule.name}>{rule.name}</li>
+          </Link>
         ))}
       </ul>
     </main>

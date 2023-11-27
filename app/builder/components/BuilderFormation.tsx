@@ -90,7 +90,7 @@ const BuilderFormation = ({
         </button>
       </div>
       {formation.id ? null : (
-        <p className="text-red-600 font-semibold mt-4">
+        <p className="text-red-600 font-semibold my-1">
           Please select a formation
         </p>
       )}

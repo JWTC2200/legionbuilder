@@ -2,6 +2,7 @@
 
 import { weaponTraitsData } from "@/app/data/weapon_traits_data";
 import React, { useState } from "react";
+import Link from "next/link";
 
 const page = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -43,7 +44,11 @@ const page = () => {
       </div>
       <ul className="list-disc text-green-950 ml-4">
         {filteredTraits.map((trait) => (
-          <li key={trait.name}>{trait.name}</li>
+          <Link
+            href={`/reference/weapontraits/${trait.name.replaceAll(" ", "_")}`}
+          >
+            <li key={trait.name}>{trait.name}</li>
+          </Link>
         ))}
       </ul>
     </main>

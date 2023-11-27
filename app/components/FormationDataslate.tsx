@@ -12,7 +12,7 @@ const FormationDataslate = (formation: FORMATION) => {
         </h2>
       </div>
       {formation.compulsory ? (
-        <div className="flex flex-col items-center ">
+        <div className="flex flex-col items-center">
           <h2 className="text-2xl w-full text-center font-graduate font-bold bg-green-950 text-green-50 py-1 px-3 mb-2">
             Compulsory Detachments:
           </h2>
@@ -45,7 +45,7 @@ const FormationDataslate = (formation: FORMATION) => {
         </div>
       ) : null}
       {formation.optional ? (
-        <div className="flex flex-col items-center ">
+        <div className="flex flex-col items-center">
           <h2 className="text-xl w-full text-center font-graduate font-bold bg-green-950 text-green-50 py-1 px-3 mb-2">
             Optional detachments:
           </h2>
@@ -81,12 +81,11 @@ const FormationDataslate = (formation: FORMATION) => {
         ? formation.choice.map((choice, index) => (
             <div
               key={"choiceset" + index}
-              className="flex flex-col items-center "
+              className="flex flex-col items-center"
             >
               <h2 className="text-xl w-full text-center font-graduate font-bold bg-green-950 text-green-50 py-1 px-3 mb-2">
                 One of the following:
               </h2>
-              justify-center{" "}
               <div className="text-green-950 flex flex-wrap justify-center items-center gap-4 m-2">
                 {choice.sort().map((detachment, index2) => {
                   const foundSlot = formationSlotData.find(
