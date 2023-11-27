@@ -249,7 +249,7 @@ const page = () => {
       </div>
 
       {/* TO MANY ALLIES WARNING */}
-      {armyPoints.allyFactionPoints > armyPoints.mainFactionPoints * 0.3 ? (
+      {armyPoints.allyFactionPoints > armyList.points * 0.3 ? (
         <div className="text-red-600 font-bold text-xl font-graduate text-center">
           Too many allies!
         </div>

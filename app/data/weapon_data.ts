@@ -99,7 +99,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
     profiles: [
       {
         range: '20"',
-        dice: 1,
+        dice: 2,
         to_hit: 4,
         ap: 0,
         traits: [{ name: "Ignores Cover" }, { name: "Light" }],
