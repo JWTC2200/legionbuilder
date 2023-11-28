@@ -59,6 +59,7 @@ export interface FORMATION {
 export interface FORMATION_SLOT {
   id: number;
   type: DETACHMENT_TYPE;
+  faction: FACTION;
   restricted?: boolean;
   options: number[];
   description?: string;
@@ -174,6 +175,7 @@ export interface BUILDER_DETACHMENT_SLOT {
   slot_ref: string;
   id: number;
   type: DETACHMENT_TYPE;
+  faction: FACTION;
   restricted?: boolean;
   options: number[];
   description?: string;
