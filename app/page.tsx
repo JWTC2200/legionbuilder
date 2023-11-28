@@ -5,7 +5,7 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center p-8 gap-2 max-w-screen-md text-brown-50">
+    <main className="flex flex-col items-center p-8 gap-2 max-w-screen-md text-brown-50">
       <p className="sm:text-xl text-center">
         So at this point I think the builder part of this site is pretty much
         done. I can't really think of much else to do other than tweak how it
@@ -79,6 +79,16 @@ export default function Home() {
           </li>
         </ul>
       </div>
-    </div>
+      <footer className="fixed bottom-0 border-t-2 bg-stone-900 w-full  max-w-screen-md ">
+        <p>
+          This website is unofficial and in no way endorsed by Games Workshop.{" "}
+        </p>
+        <p>
+          Any use of terms from Games Workshop are used without permission. No
+          challenge to their status indended. All rights reserved to their
+          respective owners.
+        </p>
+      </footer>
+    </main>
   );
 }

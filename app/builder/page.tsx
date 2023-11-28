@@ -29,10 +29,10 @@ const page = () => {
   const armyPoints = listPoints(armyList);
 
   const gameSizes: number[] = [3000, 2500, 2000, 1500, 1000];
-  const [infoWidget, setInfoWidget] = useState(true);
+  const [infoWidget, setInfoWidget] = useState(false);
   const [sideWidget, setSideWidget] = useState(false);
 
-  const widgetHeight = infoWidget ? "h-28 sm:h-32" : "h-12 sm:h-16";
+  const widgetHeight = infoWidget ? "h-28 sm:h-36" : "h-12 sm:h-20";
   const widgetWidth = sideWidget ? "w-80" : "w-8";
 
   const savedList =
@@ -118,7 +118,7 @@ const page = () => {
       </div>
       {/* INFORMATION WIDGET BOTTOM */}
       <div
-        className={`fixed w-full max-w-screen-2xl bg-stone-800 text-stone-50 font-graduate bottom-0 px-2 flex flex-col text-sm sm:text-lg transition-all ${
+        className={`fixed w-full max-w-screen-2xl bg-stone-800 text-stone-50 font-graduate bottom-0 px-2 flex flex-col text-sm sm:text-lg transition-all${
           " " + widgetHeight
         }`}
       >
@@ -170,9 +170,14 @@ const page = () => {
             <button
               type="button"
               onClick={returnToTop}
-              className="hover:text-cyan-700 active:text-cyan-700 text-xl"
+              className="hover:text-cyan-700 active:text-cyan-700 flex flex-col items-center"
             >
-              {infoWidget ? <MdKeyboardDoubleArrowUp /> : null}
+              {infoWidget ? (
+                <>
+                  <MdKeyboardDoubleArrowUp className="text-4xl sm:text-6xl" />{" "}
+                  To Top{" "}
+                </>
+              ) : null}
             </button>
           </div>
         </div>
