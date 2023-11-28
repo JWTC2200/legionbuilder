@@ -77,7 +77,7 @@ const BuilderFormation = ({
         </button>
         <div className="flex flex-wrap sm:gap-4 items-center justify-center">
           <select
-            className="bg-green-950 sm:text-xl py-2 font-graduate text-center max-w-full overflow-hidden"
+            className="bg-green-950 sm:text-xl py-2 font-graduate text-center max-w-[300px] sm:max-w-[400px] lg:max-w-full"
             value={formation.id}
             onChange={(e) => {
               chooseFormation(Number(e.target.value));
