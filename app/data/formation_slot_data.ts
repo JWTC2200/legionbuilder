@@ -67,6 +67,67 @@ export const formationSlotData: FORMATION_SLOT[] = [
     type: DETACHMENT_TYPE.titan,
     options: [],
   },
+
+  // ********************************************************************
+  // ************************ QUICK STARTER SLOTS ***********************
+  // ********************************************************************
+  {
+    id: 1,
+    type: DETACHMENT_TYPE.hq,
+    restricted: true,
+    options: [1000],
+    description: "Legion",
+  },
+  {
+    id: 2,
+    type: DETACHMENT_TYPE.core,
+    restricted: true,
+    options: [1002],
+    description: "Legion",
+  },
+  {
+    id: 3,
+    type: DETACHMENT_TYPE.battle,
+    restricted: true,
+    options: [1012, 1013],
+    description: "Legion",
+  },
+  {
+    id: 4,
+    type: DETACHMENT_TYPE.hq,
+    restricted: true,
+    options: [2000, 2001],
+    description: "Solar",
+  },
+  {
+    id: 5,
+    type: DETACHMENT_TYPE.core,
+    restricted: true,
+    options: [2002],
+    description: "Solar",
+  },
+  {
+    id: 6,
+    type: DETACHMENT_TYPE.battle,
+    restricted: true,
+    options: [2008, 2009],
+    description: "Solar",
+  },
+  {
+    id: 7,
+    type: DETACHMENT_TYPE.support,
+    restricted: true,
+    options: [1009],
+    description: "Legion",
+  },
+  {
+    id: 8,
+    type: DETACHMENT_TYPE.vanguard,
+    restricted: true,
+    options: [2007],
+    description: "Solar",
+  },
+
   // ********************************************************************
   // ******************************* UNIQUE SLOTS ***********************
   // ********************************************************************

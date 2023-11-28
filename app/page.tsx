@@ -12,9 +12,11 @@ export default function Home() {
         looks.
       </p>
       <p className="sm:text-xl text-center mt-2">
-        Moving on I'll add pages for special rules and weapon traits as well as
-        tooltips to each on the unit and detachment dataslates. Which might have
-        to wait until I can get my hands on the actual book.
+        On reflection I'm not going to add in full special rules or weapon
+        traits onto the site. Instead I'll try to keep it to one line tooltips
+        where possible and if the rule is too wordy for that a page reference to
+        the rulebook instead. Its a bit of a blurry line but I feel that lifting
+        whole parts of the rulebook out word for word is a bit too much for me.
       </p>
       <p className="sm:text-xl text-center mt-2">
         If there's anything you'd like added please feel free to contact me
@@ -48,6 +50,14 @@ export default function Home() {
       <div className="mt-8">
         <h2 className="text-xl text-center">UPDATES:</h2>
         <ul className="list-disc flex flex-col gap-2">
+          <li>
+            28/11/2023: On request I've added the Quick Start Guide Legion
+            Astranii Class Augumented Spearhead formation. It's currently listed
+            under Legiones Astartes formations and is heavily limited in its
+            options to what exists in the starter box as I didn't account for
+            this sort of dual faction formation when I designed the builder.
+            Something I might have to change in future if it crops up again!
+          </li>
           <li>
             27/11/2023: Fixes here and there, huge thanks to everyone who helped
             and messaged me! Added some warnings/reminders when buildings lists

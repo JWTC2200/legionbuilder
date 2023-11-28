@@ -114,6 +114,7 @@ const page = () => {
             Added some list checking for compulsory and choice slots, and for
             ally points totals. Formations can be minimised for easier viewing.
           </li>
+          <li>Quick start formation has been added.</li>
         </ul>
       </div>
       {/* INFORMATION WIDGET BOTTOM */}

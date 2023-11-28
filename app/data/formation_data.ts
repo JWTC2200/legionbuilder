@@ -1,6 +1,16 @@
 import { FORMATION, FACTION, ALLEGIANCE } from "../types";
 
 export const formationData: FORMATION[] = [
+  {
+    id: 1,
+    name: "Legion Astranii Class Augumented Spearhead",
+    faction: FACTION.astartes,
+    allegiance: ALLEGIANCE.neutral,
+    compulsory: [1, 2, 3, 4, 5, 6],
+    optional: [7, 8],
+    choice: null,
+  },
+
   // ********************************************************************
   // *********************** ASTARTES FORMATIONS ************************
   // ********************************************************************
