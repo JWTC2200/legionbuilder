@@ -49,9 +49,9 @@ export default function Home() {
         <h2 className="text-xl text-center">UPDATES:</h2>
         <ul className="list-disc flex flex-col gap-2">
           <li>
-            26/11/2023: Fixes here and there, huge thanks to everyone who helped
+            27/11/2023: Fixes here and there, huge thanks to everyone who helped
             and messaged me! Added some warnings/reminders when buildings lists
-            and a minimise formation button for easier viewing/use.
+            and a minimize formation button for easier viewing/use.
           </li>
           <li>
             26/11/2023: For fun I've added in titan weapon options if they're a
