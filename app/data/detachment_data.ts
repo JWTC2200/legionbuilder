@@ -217,7 +217,7 @@ export const detachmentData: DETACHMENT[] = [
     ],
     datasheet_info: [
       {
-        text: "A Legion Plasma Gun Support Detachment can purchase the following upgrades.",
+        text: "A Legion Plasma Gun Support Detachment can purchase the following upgrades:",
         options: [
           { text: "2 additional Legionaries", cost: 15 },
           { text: "4 additional Legionaries", cost: 30 },
@@ -248,7 +248,7 @@ export const detachmentData: DETACHMENT[] = [
     ],
     datasheet_info: [
       {
-        text: "A Legion Missile Launcher Support Detachment can purchase the following upgrades.",
+        text: "A Legion Missile Launcher Support Detachment can purchase the following upgrades:",
         options: [
           { text: "2 additional Legionaries", cost: 15 },
           { text: "4 additional Legionaries", cost: 30 },
@@ -279,7 +279,7 @@ export const detachmentData: DETACHMENT[] = [
     ],
     datasheet_info: [
       {
-        text: "A Legion Assault Detachment can purchase the following upgrades.",
+        text: "A Legion Assault Detachment can purchase the following upgrades:",
         options: [
           { text: "2 additional Assault Marines", cost: 12 },
           { text: "4 additional Assault Marines", cost: 24 },
@@ -310,7 +310,7 @@ export const detachmentData: DETACHMENT[] = [
     ],
     datasheet_info: [
       {
-        text: "A Legion Terminator Detachment can purchase the following upgrades.",
+        text: "A Legion Terminator Detachment can purchase the following upgrades:",
         options: [
           { text: "2 additional Terminators", cost: 15 },
           { text: "4 additional Terminators", cost: 30 },
@@ -342,7 +342,7 @@ export const detachmentData: DETACHMENT[] = [
     ],
     datasheet_info: [
       {
-        text: "A Legion Rapier Battery Detachment can purchase the following upgrades.",
+        text: "A Legion Rapier Battery Detachment can purchase the following upgrades:",
         options: [
           { text: "2 additional Rapiers", cost: 30 },
           { text: "4 additional Rapiers", cost: 60 },
@@ -382,7 +382,7 @@ export const detachmentData: DETACHMENT[] = [
     ],
     datasheet_info: [
       {
-        text: "A Leviathan Siege Dreadnought Detachment can purchase the following upgrades.",
+        text: "A Leviathan Siege Dreadnought Detachment can purchase the following upgrades:",
         options: [
           { text: "2 Additional Leviathan", cost: 35 },
           { text: "4 Additional Leviathan", cost: 70 },
@@ -466,7 +466,7 @@ export const detachmentData: DETACHMENT[] = [
     ],
     datasheet_info: [
       {
-        text: "A Legion Tarantula Battery can purchase the following upgrades.",
+        text: "A Legion Tarantula Battery can purchase the following upgrades:",
         options: [
           { text: "2 additional Tarantulas", cost: 15 },
           { text: "4 additional Tarantulas", cost: 30 },
@@ -505,7 +505,7 @@ export const detachmentData: DETACHMENT[] = [
     ],
     datasheet_info: [
       {
-        text: "A Legion Deredeo Dreadnought Detachmentcan purchase the following upgrades.",
+        text: "A Legion Deredeo Dreadnought Detachmentcan purchase the following upgrades:",
         options: [
           { text: "2 Additional Deredeo", cost: 40 },
           { text: "4 Additional Deredeo", cost: 80 },
@@ -547,7 +547,7 @@ export const detachmentData: DETACHMENT[] = [
     ],
     datasheet_info: [
       {
-        text: "Legion Predator Squadron can purchase the following upgrades. The same upgrade may be taken more than once",
+        text: "A Legion Predator Squadron can purchase the following upgrades: The same upgrade may be taken more than once",
         options: [
           { text: "1 additional Predator", cost: 35 },
           { text: "3 additional Predator", cost: 95 },
@@ -589,7 +589,7 @@ export const detachmentData: DETACHMENT[] = [
     ],
     datasheet_info: [
       {
-        text: "Legion Sicaran Squadron can purchase the following upgrades. The same upgrade may be taken more than once",
+        text: "A Legion Sicaran Squadron can purchase the following upgrades: The same upgrade may be taken more than once",
         options: [
           { text: "1 additional Sicaran", cost: 40 },
           { text: "2 additional Sicaran", cost: 70 },
@@ -631,7 +631,7 @@ export const detachmentData: DETACHMENT[] = [
     ],
     datasheet_info: [
       {
-        text: "Legion Kratos Squadron can purchase the following upgrades. The same upgrade may be taken more than once",
+        text: "A Legion Kratos Squadron can purchase the following upgrades: The same upgrade may be taken more than once",
         options: [
           { text: "1 additional Kratos", cost: 60 },
           { text: "2 additional Kratos", cost: 110 },
@@ -671,7 +671,7 @@ export const detachmentData: DETACHMENT[] = [
     ],
     datasheet_info: [
       {
-        text: "Legion Xiphon Interceptor Squadron can purchase the following upgrades.",
+        text: "A Legion Xiphon Interceptor Squadron can purchase the following upgrades:",
         options: [
           { text: "1 additional Xiphon", cost: 85 },
           { text: "2 additional Xiphon", cost: 160 },
@@ -712,7 +712,7 @@ export const detachmentData: DETACHMENT[] = [
     ],
     datasheet_info: [
       {
-        text: "Legion Storm Eagle Squadron can purchase the following upgrades.",
+        text: "A Legion Storm Eagle Squadron can purchase the following upgrades:",
         options: [
           { text: "1 additional Storm Eagle", cost: 100 },
           { text: "2 additional Storm Eagle", cost: 190 },
@@ -751,7 +751,7 @@ export const detachmentData: DETACHMENT[] = [
     ],
     datasheet_info: [
       {
-        text: "Legion Storm Eagle Squadron can purchase the following upgrades.",
+        text: "A Legion Storm Eagle Squadron can purchase the following upgrades:",
         options: [
           { text: "1 additional Fire Raptor", cost: 100 },
           { text: "2 additional Fire Raptor", cost: 190 },
@@ -791,7 +791,7 @@ export const detachmentData: DETACHMENT[] = [
     ],
     datasheet_info: [
       {
-        text: "Legion Storm Eagle Squadron can purchase the following upgrades.",
+        text: "A Legion Storm Eagle Squadron can purchase the following upgrades:",
         options: [
           { text: "1 additional Thunderhawk Gunship", cost: 150 },
           { text: "2 additional Thunderhawk Gunship", cost: 280 },
@@ -904,7 +904,7 @@ export const detachmentData: DETACHMENT[] = [
     ],
     datasheet_info: [
       {
-        text: "A Auxilia Lasrifle Tercio can purchase up to six upgrades. It may purchase the same upgrade multiple times: Each upgrade increases the Detachment size by 2.",
+        text: "An Auxilia Lasrifle Tercio can purchase up to six upgrades. It may purchase the same upgrade multiple times: Each upgrade increases the Detachment size by 2.",
         options: [
           { text: "Auxiliaries", cost: 12 },
           { text: "Auxiliaries with Flamers", cost: 12 },
@@ -941,7 +941,7 @@ export const detachmentData: DETACHMENT[] = [
     ],
     datasheet_info: [
       {
-        text: "A Auxilia Charonite Ogryn Section can purchase the following upgrades.",
+        text: "An Auxilia Charonite Ogryn Section can purchase the following upgrades:",
         options: [
           { text: "1 additional Charonite Ogryn", cost: 15 },
           { text: "2 additional Charonite Ogryn", cost: 30 },
@@ -976,7 +976,7 @@ export const detachmentData: DETACHMENT[] = [
     ],
     datasheet_info: [
       {
-        text: "A Auxilia Veletaris Storm Section can purchase the following upgrades.",
+        text: "An Auxilia Veletaris Storm Section can purchase the following upgrades:",
         options: [
           { text: "1 additional Veletarii", cost: 15 },
           { text: "2 additional Veletarii", cost: 30 },
@@ -1011,7 +1011,7 @@ export const detachmentData: DETACHMENT[] = [
     ],
     datasheet_info: [
       {
-        text: "A Auxilia Rapier Battery can purchase the following upgrades.",
+        text: "An Auxilia Rapier Battery can purchase the following upgrades:",
         options: [
           { text: "3 additional Rapier", cost: 40 },
           { text: "6 additional Rapier", cost: 70 },
@@ -1048,7 +1048,7 @@ export const detachmentData: DETACHMENT[] = [
     ],
     datasheet_info: [
       {
-        text: "A Auxilia Tarantula Battery can purchase the following upgrades.",
+        text: "An Auxilia Tarantula Battery can purchase the following upgrades:",
         options: [
           { text: "2 additional Tarantula", cost: 15 },
           { text: "4 additional Tarantula", cost: 25 },
@@ -1084,7 +1084,7 @@ export const detachmentData: DETACHMENT[] = [
     ],
     datasheet_info: [
       {
-        text: "An Auxilia Aethon Heavy Sentinel Patrol can purchase the following upgrades.",
+        text: "An Auxilia Aethon Heavy Sentinel Patrol can purchase the following upgrades:",
         options: [
           { text: "2 additional Sentinel", cost: 25 },
           { text: "4 additional Sentinel", cost: 45 },
@@ -1124,7 +1124,7 @@ export const detachmentData: DETACHMENT[] = [
     ],
     datasheet_info: [
       {
-        text: "A Leman Russ Strike Squadron can purchase the following upgrades.",
+        text: "A Leman Russ Strike Squadron can purchase the following upgrades:",
         options: [
           { text: "2 additional Leman Russ", cost: 85 },
           { text: "4 additional Leman Russ", cost: 160 },
@@ -1166,7 +1166,7 @@ export const detachmentData: DETACHMENT[] = [
     ],
     datasheet_info: [
       {
-        text: "A Malcador Tank Squadron can purchase any of the following upgrades. The same upgrade may be taken more than once",
+        text: "A Malcador Tank Squadron can purchase any of the following upgrades: The same upgrade may be taken more than once.",
         options: [
           { text: "1 additional Malcador", cost: 70 },
           { text: "2 additional Malcador", cost: 130 },
@@ -1210,7 +1210,7 @@ export const detachmentData: DETACHMENT[] = [
     ],
     datasheet_info: [
       {
-        text: "An Auxilia Super-Heavy Tank Squadron can purchase any of the following upgrades. The same upgrade may be taken more than once",
+        text: "An Auxilia Super-Heavy Tank Squadron can purchase any of the following upgrades: The same upgrade may be taken more than once.",
         options: [
           { text: "1 additional Super-heavy", cost: 90 },
           { text: "3 additional Super-heavy", cost: 255 },
@@ -1254,7 +1254,7 @@ export const detachmentData: DETACHMENT[] = [
         text: "Any Thunderbolt Fighter can exchange its Quad autocannon for an Avenger bolt cannon for +3pts per model",
       },
       {
-        text: "A Auxilia Thunderbolt Squadron can purchase the following upgrades.",
+        text: "An Auxilia Thunderbolt Squadron can purchase the following upgrades:",
         options: [
           { text: "1 additional Thunderbolt", cost: 80 },
           { text: "2 additional Thunderbolt", cost: 150 },
@@ -1296,7 +1296,7 @@ export const detachmentData: DETACHMENT[] = [
     ],
     datasheet_info: [
       {
-        text: "A Auxilia Avenger Strike Fighter Squadron can purchase the following upgrades.",
+        text: "An Auxilia Avenger Strike Fighter Squadron can purchase the following upgrades:",
         options: [
           { text: "1 additional Avenger", cost: 85 },
           { text: "2 additional Avenger", cost: 160 },
@@ -1336,7 +1336,7 @@ export const detachmentData: DETACHMENT[] = [
     ],
     datasheet_info: [
       {
-        text: "A Auxilia Lightning Fighter Squadron can purchase the following upgrades.",
+        text: "An Auxilia Lightning Fighter Squadron can purchase the following upgrades:",
         options: [
           { text: "1 additional Lightning", cost: 85 },
           { text: "2 additional Lightning", cost: 160 },
@@ -1413,7 +1413,7 @@ export const detachmentData: DETACHMENT[] = [
         ],
       },
       {
-        text: "A Auxilia Marauder Bomber Squadron can purchase the following upgrades.",
+        text: "An Auxilia Marauder Bomber Squadron can purchase the following upgrades:",
         options: [
           { text: "1 additional Marauder", cost: 85 },
           { text: "2 additional Marauder", cost: 160 },
@@ -1556,7 +1556,7 @@ export const detachmentData: DETACHMENT[] = [
         ],
       },
       {
-        text: "In addition, a Questoris Knight Banner may purchase one of the following upgrades",
+        text: "In addition, a Questoris Knight Banner may purchase one of the following upgrades:",
         options: [
           {
             text: "Questoris Knight Armiger Talon",
@@ -1622,7 +1622,7 @@ export const detachmentData: DETACHMENT[] = [
         text: "An Acastus Knight Banner can increase its Detachment size by 1 for +250pts",
       },
       {
-        text: "In addition, a Acastus Knight Banner may purchase one of the following upgrades",
+        text: "In addition, a Acastus Knight Banner may purchase one of the following upgrades:",
         options: [
           {
             text: "Questoris Knight Armiger Talon",
@@ -2248,7 +2248,7 @@ export const detachmentData: DETACHMENT[] = [
         ],
       },
       {
-        text: "In addition, a Cerastus Knight Banner may purchase one of the following upgrades",
+        text: "In addition, a Cerastus Knight Banner may purchase one of the following upgrades:",
         options: [
           {
             text: "Questoris Knight Armiger Talon",
@@ -2402,7 +2402,7 @@ export const detachmentData: DETACHMENT[] = [
     ],
     datasheet_info: [
       {
-        text: "Legion Storm Eagle Squadron can purchase the following upgrades.",
+        text: "A Legion Storm Eagle Squadron can purchase the following upgrades:",
         options: [
           { text: "1 additional Storm Eagle", cost: 100 },
           { text: "2 additional Storm Eagle", cost: 200 },
@@ -2450,7 +2450,7 @@ export const detachmentData: DETACHMENT[] = [
     ],
     datasheet_info: [
       {
-        text: "Legion Storm Eagle Squadron can purchase the following upgrades.",
+        text: "A Legion Storm Eagle Squadron can purchase the following upgrades:",
         options: [
           { text: "1 additional Thunderhawk Gunship", cost: 150 },
           { text: "2 additional Thunderhawk Gunship", cost: 280 },
