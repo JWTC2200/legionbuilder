@@ -18,6 +18,7 @@ import { MdKeyboardDoubleArrowUp } from "react-icons/md";
 import { TbChevronCompactLeft, TbChevronCompactRight } from "react-icons/tb";
 import { ImBin } from "react-icons/im";
 import { FiPrinter, FiChevronDown } from "react-icons/fi";
+import InfoPopup from "../components/InfoPopup";
 
 const page = () => {
   const router = useRouter();
@@ -31,6 +32,9 @@ const page = () => {
   const gameSizes: number[] = [3000, 2500, 2000, 1500, 1000];
   const [infoWidget, setInfoWidget] = useState(false);
   const [sideWidget, setSideWidget] = useState(false);
+
+  // SET TO TRUE FOR ANY INFORMATION POPUP
+  const [infoPopup, setInfoPopup] = useState(true);
 
   const widgetHeight = infoWidget ? "h-28 sm:h-36" : "h-12 sm:h-20";
   const widgetWidth = sideWidget ? "w-80" : "w-8";
@@ -117,6 +121,7 @@ const page = () => {
           <li>Quick start formation has been added.</li>
         </ul>
       </div>
+      {infoPopup ? <InfoPopup toggle={setInfoPopup} /> : null}
       {/* INFORMATION WIDGET BOTTOM */}
       <div
         className={`fixed w-full max-w-screen-2xl bg-stone-800 text-stone-50 font-graduate bottom-0 px-2 flex flex-col text-sm sm:text-lg transition-all${
