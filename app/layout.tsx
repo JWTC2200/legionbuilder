@@ -7,7 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Navbar from "./components/Navbar";
 
 export const metadata: Metadata = {
-  title: "Legion Imperiallis",
+  title: "Legion Builder",
   description: "List builder for Legion Imperiallis",
 };
 

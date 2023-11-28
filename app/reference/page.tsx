@@ -20,14 +20,16 @@ const page = () => {
           <GiChewedSkull className="text-5xl" />
           Units
         </Link>
-        <Link
+
+        {/* <Link
           href=""
           className="flex flex-col justify-center items-center text-center font-graduate font-semibold bg-green-950 text-green-950 w-40 h-32 p-2 rounded-xl dataslate_background hover:text-cyan-700 active:text-cyan-700 hover:border-2 hover:border-cyan-700"
         >
           <GiFist className="text-5xl" />
           Special Rules
           <span className="italic">Not ready</span>
-        </Link>
+        </Link> */}
+
         <Link
           href="/reference/weapons"
           className="flex flex-col justify-center items-center text-center font-graduate font-semibold bg-green-950 text-green-950 w-40 h-32 p-2 rounded-xl dataslate_background hover:text-cyan-700 active:text-cyan-700 hover:border-2 hover:border-cyan-700"
@@ -36,14 +38,14 @@ const page = () => {
           Weapons
         </Link>
 
-        <Link
+        {/* <Link
           href=""
           className="flex flex-col justify-center items-center text-center font-graduate font-semibold bg-green-950 text-green-950 w-40 h-32 p-2 rounded-xl dataslate_background hover:text-cyan-700 active:text-cyan-700 hover:border-2 hover:border-cyan-700"
         >
           <GiFlamedLeaf className="text-5xl" />
           Weapon Traits
           <span className="italic">Not ready</span>
-        </Link>
+        </Link> */}
       </nav>
     </main>
   );

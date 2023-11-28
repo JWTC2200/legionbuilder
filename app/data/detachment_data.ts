@@ -893,12 +893,12 @@ export const detachmentData: DETACHMENT[] = [
       {
         name: "Additional Charonite Ogryns",
         options: [
-          { number: 2, cost: 12, size: 2 },
-          { number: 4, cost: 24, size: 4 },
-          { number: 6, cost: 36, size: 6 },
-          { number: 8, cost: 48, size: 8 },
-          { number: 10, cost: 60, size: 10 },
-          { number: 12, cost: 72, size: 12 },
+          { number: 2, cost: 15, size: 2 },
+          { number: 4, cost: 30, size: 4 },
+          { number: 6, cost: 45, size: 6 },
+          { number: 8, cost: 60, size: 8 },
+          { number: 10, cost: 75, size: 10 },
+          { number: 12, cost: 90, size: 12 },
         ],
       },
     ],
