@@ -94,6 +94,9 @@ const page = () => {
       <main className="w-full min-h-screen bg-slate-50 text-green-950 p-4 flex justify-center">
         <div className="w-full max-w-screen-lg">
           <div className="mb-2">
+            <h1 className="font-bold font-subrayada text-xl">
+              {listJson.list_name}
+            </h1>
             <h2 className="font-bold font-graduate">
               List total:{" "}
               {listPoints(listJson).allyFactionPoints +
