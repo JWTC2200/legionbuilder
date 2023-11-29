@@ -15,7 +15,7 @@ export const saveData = async (listData: BUILDER_LIST) => {
         const listRef = doc(db, "legionbuilder", listData.list_id);
         await setDoc(listRef, { list: listString, owner: listData.user_id }),
           { merge: true };
-        return { uploaded: true, message: "List saved!" };
+        return { uploaded: true, message: "List saved to account" };
       } catch (error) {
         return { uploaded: false, message: "Failed to save list" };
       }

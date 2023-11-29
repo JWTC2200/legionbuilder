@@ -15,21 +15,25 @@ const InfoPopup = ({
           <IoClose />
         </button>
       </div>
-      <p>
-        Sorry about this but on Nov 29 around 10:00am CEST I'll be pushing an
-        update that is going to break everyones lists or at least how its
-        currently stored on your device local storage.
-      </p>
-      <p className="mt-2">
-        After being reminded of the quick start formation and its mixed faction
-        detachments I'd rather make the change now when theres less to break if
-        GW makes more of them in the future.
-      </p>
-      <p className="mt-2">
-        You'll still be able to print your lists correctly but not change any
-        detachments on the build page. So you will have to clear it and start
-        again.
-      </p>
+      <ul className="font-normal">
+        <li className="text-center font-graduate font-semibold">Buttons:</li>
+        <li>
+          <strong>Save:</strong> stores a copy of your list on your device
+        </li>
+        <li>
+          <strong>Print:</strong> opens a page with your list formatted for
+          easier reading
+        </li>
+        <li>
+          <strong>New:</strong> blank list, also clears any lists in storage
+        </li>
+        <li>
+          <strong>Upload:</strong> Only if you're logged in. Save your list to
+          account. If you're viewing someone elses list it will save a copy to
+          your account instead. Also updates your stored list if you have one
+          online already.
+        </li>
+      </ul>
     </div>
   );
 };

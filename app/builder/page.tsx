@@ -19,6 +19,7 @@ import { MdKeyboardDoubleArrowUp } from "react-icons/md";
 import { TbChevronCompactLeft, TbChevronCompactRight } from "react-icons/tb";
 import { ImBin, ImQuill } from "react-icons/im";
 import { FiPrinter, FiChevronDown } from "react-icons/fi";
+
 import InfoPopup from "../components/InfoPopup";
 import { saveData } from "../firebase/firestore/saveData";
 import { getList } from "../firebase/firestore/getList";
@@ -43,7 +44,7 @@ const page = () => {
   const [sideWidget, setSideWidget] = useState(false);
 
   // SET TO TRUE FOR ANY INFORMATION POPUP
-  const [infoPopup, setInfoPopup] = useState(false);
+  const [infoPopup, setInfoPopup] = useState(true);
 
   const widgetHeight = infoWidget ? "h-28 sm:h-36" : "h-12 sm:h-20";
   const widgetWidth = sideWidget ? "w-80" : "w-8";
@@ -110,7 +111,7 @@ const page = () => {
       if (user.uid === armyList.user_id) {
         const upload = await saveData(armyList);
         if (upload) {
-          toast.success("List uploaded");
+          toast.success(upload.message);
           router.replace(`/builder?listId=${armyList.list_id}`);
         } else {
           toast.error("List upload failed");
@@ -186,15 +187,9 @@ const page = () => {
         }}
       />
       {/* NOTICES / WARNINGS */}
-      <div className="text-red-600 text-center">
-        <ul>
-          <li>
-            Added some list checking for compulsory and choice slots, and for
-            ally points totals. Formations can be minimised for easier viewing.
-          </li>
-          <li>Quick start formation has been added.</li>
-        </ul>
-      </div>
+      {/* <div className="text-red-600 text-center">
+  
+      </div> */}
       {infoPopup ? <InfoPopup toggle={setInfoPopup} /> : null}
       {/* INFORMATION WIDGET BOTTOM */}
       <div
@@ -313,26 +308,26 @@ const page = () => {
           onClick={handleSaveList}
           className=" bg-green-950 text-green-50 px-2 py-1 font-bold font-graduate rounded-lg hover:text-cyan-700"
         >
-          SAVE LIST
+          SAVE
         </button>
         <button
           onClick={handlePrintList}
-          className=" bg-green-950 text-green-50 px-2 py-1 mx-2 font-bold font-graduate rounded-lg hover:text-cyan-700"
+          className=" bg-green-950 text-green-50 px-2 py-1 font-bold font-graduate rounded-lg hover:text-cyan-700"
         >
-          PRINT LIST
+          PRINT
         </button>
         <button
           onClick={handleClearList}
           className=" bg-green-950 text-green-50 px-2 py-1 font-bold font-graduate rounded-lg hover:text-cyan-700"
         >
-          CLEAR LIST
+          NEW
         </button>
         {user?.uid ? (
           <button
             onClick={handleUploadList}
             className=" bg-green-950 text-green-50 px-2 py-1 font-bold font-graduate rounded-lg hover:text-cyan-700"
           >
-            UPLOAD LIST
+            UPLOAD
           </button>
         ) : null}
       </div>
@@ -391,7 +386,7 @@ const page = () => {
       </div>
 
       {/* LIST NAME SECTION */}
-      <div className="w-full text-green-50 flex gap-2 justify-center items-center bg-green-950 p-2">
+      <div className="text-green-950 font-semibold flex gap-2 justify-center border border-green-950 items-center py-2 px-4 rounded-xl">
         <ImQuill />
         <input
           type="text"
