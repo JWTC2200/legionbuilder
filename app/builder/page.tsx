@@ -24,6 +24,8 @@ const page = () => {
   const router = useRouter();
   const [armyList, setArmyList] = useState<BUILDER_LIST>({
     points: 3000,
+    list_id: nanoid(),
+    user_id: "",
     main_faction: FACTION.astartes,
     formations: [],
   });
@@ -77,10 +79,13 @@ const page = () => {
   const handleClearList = () => {
     if (typeof window !== "undefined") {
       localStorage.clear();
-      setArmyList({
-        points: 3000,
-        main_faction: FACTION.astartes,
-        formations: [],
+      setArmyList((prev) => {
+        return {
+          ...prev,
+          points: 3000,
+          main_faction: FACTION.astartes,
+          formations: [],
+        };
       });
       toast.error("List deleted");
     }

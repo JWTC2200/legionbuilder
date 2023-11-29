@@ -156,6 +156,8 @@ export interface SPECIAL_RULE_INFO {
 
 export interface BUILDER_LIST {
   points: number;
+  list_id: string;
+  user_id: string;
   main_faction: FACTION;
   formations: BUILDER_FORMATION[];
 }
