@@ -7,7 +7,7 @@ import { getUserLists } from "@/app/firebase/firestore/getUserLists";
 import { BUILDER_LIST } from "@/app/types";
 import { ToastContainer, toast } from "react-toastify";
 
-import { TiClipboard } from "react-icons/ti";
+import { FaCopy } from "react-icons/fa";
 import { MdDeleteForever } from "react-icons/md";
 import { deleteList } from "@/app/firebase/firestore/deleteList";
 import { useRouter } from "next/navigation";
@@ -61,28 +61,51 @@ const page = () => {
         }}
       />
       {userLists.length ? (
-        <div>
-          <h2 className="text-center text-xl font-graduate my-4 underline">
-            Your saved lists:{" "}
-          </h2>
+        <div className="flex flex-wrap justify-center">
+          <div className="w-full flex justify-center">
+            {" "}
+            <h2 className="text-center text-xl font-graduate my-4 underline">
+              Your saved lists:{" "}
+            </h2>
+          </div>
+
           {userLists.map((list) => (
-            <div key={list.list_id} className="flex flex-wrap">
-              <button
-                onClick={() => addToClipboard(list.list_id)}
-                className="flex items-center text-lg mr-2"
-              >
-                <TiClipboard />
-              </button>
-              <Link href={`/builder?listId=${list.list_id}`}>
-                <span className="text-lg font-semibold">{list.list_name}</span>,{" "}
-                {list.main_faction} {list.points}pts
-              </Link>
-              <button
-                onClick={() => handleDeleteList(list.list_id, list.user_id)}
-                className="flex items-center text-lg mr-2 hover:text-red-700"
-              >
-                <MdDeleteForever className="text-2xl" />
-              </button>
+            <div
+              key={list.list_id}
+              className="flex flex-col w-full max-w-[300px] border-2 border-green-950 rounded-xl p-2 dataslate_background  text-green-950"
+            >
+              <div className="flex justify-between items-center p-2">
+                <button
+                  onClick={() => addToClipboard(list.list_id)}
+                  className="flex flex-col justify-center items-center text-lg hover:text-cyan-700"
+                >
+                  <FaCopy className="text-4xl" />
+                  <span className="text-xs">Copy link</span>
+                </button>
+                <Link
+                  href={`/builder?listId=${list.list_id}`}
+                  className="text-lg font-semibold text-center hover:text-cyan-700 font-graduate"
+                >
+                  {list.list_name}
+                </Link>
+              </div>
+              <div>
+                <ul>
+                  <li>Game size: {list.points} points</li>
+                  <li>Army: {list.main_faction}</li>
+                  <li>Formations: {list.formations.length}</li>
+                </ul>
+              </div>
+              <div className="flex justify-end">
+                {" "}
+                <button
+                  onClick={() => handleDeleteList(list.list_id, list.user_id)}
+                  className="flex flex-col justify-center items-center text-lg  hover:text-red-700"
+                >
+                  <MdDeleteForever className="text-4xl" />{" "}
+                  <span className="text-xs">Delete</span>
+                </button>
+              </div>
             </div>
           ))}
         </div>
