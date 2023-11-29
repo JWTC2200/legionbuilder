@@ -38,7 +38,7 @@ const BuilderDetachment = ({
         .filter(
           (detachment) =>
             detachment.detachment_type === detachmentSlot.type &&
-            detachment.faction === faction &&
+            detachment.faction === detachmentSlot.faction &&
             !detachment.unique
         )
         .concat(
