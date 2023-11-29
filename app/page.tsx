@@ -12,11 +12,17 @@ export default function Home() {
         up to 5) lists which you can then link/share if you wanted to.
       </p>
       <h3 className="text-center">A couple examples:</h3>
-      <ul className="text-cyan-700 hover:text-cyan-400 list-disc">
-        <Link href="/builder?listId=FiNHSyWqDlNN4DORsztEw">
+      <ul className="list-disc">
+        <Link
+          href="/builder?listId=FiNHSyWqDlNN4DORsztEw"
+          className="text-cyan-700 hover:text-cyan-400 "
+        >
           <li>1000pt starter list</li>
         </Link>
-        <Link href="/builder?listId=F64FkVkyPUlj8hxbST4KX">
+        <Link
+          href="/builder?listId=F64FkVkyPUlj8hxbST4KX"
+          className="text-cyan-700 hover:text-cyan-400 "
+        >
           <li>1500pt Legion with Reaver</li>
         </Link>
       </ul>

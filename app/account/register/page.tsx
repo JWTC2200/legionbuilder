@@ -32,7 +32,7 @@ const page = () => {
   };
 
   return (
-    <main className="flex flex-col items-center text-stone-50 p-4">
+    <main className="flex flex-col items-center text-stone-50 p-4 max-w-md">
       <h2 className="font-graduate text-xl font-bold mb-8">REGISTER:</h2>
       {error ? <div className="text-red-500 mb-4">{error}</div> : null}
       <form onSubmit={handleSignIn} className="flex flex-col items-start">
@@ -65,6 +65,15 @@ const page = () => {
           Register
         </button>
       </form>
+      <p className="text-red-700 mt-4">
+        Your email will be kept private and will not be shared or used for any
+        purpose other than to log into your account.
+      </p>
+      <p className="text-red-700 mt-4">
+        Another reminder that if you only need to make a single list then there
+        really is no need to sign up. Your list will still be stored on your
+        devices localstorage for later use.
+      </p>
     </main>
   );
 };

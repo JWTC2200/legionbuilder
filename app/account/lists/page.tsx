@@ -61,26 +61,31 @@ const page = () => {
         }}
       />
       {userLists.length ? (
-        userLists.map((list) => (
-          <div key={list.list_id} className="flex flex-wrap">
-            <button
-              onClick={() => addToClipboard(list.list_id)}
-              className="flex items-center text-lg mr-2"
-            >
-              <TiClipboard />
-            </button>
-            <Link href={`/builder?listId=${list.list_id}`}>
-              <span className="text-lg font-semibold">{list.list_name}</span>,{" "}
-              {list.main_faction} {list.points}pts
-            </Link>
-            <button
-              onClick={() => handleDeleteList(list.list_id, list.user_id)}
-              className="flex items-center text-lg mr-2"
-            >
-              <MdDeleteForever />
-            </button>
-          </div>
-        ))
+        <div>
+          <h2 className="text-center text-xl font-graduate my-4 underline">
+            Your saved lists:{" "}
+          </h2>
+          {userLists.map((list) => (
+            <div key={list.list_id} className="flex flex-wrap">
+              <button
+                onClick={() => addToClipboard(list.list_id)}
+                className="flex items-center text-lg mr-2"
+              >
+                <TiClipboard />
+              </button>
+              <Link href={`/builder?listId=${list.list_id}`}>
+                <span className="text-lg font-semibold">{list.list_name}</span>,{" "}
+                {list.main_faction} {list.points}pts
+              </Link>
+              <button
+                onClick={() => handleDeleteList(list.list_id, list.user_id)}
+                className="flex items-center text-lg mr-2 hover:text-red-700"
+              >
+                <MdDeleteForever className="text-2xl" />
+              </button>
+            </div>
+          ))}
+        </div>
       ) : (
         <h2 className="font-graduate text-xl mt-4">You have no saved lists!</h2>
       )}
