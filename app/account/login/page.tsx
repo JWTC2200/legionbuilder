@@ -24,10 +24,11 @@ const page = () => {
     }
 
     setError("");
-    const res = await signInWithEmailAndPassword(auth, email, password);
-    if (res) {
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
       router.push("/");
-    } else {
+    } catch (error) {
+      console.log(error);
       setError("Login failed");
     }
   };

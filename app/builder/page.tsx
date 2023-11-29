@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 
 import { ToastContainer, toast } from "react-toastify";
@@ -9,6 +9,7 @@ import { ToastContainer, toast } from "react-toastify";
 import { BUILDER_FORMATION, BUILDER_LIST, FACTION } from "../types";
 import BuilderFormation from "./components/BuilderFormation";
 import { listPoints } from "./utils";
+import { useAuthContext } from "../firebase/auth/AuthContext";
 
 import { nanoid } from "nanoid";
 
@@ -16,14 +17,20 @@ import { FiPlus, FiSave } from "react-icons/fi";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa6";
 import { MdKeyboardDoubleArrowUp } from "react-icons/md";
 import { TbChevronCompactLeft, TbChevronCompactRight } from "react-icons/tb";
-import { ImBin } from "react-icons/im";
+import { ImBin, ImQuill } from "react-icons/im";
 import { FiPrinter, FiChevronDown } from "react-icons/fi";
 import InfoPopup from "../components/InfoPopup";
+import { saveData } from "../firebase/firestore/saveData";
+import { getList } from "../firebase/firestore/getList";
 
 const page = () => {
   const router = useRouter();
+  const { user } = useAuthContext();
+  const searchParams = useSearchParams();
+
   const [armyList, setArmyList] = useState<BUILDER_LIST>({
     points: 3000,
+    list_name: "New List",
     list_id: nanoid(),
     user_id: "",
     main_faction: FACTION.astartes,
@@ -36,7 +43,7 @@ const page = () => {
   const [sideWidget, setSideWidget] = useState(false);
 
   // SET TO TRUE FOR ANY INFORMATION POPUP
-  const [infoPopup, setInfoPopup] = useState(true);
+  const [infoPopup, setInfoPopup] = useState(false);
 
   const widgetHeight = infoWidget ? "h-28 sm:h-36" : "h-12 sm:h-20";
   const widgetWidth = sideWidget ? "w-80" : "w-8";
@@ -83,11 +90,45 @@ const page = () => {
         return {
           ...prev,
           points: 3000,
+          list_name: "New List",
+          list_id: nanoid(),
+          user_id: "",
           main_faction: FACTION.astartes,
           formations: [],
         };
       });
       toast.error("List deleted");
+      router.push("/builder");
+    }
+  };
+
+  const handleUploadList = async () => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("legionbuilder", JSON.stringify(armyList));
+    }
+    if (user) {
+      if (user.uid === armyList.user_id) {
+        const upload = await saveData(armyList);
+        if (upload) {
+          toast.success("List uploaded");
+          router.replace(`/builder?listId=${armyList.list_id}`);
+        } else {
+          toast.error("List upload failed");
+        }
+      } else {
+        const newList = { ...armyList, list_id: nanoid(), user_id: user.uid };
+        const upload = await saveData(newList);
+        if (upload.uploaded) {
+          toast.success(upload.message);
+          router.replace(`/builder?listId=${newList.list_id}`);
+          if (typeof window !== "undefined") {
+            localStorage.setItem("legionbuilder", JSON.stringify(newList));
+          }
+          setArmyList(newList);
+        } else {
+          toast.error(upload.message);
+        }
+      }
     }
   };
 
@@ -98,9 +139,37 @@ const page = () => {
   };
 
   useEffect(() => {
-    if (savedList) {
-      const list = JSON.parse(savedList);
-      setArmyList(list);
+    const listParams = searchParams.get("listId");
+    // get search param list first
+    const getDblist = async (id: string) => {
+      const data: any = await getList(id);
+      if (data) {
+        if (typeof window !== "undefined") {
+          localStorage.setItem("legionbuilder", JSON.stringify(data));
+        }
+        setArmyList(data);
+      } else {
+        toast.error("Could not find linked list");
+        getLocalList();
+      }
+    };
+
+    const getLocalList = () => {
+      if (savedList) {
+        const list = JSON.parse(savedList);
+        // CHECKS DUE TO USER LOCAL STORAGE OBJECT DIFFERENCES
+        if (!list.list_id || !list.list_name || !list.user_id === undefined) {
+          localStorage.clear();
+        } else {
+          setArmyList(list);
+        }
+      }
+    };
+
+    if (listParams) {
+      getDblist(listParams);
+    } else {
+      getLocalList();
     }
   }, []);
 
@@ -258,6 +327,14 @@ const page = () => {
         >
           CLEAR LIST
         </button>
+        {user?.uid ? (
+          <button
+            onClick={handleUploadList}
+            className=" bg-green-950 text-green-50 px-2 py-1 font-bold font-graduate rounded-lg hover:text-cyan-700"
+          >
+            UPLOAD LIST
+          </button>
+        ) : null}
       </div>
 
       {/* TO MANY ALLIES WARNING */}
@@ -311,6 +388,23 @@ const page = () => {
             <option value="Solar Auxillia">Solar Auxillia</option>
           </select>
         </div>
+      </div>
+
+      {/* LIST NAME SECTION */}
+      <div className="w-full text-green-50 flex gap-2 justify-center items-center bg-green-950 p-2">
+        <ImQuill />
+        <input
+          type="text"
+          maxLength={25}
+          value={armyList.list_name}
+          onChange={(e) =>
+            setArmyList((prev) => {
+              return { ...prev, list_name: e.target.value };
+            })
+          }
+          className="max-w-[300px] bg-inherit text-center font-graduate text-xl"
+        />
+        <ImQuill />
       </div>
 
       {/* ADD FORMATION AND FORMATION QUICK NAV LINKS */}

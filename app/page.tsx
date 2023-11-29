@@ -7,10 +7,19 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center p-8 gap-2 max-w-screen-md text-brown-50">
       <p className="sm:text-xl text-center">
-        So at this point I think the builder part of this site is pretty much
-        done. I can't really think of much else to do other than tweak how it
-        looks.
+        I'ved added accounts for people who might be interested. I stress it is
+        NOT REQUIRED to use the builder. It only enables you to save (currently
+        up to 5) lists which you can then link/share if you wanted to.
       </p>
+      <h3 className="text-center">A couple examples:</h3>
+      <ul className="text-cyan-700 hover:text-cyan-400 list-disc">
+        <Link href="/builder?listId=FiNHSyWqDlNN4DORsztEw">
+          <li>1000pt starter list</li>
+        </Link>
+        <Link href="/builder?listId=F64FkVkyPUlj8hxbST4KX">
+          <li>1500pt Legion with Reaver</li>
+        </Link>
+      </ul>
       <p className="sm:text-xl text-center mt-2">
         On reflection I'm not going to add in full special rules or weapon
         traits onto the site. Instead I'll try to keep it to one line tooltips
@@ -50,6 +59,7 @@ export default function Home() {
       <div className="mt-8">
         <h2 className="text-xl text-center">UPDATES:</h2>
         <ul className="list-disc flex flex-col gap-2">
+          <li>29/11/2023: Added accounts and list linking.</li>
           <li>
             28/11/2023: On request I've added the Quick Start Guide Legion
             Astranii Class Augumented Spearhead formation. It's currently listed

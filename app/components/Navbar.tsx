@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useAuthContext } from "../firebase/auth/AuthContext";
-import { User, getAuth, signOut } from "firebase/auth";
+import { getAuth, signOut } from "firebase/auth";
 
 import { GiChewedSkull, GiTank, GiVerticalBanner } from "react-icons/gi";
 import { FaClipboardList } from "react-icons/fa";
@@ -68,11 +68,31 @@ const Navbar = () => {
         </Link>
       </div>
       {user ? (
-        <button onClick={handleLogOut} className="mt-4 flex items-center gap-2">
-          Logout <FiLogOut />
-        </button>
+        <div className="flex flex-wrap gap-2 items-center justify-center mt-4">
+          <Link
+            href="/account/lists"
+            className="hover:text-cyan-700 active:text-cyan-600"
+          >
+            Lists
+          </Link>
+          <Link
+            href="/account"
+            className="hover:text-cyan-700 active:text-cyan-600"
+          >
+            Account
+          </Link>
+          <button
+            onClick={handleLogOut}
+            className="flex items-center gap-2 hover:text-cyan-700 active:text-cyan-600"
+          >
+            Logout <FiLogOut />
+          </button>
+        </div>
       ) : (
-        <Link href="/account/login" className="mt-4 flex items-center gap-2">
+        <Link
+          href="/account/login"
+          className="mt-4 flex items-center gap-2 hover:text-cyan-700 active:text-cyan-600"
+        >
           Login <FiLogIn />
         </Link>
       )}
