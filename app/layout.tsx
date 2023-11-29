@@ -5,6 +5,7 @@ import "./globals.css";
 import "react-toastify/dist/ReactToastify.css";
 
 import Navbar from "./components/Navbar";
+import AuthContextProvider from "./firebase/auth/AuthContext";
 
 export const metadata: Metadata = {
   title: "Legion Builder",
@@ -19,9 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-w-screen min-h-screen bg-stone-900 text-stone-100 flex flex-col items-center">
-        <Navbar />
-        {children}
-        <Analytics />
+        <AuthContextProvider>
+          <Navbar />
+          {children}
+          <Analytics />
+        </AuthContextProvider>
       </body>
     </html>
   );
