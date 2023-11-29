@@ -26,6 +26,8 @@ export default function Home() {
           <li>1500pt Legion with Reaver</li>
         </Link>
       </ul>
+      <p>Hope this feature doesn't break anyone's lists! </p>
+
       <p className="sm:text-xl text-center mt-2">
         On reflection I'm not going to add in full special rules or weapon
         traits onto the site. Instead I'll try to keep it to one line tooltips
@@ -65,7 +67,7 @@ export default function Home() {
       <div className="mt-8">
         <h2 className="text-xl text-center">UPDATES:</h2>
         <ul className="list-disc flex flex-col gap-2">
-          <li>29/11/2023: Added accounts and list linking.</li>
+          <li>29/11/2023: Added accounts and a database for list storage</li>
           <li>
             28/11/2023: On request I've added the Quick Start Guide Legion
             Astranii Class Augumented Spearhead formation. It's currently listed
