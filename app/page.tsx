@@ -32,7 +32,7 @@ export default function Home() {
       <p>
         I'm glad everyone seems to like it. I really didn't expect that many
         people to actually sign up for it but it has been interesting looking at
-        some peoples lists.
+        peoples lists.
       </p>
 
       <h2 className="text-lg font-graduate text-cyan-700 mt-2">Print cards</h2>
