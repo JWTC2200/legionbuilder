@@ -67,6 +67,10 @@ export default function Home() {
       <div className="mt-4">
         <h2 className="text-xl text-center mb-2">UPDATES:</h2>
         <ul className="list-disc flex flex-col gap-2">
+          <li>
+            30/11/2023: Bit of styling. Seems like people are finding the
+            accounts/list saving feature ok?
+          </li>
           <li>29/11/2023: Added accounts and a database for list storage</li>
           <li>
             28/11/2023: On request I've added the Quick Start Guide Legion
