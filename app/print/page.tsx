@@ -1,113 +1,59 @@
 "use client";
 
-import React from "react";
-import {
-  BUILDER_DETACHMENT_SLOT,
-  BUILDER_DETACHMENT_UNIT_UPGRADES,
-  BUILDER_FORMATION,
-  BUILDER_LIST,
-} from "../types";
-import {
-  detachmentPoints,
-  detachmentSize,
-  formationPoints,
-  listPoints,
-} from "../builder/utils";
+import React, { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
+import { BUILDER_LIST } from "../types";
+import { formationPoints, listPoints } from "../builder/utils";
+import { formationHTML } from "./util";
+import { getList } from "../firebase/firestore/getList";
 
 const page = () => {
-  const armyList =
-    typeof window !== "undefined"
-      ? localStorage.getItem("legionbuilder")
-      : null;
-  if (armyList) {
-    const listJson: BUILDER_LIST = JSON.parse(armyList);
+  const searchParams = useSearchParams();
+  const [armyList, setArmyList] = useState<BUILDER_LIST | null>(null);
+  const [failureMessage, setFailureMessage] = useState<string | null>(null);
 
-    const formationHTML = (formation: BUILDER_FORMATION) => {
-      const compulsorySlots = formation.compulsory
-        ? formation.compulsory.map((slot) => slotHTML(slot))
-        : null;
+  useEffect(() => {
+    const listParams = searchParams.get("listId");
 
-      const optionalSlots = formation.optional
-        ? formation.optional.map((slot) => slotHTML(slot))
-        : null;
-
-      const choiceSlots = formation.choice
-        ? formation.choice.map((set) => set.map((slot) => slotHTML(slot)))
-        : null;
-      return (
-        <div>
-          {formation.compulsory ? (
-            <div className="mb-1">
-              <h3 className="font-graduate">Compulsory Slots:</h3>
-              <ul className="list-disc">{compulsorySlots}</ul>
-            </div>
-          ) : null}
-          {formation.optional ? (
-            <div className="mb-1">
-              <h3 className="font-graduate">Optional Slots:</h3>
-              <ul className="list-disc">{optionalSlots}</ul>
-            </div>
-          ) : null}
-          {formation.choice && formation.choice.length ? (
-            <div className="mb-1">
-              <h3 className="font-graduate">Choice slots:</h3>
-              <ul className="list-disc">{choiceSlots}</ul>
-            </div>
-          ) : null}
-        </div>
-      );
-    };
-
-    const slotHTML = (slot: BUILDER_DETACHMENT_SLOT) => {
-      if (slot.selected_unit) {
-        return (
-          <li key={slot.slot_ref} className="ml-4">
-            <strong>{slot.type}</strong>: {slot.selected_unit.name}{" "}
-            {`(${detachmentSize(slot.selected_unit)})`}
-            {", "}
-            {detachmentPoints(slot.selected_unit)}pts{}
-            {upgradesHTML(slot.selected_unit.upgrade_options, slot.slot_ref)}
-          </li>
-        );
+    const getDblist = async (id: string) => {
+      const data: any = await getList(id);
+      if (data) {
+        setArmyList(data);
+      } else {
+        setFailureMessage("Could not find list");
       }
-      return null;
     };
 
-    const upgradesHTML = (
-      upgradeArray: BUILDER_DETACHMENT_UNIT_UPGRADES[],
-      slot_ref: string
-    ) => {
-      const upgrades = upgradeArray
-        .filter((upgrade) => upgrade.number)
-        .map((upgr) => (
-          <li key={slot_ref + upgr.name}>
-            {upgr.text ? upgr.text : `${upgr.number} ${upgr.name}`}
-          </li>
-        ));
-      if (upgrades.length) {
-        return <ul className="text-xs">{upgrades}</ul>;
-      }
-      return null;
-    };
+    if (listParams) {
+      getDblist(listParams);
+    } else {
+      const list =
+        typeof window !== undefined
+          ? JSON.parse(localStorage.getItem("legionbuilder")!)
+          : null;
+      setArmyList(list as BUILDER_LIST);
+    }
+  }, []);
 
-    return (
-      <main className="w-full min-h-screen bg-slate-50 text-green-950 p-4 flex justify-center">
+  return (
+    <main className="w-full min-h-screen bg-slate-50 text-green-950 p-4 flex justify-center">
+      {armyList ? (
         <div className="w-full max-w-screen-lg">
           <div className="mb-2">
             <h1 className="font-bold font-subrayada text-xl">
-              {listJson.list_name}
+              {armyList.list_name}
             </h1>
             <h2 className="font-bold font-graduate">
               List total:{" "}
-              {listPoints(listJson).allyFactionPoints +
-                listPoints(listJson).mainFactionPoints}{" "}
+              {listPoints(armyList).allyFactionPoints +
+                listPoints(armyList).mainFactionPoints}{" "}
               points
             </h2>
             <h2 className="font-bold font-graduate">
-              Main faction: {listJson.main_faction}
+              Main faction: {armyList.main_faction}
             </h2>
           </div>
-          {listJson.formations.map((formation, index) => (
+          {armyList.formations.map((formation, index) => (
             <div key={"formaton" + index} className="text-sm mb-2">
               <h3 className="text-base">
                 <strong>Formation {index + 1}</strong>: {formation.name}
@@ -118,13 +64,11 @@ const page = () => {
             </div>
           ))}
         </div>
-      </main>
-    );
-  }
-
-  return (
-    <main className="w-full min-h-screen bg-slate-50 justify-center items-center text-center">
-      <h2>No list found</h2>
+      ) : (
+        <main className="w-full min-h-screen bg-slate-50 justify-center items-center text-center">
+          {failureMessage ? <p>{failureMessage}</p> : <h2>No list found</h2>}
+        </main>
+      )}
     </main>
   );
 };

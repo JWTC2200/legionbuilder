@@ -10,6 +10,7 @@ import { BUILDER_FORMATION, BUILDER_LIST, FACTION } from "../types";
 import BuilderFormation from "./components/BuilderFormation";
 import { listPoints } from "./utils";
 import { useAuthContext } from "../firebase/auth/AuthContext";
+import { returnToTop } from "../utils/scrolltotop";
 
 import { nanoid } from "nanoid";
 
@@ -130,12 +131,6 @@ const page = () => {
           toast.error(upload.message);
         }
       }
-    }
-  };
-
-  const returnToTop = () => {
-    if (typeof window !== undefined) {
-      window.scroll({ top: 0, behavior: "smooth" });
     }
   };
 

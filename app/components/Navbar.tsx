@@ -121,7 +121,7 @@ const Navbar = () => {
           {menu ? <RxCross1 /> : <GiHamburgerMenu />}
         </button>
         {menu ? (
-          <nav className="absolute flex flex-col bg-stone-900 rounded-xl -bottom-2 translate-y-full right-0 text-lg px-2 py-4">
+          <nav className="absolute flex flex-col navbar_burger_background border-4 border-green-950 rounded-xl -bottom-2 translate-y-full right-0 text-lg px-2 py-4">
             <Link
               href="/reference"
               onClick={() => setMenu((prev) => !prev)}

@@ -69,7 +69,9 @@ export default function Home() {
         <ul className="list-disc flex flex-col gap-2">
           <li>
             30/11/2023: Bit of styling. Seems like people are finding the
-            accounts/list saving feature ok?
+            accounts/list saving feature ok? For convenience I've added a direct
+            link to the print page in the Lists tab if you don't want to go
+            through the builder.
           </li>
           <li>29/11/2023: Added accounts and a database for list storage</li>
           <li>

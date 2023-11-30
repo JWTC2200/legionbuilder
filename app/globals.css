@@ -98,6 +98,26 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#052e16",endColorstr="#0b5516",GradientType=1);
 }
 
+.navbar_burger_background {
+  background: rgb(28, 25, 23);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(28, 25, 23, 1) 87%,
+    rgba(68, 64, 60, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(28, 25, 23, 1) 87%,
+    rgba(68, 64, 60, 1) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(28, 25, 23, 1) 87%,
+    rgba(68, 64, 60, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1c1917",endColorstr="#44403c",GradientType=1);
+}
+
 select {
   @apply cursor-pointer;
 }

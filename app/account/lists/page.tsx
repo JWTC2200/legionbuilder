@@ -7,6 +7,8 @@ import { getUserLists } from "@/app/firebase/firestore/getUserLists";
 import { BUILDER_LIST } from "@/app/types";
 import { ToastContainer, toast } from "react-toastify";
 
+import { listPoints } from "@/app/builder/utils";
+
 import { FaCopy } from "react-icons/fa";
 import { MdDeleteForever } from "react-icons/md";
 import { deleteList } from "@/app/firebase/firestore/deleteList";
@@ -17,10 +19,8 @@ const page = () => {
   const router = useRouter();
   const [userLists, setUserLists] = useState<BUILDER_LIST[]>([]);
 
-  const addToClipboard = (id: string) => {
-    navigator.clipboard.writeText(
-      `https://legionbuilder.vercel.app/builder?listId=${id}`
-    );
+  const addToClipboard = (link: string) => {
+    navigator.clipboard.writeText(link);
     toast.success("Link added to clipboard");
   };
 
@@ -75,13 +75,6 @@ const page = () => {
               className="flex flex-col w-full max-w-[300px] border-2 border-green-950 rounded-xl p-2 dataslate_background  text-green-950"
             >
               <div className="flex justify-between items-center p-2">
-                <button
-                  onClick={() => addToClipboard(list.list_id)}
-                  className="flex flex-col justify-center items-center text-lg hover:text-cyan-700"
-                >
-                  <FaCopy className="text-4xl" />
-                  <span className="text-xs">Copy link</span>
-                </button>
                 <Link
                   href={`/builder?listId=${list.list_id}`}
                   className="text-lg font-semibold text-center hover:text-cyan-700 font-graduate"
@@ -91,13 +84,40 @@ const page = () => {
               </div>
               <div>
                 <ul>
-                  <li>Game size: {list.points} points</li>
-                  <li>Army: {list.main_faction}</li>
+                  <li>
+                    {listPoints(list).allyFactionPoints +
+                      listPoints(list).mainFactionPoints}
+                    /{list.points}pts
+                  </li>
+                  <li>{list.main_faction}</li>
                   <li>Formations: {list.formations.length}</li>
                 </ul>
               </div>
-              <div className="flex justify-end">
-                {" "}
+              <div className="flex justify-between mt-2">
+                <div className="flex gap-2">
+                  <button
+                    onClick={() =>
+                      addToClipboard(
+                        `https://legionbuilder.vercel.app/builder?listId=${list.list_id}`
+                      )
+                    }
+                    className="flex flex-col justify-center items-center text-lg hover:text-cyan-700"
+                  >
+                    <FaCopy className="text-4xl" />
+                    <span className="text-xs">Builder link</span>
+                  </button>
+                  <button
+                    onClick={() =>
+                      addToClipboard(
+                        `https://legionbuilder.vercel.app/print?listId=${list.list_id}`
+                      )
+                    }
+                    className="flex flex-col justify-center items-center text-lg hover:text-cyan-700"
+                  >
+                    <FaCopy className="text-4xl" />
+                    <span className="text-xs">Print link</span>
+                  </button>
+                </div>
                 <button
                   onClick={() => handleDeleteList(list.list_id, list.user_id)}
                   className="flex flex-col justify-center items-center text-lg  hover:text-red-700"
