@@ -49,6 +49,7 @@ export default function Home() {
         height={450}
         width={750}
         alt={"print list and cards icon"}
+        className="rounded-lg"
       />
       <p className="sm:text-lg my-2">
         Originally I thought this would be problematic as cards would get cut
