@@ -2,15 +2,18 @@ import Link from "next/link";
 import { TfiEmail } from "react-icons/tfi";
 import { FaGithub } from "react-icons/fa6";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-start p-8 gap-2 max-w-screen-md text-brown-50">
+    <main className="flex flex-col items-start p-2 gap-2 max-w-screen-md text-brown-50 sm:text-lg">
+      <h2 className="text-lg font-graduate text-cyan-700">Accounts</h2>
       <p className="sm:text-lg">
         I'ved added accounts for people who might be interested. I stress it is
         NOT REQUIRED to use the builder. It only enables you to save (currently
         up to 5) lists which you can then link/share if you wanted to.
       </p>
+
       <h3 className="text-center">A couple examples:</h3>
       <ul className="list-disc pl-6">
         <Link
@@ -26,14 +29,31 @@ export default function Home() {
           <li>1500pt Legion with Reaver</li>
         </Link>
       </ul>
-      <p>Hope this feature doesn't break anyone's lists! </p>
+      <p>
+        I'm glad everyone seems to like it. I really didn't expect that many
+        people to actually sign up for it but it has been interesting looking at
+        some peoples lists.
+      </p>
 
-      <p className="sm:text-lg mt-2">
-        On reflection I'm not going to add in full special rules or weapon
-        traits onto the site. Instead I'll try to keep it to one line tooltips
-        where possible and if the rule is too wordy for that a page reference to
-        the rulebook instead. Its a bit of a blurry line but I feel that lifting
-        whole parts of the rulebook out word for word is a bit too much for me.
+      <h2 className="text-lg font-graduate text-cyan-700 mt-2">Print cards</h2>
+      <p className="sm:text-lg">
+        It's been requested a few times and when now when you go to the print
+        page there is a icon on the top-left, as shown below, that will toggle
+        unit cards for printing (it's off by default).
+      </p>
+      <p className="sm:text-lg mb-2">
+        Trying to keep it minimal and unobtrusive.
+      </p>
+      <Image
+        src="/images/print_cards.png"
+        height={450}
+        width={750}
+        alt={"print list and cards icon"}
+      />
+      <p className="sm:text-lg my-2">
+        Originally I thought this would be problematic as cards would get cut
+        between page breaks in the print screen. Turns out theres a css property
+        for it.
       </p>
       <p className="sm:text-lg mt-2">
         If there's anything you'd like added please feel free to contact me
@@ -64,14 +84,18 @@ export default function Home() {
           </p>
         </Link>
       </div>
-      <div className="mt-4">
+      <div className="mt-4 text-base">
         <h2 className="text-xl text-center mb-2">UPDATES:</h2>
         <ul className="list-disc flex flex-col gap-2">
           <li>
-            30/11/2023: Bit of styling. Seems like people are finding the
-            accounts/list saving feature ok? For convenience I've added a direct
-            link to the print page in the Lists tab if you don't want to go
-            through the builder.
+            <ul>
+              <li>30/11/2023: Bit of styling on the /build page</li>
+              <li>
+                For convenience I've added a direct link to the print page in
+                the Lists tab if you don't want to go through the builder.
+              </li>
+              <li>Added print cards button on /print page</li>
+            </ul>
           </li>
           <li>29/11/2023: Added accounts and a database for list storage</li>
           <li>

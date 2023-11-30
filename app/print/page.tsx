@@ -4,17 +4,22 @@ import React, { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { BUILDER_LIST } from "../types";
 import { formationPoints, listPoints } from "../builder/utils";
-import { formationHTML } from "./util";
+import { formationHTML, listCards } from "./util";
 import { getList } from "../firebase/firestore/getList";
+import { unitData } from "../data/unit_data";
+import UnitDataslate from "../components/UnitDataslate";
+
+import { MdListAlt } from "react-icons/md";
+import { PiCardsLight } from "react-icons/pi";
 
 const page = () => {
   const searchParams = useSearchParams();
   const [armyList, setArmyList] = useState<BUILDER_LIST | null>(null);
   const [failureMessage, setFailureMessage] = useState<string | null>(null);
+  const [showCards, setShowCards] = useState(false);
 
   useEffect(() => {
     const listParams = searchParams.get("listId");
-
     const getDblist = async (id: string) => {
       const data: any = await getList(id);
       if (data) {
@@ -38,7 +43,14 @@ const page = () => {
   return (
     <main className="w-full min-h-screen bg-slate-50 text-green-950 p-4 flex justify-center">
       {armyList ? (
-        <div className="w-full max-w-screen-lg">
+        <div className="w-full max-w-screen-sm">
+          <button
+            type="button"
+            onClick={() => setShowCards((prev) => !prev)}
+            className="text-xl"
+          >
+            {showCards ? <PiCardsLight /> : <MdListAlt />}
+          </button>
           <div className="mb-2">
             <h1 className="font-bold font-subrayada text-xl">
               {armyList.list_name}
@@ -63,11 +75,19 @@ const page = () => {
               {formationHTML(formation)}
             </div>
           ))}
+          {showCards ? (
+            <div className="break-inside-avoid-page">
+              {listCards(armyList).map((id) => {
+                const data = unitData.find((unit) => unit.id == id)!;
+                return <UnitDataslate key={"card" + id} {...data} />;
+              })}
+            </div>
+          ) : null}
         </div>
       ) : (
-        <main className="w-full min-h-screen bg-slate-50 justify-center items-center text-center">
+        <div className="w-full min-h-screen bg-slate-50 justify-center items-center text-center">
           {failureMessage ? <p>{failureMessage}</p> : <h2>No list found</h2>}
-        </main>
+        </div>
       )}
     </main>
   );

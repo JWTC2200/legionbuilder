@@ -2,8 +2,10 @@ import {
   BUILDER_FORMATION,
   BUILDER_DETACHMENT_SLOT,
   BUILDER_DETACHMENT_UNIT_UPGRADES,
+  BUILDER_LIST,
 } from "../types";
 import { detachmentPoints, detachmentSize } from "../builder/utils";
+import { detachmentData } from "../data/detachment_data";
 
 export const formationHTML = (formation: BUILDER_FORMATION) => {
   const compulsorySlots = formation.compulsory
@@ -71,4 +73,47 @@ export const upgradesHTML = (
     return <ul className="text-xs">{upgrades}</ul>;
   }
   return null;
+};
+
+export const listCards = (list: BUILDER_LIST) => {
+  const unitIds = list.formations.map((formation) => {
+    const compulsoryIds = formation.compulsory?.map(
+      (slot) => slot.selected_unit?.id
+    );
+    const optionIds = formation.optional?.map((slot) => {
+      slot.selected_unit?.id;
+    });
+    const choiceIds = formation.choice?.map((array) => {
+      array.map((slot) => {
+        slot.selected_unit?.id;
+      });
+    });
+    return [compulsoryIds, optionIds, choiceIds];
+  });
+
+  const filteredFlatIds = Array.from(
+    new Set(
+      unitIds
+        .flat()
+        .flat()
+        .filter((id) => {
+          return id !== undefined;
+        })
+    )
+  );
+
+  const relatedIds = Array.from(
+    new Set(
+      filteredFlatIds
+        .map((id) => {
+          const related = detachmentData.find(
+            (detachment) => detachment.id === id
+          )!;
+          return [related.main_unit, related.related_unit].flat();
+        })
+        .flat()
+    )
+  );
+
+  return relatedIds;
 };

@@ -9,7 +9,7 @@ const UnitDataslate = (unit: UNIT_DATASHEET) => {
   const unitWeaponRows = getUnitWeaponRows(unit.weapons);
 
   return (
-    <article className="max-w-screen-xl sm:p-2 text-sm sm:text-base dataslate_background sm:rounded-lg">
+    <article className="max-w-screen-xl sm:p-2 text-sm sm:text-base dataslate_background sm:rounded-lg break-inside-avoid">
       {/* TITLE */}
       <div className="flex gap-2 justify-between items-center bg-green-950 text-green-50 py-1 px-2 mb-2">
         <h2 className="text-xl sm:text-2xl font-graduate font-bold">
