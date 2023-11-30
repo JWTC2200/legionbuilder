@@ -52,14 +52,11 @@ export default function Home() {
         className="rounded-lg"
       />
       <p className="sm:text-lg my-2">
-        Originally I thought this would be problematic as cards would get cut
-        between page breaks in the print screen. Turns out theres a css property
-        for it.
+        I thought this would be problematic as cards would get cut between page
+        breaks in the print screen. Turns out theres a css property for it.
       </p>
-      <p className="sm:text-lg mt-2">
-        If there's anything you'd like added please feel free to contact me
-        below. Thank you!
-      </p>
+
+      <h2 className="text-lg font-graduate text-cyan-700 mt-2">Suggestions?</h2>
       <Link
         href="/contact"
         className="hover:underline text-xl flex items-end gap-1 hover:text-cyan-700 active:text-cyan-700 focus:text-cyan-700"
