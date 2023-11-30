@@ -5,14 +5,14 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center p-8 gap-2 max-w-screen-md text-brown-50">
-      <p className="sm:text-xl text-center">
+    <main className="flex flex-col items-start p-8 gap-2 max-w-screen-md text-brown-50">
+      <p className="sm:text-lg">
         I'ved added accounts for people who might be interested. I stress it is
         NOT REQUIRED to use the builder. It only enables you to save (currently
         up to 5) lists which you can then link/share if you wanted to.
       </p>
       <h3 className="text-center">A couple examples:</h3>
-      <ul className="list-disc">
+      <ul className="list-disc pl-6">
         <Link
           href="/builder?listId=FiNHSyWqDlNN4DORsztEw"
           className="text-cyan-700 hover:text-cyan-400 "
@@ -28,14 +28,14 @@ export default function Home() {
       </ul>
       <p>Hope this feature doesn't break anyone's lists! </p>
 
-      <p className="sm:text-xl text-center mt-2">
+      <p className="sm:text-lg mt-2">
         On reflection I'm not going to add in full special rules or weapon
         traits onto the site. Instead I'll try to keep it to one line tooltips
         where possible and if the rule is too wordy for that a page reference to
         the rulebook instead. Its a bit of a blurry line but I feel that lifting
         whole parts of the rulebook out word for word is a bit too much for me.
       </p>
-      <p className="sm:text-xl text-center mt-2">
+      <p className="sm:text-lg mt-2">
         If there's anything you'd like added please feel free to contact me
         below. Thank you!
       </p>
@@ -53,7 +53,7 @@ export default function Home() {
         Github <FaGithub />
       </Link>
 
-      <div className="text-xl ">
+      <div className="text-lg ">
         <Link
           href="https://www.youtube.com/@blackbriargaming5483"
           className="text-cyan-700"
@@ -64,8 +64,8 @@ export default function Home() {
           </p>
         </Link>
       </div>
-      <div className="mt-8">
-        <h2 className="text-xl text-center">UPDATES:</h2>
+      <div className="mt-4">
+        <h2 className="text-xl text-center mb-2">UPDATES:</h2>
         <ul className="list-disc flex flex-col gap-2">
           <li>29/11/2023: Added accounts and a database for list storage</li>
           <li>
@@ -107,7 +107,8 @@ export default function Home() {
           </li>
         </ul>
       </div>
-      <footer className="fixed bottom-0 border-t-2 bg-stone-900 w-full  max-w-screen-md ">
+      <hr className="border rounded-full bg-stone-900 w-11/12 my-4 " />
+      <footer className="mb-auto  max-w-screen-md ">
         <p>
           This website is unofficial and in no way endorsed by Games Workshop.{" "}
         </p>

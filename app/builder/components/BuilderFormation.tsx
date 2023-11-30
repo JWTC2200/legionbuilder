@@ -64,7 +64,7 @@ const BuilderFormation = ({
       className="sm:border-4 border-green-950 sm:rounded-xl flex flex-col items-center"
     >
       {/* FORMATION SELECTOR*/}
-      <div className="w-full bg-green-950 sm:rounded-t-lg flex flex-wrap  justify-center sm:justify-between items-center text-center px-2">
+      <div className="w-full banner_background sm:rounded-t-lg flex flex-wrap  justify-center sm:justify-between items-center text-center px-2">
         {/* Hide formation button */}
         <button
           type="button"
@@ -77,27 +77,27 @@ const BuilderFormation = ({
         </button>
         <div className="flex flex-wrap sm:gap-4 items-center justify-center">
           <select
-            className="bg-green-950 sm:text-xl py-2 font-graduate text-center max-w-[300px] sm:max-w-[400px] lg:max-w-full"
+            className="bg-transparent sm:text-xl py-2 font-graduate text-center max-w-[300px] sm:max-w-[400px] lg:max-w-full outline-none"
             value={formation.id}
             onChange={(e) => {
               chooseFormation(Number(e.target.value));
             }}
           >
-            <option value="0" className="text-green-50">
+            <option value="0" className="text-green-950">
               SELECT FORMATION
             </option>
             {formationData.map((format) => (
               <option
                 key={formation.ref_id + format.name}
                 value={format.id}
-                className="text-green-50"
+                className="text-green-950"
               >
                 {format.name}
               </option>
             ))}
           </select>
           {formation.id ? (
-            <h3 className="bg-green-950 sm:rounded-t-lg sm:text-xl py-2 font-graduate text-center">
+            <h3 className="bg-inherit sm:rounded-t-lg sm:text-xl py-2 font-graduate text-center">
               {formationPoints(formation)} points
             </h3>
           ) : null}

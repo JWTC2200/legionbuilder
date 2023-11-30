@@ -25,7 +25,7 @@ const BuilderDetachment = ({
   setArmyList: React.Dispatch<React.SetStateAction<BUILDER_LIST>>;
 }) => {
   const detachmentSelectedHighlight = detachmentSlot.selected_unit
-    ? " text-sky-800"
+    ? " text-sky-800 font-semibold"
     : "";
 
   // filtering for custom detachment slots
@@ -142,7 +142,7 @@ const BuilderDetachment = ({
 
   return (
     <div className="flex flex-col w-full sm:w-[450px]">
-      <h4 className="sm:w-full flex gap-1 items-center justify-center bg-green-950 rounded-md text-green-50 text-graduate text-center py-1 sm:text-xl font-graduate px-2 mx-2 sm:mx-0">
+      <h4 className="sm:w-full flex gap-1 items-center justify-center builder_title_background rounded-md text-green-50 text-graduate text-center py-1 sm:text-xl font-graduate px-2 mx-2 sm:mx-0">
         {getDetachmentIcons(detachmentSlot.type)} {detachmentSlot.type}
         {getDetachmentIcons(detachmentSlot.type)}
       </h4>

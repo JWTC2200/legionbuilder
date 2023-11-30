@@ -42,7 +42,7 @@ const BuilderUnitUpgradeSelect = ({
   }
 
   const upgradeSelectedHighlight =
-    upgradeOption.number > 0 ? " text-sky-800" : "";
+    upgradeOption.number > 0 ? " text-sky-800 font-semibold" : "";
 
   const newUpgradeObject = (
     upgradeId: number
@@ -153,7 +153,7 @@ const BuilderUnitUpgradeSelect = ({
         }
       >
         <option value="0" className="text-black">
-          {upgradeOption.name}: none
+          {upgradeOption.name}
         </option>
         {upgradeObject.options.map((upgrade, index) => (
           <option

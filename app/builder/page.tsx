@@ -46,7 +46,7 @@ const page = () => {
   // SET TO TRUE FOR ANY INFORMATION POPUP
   const [infoPopup, setInfoPopup] = useState(true);
 
-  const widgetHeight = infoWidget ? "h-28 sm:h-36" : "h-12 sm:h-20";
+  const widgetHeight = infoWidget ? "h-24 sm:h-36" : "h-12 sm:h-20";
   const widgetWidth = sideWidget ? "w-80" : "w-8";
 
   const savedList =
@@ -187,13 +187,13 @@ const page = () => {
         }}
       />
       {/* NOTICES / WARNINGS */}
-      {/* <div className="text-red-600 text-center">
-  
+      {/* <div className="text-red-600 text-center">  
       </div> */}
       {infoPopup ? <InfoPopup toggle={setInfoPopup} /> : null}
+
       {/* INFORMATION WIDGET BOTTOM */}
       <div
-        className={`fixed w-full max-w-screen-2xl bg-stone-800 text-stone-50 font-graduate bottom-0 px-2 flex flex-col text-sm sm:text-lg transition-all${
+        className={`fixed w-full max-w-screen-2xl bg-stone-800 text-stone-50 font-graduate bottom-0 px-2 flex flex-col text-xs sm:text-lg transition-all${
           " " + widgetHeight
         }`}
       >
@@ -340,7 +340,7 @@ const page = () => {
       ) : null}
 
       {/* MAIN LIST OPTIONS */}
-      <div className="w-full mx-4 p-4 bg-green-950 text-green-50 flex flex-wrap justify-center gap-4 text-center">
+      <div className="w-full mx-4 p-4 builder_head_background text-green-50 flex flex-wrap justify-center gap-4 text-center">
         <div>
           <label htmlFor="game_size" className="sm:text-xl font-graduate mr-1">
             Game size:
@@ -353,10 +353,14 @@ const page = () => {
                 return { ...prev, points: Number(e.target.value) };
               })
             }
-            className="bg-green-950 rounded-sm p-1 sm:text-lg font-semibold "
+            className="bg-transparent rounded-sm p-1 sm:text-lg font-semibold "
           >
             {gameSizes.map((size) => (
-              <option value={size} key={"gameSize" + size}>
+              <option
+                value={size}
+                key={"gameSize" + size}
+                className="text-green-950"
+              >
                 {size}pts
               </option>
             ))}
@@ -377,16 +381,20 @@ const page = () => {
                 return { ...prev, main_faction: e.target.value as FACTION };
               })
             }
-            className="bg-green-950 rounded-sm p-1 sm:text-lg font-graduate"
+            className="bg-transparent rounded-sm p-1 sm:text-lg font-graduate"
           >
-            <option value="Legiones Astartes">Legiones Astartes</option>
-            <option value="Solar Auxillia">Solar Auxillia</option>
+            <option value="Legiones Astartes" className="text-green-950">
+              Legiones Astartes
+            </option>
+            <option value="Solar Auxillia" className="text-green-950">
+              Solar Auxillia
+            </option>
           </select>
         </div>
       </div>
 
       {/* LIST NAME SECTION */}
-      <div className="text-green-950 font-semibold flex gap-2 justify-center border border-green-950 items-center py-2 px-4 rounded-xl">
+      <div className="text-green-950 font-semibold flex gap-2 justify-center border border-green-950 items-center py-2 px-4 rounded-xl max-w-full">
         <ImQuill />
         <input
           type="text"
@@ -397,14 +405,14 @@ const page = () => {
               return { ...prev, list_name: e.target.value };
             })
           }
-          className="max-w-[300px] bg-inherit text-center font-graduate text-xl"
+          className=" bg-inherit text-center font-graduate text-xl"
         />
         <ImQuill />
       </div>
 
       {/* ADD FORMATION AND FORMATION QUICK NAV LINKS */}
       <div className="w-full text-green-50 flex flex-col justify-center gap-2">
-        <div className="bg-green-950 flex flex-wrap justify-center items-center text-center gap-4">
+        <div className="builder_title_background flex flex-wrap justify-center items-center text-center gap-4 w-max mx-auto rounded-full px-3 border-4 border-green-900 hover:border-cyan-700">
           <button
             onClick={addFormation}
             className="p-1 hover:text-cyan-700 font-graduate sm:text-xl flex items-center gap-1"
@@ -415,12 +423,12 @@ const page = () => {
         </div>
 
         {armyList.formations.length ? (
-          <div className="w-full text-green-50 bg-green-950 flex flex-col justify-center items-center">
+          <div className="w-full text-green-50 bg-green-950 flex flex-col py-2 justify-center items-center">
             {armyList.formations.map((formation, index) => (
               <Link
                 href={`#${formation.ref_id}`}
                 key={formation.ref_id + "link"}
-                className="flex items-center gap-1 hover:text-cyan-700 active:text-cyan-700"
+                className="flex items-center text-center gap-1 hover:text-cyan-700 active:text-cyan-700"
               >
                 <FiChevronDown />
                 Formation {index + 1}{" "}
