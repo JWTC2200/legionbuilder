@@ -42,7 +42,7 @@ const page = () => {
   };
 
   useEffect(() => {
-    if (!user) {
+    if (user) {
       loadLists();
     }
   }, [user]);
