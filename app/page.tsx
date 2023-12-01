@@ -37,9 +37,9 @@ export default function Home() {
 
       <h2 className="text-lg font-graduate text-cyan-700 mt-2">Print cards</h2>
       <p className="sm:text-lg">
-        It's been requested a few times and when now when you go to the print
-        page there is a icon on the top-left, as shown below, that will toggle
-        unit cards for printing (it's off by default).
+        It's been requested a few times and now when you go to the print page
+        there is a icon on the top-left, as shown below, that will toggle unit
+        cards for printing (it's off by default).
       </p>
       <p className="sm:text-lg mb-2">
         Trying to keep it minimal and unobtrusive.
