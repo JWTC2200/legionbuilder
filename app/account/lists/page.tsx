@@ -43,9 +43,8 @@ const page = () => {
 
   useEffect(() => {
     if (!user) {
-      router.push("/");
+      loadLists();
     }
-    loadLists();
   }, [user]);
 
   return (
@@ -130,7 +129,9 @@ const page = () => {
           ))}
         </div>
       ) : (
-        <h2 className="font-graduate text-xl mt-4">You have no saved lists!</h2>
+        <h2 className="font-graduate text-xl mt-4">
+          {user ? "You have no saved lists!" : "You are not logged in"}
+        </h2>
       )}
     </main>
   );

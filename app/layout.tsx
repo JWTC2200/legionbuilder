@@ -9,7 +9,8 @@ import AuthContextProvider from "./firebase/auth/AuthContext";
 
 export const metadata: Metadata = {
   title: "Legion Builder",
-  description: "List builder for Legion Imperiallis",
+  description:
+    "A List builder for Warhammer: The Horus Heresy - Legion Imperialis",
 };
 
 export default function RootLayout({
