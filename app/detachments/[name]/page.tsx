@@ -1,7 +1,7 @@
 import React from "react";
 import { detachmentData } from "@/app/data/detachment_data";
 import { notFound } from "next/navigation";
-import DetachmentDataslate from "@/app/components/DetachmentDataslate";
+import DetachmentDataslate from "@components/DetachmentDataslate";
 
 const page = ({ params: { name } }: { params: { name: string } }) => {
   const detachmentName = name.replaceAll("_", " ");

@@ -4,7 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import "react-toastify/dist/ReactToastify.css";
 
-import Navbar from "./components/Navbar";
+import Navbar from "@components/Navbar";
 import AuthContextProvider from "./firebase/auth/AuthContext";
 
 export const metadata: Metadata = {

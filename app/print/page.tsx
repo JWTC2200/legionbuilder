@@ -7,7 +7,7 @@ import { formationPoints, listPoints } from "../builder/utils";
 import { formationHTML, listCards } from "./util";
 import { getList } from "../firebase/firestore/getList";
 import { unitData } from "../data/unit_data";
-import UnitDataslate from "../components/UnitDataslate";
+import UnitDataslate from "@components/UnitDataslate";
 
 import { MdListAlt } from "react-icons/md";
 import { PiCardsLight } from "react-icons/pi";

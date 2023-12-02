@@ -3,7 +3,7 @@ import { TfiEmail } from "react-icons/tfi";
 import { FaGithub } from "react-icons/fa6";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import Image from "next/image";
-import FrontpageUpdates from "./components/FrontpageUpdates";
+import FrontpageUpdates from "@components/FrontpageUpdates";
 
 export default function Home() {
   return (
