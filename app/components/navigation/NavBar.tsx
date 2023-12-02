@@ -4,18 +4,19 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { getAuth, signOut } from "firebase/auth";
 import { FiLogOut } from "react-icons/fi";
-import Logo from "@components/navigation/Logo";
-import NavItem from "@components/navigation/NavItem";
-import Hamburger from "@components/navigation/Hamburger";
+import Logo from "./Logo";
+import NavItem from "./NavItem";
+import Hamburger from "./Hamburger";
+import { useNavState } from "./state";
 
 export default function NavBar() {
   const pathname = usePathname();
+  const { visible, toggle } = useNavState();
 
   if (pathname === "/print") {
     return null;
   }
 
-  const [visible, setVisibility] = useState<boolean>(false);
   const [user, setUser] = useState<string|null>(null)
 
   useEffect(() => {
@@ -25,10 +26,6 @@ export default function NavBar() {
   const handleLogOut = async () => {
     await signOut(getAuth());
   };
-
-  function toggleVisibility() {
-      setVisibility(prev => !prev);
-  }
 
   return (
     <div className="w-full bg-lime-950 py-4 px-4 lg:px-8 flex lg:flex-col justify-between lg:justify-center gap-2 items-center text-center font-subrayada">
@@ -57,7 +54,7 @@ export default function NavBar() {
           </nav>
       </div>
 
-      <Hamburger toggle={toggleVisibility} visible={visible} />
+      <Hamburger />
     </div>
   );
 };
