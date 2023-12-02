@@ -39,7 +39,7 @@ export default function Home() {
         people to actually sign up for it but it has been interesting looking at
         peoples lists.
       </p>
-
+      {/* 
       <h2 className="text-lg font-graduate text-cyan-700 mt-2">Print cards</h2>
       <p className="sm:text-lg">
         It's been requested a few times and now when you go to the print page
@@ -55,7 +55,7 @@ export default function Home() {
         width={750}
         alt={"print list and cards icon"}
         className="rounded-lg"
-      />
+      /> */}
 
       {/* CONTACT SECTION */}
       <h2 className="text-lg font-graduate text-cyan-700 mt-2">Suggestions?</h2>

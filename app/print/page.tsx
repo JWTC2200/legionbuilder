@@ -44,13 +44,13 @@ const page = () => {
     <main className="w-full min-h-screen bg-slate-50 text-green-950 p-4 flex justify-center">
       {armyList ? (
         <div className="w-full max-w-screen-sm">
-          <button
+          {/* <button
             type="button"
             onClick={() => setShowCards((prev) => !prev)}
             className="text-xl"
           >
             {showCards ? <PiCardsLight /> : <MdListAlt />}
-          </button>
+          </button> */}
           <div className="mb-2">
             <h1 className="font-bold font-subrayada text-xl">
               {armyList.list_name}
