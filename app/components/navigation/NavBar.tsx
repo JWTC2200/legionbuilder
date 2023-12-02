@@ -3,21 +3,16 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useAuthContext } from "../firebase/auth/AuthContext";
+import { useAuthContext } from "../../firebase/auth/AuthContext";
 import { getAuth, signOut } from "firebase/auth";
-
-import {
-  GiChewedSkull,
-  GiTank,
-  GiVerticalBanner,
-  GiHamburgerMenu,
-} from "react-icons/gi";
+import { GiChewedSkull, GiTank, GiVerticalBanner, GiHamburgerMenu } from "react-icons/gi";
 import { FaClipboardList, FaBook } from "react-icons/fa";
 import { FiLogIn, FiLogOut } from "react-icons/fi";
 import { RxCross1 } from "react-icons/rx";
 import { MdManageAccounts } from "react-icons/md";
+import { Logo } from "@components/navigation/Logo";
 
-const Navbar = () => {
+const NavBar = () => {
   const pathname = usePathname();
   if (pathname === "/print") {
     return null;
@@ -34,11 +29,7 @@ const Navbar = () => {
 
   return (
     <nav className="w-full bg-green-950 text-green-50 py-4 px-4 lg:px-8 flex lg:flex-col justify-center gap-2 items-center text-center font-subrayada">
-      <Link href="/" className={`hover:text-cyan-700 active:text-cyan-600`}>
-        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold">
-          Legion Builder
-        </h1>
-      </Link>
+      <Logo/>
       <div className="hidden lg:flex max-w-screen-md flex-wrap items-center text-center justify-center gap-4">
         <Link
           href="/reference"
@@ -202,4 +193,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;

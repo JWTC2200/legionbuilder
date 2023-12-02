@@ -4,7 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import "react-toastify/dist/ReactToastify.css";
 
-import Navbar from "@components/Navbar";
+import NavBar from "@components/navigation/NavBar";
 import AuthContextProvider from "./firebase/auth/AuthContext";
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="min-w-screen min-h-screen bg-stone-900 text-stone-100 flex flex-col items-center">
         <AuthContextProvider>
-          <Navbar />
+          <NavBar />
           {children}
           <Analytics />
         </AuthContextProvider>
