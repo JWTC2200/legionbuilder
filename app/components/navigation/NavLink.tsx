@@ -5,8 +5,10 @@ import { FaBook, FaClipboardList } from "react-icons/fa";
 import { MdManageAccounts } from "react-icons/md";
 import { FiLogIn, FiLogOut } from "react-icons/fi";
 import {useNavState} from "@components/navigation/state";
+import {ReactNode} from "react";
+import {IconType} from "react-icons";
 
-const components = {
+const components: {[key: string]: IconType} = {
     account: MdManageAccounts,
     banner: GiVerticalBanner,
     book: FaBook,
@@ -17,8 +19,14 @@ const components = {
     tank: GiTank,
 };
 
-export default function NavLink({ path, icon, children }) {
-    const Icon = components[icon];
+interface Properties {
+    path: string;
+    icon: string;
+    children: ReactNode;
+}
+
+export default function NavLink({ path, icon, children }: Properties) {
+    const Icon: IconType = components[icon];
     const { hide } = useNavState();
     const active = usePathname().startsWith(path);
 

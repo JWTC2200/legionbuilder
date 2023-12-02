@@ -1,6 +1,12 @@
 import { create } from 'zustand'
 
-export const useNavState = create((set) => ({
+interface NavState {
+    visible: boolean;
+    toggle: () => void;
+    hide: () => void;
+}
+
+export const useNavState = create<NavState>()((set) => ({
     visible: false,
     toggle: () => set((state) => ({ visible: !state.visible })),
     hide: () => set(() => ({ visible: false })),
