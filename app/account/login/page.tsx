@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useRouter } from "next/navigation";
@@ -24,8 +24,10 @@ const page = () => {
     }
 
     setError("");
+
     try {
-      await signInWithEmailAndPassword(auth, email, password);
+      const credentials = await signInWithEmailAndPassword(auth, email, password);
+      sessionStorage.setItem('uid', credentials.user.uid);
       router.push("/");
     } catch (error) {
       console.log(error);

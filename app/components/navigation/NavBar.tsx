@@ -1,196 +1,63 @@
 "use client";
 
-import React, { useState } from "react";
-import Link from "next/link";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { useAuthContext } from "../../firebase/auth/AuthContext";
 import { getAuth, signOut } from "firebase/auth";
-import { GiChewedSkull, GiTank, GiVerticalBanner, GiHamburgerMenu } from "react-icons/gi";
-import { FaClipboardList, FaBook } from "react-icons/fa";
-import { FiLogIn, FiLogOut } from "react-icons/fi";
-import { RxCross1 } from "react-icons/rx";
-import { MdManageAccounts } from "react-icons/md";
-import { Logo } from "@components/navigation/Logo";
+import { FiLogOut } from "react-icons/fi";
+import Logo from "@components/navigation/Logo";
+import NavItem from "@components/navigation/NavItem";
+import Hamburger from "@components/navigation/Hamburger";
 
-const NavBar = () => {
+export default function NavBar() {
   const pathname = usePathname();
+
   if (pathname === "/print") {
     return null;
   }
 
-  const [menu, setMenu] = useState<boolean>(false);
+  const [visible, setVisibility] = useState<boolean>(false);
+  const [user, setUser] = useState<string|null>(null)
 
-  const { user } = useAuthContext();
-  const auth = getAuth();
+  useEffect(() => {
+    setUser(sessionStorage.getItem('uid'));
+  }, []);
 
   const handleLogOut = async () => {
-    await signOut(auth);
+    await signOut(getAuth());
   };
 
-  return (
-    <nav className="w-full bg-green-950 text-green-50 py-4 px-4 lg:px-8 flex lg:flex-col justify-center gap-2 items-center text-center font-subrayada">
-      <Logo/>
-      <div className="hidden lg:flex max-w-screen-md flex-wrap items-center text-center justify-center gap-4">
-        <Link
-          href="/reference"
-          className={`flex gap-1 items-center hover:text-cyan-700 active:text-cyan-600 ${
-            pathname.startsWith("/reference") ? " text-cyan-700" : ""
-          }`}
-        >
-          <GiChewedSkull /> Reference
-          <GiChewedSkull />
-        </Link>
-        <Link
-          href="/detachments"
-          className={`flex gap-1 items-center hover:text-cyan-700 active:text-cyan-600 ${
-            pathname.startsWith("/detachments") ? " text-cyan-700" : ""
-          }`}
-        >
-          <GiTank /> Detachments
-          <GiTank />
-        </Link>
-        <Link
-          href="/formations"
-          className={`flex gap-1 items-center hover:text-cyan-700 active:text-cyan-600 ${
-            pathname.startsWith("/formations") ? " text-cyan-700" : ""
-          }`}
-        >
-          <GiVerticalBanner /> Formations
-          <GiVerticalBanner />
-        </Link>
-        <Link
-          href="/builder"
-          className={`flex gap-1 items-center hover:text-cyan-700 active:text-cyan-600 ${
-            pathname.startsWith("/builder") ? " text-cyan-700" : ""
-          }`}
-        >
-          <FaClipboardList />
-          List Builder
-          <FaClipboardList />
-        </Link>
-      </div>
-      {user ? (
-        <div className="hidden lg:flex flex-wrap gap-4 items-center justify-center">
-          <Link
-            href="/account/lists"
-            className="flex gap-1 items-center hover:text-cyan-700 active:text-cyan-600"
-          >
-            <FaBook /> Lists
-            <FaBook />
-          </Link>
-          <Link
-            href="/account"
-            className="flex gap-1 items-center hover:text-cyan-700 active:text-cyan-600"
-          >
-            <MdManageAccounts />
-            Account
-            <MdManageAccounts />
-          </Link>
-          <button
-            onClick={handleLogOut}
-            className="flex items-center gap-2 hover:text-cyan-700 active:text-cyan-600"
-          >
-            Logout <FiLogOut />
-          </button>
-        </div>
-      ) : (
-        <Link
-          href="/account/login"
-          className="hidden lg:flex items-center gap-2 hover:text-cyan-700 active:text-cyan-600"
-        >
-          Login <FiLogIn />
-        </Link>
-      )}
+  function toggleVisibility() {
+      setVisibility(prev => !prev);
+  }
 
-      {/* SMALL SCREEN HAMBURGER MENU */}
-      <div className="lg:hidden relative flex items-center">
-        <button
-          type="button"
-          onClick={() => setMenu((prev) => !prev)}
-          className="text-2xl hover:text-cyan-700 active:text-cyan-700"
-        >
-          {menu ? <RxCross1 /> : <GiHamburgerMenu />}
-        </button>
-        {menu ? (
-          <nav className="absolute flex flex-col navbar_burger_background border-4 border-green-950 rounded-xl -bottom-2 translate-y-full right-0 text-lg px-2 py-4">
-            <Link
-              href="/reference"
-              onClick={() => setMenu((prev) => !prev)}
-              className={`flex gap-1 items-center hover:text-cyan-700 active:text-cyan-600 ${
-                pathname.startsWith("/reference") ? " text-cyan-700" : ""
-              }`}
-            >
-              <GiChewedSkull /> Reference
-            </Link>
-            <Link
-              href="/detachments"
-              onClick={() => setMenu((prev) => !prev)}
-              className={`flex gap-1 items-center hover:text-cyan-700 active:text-cyan-600 ${
-                pathname.startsWith("/detachments") ? " text-cyan-700" : ""
-              }`}
-            >
-              <GiTank /> Detachments
-            </Link>
-            <Link
-              href="/formations"
-              onClick={() => setMenu((prev) => !prev)}
-              className={`flex gap-1 items-center hover:text-cyan-700 active:text-cyan-600 ${
-                pathname.startsWith("/formations") ? " text-cyan-700" : ""
-              }`}
-            >
-              <GiVerticalBanner /> Formations
-            </Link>
-            <Link
-              href="/builder"
-              onClick={() => setMenu((prev) => !prev)}
-              className={`flex gap-1 items-center hover:text-cyan-700 active:text-cyan-600 ${
-                pathname.startsWith("/builder") ? " text-cyan-700" : ""
-              }`}
-            >
-              <FaClipboardList />
-              List Builder
-            </Link>
-            <hr className="border border-stone-50 w-11/12 mx-auto my-2" />
-            {user ? (
-              <div className="flex flex-col items-start">
-                <Link
-                  href="/account/lists"
-                  onClick={() => setMenu((prev) => !prev)}
-                  className="flex gap-1 items-center hover:text-cyan-700 active:text-cyan-600"
-                >
-                  <FaBook /> Lists
-                </Link>
-                <Link
-                  href="/account"
-                  onClick={() => setMenu((prev) => !prev)}
-                  className="flex gap-1 items-center hover:text-cyan-700 active:text-cyan-600"
-                >
-                  <MdManageAccounts /> Account
-                </Link>
-                <button
-                  onClick={() => {
-                    handleLogOut;
-                    setMenu((prev) => !prev);
-                  }}
-                  className="flex items-center gap-2 hover:text-cyan-700 active:text-cyan-600"
-                >
-                  Logout <FiLogOut />
-                </button>
-              </div>
-            ) : (
-              <Link
-                href="/account/login"
-                onClick={() => setMenu((prev) => !prev)}
-                className="flex items-center gap-2 hover:text-cyan-700 active:text-cyan-600"
-              >
-                Login <FiLogIn />
-              </Link>
-            )}
+  return (
+    <div className="w-full bg-lime-950 py-4 px-4 lg:px-8 flex lg:flex-col justify-between lg:justify-center gap-2 items-center text-center font-subrayada">
+      <Logo/>
+      <div className={'z-30 absolute top-0 right-0 bottom-0 left-0 bg-stone-950/75 backdrop-blur-sm flex items-center justify-center text-2xl lg:text-base ' + (visible ? 'flex' : 'hidden')}>
+          <nav className="flex flex-col lg:flex-row gap-6">
+            <NavItem path={"/reference"} icon={"skull"}>Reference</NavItem>
+            <NavItem path={"/detachments"} icon={"tank"}>Detachments</NavItem>
+            <NavItem path={"/formations"} icon={"banner"}>Formations</NavItem>
+            <NavItem path={"/builder"} icon={"clipboard"}>List builder</NavItem>
+              {user ? (
+                  <div className="hidden lg:flex flex-wrap gap-4 items-center justify-center">
+                      <NavItem path={"/account/lists"} icon={"book"}>
+                          Lists
+                      </NavItem>
+                      <NavItem path={"/account"} icon={"account"}>
+                          Account
+                      </NavItem>
+                      <button onClick={handleLogOut} className="flex items-center gap-2 hover:text-cyan-700 active:text-cyan-600">
+                          Logout <FiLogOut />
+                      </button>
+                  </div>
+              ) : (
+                  <NavItem path={"/account/login"} icon={"login"}>Login</NavItem>
+              )}
           </nav>
-        ) : null}
       </div>
-    </nav>
+
+      <Hamburger toggle={toggleVisibility} visible={visible} />
+    </div>
   );
 };
-
-export default NavBar;

@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-w-screen min-h-screen bg-stone-900 text-stone-100 flex flex-col items-center">
+      <body className="z-0 min-w-screen min-h-screen bg-stone-900 text-stone-100 flex flex-col items-center">
         <AuthContextProvider>
           <NavBar />
           {children}
