@@ -20,10 +20,11 @@ const components = {
 export default function NavItem({ path, icon, children }) {
     const Icon = components[icon];
     const { hide } = useNavState();
+    const active = usePathname().startsWith(path);
 
     return (
-        <Link href={path} className={`flex gap-2 items-center ${usePathname().startsWith(path) ? " text-lime-50" : "text-lime-400 hover:text-lime-100"}`} onClick={hide}>
-            <Icon className="opacity-70" />
+        <Link href={path} className={`flex gap-2 items-center ${active ? " text-lime-50" : "text-lime-400 hover:text-lime-100"}`} onClick={hide}>
+            <Icon className={active ? 'text-white' : 'opacity-70'} />
             <span>{children}</span>
         </Link>
     );

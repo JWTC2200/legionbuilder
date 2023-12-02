@@ -11,7 +11,7 @@ import { useNavState } from "./state";
 
 export default function NavBar() {
   const pathname = usePathname();
-  const { visible, toggle } = useNavState();
+  const { visible, hide } = useNavState();
 
   if (pathname === "/print") {
     return null;
@@ -30,8 +30,8 @@ export default function NavBar() {
   return (
     <div className="w-full bg-lime-950 py-4 px-4 lg:px-8 flex lg:flex-col justify-between lg:justify-center gap-2 items-center text-center font-subrayada">
       <Logo/>
-      <div className={'z-30 absolute top-0 right-0 bottom-0 left-0 bg-stone-950/75 backdrop-blur-sm flex items-center justify-center text-2xl lg:text-base ' + (visible ? 'flex' : 'hidden')}>
-          <nav className="flex flex-col lg:flex-row gap-6">
+      <div className={'z-30 absolute top-0 right-0 bottom-0 left-0 bg-stone-950/70 backdrop-blur-md flex items-center justify-center text-2xl lg:text-base ' + (visible ? 'flex' : 'hidden')} onClick={hide}>
+          <nav className="flex flex-col lg:flex-row gap-6 -mt-20 lg:-mt-0">
             <NavItem path={"/reference"} icon={"skull"}>Reference</NavItem>
             <NavItem path={"/detachments"} icon={"tank"}>Detachments</NavItem>
             <NavItem path={"/formations"} icon={"banner"}>Formations</NavItem>
