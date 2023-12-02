@@ -1,5 +1,5 @@
 import { weaponData } from "../data/weapon_data";
-import WeaponTraitBox from "../components/WeaponTraitBox";
+import WeaponTraitBox from "@components/WeaponTraitBox";
 
 export const getUnitWeaponRows = (unit: number[]) => {
   return unit.map((weapon) => {

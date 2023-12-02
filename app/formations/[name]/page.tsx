@@ -1,7 +1,7 @@
 import React from "react";
 import { formationData } from "@/app/data/formation_data";
 import { notFound } from "next/navigation";
-import FormationDataslate from "@/app/components/FormationDataslate";
+import FormationDataslate from "@components/FormationDataslate";
 
 const page = ({ params: { name } }: { params: { name: string } }) => {
   const formationName = name.replaceAll("_", " ");

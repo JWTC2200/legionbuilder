@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 import { weaponData } from "@/app/data/weapon_data";
 
-import WeaponTraitBox from "@/app/components/WeaponTraitBox";
+import WeaponTraitBox from "@components/WeaponTraitBox";
 
 const page = () => {
   const [searchTerm, setSearchTerm] = useState("");

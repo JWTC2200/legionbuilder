@@ -21,7 +21,7 @@ import { TbChevronCompactLeft, TbChevronCompactRight } from "react-icons/tb";
 import { ImBin, ImQuill } from "react-icons/im";
 import { FiPrinter, FiChevronDown } from "react-icons/fi";
 
-import InfoPopup from "../components/InfoPopup";
+import InfoPopup from "@components/InfoPopup";
 import { saveData } from "../firebase/firestore/saveData";
 import { getList } from "../firebase/firestore/getList";
 
