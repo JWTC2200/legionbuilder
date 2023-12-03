@@ -1,23 +1,8 @@
-import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { GiChewedSkull, GiTank, GiVerticalBanner} from "react-icons/gi";
-import { FaBook, FaClipboardList } from "react-icons/fa";
-import { MdManageAccounts } from "react-icons/md";
-import { FiLogIn, FiLogOut } from "react-icons/fi";
-import {useNavState} from "@components/navigation/state";
-import {ReactNode} from "react";
-import {IconType} from "react-icons";
-
-const components: {[key: string]: IconType} = {
-    account: MdManageAccounts,
-    banner: GiVerticalBanner,
-    book: FaBook,
-    clipboard: FaClipboardList,
-    logout: FiLogOut,
-    login: FiLogIn,
-    skull: GiChewedSkull,
-    tank: GiTank,
-};
+import { useNavState } from "@components/navigation/state";
+import { ReactNode } from "react";
+import Link from "next/link";
+import Icons from "@components/Icons";
 
 interface Properties {
     path: string;
@@ -26,13 +11,13 @@ interface Properties {
 }
 
 export default function NavLink({ path, icon, children }: Properties) {
-    const Icon: IconType = components[icon];
+    const Icon = Icons[icon];
     const { hide } = useNavState();
     const active = usePathname().startsWith(path);
 
     return (
-        <Link href={path} className={`flex gap-2 items-center ${active ? " text-lime-50" : "text-lime-400 hover:text-lime-100"}`} onClick={hide}>
-            <Icon className={active ? 'text-white' : 'opacity-70'} />
+        <Link href={path} className={`flex gap-4 lg:gap-2 items-center ${active ? " text-lime-50" : "text-lime-400 hover:text-lime-100"}`} onClick={hide}>
+            <Icon className={`w-6 h-6 lg:w-4 lg:h-4 ${active ? 'text-white' : 'opacity-70'}`} />
             <span>{children}</span>
         </Link>
     );

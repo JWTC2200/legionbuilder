@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
+import { ReactNode } from "react";
 
 import "./globals.css";
 import "react-toastify/dist/ReactToastify.css";
@@ -13,11 +14,7 @@ export const metadata: Metadata = {
     "A List builder for Warhammer: The Horus Heresy - Legion Imperialis",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className="z-0 min-w-screen min-h-screen bg-stone-900 text-stone-100 flex flex-col items-center">

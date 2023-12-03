@@ -1,9 +1,8 @@
-import NavLink from "@components/navigation/NavLink";
-import { FiLogOut } from "react-icons/fi";
 import { getAuth, signOut } from "firebase/auth";
-import { MdAccountCircle } from "react-icons/md";
+import { useState } from "react";
+import { AccountCircle, Logout } from "@components/Icons";
+import NavLink from "./NavLink";
 import NavItem from "./NavItem";
-import {useState} from "react";
 
 export default function AccountNavItem() {
     const logout = async () => {
@@ -14,8 +13,8 @@ export default function AccountNavItem() {
 
     return (
         <NavItem className="group flex flex-col">
-            <button className="w-full flex gap-2 items-center text-lime-400 hover:text-lime-100">
-                <MdAccountCircle/>
+            <button className="w-full flex gap-4 lg:gap-2 items-center text-lime-400 hover:text-lime-100">
+                <AccountCircle className={"w-6 h-6 lg:w-4 lg:h-4"}/>
                 <span>Account</span>
             </button>
             <nav className={"relative"}>
@@ -25,10 +24,10 @@ export default function AccountNavItem() {
                             <NavLink path={"/account/lists"} icon={"book"}>Lists</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink path={"/account"} icon={"account"}>Profile</NavLink>
+                            <NavLink path={"/account"} icon={"manageAccount"}>Profile</NavLink>
                         </NavItem>
                         <button onClick={logout} className="flex items-center gap-2 hover:text-cyan-700 active:text-cyan-600">
-                            <FiLogOut />
+                            <Logout />
                             <span>Logout</span>
                         </button>
                     </ol>

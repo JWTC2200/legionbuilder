@@ -1,7 +1,7 @@
 "use client";
 
-import {useEffect, useState} from "react";
-import {useNavState} from "./state";
+import { useEffect, useState } from "react";
+import { useNavState } from "./state";
 import AccountNavItem from "./AccountNavItem";
 import Logo from "./Logo";
 import NavLink from "./NavLink";

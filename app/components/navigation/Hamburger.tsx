@@ -1,5 +1,4 @@
-import { RxCross1 } from "react-icons/rx";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { Close, Menu } from "@components/Icons"
 import { useNavState } from "./state";
 
 export default function Hamburger() {
@@ -7,7 +6,7 @@ export default function Hamburger() {
 
     return (
         <button type="button" className="relative z-50 text-2xl hover:text-lime-700 active:text-lime-700 lg:hidden" onClick={toggle}>
-            {visible ? <RxCross1/> : <GiHamburgerMenu/>}
+            {visible ? <Close/> : <Menu/>}
         </button>
     );
 };
