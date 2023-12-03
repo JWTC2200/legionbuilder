@@ -122,7 +122,7 @@ const page = () => {
         const upload = await saveData(newList);
         if (upload.uploaded) {
           toast.success(upload.message);
-          router.replace(`/builder?listId=${newList.list_id}`);
+
           if (typeof window !== "undefined") {
             localStorage.setItem("legionbuilder", JSON.stringify(newList));
           }

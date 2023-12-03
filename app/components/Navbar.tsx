@@ -19,7 +19,7 @@ import { MdManageAccounts } from "react-icons/md";
 
 const Navbar = () => {
   const pathname = usePathname();
-  if (pathname === "/print") {
+  if (pathname === "/print" || pathname === "/lists/view") {
     return null;
   }
 

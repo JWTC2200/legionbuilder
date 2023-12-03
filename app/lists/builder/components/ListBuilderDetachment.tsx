@@ -5,7 +5,7 @@ import { listState } from "../state";
 import { BUILDER_DETACHMENT_SLOT, SLOTSET, FACTION } from "@/app/types";
 import ListBuilderDetachmentTitle from "./ListBuilderDetachmentTitle";
 import ListBuilderDetachmentDetails from "./ListBuilderDetachmentDetails";
-import ListBuilderDetachmentDescription from "./listBuilderDetachmentDescription";
+import ListBuilderDetachmentDescription from "./ListBuilderDetachmentDescription";
 import ListBuilderDetachmentSelect from "./ListBuilderDetachmentSelect";
 import ListBuilderDetachmentUpgrades from "./ListBuilderDetachmentUpgrades";
 
