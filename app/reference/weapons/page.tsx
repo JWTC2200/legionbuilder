@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { weapons } from "@/app/data/weapon_data";
 import WeaponTraitBox from "@components/WeaponTraitBox";
-import {WeaponRow} from "@/app/reference/weapons/WeaponRow";
+import WeaponRow from "@/app/reference/weapons/WeaponRow";
 
 const page = () => {
     const [searchTerm, setSearchTerm] = useState("");
@@ -27,70 +27,7 @@ const page = () => {
         weapon.name.toLowerCase().includes(searchTerm.toLowerCase().trim())
     );
 
-    const weaponRows2 = filteredWeapons.map(weapon => <WeaponRow weapon={weapon} key={weapon.id} />)
-
-    const weaponRows = filteredWeapons.map((weapon) => (
-        <tr className="even:bg-stone-300 odd:bg-stone-100" key={weapon.id}>
-            <td className="px-2">
-                {weapon.profiles.length > 1 ? (
-                    <p>{weapon.name}</p>
-                ) : (
-                    <p>{weapon.name}</p>
-                )}
-            </td>
-            <td className="text-center">
-                {weapon.profiles.map((profile, index) => (
-                    <p key={weapon.name + "range" + index}>
-                        {profile.range ? profile.range : "-"}
-                    </p>
-                ))}
-            </td>
-            <td className="text-center">
-                {weapon.profiles.map((profile, index) => (
-                    <p key={weapon.name + "dice" + index}>
-                        {profile.dice ? profile.dice : "-"}
-                    </p>
-                ))}
-            </td>
-            <td className="text-center">
-                {weapon.profiles.map((profile, index) => (
-                    <p key={weapon.name + "tohit" + index}>
-                        {profile.to_hit ? profile.to_hit + "+" : "-"}
-                    </p>
-                ))}
-            </td>
-            <td className="text-center">
-                {weapon.profiles.map((profile, index) => (
-                    <p key={weapon.name + "ap" + index}>
-                        {typeof profile.ap === "number"
-                            ? profile.ap
-                                ? `-${profile.ap}`
-                                : profile.ap
-                            : profile.ap}
-                    </p>
-                ))}
-            </td>
-            <td className="px-2">
-                {weapon.profiles.map((profile, index) => (
-                    <div
-                        key={weapon.name + "traits" + index}
-                        className="flex flex-wrap gap-1"
-                    >
-                        {profile.traits.length ? (
-                            profile.traits.map((trait, index) => (
-                                <div key={weapon.name + "traits" + index} className="flex">
-                                    <WeaponTraitBox trait={trait}/>
-                                    {index < profile.traits.length - 1 ? "," : "."}
-                                </div>
-                            ))
-                        ) : (
-                            <br/>
-                        )}
-                    </div>
-                ))}
-            </td>
-        </tr>
-    ));
+    const weaponRows = filteredWeapons.map(weapon => <WeaponRow weapon={weapon} key={weapon.id} />)
 
     return (
         <main className="h-full w-full max-w-4xl dataslate_background flex flex-col">
@@ -103,9 +40,9 @@ const page = () => {
             </section>
 
             <section className="flex flex-col">
-                <header className="flex flex-col bg-lime-950 p-4 py-2">
-                    <div className="w-full">Weapon</div>
-                    <div className="flex">
+                <header className="flex flex-col bg-lime-950">
+                    <div className="w-full border-b border-lime-600 px-4 py-1">Weapon</div>
+                    <div className="flex px-4 py-1 text-sm">
                         <div className="w-[15%]">Range</div>
                         <div className="w-[15%] text-center">Dice</div>
                         <div className="w-[15%] text-center">To hit</div>
@@ -115,23 +52,9 @@ const page = () => {
                 </header>
 
                 <section>
-                    {weaponRows2}
+                    {weaponRows}
                 </section>
             </section>
-
-            <table className="w-full max-w-screen-md border-2 border-black">
-                <thead className="bg-lime-950 text-lime-50">
-                <tr>
-                    <th className="text-start px-2">Weapon</th>
-                    <th className="text-center">Range</th>
-                    <th className="text-center">Dice</th>
-                    <th className="text-center">To Hit</th>
-                    <th className="text-center">AP</th>
-                    <th className="text-start px-2">Traits</th>
-                </tr>
-                </thead>
-                <tbody className="text-stone-900">{weaponRows}</tbody>
-            </table>
         </main>
     );
 };
