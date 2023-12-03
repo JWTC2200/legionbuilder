@@ -43,11 +43,11 @@ const page = () => {
                 <header className="flex flex-col bg-lime-950">
                     <div className="w-full border-b border-lime-600 px-4 py-1">Weapon</div>
                     <div className="flex px-4 py-1 text-sm">
-                        <div className="w-[15%]">Range</div>
-                        <div className="w-[15%] text-center">Dice</div>
-                        <div className="w-[15%] text-center">To hit</div>
-                        <div className="w-[15%] text-center">AP</div>
-                        <div className="w-[40%]">Traits</div>
+                        <div className="basis-[16%]">Range</div>
+                        <div className="basis-[12%] text-center">Dice</div>
+                        <div className="basis-[12%] text-center">To hit</div>
+                        <div className="basis-[12%] text-center">AP</div>
+                        <div className="basis-[48%]">Traits</div>
                     </div>
                 </header>
 
