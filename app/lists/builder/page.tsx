@@ -1,14 +1,14 @@
 "use client";
 
 import React from "react";
-import { listState } from "./state";
 import BuilderWidgetBottom from "./components/BuilderWidgetBottom";
+import ListBuilder from "./components/ListBuilder";
 
 const page = () => {
-  const { list, setList, clearList } = listState();
   return (
     <div className="h-screen w-full ">
-      builder <BuilderWidgetBottom />
+      <ListBuilder />
+      <BuilderWidgetBottom />
     </div>
   );
 };
