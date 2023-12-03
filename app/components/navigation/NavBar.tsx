@@ -31,7 +31,7 @@ export default function NavBar() {
                         <NavLink path="/formations" icon="banner">Formations</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink path="/builder" icon="clipboard">List builder</NavLink>
+                        <NavLink path="/builder" icon="builder">List builder</NavLink>
                     </NavItem>
 
                     {user ? (
