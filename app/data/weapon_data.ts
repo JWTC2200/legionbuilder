@@ -2,7 +2,7 @@ import { WEAPON_DATASHEET } from "../types";
 
 // astartes 1000-1999, solar 2000-2999, knights-titans 4000-4999
 
-export const weaponData: WEAPON_DATASHEET[] = [
+export const weapons: WEAPON_DATASHEET[] = [
   // ********************************************************************
   // *************************ASTARTES WEAPONS **************************
   // ********************************************************************

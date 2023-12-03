@@ -3,7 +3,7 @@ import Link from "next/link";
 import { DETACHMENT } from "../types";
 import { unitData } from "../data/unit_data";
 import { notFound } from "next/navigation";
-import { weaponData } from "../data/weapon_data";
+import { weapons } from "../data/weapon_data";
 import { getUnitWeaponRows } from "../utils/unitweaponrows";
 import SpecialRuleBox from "./SpecialRuleBox";
 import UnitDataslate from "./UnitDataslate";
@@ -100,7 +100,7 @@ const DetachmentDataslate = (detachment: DETACHMENT) => {
               {loadout.weapon_option ? (
                 <ul className="list-disc grid grid-cols-2">
                   {loadout.weapon_option.map((weaponNumber) => {
-                    const foundWeapon = weaponData.find(
+                    const foundWeapon = weapons.find(
                       (weapon) => weapon.id === weaponNumber
                     );
                     if (foundWeapon) {
