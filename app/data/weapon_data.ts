@@ -2245,7 +2245,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
         traits: [
           { name: "Engine Killer", value: 2 },
           { name: "Rend" },
-          { name: "Wrecker", value: 4 },
+          { name: "Wrecker", value: 3 },
         ],
       },
     ],

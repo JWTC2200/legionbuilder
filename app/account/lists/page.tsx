@@ -62,7 +62,6 @@ const page = () => {
       {userLists.length ? (
         <div className="flex flex-wrap justify-center">
           <div className="w-full flex justify-center">
-            {" "}
             <h2 className="text-center text-xl font-graduate my-4 underline">
               Your saved lists:{" "}
             </h2>
