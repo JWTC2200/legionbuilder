@@ -6,7 +6,8 @@ import { toast } from "react-toastify";
 import { FiPlus } from "react-icons/fi";
 
 const ListBuilderAddFormation = () => {
-  const { list, setList, clearList } = listState();
+  const { list, setList } = listState();
+
   const addFormation = () => {
     const newFormation: BUILDER_FORMATION = {
       name: "",

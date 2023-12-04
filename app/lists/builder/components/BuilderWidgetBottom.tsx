@@ -37,6 +37,8 @@ const BuilderWidgetBottom = () => {
             <p>Formations: {list.formations.length}</p>
             {widget ? (
               <p>
+                {" "}
+                Allies:{" "}
                 {
                   list.formations.filter(
                     (formation) => formation.faction !== list.main_faction
@@ -52,8 +54,12 @@ const BuilderWidgetBottom = () => {
               Total: {armyTotalPoints}
               pts
             </p>
-            {widget ? <p>Main: {mainFactionPoints}pts</p> : null}
-            {widget ? <p>Allies: {allyFactionPoints}pts</p> : null}
+            {widget ? (
+              <>
+                <p>Main: {mainFactionPoints}pts</p>
+                <p>Allies: {allyFactionPoints}pts</p>{" "}
+              </>
+            ) : null}
           </div>
         </div>
         <div className="w-2/12 flex flex-col justify-evenly items-center py-2">

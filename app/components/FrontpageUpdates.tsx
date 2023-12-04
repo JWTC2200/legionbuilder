@@ -10,6 +10,13 @@ const FrontpageUpdates = () => {
         <ul className="flex flex-col gap-2">
           <li>
             <ul className="list-disc text-cyan-700">
+              04/12/2023:
+              <li className="ml-4 text-stone-50">Discord added</li>
+              <li className="ml-4 text-stone-50">List builder updated</li>
+            </ul>
+          </li>
+          <li>
+            <ul className="list-disc text-cyan-700">
               02/12/2023:
               <li className="ml-4 text-stone-50">
                 Removing the print cards feature as I might be going a too far.

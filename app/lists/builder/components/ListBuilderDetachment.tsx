@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { listState } from "../state";
 import { BUILDER_DETACHMENT_SLOT, SLOTSET, FACTION } from "@/app/types";
 import ListBuilderDetachmentTitle from "./ListBuilderDetachmentTitle";
 import ListBuilderDetachmentDetails from "./ListBuilderDetachmentDetails";
@@ -15,8 +14,6 @@ interface properties {
 }
 
 const ListBuilderDetachment = ({ detachmentSlot, slotSet }: properties) => {
-  const { list, setList } = listState();
-
   return (
     <div className="flex flex-col w-full sm:w-[450px]">
       <ListBuilderDetachmentTitle slotType={detachmentSlot.type} />

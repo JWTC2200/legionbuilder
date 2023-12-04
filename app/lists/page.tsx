@@ -38,7 +38,11 @@ const page = () => {
           <h2 className="font-graduate text-xl mt-4">Your lists</h2>
           <div className="w-full flex flex-wrap gap-2 justify-center mt-2">
             {userLists.map((list) => (
-              <UserListBox key={list.list_id} list={list} />
+              <UserListBox
+                key={list.list_id}
+                list={list}
+                setUserLists={setUserLists}
+              />
             ))}
           </div>
         </>

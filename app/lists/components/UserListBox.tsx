@@ -1,15 +1,35 @@
 import { BUILDER_LIST } from "@/app/types";
-import { addToClipboard } from "../utils";
+import { addToClipboard, loadLists } from "../utils";
 import React from "react";
 import Link from "next/link";
 import { FaCopy } from "react-icons/fa";
 import { MdDeleteForever } from "react-icons/md";
 import { listPointTotals } from "../utils";
 import { listState } from "../builder/state";
+import { toast } from "react-toastify";
+import { useAuthContext } from "@/app/firebase/auth/AuthContext";
+import { deleteList } from "@/app/firebase/firestore/deleteList";
 
-const UserListBox = ({ list }: { list: BUILDER_LIST }) => {
+interface properties {
+  list: BUILDER_LIST;
+  setUserLists: (lists: BUILDER_LIST[]) => void;
+}
+
+const UserListBox = ({ list, setUserLists }: properties) => {
   const { armyTotalPoints } = listPointTotals(list);
   const { setList } = listState();
+  const { user } = useAuthContext();
+
+  const handleDeleteList = async (id: string, userId: string) => {
+    if (user?.uid === userId) {
+      deleteList(id);
+      toast.warning("deleting list");
+      const newUserLists = await loadLists(user);
+      setUserLists(newUserLists);
+    } else {
+      toast.warning("Do not have permission to delete this list");
+    }
+  };
 
   return (
     <div
@@ -38,7 +58,7 @@ const UserListBox = ({ list }: { list: BUILDER_LIST }) => {
         <button
           onClick={() =>
             addToClipboard(
-              `https://legionbuilder.vercel.app/builder?listId=${list.list_id}`
+              `https://legionbuilder.app/lists/builder?listId=${list.list_id}`
             )
           }
           className="flex flex-col justify-center items-center text-lg hover:text-cyan-700"
@@ -47,7 +67,7 @@ const UserListBox = ({ list }: { list: BUILDER_LIST }) => {
           <span className="text-xs">Builder link</span>
         </button>
         <button
-          // onClick={() => handleDeleteList(list.list_id, list.user_id)}
+          onClick={() => handleDeleteList(list.list_id, list.user_id)}
           className="flex flex-col justify-center items-center text-lg  hover:text-red-700"
         >
           <MdDeleteForever className="text-4xl" />{" "}
