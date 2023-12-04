@@ -3,10 +3,10 @@ import NavLink from "./NavLink";
 import { FiLogOut } from "react-icons/fi";
 import { getAuth, signOut } from "firebase/auth";
 import { MdAccountCircle } from "react-icons/md";
-import { useAuthState } from "@/app/Auth";
+import useAuthState from "@/app/Auth";
 
 export default function() {
-    const { reset } = useAuthState();
+    const { reset } = useAuthState(state => state.reset);
 
     const logout = async () => {
         await signOut(getAuth());
