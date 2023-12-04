@@ -25,15 +25,19 @@ export default function Home() {
       <p>
         The list builder has changed so that it will take you to your saved
         lists first. The print button has been replaced with a view button.
-      </p>
-      <p>
         Previous links are incorrect but should still redirect you properly.
         Please let me know if they don't.
+      </p>
+      <p>
+        I've been informed that there are quite a few differences between the
+        digital and physical copy of the rules (classic GeeDubs). I'm still
+        waiting on my rulebook but assuming the digital version is correct/up to
+        date, we'll use that instead.
       </p>
       <p>Finally, our domain has been changed to legionbuilder.app!</p>
       <p>
         I really hope you enjoying using the site, I've been really enjoying all
-        the feedback and suggestions.{" "}
+        the feedback and suggestions.
       </p>
 
       {/* CONTACT SECTION */}
