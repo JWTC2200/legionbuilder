@@ -19,7 +19,7 @@ import { MdManageAccounts } from "react-icons/md";
 
 const Navbar = () => {
   const pathname = usePathname();
-  if (pathname === "/print") {
+  if (pathname === "/print" || pathname === "/lists/view") {
     return null;
   }
 
@@ -68,7 +68,7 @@ const Navbar = () => {
           <GiVerticalBanner />
         </Link>
         <Link
-          href="/builder"
+          href="/lists"
           className={`flex gap-1 items-center hover:text-cyan-700 active:text-cyan-600 ${
             pathname.startsWith("/builder") ? " text-cyan-700" : ""
           }`}
@@ -80,13 +80,6 @@ const Navbar = () => {
       </div>
       {user ? (
         <div className="hidden lg:flex flex-wrap gap-4 items-center justify-center">
-          <Link
-            href="/account/lists"
-            className="flex gap-1 items-center hover:text-cyan-700 active:text-cyan-600"
-          >
-            <FaBook /> Lists
-            <FaBook />
-          </Link>
           <Link
             href="/account"
             className="flex gap-1 items-center hover:text-cyan-700 active:text-cyan-600"
@@ -150,7 +143,7 @@ const Navbar = () => {
               <GiVerticalBanner /> Formations
             </Link>
             <Link
-              href="/builder"
+              href="/lists"
               onClick={() => setMenu((prev) => !prev)}
               className={`flex gap-1 items-center hover:text-cyan-700 active:text-cyan-600 ${
                 pathname.startsWith("/builder") ? " text-cyan-700" : ""
@@ -162,13 +155,6 @@ const Navbar = () => {
             <hr className="border border-stone-50 w-11/12 mx-auto my-2" />
             {user ? (
               <div className="flex flex-col items-start">
-                <Link
-                  href="/account/lists"
-                  onClick={() => setMenu((prev) => !prev)}
-                  className="flex gap-1 items-center hover:text-cyan-700 active:text-cyan-600"
-                >
-                  <FaBook /> Lists
-                </Link>
                 <Link
                   href="/account"
                   onClick={() => setMenu((prev) => !prev)}

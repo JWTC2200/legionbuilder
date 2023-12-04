@@ -1,64 +1,56 @@
 import Link from "next/link";
+import { FaGithub, FaDiscord } from "react-icons/fa6";
 import { TfiEmail } from "react-icons/tfi";
-import { FaGithub } from "react-icons/fa6";
-import { FaExternalLinkAlt } from "react-icons/fa";
-import Image from "next/image";
 import FrontpageUpdates from "@components/FrontpageUpdates";
 
 export default function Home() {
   return (
     <main className="flex flex-col items-start p-2 gap-2 max-w-screen-md text-brown-50 sm:text-lg">
-      <h2 className="text-lg font-graduate text-cyan-700 mt-2">Sadness..</h2>
+      <h2 className="text-lg font-graduate text-cyan-700 mt-2">Changes</h2>
       <p className="sm:text-lg">
-        My starter box isn't arriving until next week.
+        There has been a lot of work behind the scenes so apologies for any
+        confusion or issues that make occur.
       </p>
-      <h2 className="text-lg font-graduate text-cyan-700 mt-2">Accounts</h2>
-      <p className="sm:text-lg">
-        I'ved added accounts for people who might be interested. I stress it is
-        NOT REQUIRED to use the builder. It only enables you to save (currently
-        up to 5) lists which you can then link/share if you wanted to.
+      <p className="flex items-center gap-1">
+        First of all we have a
+        <Link
+          href="https://discord.gg/qyFkhXz9"
+          target="_blank"
+          className="hover:underline flex items-center gap-1 hover:text-cyan-700 active:text-cyan-700 focus:text-cyan-700"
+        >
+          Discord <FaDiscord />
+        </Link>
+        !
       </p>
-
-      <h3 className="text-center">A couple examples:</h3>
-      <ul className="list-disc pl-6">
-        <Link
-          href="/builder?listId=FiNHSyWqDlNN4DORsztEw"
-          className="text-cyan-700 hover:text-cyan-400 "
-        >
-          <li>1000pt starter list</li>
-        </Link>
-        <Link
-          href="/builder?listId=F64FkVkyPUlj8hxbST4KX"
-          className="text-cyan-700 hover:text-cyan-400 "
-        >
-          <li>1500pt Legion with Reaver</li>
-        </Link>
-      </ul>
       <p>
-        I'm glad everyone seems to like it. I really didn't expect that many
-        people to actually sign up for it but it has been interesting looking at
-        peoples lists.
+        The list builder has changed so that it will take you to your saved
+        lists first. The print button has been replaced with a view button.
+        Previous links are incorrect but should still redirect you properly.
+        Please let me know if they don't.
       </p>
-      {/* 
-      <h2 className="text-lg font-graduate text-cyan-700 mt-2">Print cards</h2>
-      <p className="sm:text-lg">
-        It's been requested a few times and now when you go to the print page
-        there is a icon on the top-left, as shown below, that will toggle unit
-        cards for printing (it's off by default).
+      <p>
+        I've been informed that there are quite a few differences between the
+        digital and physical copy of the rules, yay GeeDubs! I'm still waiting
+        on my rulebook but assuming the digital version is correct/up to date,
+        we'll use that instead.
       </p>
-      <p className="sm:text-lg mb-2">
-        Trying to keep it minimal and unobtrusive.
+      <p>Finally, our domain has been changed to legionbuilder.app!</p>
+      <p>
+        I really hope you enjoying using the site, I've been really enjoying all
+        the feedback and suggestions.
       </p>
-      <Image
-        src="/images/print_cards.png"
-        height={450}
-        width={750}
-        alt={"print list and cards icon"}
-        className="rounded-lg"
-      /> */}
 
       {/* CONTACT SECTION */}
-      <h2 className="text-lg font-graduate text-cyan-700 mt-2">Suggestions?</h2>
+      <h2 className="text-lg font-graduate text-cyan-700 mt-2">
+        Suggestions or feedback?
+      </h2>
+      <Link
+        href="https://discord.gg/qJc2cZGt"
+        target="_blank"
+        className="hover:underline text-xl flex items-center gap-1 hover:text-cyan-700 active:text-cyan-700 focus:text-cyan-700"
+      >
+        Join our Discord! <FaDiscord />
+      </Link>
       <Link
         href="/contact"
         className="hover:underline text-xl flex items-end gap-1 hover:text-cyan-700 active:text-cyan-700 focus:text-cyan-700"
