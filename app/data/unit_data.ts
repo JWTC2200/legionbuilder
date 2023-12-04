@@ -267,7 +267,7 @@ export const unitData: UNIT_DATASHEET[] = [
     caf: 0,
     morale: null,
     wounds: 1,
-    weapons: [1037, 1038, 1039, 1040],
+    weapons: [1037, 1038, 1040],
     special_rules: [
       { name: "Assault Transport", value: 5 },
       { name: "Flyer" },

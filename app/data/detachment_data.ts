@@ -697,7 +697,6 @@ export const detachmentData: DETACHMENT[] = [
           "Storm Eagle heavy bolter",
           "Vengeance launcher",
           "Wing Mounted lascannon",
-          "Tempest rockets",
         ],
       },
     ],
