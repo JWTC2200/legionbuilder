@@ -1,20 +1,17 @@
 "use client";
 
-import {useEffect, useState} from "react";
-import {useNavState} from "./state";
-import AccountNavItem from "./AccountNavItem";
+import { useEffect, useState } from "react";
+import { useNavState } from "./state";
+import Account from "./Account";
 import Logo from "./Logo";
 import NavLink from "./NavLink";
 import Hamburger from "./Hamburger";
 import NavItem from "@components/navigation/NavItem";
+import { useAuthState } from "@/app/Auth";
 
 export default function NavBar() {
     const {visible, hide} = useNavState();
-    const [user, setUser] = useState<string | null>(null)
-
-    useEffect(() => {
-        setUser(sessionStorage.getItem('uid'));
-    }, []);
+    const { authenticated } = useAuthState();
 
     return (
         <div className="w-full bg-lime-950 py-4 px-4 lg:px-8 flex lg:flex-col justify-between lg:justify-center gap-4 items-center text-center font-subrayada">
@@ -34,8 +31,8 @@ export default function NavBar() {
                         <NavLink path="/builder" icon="clipboard">List builder</NavLink>
                     </NavItem>
 
-                    {user ? (
-                        <AccountNavItem/>
+                    {authenticated() ? (
+                        <Account/>
                     ) : (
                         <NavItem>
                             <NavLink path="/account/login" icon="login">Login</NavLink>

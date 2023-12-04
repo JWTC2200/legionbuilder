@@ -1,16 +1,17 @@
-import NavLink from "@components/navigation/NavLink";
+import NavItem from "./NavItem";
+import NavLink from "./NavLink";
 import { FiLogOut } from "react-icons/fi";
 import { getAuth, signOut } from "firebase/auth";
 import { MdAccountCircle } from "react-icons/md";
-import NavItem from "./NavItem";
-import {useState} from "react";
+import { useAuthState } from "@/app/Auth";
 
-export default function AccountNavItem() {
+export default function() {
+    const { reset } = useAuthState();
+
     const logout = async () => {
         await signOut(getAuth());
+        reset();
     };
-
-    const [expanded, setExpanded] = useState(false);
 
     return (
         <NavItem className="group flex flex-col">
