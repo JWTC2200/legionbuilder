@@ -3,18 +3,18 @@ import { WEAPON_TRAIT_INFO } from "../types";
 export const weaponTraitsData: WEAPON_TRAIT_INFO[] = [
   {
     name: "Accurate",
-    tooltip: "Reroll misses",
+    tooltip: "Reroll failed hit rolls",
     description: [],
   },
   {
     name: "Arc",
-    tooltip: "Can only target detachments within specified firing arc",
+    tooltip: "Can only target detachments within specified arc",
     description: [],
   },
   {
     name: "Armourbane",
     tooltip:
-      "Vehicles, Super-Heavy Vehicles, Knights & Titans must reroll successful save",
+      "Vehicles, Super-Heavy Vehicles, Knights & Titans must reroll successful saves",
     description: [],
   },
   {
@@ -24,42 +24,42 @@ export const weaponTraitsData: WEAPON_TRAIT_INFO[] = [
   },
   {
     name: "Assault",
-    tooltip: "",
+    tooltip: "Doubles Dice within half range",
     description: [],
   },
   {
     name: "Barrage",
-    tooltip: "",
+    tooltip: "Main Rulebook p.78",
     description: [],
   },
   {
     name: "Beam",
-    tooltip: "",
+    tooltip: "Main Rulebook p.78",
     description: [],
   },
   {
     name: "Blast",
-    tooltip: "",
+    tooltip: "Main Rulebook p.78",
     description: [],
   },
   {
     name: "Bombing Run",
-    tooltip: "",
+    tooltip: "Main Rulebook p.79",
     description: [],
   },
   {
     name: "Bunker Buster",
-    tooltip: "",
+    tooltip: "Double AP value vs buildings",
     description: [],
   },
   {
     name: "Burrowing",
-    tooltip: "",
+    tooltip: "Hits count against targets rear arc & bypass void shields",
     description: [],
   },
   {
     name: "Bypass",
-    tooltip: "",
+    tooltip: "Ignores void shields",
     description: [],
   },
   {
@@ -69,17 +69,17 @@ export const weaponTraitsData: WEAPON_TRAIT_INFO[] = [
   },
   {
     name: "Collapsing Singularity",
-    tooltip: "",
+    tooltip: "Main Rulebook p.80",
     description: [],
   },
   {
     name: "Deflagrate",
-    tooltip: "Failed saves generate an additonal shot",
+    tooltip: "Failed saves generate an additonal shot, Main Rulebook p80",
     description: [],
   },
   {
     name: "Demolisher",
-    tooltip: "Can target structures",
+    tooltip: "Can damage structures",
     description: [],
   },
   {
@@ -90,32 +90,32 @@ export const weaponTraitsData: WEAPON_TRAIT_INFO[] = [
   },
   {
     name: "Firestorm",
-    tooltip: "",
+    tooltip: "Main Rulebook p.80",
     description: [],
   },
   {
     name: "Graviton Pulse",
-    tooltip: "",
+    tooltip: "Main Rulebook p.81",
     description: [],
   },
   {
     name: "Heavy Barrage",
-    tooltip: "",
+    tooltip: "Main Rulebook p.81",
     description: [],
   },
   {
     name: "Heavy Beam",
-    tooltip: "",
+    tooltip: "Main Rulebook p.81",
     description: [],
   },
   {
     name: "Ignores Cover",
-    tooltip: "",
+    tooltip: "No penalty to hit rolls, ignores cover saves.",
     description: [],
   },
   {
     name: "Impale",
-    tooltip: "",
+    tooltip: "Main Rulebook p.82",
     description: [],
   },
   {
@@ -130,102 +130,104 @@ export const weaponTraitsData: WEAPON_TRAIT_INFO[] = [
   },
   {
     name: "Limited",
-    tooltip: "",
+    tooltip: "Can only be fire a number of times equal to number in a battle.",
     description: [],
   },
   {
     name: "Neutron Flux",
-    tooltip: "",
+    tooltip:
+      "Armourbane & Shred vs models with Cybernetica Cortex special rule",
     description: [],
   },
   {
     name: "Point Defence",
-    tooltip: "",
+    tooltip: "Main Rulebook p.82",
     description: [],
   },
   {
     name: "Power Capacitor",
-    tooltip: "",
+    tooltip: "Double Dice if given First Fire order",
     description: [],
   },
   {
     name: "Precise",
-    tooltip: "",
+    tooltip: "Hits are allocated by firing player",
     description: [],
   },
   {
     name: "Psi",
-    tooltip: "",
+    tooltip:
+      "Bypass Invulnerable Saves, Cover Saves, Ion Shields & Void Shields.",
     description: [],
   },
   {
     name: "Quake",
-    tooltip: "",
+    tooltip: "Main Rulebook p.83",
     description: [],
   },
   {
     name: "Rapid Fire",
-    tooltip: "",
+    tooltip: "Hit rolls of 6 score 2 hits.",
     description: [],
   },
   {
     name: "Reach",
-    tooltip: "",
+    tooltip: "Main Rulebook p.84",
     description: [],
   },
   {
     name: "Rend",
-    tooltip: "",
+    tooltip: "+1d6 per rend weapon in a Fight",
     description: [],
   },
   {
     name: "Ripple Fire",
-    tooltip: "",
+    tooltip: "Can reroll hit rolls of 1 if given First Fire Order",
     description: [],
   },
   {
     name: "Saturation Fire",
-    tooltip: "",
+    tooltip: "Main Rulebook p.84",
     description: [],
   },
   {
     name: "Shieldbane",
-    tooltip: "",
+    tooltip: "Can be allocated to Void Shields",
     description: [],
   },
   {
     name: "Shock Pulse",
-    tooltip: "",
+    tooltip: "Main Rulebook p.84",
     description: [],
   },
   {
     name: "Shred",
-    tooltip: "",
+    tooltip: "Infantry, Cavalry & Walkers must reroll armour save rolls.",
     description: [],
   },
   {
     name: "Siege Weapon",
-    tooltip: "",
+    tooltip: "Range is doubled if model did not move",
     description: [],
   },
   {
     name: "Skyfire",
-    tooltip: "",
+    tooltip: "Main Rulebook p.85",
     description: [],
   },
   {
     name: "Tracking",
-    tooltip: "",
+    tooltip: "Reroll failed hits vs flyers",
     description: [],
   },
   {
     name: "Warp",
-    tooltip: "",
+    tooltip: "Main Rulebook p.85",
     description: [],
   },
   {
     name: "Wrecker",
-    tooltip: "",
+    tooltip: "Main Rulebook p.85",
     description: [],
   },
 ];
