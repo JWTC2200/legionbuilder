@@ -14,7 +14,7 @@ const UserListBox = ({ list }: { list: BUILDER_LIST }) => {
   return (
     <div
       key={list.list_id}
-      className="flex flex-col w-full max-w-[300px] border-2 border-green-950 rounded-xl p-2 dataslate_background  text-green-950"
+      className="flex flex-col w-full max-w-[300px] border-2 border-green-950 rounded-xl p-2 dataslate_background text-green-950"
     >
       <div className="flex justify-between items-center p-2">
         <Link
