@@ -1,6 +1,6 @@
 import { ALLEGIANCE, FACTION, UNIT_DATASHEET, UNIT_TYPE } from "../types";
 
-// astartes 1000-1999, solar 2000-2999, knights-titans 4000-4999
+// astartes 1000-1999, solar 2000-2999, knights-titans 4000-4999, unique units 9001
 
 export const unitData: UNIT_DATASHEET[] = [
   // ********************************************************************
@@ -379,7 +379,7 @@ export const unitData: UNIT_DATASHEET[] = [
     morale: 4,
     wounds: 1,
     weapons: [2004, 2005],
-    special_rules: [{ name: "Independant" }, { name: "Line" }],
+    special_rules: [{ name: "Steadfast" }],
   },
   {
     id: 2004,
@@ -393,7 +393,7 @@ export const unitData: UNIT_DATASHEET[] = [
     morale: 4,
     wounds: 1,
     weapons: [2006],
-    special_rules: [{ name: "Furious Charge" }, { name: "Independant" }],
+    special_rules: [{ name: "Furious Charge" }],
   },
   {
     id: 2005,
@@ -969,5 +969,40 @@ export const unitData: UNIT_DATASHEET[] = [
       { name: "Macro-extinction Targeting protocols" },
       { name: "Nimble" },
     ],
+  },
+
+  // ********************************************************************
+  // ***************************** UNIQUE UNITS *************************
+  // ********************************************************************
+
+  {
+    id: 9000,
+    faction: FACTION.solar,
+    allegiance: ALLEGIANCE.neutral,
+    unique: true,
+    unit_type: { type: UNIT_TYPE.infantry, value: 1 },
+    name: "Veletarii",
+    movement: '5"',
+    save: 6,
+    caf: 1,
+    morale: 4,
+    wounds: 1,
+    weapons: [2004, 2005],
+    special_rules: [{ name: "Independant" }, { name: "Line" }],
+  },
+  {
+    id: 9001,
+    faction: FACTION.solar,
+    allegiance: ALLEGIANCE.neutral,
+    unique: true,
+    unit_type: { type: UNIT_TYPE.infantry, value: 1 },
+    name: "Charonite Ogryns",
+    movement: '5"',
+    save: 6,
+    caf: 3,
+    morale: 4,
+    wounds: 1,
+    weapons: [2006],
+    special_rules: [{ name: "Furious Charge" }, { name: "Independant" }],
   },
 ];

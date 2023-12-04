@@ -104,6 +104,7 @@ export interface UNIT_DATASHEET {
   id: number;
   faction: FACTION;
   allegiance: ALLEGIANCE;
+  unique?: boolean;
   unit_type: { type: UNIT_TYPE; value: number };
   name: string;
   movement: string;

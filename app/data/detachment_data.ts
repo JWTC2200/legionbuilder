@@ -850,7 +850,7 @@ export const detachmentData: DETACHMENT[] = [
     base_size: 4,
     max_size: 16,
     main_unit: [2002],
-    related_unit: [2003, 2004],
+    related_unit: [9000, 9001],
     loadout: [
       {
         text_option: ["Auxillia lasrifles"],

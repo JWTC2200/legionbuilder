@@ -11,7 +11,10 @@ const page = () => {
           <div key={faction} className="flex flex-col">
             <h3 className="font-subrayada text-2xl text-center">{faction}</h3>
             {unitData
-              .filter((unitFaction) => unitFaction.faction === faction)
+              .filter(
+                (unitDataslate) =>
+                  unitDataslate.faction === faction && !unitDataslate.unique
+              )
               .map((unit) => (
                 <Link
                   key={unit.name}
