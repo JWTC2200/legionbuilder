@@ -28,10 +28,12 @@ export default function() {
                         <NavItem>
                             <NavLink path={"/account"} icon={"account"}>Profile</NavLink>
                         </NavItem>
-                        <button onClick={logout} className="flex items-center gap-2 hover:text-cyan-700 active:text-cyan-600">
-                            <FiLogOut />
-                            <span>Logout</span>
-                        </button>
+                        <NavItem>
+                            <button onClick={logout} className="flex items-center gap-2 hover:text-cyan-700 active:text-cyan-600">
+                                <FiLogOut />
+                                <span>Logout</span>
+                            </button>
+                        </NavItem>
                     </ol>
                 </div>
             </nav>
