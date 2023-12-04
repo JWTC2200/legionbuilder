@@ -34,11 +34,14 @@ const page = () => {
         New List
       </Link>
       {userLists.length ? (
-        <div className="w-full flex flex-wrap gap-2 justify-center mt-2">
-          {userLists.map((list) => (
-            <UserListBox key={list.list_id} list={list} />
-          ))}
-        </div>
+        <>
+          <h2 className="font-graduate text-xl mt-4">Your lists</h2>
+          <div className="w-full flex flex-wrap gap-2 justify-center mt-2">
+            {userLists.map((list) => (
+              <UserListBox key={list.list_id} list={list} />
+            ))}
+          </div>
+        </>
       ) : (
         <h2 className="font-graduate text-xl">
           {user ? "You have no saved lists!" : <NotSignedIn />}
