@@ -1,15 +1,16 @@
 import { getAuth, signOut } from "firebase/auth";
-import { useState } from "react";
 import { AccountCircle, Logout } from "@components/Icons";
 import NavLink from "./NavLink";
 import NavItem from "./NavItem";
+import { useAuthState } from "@/app/Auth";
 
-export default function AccountNavItem() {
+export default function() {
+    const { reset } = useAuthState();
+
     const logout = async () => {
         await signOut(getAuth());
+        reset();
     };
-
-    const [expanded, setExpanded] = useState(false);
 
     return (
         <NavItem className="group flex flex-col">
@@ -26,10 +27,12 @@ export default function AccountNavItem() {
                         <NavItem>
                             <NavLink path={"/account"} icon={"manageAccount"}>Profile</NavLink>
                         </NavItem>
-                        <button onClick={logout} className="flex items-center gap-2 hover:text-cyan-700 active:text-cyan-600">
-                            <Logout className={"w-6 h-6 lg:w-4 lg:h-4"} />
-                            <span>Logout</span>
-                        </button>
+                        <NavItem>
+                            <button onClick={logout} className="flex items-center gap-2 hover:text-cyan-700 active:text-cyan-600">
+                                <Logout className={"w-6 h-6 lg:w-4 lg:h-4"} />
+                                <span>Logout</span>
+                            </button>
+                        </NavItem>
                     </ol>
                 </div>
             </nav>
