@@ -42,7 +42,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
     name: "Pintle Mounted multi-melta",
     profiles: [
       {
-        range: '5"',
+        range: '6"',
         dice: 1,
         to_hit: 5,
         ap: 3,
@@ -152,7 +152,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
       },
       {
         range: '16"',
-        dice: 2,
+        dice: 1,
         to_hit: 4,
         ap: 1,
         traits: [{ name: "Demolisher" }, { name: "Light AT" }],
@@ -276,7 +276,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
     name: "Hyperios air-defence missile launcher",
     profiles: [
       {
-        range: '20"',
+        range: '25"',
         dice: 1,
         to_hit: 4,
         ap: 1,
@@ -289,7 +289,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
     name: "Sarcophagus Mounted weapons",
     profiles: [
       {
-        range: '6"',
+        range: '8"',
         dice: 1,
         to_hit: 6,
         ap: 0,
@@ -428,7 +428,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
     profiles: [
       {
         range: '12"',
-        dice: 2,
+        dice: 1,
         to_hit: 4,
         ap: 1,
         traits: [{ name: "Accurate" }],
@@ -849,7 +849,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
     name: "Multi-laser",
     profiles: [
       {
-        range: '24"',
+        range: '14"',
         dice: 2,
         to_hit: 5,
         ap: 0,
@@ -1273,7 +1273,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
         range: "-",
         dice: 2,
         to_hit: 4,
-        ap: 2,
+        ap: 1,
         traits: [
           { name: "Arc", value: "Rear" },
           { name: "Bombing Run" },
@@ -1324,7 +1324,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
     profiles: [
       {
         range: "-",
-        dice: 2,
+        dice: 3,
         to_hit: 4,
         ap: 2,
         traits: [{ name: "Arc", value: "Rear" }, { name: "Bombing Run" }],
@@ -1541,13 +1541,13 @@ export const weaponData: WEAPON_DATASHEET[] = [
   },
   {
     id: 4006,
-    name: "Thundestrike gauntlet",
+    name: "Thunderstrike gauntlet",
     profiles: [
       {
         range: "-",
         dice: null,
         to_hit: null,
-        ap: 0,
+        ap: 2,
         traits: [{ name: "Rend" }, { name: "Wrecker", value: 1 }],
       },
     ],
@@ -2317,7 +2317,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
     profiles: [
       {
         range: '8"-75"',
-        dice: null,
+        dice: "SP",
         to_hit: 2,
         ap: 3,
         traits: [
@@ -2608,7 +2608,7 @@ export const weaponData: WEAPON_DATASHEET[] = [
       {
         range: '18"-35"',
         dice: 3,
-        to_hit: 3,
+        to_hit: 2,
         ap: 4,
         traits: [{ name: "Arc", value: "Front" }, { name: "Demolisher" }],
       },

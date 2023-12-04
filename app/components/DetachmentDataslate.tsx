@@ -28,7 +28,7 @@ const DetachmentDataslate = (detachment: DETACHMENT) => {
             {unit.name} <FaExternalLinkAlt />
           </Link>
         </td>
-        <td className="text-center">{unit.movement}"</td>
+        <td className="text-center">{unit.movement}</td>
         <td className="text-center">{unit.save}+</td>
         <td className="text-center">+{unit.caf}</td>
         <td className="text-center">{unit.morale ? unit.morale + "+" : "-"}</td>

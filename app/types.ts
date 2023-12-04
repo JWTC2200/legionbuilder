@@ -106,7 +106,7 @@ export interface UNIT_DATASHEET {
   allegiance: ALLEGIANCE;
   unit_type: { type: UNIT_TYPE; value: number };
   name: string;
-  movement: number;
+  movement: string;
   save: number;
   caf: number;
   morale: number | null;

@@ -978,8 +978,8 @@ export const detachmentData: DETACHMENT[] = [
       {
         text: "An Auxilia Veletaris Storm Section can purchase the following upgrades:",
         options: [
-          { text: "1 additional Veletarii", cost: 15 },
-          { text: "2 additional Veletarii", cost: 30 },
+          { text: "2 additional Veletarii", cost: 10 },
+          { text: "4 additional Veletarii", cost: 20 },
         ],
       },
     ],
