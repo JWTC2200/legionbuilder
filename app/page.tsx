@@ -30,6 +30,11 @@ export default function Home() {
         Previous links are incorrect but should still redirect you properly.
         Please let me know if they don't.
       </p>
+      <p>Finally, our domain has been changed to legionbuilder.app!</p>
+      <p>
+        I really hope you enjoying using the site, I've been really enjoying all
+        the feedback and suggestions.{" "}
+      </p>
 
       {/* CONTACT SECTION */}
       <h2 className="text-lg font-graduate text-cyan-700 mt-2">
