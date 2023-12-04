@@ -30,9 +30,9 @@ export default function Home() {
       </p>
       <p>
         I've been informed that there are quite a few differences between the
-        digital and physical copy of the rules (classic GeeDubs). I'm still
-        waiting on my rulebook but assuming the digital version is correct/up to
-        date, we'll use that instead.
+        digital and physical copy of the rules, yay GeeDubs! I'm still waiting
+        on my rulebook but assuming the digital version is correct/up to date,
+        we'll use that instead.
       </p>
       <p>Finally, our domain has been changed to legionbuilder.app!</p>
       <p>
