@@ -2,10 +2,10 @@ import { getAuth, signOut } from "firebase/auth";
 import { AccountCircle, Logout } from "@components/Icons";
 import NavLink from "./NavLink";
 import NavItem from "./NavItem";
-import { useAuthState } from "@/app/Auth";
+import useAuthState from "@/app/Auth";
 
 export default function() {
-    const { reset } = useAuthState();
+    const { reset } = useAuthState(state => state.reset);
 
     const logout = async () => {
         await signOut(getAuth());

@@ -1,16 +1,16 @@
 "use client";
 
-import { useAuthState } from "@/app/Auth";
 import { useNavState } from "./state";
 import Account from "./Account";
 import Logo from "./Logo";
 import NavItem from "./NavItem";
 import NavLink from "./NavLink";
 import Hamburger from "./Hamburger";
+import useAuthState from "@/app/Auth";
 
 export default function NavBar() {
     const { visible } = useNavState();
-    const { authenticated } = useAuthState();
+    const authenticated = useAuthState(state => state.authenticated)
 
     return (
         <div className="w-full bg-lime-950 py-4 px-4 lg:px-8 flex lg:flex-col justify-between lg:justify-center gap-4 items-center text-center font-subrayada">
