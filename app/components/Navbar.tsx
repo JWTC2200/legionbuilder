@@ -143,7 +143,7 @@ const Navbar = () => {
               <GiVerticalBanner /> Formations
             </Link>
             <Link
-              href="/builder"
+              href="/lists"
               onClick={() => setMenu((prev) => !prev)}
               className={`flex gap-1 items-center hover:text-cyan-700 active:text-cyan-600 ${
                 pathname.startsWith("/builder") ? " text-cyan-700" : ""
@@ -155,13 +155,6 @@ const Navbar = () => {
             <hr className="border border-stone-50 w-11/12 mx-auto my-2" />
             {user ? (
               <div className="flex flex-col items-start">
-                <Link
-                  href="/account/lists"
-                  onClick={() => setMenu((prev) => !prev)}
-                  className="flex gap-1 items-center hover:text-cyan-700 active:text-cyan-600"
-                >
-                  <FaBook /> Lists
-                </Link>
                 <Link
                   href="/account"
                   onClick={() => setMenu((prev) => !prev)}
