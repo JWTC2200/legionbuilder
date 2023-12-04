@@ -144,7 +144,7 @@ export const unitData: UNIT_DATASHEET[] = [
     weapons: [1010, 1011, 1012, 1013],
     special_rules: [
       { name: "Armoured" },
-      { name: "Invunerable Save", value: "5+" },
+      { name: "Invulnerable Save", value: "5+" },
     ],
   },
   {
@@ -161,7 +161,7 @@ export const unitData: UNIT_DATASHEET[] = [
     weapons: [1014, 1015, 1016],
     special_rules: [
       { name: "Armoured" },
-      { name: "Invunerable Save", value: "6+" },
+      { name: "Invulnerable Save", value: "6+" },
     ],
   },
   {
@@ -192,7 +192,7 @@ export const unitData: UNIT_DATASHEET[] = [
     weapons: [1019, 1020, 1021, 1022],
     special_rules: [
       { name: "Armoured" },
-      { name: "Invunerable Save", value: "5+" },
+      { name: "Invulnerable Save", value: "5+" },
       { name: "Tracking Array" },
     ],
   },

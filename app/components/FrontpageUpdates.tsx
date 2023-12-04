@@ -13,6 +13,7 @@ const FrontpageUpdates = () => {
               04/12/2023:
               <li className="ml-4 text-stone-50">Discord added</li>
               <li className="ml-4 text-stone-50">List builder updated</li>
+              <li className="ml-4 text-stone-50">Unit data fixes</li>
             </ul>
           </li>
           <li>
