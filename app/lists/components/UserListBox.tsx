@@ -17,13 +17,13 @@ const UserListBox = ({ list }: { list: BUILDER_LIST }) => {
       className="flex flex-col w-full max-w-[300px] border-2 border-green-950 rounded-xl p-2 dataslate_background  text-green-950"
     >
       <div className="flex justify-between items-center p-2">
-        <button
-          type="button"
+        <Link
+          href="/lists/builder"
           onClick={() => setList(list)}
           className="text-lg font-semibold text-center hover:text-cyan-700 font-graduate"
         >
-          <Link href="/lists/view">{list.list_name}</Link>
-        </button>
+          {list.list_name}
+        </Link>
       </div>
       <div>
         <ol>

@@ -22,17 +22,22 @@ export const setBuilderDetachment = (
       ref_id: formationRef,
       id: formationID,
       faction: findFormation.faction,
-      compulsory: getCompulsorySlots(findFormation.compulsory, formationRef),
-      optional: getOptionalSlots(findFormation.optional, formationRef),
+      compulsory: getSlots(
+        findFormation.compulsory,
+        formationRef,
+        "compulsorySlot"
+      ),
+      optional: getSlots(findFormation.optional, formationRef, "optionalSlot"),
       choice: getChoiceSlots(findFormation.choice, formationRef),
     };
   }
   return null;
 };
 
-const getCompulsorySlots = (
+const getSlots = (
   slotArray: number[] | null,
-  formationRef: string
+  formationRef: string,
+  typeRef: string
 ) => {
   if (slotArray) {
     const slots: FORMATION_SLOT[] = slotArray
@@ -45,34 +50,13 @@ const getCompulsorySlots = (
       return {
         ...slot,
         ref_id: formationRef,
-        slot_ref: formationRef + "compulsorySlot" + index,
+        slot_ref: formationRef + typeRef + index,
         selected_unit: null,
       };
     });
     return returnedSlots;
   }
   return slotArray;
-};
-
-const getOptionalSlots = (
-  slotArray: number[] | null,
-  formationRef: string
-): BUILDER_DETACHMENT_SLOT[] | null => {
-  if (slotArray && slotArray.length) {
-    const slots: FORMATION_SLOT[] = slotArray
-      .sort()
-      .map((id) => formationSlotData.filter((slot) => slot.id === id)[0]);
-    const optionalSlots = slots.map((slot, index) => {
-      return {
-        ...slot,
-        ref_id: formationRef,
-        slot_ref: formationRef + "optionalSlot" + index,
-        selected_unit: null,
-      };
-    });
-    return optionalSlots;
-  }
-  return null;
 };
 
 const getChoiceSlots = (
@@ -83,25 +67,71 @@ const getChoiceSlots = (
     // Need to get rid of this Typescript any
     const choiceArray: any = slotArray.map((secondaryArray, index) => {
       if (secondaryArray && secondaryArray.length) {
-        const slots: FORMATION_SLOT[] = secondaryArray
-          .sort()
-          .map((id) => formationSlotData.filter((slot) => slot.id === id)[0]);
+        return getSlots(secondaryArray, formationRef, `choiceSlots${index}`);
+        // const slots: FORMATION_SLOT[] = secondaryArray
+        //   .sort()
+        //   .map((id) => formationSlotData.filter((slot) => slot.id === id)[0]);
 
-        const choiceSlots = slots.map((slot, index2) => {
-          return {
-            ...slot,
-            ref_id: formationRef,
-            slot_ref: formationRef + "choice" + index + "Slot" + index2,
-            selected_unit: null,
-          };
-        });
-        return choiceSlots;
+        // const choiceSlots = slots.map((slot, index2) => {
+        //   return {
+        //     ...slot,
+        //     ref_id: formationRef,
+        //     slot_ref: formationRef + "choice" + index + "Slot" + index2,
+        //     selected_unit: null,
+        //   };
+        // });
+        // return choiceSlots;
       }
     });
     return choiceArray;
   }
   return null;
 };
+
+// const getCompulsorySlots = (
+//   slotArray: number[] | null,
+//   formationRef: string
+// ) => {
+//   if (slotArray) {
+//     const slots: FORMATION_SLOT[] = slotArray
+//       .sort()
+//       .map((id) => formationSlotData.find((slot) => slot.id === id))
+//       .filter((exists) => {
+//         return exists !== undefined;
+//       }) as FORMATION_SLOT[];
+//     const returnedSlots = slots.map((slot, index) => {
+//       return {
+//         ...slot,
+//         ref_id: formationRef,
+//         slot_ref: formationRef + "compulsorySlot" + index,
+//         selected_unit: null,
+//       };
+//     });
+//     return returnedSlots;
+//   }
+//   return slotArray;
+// };
+
+// const getOptionalSlots = (
+//   slotArray: number[] | null,
+//   formationRef: string
+// ): BUILDER_DETACHMENT_SLOT[] | null => {
+//   if (slotArray && slotArray.length) {
+//     const slots: FORMATION_SLOT[] = slotArray
+//       .sort()
+//       .map((id) => formationSlotData.filter((slot) => slot.id === id)[0]);
+//     const optionalSlots = slots.map((slot, index) => {
+//       return {
+//         ...slot,
+//         ref_id: formationRef,
+//         slot_ref: formationRef + "optionalSlot" + index,
+//         selected_unit: null,
+//       };
+//     });
+//     return optionalSlots;
+//   }
+//   return null;
+// };
 
 export const detachmentSize = (detachment: BUILDER_DETACHMENT_UNIT) => {
   return (

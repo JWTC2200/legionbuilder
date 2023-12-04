@@ -25,13 +25,13 @@ const page = () => {
 
   return (
     <div className="flex flex-col items-center gap-2">
-      <button
-        type="button"
+      <Link
+        href="/lists/builder"
         className="px-8 py-2 my-4 banner_background font-graduate text-lg sm:text-2xl rounded-full border-2 border-green-950 hover:text-cyan-700 active:text-cyan-700 hover:border-cyan-700 active:border-cyan-700"
         onClick={clearList}
       >
-        <Link href="/lists/builder"> New List</Link>
-      </button>
+        New List
+      </Link>
       {userLists.length ? (
         userLists.map((list) => <UserListBox key={list.list_id} list={list} />)
       ) : (
