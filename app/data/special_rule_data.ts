@@ -128,7 +128,7 @@ export const specialRulesData: SPECIAL_RULE_INFO[] = [
     description: [],
   },
   {
-    name: "Ion Shield",
+    name: "Ion Shields",
     tooltip: "Main Rulebook p.92",
     description: [],
   },
