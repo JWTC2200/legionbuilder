@@ -7,7 +7,7 @@ import ListBuilder from "./components/ListBuilder";
 
 const page = () => {
   return (
-    <div className="h-screen w-full ">
+    <div className="h-screen w-full mb-40">
       <ListBuilder />
       <BuilderWidgetBottom />
       <BuilderWidgetSide />
