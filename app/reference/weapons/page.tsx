@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { weapons } from "@/app/data/weapon_data";
-import WeaponTraitBox from "@components/WeaponTraitBox";
 import WeaponRow from "@/app/reference/weapons/WeaponRow";
 
 const page = () => {
