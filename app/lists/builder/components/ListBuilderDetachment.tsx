@@ -7,6 +7,7 @@ import ListBuilderDetachmentDetails from "./ListBuilderDetachmentDetails";
 import ListBuilderDetachmentDescription from "./ListBuilderDetachmentDescription";
 import ListBuilderDetachmentSelect from "./ListBuilderDetachmentSelect";
 import ListBuilderDetachmentUpgrades from "./ListBuilderDetachmentUpgrades";
+import ListBuilderDetachmentSizeWarning from "./ListBuilderDetachmentSizeWarning";
 
 interface properties {
   detachmentSlot: BUILDER_DETACHMENT_SLOT;
@@ -21,9 +22,14 @@ const ListBuilderDetachment = ({ detachmentSlot, slotSet }: properties) => {
         <ListBuilderDetachmentDescription text={detachmentSlot.description} />
       ) : null}
       {detachmentSlot.selected_unit ? (
-        <ListBuilderDetachmentDetails
-          selectedUnit={detachmentSlot.selected_unit}
-        />
+        <>
+          <ListBuilderDetachmentSizeWarning
+            unit={detachmentSlot.selected_unit}
+          />
+          <ListBuilderDetachmentDetails
+            selectedUnit={detachmentSlot.selected_unit}
+          />
+        </>
       ) : null}
       <div className="px-2">
         <ListBuilderDetachmentSelect

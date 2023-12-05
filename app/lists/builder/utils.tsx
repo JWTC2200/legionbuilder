@@ -133,12 +133,12 @@ const getChoiceSlots = (
 //   return null;
 // };
 
-export const detachmentSize = (detachment: BUILDER_DETACHMENT_UNIT) => {
-  return (
-    detachment.base_size +
-    detachment.upgrade_options.reduce((acc, size) => acc + size.size, 0)
-  );
-};
+// export const detachmentSize = (detachment: BUILDER_DETACHMENT_UNIT) => {
+//   return (
+//     detachment.base_size +
+//     detachment.upgrade_options.reduce((acc, size) => acc + size.size, 0)
+//   );
+// };
 
 export const handleSaveList = (list: BUILDER_LIST) => {
   localStorage.setItem("legionbuilder", JSON.stringify(list));

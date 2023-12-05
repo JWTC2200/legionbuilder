@@ -5,6 +5,7 @@ import ListBuilderAddFormation from "./ListBuilderAddFormation";
 import ListBuilderFormationDisplay from "./ListBuilderFormationDisplay";
 import ListBuilderButtons from "./ListBuilderButtons";
 import ListBuilderQuickLinks from "./ListBuilderQuickLinks";
+import ListBuilderWarnings from "./ListBuilderWarnings";
 
 const ListBuilder = () => {
   return (
@@ -12,6 +13,7 @@ const ListBuilder = () => {
       <ListBuilderButtons />
       <ListBuilderGameSize />
       <ListBuilderListName />
+      <ListBuilderWarnings />
       <ListBuilderAddFormation />
       <ListBuilderQuickLinks />
       <ListBuilderFormationDisplay />
