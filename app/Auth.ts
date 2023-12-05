@@ -1,24 +1,24 @@
-import { create } from 'zustand'
-import { createJSONStorage, persist } from "zustand/middleware";
+import { createJSONStorage, persist, StateStorage } from "zustand/middleware";
+import createPersistedStore from "@/app/utils/persistedStore";
 
 interface AuthState {
     uid: string | null;
     saveSession: (uid: string) => void;
     reset: () => void;
-    authenticated: () => boolean;
+    authenticated: boolean;
 }
 
-export const useAuthState = create<AuthState>()(
-    persist(
-        (set, get) => ({
-            uid: null,
-            saveSession: (uid: string) => set( { uid }),
-            reset: () => set({ uid: null }),
-            authenticated: () => !!get().uid,
-        }),
-        {
-            name: 'auth',
-            storage: createJSONStorage(() => sessionStorage)
-        }
-    )
+const useAuthState = createPersistedStore(
+    (set): AuthState => ({
+        uid: null,
+        saveSession: (uid: string) => set({ uid, authenticated: true }),
+        reset: () => set({ uid: null, authenticated: false }),
+        authenticated: false,
+    }),
+    {
+        name: 'auth',
+        storage: createJSONStorage(() => sessionStorage)
+    }
 );
+
+export default useAuthState;
