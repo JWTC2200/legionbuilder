@@ -9,38 +9,53 @@ import Hamburger from "./Hamburger";
 import useAuthState from "@/app/Auth";
 
 export default function NavBar() {
-    const { visible } = useNavState();
-    const authenticated = useAuthState(state => state.authenticated)
+  const { visible } = useNavState();
+  const authenticated = useAuthState((state) => state.authenticated);
 
-    return (
-        <div className="w-full bg-lime-950 py-4 px-4 lg:px-8 flex lg:flex-col justify-between lg:justify-center gap-4 items-center text-center font-subrayada">
-            <Logo/>
-            <div className={'z-30 absolute top-0 right-0 bottom-0 left-0 lg:relative bg-stone-950/70 lg:bg-transparent backdrop-blur-md lg:backdrop-blur-none justify-center text-2xl lg:text-base ' + (visible ? 'flex' : 'hidden lg:flex')}>
-                <ol className="flex flex-col lg:flex-row gap-6 mt-40 lg:-mt-0">
-                    <NavItem>
-                        <NavLink path="/reference" icon="skull">Reference</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink path="/detachments" icon="tank">Detachments</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink path="/formations" icon="banner">Formations</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink path="/builder" icon="builder">List builder</NavLink>
-                    </NavItem>
+  return (
+    <div className="w-full bg-lime-950 py-4 px-4 lg:px-8 flex lg:flex-col justify-between lg:justify-center gap-4 items-center text-center font-subrayada">
+      <Logo />
+      <div
+        className={
+          "z-30 absolute top-0 right-0 bottom-0 left-0 lg:relative bg-stone-950/70 lg:bg-transparent backdrop-blur-md lg:backdrop-blur-none justify-center text-2xl lg:text-base " +
+          (visible ? "flex" : "hidden lg:flex")
+        }
+      >
+        <ol className="flex flex-col lg:flex-row gap-6 mt-40 lg:-mt-0">
+          <NavItem>
+            <NavLink path="/reference" icon="skull">
+              Reference
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink path="/detachments" icon="tank">
+              Detachments
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink path="/formations" icon="banner">
+              Formations
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink path="/lists" icon="builder">
+              List builder
+            </NavLink>
+          </NavItem>
 
-                    {authenticated ? (
-                        <Account/>
-                    ) : (
-                        <NavItem>
-                            <NavLink path="/account/login" icon="login">Login</NavLink>
-                        </NavItem>
-                    )}
-                </ol>
-            </div>
+          {authenticated ? (
+            <Account />
+          ) : (
+            <NavItem>
+              <NavLink path="/account/login" icon="login">
+                Login
+              </NavLink>
+            </NavItem>
+          )}
+        </ol>
+      </div>
 
-            <Hamburger/>
-        </div>
-    );
-};
+      <Hamburger />
+    </div>
+  );
+}
