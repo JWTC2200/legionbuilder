@@ -24,8 +24,5 @@ export default function createPersistedStore(createStore, persistOptions) {
         return mounted ? store : selector(initialState);
     };
 
-    useStore.getState = usePersistedStore.getState;
-    useStore.setState = usePersistedStore.setState;
-
     return useStore;
 };

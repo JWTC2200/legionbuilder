@@ -5,7 +5,7 @@ import NavItem from "./NavItem";
 import useAuthState from "@/app/Auth";
 
 export default function() {
-    const { reset } = useAuthState(state => state.reset);
+    const reset = useAuthState(state => state.reset);
 
     const logout = async () => {
         await signOut(getAuth());
