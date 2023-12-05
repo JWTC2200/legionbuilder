@@ -1412,7 +1412,7 @@ export const weapons: WEAPON_DATASHEET[] = [
         to_hit: 5,
         ap: 1,
         traits: [
-          { name: "Arc", value: "Front" },
+          { name: "Arc", value: "Rear" },
           { name: "Light AT" },
           { name: "Rapid Fire" },
           { name: "Skyfire" },

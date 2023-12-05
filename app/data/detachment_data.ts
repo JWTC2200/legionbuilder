@@ -1250,10 +1250,10 @@ export const detachmentData: DETACHMENT[] = [
       {
         name: "Averger bolt cannon upgrade",
         options: [
-          { number: 1, cost: 3, size: 1 },
-          { number: 2, cost: 6, size: 2 },
-          { number: 3, cost: 9, size: 3 },
-          { number: 4, cost: 12, size: 4 },
+          { number: 1, cost: 3, size: 0 },
+          { number: 2, cost: 6, size: 0 },
+          { number: 3, cost: 9, size: 0 },
+          { number: 4, cost: 12, size: 0 },
         ],
       },
     ],
