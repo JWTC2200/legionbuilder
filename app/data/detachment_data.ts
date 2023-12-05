@@ -1040,7 +1040,7 @@ export const detachmentData: DETACHMENT[] = [
       {
         name: "Additional Tarantula",
         options: [
-          { number: 2, cost: 25, size: 2 },
+          { number: 2, cost: 15, size: 2 },
           { number: 4, cost: 25, size: 4 },
         ],
       },

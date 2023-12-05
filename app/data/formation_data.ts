@@ -73,8 +73,8 @@ export const formationData: FORMATION[] = [
     name: "Solar Auxilia Armoured Company",
     faction: FACTION.solar,
     allegiance: ALLEGIANCE.neutral,
-    compulsory: [2005, 2005, 2006],
-    optional: [2005, 2005, 2006, 9004],
+    compulsory: [9004, 2005, 2005, 2006],
+    optional: [2005, 2005, 2006],
     choice: [[2005, 2007, 2008]],
   },
   {
