@@ -1,16 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useRouter } from "next/navigation";
-import { useAuthState } from "@/app/Auth";
+import useAuthState from "@/app/Auth";
 
 const page = () => {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [error, setError] = useState<string>("");
-  const {saveSession} = useAuthState();
+  const saveSession = useAuthState(state => state.saveSession);
 
   const auth = getAuth();
   const router = useRouter();
