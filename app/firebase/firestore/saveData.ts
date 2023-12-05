@@ -2,12 +2,12 @@ import { BUILDER_LIST } from "@/app/types";
 
 import { db } from "../config";
 import { setDoc, doc } from "firebase/firestore";
-import { getUserListsLength } from "./getUserLists";
+import { checkUploadPermission } from "./getUserLists";
 
 export const saveData = async (listData: BUILDER_LIST) => {
   try {
-    const data = await getUserListsLength(listData.user_id);
-    if (data >= 5) {
+    const permission = await checkUploadPermission(listData);
+    if (!permission) {
       return { uploaded: false, message: "Too many lists!" };
     } else {
       try {
@@ -21,6 +21,6 @@ export const saveData = async (listData: BUILDER_LIST) => {
       }
     }
   } catch (error) {
-    return { uploaded: false, message: "Failed to check user lists" };
+    return { uploaded: false, message: "Failed to connect" };
   }
 };

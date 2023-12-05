@@ -142,5 +142,5 @@ const getChoiceSlots = (
 
 export const handleSaveList = (list: BUILDER_LIST) => {
   localStorage.setItem("legionbuilder", JSON.stringify(list));
-  toast.success("List saved");
+  toast.success("List saved locally");
 };

@@ -21,7 +21,7 @@ const ListBuilderButtons = () => {
         if (uploaded) {
           toast.success(message);
         } else {
-          toast.error("List upload failed");
+          toast.error(message);
         }
       } else {
         const newList = { ...list, list_id: nanoid(), user_id: user.uid };

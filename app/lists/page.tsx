@@ -8,6 +8,7 @@ import UserListBox from "./components/UserListBox";
 import { listState } from "./builder/state";
 import Link from "next/link";
 import NotSignedIn from "./components/NotSignedIn";
+import UserListTable from "./components/UserListTable";
 
 const page = () => {
   const { user } = useAuthContext();
@@ -34,18 +35,7 @@ const page = () => {
         New List
       </Link>
       {userLists.length ? (
-        <>
-          <h2 className="font-graduate text-xl mt-4">Your lists</h2>
-          <div className="w-full flex flex-wrap gap-2 justify-center mt-2">
-            {userLists.map((list) => (
-              <UserListBox
-                key={list.list_id}
-                list={list}
-                setUserLists={setUserLists}
-              />
-            ))}
-          </div>
-        </>
+        <UserListTable />
       ) : (
         <h2 className="font-graduate text-xl">
           {user ? "You have no saved lists!" : <NotSignedIn />}
