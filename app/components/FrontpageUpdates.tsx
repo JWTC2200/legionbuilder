@@ -10,6 +10,16 @@ const FrontpageUpdates = () => {
         <ul className="flex flex-col gap-2">
           <li>
             <ul className="list-disc text-cyan-700">
+              05/12/2023:
+              <li className="ml-4 text-stone-50">Updated navigation</li>
+              <li className="ml-4 text-stone-50">Updated weapon references</li>
+              <li className="ml-4 text-stone-50">
+                Weapon trait & special rule tooltips (testing)
+              </li>
+            </ul>
+          </li>
+          <li>
+            <ul className="list-disc text-cyan-700">
               04/12/2023:
               <li className="ml-4 text-stone-50">Discord added</li>
               <li className="ml-4 text-stone-50">List builder updated</li>
