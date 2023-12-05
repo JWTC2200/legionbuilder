@@ -121,3 +121,17 @@
 select {
   @apply cursor-pointer;
 }
+
+.clipped {
+  clip-path: polygon(
+    0 0.3rem,
+    0.3rem 0,
+    calc(100% - 0.3rem) 0,
+    100% 0.3rem,
+    100% calc(100% - 0.3rem),
+    calc(100% - 0.3rem) 100%,
+    0.3rem 100%,
+    0% calc(100% - 0.3rem),
+    0% 0.3rem
+  )
+}
