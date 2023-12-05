@@ -30,7 +30,7 @@ export default function NavBar() {
                         <NavLink path="/builder" icon="builder">List builder</NavLink>
                     </NavItem>
 
-                    {authenticated() ? (
+                    {authenticated ? (
                         <Account/>
                     ) : (
                         <NavItem>

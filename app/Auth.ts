@@ -5,15 +5,15 @@ interface AuthState {
     uid: string | null;
     saveSession: (uid: string) => void;
     reset: () => void;
-    authenticated: () => boolean;
+    authenticated: boolean;
 }
 
 const useAuthState = createPersistedStore(
-    (set, get): AuthState => ({
+    (set): AuthState => ({
         uid: null,
-        saveSession: (uid: string) => set( { uid }),
-        reset: () => set({ uid: null }),
-        authenticated: () => !!get().uid,
+        saveSession: (uid: string) => set({ uid, authenticated: true }),
+        reset: () => set({ uid: null, authenticated: false }),
+        authenticated: false,
     }),
     {
         name: 'auth',
