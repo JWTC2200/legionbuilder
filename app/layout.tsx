@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
+import { ReactNode } from "react";
 
 import "./globals.css";
 import "react-toastify/dist/ReactToastify.css";
 
-import Navbar from "@components/Navbar";
+import NavBar from "@components/navigation/NavBar";
 import AuthContextProvider from "./firebase/auth/AuthContext";
 
 export const metadata: Metadata = {
@@ -13,16 +14,12 @@ export const metadata: Metadata = {
     "A List builder for Warhammer: The Horus Heresy - Legion Imperialis",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className="min-w-screen min-h-screen bg-stone-900 text-stone-100 flex flex-col items-center">
+      <body className="z-0 min-w-screen min-h-screen bg-stone-900 text-stone-100 flex flex-col items-center">
         <AuthContextProvider>
-          <Navbar />
+          <NavBar />
           {children}
           <Analytics />
         </AuthContextProvider>
