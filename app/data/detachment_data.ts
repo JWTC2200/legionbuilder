@@ -2161,6 +2161,7 @@ export const detachmentData: DETACHMENT[] = [
     base_cost: 215,
     base_size: 1,
     max_size: 6,
+    break_strength: 3,
     main_unit: [4014],
     related_unit: [4015, 4003, 4004],
     loadout: [
@@ -2185,8 +2186,8 @@ export const detachmentData: DETACHMENT[] = [
       {
         name: "Additional Knight",
         options: [
-          { number: 1, cost: 200, size: 1 },
-          { number: 2, cost: 390, size: 2 },
+          { number: 1, cost: 200, size: 1, break_strength: 3 },
+          { number: 2, cost: 390, size: 2, break_strength: 3 },
         ],
       },
       {
@@ -2199,11 +2200,11 @@ export const detachmentData: DETACHMENT[] = [
       },
       {
         name: "Armiger Talon",
-        options: [{ number: 1, cost: 180, size: 3 }],
+        options: [{ number: 1, cost: 180, size: 3, break_strength: 2 }],
       },
       {
         name: "Moriax Talon",
-        options: [{ number: 1, cost: 200, size: 3 }],
+        options: [{ number: 1, cost: 200, size: 3, break_strength: 2 }],
       },
     ],
     datasheet_info: [
