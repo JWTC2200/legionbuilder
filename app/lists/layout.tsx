@@ -11,9 +11,9 @@ import { toast } from "react-toastify";
 const layout = ({ children }: { children: React.ReactNode }) => {
   const { setList } = listState();
   const searchParams = useSearchParams();
+  const listParams = searchParams.get("listId");
 
   useEffect(() => {
-    const listParams = searchParams.get("listId");
     const localList = localStorage.getItem("legionbuilder");
 
     const getDblist = async (id: string) => {
@@ -32,7 +32,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
         setList(JSON.parse(localList) as BUILDER_LIST);
       }
     }
-  }, [searchParams]);
+  }, [listParams]);
 
   return (
     <main className="max-w-screen-2xl w-full flex flex-col items-center">
