@@ -79,9 +79,7 @@ export function Lists({ className }: IconProperties): JSX.Element {
 export function Login({ className }: IconProperties): JSX.Element {
   return (
     <Icon width={24} height={24} className={className}>
-      <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
-      <polyline points="10 17 15 12 10 7"></polyline>
-      <line x1="15" y1="12" x2="3" y2="12"></line>
+        <path d="M11 7 9.6 8.4l2.6 2.6H2v2h10.2l-2.6 2.6L11 17l5-5-5-5zm9 12h-8v2h8c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-8v2h8v14z"></path>
     </Icon>
   );
 }
