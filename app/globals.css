@@ -15,6 +15,18 @@
   }
 }
 
+.bg-dataslate {
+  @apply bg-gradient-to-r;
+  @apply from-primary-100;
+  @apply to-white;
+}
+
+.hover\:bg-dataslate {
+  @apply hover:from-primary-950;
+  @apply hover:to-primary-900;
+  @apply hover:text-lime-50;
+}
+
 .dataslate_background {
   background: rgb(176, 196, 183);
   background: -moz-linear-gradient(

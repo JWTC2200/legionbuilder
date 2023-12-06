@@ -8,8 +8,8 @@ export default function ({
   weapon: WEAPON_DATASHEET;
 }): JSX.Element {
   return (
-    <div className="flex flex-col odd:bg-stone-100 even:bg-stone-300 text-stone-950 py-1 group">
-      <h3 className="block font-graduate font-bold uppercase border-b group-odd:border-stone-400 group-even:border-stone-500 px-4 py-1 overflow-hidden">
+    <div className="flex flex-col odd:bg-secondary-100 even:bg-secondary-300 text-secondary-950 py-1 group">
+      <h3 className="block font-graduate font-bold uppercase border-b group-odd:border-secondary-400 group-even:border-secondary-500 px-4 py-1 overflow-hidden">
         <span className={"whitespace-nowrap"}>{weapon.name}</span>
       </h3>
       <div className="px-4">

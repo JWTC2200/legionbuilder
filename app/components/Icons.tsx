@@ -26,6 +26,16 @@ function Icon({ children, className, width, height }: BaseIconProperties) {
   );
 }
 
+
+export function AccountCircle({ className }: IconProperties): JSX.Element {
+    return (
+        <Icon width={24} height={24} className={className}>
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" />
+        </Icon>
+    );
+}
+
 export function Banner({ className }: IconProperties): JSX.Element {
   return (
     <Icon width={512} height={512} className={className}>
@@ -42,18 +52,18 @@ export function Book({ className }: IconProperties): JSX.Element {
   );
 }
 
-export function Close({ className }: IconProperties): JSX.Element {
-  return (
-    <Icon width={15} height={15} className={className}>
-      <path d="M12.8536 2.85355C13.0488 2.65829 13.0488 2.34171 12.8536 2.14645C12.6583 1.95118 12.3417 1.95118 12.1464 2.14645L7.5 6.79289L2.85355 2.14645C2.65829 1.95118 2.34171 1.95118 2.14645 2.14645C1.95118 2.34171 1.95118 2.65829 2.14645 2.85355L6.79289 7.5L2.14645 12.1464C1.95118 12.3417 1.95118 12.6583 2.14645 12.8536C2.34171 13.0488 2.65829 13.0488 2.85355 12.8536L7.5 8.20711L12.1464 12.8536C12.3417 13.0488 12.6583 13.0488 12.8536 12.8536C13.0488 12.6583 13.0488 12.3417 12.8536 12.1464L8.20711 7.5L12.8536 2.85355Z"></path>
-    </Icon>
-  );
-}
-
 export function Builder({ className }: IconProperties): JSX.Element {
   return (
     <Icon width={576} height={512} className={className}>
       <path d="M402.6 83.2l90.2 90.2c3.8 3.8 3.8 10 0 13.8L274.4 405.6l-92.8 10.3c-12.4 1.4-22.9-9.1-21.5-21.5l10.3-92.8L388.8 83.2c3.8-3.8 10-3.8 13.8 0zm162-22.9l-48.8-48.8c-15.2-15.2-39.9-15.2-55.2 0l-35.4 35.4c-3.8 3.8-3.8 10 0 13.8l90.2 90.2c3.8 3.8 10 3.8 13.8 0l35.4-35.4c15.2-15.3 15.2-40 0-55.2zM384 346.2V448H64V128h229.8c3.2 0 6.2-1.3 8.5-3.5l40-40c7.6-7.6 2.2-20.5-8.5-20.5H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V306.2c0-10.7-12.9-16-20.5-8.5l-40 40c-2.2 2.3-3.5 5.3-3.5 8.5z"></path>
+    </Icon>
+  );
+}
+
+export function Close({ className }: IconProperties): JSX.Element {
+  return (
+    <Icon width={15} height={15} className={className}>
+      <path d="M12.8536 2.85355C13.0488 2.65829 13.0488 2.34171 12.8536 2.14645C12.6583 1.95118 12.3417 1.95118 12.1464 2.14645L7.5 6.79289L2.85355 2.14645C2.65829 1.95118 2.34171 1.95118 2.14645 2.14645C1.95118 2.34171 1.95118 2.65829 2.14645 2.85355L6.79289 7.5L2.14645 12.1464C1.95118 12.3417 1.95118 12.6583 2.14645 12.8536C2.34171 13.0488 2.65829 13.0488 2.85355 12.8536L7.5 8.20711L12.1464 12.8536C12.3417 13.0488 12.6583 13.0488 12.8536 12.8536C13.0488 12.6583 13.0488 12.3417 12.8536 12.1464L8.20711 7.5L12.8536 2.85355Z"></path>
     </Icon>
   );
 }
@@ -95,15 +105,6 @@ export function ManageAccount({ className }: IconProperties): JSX.Element {
   );
 }
 
-export function AccountCircle({ className }: IconProperties): JSX.Element {
-  return (
-    <Icon width={24} height={24} className={className}>
-      <path d="M0 0h24v24H0z" fill="none" />
-      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" />
-    </Icon>
-  );
-}
-
 export function Menu({ className }: IconProperties): JSX.Element {
   return (
     <Icon width={512} height={512} className={className}>
@@ -112,6 +113,13 @@ export function Menu({ className }: IconProperties): JSX.Element {
   );
 }
 
+export function SentryGun({ className }: IconProperties): JSX.Element {
+  return (
+    <Icon width={512} height={512} className={className}>
+        <path d="M94 67.656v78.094h124.063V67.656H94zm-74.156 49.5v75.875l97.78 98.032h144.44l-.002-173.906H236.75V164.438H75.312V117.155H19.844zM280.75 136.03v89.407h99l-46.625 46.75H280.75v18.688h60.125l2.75-2.75 58.625-58.78 2.72-2.72v-1.188h.342V136.03H280.75zM424 154.407v51.75h68.53v-51.75H424zM165.906 309.75c.198 13.433 5.876 25.525 14.938 34.125L115.75 429.97c-25.832 2.44-47.42 20.308-56.97 45.217h126.064c-8.29-21.625-25.665-37.942-47-43.468l23.125-30.564h101.31l23.095 30.563c-21.332 5.527-38.68 21.844-46.97 43.467h126.032c-9.546-24.906-31.11-42.775-56.937-45.218l-63.28-83.658c10.65-8.667 17.47-21.81 17.686-36.562h-96zm30.813 44.156c5.34 2.05 11.124 3.156 17.186 3.156 4.702 0 9.237-.678 13.53-1.937l20.69 27.344h-73l21.593-28.564z"></path>
+    </Icon>
+  );
+}
 export function Skull({ className }: IconProperties): JSX.Element {
   return (
     <Icon width={512} height={512} className={className}>
@@ -138,6 +146,7 @@ const Icons: { [key: string]: ({ className }: IconProperties) => JSX.Element } =
     lists: Lists,
     login: Login,
     logout: Logout,
+    sentryGun: SentryGun,
     skull: Skull,
     tank: Tank,
   };

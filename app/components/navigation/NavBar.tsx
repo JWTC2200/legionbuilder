@@ -28,16 +28,6 @@ export default function NavBar() {
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink path="/detachments" icon="tank">
-              Detachments
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink path="/formations" icon="banner">
-              Formations
-            </NavLink>
-          </NavItem>
-          <NavItem>
             <NavLink path="/lists" icon="builder">
               List builder
             </NavLink>
