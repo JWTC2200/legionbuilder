@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className="z-0 min-w-screen min-h-screen bg-secondary-900 text-secondary-100 flex flex-col items-center">
+      <body className="z-0 min-w-screen min-h-screen bg-secondary-900 text-secondary-100 items-center text-sm md:text-base">
         <AuthContextProvider>
           <NavBar />
           {children}

@@ -27,26 +27,6 @@
   @apply hover:text-primary-50;
 }
 
-.bg-dataslate {
-  background: rgb(176, 196, 183);
-  background: -moz-linear-gradient(
-    90deg,
-    rgba(176, 196, 183, 1) 0%,
-    rgba(242, 251, 247, 1) 57%
-  );
-  background: -webkit-linear-gradient(
-    90deg,
-    rgba(176, 196, 183, 1) 0%,
-    rgba(242, 251, 247, 1) 57%
-  );
-  background: linear-gradient(
-    90deg,
-    rgba(176, 196, 183, 1) 0%,
-    rgba(242, 251, 247, 1) 57%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b0c4b7",endColorstr="#f2fbf7",GradientType=1);
-}
-
 .banner_background {
   background: rgb(5, 46, 22);
   background: -moz-linear-gradient(
