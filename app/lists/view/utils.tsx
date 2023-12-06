@@ -7,41 +7,11 @@ import {
 import { detachmentPoints, detachmentSize } from "../utils";
 import { detachmentData } from "@/app/data/detachment_data";
 
-export const formationHTML = (formation: BUILDER_FORMATION) => {
-  const compulsorySlots = formation.compulsory
-    ? formation.compulsory.map((slot) => slotHTML(slot))
-    : null;
-
-  const optionalSlots = formation.optional
-    ? formation.optional.map((slot) => slotHTML(slot))
-    : null;
-
-  const choiceSlots = formation.choice
-    ? formation.choice.map((set) => set.map((slot) => slotHTML(slot)))
-    : null;
-
-  return (
-    <div>
-      {formation.compulsory ? (
-        <div className="mb-1">
-          <h3 className="font-graduate">Compulsory Slots:</h3>
-          <ul className="list-disc">{compulsorySlots}</ul>
-        </div>
-      ) : null}
-      {formation.optional ? (
-        <div className="mb-1">
-          <h3 className="font-graduate">Optional Slots:</h3>
-          <ul className="list-disc">{optionalSlots}</ul>
-        </div>
-      ) : null}
-      {formation.choice && formation.choice.length ? (
-        <div className="mb-1">
-          <h3 className="font-graduate">Choice slots:</h3>
-          <ul className="list-disc">{choiceSlots}</ul>
-        </div>
-      ) : null}
-    </div>
-  );
+export const detachmentsTaken = (array: (JSX.Element | null)[] | null) => {
+  if (array) {
+    return array.filter((entry) => entry !== null).length;
+  }
+  return 0;
 };
 
 export const slotHTML = (slot: BUILDER_DETACHMENT_SLOT) => {

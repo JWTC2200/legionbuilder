@@ -29,7 +29,7 @@ export const checkUploadPermission = async (listData: BUILDER_LIST) => {
   querySnapshot.forEach((doc) =>
     data.push(JSON.parse(doc.data().list).list_id)
   );
-  if (data.includes(listData.list_id) || data.length <= 5) {
+  if (data.includes(listData.list_id) || data.length < 10) {
     return true;
   }
   return false;

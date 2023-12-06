@@ -32,10 +32,10 @@ const layout = ({ children }: { children: React.ReactNode }) => {
         setList(JSON.parse(localList) as BUILDER_LIST);
       }
     }
-  }, []);
+  }, [searchParams]);
 
   return (
-    <main className="max-w-screen-2xl w-full">
+    <main className="max-w-screen-2xl w-full flex flex-col items-center">
       <ToastContainer
         autoClose={1000}
         closeOnClick

@@ -5,7 +5,7 @@ import { userListsState } from "../state";
 function UserListTable() {
   const { userLists } = userListsState();
   return (
-    <section className="h-full w-full max-w-4xl dataslate_background flex flex-col mt-2">
+    <section className="h-full w-full dataslate_background flex flex-col">
       {userLists.map((list) => (
         <UserListEntry key={list.list_id} list={list} />
       ))}
