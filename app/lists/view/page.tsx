@@ -5,6 +5,7 @@ import { listState } from "../builder/state";
 import { listPointTotals } from "../utils";
 import ListInfoHtml from "./components/ListInfoHtml";
 import FormationHtml from "./components/FormationHtml";
+import ViewLinkButton from "./components/ViewLinkButton";
 
 const page = () => {
   const { list } = listState();
@@ -16,6 +17,9 @@ const page = () => {
     <main className="w-full max-w-xl text-stone-100 p-4 flex justify-center">
       {list ? (
         <div className="w-full max-w-screen-sm">
+          <ViewLinkButton className="flex gap-2 mb-4 hover:text-lime-400 active:text-lime-100 items-center">
+            Save link to clipboard
+          </ViewLinkButton>
           <ListInfoHtml />
           {list.formations.map((formation, index) => (
             <FormationHtml
