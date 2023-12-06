@@ -44,7 +44,7 @@ const DetachmentDataslate = (detachment: DETACHMENT) => {
   const weaponRows = getUnitWeaponRows(mainUnitWeaponsArray);
 
   return (
-    <article className="max-w-screen-xl sm:p-2 sm:border-2 border-black dataslate_background rounded-lg text-sm sm:text-base">
+    <article className="max-w-screen-xl sm:p-2 sm:border-2 border-black bg-dataslate rounded-lg text-sm sm:text-base">
       {/* TITLE */}
       <div className="flex justify-between items-center gap-2 sm:border-2 border-black bg-primary-950 text-primary-50 py-1 px-3 mb-2">
         <h2 className="text-xl sm:text-xl sm:text-2xl font-graduate font-bold">

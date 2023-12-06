@@ -46,7 +46,7 @@ const page = () => {
   };
 
   return (
-    <main className="flex flex-col gap-2 w-full max-w-screen-2xl items-center dataslate_background mt-4 p-4 rounded-xl border-2 border-black">
+    <main className="flex flex-col gap-2 w-full max-w-screen-2xl items-center bg-dataslate mt-4 p-4 rounded-xl border-2 border-black">
       <h2 className="text-primary-950 font-graduate text-center sm:text-xl">
         If you have any feedback or requests feel free to send me a message!
       </h2>

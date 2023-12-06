@@ -24,7 +24,7 @@ const page = () => {
   );
 
   return (
-    <main className="h-full dataslate_background p-4 flex flex-col items-center">
+    <main className="h-full bg-dataslate p-4 flex flex-col items-center">
       <div className="text-center">
         <label
           htmlFor="search"

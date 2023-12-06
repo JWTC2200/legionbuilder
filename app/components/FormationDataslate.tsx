@@ -5,7 +5,7 @@ import { getDetachmentIcons } from "../utils/detachmentIcons";
 
 const FormationDataslate = (formation: FORMATION) => {
   return (
-    <article className="max-w-screen-xl p-2 border-2 border-black dataslate_background rounded-lg">
+    <article className="max-w-screen-xl p-2 border-2 border-black bg-dataslate rounded-lg">
       <div className="border-2 border-black bg-primary-950 text-primary-50 py-1 px-3 mb-2">
         <h2 className="text-2xl text-center font-graduate font-bold">
           {formation.name}
@@ -25,7 +25,7 @@ const FormationDataslate = (formation: FORMATION) => {
                 return (
                   <div
                     key={"compulsory" + index}
-                    className="flex flex-col justify-center items-center text-center bg-primary-950 text-primary-950 w-40 h-32 p-2 border-2 border-black rounded-xl dataslate_background"
+                    className="flex flex-col justify-center items-center text-center bg-primary-950 text-primary-950 w-40 h-32 p-2 border-2 border-black rounded-xl bg-dataslate"
                   >
                     <span className="text-3xl">
                       {getDetachmentIcons(foundSlot.type)}
@@ -58,7 +58,7 @@ const FormationDataslate = (formation: FORMATION) => {
                 return (
                   <div
                     key={"optional" + index}
-                    className="flex flex-col justify-center items-center text-center bg-primary-950 text-primary-950 w-40 h-32 p-2 border-2 border-black rounded-xl dataslate_background"
+                    className="flex flex-col justify-center items-center text-center bg-primary-950 text-primary-950 w-40 h-32 p-2 border-2 border-black rounded-xl bg-dataslate"
                   >
                     <span className="text-3xl">
                       {getDetachmentIcons(foundSlot.type)}
@@ -95,7 +95,7 @@ const FormationDataslate = (formation: FORMATION) => {
                     return (
                       <div
                         key={"choice" + index2}
-                        className="flex flex-col justify-center items-center text-center text-primary-950 w-40 h-32 p-2 border-2 border-black rounded-xl dataslate_background"
+                        className="flex flex-col justify-center items-center text-center text-primary-950 w-40 h-32 p-2 border-2 border-black rounded-xl bg-dataslate"
                       >
                         <span className="text-3xl">
                           {getDetachmentIcons(foundSlot.type)}

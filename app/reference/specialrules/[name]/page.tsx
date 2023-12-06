@@ -11,7 +11,7 @@ const page = ({ params: { name } }: { params: { name: string } }) => {
     notFound();
   }
   return (
-    <main className="h-full dataslate_background p-4 flex flex-col items-center text-primary-950 max-w-lg w-full">
+    <main className="h-full bg-dataslate p-4 flex flex-col items-center text-primary-950 max-w-lg w-full">
       <h2 className="text-2xl font-graduate font-bold underline w-full text-center mb-4">
         {specialRuleEntry.name}
       </h2>

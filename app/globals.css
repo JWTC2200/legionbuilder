@@ -27,7 +27,7 @@
   @apply hover:text-primary-50;
 }
 
-.dataslate_background {
+.bg-dataslate {
   background: rgb(176, 196, 183);
   background: -moz-linear-gradient(
     90deg,

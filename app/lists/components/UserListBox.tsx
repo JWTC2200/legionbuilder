@@ -34,7 +34,7 @@ const UserListBox = ({ list, setUserLists }: properties) => {
   return (
     <div
       key={list.list_id}
-      className="flex flex-col w-full max-w-[300px] border-2 border-primary-950 rounded-xl p-2 dataslate_background text-primary-950"
+      className="flex flex-col w-full max-w-[300px] border-2 border-primary-950 rounded-xl p-2 bg-dataslate text-primary-950"
     >
       <div className="flex justify-between items-center p-2">
         <Link
