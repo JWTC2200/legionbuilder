@@ -169,6 +169,7 @@ export interface BUILDER_LIST {
   list_id: string;
   user_id: string;
   main_faction: FACTION;
+  allegiance: ALLEGIANCE;
   formations: BUILDER_FORMATION[];
 }
 

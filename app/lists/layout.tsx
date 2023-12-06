@@ -3,13 +3,13 @@
 import React, { useEffect } from "react";
 import { ToastContainer } from "react-toastify";
 import { listState } from "./builder/state";
-import { BUILDER_LIST } from "../types";
+import { ALLEGIANCE, BUILDER_LIST } from "../types";
 import { useSearchParams } from "next/navigation";
 import { getList } from "../firebase/firestore/getList";
 import { toast } from "react-toastify";
 
 const layout = ({ children }: { children: React.ReactNode }) => {
-  const { setList } = listState();
+  const { list, setList } = listState();
   const searchParams = useSearchParams();
   const listParams = searchParams.get("listId");
 
@@ -19,7 +19,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
     const getDblist = async (id: string) => {
       const data: any = await getList(id);
       if (data) {
-        setList(data);
+        setList({ ...data, allegiance: ALLEGIANCE.neutral });
       } else {
         toast.error("Could not find linked list");
       }
@@ -29,7 +29,8 @@ const layout = ({ children }: { children: React.ReactNode }) => {
       getDblist(listParams);
     } else {
       if (localList) {
-        setList(JSON.parse(localList) as BUILDER_LIST);
+        const local = JSON.parse(localList) as BUILDER_LIST;
+        setList({ ...local, allegiance: ALLEGIANCE.neutral });
       }
     }
   }, [listParams]);
@@ -37,7 +38,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <main className="max-w-screen-2xl w-full flex flex-col items-center">
       <ToastContainer
-        autoClose={1000}
+        autoClose={800}
         closeOnClick
         toastStyle={{
           backgroundColor: "#052e16",

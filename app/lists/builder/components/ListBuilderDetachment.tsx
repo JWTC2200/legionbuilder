@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { BUILDER_DETACHMENT_SLOT, SLOTSET, FACTION } from "@/app/types";
+import { BUILDER_DETACHMENT_SLOT, SLOTSET } from "@/app/types";
 import ListBuilderDetachmentTitle from "./ListBuilderDetachmentTitle";
 import ListBuilderDetachmentDetails from "./ListBuilderDetachmentDetails";
 import ListBuilderDetachmentDescription from "./ListBuilderDetachmentDescription";

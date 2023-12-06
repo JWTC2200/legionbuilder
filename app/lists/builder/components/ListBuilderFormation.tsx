@@ -3,10 +3,10 @@
 import { BUILDER_FORMATION, SLOTSET } from "@/app/types";
 import React, { useState } from "react";
 import ListBuilderFormationSelector from "./ListBuilderFormationSelector";
-import ListBuilderDetachment from "./ListBuilderDetachment";
 import ListBuilderFormationToggle from "./ListBuilderFormationToggle";
 import ListBuilderFormationRemoveBtn from "./ListBuilderFormationRemoveBtn";
 import FormationBreakHtml from "../../view/components/FormationBreakHtml";
+import ListBuilderFormationSections from "./ListBuilderFormationSections";
 
 const ListBuilderFormation = ({
   formation,
@@ -31,82 +31,34 @@ const ListBuilderFormation = ({
 
       {viewFormation ? (
         <>
+          <FormationBreakHtml
+            formation={formation}
+            className="text-black my-2 flex flex-wrap gap-2 font-graduate justify-center"
+          />
           {formation.compulsory ? (
-            <FormationBreakHtml
-              formation={formation}
-              className="text-black mt-2 flex flex-wrap gap-2 font-graduate justify-center"
+            <ListBuilderFormationSections
+              formationSection={formation.compulsory}
+              sectionType={SLOTSET.compulsory}
+              index={0}
             />
           ) : null}
-          {formation.compulsory ? (
-            <div className="w-full mt-2">
-              <div className="w-full text-green-950 flex flex-col items-center">
-                <h1 className="w-full text-center bg-green-950 text-green-50 font-graduate">
-                  ~ Compulsory slots ~
-                </h1>
-                {formation.compulsory.filter(
-                  (compSlot) => compSlot.selected_unit
-                ).length < formation.compulsory.length ? (
-                  <div className="text-red-600 pt-2 font-semibold">
-                    Compulsory detachments missing!
-                  </div>
-                ) : null}
-                <div className="flex flex-wrap gap-2 py-2 sm:px-2 justify-center">
-                  {formation.compulsory.map((slot) => (
-                    <ListBuilderDetachment
-                      key={slot.slot_ref}
-                      detachmentSlot={slot}
-                      slotSet={SLOTSET.compulsory}
-                    />
-                  ))}
-                </div>
-              </div>
-            </div>
-          ) : null}
           {formation.optional ? (
-            <div className="w-full">
-              <div className="w-full text-green-950 flex flex-col items-center">
-                <h1 className="w-full text-center bg-green-950 text-green-50 font-graduate">
-                  ~ Optional slots ~
-                </h1>
-                <div className="flex flex-wrap gap-2 py-2 sm:py-4 sm:px-2 justify-center">
-                  {formation.optional.map((slot) => (
-                    <ListBuilderDetachment
-                      key={slot.slot_ref}
-                      detachmentSlot={slot}
-                      slotSet={SLOTSET.optional}
-                    />
-                  ))}
-                </div>
-              </div>
-            </div>
+            <ListBuilderFormationSections
+              formationSection={formation.optional}
+              sectionType={SLOTSET.optional}
+              index={0}
+            />
           ) : null}
+
           {formation.choice ? (
             <div className="w-full flex flex-col">
-              {formation.choice.map((choiceSet, index) => (
-                <div
+              {formation.choice.map((choiceArray, index) => (
+                <ListBuilderFormationSections
                   key={formation.ref_id + "choiceSet" + index}
-                  className="w-full text-green-950 flex flex-col items-center "
-                >
-                  <h1 className="w-full text-center bg-green-950 text-green-50 font-graduate">
-                    ~ Choose up to one of the following ~
-                  </h1>
-                  {formation.choice![index].filter(
-                    (choiceSlot) => choiceSlot.selected_unit
-                  ).length > 1 ? (
-                    <div className="text-red-600 pt-2 font-semibold">
-                      Selected too many detachments!
-                    </div>
-                  ) : null}
-                  <div className="flex flex-wrap gap-2 py-2 sm:py-4 sm:px-2 justify-center">
-                    {choiceSet.map((slot) => (
-                      <ListBuilderDetachment
-                        key={slot.slot_ref}
-                        detachmentSlot={slot}
-                        slotSet={SLOTSET.choice}
-                      />
-                    ))}
-                  </div>
-                </div>
+                  formationSection={choiceArray}
+                  sectionType={SLOTSET.choice}
+                  index={index}
+                />
               ))}
             </div>
           ) : null}

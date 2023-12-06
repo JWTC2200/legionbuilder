@@ -1,6 +1,6 @@
 import React from "react";
-import { ImQuill } from "react-icons/im";
 import { listState } from "../state";
+import { ImQuill } from "@react-icons/all-files/im/ImQuill";
 
 const ListBuilderListName = () => {
   const { list, setList } = listState();
