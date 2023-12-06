@@ -9,7 +9,7 @@ export default function Home() {
       <h2 className="text-lg font-graduate text-cyan-700 mt-2">Changes</h2>
       <p className="sm:text-lg">
         There has been a lot of work behind the scenes so apologies for any
-        confusion or issues that make occur.
+        confusion or issues that may occur.
       </p>
       <p className="flex items-center gap-1">
         First of all we have a
