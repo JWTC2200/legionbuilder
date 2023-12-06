@@ -47,7 +47,10 @@ export const getDetachmentIcons = (type: DETACHMENT_TYPE) => {
   if (type === DETACHMENT_TYPE.bastion) {
     return <GiWhiteTower />;
   }
-  if (type === DETACHMENT_TYPE.transport) {
+  if (
+    type === DETACHMENT_TYPE.transport ||
+    type === DETACHMENT_TYPE.dedicated
+  ) {
     return <PiArrowFatUpFill />;
   }
   if (type === DETACHMENT_TYPE.knight) {

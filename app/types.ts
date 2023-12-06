@@ -26,6 +26,7 @@ export enum DETACHMENT_TYPE {
   air = "Air Support",
   knight = "Knight",
   titan = "Titan",
+  dedicated = "Dedicated",
 }
 
 export const detachmentTypeArray = Object.values(DETACHMENT_TYPE);
@@ -75,6 +76,7 @@ export interface DETACHMENT {
   base_cost: number;
   base_size: number;
   max_size: number;
+  break_strength?: number;
   main_unit: number[];
   related_unit: number[];
   loadout: DETACHMENT_LOADOUT[];
@@ -91,7 +93,13 @@ export interface DETACHMENT_LOADOUT {
 
 export interface DETACHMENT_UPGRADE {
   name: string;
-  options: { number: number; cost: number; size: number; text?: string }[];
+  options: {
+    number: number;
+    cost: number;
+    size: number;
+    text?: string;
+    break_strength?: number;
+  }[];
 }
 
 export interface DETACHMENT_UPGRADE_DATASHEET {
@@ -192,6 +200,7 @@ export interface BUILDER_DETACHMENT_UNIT {
   base_cost: number;
   base_size: number;
   max_size: number;
+  break_strength?: number;
   upgrade_options: BUILDER_DETACHMENT_UNIT_UPGRADES[];
 }
 
@@ -201,6 +210,7 @@ export interface BUILDER_DETACHMENT_UNIT_UPGRADES {
   cost: number;
   size: number;
   text?: string;
+  break_strength?: number;
 }
 
 // CONTACT FORM

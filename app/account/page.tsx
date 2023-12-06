@@ -2,26 +2,28 @@
 
 import React, { useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { useAuthContext } from "../firebase/auth/AuthContext";
 import { deleteUserAccount } from "../firebase/firestore/deleteUser";
+import useAuthState from "../Auth";
+import { getAuth } from "firebase/auth";
 
 const page = () => {
-  const { user } = useAuthContext();
+  const userUid = useAuthState((state) => state.uid);
   const router = useRouter();
+  const currentUser = getAuth().currentUser;
 
   const handleDelete = () => {
     deleteUserAccount();
   };
 
   useEffect(() => {
-    if (!user) {
+    if (!userUid) {
       router.push("/");
     }
-  }, [user]);
+  }, [userUid]);
 
   return (
     <div>
-      <h2>{user?.email}</h2>
+      <h2>{currentUser?.email}</h2>
       <button
         onClick={handleDelete}
         className="mt-4 px-4 py-2 text-2xl hover:text-cyan-700 hover:border-cyan-700 active:text-cyan-600 text-bold border-4 rounded-full"

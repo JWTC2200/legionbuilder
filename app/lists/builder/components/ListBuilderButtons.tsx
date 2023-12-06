@@ -4,27 +4,27 @@ import { useRouter } from "next/navigation";
 import { nanoid } from "nanoid";
 import { listState } from "../state";
 import { handleSaveList } from "../utils";
-import { useAuthContext } from "@/app/firebase/auth/AuthContext";
 import { saveData } from "@/app/firebase/firestore/saveData";
 import { toast } from "react-toastify";
+import useAuthState from "@/app/Auth";
 
 const ListBuilderButtons = () => {
   const { list, clearList } = listState();
-  const { user } = useAuthContext();
+  const userUid = useAuthState((state) => state.uid);
   const router = useRouter();
 
   const saveList = async () => {
     handleSaveList(list);
-    if (user) {
-      if (user.uid === list.user_id) {
+    if (userUid) {
+      if (userUid === list.user_id) {
         const { uploaded, message } = await saveData(list);
         if (uploaded) {
           toast.success(message);
         } else {
-          toast.error("List upload failed");
+          toast.error(message);
         }
       } else {
-        const newList = { ...list, list_id: nanoid(), user_id: user.uid };
+        const newList = { ...list, list_id: nanoid(), user_id: userUid };
         const { uploaded, message } = await saveData(newList);
         if (uploaded) {
           toast.success(message);

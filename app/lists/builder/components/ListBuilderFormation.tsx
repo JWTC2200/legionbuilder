@@ -6,6 +6,7 @@ import ListBuilderFormationSelector from "./ListBuilderFormationSelector";
 import ListBuilderDetachment from "./ListBuilderDetachment";
 import ListBuilderFormationToggle from "./ListBuilderFormationToggle";
 import ListBuilderFormationRemoveBtn from "./ListBuilderFormationRemoveBtn";
+import FormationBreakHtml from "../../view/components/FormationBreakHtml";
 
 const ListBuilderFormation = ({
   formation,
@@ -27,8 +28,15 @@ const ListBuilderFormation = ({
         <ListBuilderFormationSelector formation={formation} />
         <ListBuilderFormationRemoveBtn formation={formation} />
       </div>
+
       {viewFormation ? (
         <>
+          {formation.compulsory ? (
+            <FormationBreakHtml
+              formation={formation}
+              className="text-black mt-2 flex flex-wrap gap-2 font-graduate justify-center"
+            />
+          ) : null}
           {formation.compulsory ? (
             <div className="w-full mt-2">
               <div className="w-full text-green-950 flex flex-col items-center">
