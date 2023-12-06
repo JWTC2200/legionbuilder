@@ -1,6 +1,7 @@
 import React from "react";
 import { listState } from "../state";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { FaChevronDown } from "@react-icons/all-files/fa/FaChevronDown";
+import { FaChevronUp } from "@react-icons/all-files/fa/FaChevronUp";
 import { builderBottomWidget } from "../state";
 import { listPointTotals } from "../../utils";
 import { returnToTop } from "@/app/utils/scrolltotop";

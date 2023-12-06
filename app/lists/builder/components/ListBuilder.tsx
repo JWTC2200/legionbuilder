@@ -15,7 +15,7 @@ const ListBuilder = () => {
       <ListBuilderListName />
       <ListBuilderWarnings />
       <ListBuilderAddFormation />
-      <ListBuilderQuickLinks />
+      {/* <ListBuilderQuickLinks /> */}
       <ListBuilderFormationDisplay />
     </div>
   );
