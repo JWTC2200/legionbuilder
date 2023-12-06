@@ -10,10 +10,10 @@ const ListInfoHtml = () => {
   return (
     <div className="mb-2">
       <h1 className="font-bold font-subrayada text-xl">{list.list_name}</h1>
-      <h2 className="font-bold font-graduate">
+      <h2 className="font-semild font-graduate">
         List total: {armyTotalPoints} points
       </h2>
-      <h2 className="font-bold font-graduate">
+      <h2 className="font-semild font-graduate">
         Main faction: {list.main_faction}
       </h2>
     </div>

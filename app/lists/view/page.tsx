@@ -13,7 +13,7 @@ const page = () => {
     listPointTotals(list);
 
   return (
-    <main className="w-full min-h-screen text-stone-100 p-4 flex justify-center">
+    <main className="w-full max-w-xl text-stone-100 p-4 flex justify-center">
       {list ? (
         <div className="w-full max-w-screen-sm">
           <ListInfoHtml />
