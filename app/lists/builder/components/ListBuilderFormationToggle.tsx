@@ -11,7 +11,7 @@ const ListBuilderFormationToggle = ({ view, toggle }: properties) => {
     <button
       type="button"
       onClick={() => toggle((prev) => !prev)}
-      className="text-xl sm:text-3xl my-1 hover:text-cyan-700"
+      className="text-xl sm:text-3xl my-1 hover:text-tertiary-700"
     >
       {view ? <FaRegSquareMinus /> : <FaRegSquarePlus />}
     </button>

@@ -23,7 +23,7 @@ const DetachmentDataslate = (detachment: DETACHMENT) => {
         <td className="text-start px-2">
           <Link
             href={`/reference/units/${unit.name.replaceAll(" ", "_")}`}
-            className="flex items-center gap-2 hover:text-cyan-700 active:text-cyan-600"
+            className="flex items-center gap-2 hover:text-tertiary-700 active:text-tertiary-600"
           >
             {unit.name} <FaExternalLinkAlt />
           </Link>

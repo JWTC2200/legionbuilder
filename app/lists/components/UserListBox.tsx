@@ -40,7 +40,7 @@ const UserListBox = ({ list, setUserLists }: properties) => {
         <Link
           href="/lists/builder"
           onClick={() => setList(list)}
-          className="text-lg font-semibold text-center hover:text-cyan-700 font-graduate"
+          className="text-lg font-semibold text-center hover:text-tertiary-700 font-graduate"
         >
           {list.list_name}
         </Link>
@@ -61,7 +61,7 @@ const UserListBox = ({ list, setUserLists }: properties) => {
               `https://legionbuilder.app/lists/builder?listId=${list.list_id}`
             )
           }
-          className="flex flex-col justify-center items-center text-lg hover:text-cyan-700"
+          className="flex flex-col justify-center items-center text-lg hover:text-tertiary-700"
         >
           <FaCopy className="text-4xl" />
           <span className="text-xs">Builder link</span>

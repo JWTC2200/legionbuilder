@@ -6,7 +6,7 @@ import FrontpageUpdates from "@components/FrontpageUpdates";
 export default function Home() {
   return (
     <main className="flex flex-col items-start p-2 gap-2 max-w-screen-md text-brown-50 sm:text-lg">
-      <h2 className="text-lg font-graduate text-cyan-700 mt-2">Changes</h2>
+      <h2 className="text-lg font-graduate text-tertiary-700 mt-2">Changes</h2>
       <p className="sm:text-lg">
         There has been a lot of work behind the scenes so apologies for any
         confusion or issues that make occur.
@@ -16,7 +16,7 @@ export default function Home() {
         <Link
           href="https://discord.gg/qyFkhXz9"
           target="_blank"
-          className="hover:underline flex items-center gap-1 hover:text-cyan-700 active:text-cyan-700 focus:text-cyan-700"
+          className="hover:underline flex items-center gap-1 hover:text-tertiary-700 active:text-tertiary-700 focus:text-tertiary-700"
         >
           Discord <FaDiscord />
         </Link>
@@ -41,26 +41,26 @@ export default function Home() {
       </p>
 
       {/* CONTACT SECTION */}
-      <h2 className="text-lg font-graduate text-cyan-700 mt-2">
+      <h2 className="text-lg font-graduate text-tertiary-700 mt-2">
         Suggestions or feedback?
       </h2>
       <Link
         href="https://discord.gg/qJc2cZGt"
         target="_blank"
-        className="hover:underline text-xl flex items-center gap-1 hover:text-cyan-700 active:text-cyan-700 focus:text-cyan-700"
+        className="hover:underline text-xl flex items-center gap-1 hover:text-tertiary-700 active:text-tertiary-700 focus:text-tertiary-700"
       >
         Join our Discord! <FaDiscord />
       </Link>
       <Link
         href="/contact"
-        className="hover:underline text-xl flex items-end gap-1 hover:text-cyan-700 active:text-cyan-700 focus:text-cyan-700"
+        className="hover:underline text-xl flex items-end gap-1 hover:text-tertiary-700 active:text-tertiary-700 focus:text-tertiary-700"
       >
         Contact me <TfiEmail />
       </Link>
       <Link
         href="https://github.com/JWTC2200/legionbuilder"
         className="mb-2 text-xl flex items-center gap-1
-        hover:text-cyan-700 hover:underline active:text-cyan-700 focus:text-cyan-700"
+        hover:text-tertiary-700 hover:underline active:text-tertiary-700 focus:text-tertiary-700"
       >
         Github <FaGithub />
       </Link>

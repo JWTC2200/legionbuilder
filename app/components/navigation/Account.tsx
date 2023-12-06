@@ -33,7 +33,7 @@ export default function () {
             <NavItem>
               <button
                 onClick={logout}
-                className="flex items-center gap-2 hover:text-cyan-700 active:text-cyan-600"
+                className="flex items-center gap-2 hover:text-tertiary-700 active:text-tertiary-600"
               >
                 <Logout className={"w-6 h-6 lg:w-4 lg:h-4"} />
                 <span>Logout</span>

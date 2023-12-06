@@ -60,7 +60,7 @@ const page = () => {
         />
         <button
           type="submit"
-          className="border-4 border-primary-950 rounded-full px-4 py-1 dataslate_background text-primary-950 font-semibold font-graduate hover:border-cyan-700 hover:text-cyan-700"
+          className="border-4 border-primary-950 rounded-full px-4 py-1 dataslate_background text-primary-950 font-semibold font-graduate hover:border-tertiary-700 hover:text-tertiary-700"
         >
           Register
         </button>

@@ -66,14 +66,14 @@ const page = () => {
         />
         <button
           type="submit"
-          className="border-4 border-primary-950 rounded-full px-4 py-1 dataslate_background text-primary-950 font-semibold font-graduate hover:border-cyan-700 hover:text-cyan-700"
+          className="border-4 border-primary-950 rounded-full px-4 py-1 dataslate_background text-primary-950 font-semibold font-graduate hover:border-tertiary-700 hover:text-tertiary-700"
         >
           Login
         </button>
       </form>
       <p className="mt-4">
         If you don't have an account please register{" "}
-        <Link href="/account/register" className="text-cyan-700">
+        <Link href="/account/register" className="text-tertiary-700">
           here!
         </Link>
       </p>

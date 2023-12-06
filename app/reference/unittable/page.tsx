@@ -34,7 +34,7 @@ const page = () => {
                 {" "}
                 <Link
                   href={`/reference/units/${unit.name.replaceAll(" ", "_")}`}
-                  className="flex flex-wrap items-center gap-2 hover:text-cyan-700 active:text-cyan-600"
+                  className="flex flex-wrap items-center gap-2 hover:text-tertiary-700 active:text-tertiary-600"
                 >
                   <FaExternalLinkAlt /> {unit.name}
                 </Link>

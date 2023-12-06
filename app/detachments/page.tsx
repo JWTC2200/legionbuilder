@@ -33,7 +33,7 @@ const page = () => {
               <Link
                 key={detachment.name}
                 href={`/detachments/${detachment.name.replaceAll(" ", "_")} `}
-                className="text-lg hover:text-cyan-700 active:text-cyan-600 flex items-center gap-1"
+                className="text-lg hover:text-tertiary-700 active:text-tertiary-600 flex items-center gap-1"
               >
                 {getDetachmentIcons(detachment.detachment_type)}
                 {detachment.name}

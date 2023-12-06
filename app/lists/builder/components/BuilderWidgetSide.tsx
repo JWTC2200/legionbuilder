@@ -26,19 +26,19 @@ const BuilderWidgetSide = () => {
         <div className="flex flex-wrap justify-evenly items-center text-center w-10/12 transition-all">
           <button
             onClick={() => handleSaveList(list)}
-            className="bg-white p-2 rounded-full hover:bg-cyan-700 active:bg-cyan-700 z-50 text-secondary-800"
+            className="bg-white p-2 rounded-full hover:bg-tertiary-700 active:bg-tertiary-700 z-50 text-secondary-800"
           >
             <FiSave />
           </button>
           <Link
             href="/lists/view"
-            className="bg-white p-2 rounded-full hover:bg-cyan-700 active:bg-cyan-700 z-50 text-secondary-800"
+            className="bg-white p-2 rounded-full hover:bg-tertiary-700 active:bg-tertiary-700 z-50 text-secondary-800"
           >
             <FiPrinter />
           </Link>
           <button
             onClick={clearList}
-            className="bg-white p-2 rounded-full hover:bg-cyan-700 active:bg-cyan-700 z-50 text-secondary-800"
+            className="bg-white p-2 rounded-full hover:bg-tertiary-700 active:bg-tertiary-700 z-50 text-secondary-800"
           >
             <ImBin />
           </button>
@@ -51,7 +51,7 @@ const BuilderWidgetSide = () => {
           setSideWidget((prev) => !prev);
         }}
         className={
-          "p-2 rounded-full hover:text-cyan-700 active:text-cyan-700 text-white"
+          "p-2 rounded-full hover:text-tertiary-700 active:text-tertiary-700 text-white"
         }
       >
         {sideWidget ? <TbChevronCompactRight /> : <TbChevronCompactLeft />}

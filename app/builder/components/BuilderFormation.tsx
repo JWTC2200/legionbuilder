@@ -71,7 +71,7 @@ const BuilderFormation = ({
           onClick={() => {
             setViewFormation((prev) => !prev);
           }}
-          className="text-xl sm:text-3xl my-1 hover:text-cyan-700"
+          className="text-xl sm:text-3xl my-1 hover:text-tertiary-700"
         >
           {viewFormation ? <FaRegSquareMinus /> : <FaRegSquarePlus />}
         </button>

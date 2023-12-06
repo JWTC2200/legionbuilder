@@ -16,7 +16,7 @@ const page = () => {
               <Link
                 key={formation.name}
                 href={`/formations/${formation.name.replaceAll(" ", "_")} `}
-                className="text-lg hover:text-cyan-700 active:text-cyan-600"
+                className="text-lg hover:text-tertiary-700 active:text-tertiary-600"
               >
                 {formation.name}
               </Link>

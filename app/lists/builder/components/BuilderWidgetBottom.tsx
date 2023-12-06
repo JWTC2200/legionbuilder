@@ -25,7 +25,7 @@ const BuilderWidgetBottom = () => {
         <button
           type="button"
           onClick={toggleWidget}
-          className="hover:text-cyan-700 active:text-cyan-700"
+          className="hover:text-tertiary-700 active:text-tertiary-700"
         >
           {widget ? <FaChevronDown /> : <FaChevronUp />}
         </button>
@@ -66,7 +66,7 @@ const BuilderWidgetBottom = () => {
           <button
             type="button"
             onClick={returnToTop}
-            className="hover:text-cyan-700 active:text-cyan-700 flex flex-col items-center"
+            className="hover:text-tertiary-700 active:text-tertiary-700 flex flex-col items-center"
           >
             {widget ? (
               <>

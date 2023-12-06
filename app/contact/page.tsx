@@ -96,7 +96,7 @@ const page = () => {
         <button
           type="submit"
           onClick={handleSubmit}
-          className="flex gap-2 text-center font-graduate font-semibold border max-w-min border-primary-950 rounded-xl p-1 m-2 hover:bg-primary-950 hover:text-primary-50 active:bg-primary-950 active:text-cyan-700"
+          className="flex gap-2 text-center font-graduate font-semibold border max-w-min border-primary-950 rounded-xl p-1 m-2 hover:bg-primary-950 hover:text-primary-50 active:bg-primary-950 active:text-tertiary-700"
         >
           Submit{" "}
           {sending ? (

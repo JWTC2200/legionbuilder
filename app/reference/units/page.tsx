@@ -19,7 +19,7 @@ const page = () => {
                 <Link
                   key={unit.name}
                   href={`/reference/units/${unit.name.replaceAll(" ", "_")} `}
-                  className="text-lg hover:text-cyan-700 active:text-cyan-600"
+                  className="text-lg hover:text-tertiary-700 active:text-tertiary-600"
                 >
                   {unit.name}
                 </Link>

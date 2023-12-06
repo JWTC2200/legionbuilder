@@ -209,7 +209,7 @@ const page = () => {
   //       onClick={() => {
   //         setInfoWidget((prev) => !prev);
   //       }}
-  //       className="hover:text-cyan-700 active:text-cyan-700"
+  //       className="hover:text-tertiary-700 active:text-tertiary-700"
   //     >
   //       {infoWidget ? <FaChevronDown /> : <FaChevronUp />}
   //     </button>
@@ -250,7 +250,7 @@ const page = () => {
   //       <button
   //         type="button"
   //         onClick={returnToTop}
-  //         className="hover:text-cyan-700 active:text-cyan-700 flex flex-col items-center"
+  //         className="hover:text-tertiary-700 active:text-tertiary-700 flex flex-col items-center"
   //       >
   //         {infoWidget ? (
   //           <>
@@ -277,19 +277,19 @@ const page = () => {
   //     <div className="flex flex-wrap justify-evenly items-center text-center w-10/12 transition-all">
   //       <button
   //         onClick={handleSaveList}
-  //         className="bg-white p-2 rounded-full hover:bg-cyan-700 active:bg-cyan-700 z-50 text-secondary-800"
+  //         className="bg-white p-2 rounded-full hover:bg-tertiary-700 active:bg-tertiary-700 z-50 text-secondary-800"
   //       >
   //         <FiSave />
   //       </button>
   //       <button
   //         onClick={handlePrintList}
-  //         className="bg-white p-2 rounded-full hover:bg-cyan-700 active:bg-cyan-700 z-50 text-secondary-800"
+  //         className="bg-white p-2 rounded-full hover:bg-tertiary-700 active:bg-tertiary-700 z-50 text-secondary-800"
   //       >
   //         <FiPrinter />
   //       </button>
   //       <button
   //         onClick={handleClearList}
-  //         className="bg-white p-2 rounded-full hover:bg-cyan-700 active:bg-cyan-700 z-50 text-secondary-800"
+  //         className="bg-white p-2 rounded-full hover:bg-tertiary-700 active:bg-tertiary-700 z-50 text-secondary-800"
   //       >
   //         <ImBin />
   //       </button>
@@ -302,7 +302,7 @@ const page = () => {
   //       setSideWidget((prev) => !prev);
   //     }}
   //     className={
-  //       "p-2 rounded-full hover:text-cyan-700 active:text-cyan-700 text-white"
+  //       "p-2 rounded-full hover:text-tertiary-700 active:text-tertiary-700 text-white"
   //     }
   //   >
   //     {sideWidget ? <TbChevronCompactRight /> : <TbChevronCompactLeft />}
@@ -315,26 +315,26 @@ const page = () => {
   // <div className="w-full flex flex-wrap gap-4 justify-center text-center">
   //   <button
   //     onClick={handleSaveList}
-  //     className=" bg-primary-950 text-primary-50 px-2 py-1 font-bold font-graduate rounded-lg hover:text-cyan-700"
+  //     className=" bg-primary-950 text-primary-50 px-2 py-1 font-bold font-graduate rounded-lg hover:text-tertiary-700"
   //   >
   //     SAVE
   //   </button>
   //   <button
   //     onClick={handlePrintList}
-  //     className=" bg-primary-950 text-primary-50 px-2 py-1 font-bold font-graduate rounded-lg hover:text-cyan-700"
+  //     className=" bg-primary-950 text-primary-50 px-2 py-1 font-bold font-graduate rounded-lg hover:text-tertiary-700"
   //   >
   //     PRINT
   //   </button>
   //   <button
   //     onClick={handleClearList}
-  //     className=" bg-primary-950 text-primary-50 px-2 py-1 font-bold font-graduate rounded-lg hover:text-cyan-700"
+  //     className=" bg-primary-950 text-primary-50 px-2 py-1 font-bold font-graduate rounded-lg hover:text-tertiary-700"
   //   >
   //     NEW
   //   </button>
   //   {user?.uid ? (
   //     <button
   //       onClick={handleUploadList}
-  //       className=" bg-primary-950 text-primary-50 px-2 py-1 font-bold font-graduate rounded-lg hover:text-cyan-700"
+  //       className=" bg-primary-950 text-primary-50 px-2 py-1 font-bold font-graduate rounded-lg hover:text-tertiary-700"
   //     >
   //       UPLOAD
   //     </button>
@@ -429,10 +429,10 @@ const page = () => {
     /* ADD FORMATION AND FORMATION QUICK NAV LINKS */
   }
   // <div className="w-full text-primary-50 flex flex-col justify-center gap-2">
-  //   <div className="builder_title_background flex flex-wrap justify-center items-center text-center gap-4 w-max mx-auto rounded-full px-3 border-4 border-primary-900 hover:border-cyan-700">
+  //   <div className="builder_title_background flex flex-wrap justify-center items-center text-center gap-4 w-max mx-auto rounded-full px-3 border-4 border-primary-900 hover:border-tertiary-700">
   //     <button
   //       onClick={addFormation}
-  //       className="p-1 hover:text-cyan-700 font-graduate sm:text-xl flex items-center gap-1"
+  //       className="p-1 hover:text-tertiary-700 font-graduate sm:text-xl flex items-center gap-1"
   //     >
   //       <FiPlus /> Add formation
   //       <FiPlus />
@@ -445,7 +445,7 @@ const page = () => {
   //         <Link
   //           href={`#${formation.ref_id}`}
   //           key={formation.ref_id + "link"}
-  //           className="flex items-center text-center gap-1 hover:text-cyan-700 active:text-cyan-700"
+  //           className="flex items-center text-center gap-1 hover:text-tertiary-700 active:text-tertiary-700"
   //         >
   //           <FiChevronDown />
   //           Formation {index + 1}{" "}
