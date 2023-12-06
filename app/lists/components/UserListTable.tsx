@@ -7,7 +7,7 @@ function UserListTable() {
   return (
     <section className="h-full w-full max-w-4xl dataslate_background flex flex-col mt-2">
       {userLists.map((list) => (
-        <UserListEntry list={list} />
+        <UserListEntry key={list.list_id} list={list} />
       ))}
     </section>
   );

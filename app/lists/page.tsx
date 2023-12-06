@@ -1,29 +1,28 @@
 "use client";
 
 import React, { useEffect } from "react";
-import { useAuthContext } from "../firebase/auth/AuthContext";
 import { loadLists } from "./utils";
 import { userListsState } from "./state";
-import UserListBox from "./components/UserListBox";
 import { listState } from "./builder/state";
 import Link from "next/link";
 import NotSignedIn from "./components/NotSignedIn";
 import UserListTable from "./components/UserListTable";
+import useAuthState from "../Auth";
 
 const page = () => {
-  const { user } = useAuthContext();
+  const userUid = useAuthState((state) => state.uid);
   const { userLists, setUserLists } = userListsState();
   const { clearList } = listState();
 
   useEffect(() => {
     const getLists = async () => {
-      const fetchedLists = await loadLists(user!);
+      const fetchedLists = await loadLists(userUid);
       setUserLists(fetchedLists);
     };
-    if (user) {
+    if (userUid) {
       getLists();
     }
-  }, [user]);
+  }, [userUid]);
 
   return (
     <div className="flex flex-col items-center gap-2">
@@ -38,7 +37,7 @@ const page = () => {
         <UserListTable />
       ) : (
         <h2 className="font-graduate text-xl">
-          {user ? "You have no saved lists!" : <NotSignedIn />}
+          {userUid ? "You have no saved lists!" : <NotSignedIn />}
         </h2>
       )}
     </div>
