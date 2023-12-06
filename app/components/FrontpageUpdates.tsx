@@ -13,8 +13,9 @@ const FrontpageUpdates = () => {
               06/12/2023:
               <li className="ml-4 text-stone-50">
                 Added formation strength and break points in builder and view.
-                Lists saved before this update not calculate properly for
-                Knights & Titans until you reselect the option in the builder.
+                Lists saved before this update won't calculate properly for
+                Knights & Titans until you reselect the option in the builder
+                (you will also have to save it again!).
               </li>
             </ul>
           </li>
