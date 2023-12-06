@@ -47,7 +47,7 @@ const page = () => {
 
   return (
     <p>Redirecting to view</p>
-    // <main className="w-full min-h-screen bg-slate-50 text-green-950 p-4 flex justify-center">
+    // <main className="w-full min-h-screen bg-slate-50 text-primary-950 p-4 flex justify-center">
     //   {armyList ? (
     //     <div className="w-full max-w-screen-sm">
     //       {/* <button

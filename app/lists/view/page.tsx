@@ -11,7 +11,7 @@ const page = () => {
     listPointTotals(list);
 
   return (
-    <main className="w-full min-h-screen bg-slate-50 text-green-950 p-4 flex justify-center">
+    <main className="w-full min-h-screen bg-slate-50 text-primary-950 p-4 flex justify-center">
       {list ? (
         <div className="w-full max-w-screen-sm">
           <div className="mb-2">

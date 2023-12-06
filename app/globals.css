@@ -24,7 +24,7 @@
 .hover\:bg-dataslate {
   @apply hover:from-primary-950;
   @apply hover:to-primary-900;
-  @apply hover:text-lime-50;
+  @apply hover:text-primary-50;
 }
 
 .dataslate_background {

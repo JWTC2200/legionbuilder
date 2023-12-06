@@ -198,7 +198,7 @@ const page = () => {
     /* INFORMATION WIDGET BOTTOM */
   }
   // <div
-  //   className={`fixed w-full max-w-screen-2xl bg-stone-800 text-stone-50 font-graduate bottom-0 px-2 flex flex-col text-xs sm:text-lg transition-all${
+  //   className={`fixed w-full max-w-screen-2xl bg-secondary-800 text-secondary-50 font-graduate bottom-0 px-2 flex flex-col text-xs sm:text-lg transition-all${
   //     " " + widgetHeight
   //   }`}
   // >
@@ -268,7 +268,7 @@ const page = () => {
   }
   // <div
   //   className={
-  //     `fixed flex flex-wrap justify-center items-center lg:hidden bg-stone-800 text-stone-50  h-24  right-0 bottom-32 rounded-l-lg text-3xl transition-all z-20` +
+  //     `fixed flex flex-wrap justify-center items-center lg:hidden bg-secondary-800 text-secondary-50  h-24  right-0 bottom-32 rounded-l-lg text-3xl transition-all z-20` +
   //     " " +
   //     widgetWidth
   //   }
@@ -277,19 +277,19 @@ const page = () => {
   //     <div className="flex flex-wrap justify-evenly items-center text-center w-10/12 transition-all">
   //       <button
   //         onClick={handleSaveList}
-  //         className="bg-white p-2 rounded-full hover:bg-cyan-700 active:bg-cyan-700 z-50 text-stone-800"
+  //         className="bg-white p-2 rounded-full hover:bg-cyan-700 active:bg-cyan-700 z-50 text-secondary-800"
   //       >
   //         <FiSave />
   //       </button>
   //       <button
   //         onClick={handlePrintList}
-  //         className="bg-white p-2 rounded-full hover:bg-cyan-700 active:bg-cyan-700 z-50 text-stone-800"
+  //         className="bg-white p-2 rounded-full hover:bg-cyan-700 active:bg-cyan-700 z-50 text-secondary-800"
   //       >
   //         <FiPrinter />
   //       </button>
   //       <button
   //         onClick={handleClearList}
-  //         className="bg-white p-2 rounded-full hover:bg-cyan-700 active:bg-cyan-700 z-50 text-stone-800"
+  //         className="bg-white p-2 rounded-full hover:bg-cyan-700 active:bg-cyan-700 z-50 text-secondary-800"
   //       >
   //         <ImBin />
   //       </button>
@@ -315,26 +315,26 @@ const page = () => {
   // <div className="w-full flex flex-wrap gap-4 justify-center text-center">
   //   <button
   //     onClick={handleSaveList}
-  //     className=" bg-green-950 text-green-50 px-2 py-1 font-bold font-graduate rounded-lg hover:text-cyan-700"
+  //     className=" bg-primary-950 text-primary-50 px-2 py-1 font-bold font-graduate rounded-lg hover:text-cyan-700"
   //   >
   //     SAVE
   //   </button>
   //   <button
   //     onClick={handlePrintList}
-  //     className=" bg-green-950 text-green-50 px-2 py-1 font-bold font-graduate rounded-lg hover:text-cyan-700"
+  //     className=" bg-primary-950 text-primary-50 px-2 py-1 font-bold font-graduate rounded-lg hover:text-cyan-700"
   //   >
   //     PRINT
   //   </button>
   //   <button
   //     onClick={handleClearList}
-  //     className=" bg-green-950 text-green-50 px-2 py-1 font-bold font-graduate rounded-lg hover:text-cyan-700"
+  //     className=" bg-primary-950 text-primary-50 px-2 py-1 font-bold font-graduate rounded-lg hover:text-cyan-700"
   //   >
   //     NEW
   //   </button>
   //   {user?.uid ? (
   //     <button
   //       onClick={handleUploadList}
-  //       className=" bg-green-950 text-green-50 px-2 py-1 font-bold font-graduate rounded-lg hover:text-cyan-700"
+  //       className=" bg-primary-950 text-primary-50 px-2 py-1 font-bold font-graduate rounded-lg hover:text-cyan-700"
   //     >
   //       UPLOAD
   //     </button>
@@ -353,7 +353,7 @@ const page = () => {
   {
     /* MAIN LIST OPTIONS */
   }
-  // <div className="w-full mx-4 p-4 builder_head_background text-green-50 flex flex-wrap justify-center gap-4 text-center">
+  // <div className="w-full mx-4 p-4 builder_head_background text-primary-50 flex flex-wrap justify-center gap-4 text-center">
   //   <div>
   //     <label htmlFor="game_size" className="sm:text-xl font-graduate mr-1">
   //       Game size:
@@ -372,7 +372,7 @@ const page = () => {
   //         <option
   //           value={size}
   //           key={"gameSize" + size}
-  //           className="text-green-950"
+  //           className="text-primary-950"
   //         >
   //           {size}pts
   //         </option>
@@ -396,10 +396,10 @@ const page = () => {
   //       }
   //       className="bg-transparent rounded-sm p-1 sm:text-lg font-graduate"
   //     >
-  //       <option value="Legiones Astartes" className="text-green-950">
+  //       <option value="Legiones Astartes" className="text-primary-950">
   //         Legiones Astartes
   //       </option>
-  //       <option value="Solar Auxillia" className="text-green-950">
+  //       <option value="Solar Auxillia" className="text-primary-950">
   //         Solar Auxillia
   //       </option>
   //     </select>
@@ -409,7 +409,7 @@ const page = () => {
   {
     /* LIST NAME SECTION */
   }
-  // <div className="text-green-950 font-semibold flex gap-2 justify-center border border-green-950 items-center py-2 px-4 rounded-xl max-w-full">
+  // <div className="text-primary-950 font-semibold flex gap-2 justify-center border border-primary-950 items-center py-2 px-4 rounded-xl max-w-full">
   //   <ImQuill />
   //   <input
   //     type="text"
@@ -428,8 +428,8 @@ const page = () => {
   {
     /* ADD FORMATION AND FORMATION QUICK NAV LINKS */
   }
-  // <div className="w-full text-green-50 flex flex-col justify-center gap-2">
-  //   <div className="builder_title_background flex flex-wrap justify-center items-center text-center gap-4 w-max mx-auto rounded-full px-3 border-4 border-green-900 hover:border-cyan-700">
+  // <div className="w-full text-primary-50 flex flex-col justify-center gap-2">
+  //   <div className="builder_title_background flex flex-wrap justify-center items-center text-center gap-4 w-max mx-auto rounded-full px-3 border-4 border-primary-900 hover:border-cyan-700">
   //     <button
   //       onClick={addFormation}
   //       className="p-1 hover:text-cyan-700 font-graduate sm:text-xl flex items-center gap-1"
@@ -440,7 +440,7 @@ const page = () => {
   //   </div>
 
   //   {armyList.formations.length ? (
-  //     <div className="w-full text-green-50 bg-green-950 flex flex-col py-2 justify-center items-center">
+  //     <div className="w-full text-primary-50 bg-primary-950 flex flex-col py-2 justify-center items-center">
   //       {armyList.formations.map((formation, index) => (
   //         <Link
   //           href={`#${formation.ref_id}`}
@@ -476,7 +476,7 @@ const page = () => {
     /* object display */
   }
   {
-    /* <pre className="w-full border-2 border-green-950 text-green-950 p-8 font-semibold text-lg">
+    /* <pre className="w-full border-2 border-primary-950 text-primary-950 p-8 font-semibold text-lg">
         {JSON.stringify(armyList, null, " ")}
       </pre> */
   }

@@ -17,7 +17,7 @@ const BuilderWidgetBottom = () => {
 
   return (
     <div
-      className={`fixed w-full max-w-screen-2xl bg-stone-800 text-stone-50 font-graduate bottom-0 px-2 flex flex-col text-xs sm:text-lg transition-all${
+      className={`fixed w-full max-w-screen-2xl bg-secondary-800 text-secondary-50 font-graduate bottom-0 px-2 flex flex-col text-xs sm:text-lg transition-all${
         " " + widgetHeight
       }`}
     >

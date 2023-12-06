@@ -5,7 +5,7 @@ import { listState } from "../state";
 const ListBuilderListName = () => {
   const { list, setList } = listState();
   return (
-    <div className="text-green-950 font-semibold flex gap-2 justify-center border border-green-950 items-center py-2 px-4 rounded-xl max-w-full">
+    <div className="text-primary-950 font-semibold flex gap-2 justify-center border border-primary-950 items-center py-2 px-4 rounded-xl max-w-full">
       <ImQuill />
       <input
         type="text"

@@ -9,7 +9,7 @@ const InfoPopup = ({
   toggle: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
   return (
-    <div className="fixed border-2 border-black bg-white top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-stone-900 text-sm sm:text-lg font-semibold p-2 rounded-lg w-10/12 max-w-sm dataslate_background">
+    <div className="fixed border-2 border-black bg-white top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-secondary-900 text-sm sm:text-lg font-semibold p-2 rounded-lg w-10/12 max-w-sm dataslate_background">
       <div className="text-2xl flex justify-end w-full">
         <button onClick={() => toggle((prev) => !prev)}>
           <IoClose />

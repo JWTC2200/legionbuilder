@@ -148,7 +148,7 @@ const BuilderUnitUpgradeSelect = ({
           updateUpgradeChoice(Number(e.target.value));
         }}
         className={
-          "w-full text-center text-sm font-graduate p-1 rounded-full border border-green-950" +
+          "w-full text-center text-sm font-graduate p-1 rounded-full border border-primary-950" +
           upgradeSelectedHighlight
         }
       >

@@ -17,7 +17,7 @@ const ListBuilderFormation = ({
   return (
     <div
       id={formation.ref_id}
-      className="sm:border-4 border-green-950 sm:rounded-xl flex flex-col items-center"
+      className="sm:border-4 border-primary-950 sm:rounded-xl flex flex-col items-center"
     >
       <div className="w-full banner_background sm:rounded-t-lg flex flex-wrap  justify-center sm:justify-between items-center text-center px-2">
         <ListBuilderFormationToggle
@@ -31,8 +31,8 @@ const ListBuilderFormation = ({
         <>
           {formation.compulsory ? (
             <div className="w-full mt-2">
-              <div className="w-full text-green-950 flex flex-col items-center">
-                <h1 className="w-full text-center bg-green-950 text-green-50 font-graduate">
+              <div className="w-full text-primary-950 flex flex-col items-center">
+                <h1 className="w-full text-center bg-primary-950 text-primary-50 font-graduate">
                   ~ Compulsory slots ~
                 </h1>
                 {formation.compulsory.filter(
@@ -56,8 +56,8 @@ const ListBuilderFormation = ({
           ) : null}
           {formation.optional ? (
             <div className="w-full">
-              <div className="w-full text-green-950 flex flex-col items-center">
-                <h1 className="w-full text-center bg-green-950 text-green-50 font-graduate">
+              <div className="w-full text-primary-950 flex flex-col items-center">
+                <h1 className="w-full text-center bg-primary-950 text-primary-50 font-graduate">
                   ~ Optional slots ~
                 </h1>
                 <div className="flex flex-wrap gap-2 py-2 sm:py-4 sm:px-2 justify-center">
@@ -77,9 +77,9 @@ const ListBuilderFormation = ({
               {formation.choice.map((choiceSet, index) => (
                 <div
                   key={formation.ref_id + "choiceSet" + index}
-                  className="w-full text-green-950 flex flex-col items-center "
+                  className="w-full text-primary-950 flex flex-col items-center "
                 >
-                  <h1 className="w-full text-center bg-green-950 text-green-50 font-graduate">
+                  <h1 className="w-full text-center bg-primary-950 text-primary-50 font-graduate">
                     ~ Choose up to one of the following ~
                   </h1>
                   {formation.choice![index].filter(

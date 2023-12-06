@@ -8,7 +8,7 @@ export function BreadCrumbs({ children } : { children: ReactNode }) {
     children = Children.toArray(children);
 
     return (
-        <header className="bg-stone-900 p-4 py-2 text-xl font-graduate">
+        <header className="bg-secondary-900 p-4 py-2 text-xl font-graduate">
             {/* @ts-ignore - you can actually map over this, so not sure what TS is bitching about! */}
             {children.map((child: any, key: string) => (
                 <span className="group" key={key}>

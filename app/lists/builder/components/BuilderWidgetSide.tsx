@@ -17,7 +17,7 @@ const BuilderWidgetSide = () => {
   return (
     <div
       className={
-        `fixed flex flex-wrap justify-center items-center lg:hidden bg-stone-800 text-stone-50  h-24  right-0 bottom-32 rounded-l-lg text-3xl transition-all z-20` +
+        `fixed flex flex-wrap justify-center items-center lg:hidden bg-secondary-800 text-secondary-50  h-24  right-0 bottom-32 rounded-l-lg text-3xl transition-all z-20` +
         " " +
         widgetWidth
       }
@@ -26,19 +26,19 @@ const BuilderWidgetSide = () => {
         <div className="flex flex-wrap justify-evenly items-center text-center w-10/12 transition-all">
           <button
             onClick={() => handleSaveList(list)}
-            className="bg-white p-2 rounded-full hover:bg-cyan-700 active:bg-cyan-700 z-50 text-stone-800"
+            className="bg-white p-2 rounded-full hover:bg-cyan-700 active:bg-cyan-700 z-50 text-secondary-800"
           >
             <FiSave />
           </button>
           <Link
             href="/lists/view"
-            className="bg-white p-2 rounded-full hover:bg-cyan-700 active:bg-cyan-700 z-50 text-stone-800"
+            className="bg-white p-2 rounded-full hover:bg-cyan-700 active:bg-cyan-700 z-50 text-secondary-800"
           >
             <FiPrinter />
           </Link>
           <button
             onClick={clearList}
-            className="bg-white p-2 rounded-full hover:bg-cyan-700 active:bg-cyan-700 z-50 text-stone-800"
+            className="bg-white p-2 rounded-full hover:bg-cyan-700 active:bg-cyan-700 z-50 text-secondary-800"
           >
             <ImBin />
           </button>

@@ -13,11 +13,11 @@ export default function NavBar() {
   const authenticated = useAuthState((state) => state.authenticated);
 
   return (
-    <div className="w-full bg-green-950 py-4 px-4 lg:px-8 flex lg:flex-col justify-between lg:justify-center gap-4 items-center text-center font-subrayada">
+    <div className="w-full bg-primary-950 py-4 px-4 lg:px-8 flex lg:flex-col justify-between lg:justify-center gap-4 items-center text-center font-subrayada">
       <Logo />
       <div
         className={
-          "z-30 absolute top-0 right-0 bottom-0 left-0 lg:relative bg-stone-950/70 lg:bg-transparent backdrop-blur-md lg:backdrop-blur-none justify-center text-2xl lg:text-base " +
+          "z-30 absolute top-0 right-0 bottom-0 left-0 lg:relative bg-secondary-950/70 lg:bg-transparent backdrop-blur-md lg:backdrop-blur-none justify-center text-2xl lg:text-base " +
           (visible ? "flex" : "hidden lg:flex")
         }
       >

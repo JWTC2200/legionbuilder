@@ -12,7 +12,7 @@ const ListBuilderGameSize = () => {
   const gameSizes: number[] = [3000, 2500, 2000, 1500, 1000];
 
   return (
-    <div className="w-full mx-4 p-4 builder_head_background text-green-50 flex flex-wrap justify-center gap-4 text-center">
+    <div className="w-full mx-4 p-4 builder_head_background text-primary-50 flex flex-wrap justify-center gap-4 text-center">
       <div>
         <label htmlFor="game_size" className="sm:text-xl font-graduate mr-1">
           Game size:
@@ -27,7 +27,7 @@ const ListBuilderGameSize = () => {
             <option
               value={size}
               key={"gameSize" + size}
-              className="text-green-950"
+              className="text-primary-950"
             >
               {size}pts
             </option>
@@ -49,10 +49,10 @@ const ListBuilderGameSize = () => {
           }
           className="bg-transparent rounded-sm p-1 sm:text-lg font-graduate"
         >
-          <option value="Legiones Astartes" className="text-green-950">
+          <option value="Legiones Astartes" className="text-primary-950">
             Legiones Astartes
           </option>
-          <option value="Solar Auxillia" className="text-green-950">
+          <option value="Solar Auxillia" className="text-primary-950">
             Solar Auxillia
           </option>
         </select>

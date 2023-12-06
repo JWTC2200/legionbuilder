@@ -67,7 +67,7 @@ export default function Home() {
 
       <FrontpageUpdates />
 
-      <hr className="border rounded-full bg-stone-900 w-11/12 my-4 " />
+      <hr className="border rounded-full bg-secondary-900 w-11/12 my-4 " />
       <footer className="mb-auto  max-w-screen-md ">
         <p>
           This website is unofficial and in no way endorsed by Games Workshop.{" "}

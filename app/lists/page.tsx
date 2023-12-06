@@ -28,7 +28,7 @@ const page = () => {
     <div className="flex flex-col items-center gap-2">
       <Link
         href="/lists/builder"
-        className="px-8 py-2 mt-4 banner_background font-graduate text-lg sm:text-2xl rounded-full border-2 border-green-950 hover:text-cyan-700 active:text-cyan-700 hover:border-cyan-700 active:border-cyan-700"
+        className="px-8 py-2 mt-4 banner_background font-graduate text-lg sm:text-2xl rounded-full border-2 border-primary-950 hover:text-cyan-700 active:text-cyan-700 hover:border-cyan-700 active:border-cyan-700"
         onClick={clearList}
       >
         New List

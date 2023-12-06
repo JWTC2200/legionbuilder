@@ -47,10 +47,10 @@ const page = () => {
 
   return (
     <main className="flex flex-col gap-2 w-full max-w-screen-2xl items-center dataslate_background mt-4 p-4 rounded-xl border-2 border-black">
-      <h2 className="text-green-950 font-graduate text-center sm:text-xl">
+      <h2 className="text-primary-950 font-graduate text-center sm:text-xl">
         If you have any feedback or requests feel free to send me a message!
       </h2>
-      <form className="flex flex-col text-green-950 items-center border-2 border-green-950 p-2 rounded-xl">
+      <form className="flex flex-col text-primary-950 items-center border-2 border-primary-950 p-2 rounded-xl">
         <div className="flex flex-wrap justify-center items-center text-center gap-1">
           <div className="w-full flex justify-between items-center">
             <label htmlFor="email" className="w-24 font-graduate">
@@ -63,7 +63,7 @@ const page = () => {
               id="email"
               value={formData.email}
               onChange={handleFormChange}
-              className="border border-green-950 w-full p-1 rounded-lg"
+              className="border border-primary-950 w-full p-1 rounded-lg"
               placeholder="Email"
             />
           </div>
@@ -78,13 +78,13 @@ const page = () => {
               id="title"
               value={formData.title}
               onChange={handleFormChange}
-              className="border border-green-950 w-full p-1 rounded-lg"
+              className="border border-primary-950 w-full p-1 rounded-lg"
               placeholder="Title"
             />
           </div>
         </div>
         <textarea
-          className="min-w-full border border-green-950 mt-4 placeholder-gray-400 pl-2 rounded-md"
+          className="min-w-full border border-primary-950 mt-4 placeholder-gray-400 pl-2 rounded-md"
           required
           name="message"
           id="message"
@@ -96,7 +96,7 @@ const page = () => {
         <button
           type="submit"
           onClick={handleSubmit}
-          className="flex gap-2 text-center font-graduate font-semibold border max-w-min border-green-950 rounded-xl p-1 m-2 hover:bg-green-950 hover:text-green-50 active:bg-green-950 active:text-cyan-700"
+          className="flex gap-2 text-center font-graduate font-semibold border max-w-min border-primary-950 rounded-xl p-1 m-2 hover:bg-primary-950 hover:text-primary-50 active:bg-primary-950 active:text-cyan-700"
         >
           Submit{" "}
           {sending ? (
@@ -104,7 +104,7 @@ const page = () => {
           ) : null}
         </button>
         {emailSuccess ? (
-          <h4 className="max-w-sm text-green-850 text-center">
+          <h4 className="max-w-sm text-primary-850 text-center">
             Message sent! Thank you for your feedback. You will now be
             redirected to the front page.
           </h4>

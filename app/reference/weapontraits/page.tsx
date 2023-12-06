@@ -27,7 +27,7 @@ const page = () => {
       <div className="text-center">
         <label
           htmlFor="search"
-          className="font-graduate text-xl text-green-950"
+          className="font-graduate text-xl text-primary-950"
         >
           Search:
         </label>
@@ -35,14 +35,14 @@ const page = () => {
           type="text"
           name="search"
           id="search"
-          className="bg-inherit border border-green-950 text-green-950 rounded-md ml-2 px-2 font-graduate"
+          className="bg-inherit border border-primary-950 text-primary-950 rounded-md ml-2 px-2 font-graduate"
           value={searchTerm}
           onChange={(e) => {
             setSearchTerm(e.target.value);
           }}
         />
       </div>
-      <ul className="list-disc text-green-950 ml-4">
+      <ul className="list-disc text-primary-950 ml-4">
         {filteredTraits.map((trait) => (
           <Link
             key={trait.name}
