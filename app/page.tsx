@@ -6,7 +6,7 @@ import FrontpageUpdates from "@components/FrontpageUpdates";
 export default function Home() {
   return (
     <main className="flex flex-col items-start p-2 gap-2 max-w-screen-md text-brown-50 sm:text-lg">
-      <h2 className="text-lg font-graduate text-tertiary-700 mt-2">Changes</h2>
+      <h2 className="text-lg font-graduate text-stone-100 mt-2">Changes</h2>
       <p className="sm:text-lg">
         There has been a lot of work behind the scenes so apologies for any
         confusion or issues that make occur.

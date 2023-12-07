@@ -5,7 +5,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+@layer utilities {
   input[type="number"]::-webkit-outer-spin-button,
   input[type="number"]::-webkit-inner-spin-button,
   input[type="number"] {
@@ -17,14 +17,14 @@
 
 .bg-dataslate {
   @apply bg-gradient-to-r;
-  @apply from-primary-100;
+  @apply from-backgrounds-100;
   @apply to-white;
 }
 
 .hover\:bg-dataslate {
-  @apply hover:from-primary-950;
-  @apply hover:to-primary-900;
-  @apply hover:text-primary-50;
+  @apply hover:from-backgrounds-950;
+  @apply hover:to-backgrounds-900;
+  @apply hover:text-backgrounds-50;
 }
 
 .banner_background {

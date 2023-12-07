@@ -23,7 +23,7 @@ export function Crumb({ href, children } : { href: string, children: ReactNode }
     const active = usePathname().endsWith(href);
 
     return (!active ? (
-        <Link href={href} className="text-primary-500 hover:text-primary-200">
+        <Link href={href} className="text-primary-400 hover:text-primary-200">
             {children}
         </Link>
     ) : (
