@@ -1,7 +1,7 @@
 import React from "react";
 import { FORMATION } from "../types";
 import { formationSlotData } from "../data/formation_slot_data";
-import { getDetachmentIcons } from "../utils/detachmentIcons";
+import { getDetachmentIcon } from "../utils/detachmentIcons";
 
 const FormationDataslate = (formation: FORMATION) => {
   return (
@@ -28,7 +28,7 @@ const FormationDataslate = (formation: FORMATION) => {
                     className="flex flex-col justify-center items-center text-center bg-primary-950 text-primary-950 w-40 h-32 p-2 border-2 border-black rounded-xl bg-dataslate"
                   >
                     <span className="text-3xl">
-                      {getDetachmentIcons(foundSlot.type)}
+                      {getDetachmentIcon(foundSlot.type)}
                     </span>
                     <p className="font-semibold font-graduate">
                       {foundSlot.type}
@@ -61,7 +61,7 @@ const FormationDataslate = (formation: FORMATION) => {
                     className="flex flex-col justify-center items-center text-center bg-primary-950 text-primary-950 w-40 h-32 p-2 border-2 border-black rounded-xl bg-dataslate"
                   >
                     <span className="text-3xl">
-                      {getDetachmentIcons(foundSlot.type)}
+                      {getDetachmentIcon(foundSlot.type)}
                     </span>
                     <p className="font-semibold font-graduate">
                       {foundSlot.type}
@@ -98,7 +98,7 @@ const FormationDataslate = (formation: FORMATION) => {
                         className="flex flex-col justify-center items-center text-center text-primary-950 w-40 h-32 p-2 border-2 border-black rounded-xl bg-dataslate"
                       >
                         <span className="text-3xl">
-                          {getDetachmentIcons(foundSlot.type)}
+                          {getDetachmentIcon(foundSlot.type)}
                         </span>
                         <p className="font-semibold font-graduate">
                           {foundSlot.type}

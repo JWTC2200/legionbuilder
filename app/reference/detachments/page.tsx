@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { DETACHMENT, factionTypeArray, detachmentTypeArray } from "../../types";
 import { detachmentData } from "../../data/detachment_data";
-import { getDetachmentIcons } from "../../utils/detachmentIcons";
+import { getDetachmentIcon } from "../../utils/detachmentIcons";
 import Main from "@components/Main";
 import {BreadCrumbs, Crumb} from "@components/BreadCrumbs";
 import Sticky from "@components/Sticky";
@@ -44,9 +44,9 @@ const page = () => {
                     !detachmentFaction.unique
                 )
               ).map((detachment) => (
-                <Row key={detachment.name} className="px-4 hover:bg-secondary-700 hover:text-secondary-50">
+                <Row key={detachment.name} className="px-4 hover:bg-secondary-700 hover:text-secondary-50 whitespace-nowrap">
                   <Link key={detachment.name} href={`/reference/detachments/${detachment.name.replaceAll(" ", "_")} `} className="block flex items-center gap-2 w-full py-1">
-                    <span>{getDetachmentIcons(detachment.detachment_type)}</span>
+                    <span>{getDetachmentIcon(detachment.detachment_type)}</span>
                     <span>{detachment.name}</span>
                   </Link>
                 </Row>

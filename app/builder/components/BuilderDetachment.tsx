@@ -11,7 +11,7 @@ import {
 import { detachmentData } from "@/app/data/detachment_data";
 import BuilderUnitUpgradeSelect from "./BuilderUnitUpgradeSelect";
 import { detachmentPoints, detachmentSize } from "../utils";
-import { getDetachmentIcons } from "@/app/utils/detachmentIcons";
+import { getDetachmentIcon } from "@/app/utils/detachmentIcons";
 
 const BuilderDetachment = ({
   detachmentSlot,
@@ -143,8 +143,8 @@ const BuilderDetachment = ({
   return (
     <div className="flex flex-col w-full sm:w-[450px]">
       <h4 className="sm:w-full flex gap-1 items-center justify-center builder_title_background rounded-md text-primary-50 text-graduate text-center py-1 sm:text-xl font-graduate px-2 mx-2 sm:mx-0">
-        {getDetachmentIcons(detachmentSlot.type)} {detachmentSlot.type}
-        {getDetachmentIcons(detachmentSlot.type)}
+        {getDetachmentIcon(detachmentSlot.type)} {detachmentSlot.type}
+        {getDetachmentIcon(detachmentSlot.type)}
       </h4>
       {/* DESCRIPTION  */}
       {detachmentSlot.description ? (
