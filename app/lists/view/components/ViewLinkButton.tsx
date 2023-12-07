@@ -3,6 +3,7 @@
 import React from "react";
 import { addToClipboard } from "../../utils";
 import { FaCopy } from "@react-icons/all-files/fa/FaCopy";
+import { listState } from "../../builder/state";
 
 interface properties {
   className?: string;
@@ -10,10 +11,14 @@ interface properties {
 }
 
 const ViewLinkButton = ({ className, children }: properties) => {
+  const { list } = listState();
+
   return (
     <button
       type="button"
-      onClick={() => addToClipboard(window.location.href)}
+      onClick={() =>
+        addToClipboard(`${window.location.href}?listId=${list.list_id}`)
+      }
       className={className}
     >
       <FaCopy /> {children}
