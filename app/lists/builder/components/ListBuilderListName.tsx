@@ -12,7 +12,7 @@ const ListBuilderListName = () => {
         maxLength={25}
         value={list.list_name}
         onChange={(e) => setList({ ...list, list_name: e.target.value })}
-        className=" bg-inherit text-center font-graduate text-xl"
+        className="bg-inherit text-center font-graduate text-lg sm:text-xl max-w-[80%] truncate"
       />
       <ImQuill />
     </div>
