@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
-import { DETACHMENT, factionTypeArray, detachmentTypeArray } from "../types";
-import { detachmentData } from "../data/detachment_data";
-import { getDetachmentIcons } from "../utils/detachmentIcons";
+import { DETACHMENT, factionTypeArray, detachmentTypeArray } from "../../types";
+import { detachmentData } from "../../data/detachment_data";
+import { getDetachmentIcons } from "../../utils/detachmentIcons";
 
 const page = () => {
   const sortByDetachmentType = (array: DETACHMENT[]): DETACHMENT[] => {
