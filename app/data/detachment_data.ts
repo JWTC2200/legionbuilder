@@ -1564,7 +1564,7 @@ export const detachmentData: DETACHMENT[] = [
         options: [{ number: 1, cost: 250, size: 1, break_strength: 3 }],
       },
       {
-        name: "Knight Porphyrion upgrade",
+        name: "Knight Asterius upgrade",
         options: [
           { number: 1, cost: 20, size: 0 },
           { number: 2, cost: 40, size: 0 },
@@ -1707,7 +1707,7 @@ export const detachmentData: DETACHMENT[] = [
           "Reaver titan warp missile",
           "Reaver turbo-laser destructor",
           "Reaver volkite eradicator",
-          "Reaver graviton ceradicator",
+          "Reaver graviton eradicator",
           "Reaver conversion beam dissolutor",
         ],
       },

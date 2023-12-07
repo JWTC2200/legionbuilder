@@ -12,6 +12,10 @@ const FrontpageUpdates = () => {
             <ul className="list-disc text-cyan-700">
               06/12/2023:
               <li className="ml-4 text-stone-50">
+                Added a button to the top of the list view page. Adds the page
+                address to your clipboard so you can share the list.
+              </li>
+              <li className="ml-4 text-stone-50">
                 Added formation strength and break points in builder and view.
                 Lists saved before this update won't calculate properly for
                 Knights & Titans until you reselect the option in the builder

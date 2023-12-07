@@ -2,16 +2,12 @@
 
 import React from "react";
 import { listState } from "../builder/state";
-import { listPointTotals } from "../utils";
 import ListInfoHtml from "./components/ListInfoHtml";
 import FormationHtml from "./components/FormationHtml";
 import ViewLinkButton from "./components/ViewLinkButton";
 
 const page = () => {
   const { list } = listState();
-
-  const { mainFactionPoints, allyFactionPoints, armyTotalPoints } =
-    listPointTotals(list);
 
   return (
     <main className="w-full max-w-xl text-stone-100 p-4 flex justify-center">
