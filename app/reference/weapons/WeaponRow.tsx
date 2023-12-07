@@ -1,6 +1,7 @@
 import { JSX } from "react";
 import { WEAPON_DATASHEET } from "@/app/types";
 import WeaponProfile from "./WeaponProfile";
+import {Row} from "@components/HTML";
 
 export default function ({
   weapon,
@@ -8,7 +9,7 @@ export default function ({
   weapon: WEAPON_DATASHEET;
 }): JSX.Element {
   return (
-    <div className="flex flex-col odd:bg-secondary-100 even:bg-secondary-300 text-secondary-950 py-1 group">
+    <Row className="flex flex-col py-1 group">
       <h3 className="block font-graduate font-bold uppercase border-b group-odd:border-secondary-400 group-even:border-secondary-500 px-4 py-1 overflow-hidden">
         <span className={"whitespace-nowrap"}>{weapon.name}</span>
       </h3>
@@ -21,6 +22,6 @@ export default function ({
           />
         ))}
       </div>
-    </div>
+    </Row>
   );
 }

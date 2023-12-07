@@ -12,7 +12,7 @@ const WeaponTraitBox = ({trait}: { trait: WEAPON_TRAIT }) => {
             <span className="cursor-help underline decoration-dotted hover:text-primary-700 capitalize">{`${trait.name}${trait.value ? ` (${trait.value})` : ''}`}</span>
             {description?.tooltip ? (
                 <div className="absolute hidden group-hover/trait:block z-20 -bottom-2 right-0 translate-y-full text-center w-[200px] sm:w-[300px]">
-                  <div className="clipped bg-primary-900 text-primary-50 p-1 px-2 normal-case">{description?.tooltip ? description.tooltip : null}</div>
+                  <div className="clipped bg-backgrounds-950 text-primary-50 p-1 px-2 normal-case">{description?.tooltip ? description.tooltip : null}</div>
                   <div className="top-0 absolute h-0 w-0 border-x-8 border-x-transparent border-b-[8px] border-b-primary-900 -translate-y-full right-8"></div>
                 </div>
             ) : null}

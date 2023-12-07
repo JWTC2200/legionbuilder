@@ -23,11 +23,11 @@ const page = () => {
         {factionTypeArray.map((faction) => {
           return (
               <div key={faction} className="w-full lg:w-auto lg:flex-auto">
-                <h3 className="font-graduate text-xl text-center bg-backgrounds-950 py-2 px-4">{faction}</h3>
+                <h3 className="font-graduate text-xl bg-backgrounds-950 py-2 px-4">{faction}</h3>
                 {unitData
                   .filter(unitDataslate => unitDataslate.faction === faction && !unitDataslate.unique)
                   .map((unit) => (
-                    <Row key={unit.name} className="px-4 hover:bg-tertiary-700 hover:text-secondary-50">
+                    <Row key={unit.name} className="px-4 hover:bg-secondary-700 hover:text-secondary-50">
                       <Link href={`/reference/units/${unit.name.replaceAll(" ", "_")} `} className="block w-full py-1">
                         {unit.name}
                       </Link>
