@@ -15,8 +15,9 @@ const ListBuilderFormationSelector = ({
     const selectedFormation = id
       ? setBuilderDetachment(id, formation.ref_id)
       : {
-          ...formation,
           name: "",
+          ref_id: formation.ref_id,
+          faction: null,
           id: 0,
           choice: null,
           compulsory: null,
@@ -27,7 +28,7 @@ const ListBuilderFormationSelector = ({
         ...list,
         formations: [...list.formations].map((forma) => {
           if (forma.ref_id === formation.ref_id) {
-            return { ...forma, ...selectedFormation };
+            return { ...selectedFormation };
           }
           return forma;
         }),

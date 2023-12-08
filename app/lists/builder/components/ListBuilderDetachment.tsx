@@ -1,20 +1,27 @@
 "use client";
 
 import React from "react";
-import { BUILDER_DETACHMENT_SLOT, SLOTSET } from "@/app/types";
+import { BUILDER_DETACHMENT_SLOT, SLOTSET, SUBFACTION_TYPE } from "@/app/types";
 import ListBuilderDetachmentTitle from "./ListBuilderDetachmentTitle";
 import ListBuilderDetachmentDetails from "./ListBuilderDetachmentDetails";
 import ListBuilderDetachmentDescription from "./ListBuilderDetachmentDescription";
 import ListBuilderDetachmentSelect from "./ListBuilderDetachmentSelect";
 import ListBuilderDetachmentUpgrades from "./ListBuilderDetachmentUpgrades";
 import ListBuilderDetachmentSizeWarning from "./ListBuilderDetachmentSizeWarning";
+import { format } from "path";
+import ListBuilderDetachmentSubfactionWarning from "./ListBuilderDetachmentSubfactionWarning";
 
 interface properties {
+  formationSubfaction?: SUBFACTION_TYPE;
   detachmentSlot: BUILDER_DETACHMENT_SLOT;
   slotSet: SLOTSET;
 }
 
-const ListBuilderDetachment = ({ detachmentSlot, slotSet }: properties) => {
+const ListBuilderDetachment = ({
+  formationSubfaction,
+  detachmentSlot,
+  slotSet,
+}: properties) => {
   return (
     <div className="flex flex-col w-full sm:w-[450px]">
       <ListBuilderDetachmentTitle slotType={detachmentSlot.type} />
@@ -23,8 +30,12 @@ const ListBuilderDetachment = ({ detachmentSlot, slotSet }: properties) => {
       ) : null}
       {detachmentSlot.selected_unit ? (
         <>
+          <ListBuilderDetachmentSubfactionWarning
+            selectedUnit={detachmentSlot.selected_unit}
+            formationSubfaction={formationSubfaction}
+          />
           <ListBuilderDetachmentSizeWarning
-            unit={detachmentSlot.selected_unit}
+            selectedUnit={detachmentSlot.selected_unit}
           />
           <ListBuilderDetachmentDetails
             selectedUnit={detachmentSlot.selected_unit}
@@ -33,6 +44,7 @@ const ListBuilderDetachment = ({ detachmentSlot, slotSet }: properties) => {
       ) : null}
       <div className="px-2">
         <ListBuilderDetachmentSelect
+          formationSubfaction={formationSubfaction}
           detachmentSlot={detachmentSlot}
           slotSet={slotSet}
         />

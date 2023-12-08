@@ -1,16 +1,18 @@
 import React from "react";
 import ListBuilderFormationCompulsoryWarning from "./ListBuilderFormationCompulsoryWarning";
 import ListBuilderDetachment from "./ListBuilderDetachment";
-import { BUILDER_DETACHMENT_SLOT, SLOTSET } from "@/app/types";
+import { BUILDER_DETACHMENT_SLOT, SLOTSET, SUBFACTION_TYPE } from "@/app/types";
 import ListBuilderFormationChoiceWarning from "./ListBuilderFormationChoiceWarning";
 
 interface properties {
+  formationSubfaction?: SUBFACTION_TYPE;
   formationSection: BUILDER_DETACHMENT_SLOT[];
   sectionType: SLOTSET;
   index: number;
 }
 
 const ListBuilderFormationSections = ({
+  formationSubfaction,
   formationSection,
   sectionType,
   index,
@@ -34,6 +36,7 @@ const ListBuilderFormationSections = ({
           {formationSection.map((slot) => (
             <ListBuilderDetachment
               key={slot.slot_ref}
+              formationSubfaction={formationSubfaction}
               detachmentSlot={slot}
               slotSet={sectionType}
             />

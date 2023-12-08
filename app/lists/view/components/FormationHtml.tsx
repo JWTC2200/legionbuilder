@@ -14,12 +14,16 @@ const FormationHtml = ({
 }) => {
   return (
     <div className="text-base mb-2">
-      <h3 className="text-lg">
+      <h3 className="sm:text-lg">
         <span className="font-bold">Formation {index + 1}</span>:{" "}
+        {formation.subfaction ? (
+          <span className="font-graduate">{formation.subfaction} </span>
+        ) : null}
         {formation.name}
         {", "}
         {formationPoints(formation)}points
       </h3>
+
       <FormationBreakHtml formation={formation} className="border-t border-b" />
       <FormationSlotHtml slotArray={formation.compulsory} type={"Compulsory"} />
       <FormationSlotHtml slotArray={formation.optional} type={"Optional"} />

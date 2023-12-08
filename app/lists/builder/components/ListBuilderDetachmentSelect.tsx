@@ -5,17 +5,22 @@ import {
   BUILDER_DETACHMENT_UNIT_UPGRADES,
   BUILDER_DETACHMENT_SLOT,
   SLOTSET,
+  SUBFACTION_TYPE,
 } from "@/app/types";
 import { detachmentData } from "@/app/data/detachment_data";
 import { listState } from "../state";
 
-const ListBuilderDetachmentSelect = ({
-  detachmentSlot,
-  slotSet,
-}: {
+interface properties {
+  formationSubfaction?: SUBFACTION_TYPE;
   detachmentSlot: BUILDER_DETACHMENT_SLOT;
   slotSet: SLOTSET;
-}) => {
+}
+
+const ListBuilderDetachmentSelect = ({
+  detachmentSlot,
+  formationSubfaction,
+  slotSet,
+}: properties) => {
   const { list, setList } = listState();
 
   const detachmentSelectedHighlight = detachmentSlot.selected_unit
@@ -33,6 +38,18 @@ const ListBuilderDetachmentSelect = ({
       return detach;
     });
     return newArray;
+  };
+
+  const filterBySubfaction = (array: DETACHMENT[]) => {
+    return array.filter((detachment) => {
+      if (formationSubfaction) {
+        return (
+          detachment.subfaction === formationSubfaction ||
+          detachment.subfaction === undefined
+        );
+      }
+      return detachment;
+    });
   };
 
   const detachmentOptions: DETACHMENT[] = detachmentSlot.restricted
@@ -53,15 +70,17 @@ const ListBuilderDetachmentSelect = ({
           )
         );
 
-  const selectOptions = detachmentOptions.map((option, index) => (
-    <option
-      key={detachmentSlot.slot_ref + "unitOption" + index}
-      value={option.id}
-      className="text-black"
-    >
-      {option.base_cost}pts: {option.name}
-    </option>
-  ));
+  const selectOptions = filterBySubfaction(detachmentOptions).map(
+    (option, index) => (
+      <option
+        key={detachmentSlot.slot_ref + "unitOption" + index}
+        value={option.id}
+        className="text-black"
+      >
+        {option.base_cost}pts: {option.name}
+      </option>
+    )
+  );
 
   const createNewUnit = (newId: number): BUILDER_DETACHMENT_UNIT | null => {
     if (newId) {

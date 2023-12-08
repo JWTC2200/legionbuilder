@@ -31,6 +31,29 @@ export enum DETACHMENT_TYPE {
 
 export const detachmentTypeArray = Object.values(DETACHMENT_TYPE);
 
+export enum SUBFACTION_TYPE {
+  darkAngels = "Dark Angels",
+  empChild = "Emperor's Children",
+  ironWar = "Iron Warriors",
+  whiteScars = "White Scars",
+  spaceWolves = "Space Wolves",
+  impFists = "Imperial Fists",
+  nightLords = "Night Lords",
+  bloodAngels = "Blood Angels",
+  ironHands = "Iron Hands",
+  worldEaters = "World Eaters",
+  ultramarines = "Ultramarines",
+  deathGuard = "Death Guard",
+  thousandSons = "Thousand Sons",
+  sonsHorus = "Sons of Horus",
+  wordBearers = "Word Bearers",
+  salamanders = "Salamanders",
+  ravenGuard = "Raven Guard",
+  alphaLegion = "Alpha Legion",
+}
+
+export const subfactionTypeArray = Object.values(SUBFACTION_TYPE);
+
 export enum UNIT_TYPE {
   infantry = "Infantry",
   cavalry = "Cavalry",
@@ -51,6 +74,7 @@ export interface FORMATION {
   id: number;
   name: string;
   faction: FACTION;
+  subfaction?: SUBFACTION_TYPE;
   allegiance: ALLEGIANCE;
   compulsory: number[] | null;
   optional: number[] | null;
@@ -70,6 +94,7 @@ export interface DETACHMENT {
   id: number;
   name: string;
   faction: FACTION;
+  subfaction?: SUBFACTION_TYPE;
   allegiance: ALLEGIANCE;
   unique?: boolean;
   detachment_type: DETACHMENT_TYPE;
@@ -111,6 +136,7 @@ export interface DETACHMENT_UPGRADE_DATASHEET {
 export interface UNIT_DATASHEET {
   id: number;
   faction: FACTION;
+  subfaction: SUBFACTION_TYPE;
   allegiance: ALLEGIANCE;
   unique?: boolean;
   unit_type: { type: UNIT_TYPE; value: number };
@@ -178,6 +204,7 @@ export interface BUILDER_FORMATION {
   ref_id: string;
   id: number;
   faction: FACTION | null;
+  subfaction?: SUBFACTION_TYPE;
   choice: BUILDER_DETACHMENT_SLOT[][] | null;
   compulsory: BUILDER_DETACHMENT_SLOT[] | null;
   optional: BUILDER_DETACHMENT_SLOT[] | null;
@@ -198,6 +225,9 @@ export interface BUILDER_DETACHMENT_SLOT {
 export interface BUILDER_DETACHMENT_UNIT {
   id: number;
   name: string;
+  faction: FACTION;
+  subfaction?: SUBFACTION_TYPE;
+  allegiance: ALLEGIANCE;
   base_cost: number;
   base_size: number;
   max_size: number;

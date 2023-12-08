@@ -1,4 +1,4 @@
-import { FORMATION, FACTION, ALLEGIANCE } from "../types";
+import { FORMATION, FACTION, ALLEGIANCE, SUBFACTION_TYPE } from "../types";
 
 export const formationData: FORMATION[] = [
   {

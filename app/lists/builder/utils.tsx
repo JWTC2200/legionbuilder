@@ -17,10 +17,9 @@ export const setBuilderDetachment = (
   );
   if (findFormation) {
     return {
-      name: findFormation.name,
+      ...findFormation,
       ref_id: formationRef,
       id: formationID,
-      faction: findFormation.faction,
       compulsory: getSlots(
         findFormation.compulsory,
         formationRef,

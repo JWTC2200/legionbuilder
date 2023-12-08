@@ -1,12 +1,14 @@
 "use client";
 
-import { BUILDER_FORMATION, SLOTSET } from "@/app/types";
+import { BUILDER_FORMATION, FACTION, SLOTSET } from "@/app/types";
 import React, { useState } from "react";
 import ListBuilderFormationSelector from "./ListBuilderFormationSelector";
 import ListBuilderFormationToggle from "./ListBuilderFormationToggle";
 import ListBuilderFormationRemoveBtn from "./ListBuilderFormationRemoveBtn";
 import FormationBreakHtml from "../../view/components/FormationBreakHtml";
 import ListBuilderFormationSections from "./ListBuilderFormationSections";
+import { ListBuilderFormationSubfactionSelector } from "./ListBuilderFormationSubfactionSelector";
+import ListBuilderFormationSubfactionWarning from "./ListBuilderFormationSubfactionWarning";
 
 const ListBuilderFormation = ({
   formation,
@@ -28,6 +30,10 @@ const ListBuilderFormation = ({
         <ListBuilderFormationSelector formation={formation} />
         <ListBuilderFormationRemoveBtn formation={formation} />
       </div>
+      <ListBuilderFormationSubfactionWarning formation={formation} />
+      {formation.faction === FACTION.astartes ? (
+        <ListBuilderFormationSubfactionSelector formation={formation} />
+      ) : null}
 
       {viewFormation ? (
         <>
@@ -37,6 +43,7 @@ const ListBuilderFormation = ({
           />
           {formation.compulsory ? (
             <ListBuilderFormationSections
+              formationSubfaction={formation.subfaction}
               formationSection={formation.compulsory}
               sectionType={SLOTSET.compulsory}
               index={0}
@@ -44,6 +51,7 @@ const ListBuilderFormation = ({
           ) : null}
           {formation.optional ? (
             <ListBuilderFormationSections
+              formationSubfaction={formation.subfaction}
               formationSection={formation.optional}
               sectionType={SLOTSET.optional}
               index={0}
@@ -55,6 +63,7 @@ const ListBuilderFormation = ({
               {formation.choice.map((choiceArray, index) => (
                 <ListBuilderFormationSections
                   key={formation.ref_id + "choiceSet" + index}
+                  formationSubfaction={formation.subfaction}
                   formationSection={choiceArray}
                   sectionType={SLOTSET.choice}
                   index={index}
