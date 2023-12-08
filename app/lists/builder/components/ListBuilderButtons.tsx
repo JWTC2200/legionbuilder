@@ -1,10 +1,13 @@
 import React from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { listState } from "../state";
 import SaveListButton from "./SaveListButton";
 
 const ListBuilderButtons = () => {
   const { clearList } = listState();
+  const searchParams = useSearchParams();
+  const listParams = searchParams.get("listId");
 
   return (
     <div className="w-full flex flex-wrap gap-4 justify-center text-center mt-2">
@@ -12,7 +15,7 @@ const ListBuilderButtons = () => {
         Save
       </SaveListButton>
       <Link
-        href="/lists/view"
+        href={`/lists/view${listParams ? `?listId=${listParams}` : ""}`}
         className=" bg-green-950 text-green-50 px-2 py-1 font-bold font-graduate rounded-lg hover:text-cyan-700"
       >
         View

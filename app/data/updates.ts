@@ -8,6 +8,7 @@ export const updateData: update[] = [
     date: "08/12/23",
     updates: [
       "Fixed Tarantulas adding to formation break (they shouldn't as they have Automated Sentry)",
+      "Added subfaction selection. Currently just legions for Astartes.",
     ],
   },
   {

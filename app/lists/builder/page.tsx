@@ -5,14 +5,23 @@ import BuilderWidgetBottom from "./components/BuilderWidgetBottom";
 import BuilderWidgetSide from "./components/BuilderWidgetSide";
 import ListBuilder from "./components/ListBuilder";
 import Link from "next/link";
+import { BreadCrumbs, Crumb } from "@/app/components/navigation/BreadCrumbs";
+import { useSearchParams } from "next/navigation";
 
 const page = () => {
+  const searchParams = useSearchParams();
+  const listParams = searchParams.get("listId");
+
   return (
     <div className="h-screen w-full flex flex-col">
-      <Link
-        href="/lists"
-        className="text-xl ml-4 my-2 hover:text-lime-400"
-      >{`< return to lists`}</Link>
+      <BreadCrumbs>
+        <Crumb href="/lists">Lists</Crumb>
+        <Crumb
+          href={`/lists/builder${listParams ? `?listId=${listParams}` : ""}`}
+        >
+          Builder
+        </Crumb>
+      </BreadCrumbs>
       <ListBuilder />
       <BuilderWidgetBottom />
       <BuilderWidgetSide />
