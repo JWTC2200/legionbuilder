@@ -6,9 +6,10 @@ import { DETACHMENT, factionTypeArray, detachmentTypeArray } from "../../types";
 import { detachmentData } from "../../data/detachment_data";
 import { getDetachmentIcon } from "../../utils/detachmentIcons";
 import Main from "@components/Main";
-import {BreadCrumbs, Crumb} from "@components/BreadCrumbs";
+import {BreadCrumbs, Crumb, ReferenceSelector} from "@components/BreadCrumbs";
 import Sticky from "@components/Sticky";
 import {Row} from "@components/HTML";
+import FactionList from "@/app/reference/FactionList";
 
 const page = () => {
   const sortByDetachmentType = (array: DETACHMENT[]): DETACHMENT[] => {
@@ -28,15 +29,13 @@ const page = () => {
       <Sticky className="z-10">
         <BreadCrumbs>
           <Crumb href="/reference">Reference</Crumb>
-          <Crumb href="/reference/detachments">Detachments</Crumb>
+          <ReferenceSelector/>
         </BreadCrumbs>
       </Sticky>
       
       <div className="w-full lg:flex lg:gap-4">
-        {factionTypeArray.map((faction) => {
-          return (
-            <div key={faction} className="w-full lg:w-auto lg:flex-auto">
-              <h3 className="font-graduate text-xl bg-backgrounds-950 py-2 px-4">{faction}</h3>
+        {factionTypeArray.map(faction =>
+            <FactionList faction={faction}>
               {sortByDetachmentType(
                 detachmentData.filter(
                   (detachmentFaction) =>
@@ -51,9 +50,8 @@ const page = () => {
                   </Link>
                 </Row>
               ))}
-            </div>
-          );
-        })}
+          </FactionList>
+        )}
       </div>
     </Main>
   );

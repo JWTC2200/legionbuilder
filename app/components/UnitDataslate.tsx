@@ -7,18 +7,18 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 
 const UnitDataslate = (unit: UNIT_DATASHEET) => {
   const unitWeaponRows = getUnitWeaponRows(unit.weapons);
-
+  
   return (
-    <article className="max-w-screen-xl sm:p-2 text-sm sm:text-base bg-dataslate sm:rounded-lg break-inside-avoid">
+    <article className="bg-dataslate p-4 break-inside-avoid clip-path-halfagon-lg">
       {/* TITLE */}
-      <div className="flex gap-2 justify-between items-center bg-primary-950 text-primary-50 py-1 px-2 mb-2">
+      <header className="flex gap-2 justify-between items-center bg-primary-950 text-primary-50 py-2 px-2 mb-2">
         <h2 className="text-xl sm:text-2xl font-graduate font-bold">
           {unit.name}
         </h2>
         <h3 className="text-lg sm:text-xl font-graduate">
           {unit.unit_type.type} {`(${unit.unit_type.value})`}
         </h3>
-      </div>
+      </header>
       {/* UNIT BASIC STATS */}
       <table className="w-full border-t-2 border-b-2 sm:border-2 border-black">
         <thead className="bg-primary-950 text-primary-50">

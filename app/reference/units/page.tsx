@@ -5,9 +5,10 @@ import Link from "next/link";
 import { unitData } from "../../data/unit_data";
 import { factionTypeArray } from "../../types";
 import Main from "@components/Main";
-import {BreadCrumbs, Crumb} from "@components/BreadCrumbs";
+import {BreadCrumbs, Crumb, ReferenceSelector} from "@components/BreadCrumbs";
 import Sticky from "@components/Sticky";
 import {Row} from "@components/HTML";
+import FactionList from "@/app/reference/FactionList";
 
 const page = () => {
   return (
@@ -15,14 +16,14 @@ const page = () => {
       <Sticky className="z-10">
         <BreadCrumbs>
           <Crumb href="/reference">Reference</Crumb>
-          <Crumb href="/reference/units">Units</Crumb>
+          <ReferenceSelector/>
         </BreadCrumbs>
       </Sticky>
       
       <div className="w-full lg:flex lg:gap-4">
-        {factionTypeArray.map((faction) => {
-          return (
-              <div key={faction} className="w-full lg:w-auto lg:flex-auto">
+        {factionTypeArray.map(faction =>
+            <FactionList faction={faction}>
+              <div key={faction} className="w-full lg:w-auto lg:flex-auto clip-path-halfagon-lg">
                 <h3 className="font-graduate text-xl bg-backgrounds-950 py-2 px-4">{faction}</h3>
                 {unitData
                   .filter(unitDataslate => unitDataslate.faction === faction && !unitDataslate.unique)
@@ -34,8 +35,8 @@ const page = () => {
                     </Row>
                   ))}
               </div>
-          );
-        })}
+            </FactionList>
+          )}
       </div>
     </Main>
   );

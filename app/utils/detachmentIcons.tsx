@@ -3,14 +3,16 @@ import {
   APC,
   ArrowUp,
   Bullets,
-  Cannon, Cog,
+  Cannon,
+	Cog,
   GothicCross,
   JetFighter,
   Knight,
   Shield,
   Skull,
   Tank,
-  TankTread, Tower
+  TankTread,
+	Tower
 } from "@components/Icons";
 
 const detachmentIcons = {

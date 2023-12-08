@@ -5,7 +5,7 @@ import { weapons } from "@/app/data/weapon_data";
 import WeaponRow from "@/app/reference/weapons/WeaponRow";
 import ToTopOfPageWidget from "@/app/components/ToTopOfPageWidget";
 import NoWeapon from "./NoWeapon";
-import { BreadCrumbs, Crumb } from "@components/BreadCrumbs";
+import {BreadCrumbs, Crumb, ReferenceSelector} from "@components/BreadCrumbs";
 import Main from "@components/Main";
 import Sticky from "@components/Sticky";
 
@@ -40,7 +40,7 @@ const page = () => {
         <Sticky className="z-10">
           <BreadCrumbs>
             <Crumb href="/reference">Reference</Crumb>
-            <Crumb href="/reference/weapons">Weapons</Crumb>
+            <ReferenceSelector/>
           </BreadCrumbs>
           <section>
             <input
@@ -53,27 +53,22 @@ const page = () => {
                 onChange={(e) => setSearchTerm(e.target.value)}
             />
           </section>
+          <header className="flex flex-col bg-backgrounds-950 font-bold">
+            <div className="w-full border-b border-primary-600 px-4 py-1">
+              Weapon
+            </div>
+            <div className="flex px-4 py-1 text-sm">
+              <div className="basis-[16%]">Range</div>
+              <div className="basis-[12%] text-center">Dice</div>
+              <div className="basis-[12%] text-center">To hit</div>
+              <div className="basis-[12%] text-center">AP</div>
+              <div className="basis-[48%]">Traits</div>
+            </div>
+          </header>
         </Sticky>
 
         <section className="flex flex-col">
-          <Sticky className="z-10">
-            <header className="flex flex-col bg-backgrounds-950">
-              <div className="w-full border-b border-primary-600 px-4 py-1">
-                Weapon
-              </div>
-              <div className="flex px-4 py-1 text-sm">
-                <div className="basis-[16%]">Range</div>
-                <div className="basis-[12%] text-center">Dice</div>
-                <div className="basis-[12%] text-center">To hit</div>
-                <div className="basis-[12%] text-center">AP</div>
-                <div className="basis-[48%]">Traits</div>
-              </div>
-            </header>
-          </Sticky>
-
-          <section className="">
             {weaponRows.length ? weaponRows : <NoWeapon />}
-          </section>
         </section>
         <ToTopOfPageWidget />
       </Main>

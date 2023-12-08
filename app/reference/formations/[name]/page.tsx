@@ -1,7 +1,11 @@
+"use client";
+
 import React from "react";
 import { formationData } from "@/app/data/formation_data";
 import { notFound } from "next/navigation";
 import FormationDataslate from "@components/FormationDataslate";
+import {BreadCrumbs, Crumb, ReferenceSelector} from "@components/BreadCrumbs";
+import Main from "@components/Main";
 
 const page = ({ params: { name } }: { params: { name: string } }) => {
   const formationName = name.replaceAll("_", " ");
@@ -12,9 +16,14 @@ const page = ({ params: { name } }: { params: { name: string } }) => {
     notFound();
   }
   return (
-    <main className="py-8 max-w-screen-xl">
+    <Main>
+      <BreadCrumbs>
+        <Crumb href="/reference">Reference</Crumb>
+        <ReferenceSelector/>
+      </BreadCrumbs>
+      
       <FormationDataslate {...formationEntry} />
-    </main>
+    </Main>
   );
 };
 

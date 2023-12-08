@@ -98,6 +98,22 @@ export function Cannon({className}: IconProperties): JSX.Element {
 	);
 }
 
+export function CaretDown({className}: IconProperties): JSX.Element {
+	return (
+		<Icon width={24} height={24} className={className}>
+			<path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path>
+		</Icon>
+	);
+}
+
+export function CaretUp({className}: IconProperties): JSX.Element {
+	return (
+		<Icon width={24} height={24} className={className}>
+				<path d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path>
+		</Icon>
+	);
+}
+
 export function Close({className}: IconProperties): JSX.Element {
 	return (
 		<Icon width={15} height={15} className={className}>
