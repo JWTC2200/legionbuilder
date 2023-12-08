@@ -45,7 +45,8 @@ const ListBuilderDetachmentSelect = ({
       if (formationSubfaction) {
         return (
           detachment.subfaction === formationSubfaction ||
-          detachment.subfaction === undefined
+          detachment.subfaction === undefined ||
+          detachment.id == detachmentSlot.selected_unit?.id
         );
       }
       return detachment;
@@ -152,7 +153,7 @@ const ListBuilderDetachmentSelect = ({
         detachmentSelectedHighlight
       }
     >
-      <option value={0} className="text-black">
+      <option value={"0"} className="text-black">
         Select Detachment
       </option>
       {selectOptions}

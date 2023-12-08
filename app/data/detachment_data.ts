@@ -169,6 +169,7 @@ export const detachmentData: DETACHMENT[] = [
     name: "Legion Plasma Gun Support Detachment",
     faction: FACTION.astartes,
     allegiance: ALLEGIANCE.neutral,
+    subfaction: SUBFACTION_TYPE.alphaLegion,
     detachment_type: DETACHMENT_TYPE.support,
     base_cost: 35,
     base_size: 4,
