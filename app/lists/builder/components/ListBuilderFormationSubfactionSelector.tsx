@@ -40,25 +40,23 @@ export const ListBuilderFormationSubfactionSelector = ({
   };
 
   return (
-    <div>
-      <select
-        className="w-[280px] text-center mt-2 py-1 px-2 border border-green-950 font-graduate text-black"
-        value={formation.subfaction}
-        onChange={(e) => changeSubfaction(e.target.value)}
-      >
-        <option value="" className="text-green-950">
-          {formation.faction === FACTION.astartes ? "Choose Legion" : null}
+    <select
+      className="w-[280px] text-center mt-2 py-1 px-2 border border-green-950 font-graduate text-black"
+      value={formation.subfaction}
+      onChange={(e) => changeSubfaction(e.target.value)}
+    >
+      <option value="" className="text-green-950">
+        {formation.faction === FACTION.astartes ? "Choose Legion" : null}
+      </option>
+      {subfactionTypeArray.map((subfaction) => (
+        <option
+          key={subfaction + formation.id}
+          value={subfaction}
+          className="text-green-950"
+        >
+          {subfaction}
         </option>
-        {subfactionTypeArray.map((subfaction) => (
-          <option
-            key={subfaction + formation.id}
-            value={subfaction}
-            className="text-green-950"
-          >
-            {subfaction}
-          </option>
-        ))}
-      </select>
-    </div>
+      ))}
+    </select>
   );
 };
