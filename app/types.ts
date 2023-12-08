@@ -136,7 +136,7 @@ export interface DETACHMENT_UPGRADE_DATASHEET {
 export interface UNIT_DATASHEET {
   id: number;
   faction: FACTION;
-  subfaction: SUBFACTION_TYPE;
+  subfaction?: SUBFACTION_TYPE;
   allegiance: ALLEGIANCE;
   unique?: boolean;
   unit_type: { type: UNIT_TYPE; value: number };
