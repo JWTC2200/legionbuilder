@@ -9,7 +9,7 @@ import { getList } from "../firebase/firestore/getList";
 import { toast } from "react-toastify";
 
 const layout = ({ children }: { children: React.ReactNode }) => {
-  const { list, setList } = listState();
+  const { setList } = listState();
   const searchParams = useSearchParams();
   const listParams = searchParams.get("listId");
 
@@ -46,6 +46,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
           borderRadius: "5px",
           color: "#f0fdf4",
         }}
+        pauseOnFocusLoss={false}
       />
       {children}
     </main>

@@ -48,12 +48,13 @@ const formationArrayBreakStrength = (array: BUILDER_DETACHMENT_SLOT[]) => {
 };
 
 const calcDetachmentBreakStrength = (unit: BUILDER_DETACHMENT_UNIT): number => {
-  const base = unit.break_strength
-    ? unit.break_strength * unit.base_size
-    : unit.base_size;
+  const base =
+    unit.break_strength || unit.break_strength === 0
+      ? unit.break_strength * unit.base_size
+      : unit.base_size;
   const upgrades = unit.upgrade_options
     .map((upgrade) =>
-      upgrade.break_strength
+      upgrade.break_strength || upgrade.break_strength === 0
         ? upgrade.size * upgrade.break_strength
         : upgrade.size
     )

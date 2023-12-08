@@ -410,6 +410,7 @@ export const detachmentData: DETACHMENT[] = [
     base_cost: 36,
     base_size: 4,
     max_size: 8,
+    break_strength: 0,
     main_unit: [1010],
     related_unit: [],
     loadout: [
@@ -423,8 +424,8 @@ export const detachmentData: DETACHMENT[] = [
       {
         name: "Additional Tarantulas",
         options: [
-          { number: 2, cost: 15, size: 2 },
-          { number: 4, cost: 30, size: 4 },
+          { number: 2, cost: 15, size: 2, break_strength: 0 },
+          { number: 4, cost: 30, size: 4, break_strength: 0 },
         ],
       },
     ],
@@ -991,6 +992,7 @@ export const detachmentData: DETACHMENT[] = [
     base_cost: 36,
     base_size: 4,
     max_size: 8,
+    break_strength: 0,
     main_unit: [2006],
     related_unit: [],
     loadout: [
@@ -1004,8 +1006,8 @@ export const detachmentData: DETACHMENT[] = [
       {
         name: "Additional Tarantula",
         options: [
-          { number: 2, cost: 15, size: 2 },
-          { number: 4, cost: 25, size: 4 },
+          { number: 2, cost: 15, size: 2, break_strength: 0 },
+          { number: 4, cost: 25, size: 4, break_strength: 0 },
         ],
       },
     ],

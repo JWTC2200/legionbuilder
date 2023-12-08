@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const NotSignedIn = () => {
   return (
-    <div className="text-center mt-4">
+    <div className="text-center">
       <Link
         href={"/account/login"}
         className="underline text-lime-400 hover:text-lime-100"

@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { listState } from "../state";
 import { handleSaveList } from "../utils";
 import Link from "next/link";
+import SaveListButton from "./SaveListButton";
 
 import { TbChevronCompactLeft, TbChevronCompactRight } from "react-icons/tb";
 import { ImBin } from "react-icons/im";
@@ -24,12 +25,9 @@ const BuilderWidgetSide = () => {
     >
       {sideWidget ? (
         <div className="flex flex-wrap justify-evenly items-center text-center w-10/12 transition-all">
-          <button
-            onClick={() => handleSaveList(list)}
-            className="bg-white p-2 rounded-full hover:bg-cyan-700 active:bg-cyan-700 z-50 text-stone-800"
-          >
+          <SaveListButton className="bg-white p-2 rounded-full hover:bg-cyan-700 active:bg-cyan-700 z-50 text-stone-800">
             <FiSave />
-          </button>
+          </SaveListButton>
           <Link
             href="/lists/view"
             className="bg-white p-2 rounded-full hover:bg-cyan-700 active:bg-cyan-700 z-50 text-stone-800"
