@@ -39,7 +39,7 @@ export default function NavBar() {
           </NavItem>
           <NavItem>
             <NavLink path="/lists" icon="builder">
-              List builder
+              Lists
             </NavLink>
           </NavItem>
 
