@@ -89,14 +89,6 @@ const page = () => {
               Login
             </button>
           </div>
-          <div className="w-full">
-            <Link
-              href="/account/register"
-              className="bg-primary-500 clip-path-halfagon-sm py-1 px-4 text-primary-100 font-semibold font-graduate hover:bg-primary-500 hover:text-primary-500 ml-1/4"
-            >
-              Register
-            </Link>
-          </div>
         </form>
 
         <p className="p-4 bg-secondary-800 text-secondary-300 clip-path-octagon-md italic">
