@@ -17,24 +17,23 @@ export default function NavBar() {
     <Sticky className="w-full z-30">
       <div className="w-full bg-backgrounds-950 py-4 px-4 lg:px-8 flex lg:flex-col justify-between lg:justify-center gap-4 items-center text-center font-subrayada">
         <Logo />
-        <div className={"z-40 fixed top-0 right-0 bottom-0 left-0 lg:relative bg-secondary-950/70 lg:bg-transparent backdrop-blur-md lg:backdrop-blur-none justify-center text-2xl lg:text-base " + (visible ? "flex" : "hidden lg:flex")}>
+        <div
+          className={
+            "z-40 fixed top-0 right-0 bottom-0 left-0 lg:relative bg-secondary-950/70 lg:bg-transparent backdrop-blur-md lg:backdrop-blur-none justify-center text-2xl lg:text-base " +
+            (visible ? "flex" : "hidden lg:flex")
+          }
+        >
           <ol className="flex flex-col lg:flex-row gap-6 mt-40 lg:-mt-0">
-          <NavItem>
-            <NavLink path="/reference" icon="skull">
-              Reference
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink path="/lists" icon="builder">
-              Lists
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink path="/lists" icon="builder">
-              List builder
-            </NavLink>
-          </NavItem>
-
+            <NavItem>
+              <NavLink path="/reference" icon="skull">
+                Reference
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink path="/lists" icon="builder">
+                Lists
+              </NavLink>
+            </NavItem>
             {authenticated ? (
               <Account />
             ) : (

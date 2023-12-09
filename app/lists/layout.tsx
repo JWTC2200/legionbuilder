@@ -7,6 +7,7 @@ import { ALLEGIANCE, BUILDER_LIST } from "../types";
 import { useSearchParams } from "next/navigation";
 import { getList } from "../firebase/firestore/getList";
 import { toast } from "react-toastify";
+import Main from "../components/Main";
 
 const layout = ({ children }: { children: React.ReactNode }) => {
   const { setList } = listState();
@@ -36,7 +37,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
   }, [listParams]);
 
   return (
-    <main className="max-w-screen-2xl w-full flex flex-col items-center">
+    <Main className="sm:max-w-screen-2xl w-full flex flex-col items-center">
       <ToastContainer
         autoClose={800}
         closeOnClick
@@ -49,7 +50,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
         pauseOnFocusLoss={false}
       />
       {children}
-    </main>
+    </Main>
   );
 };
 

@@ -9,7 +9,7 @@ import ListBuilderWarnings from "./ListBuilderWarnings";
 
 const ListBuilder = () => {
   return (
-    <div className="flex flex-col gap-2 w-full max-w-screen-2xl items-center bg-dataslate pb-2 mt-4 pb-20 sm:px-4 lg:rounded-xl">
+    <div className="flex flex-col gap-2 w-full max-w-screen-2xl items-center bg-dataslate pb-2 pb-20 sm:px-4 lg:rounded-xl">
       <ListBuilderButtons />
       <ListBuilderGameSize />
       <ListBuilderListName />

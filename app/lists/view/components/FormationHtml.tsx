@@ -24,7 +24,7 @@ const FormationHtml = ({
         {formationPoints(formation)}points
       </h3>
 
-      <FormationBreakHtml formation={formation} className="border-t border-b" />
+      <FormationBreakHtml formation={formation} />
       <FormationSlotHtml slotArray={formation.compulsory} type={"Compulsory"} />
       <FormationSlotHtml slotArray={formation.optional} type={"Optional"} />
       <FormationSlotHtml

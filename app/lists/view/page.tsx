@@ -1,11 +1,12 @@
 "use client";
 
 import React from "react";
+import Main from "@/app/components/Main";
 import { listState } from "../builder/state";
 import ListInfoHtml from "./components/ListInfoHtml";
 import FormationHtml from "./components/FormationHtml";
 import ViewLinkButton from "./components/ViewLinkButton";
-import { BreadCrumbs, Crumb } from "@/app/components/navigation/BreadCrumbs";
+import { BreadCrumbs, Crumb } from "@/app/components/BreadCrumbs";
 import { useSearchParams } from "next/navigation";
 
 const page = () => {
@@ -14,7 +15,7 @@ const page = () => {
   const listParams = searchParams.get("listId");
 
   return (
-    <main className="w-full min-h-screen bg-secondary-50 text-primary-950 p-4 flex justify-center">
+    <div className="w-full min-h-screen p-4 flex justify-center">
       {list ? (
         <div className="w-full max-w-screen-sm">
           <BreadCrumbs>
@@ -49,7 +50,7 @@ const page = () => {
           <h2>No list found</h2>
         </div>
       )}
-    </main>
+    </div>
   );
 };
 

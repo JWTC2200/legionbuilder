@@ -1,3 +1,4 @@
+import Main from "./components/Main";
 import Link from "next/link";
 import { FaGithub, FaDiscord } from "react-icons/fa6";
 import { TfiEmail } from "react-icons/tfi";
@@ -6,7 +7,8 @@ import CreateListButtons from "./lists/components/CreateListButtons";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-start p-2 gap-2 max-w-screen-md text-brown-50 sm:text-lg">
+    // <main className="flex flex-col items-start p-2 gap-2 max-w-screen-md text-brown-50 sm:text-lg">
+    <Main>
       <CreateListButtons className="m-4 self-center flex flex-wrap gap-4 justify-center" />
       <FrontpageUpdates />
 
@@ -34,7 +36,7 @@ export default function Home() {
       >
         Github <FaGithub />
       </Link>
-      
+
       <hr className="border rounded-full bg-stone-900 w-11/12 my-4 " />
       <footer className="mb-auto  max-w-screen-md ">
         <p>
@@ -46,6 +48,7 @@ export default function Home() {
           respective owners.
         </p>
       </footer>
-    </main>
+    </Main>
+    // </main>
   );
 }
