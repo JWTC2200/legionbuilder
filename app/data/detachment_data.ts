@@ -2447,6 +2447,7 @@ export const detachmentData: DETACHMENT[] = [
     base_cost: 10,
     base_size: 1,
     max_size: 1,
+    break_strength: 0,
     main_unit: [],
     related_unit: [],
     loadout: [],

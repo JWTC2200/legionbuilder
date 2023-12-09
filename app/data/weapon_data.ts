@@ -430,7 +430,7 @@ export const weapons: WEAPON_DATASHEET[] = [
         range: '12"',
         dice: 1,
         to_hit: 4,
-        ap: 1,
+        ap: 2,
         traits: [{ name: "Accurate" }],
       },
     ],
