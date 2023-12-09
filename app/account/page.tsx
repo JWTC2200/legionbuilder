@@ -26,7 +26,7 @@ const page = () => {
       <h2>{currentUser?.email}</h2>
       <button
         onClick={handleDelete}
-        className="mt-4 px-4 py-2 text-2xl hover:text-tertiary-700 hover:border-tertiary-700 active:text-tertiary-600 text-bold border-4 rounded-full"
+        className="mt-4 px-4 py-2 text-2xl hover:text-tertiary-700 active:text-tertiary-700 text-bold border-4 rounded-full"
       >
         Delete account
       </button>
