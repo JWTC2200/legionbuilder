@@ -9,6 +9,7 @@ export const updateData: update[] = [
     updates: [
       "Fixed Tank Commanders for SA Armored Company counting towards formation break. Might need to reselect the detachment or even formation to fix it for old saved lists.",
       "Fixed Sicaran Omega plasma array, AP -1 to AP -2",
+      "Removed Anti-tank from Wing bombs",
     ],
   },
   {
