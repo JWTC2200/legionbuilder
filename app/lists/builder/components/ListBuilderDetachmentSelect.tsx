@@ -76,11 +76,7 @@ const ListBuilderDetachmentSelect = ({
           };
         });
       const unitDataUnit: BUILDER_DETACHMENT_UNIT = {
-        id: unitData.id,
-        name: unitData.name,
-        base_cost: unitData.base_cost,
-        base_size: unitData.base_size,
-        max_size: unitData.max_size,
+        ...unitData,
         upgrade_options: untDataUnitUpgrades,
       };
       return unitDataUnit;

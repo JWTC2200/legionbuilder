@@ -3,51 +3,69 @@ import {
   BUILDER_DETACHMENT_SLOT,
   BUILDER_DETACHMENT_UNIT_UPGRADES,
   BUILDER_LIST,
+  BUILDER_DETACHMENT_UNIT,
+  DETACHMENT_TYPE,
 } from "@/app/types";
 import { detachmentPoints, detachmentSize } from "../utils";
 import { detachmentData } from "@/app/data/detachment_data";
 
-export const formationHTML = (formation: BUILDER_FORMATION) => {
-  const compulsorySlots = formation.compulsory
-    ? formation.compulsory.map((slot) => slotHTML(slot))
-    : null;
+export const detachmentsTaken = (array: (JSX.Element | null)[] | null) => {
+  if (array) {
+    return array.filter((entry) => entry !== null).length;
+  }
+  return 0;
+};
 
-  const optionalSlots = formation.optional
-    ? formation.optional.map((slot) => slotHTML(slot))
-    : null;
+export const formationBreakPoints = (
+  formation: BUILDER_FORMATION
+): { wounds: number; break: number } => {
+  const compulsory = formation.compulsory
+    ? formationArrayBreakStrength(formation.compulsory)
+    : [0];
 
-  const choiceSlots = formation.choice
-    ? formation.choice.map((set) => set.map((slot) => slotHTML(slot)))
-    : null;
+  const optional = formation.optional
+    ? formationArrayBreakStrength(formation.optional)
+    : [0];
 
-  return (
-    <div>
-      {formation.compulsory ? (
-        <div className="mb-1">
-          <h3 className="font-graduate">Compulsory Slots:</h3>
-          <ul className="list-disc">{compulsorySlots}</ul>
-        </div>
-      ) : null}
-      {formation.optional ? (
-        <div className="mb-1">
-          <h3 className="font-graduate">Optional Slots:</h3>
-          <ul className="list-disc">{optionalSlots}</ul>
-        </div>
-      ) : null}
-      {formation.choice && formation.choice.length ? (
-        <div className="mb-1">
-          <h3 className="font-graduate">Choice slots:</h3>
-          <ul className="list-disc">{choiceSlots}</ul>
-        </div>
-      ) : null}
-    </div>
+  const choice = formation.choice
+    ? formationArrayBreakStrength(formation.choice.flat())
+    : [0];
+
+  const total = compulsory
+    .concat(optional, choice)
+    .reduce((acc, sum) => acc + sum, 0);
+
+  return { wounds: total, break: Math.ceil(total / 2) };
+};
+
+const formationArrayBreakStrength = (array: BUILDER_DETACHMENT_SLOT[]) => {
+  const breakStrength = array.map((slot) =>
+    slot.selected_unit && slot.type !== DETACHMENT_TYPE.dedicated
+      ? calcDetachmentBreakStrength(slot.selected_unit)
+      : 0
   );
+  return breakStrength;
+};
+
+const calcDetachmentBreakStrength = (unit: BUILDER_DETACHMENT_UNIT): number => {
+  const base =
+    unit.break_strength || unit.break_strength === 0
+      ? unit.break_strength * unit.base_size
+      : unit.base_size;
+  const upgrades = unit.upgrade_options
+    .map((upgrade) =>
+      upgrade.break_strength || upgrade.break_strength === 0
+        ? upgrade.size * upgrade.break_strength
+        : upgrade.size
+    )
+    .reduce((acc, sum) => acc + sum, 0);
+  return base + upgrades;
 };
 
 export const slotHTML = (slot: BUILDER_DETACHMENT_SLOT) => {
   if (slot.selected_unit) {
     return (
-      <li key={slot.slot_ref} className="ml-4">
+      <li key={slot.slot_ref} className="ml-6">
         <strong>{slot.type}</strong>: {slot.selected_unit.name}{" "}
         {`(${detachmentSize(slot.selected_unit)})`}
         {", "}

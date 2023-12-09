@@ -19,16 +19,21 @@ export default function NavBar() {
         <Logo />
         <div className={"z-40 fixed top-0 right-0 bottom-0 left-0 lg:relative bg-secondary-950/70 lg:bg-transparent backdrop-blur-md lg:backdrop-blur-none justify-center text-2xl lg:text-base " + (visible ? "flex" : "hidden lg:flex")}>
           <ol className="flex flex-col lg:flex-row gap-6 mt-40 lg:-mt-0">
-            <NavItem>
-              <NavLink path="/reference" icon="skull">
-                Reference
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink path="/lists" icon="builder">
-                List builder
-              </NavLink>
-            </NavItem>
+          <NavItem>
+            <NavLink path="/reference" icon="skull">
+              Reference
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink path="/lists" icon="builder">
+              Lists
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink path="/lists" icon="builder">
+              List builder
+            </NavLink>
+          </NavItem>
 
             {authenticated ? (
               <Account />

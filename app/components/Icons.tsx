@@ -12,7 +12,7 @@ interface IconProperties {
 	className?: string;
 }
 
-function Icon({children, className, width, height}: BaseIconProperties) {
+export function Icon({children, className, width, height}: BaseIconProperties) {
 	return (
 		<svg
 			width="15"

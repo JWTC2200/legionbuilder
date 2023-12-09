@@ -1,3 +1,4 @@
+import { BUILDER_LIST } from "@/app/types";
 import { db } from "../config";
 import {
   DocumentData,
@@ -18,13 +19,18 @@ export const getUserLists = async (userId: string) => {
   return data;
 };
 
-export const getUserListsLength = async (userId: string) => {
+export const checkUploadPermission = async (listData: BUILDER_LIST) => {
   const q = query(
     collection(db, "legionbuilder"),
-    where("user_id", "==", userId)
+    where("owner", "==", listData.user_id)
   );
-  const data: DocumentData[] = [];
+  const data: string[] = [];
   const querySnapshot = await getDocs(q);
-  querySnapshot.forEach((doc) => data.push(doc.data()));
-  return data.length;
+  querySnapshot.forEach((doc) =>
+    data.push(JSON.parse(doc.data().list).list_id)
+  );
+  if (data.includes(listData.list_id) || data.length < 10) {
+    return true;
+  }
+  return false;
 };

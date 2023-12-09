@@ -60,7 +60,7 @@ export function ReferenceSelector() {
               {!open ? <CaretDown/> : <CaretUp/>}
           </button>
           
-          <div className={`absolute z-50 bottom-o -left-2 ${open ? 'max-h-[120px]' : 'max-h-0'} bg-secondary-900 overflow-hidden transition-all`}>
+          <div className={`absolute z-50 bottom-o -left-2 ${open ? 'max-h-[130px]' : 'max-h-0'} bg-secondary-900 overflow-hidden transition-all`}>
               <ol className="p-2 pt-3 clip-path-halfagon-sm space-y-1">
                   {options.map(option => {
                       return (

@@ -220,7 +220,7 @@ export const formationSlotData: FORMATION_SLOT[] = [
   // ********************************************************************
   {
     id: 9000,
-    type: DETACHMENT_TYPE.transport,
+    type: DETACHMENT_TYPE.dedicated,
     faction: FACTION.astartes,
     restricted: true,
     options: [9000],
@@ -228,7 +228,7 @@ export const formationSlotData: FORMATION_SLOT[] = [
   },
   {
     id: 9001,
-    type: DETACHMENT_TYPE.air,
+    type: DETACHMENT_TYPE.dedicated,
     faction: FACTION.astartes,
     restricted: true,
     options: [9001],
@@ -236,7 +236,7 @@ export const formationSlotData: FORMATION_SLOT[] = [
   },
   {
     id: 9002,
-    type: DETACHMENT_TYPE.air,
+    type: DETACHMENT_TYPE.dedicated,
     faction: FACTION.astartes,
     restricted: true,
     options: [9002],

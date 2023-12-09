@@ -46,18 +46,6 @@ export const detachmentData: DETACHMENT[] = [
           { number: 5, cost: 50, size: 5 },
           { number: 6, cost: 60, size: 6 },
           { number: 7, cost: 70, size: 7 },
-          { number: 8, cost: 80, size: 8 },
-          { number: 9, cost: 90, size: 9 },
-          { number: 10, cost: 100, size: 10 },
-          { number: 11, cost: 110, size: 11 },
-          { number: 12, cost: 120, size: 12 },
-          { number: 13, cost: 130, size: 13 },
-          { number: 14, cost: 140, size: 14 },
-          { number: 15, cost: 150, size: 15 },
-          { number: 16, cost: 160, size: 16 },
-          { number: 17, cost: 170, size: 17 },
-          { number: 18, cost: 180, size: 18 },
-          { number: 19, cost: 190, size: 19 },
         ],
       },
       {
@@ -71,18 +59,6 @@ export const detachmentData: DETACHMENT[] = [
           { number: 6, cost: 12, size: 0 },
           { number: 7, cost: 14, size: 0 },
           { number: 8, cost: 16, size: 0 },
-          { number: 9, cost: 18, size: 0 },
-          { number: 10, cost: 20, size: 0 },
-          { number: 11, cost: 22, size: 0 },
-          { number: 12, cost: 24, size: 0 },
-          { number: 13, cost: 26, size: 0 },
-          { number: 14, cost: 28, size: 0 },
-          { number: 15, cost: 30, size: 0 },
-          { number: 16, cost: 32, size: 0 },
-          { number: 17, cost: 34, size: 0 },
-          { number: 18, cost: 36, size: 0 },
-          { number: 19, cost: 39, size: 0 },
-          { number: 20, cost: 40, size: 0 },
         ],
       },
       {
@@ -96,18 +72,6 @@ export const detachmentData: DETACHMENT[] = [
           { number: 6, cost: 24, size: 0 },
           { number: 7, cost: 28, size: 0 },
           { number: 8, cost: 32, size: 0 },
-          { number: 9, cost: 36, size: 0 },
-          { number: 10, cost: 40, size: 0 },
-          { number: 11, cost: 44, size: 0 },
-          { number: 12, cost: 48, size: 0 },
-          { number: 13, cost: 52, size: 0 },
-          { number: 14, cost: 56, size: 0 },
-          { number: 15, cost: 60, size: 0 },
-          { number: 16, cost: 64, size: 0 },
-          { number: 17, cost: 68, size: 0 },
-          { number: 18, cost: 72, size: 0 },
-          { number: 19, cost: 76, size: 0 },
-          { number: 20, cost: 80, size: 0 },
         ],
       },
     ],
@@ -446,6 +410,7 @@ export const detachmentData: DETACHMENT[] = [
     base_cost: 36,
     base_size: 4,
     max_size: 8,
+    break_strength: 0,
     main_unit: [1010],
     related_unit: [],
     loadout: [
@@ -459,8 +424,8 @@ export const detachmentData: DETACHMENT[] = [
       {
         name: "Additional Tarantulas",
         options: [
-          { number: 2, cost: 15, size: 2 },
-          { number: 4, cost: 30, size: 4 },
+          { number: 2, cost: 15, size: 2, break_strength: 0 },
+          { number: 4, cost: 30, size: 4, break_strength: 0 },
         ],
       },
     ],
@@ -1027,6 +992,7 @@ export const detachmentData: DETACHMENT[] = [
     base_cost: 36,
     base_size: 4,
     max_size: 8,
+    break_strength: 0,
     main_unit: [2006],
     related_unit: [],
     loadout: [
@@ -1040,8 +1006,8 @@ export const detachmentData: DETACHMENT[] = [
       {
         name: "Additional Tarantula",
         options: [
-          { number: 2, cost: 15, size: 2 },
-          { number: 4, cost: 25, size: 4 },
+          { number: 2, cost: 15, size: 2, break_strength: 0 },
+          { number: 4, cost: 25, size: 4, break_strength: 0 },
         ],
       },
     ],
@@ -1453,18 +1419,6 @@ export const detachmentData: DETACHMENT[] = [
           { number: 5, cost: 60, size: 5 },
           { number: 6, cost: 72, size: 6 },
           { number: 7, cost: 84, size: 7 },
-          { number: 8, cost: 96, size: 8 },
-          { number: 9, cost: 108, size: 9 },
-          { number: 10, cost: 120, size: 10 },
-          { number: 11, cost: 132, size: 11 },
-          { number: 12, cost: 144, size: 12 },
-          { number: 13, cost: 156, size: 13 },
-          { number: 14, cost: 168, size: 14 },
-          { number: 15, cost: 180, size: 15 },
-          { number: 16, cost: 192, size: 16 },
-          { number: 17, cost: 204, size: 17 },
-          { number: 18, cost: 216, size: 18 },
-          { number: 19, cost: 228, size: 19 },
         ],
       },
     ],
@@ -1486,6 +1440,7 @@ export const detachmentData: DETACHMENT[] = [
     base_cost: 180,
     base_size: 1,
     max_size: 6,
+    break_strength: 3,
     main_unit: [4000],
     related_unit: [4001, 4002, 4003, 4004],
     loadout: [
@@ -1512,8 +1467,8 @@ export const detachmentData: DETACHMENT[] = [
       {
         name: "Additional Knight",
         options: [
-          { number: 1, cost: 180, size: 1 },
-          { number: 2, cost: 340, size: 2 },
+          { number: 1, cost: 180, size: 1, break_strength: 3 },
+          { number: 2, cost: 340, size: 2, break_strength: 3 },
         ],
       },
       {
@@ -1542,11 +1497,11 @@ export const detachmentData: DETACHMENT[] = [
       },
       {
         name: "Armiger Talon",
-        options: [{ number: 1, cost: 180, size: 3 }],
+        options: [{ number: 1, cost: 180, size: 3, break_strength: 2 }],
       },
       {
         name: "Moriax Talon",
-        options: [{ number: 1, cost: 200, size: 3 }],
+        options: [{ number: 1, cost: 200, size: 3, break_strength: 2 }],
       },
     ],
     datasheet_info: [
@@ -1585,6 +1540,7 @@ export const detachmentData: DETACHMENT[] = [
     base_cost: 250,
     base_size: 1,
     max_size: 5,
+    break_strength: 3,
     main_unit: [4005],
     related_unit: [4003, 4004],
     loadout: [
@@ -1607,10 +1563,10 @@ export const detachmentData: DETACHMENT[] = [
     upgrade_options: [
       {
         name: "Additional Knight",
-        options: [{ number: 1, cost: 250, size: 1 }],
+        options: [{ number: 1, cost: 250, size: 1, break_strength: 3 }],
       },
       {
-        name: "Knight Porphyrion upgrade",
+        name: "Knight Asterius upgrade",
         options: [
           { number: 1, cost: 20, size: 0 },
           { number: 2, cost: 40, size: 0 },
@@ -1618,11 +1574,11 @@ export const detachmentData: DETACHMENT[] = [
       },
       {
         name: "Armiger Talon",
-        options: [{ number: 1, cost: 180, size: 3 }],
+        options: [{ number: 1, cost: 180, size: 3, break_strength: 2 }],
       },
       {
         name: "Moriax Talon",
-        options: [{ number: 1, cost: 200, size: 3 }],
+        options: [{ number: 1, cost: 200, size: 3, break_strength: 2 }],
       },
     ],
     datasheet_info: [
@@ -1651,6 +1607,7 @@ export const detachmentData: DETACHMENT[] = [
     base_cost: 330,
     base_size: 1,
     max_size: 3,
+    break_strength: 4,
     main_unit: [4006],
     related_unit: [],
     loadout: [
@@ -1676,8 +1633,8 @@ export const detachmentData: DETACHMENT[] = [
       {
         name: "Additional Warhound",
         options: [
-          { number: 1, cost: 330, size: 1 },
-          { number: 2, cost: 640, size: 2 },
+          { number: 1, cost: 330, size: 1, break_strength: 4 },
+          { number: 2, cost: 640, size: 2, break_strength: 4 },
         ],
       },
     ],
@@ -1706,6 +1663,7 @@ export const detachmentData: DETACHMENT[] = [
     base_cost: 385,
     base_size: 1,
     max_size: 1,
+    break_strength: 4,
     main_unit: [4007],
     related_unit: [],
     loadout: [
@@ -1728,6 +1686,7 @@ export const detachmentData: DETACHMENT[] = [
     base_cost: 415,
     base_size: 1,
     max_size: 1,
+    break_strength: 5,
     main_unit: [4008],
     related_unit: [],
     loadout: [
@@ -1750,7 +1709,7 @@ export const detachmentData: DETACHMENT[] = [
           "Reaver titan warp missile",
           "Reaver turbo-laser destructor",
           "Reaver volkite eradicator",
-          "Reaver graviton ceradicator",
+          "Reaver graviton eradicator",
           "Reaver conversion beam dissolutor",
         ],
       },
@@ -1817,6 +1776,7 @@ export const detachmentData: DETACHMENT[] = [
     base_cost: 525,
     base_size: 1,
     max_size: 1,
+    break_strength: 5,
     main_unit: [4009],
     related_unit: [],
     loadout: [
@@ -1875,6 +1835,7 @@ export const detachmentData: DETACHMENT[] = [
     base_cost: 600,
     base_size: 1,
     max_size: 1,
+    break_strength: 6,
     main_unit: [4010],
     related_unit: [],
     loadout: [
@@ -1962,6 +1923,7 @@ export const detachmentData: DETACHMENT[] = [
     base_cost: 675,
     base_size: 1,
     max_size: 1,
+    break_strength: 6,
     main_unit: [4011],
     related_unit: [],
     loadout: [
@@ -2039,6 +2001,7 @@ export const detachmentData: DETACHMENT[] = [
     base_cost: 750,
     base_size: 1,
     max_size: 1,
+    break_strength: 7,
     main_unit: [4012],
     related_unit: [],
     loadout: [
@@ -2115,6 +2078,7 @@ export const detachmentData: DETACHMENT[] = [
     base_cost: 750,
     base_size: 1,
     max_size: 1,
+    break_strength: 7,
     main_unit: [4013],
     related_unit: [],
     loadout: [
@@ -2199,6 +2163,7 @@ export const detachmentData: DETACHMENT[] = [
     base_cost: 215,
     base_size: 1,
     max_size: 6,
+    break_strength: 3,
     main_unit: [4014],
     related_unit: [4015, 4003, 4004],
     loadout: [
@@ -2223,8 +2188,8 @@ export const detachmentData: DETACHMENT[] = [
       {
         name: "Additional Knight",
         options: [
-          { number: 1, cost: 200, size: 1 },
-          { number: 2, cost: 390, size: 2 },
+          { number: 1, cost: 200, size: 1, break_strength: 3 },
+          { number: 2, cost: 390, size: 2, break_strength: 3 },
         ],
       },
       {
@@ -2237,11 +2202,11 @@ export const detachmentData: DETACHMENT[] = [
       },
       {
         name: "Armiger Talon",
-        options: [{ number: 1, cost: 180, size: 3 }],
+        options: [{ number: 1, cost: 180, size: 3, break_strength: 2 }],
       },
       {
         name: "Moriax Talon",
-        options: [{ number: 1, cost: 200, size: 3 }],
+        options: [{ number: 1, cost: 200, size: 3, break_strength: 2 }],
       },
     ],
     datasheet_info: [

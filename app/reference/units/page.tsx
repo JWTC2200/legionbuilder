@@ -22,19 +22,16 @@ const page = () => {
       
       <div className="w-full lg:flex lg:gap-4">
         {factionTypeArray.map(faction =>
-            <FactionList faction={faction}>
-              <div key={faction} className="w-full lg:w-auto lg:flex-auto clip-path-halfagon-lg">
-                <h3 className="font-graduate text-xl bg-backgrounds-950 py-2 px-4">{faction}</h3>
-                {unitData
-                  .filter(unitDataslate => unitDataslate.faction === faction && !unitDataslate.unique)
-                  .map((unit) => (
-                    <Row key={unit.name} className="px-4 hover:bg-secondary-700 hover:text-secondary-50">
-                      <Link href={`/reference/units/${unit.name.replaceAll(" ", "_")} `} className="block w-full py-1">
-                        {unit.name}
-                      </Link>
-                    </Row>
-                  ))}
-              </div>
+            <FactionList faction={faction} key={faction}>
+              {unitData
+                .filter(unitDataslate => unitDataslate.faction === faction && !unitDataslate.unique)
+                .map((unit) => (
+                  <Row key={unit.name} className="px-4 hover:bg-secondary-700 hover:text-secondary-50">
+                    <Link href={`/reference/units/${unit.name.replaceAll(" ", "_")} `} className="block w-full py-1">
+                      {unit.name}
+                    </Link>
+                  </Row>
+                ))}
             </FactionList>
           )}
       </div>

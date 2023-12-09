@@ -12,7 +12,7 @@ const page = () => {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [error, setError] = useState<string>("");
-  const saveSession = useAuthState(state => state.saveSession);
+  const saveSession = useAuthState((state) => state.saveSession);
 
   const auth = getAuth();
   const router = useRouter();
@@ -32,9 +32,13 @@ const page = () => {
     setError("");
 
     try {
-      const credentials = await signInWithEmailAndPassword(auth, email, password);
+      const credentials = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
       saveSession(credentials.user.uid);
-      router.push("/");
+      router.back();
     } catch (error) {
       console.log(error);
       setError("Login failed");

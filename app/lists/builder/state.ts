@@ -1,4 +1,4 @@
-import { BUILDER_LIST, FACTION } from "@/app/types";
+import { ALLEGIANCE, BUILDER_LIST, FACTION } from "@/app/types";
 import { create } from "zustand";
 import { nanoid } from "nanoid";
 
@@ -19,6 +19,7 @@ const emptyList: BUILDER_LIST = {
   list_id: nanoid(),
   user_id: "",
   main_faction: FACTION.astartes,
+  allegiance: ALLEGIANCE.neutral,
   formations: [],
 };
 

@@ -35,7 +35,7 @@ const page = () => {
       
       <div className="w-full lg:flex lg:gap-4">
         {factionTypeArray.map(faction =>
-            <FactionList faction={faction}>
+            <FactionList faction={faction} key={faction}>
               {sortByDetachmentType(
                 detachmentData.filter(
                   (detachmentFaction) =>

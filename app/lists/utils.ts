@@ -1,4 +1,3 @@
-import { User } from "firebase/auth";
 import { getUserLists } from "../firebase/firestore/getUserLists";
 import {
   BUILDER_LIST,
@@ -7,8 +6,8 @@ import {
 } from "../types";
 import { toast } from "react-toastify";
 
-export const loadLists = async (user: User) => {
-  const lists = (await getUserLists(user.uid)) as BUILDER_LIST[];
+export const loadLists = async (userUid: string) => {
+  const lists = (await getUserLists(userUid)) as BUILDER_LIST[];
   return lists;
 };
 
