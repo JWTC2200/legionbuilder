@@ -1171,11 +1171,7 @@ export const weapons: WEAPON_DATASHEET[] = [
         dice: 2,
         to_hit: 4,
         ap: 2,
-        traits: [
-          { name: "Anti-tank" },
-          { name: "Arc", value: "Rear" },
-          { name: "Bombing Run" },
-        ],
+        traits: [{ name: "Arc", value: "Rear" }, { name: "Bombing Run" }],
       },
     ],
   },
