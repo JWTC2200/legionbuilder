@@ -5,6 +5,13 @@ interface update {
 
 export const updateData: update[] = [
   {
+    date: "09/12/23",
+    updates: [
+      "Fixed Tank Commanders for SA Armored Company counting towards formation break. Might need to reselect the detachment or even formation to fix it for old saved lists.",
+      "Fixed Sicaran Omega plasma array, AP -1 to AP -2",
+    ],
+  },
+  {
     date: "08/12/23",
     updates: [
       "Fixed Tarantulas adding to formation break (they shouldn't as they have Automated Sentry)",
