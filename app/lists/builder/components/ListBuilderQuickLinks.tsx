@@ -12,7 +12,7 @@ const ListBuilderQuickLinks = ({}: {}) => {
   return (
     <>
       {list.formations.length ? (
-        <div className="w-full text-primary-50 bg-primary-950 flex flex-col py-2 justify-center items-center">
+        <div className="w-full text-primary-50 bg-backgrounds-950 flex flex-col py-2 justify-center items-center">
           {list.formations.map((formation, index) => (
             <Link
               href={`#${formation.ref_id}`}

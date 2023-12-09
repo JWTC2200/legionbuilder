@@ -24,7 +24,7 @@ const ListBuilderDetachmentSelect = ({
   const { list, setList } = listState();
 
   const detachmentSelectedHighlight = detachmentSlot.selected_unit
-    ? " text-sky-800 font-semibold"
+    ? " text-tertiary-800 font-semibold"
     : "";
 
   const updateSlotArray = (

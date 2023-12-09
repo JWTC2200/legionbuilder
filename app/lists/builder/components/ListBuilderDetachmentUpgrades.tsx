@@ -37,7 +37,7 @@ const ListBuilderDetachmentUpgrades = ({
   }
 
   const upgradeSelectedHighlight =
-    upgradeOption.number > 0 ? " text-sky-800 font-semibold" : "";
+    upgradeOption.number > 0 ? " text-tertiary-800 font-semibold" : "";
 
   const { list, setList } = listState();
   const newUpgradeObject = (

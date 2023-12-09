@@ -15,7 +15,7 @@ const page = () => {
   const listParams = searchParams.get("listId");
 
   return (
-    <div className="w-full min-h-screen p-4 flex justify-center">
+    <div className="min-h-screen p-4 flex justify-center">
       {list ? (
         <div className="w-full max-w-screen-sm">
           <BreadCrumbs>
