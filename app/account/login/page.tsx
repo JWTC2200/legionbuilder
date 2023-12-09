@@ -46,15 +46,15 @@ const page = () => {
   };
 
   return (
-    <Main className="flex flex-col gap-6">
-      <BreadCrumbs>
-        <Crumb href="/account">Account</Crumb>
-        <Crumb href="/account/login">Login</Crumb>
-      </BreadCrumbs>
-
-      {error ? <div className="text-red-500 px-4">{error}</div> : null}
-
+    <Main className="flex flex-col gap-6 items-center">
       <section className="flex flex-col gap-12 p-4 w-full lg:w-1/2">
+        <BreadCrumbs>
+          <Crumb href="/account">Account</Crumb>
+          <Crumb href="/account/login">Login</Crumb>
+        </BreadCrumbs>
+
+        {error ? <div className="text-red-500 px-4">{error}</div> : null}
+
         <form
           onSubmit={handleSignIn}
           className="flex flex-col gap-6 items-start"
@@ -92,6 +92,15 @@ const page = () => {
         </form>
 
         <p className="p-4 bg-secondary-800 text-secondary-300 clip-path-octagon-md italic">
+          Don't have an account? Register for an account{" "}
+          <Link
+            href="/account/register"
+            className="text-primary-500 hover:text-primary-100"
+          >
+            here
+          </Link>
+          .
+          <br />
           Please note: An account is NOT required to use the builder. An account
           is only required if you want to save more than one list or create
           links for sharing with other players.

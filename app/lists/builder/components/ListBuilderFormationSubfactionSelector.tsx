@@ -15,6 +15,10 @@ export const ListBuilderFormationSubfactionSelector = ({
 }: properties) => {
   const { list, setList } = listState();
 
+  const detachmentSelectedHighlight = formation.subfaction
+    ? " text-tertiary-800 font-semibold"
+    : "";
+
   const changeSubfaction = (subfaction: string) => {
     if (subfaction) {
       setList({
@@ -41,7 +45,7 @@ export const ListBuilderFormationSubfactionSelector = ({
 
   return (
     <select
-      className="w-[280px] text-center mt-2 py-1 px-2 border border-backgrounds-950 font-graduate text-black"
+      className={`w-[280px] text-center mt-2 py-1 px-2 border border-backgrounds-950 font-graduate text-black hover:text-tertiary-800 active:text-tertiary-800 ${detachmentSelectedHighlight}`}
       value={formation.subfaction}
       onChange={(e) => changeSubfaction(e.target.value)}
     >
