@@ -17,7 +17,7 @@ const page = () => {
   return (
     <main className="max-w-lg">
       <table className="w-full border-t-2 border-b-2 sm:border-2 border-black">
-        <thead className="bg-green-950 text-green-50">
+        <thead className="bg-primary-950 text-primary-50">
           <tr>
             <th className="text-start px-2">Name</th>
             <th className="text-center">Move</th>
@@ -27,14 +27,14 @@ const page = () => {
             <th className="text-center pr-4">W</th>
           </tr>
         </thead>
-        <tbody className="text-stone-900">
+        <tbody className="text-secondary-900">
           {sortedUnitData.map((unit) => (
-            <tr key={unit.id} className="even:bg-stone-300 odd:bg-stone-100">
+            <tr key={unit.id} className="even:bg-secondary-300 odd:bg-secondary-100">
               <td className="text-start px-2">
                 {" "}
                 <Link
                   href={`/reference/units/${unit.name.replaceAll(" ", "_")}`}
-                  className="flex flex-wrap items-center gap-2 hover:text-cyan-700 active:text-cyan-600"
+                  className="flex flex-wrap items-center gap-2 hover:text-tertiary-700 active:text-tertiary-600"
                 >
                   <FaExternalLinkAlt /> {unit.name}
                 </Link>

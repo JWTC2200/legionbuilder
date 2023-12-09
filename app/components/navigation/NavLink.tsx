@@ -16,8 +16,8 @@ export default function NavLink({ path, icon, children }: Properties) {
     const active = usePathname().startsWith(path);
 
     return (
-        <Link href={path} className={`flex gap-4 lg:gap-2 items-center ${active ? " text-lime-50" : "text-lime-400 hover:text-lime-100"}`} onClick={hide}>
-            <Icon className={`w-6 h-6 lg:w-4 lg:h-4 ${active ? 'text-white' : 'opacity-70'}`} />
+        <Link href={path} className={`flex gap-4 lg:gap-2 items-center ${active ? " text-secondary-300" : "text-primary-400 hover:text-secondary-100"}`} onClick={hide}>
+            <Icon className={`w-6 h-6 lg:w-4 lg:h-4 ${active ? 'text-secondary-300' : 'opacity-70'}`} />
             <span>{children}</span>
         </Link>
     );

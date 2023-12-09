@@ -1,64 +1,36 @@
-import {
-  GiWhiteTower,
-  GiHeavyBullets,
-  GiPirateCannon,
-  GiJetFighter,
-  GiBattleTank,
-  GiCog,
-  GiCrackedHelm,
-  GiGothicCross,
-  GiTankTread,
-  GiCrackedShield,
-  GiApc,
-} from "react-icons/gi";
-import { IoSkullSharp } from "react-icons/io5";
-import { PiArrowFatUpFill } from "react-icons/pi";
 import { DETACHMENT_TYPE } from "../types";
+import {
+  APC,
+  ArrowUp,
+  Bullets,
+  Cannon,
+	Cog,
+  GothicCross,
+  JetFighter,
+  Knight,
+  Shield,
+  Skull,
+  Tank,
+  TankTread,
+	Tower
+} from "@components/Icons";
 
-export const getDetachmentIcons = (type: DETACHMENT_TYPE) => {
-  if (type === DETACHMENT_TYPE.hq) {
-    return <IoSkullSharp />;
-  }
-  if (type === DETACHMENT_TYPE.core) {
-    return <GiCrackedShield />;
-  }
+const detachmentIcons = {
+  [DETACHMENT_TYPE.hq]: <Skull/>,
+  [DETACHMENT_TYPE.core]: <Shield/>,
+  [DETACHMENT_TYPE.support]: <Bullets />,
+  [DETACHMENT_TYPE.vanguard]: <GothicCross />,
+  [DETACHMENT_TYPE.light]: <APC />,
+  [DETACHMENT_TYPE.battle]: <Tank />,
+  [DETACHMENT_TYPE.heavy]: <TankTread />,
+  [DETACHMENT_TYPE.artillery]: <Cannon />,
+  [DETACHMENT_TYPE.air]: <JetFighter />,
+  [DETACHMENT_TYPE.bastion]: <Tower />,
+  [DETACHMENT_TYPE.transport]: <ArrowUp />,
+  [DETACHMENT_TYPE.knight]: <Knight />,
+  [DETACHMENT_TYPE.titan]: <Cog />,
+};
 
-  if (type === DETACHMENT_TYPE.support) {
-    return <GiHeavyBullets />;
-  }
-  if (type === DETACHMENT_TYPE.vanguard) {
-    return <GiGothicCross />;
-  }
-  if (type === DETACHMENT_TYPE.light) {
-    return <GiApc />;
-  }
-  if (type === DETACHMENT_TYPE.battle) {
-    return <GiBattleTank />;
-  }
-  if (type === DETACHMENT_TYPE.heavy) {
-    return <GiTankTread />;
-  }
-  if (type === DETACHMENT_TYPE.artillery) {
-    return <GiPirateCannon />;
-  }
-  if (type === DETACHMENT_TYPE.air) {
-    return <GiJetFighter />;
-  }
-  if (type === DETACHMENT_TYPE.bastion) {
-    return <GiWhiteTower />;
-  }
-  if (
-    type === DETACHMENT_TYPE.transport ||
-    type === DETACHMENT_TYPE.dedicated
-  ) {
-    return <PiArrowFatUpFill />;
-  }
-  if (type === DETACHMENT_TYPE.knight) {
-    return <GiCrackedHelm />;
-  }
-  if (type === DETACHMENT_TYPE.titan) {
-    return <GiCog />;
-  }
-
-  return null;
+export const getDetachmentIcon = (type: DETACHMENT_TYPE) => {
+  return detachmentIcons[type];
 };

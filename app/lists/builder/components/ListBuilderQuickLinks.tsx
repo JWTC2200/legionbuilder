@@ -12,12 +12,12 @@ const ListBuilderQuickLinks = ({}: {}) => {
   return (
     <>
       {list.formations.length ? (
-        <div className="w-full text-green-50 bg-green-950 flex flex-col py-2 justify-center items-center">
+        <div className="w-full text-primary-50 bg-primary-950 flex flex-col py-2 justify-center items-center">
           {list.formations.map((formation, index) => (
             <Link
               href={`#${formation.ref_id}`}
               key={formation.ref_id + "link"}
-              className="flex items-center text-center gap-1 hover:text-cyan-700 active:text-cyan-700"
+              className="flex items-center text-center gap-1 hover:text-tertiary-700 active:text-tertiary-700"
             >
               <FiChevronDown />
               Formation {index + 1}{" "}

@@ -23,7 +23,7 @@ const DetachmentDataslate = (detachment: DETACHMENT) => {
         <td className="text-start px-2">
           <Link
             href={`/reference/units/${unit.name.replaceAll(" ", "_")}`}
-            className="flex items-center gap-2 hover:text-cyan-700 active:text-cyan-600"
+            className="flex items-center gap-2 hover:text-tertiary-700 active:text-tertiary-600"
           >
             {unit.name} <FaExternalLinkAlt />
           </Link>
@@ -44,9 +44,9 @@ const DetachmentDataslate = (detachment: DETACHMENT) => {
   const weaponRows = getUnitWeaponRows(mainUnitWeaponsArray);
 
   return (
-    <article className="max-w-screen-xl sm:p-2 sm:border-2 border-black dataslate_background rounded-lg text-sm sm:text-base">
+    <article className="max-w-screen-xl sm:p-2 sm:border-2 border-black bg-dataslate rounded-lg text-sm sm:text-base">
       {/* TITLE */}
-      <div className="flex justify-between items-center gap-2 sm:border-2 border-black bg-green-950 text-green-50 py-1 px-3 mb-2">
+      <div className="flex justify-between items-center gap-2 sm:border-2 border-black bg-primary-950 text-primary-50 py-1 px-3 mb-2">
         <h2 className="text-xl sm:text-xl sm:text-2xl font-graduate font-bold">
           {detachment.name}
         </h2>
@@ -55,7 +55,7 @@ const DetachmentDataslate = (detachment: DETACHMENT) => {
         </h3>
       </div>
 
-      <div className="flex justify-between sm:border-2 border-black bg-green-950 text-green-50 px-2 py-1 font-bold font-graduate">
+      <div className="flex justify-between sm:border-2 border-black bg-primary-950 text-primary-50 px-2 py-1 font-bold font-graduate">
         <p>
           {mainUnit[0].unit_type.type} {`(${mainUnit[0].unit_type.value})`}
         </p>
@@ -64,7 +64,7 @@ const DetachmentDataslate = (detachment: DETACHMENT) => {
 
       {/* UNIT BASIC STATS */}
       <table className="w-full border-t-2 border-b-2 sm:border-2 border-black mt-2">
-        <thead className="bg-green-950 text-green-50">
+        <thead className="bg-primary-950 text-primary-50">
           <tr>
             <th className="text-start px-2">Name</th>
             <th className="text-center">Move</th>
@@ -74,18 +74,18 @@ const DetachmentDataslate = (detachment: DETACHMENT) => {
             <th className="text-center pr-4">W</th>
           </tr>
         </thead>
-        <tbody className="text-stone-900">{mainUnitBasicStats}</tbody>
+        <tbody className="text-secondary-900">{mainUnitBasicStats}</tbody>
       </table>
       {/* DETACHMENT WEAPONS INFO */}
       {detachment.loadout.length ? (
         <div className="mt-2 border-t-2 border-b-2 sm:border-2 border-black">
-          <h3 className="bg-green-950 text-green-50 px-2 py-1 font-bold">
+          <h3 className="bg-primary-950 text-primary-50 px-2 py-1 font-bold">
             Weapons
           </h3>
           {detachment.loadout.map((loadout, index) => (
             <div
               key={"loadout" + index}
-              className="text-green-950 p-2 flex flex-col gap-1"
+              className="text-primary-950 p-2 flex flex-col gap-1"
             >
               {loadout.text ? <p>{loadout.text}</p> : null}
               {loadout.text_option ? (
@@ -123,7 +123,7 @@ const DetachmentDataslate = (detachment: DETACHMENT) => {
       ) : null}
       {/* WEAPON STATS SECTION */}
       <table className="w-full mt-4 sm:border-2 border-black">
-        <thead className="bg-green-950 text-green-50">
+        <thead className="bg-primary-950 text-primary-50">
           <tr>
             <th className="text-start px-2">Weapon</th>
             <th className="text-center">Range</th>
@@ -133,18 +133,18 @@ const DetachmentDataslate = (detachment: DETACHMENT) => {
             <th className="text-start px-2">Traits</th>
           </tr>
         </thead>
-        <tbody className="text-stone-900">{weaponRows}</tbody>
+        <tbody className="text-secondary-900">{weaponRows}</tbody>
       </table>
       {/* DATASHEET INFO */}
       {detachment.datasheet_info.length ? (
         <div className="mt-2 border-t-2 border-b-2 sm:border-2 border-black">
-          <h3 className="bg-green-950 text-green-50 px-2 py-1 font-bold">
+          <h3 className="bg-primary-950 text-primary-50 px-2 py-1 font-bold">
             Upgrades
           </h3>
           {detachment.datasheet_info.map((info, index) => (
             <div
               key={"upgrades" + index}
-              className="text-green-950 p-2 flex flex-col gap-1"
+              className="text-primary-950 p-2 flex flex-col gap-1"
             >
               {info.text ? <p>{info.text}</p> : null}
               {info.options ? (
@@ -164,10 +164,10 @@ const DetachmentDataslate = (detachment: DETACHMENT) => {
       ) : null}
       {mainUnit[0].special_rules.length ? (
         <div className="mt-2 border-t-2 border-b-2 sm:border-2 border-black">
-          <h3 className="bg-green-950 text-green-50 px-2 py-1 font-bold">
+          <h3 className="bg-primary-950 text-primary-50 px-2 py-1 font-bold">
             Special Rules
           </h3>
-          <div className="px-2 flex flex-wrap gap-1 text-stone-900">
+          <div className="px-2 flex flex-wrap gap-1 text-secondary-900">
             {" "}
             {mainUnit[0].special_rules.sort().map((rule, index) => (
               <div key={rule.name + index} className="flex">
@@ -180,7 +180,7 @@ const DetachmentDataslate = (detachment: DETACHMENT) => {
       ) : null}
       {detachment.related_unit.length ? (
         <div className="mt-2 sm:border-2 border-black">
-          <h3 className="bg-green-950 text-green-50 px-2 py-1 mb-2 font-bold">
+          <h3 className="bg-primary-950 text-primary-50 px-2 py-1 mb-2 font-bold">
             Additional units
           </h3>
           <div className="flex flex-col gap-4">

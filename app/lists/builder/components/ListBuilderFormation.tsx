@@ -20,7 +20,7 @@ const ListBuilderFormation = ({
   return (
     <div
       id={formation.ref_id}
-      className="sm:border-4 border-green-950 sm:rounded-xl flex flex-col items-center"
+      className="sm:border-4 border-primary-950 sm:rounded-xl flex flex-col items-center"
     >
       <div className="w-full banner_background sm:rounded-t-lg flex flex-wrap  justify-center sm:justify-between items-center text-center px-2">
         <ListBuilderFormationToggle
@@ -67,8 +67,7 @@ const ListBuilderFormation = ({
                   formationSection={choiceArray}
                   sectionType={SLOTSET.choice}
                   index={index}
-                />
-              ))}
+                />))}
             </div>
           ) : null}
         </>

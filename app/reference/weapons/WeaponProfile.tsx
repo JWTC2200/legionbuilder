@@ -17,7 +17,7 @@ export default function ({
   weapon: WEAPON_DATASHEET;
 }) {
   return (
-    <div className="flex border-b group-odd:border-stone-300 group-even:border-stone-400 last:border-0 py-1 group/profile">
+    <div className="flex border-b group-odd:border-secondary-300 group-even:border-secondary-400 last:border-0 py-1 group/profile">
       <div className="basis-[16%]">{profile.range ? profile.range : "-"}</div>
       <div className="basis-[12%] text-center">
         {profile.dice ? profile.dice : "-"}

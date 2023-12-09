@@ -45,14 +45,14 @@ const ListBuilderFormationSelector = ({
           chooseFormation(Number(e.target.value));
         }}
       >
-        <option value="0" className="text-green-950">
+        <option value="0" className="text-primary-950">
           SELECT FORMATION
         </option>
         {formationData.map((format) => (
           <option
             key={formation.ref_id + format.name}
             value={format.id}
-            className="text-green-950"
+            className="text-primary-950"
           >
             {format.name}
           </option>
