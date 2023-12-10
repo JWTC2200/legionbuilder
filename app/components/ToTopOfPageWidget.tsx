@@ -4,7 +4,10 @@ import { MdKeyboardDoubleArrowUp } from "react-icons/md";
 
 const ToTopOfPageWidget = () => {
   return (
-    <button onClick={returnToTop} className="fixed bg-secondary-900 max-w-4xl w-full bottom-0 py-2 flex justify-center border-t border-primary-600">
+    <button
+      onClick={returnToTop}
+      className="fixed bg-secondary-900 max-w-screen-lg w-full bottom-0 py-2 flex justify-center border-t border-primary-600"
+    >
       <MdKeyboardDoubleArrowUp className="text-4xl" />
     </button>
   );

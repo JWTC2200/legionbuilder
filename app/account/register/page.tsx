@@ -37,7 +37,7 @@ const page = () => {
     <Main className="flex flex-col gap-6 items-center">
       <section className="flex flex-col gap-12 p-4 w-full lg:w-1/2">
         <BreadCrumbs>
-          <Crumb href="/account">Account</Crumb>
+          {/* <Crumb href="/account">Account</Crumb> */}
           <Crumb href="/account/register">Register</Crumb>
         </BreadCrumbs>
 
