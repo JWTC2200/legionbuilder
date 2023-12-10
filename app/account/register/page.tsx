@@ -49,7 +49,7 @@ const page = () => {
         >
           <div className="flex items-center w-full">
             <label htmlFor="email" className="font-graduate w-1/4">
-              Email:
+              Email
             </label>
             <input
               type="email"
@@ -62,7 +62,7 @@ const page = () => {
           </div>
           <div className="flex items-center w-full">
             <label htmlFor="password" className="font-graduate w-1/4">
-              Password:
+              Password
             </label>
             <input
               type="password"
