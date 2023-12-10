@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -9,41 +9,41 @@ import Main from "@components/Main";
 import { BreadCrumbs, Crumb } from "@components/BreadCrumbs";
 
 const page = () => {
-  const [password, setPassword] = useState("");
-  const [email, setEmail] = useState("");
-  const [error, setError] = useState<string>("");
-  const saveSession = useAuthState((state) => state.saveSession);
+	const [password, setPassword] = useState("")
+	const [email, setEmail] = useState("")
+	const [error, setError] = useState<string>("")
+	const saveSession = useAuthState((state) => state.saveSession)
 
-  const auth = getAuth();
-  const router = useRouter();
+	const auth = getAuth()
+	const router = useRouter()
 
-  const handleSignIn = async (e: React.SyntheticEvent) => {
-    e.preventDefault();
+	const handleSignIn = async (e: React.SyntheticEvent) => {
+		e.preventDefault()
 
-    if (!email) {
-      setError("Email required!");
-    }
+		if (!email) {
+			setError("Email required!")
+		}
 
-    if (!password) {
-      setError("Password required!");
-      return;
-    }
+		if (!password) {
+			setError("Password required!")
+			return
+		}
 
-    setError("");
+		setError("")
 
-    try {
-      const credentials = await signInWithEmailAndPassword(
-        auth,
-        email,
-        password
-      );
-      saveSession(credentials.user.uid);
-      router.back();
-    } catch (error) {
-      console.log(error);
-      setError("Login failed");
-    }
-  };
+		try {
+			const credentials = await signInWithEmailAndPassword(
+				auth,
+				email,
+				password
+			)
+			saveSession(credentials.user.uid)
+			router.back()
+		} catch (error) {
+			console.log(error)
+			setError("Login failed")
+		}
+	}
 
   return (
     <Main className="flex flex-col gap-6 items-center">
@@ -110,4 +110,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default page
