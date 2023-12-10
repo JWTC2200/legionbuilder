@@ -4,7 +4,7 @@ import {
   ArrowUp,
   Bullets,
   Cannon,
-	Cog,
+  Cog,
   GothicCross,
   JetFighter,
   Knight,
@@ -12,12 +12,12 @@ import {
   Skull,
   Tank,
   TankTread,
-	Tower
+  Tower,
 } from "@components/Icons";
 
-const detachmentIcons = {
-  [DETACHMENT_TYPE.hq]: <Skull/>,
-  [DETACHMENT_TYPE.core]: <Shield/>,
+const detachmentIcons: any = {
+  [DETACHMENT_TYPE.hq]: <Skull />,
+  [DETACHMENT_TYPE.core]: <Shield />,
   [DETACHMENT_TYPE.support]: <Bullets />,
   [DETACHMENT_TYPE.vanguard]: <GothicCross />,
   [DETACHMENT_TYPE.light]: <APC />,
@@ -31,6 +31,6 @@ const detachmentIcons = {
   [DETACHMENT_TYPE.titan]: <Cog />,
 };
 
-export const getDetachmentIcon = (type: DETACHMENT_TYPE) => {
+export const getDetachmentIcon = (type: any) => {
   return detachmentIcons[type];
 };
