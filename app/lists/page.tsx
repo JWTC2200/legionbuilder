@@ -30,7 +30,7 @@ const page = () => {
 				<>
 					<ListButtonInfo />
 					<header className="bg-stone-900 px-4 py-2 self-start">
-						<h1 className="text-lime-500 text-xl font-graduate">Lists</h1>
+						<h1 className="text-primary-500 text-xl font-graduate">Lists</h1>
 					</header>
 
 					<UserListTable />
