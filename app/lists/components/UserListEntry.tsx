@@ -23,7 +23,7 @@ const UserListEntry = ({ list }: { list: BUILDER_LIST }) => {
         <div className="flex items-center gap-2">
           <Link
             href={`/lists/view?listId=${list.list_id}`}
-            className="hover:text-cyan-700"
+            className="hover:text-tertiary-700"
           >
             <FaEye />
           </Link>

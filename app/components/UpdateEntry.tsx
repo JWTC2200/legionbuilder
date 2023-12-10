@@ -8,7 +8,7 @@ interface properties {
 const UpdateEntry = ({ date, updates }: properties) => {
   return (
     <li>
-      <ul className="list-disc text-cyan-700">
+      <ul className="list-disc text-tertiary-700">
         {date}:
         {updates.map((update, index) => (
           <li key={date + index} className="ml-4 text-stone-50">

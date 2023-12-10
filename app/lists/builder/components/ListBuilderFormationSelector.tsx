@@ -39,20 +39,20 @@ const ListBuilderFormationSelector = ({
   return (
     <div className="flex flex-wrap sm:gap-4 items-center justify-center">
       <select
-        className="bg-transparent sm:text-xl py-2 font-graduate text-center max-w-[300px] sm:max-w-[400px] lg:max-w-full outline-none"
+        className="bg-transparent sm:text-xl py-2 font-graduate text-center max-w-[300px] sm:max-w-[400px] lg:max-w-full outline-none hover:text-primary-400 active:text-primary-400"
         value={formation.id}
         onChange={(e) => {
           chooseFormation(Number(e.target.value));
         }}
       >
-        <option value="0" className="text-green-950">
+        <option value="0" className="text-primary-950">
           SELECT FORMATION
         </option>
         {formationData.map((format) => (
           <option
             key={formation.ref_id + format.name}
             value={format.id}
-            className="text-green-950"
+            className="text-primary-950"
           >
             {format.name}
           </option>

@@ -31,7 +31,7 @@ const CreateListButtons = ({ className }: properties) => {
     <div className={className}>
       <Link
         href="/lists/builder"
-        className="px-8 py-2 banner_background font-graduate text-lg sm:text-2xl rounded-full border-2 border-green-950 hover:text-lime-400 active:text-lime-400 hover:border-lime-400 active:border-lime-400"
+        className="px-8 py-2 banner_background font-graduate text-lg sm:text-2xl rounded-full border-2 border-backgrounds-950 hover:text-lime-400 active:text-lime-400 hover:border-lime-400 active:border-lime-400"
         onClick={clearList}
       >
         Create List
@@ -40,7 +40,7 @@ const CreateListButtons = ({ className }: properties) => {
         <Link
           href="/lists/builder"
           onClick={handlePreviousList}
-          className="px-8 py-2 banner_background font-graduate text-lg sm:text-2xl rounded-full border-2 border-green-950 hover:text-lime-400 active:text-lime-400 hover:border-lime-400 active:border-lime-400"
+          className="px-8 py-2 banner_background font-graduate text-lg sm:text-2xl rounded-full border-2 border-backgrounds-950 hover:text-lime-400 active:text-lime-400 hover:border-lime-400 active:border-lime-400"
         >
           Previous list
         </Link>

@@ -37,7 +37,7 @@ const ListBuilderDetachmentUpgrades = ({
   }
 
   const upgradeSelectedHighlight =
-    upgradeOption.number > 0 ? " text-sky-800 font-semibold" : "";
+    upgradeOption.number > 0 ? " text-tertiary-800 font-semibold" : "";
 
   const { list, setList } = listState();
   const newUpgradeObject = (
@@ -135,7 +135,7 @@ const ListBuilderDetachmentUpgrades = ({
           updateUpgradeChoice(Number(e.target.value));
         }}
         className={
-          "w-full text-center text-sm font-graduate p-1 rounded-full border border-green-950" +
+          "w-full text-center text-sm font-graduate p-1 rounded-full border border-primary-950 hover:text-tertiary-700 active:text-tertiary-700" +
           upgradeSelectedHighlight
         }
       >

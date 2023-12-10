@@ -19,8 +19,8 @@ const ListBuilderFormationSections = ({
 }: properties) => {
   return (
     <div className="w-full">
-      <div className="w-full text-green-950 flex flex-col items-center">
-        <h1 className="w-full text-center bg-green-950 text-green-50 font-graduate">
+      <div className="w-full text-backgrounds-950 flex flex-col items-center">
+        <h1 className="w-full text-center bg-backgrounds-950 text-backgrounds-50 font-graduate">
           ~ {sectionType} slots ~
         </h1>
         {sectionType === SLOTSET.compulsory ? (

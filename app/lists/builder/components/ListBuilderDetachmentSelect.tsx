@@ -24,7 +24,7 @@ const ListBuilderDetachmentSelect = ({
   const { list, setList } = listState();
 
   const detachmentSelectedHighlight = detachmentSlot.selected_unit
-    ? " text-sky-800 font-semibold"
+    ? " text-tertiary-800 font-semibold"
     : "";
 
   const updateSlotArray = (
@@ -149,7 +149,7 @@ const ListBuilderDetachmentSelect = ({
       value={detachmentSlot.selected_unit ? detachmentSlot.selected_unit.id : 0}
       onChange={(e) => changeDetachment(Number(e.target.value))}
       className={
-        "w-full text-center my-1 py-1 px-2 border border-green-950 font-graduate" +
+        "w-full text-center my-1 py-1 px-2 border border-primary-950 font-graduate hover:text-tertiary-700 active:text-tertiary-700" +
         detachmentSelectedHighlight
       }
     >

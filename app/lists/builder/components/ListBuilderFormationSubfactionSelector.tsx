@@ -15,6 +15,10 @@ export const ListBuilderFormationSubfactionSelector = ({
 }: properties) => {
   const { list, setList } = listState();
 
+  const detachmentSelectedHighlight = formation.subfaction
+    ? " text-tertiary-800 font-semibold"
+    : "";
+
   const changeSubfaction = (subfaction: string) => {
     if (subfaction) {
       setList({
@@ -41,18 +45,18 @@ export const ListBuilderFormationSubfactionSelector = ({
 
   return (
     <select
-      className="w-[280px] text-center mt-2 py-1 px-2 border border-green-950 font-graduate text-black"
+      className={`w-[280px] text-center mt-2 py-1 px-2 border border-backgrounds-950 font-graduate text-black hover:text-tertiary-800 active:text-tertiary-800 ${detachmentSelectedHighlight}`}
       value={formation.subfaction}
       onChange={(e) => changeSubfaction(e.target.value)}
     >
-      <option value="" className="text-green-950">
+      <option value="" className="text-backgrounds-950">
         {formation.faction === FACTION.astartes ? "Choose Legion" : null}
       </option>
       {subfactionTypeArray.map((subfaction) => (
         <option
           key={subfaction + formation.id}
           value={subfaction}
-          className="text-green-950"
+          className="text-backgrounds-950"
         >
           {subfaction}
         </option>

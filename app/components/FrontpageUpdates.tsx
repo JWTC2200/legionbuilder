@@ -4,7 +4,7 @@ import { updateData } from "../data/updates";
 
 const FrontpageUpdates = () => {
   return (
-    <div className="w-full border">
+    <div className=" mx-4 border">
       <h2 className="text-xl text-center border-b py-2 font-graduate">
         UPDATES:
       </h2>

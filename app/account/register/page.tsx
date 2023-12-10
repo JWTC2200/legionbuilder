@@ -1,8 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
+import Main from "@/app/components/Main";
 import signUp from "@/app/firebase/auth/signup";
 import { useRouter } from "next/navigation";
+import { BreadCrumbs, Crumb } from "@/app/components/BreadCrumbs";
 
 const page = () => {
   const [password, setPassword] = useState("");
@@ -32,49 +34,60 @@ const page = () => {
   };
 
   return (
-    <main className="flex flex-col items-center text-stone-50 p-4 max-w-md">
-      <h2 className="font-graduate text-xl font-bold mb-8">REGISTER:</h2>
-      {error ? <div className="text-red-500 mb-4">{error}</div> : null}
-      <form onSubmit={handleSignIn} className="flex flex-col items-start">
-        <label htmlFor="email" className="font-graduate">
-          Email:
-        </label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="mb-4 text-stone-900"
-        />
-        <label htmlFor="password" className="font-graduate">
-          Password:
-        </label>
-        <input
-          type="password"
-          name="password"
-          id="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          className="mb-4 text-stone-900"
-        />
-        <button
-          type="submit"
-          className="border-4 border-green-950 rounded-full px-4 py-1 dataslate_background text-green-950 font-semibold font-graduate hover:border-cyan-700 hover:text-cyan-700"
+    <Main className="flex flex-col gap-6 items-center">
+      <section className="flex flex-col gap-12 p-4 w-full lg:w-1/2">
+        <BreadCrumbs>
+          {/* <Crumb href="/account">Account</Crumb> */}
+          <Crumb href="/account/register">Register</Crumb>
+        </BreadCrumbs>
+
+        {error ? <div className="text-red-500 mb-4">{error}</div> : null}
+
+        <form
+          onSubmit={handleSignIn}
+          className="flex flex-col gap-6 items-start"
         >
-          Register
-        </button>
-      </form>
-      <p className="text-red-700 mt-4">
-        Your email will be kept private and will not be shared or used for any
-        purpose other than to log into your account.
-      </p>
-      <p className="text-red-700 mt-4">
-        Another reminder that if you only need to make a single list then there
-        really is no need to sign up. Your list will still be stored on your
-        devices localstorage for later use.
-      </p>
-    </main>
+          <div className="flex items-center w-full">
+            <label htmlFor="email" className="font-graduate w-1/4">
+              Email:
+            </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="text-secondary-200 bg-secondary-700 w-3/4 p-1 px-2"
+            />
+          </div>
+          <div className="flex items-center w-full">
+            <label htmlFor="password" className="font-graduate w-1/4">
+              Password:
+            </label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="text-secondary-200 bg-secondary-700 w-3/4 p-1 px-2"
+            />
+          </div>
+          <div className="w-full">
+            <button
+              type="submit"
+              className="bg-primary-500 clip-path-halfagon-sm py-1 px-4 text-primary-100 font-semibold font-graduate hover:bg-primary-500 hover:text-primary-500 ml-1/4"
+            >
+              Register
+            </button>
+          </div>
+        </form>
+        <p className="p-4 bg-secondary-800 text-secondary-300 clip-path-octagon-md italic">
+          Your email will be kept private and will not be shared or used for any
+          purpose other than to log into your account.
+        </p>
+      </section>
+    </Main>
   );
 };
 

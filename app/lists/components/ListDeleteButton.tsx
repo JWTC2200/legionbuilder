@@ -38,7 +38,7 @@ const ListDeleteButton = ({ list }: { list: BUILDER_LIST }) => {
           onClick={() => {
             setConfirmDelete(false);
           }}
-          className="fixed left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 banner_background flex flex-col gap-4 py-8 px-4 rounded-xl text-center text-green-50"
+          className="fixed left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 banner_background flex flex-col gap-4 py-8 px-4 rounded-xl text-center text-backgrounds-50"
         >
           <p>Do you want to delete {list.list_name}?</p>
           <button

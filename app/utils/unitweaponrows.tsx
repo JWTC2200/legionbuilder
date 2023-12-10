@@ -7,7 +7,7 @@ export const getUnitWeaponRows = (unit: number[]) => {
     if (weaponEntry) {
       return (
         <tr
-          className="even:bg-stone-300 odd:bg-stone-100"
+          className="even:bg-secondary-300 odd:bg-secondary-100"
           key={weaponEntry.name}
         >
           <td className="px-2">

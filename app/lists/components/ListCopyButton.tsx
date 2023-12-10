@@ -11,7 +11,7 @@ const ListCopyButton = ({ list }: { list: BUILDER_LIST }) => {
           `https://legionbuilder.app/lists/builder?listId=${list.list_id}`
         )
       }
-      className="flex flex-col justify-center items-center text-lg hover:text-cyan-700"
+      className="flex flex-col justify-center items-center text-lg hover:text-tertiary-700"
     >
       <FaCopy className="" />
     </button>

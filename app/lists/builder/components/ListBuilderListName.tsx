@@ -5,7 +5,7 @@ import { ImQuill } from "@react-icons/all-files/im/ImQuill";
 const ListBuilderListName = () => {
   const { list, setList } = listState();
   return (
-    <div className="text-green-950 font-semibold flex gap-2 justify-center border border-green-950 items-center py-2 px-4 rounded-xl max-w-full mx-12">
+    <div className="text-primary-950 font-semibold flex gap-2 justify-center border border-backgrounds-950 items-center py-2 px-4 rounded-xl max-w-full">
       <ImQuill />
       <input
         type="text"

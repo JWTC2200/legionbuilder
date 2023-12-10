@@ -5,7 +5,7 @@ import BuilderWidgetBottom from "./components/BuilderWidgetBottom";
 import BuilderWidgetSide from "./components/BuilderWidgetSide";
 import ListBuilder from "./components/ListBuilder";
 import Link from "next/link";
-import { BreadCrumbs, Crumb } from "@/app/components/navigation/BreadCrumbs";
+import { BreadCrumbs, Crumb } from "@/app/components/BreadCrumbs";
 import { useSearchParams } from "next/navigation";
 
 const page = () => {

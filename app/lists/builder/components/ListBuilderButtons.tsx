@@ -11,18 +11,18 @@ const ListBuilderButtons = () => {
 
   return (
     <div className="w-full flex flex-wrap gap-4 justify-center text-center mt-2">
-      <SaveListButton className=" bg-green-950 text-green-50 px-2 py-1 font-bold font-graduate rounded-lg hover:text-cyan-700">
+      <SaveListButton className="bg-backgrounds-950 text-backgrounds-50 px-2 py-1 font-bold font-graduate rounded-lg hover:text-primary-400">
         Save
       </SaveListButton>
       <Link
         href={`/lists/view${listParams ? `?listId=${listParams}` : ""}`}
-        className=" bg-green-950 text-green-50 px-2 py-1 font-bold font-graduate rounded-lg hover:text-cyan-700"
+        className=" bg-primary-950 text-primary-50 px-2 py-1 font-bold font-graduate rounded-lg hover:text-primary-400"
       >
         View
       </Link>
       <button
         onClick={clearList}
-        className=" bg-green-950 text-green-50 px-2 py-1 font-bold font-graduate rounded-lg hover:text-cyan-700"
+        className=" bg-primary-950 text-primary-50 px-2 py-1 font-bold font-graduate rounded-lg hover:text-primary-400"
       >
         Clear
       </button>
