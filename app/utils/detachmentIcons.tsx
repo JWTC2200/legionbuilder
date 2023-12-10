@@ -31,6 +31,6 @@ const detachmentIcons: any = {
   [DETACHMENT_TYPE.titan]: <Cog />,
 };
 
-export const getDetachmentIcon = (type: any) => {
+export const getDetachmentIcon = (type: DETACHMENT_TYPE) => {
   return detachmentIcons[type];
 };

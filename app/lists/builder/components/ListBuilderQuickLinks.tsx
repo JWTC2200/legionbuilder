@@ -17,7 +17,7 @@ const ListBuilderQuickLinks = ({}: {}) => {
             <Link
               href={`#${formation.ref_id}`}
               key={formation.ref_id + "link"}
-              className="flex items-center text-center gap-1 hover:text-tertiary-700 active:text-tertiary-700"
+              className="flex items-center text-center gap-1 hover:text-primary-400 active:text-primary-400"
             >
               <FiChevronDown />
               Formation {index + 1}{" "}

@@ -25,10 +25,10 @@ const ListBuilderAddFormation = () => {
 
   return (
     <div className="w-full text-primary-50 flex flex-col justify-center gap-2">
-      <div className="builder_title_background flex flex-wrap justify-center items-center text-center gap-4 w-max mx-auto rounded-full px-3 border-4 border-primary-900 hover:border-tertiary-700">
+      <div className="builder_title_background flex flex-wrap justify-center items-center text-center gap-4 w-max mx-auto rounded-full px-3 border-4 border-primary-900 hover:border-primary-400">
         <button
           onClick={addFormation}
-          className="p-1 hover:text-tertiary-700 font-graduate sm:text-xl flex items-center gap-1"
+          className="p-1 hover:text-primary-400 font-graduate sm:text-xl flex items-center gap-1"
         >
           <FiPlus /> Add formation
           <FiPlus />

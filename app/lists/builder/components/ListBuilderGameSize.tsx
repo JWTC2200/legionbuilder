@@ -21,7 +21,7 @@ const ListBuilderGameSize = () => {
           id="game_size"
           value={list.points}
           onChange={(e) => handlePoints(e.target.value)}
-          className="bg-transparent rounded-sm p-1 sm:text-lg font-semibold hover:text-tertiary-700 active:text-tertiary-700"
+          className="bg-transparent rounded-sm p-1 sm:text-lg font-semibold hover:text-primary-400 active:text-primary-400"
         >
           {gameSizes.map((size) => (
             <option
@@ -47,7 +47,7 @@ const ListBuilderGameSize = () => {
           onChange={(e) =>
             setList({ ...list, main_faction: e.target.value as FACTION })
           }
-          className="bg-transparent rounded-sm p-1 sm:text-lg font-graduate hover:text-tertiary-700 active:text-tertiary-700"
+          className="bg-transparent rounded-sm p-1 sm:text-lg font-graduate hover:text-primary-400 active:text-primary-400"
         >
           <option value="Legiones Astartes" className="text-primary-950">
             Legiones Astartes
