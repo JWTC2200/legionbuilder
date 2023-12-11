@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react"
 import { calculatorWeapons } from "../state"
 import { unitData } from "@/app/data/unit_data"
 import { weapons } from "@/app/data/weapon_data"
-import { CALCWEAPON } from "../state"
 import { sortedByNameKey } from "@/app/utils/sorting"
+import { WEAPON_DATASHEET } from "@/app/types"
 
 const AttackingUnit = () => {
 	const [unitOrWeapon, setUnitOrWeapon] = useState<boolean>(true)
@@ -15,11 +15,11 @@ const AttackingUnit = () => {
 		if (unitOrWeapon) {
 			const unit = unitData.find((unit) => unit.id === Number(selectedAttack))
 			if (unit) {
-				let weaponSheets: CALCWEAPON[] = []
+				let weaponSheets: WEAPON_DATASHEET[] = []
 				unit.weapons.forEach((weaponId) => {
 					const weaponInfo = weapons.find((weapon) => weapon.id === weaponId)
 					if (weaponInfo) {
-						weaponSheets.push({ ...weaponInfo, number: 1 })
+						weaponSheets.push(weaponInfo)
 					}
 				})
 				setCalcWeapons({ weapons: weaponSheets, name: unit.name })
@@ -27,7 +27,7 @@ const AttackingUnit = () => {
 		} else {
 			const weapon = weapons.find((weapon) => weapon.id === Number(selectedAttack))
 			if (weapon) {
-				setCalcWeapons({ weapons: [{ ...weapon, number: 1 }], name: "" })
+				setCalcWeapons({ weapons: [weapon], name: "" })
 			}
 		}
 	}

@@ -1,9 +1,9 @@
 import React from "react"
 import { calculatorTarget } from "../state"
 import { calculateDamage } from "../utils"
-import { WEAPON_DATASHEET } from "@/app/types"
+import { WEAPON_PROFILES } from "@/app/types"
 
-const DamageResult = ({ weapon }: { weapon: WEAPON_DATASHEET }) => {
+const DamageResult = ({ weapon }: { weapon: WEAPON_PROFILES }) => {
 	const { calcTargets } = calculatorTarget()
 
 	return <div>{calcTargets ? calculateDamage(weapon, calcTargets) : 0}</div>
