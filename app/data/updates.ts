@@ -4,11 +4,11 @@ interface update {
 }
 
 export const updateData: update[] = [
+	{ date: "11/12/23", updates: ["Dire wolf titan can now select carapace weapon", "Fixed some typos"] },
 	{
 		date: "10/12/23",
 		updates: ["Bunch of color and style changes to the site.", "Fixed issue with links from the /view page having two query strings T_T (noob)", "Added feature to duplicate a list from the /lists page."],
 	},
-
 	{
 		date: "09/12/23",
 		updates: ["Fixed Tank Commanders for SA Armored Company counting towards formation break. Might need to reselect the detachment or even formation to fix it for old saved lists.", "Fixed Sicaran Omega plasma array, AP -1 to AP -2", "Removed Anti-tank from Wing bombs"],

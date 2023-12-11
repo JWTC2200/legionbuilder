@@ -2108,7 +2108,7 @@ export const weapons: WEAPON_DATASHEET[] = [
   },
   {
     id: 4043,
-    name: "Coversion beam dissipator",
+    name: "Conversion beam dissipator",
     profiles: [
       {
         range: '6"',
