@@ -1,30 +1,28 @@
 import { UNIT_DATASHEET, WEAPON_DATASHEET } from "@/app/types"
 import { create } from "zustand"
 
-export interface CALCWEAPON extends WEAPON_DATASHEET {
-	number: number
-}
-
 interface CalcWeapons {
-	calcWeapons: CALCWEAPON[]
-	setCalcWeapons: (update: CALCWEAPON[]) => void
+	calcWeapons: WEAPON_DATASHEET[]
+	calcUnit: string
+	setCalcWeapons: (update: { weapons: WEAPON_DATASHEET[]; name: string }) => void
 	clearCalcWeapons: () => void
 }
 
 interface TargetUnit {
-	calcTargets: UNIT_DATASHEET[]
-	setTargetUnit: (update: UNIT_DATASHEET[]) => void
+	calcTargets: UNIT_DATASHEET | null
+	setTargetUnit: (update: UNIT_DATASHEET) => void
 	clearTargetUnit: () => void
 }
 
 export const calculatorWeapons = create<CalcWeapons>((set) => ({
 	calcWeapons: [],
-	setCalcWeapons: (update) => set(() => ({ calcWeapons: update })),
-	clearCalcWeapons: () => set(() => ({ calcWeapons: [] })),
+	calcUnit: "",
+	setCalcWeapons: (update) => set(() => ({ calcWeapons: update.weapons, calcUnit: update.name })),
+	clearCalcWeapons: () => set(() => ({ calcWeapons: [], calcUnit: "" })),
 }))
 
 export const calculatorTarget = create<TargetUnit>((set) => ({
-	calcTargets: [],
+	calcTargets: null,
 	setTargetUnit: (update) => set(() => ({ calcTargets: update })),
-	clearTargetUnit: () => set(() => ({ calcTargets: [] })),
+	clearTargetUnit: () => set(() => ({ calcTargets: null })),
 }))
