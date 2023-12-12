@@ -4,6 +4,10 @@ interface update {
 }
 
 export const updateData: update[] = [
+	{
+		date: "12/12/23",
+		updates: ["Added a damage calculator in the references section, feedback appreciated."],
+	},
 	{ date: "11/12/23", updates: ["Dire wolf titan can now select carapace weapon", "Fixed some typos"] },
 	{
 		date: "10/12/23",
