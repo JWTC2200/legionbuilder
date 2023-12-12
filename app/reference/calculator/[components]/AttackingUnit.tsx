@@ -4,9 +4,10 @@ import { unitData } from "@/app/data/unit_data"
 import { weapons } from "@/app/data/weapon_data"
 import { sortedByNameKey } from "@/app/utils/sorting"
 import { WEAPON_DATASHEET } from "@/app/types"
+import { FaExchangeAlt } from "@react-icons/all-files/fa/FaExchangeAlt"
 
 const AttackingUnit = () => {
-	const [unitOrWeapon, setUnitOrWeapon] = useState<boolean>(true)
+	const [unitOrWeapon, setUnitOrWeapon] = useState<boolean>(false)
 	const [selectedAttacker, setSelectedAttacker] = useState<string>("")
 	const [attackerFilter, setAttackerFilter] = useState<string>("")
 	const { setCalcWeapons, clearCalcWeapons } = calculatorWeapons()
@@ -47,9 +48,9 @@ const AttackingUnit = () => {
 
 	return (
 		<section className="w-full text-primary-950">
-			<h3 className="font-graduate text-center text-primary-400 text-xl mb-2">
-				{unitOrWeapon ? "Unit" : "Weapon"} /
-				<button onClick={swapUnitOrWeapons} className="text-sm ml-2 hover:text-primary-100 active:text-primary-100">
+			<h3 className="flex items-center gap-2 justify-center font-graduate text-center text-secondary-300 text-xl mb-2">
+				{unitOrWeapon ? "Unit" : "Weapon"} <FaExchangeAlt />
+				<button onClick={swapUnitOrWeapons} className="text-sm hover:text-primary-100 active:text-primary-100">
 					{unitOrWeapon ? "Weapon" : "Unit"}
 				</button>
 			</h3>

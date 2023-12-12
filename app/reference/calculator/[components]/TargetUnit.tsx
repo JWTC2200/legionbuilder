@@ -26,7 +26,7 @@ const TargetUnit = () => {
 
 	return (
 		<section className="w-full text-primary-950">
-			<h3 className="font-graduate text-center text-primary-400 text-xl mb-2">Target Unit</h3>
+			<h3 className="font-graduate text-center text-secondary-300 text-xl mb-2">Target Unit</h3>
 			<input type="text" name="target" id="target" placeholder="Search units..." className="bg-dataslate w-full p-4 font-graduate placeholder:text-primary-800 focus:outline-none" value={targetFilter} onChange={(e) => setTargetFilter(e.target.value)} />
 			<select className="w-full bg-dataslate p-4 font-graduate placeholder:text-primary-950 focus:outline-none" value={selectedTarget} onChange={(e) => setSelectedTarget(e.target.value)}>
 				<option value={""}>Select target unit</option>

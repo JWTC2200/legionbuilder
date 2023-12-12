@@ -8,7 +8,7 @@ const CalculatorResults = () => {
 	const { calcTargets } = calculatorTarget()
 
 	return (
-		<section className="w-full text-primary-100 my-4">
+		<section className="w-full text-secondary-300 my-4">
 			<header className="w-full bg-backgrounds-950 text-center py-4 font-graduate text-xl font-semibold">RESULTS</header>
 			<div className="flex flex-col md:flex-row gap-4 sm:justify-center items-center sm:items-start py-4">
 				{calcWeapons.length ? (
