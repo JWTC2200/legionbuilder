@@ -11,7 +11,7 @@ const CalculatorResults = () => {
 		<section className="w-full text-secondary-300 my-4">
 			<header className="w-full bg-backgrounds-950 text-center py-4 font-graduate text-xl font-semibold">RESULTS</header>
 			<div className="flex flex-col md:flex-row gap-4 sm:justify-center items-center sm:items-start py-4">
-				{calcWeapons.length ? (
+				{calcWeapons.length || calcUnit ? (
 					<div className="w-full">
 						<AttackDisplay />
 					</div>

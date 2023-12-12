@@ -7,7 +7,7 @@ import { WEAPON_DATASHEET } from "@/app/types"
 import { FaExchangeAlt } from "@react-icons/all-files/fa/FaExchangeAlt"
 
 const AttackingUnit = () => {
-	const [unitOrWeapon, setUnitOrWeapon] = useState<boolean>(false)
+	const [unitOrWeapon, setUnitOrWeapon] = useState<boolean>(true)
 	const [selectedAttacker, setSelectedAttacker] = useState<string>("")
 	const [attackerFilter, setAttackerFilter] = useState<string>("")
 	const { setCalcWeapons, clearCalcWeapons } = calculatorWeapons()
