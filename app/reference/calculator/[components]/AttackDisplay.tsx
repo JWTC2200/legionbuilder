@@ -12,9 +12,9 @@ const AttackDisplay = () => {
 			<div className="mx-4">
 				<div className="">
 					<header className="flex bg-backgrounds-950 border-t border-primary-400">
-						<div className="basis-[60%] pl-2">Weapon</div>
-						<div className="basis-[20%] text-center">Range</div>
-						<div className="basis-[20%] text-center">Damage</div>
+						<div className="basis-[56%] pl-2">Weapon</div>
+						<div className="basis-[22%] text-center">Range</div>
+						<div className="basis-[22%] text-center">Damage</div>
 					</header>
 					{calcWeapons.map((weapon) => (
 						<AttackWeapon key={weapon.name} weapon={weapon} />

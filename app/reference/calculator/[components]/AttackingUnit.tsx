@@ -49,7 +49,7 @@ const AttackingUnit = () => {
 	return (
 		<section className="w-full text-primary-950">
 			<h3 className="flex items-center gap-2 justify-center font-graduate text-center text-secondary-300 text-xl mb-2">
-				{unitOrWeapon ? "Unit" : "Weapon"} <FaExchangeAlt />
+				<span className="text-primary-400">{unitOrWeapon ? "Unit" : "Weapon"}</span> <FaExchangeAlt />
 				<button onClick={swapUnitOrWeapons} className="text-sm hover:text-primary-100 active:text-primary-100">
 					{unitOrWeapon ? "Weapon" : "Unit"}
 				</button>

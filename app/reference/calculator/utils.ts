@@ -70,7 +70,6 @@ export const calculateDamage = (weapon: WEAPON_PROFILES, target: UNIT_DATASHEET)
 				allSaves.push(1 / 6)
 			}
 		}
-		console.log(allSaves)
 
 		const sortedSaves = allSaves
 			.map((save) => save)
@@ -111,7 +110,7 @@ export const calculateDamage = (weapon: WEAPON_PROFILES, target: UNIT_DATASHEET)
 		return multiplier
 	}
 
-	if (weapon.range === "-") {
+	if (weapon.range === "-" && !weapon.to_hit) {
 		return "melee"
 	}
 	if (weaponTraits.includes("Light") && armouredTypes.includes(targetType)) {
