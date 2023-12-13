@@ -10,13 +10,8 @@ const CalculatorResults = () => {
 	return (
 		<section className="w-full text-secondary-300 my-2">
 			<div className="flex flex-col md:flex-row gap-4 sm:justify-center items-center sm:items-start py-4">
-				{calcWeapons.length || calcUnit ? (
-					<div className="w-full">
-						<AttackDisplay />
-					</div>
-				) : (
-					<div className="text-center text-red-600 w-full font-graduate text-secondary-100">Select a weapon or attacking unit</div>
-				)}
+				<AttackDisplay />
+
 				{calcTargets ? <TargetDisplay /> : <div className="text-center text-red-600 w-full font-graduate text-secondary-100">Select a target unit</div>}
 			</div>
 		</section>

@@ -23,7 +23,7 @@ const AttackDisplay = () => {
 				<button onClick={resetWeapons} className="ml-2 hover:text-primary-100">
 					<FiRefreshCw />
 				</button>
-				<h4 className="font-graduate text-lg text-center mx-4">{calcUnit ? calcUnit : calcWeapons[0].name}</h4>
+				<h4 className="font-graduate text-lg text-center mx-4">{calcUnit ? calcUnit : calcWeapons.length ? calcWeapons[0].name : "Select a weapon or unit"}</h4>
 				<FiRefreshCw className="mr-2 text-backgrounds-950" />
 			</div>
 
