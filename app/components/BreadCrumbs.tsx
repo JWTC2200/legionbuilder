@@ -1,23 +1,31 @@
 "use client"
 
-import { Children, ReactNode, useEffect, useRef, useState } from "react"
+import { Children, ReactNode, isValidElement, useEffect, useRef, useState } from "react"
 import { usePathname } from "next/navigation"
 import Link from "next/link"
 import { CaretDown, CaretUp } from "@components/Icons"
 import { clickOutside } from "@/app/utils/events"
 
 export function BreadCrumbs({ children }: { children: ReactNode }) {
-	children = Children.toArray(children)
+	// children = Children.toArray(children)
 
 	return (
 		<header className="bg-secondary-900 p-4 py-2 text-lg font-graduate">
-			{/* @ts-ignore - you can actually map over this, so not sure what TS is bitching about! */}
-			{children.map((child: any, key: string) => (
+			{/* ts-ignore - you can actually map over this, so not sure what TS is bitching about! */}
+			{/* {children.map((child: any, key: string) => (
 				<span className="group" key={key}>
 					{child}
 					<span className="group-last:hidden px-2 text-secondary-500">&gt;</span>
 				</span>
-			))}
+			))} */}
+			{Children.map(children, (child, key) =>
+				isValidElement(child) ? (
+					<span className="group" key={key}>
+						{child}
+						<span className="group-last:hidden px-2 text-secondary-500">&gt;</span>
+					</span>
+				) : null
+			)}
 		</header>
 	)
 }
