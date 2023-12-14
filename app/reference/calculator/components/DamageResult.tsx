@@ -1,6 +1,6 @@
 import React from "react"
 import { calculatorTarget } from "../state"
-import { calculateDamage } from "../utils"
+import calculateDamage from "../utils/calculateDamage"
 import { WEAPON_PROFILES } from "@/app/types"
 
 const DamageResult = ({ weapon }: { weapon: WEAPON_PROFILES }) => {
