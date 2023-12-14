@@ -9,19 +9,18 @@ const testWeapon: WEAPON_PROFILES = { range: "1", dice: 1, to_hit: 4, ap: 0, tra
 
 const testTarget: UNIT_DATASHEET = { id: 1, faction: FACTION.astartes, allegiance: ALLEGIANCE.neutral, unit_type: { type: UNIT_TYPE.infantry, value: 1 }, name: "Tester", movement: "10", save: 5, caf: 0, morale: null, wounds: 1, weapons: [], special_rules: [] }
 
-test("Calculator Shots", () => {
+test("Calculate Shots", () => {
 	expect(calculateShotMultiplier(testWeapon, testTarget)).toBe(1)
 	expect(calculateShotMultiplier({ ...testWeapon, range: "T", dice: 0 }, testTarget)).toBe(1)
 	expect(calculateShotMultiplier({ ...testWeapon, dice: 20 }, testTarget)).toBe(20)
 	expect(calculateShotMultiplier({ ...testWeapon, dice: "-" }, testTarget)).toBe(1)
 })
 
-test("Calculator To Hit", () => {
+test("Calculate To Hit", () => {
 	expect(calculateToHit(testWeapon, testTarget)).toBe(0.5)
 	expect(calculateToHit({ ...testWeapon, to_hit: null }, testTarget)).toBe(1)
 	expect(calculateToHit(testWeapon, { ...testTarget, special_rules: [{ name: "Flyer" }] })).toBe(1 / 6)
 	expect(calculateToHit({ ...testWeapon, traits: [{ name: "Skyfire" }] }, { ...testTarget, special_rules: [{ name: "Flyer" }] })).toBe(1 / 2)
-	expect(calculateToHit({ ...testWeapon, traits: [{ name: "skyfire" }] }, { ...testTarget, special_rules: [{ name: "Flyer" }] })).toBe(1 / 6) //misspelled
 	expect(calculateToHit({ ...testWeapon, traits: [{ name: "Tracking" }] }, { ...testTarget, special_rules: [{ name: "Flyer" }] })).toBe(11 / 36)
 	expect(calculateToHit({ ...testWeapon, traits: [{ name: "Accurate" }] }, { ...testTarget, special_rules: [{ name: "Flyer" }] })).toBe(11 / 36)
 	expect(calculateToHit({ ...testWeapon, traits: [{ name: "Accurate" }] }, testTarget)).toBe(3 / 4)

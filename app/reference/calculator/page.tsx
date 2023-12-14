@@ -1,9 +1,9 @@
 "use client"
 import Main from "@/app/components/Main"
 import { BreadCrumbs, Crumb, ReferenceSelector } from "@/app/components/BreadCrumbs"
-import AttackingUnit from "./[components]/AttackingUnit"
-import TargetUnit from "./[components]/TargetUnit"
-import CalculatorResults from "./[components]/CalculatorResults"
+import AttackingUnit from "./components/AttackingUnit"
+import TargetUnit from "./components/TargetUnit"
+import CalculatorResults from "./components/CalculatorResults"
 
 const page = () => {
 	return (
