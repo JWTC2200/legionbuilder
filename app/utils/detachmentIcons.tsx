@@ -17,6 +17,6 @@ const detachmentIcons: { [key: string]: React.ReactNode } = {
 	[DETACHMENT_TYPE.titan]: <Cog />,
 }
 
-export const getDetachmentIcon = (type: keyof typeof DETACHMENT_TYPE) => {
+export const getDetachmentIcon = (type: DETACHMENT_TYPE) => {
 	return detachmentIcons[type]
 }
