@@ -107,6 +107,10 @@ export const calculateDamage = (weapon: WEAPON_PROFILES, target: UNIT_DATASHEET)
 			multiplier = weapon.dice
 		}
 
+		if (weapon.range === "T") {
+			multiplier = 1
+		}
+
 		return multiplier
 	}
 
@@ -116,7 +120,8 @@ export const calculateDamage = (weapon: WEAPON_PROFILES, target: UNIT_DATASHEET)
 	if (weaponTraits.includes("Light") && armouredTypes.includes(targetType)) {
 		return "0"
 	}
-	// console.log(`tohit: ${calculateShotMultiplier()}, saves: ${calculateSaves()}, shots: ${calculateShotMultiplier()}`)
+	// console.log(`tohit: ${calculateToHit()}, saves: ${calculateSaves()}, shots: ${calculateShotMultiplier()}`)
+
 	let finalDamage = (1 - calculateSaves()) * calculateShotMultiplier() * calculateToHit()
 
 	if (weaponTraits.includes("Deflagrate")) {
