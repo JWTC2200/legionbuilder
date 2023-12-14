@@ -10,7 +10,6 @@ const page = () => {
 		<Main>
 			<BreadCrumbs>
 				<Crumb href="/reference">Reference</Crumb>
-
 				<ReferenceSelector />
 			</BreadCrumbs>
 			<section className="flex flex-col w-full p-4 text-primary-950">

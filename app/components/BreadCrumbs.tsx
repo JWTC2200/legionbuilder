@@ -7,17 +7,8 @@ import { CaretDown, CaretUp } from "@components/Icons"
 import { clickOutside } from "@/app/utils/events"
 
 export function BreadCrumbs({ children }: { children: ReactNode }) {
-	// children = Children.toArray(children)
-
 	return (
 		<header className="bg-secondary-900 p-4 py-2 text-lg font-graduate">
-			{/* ts-ignore - you can actually map over this, so not sure what TS is bitching about! */}
-			{/* {children.map((child: any, key: string) => (
-				<span className="group" key={key}>
-					{child}
-					<span className="group-last:hidden px-2 text-secondary-500">&gt;</span>
-				</span>
-			))} */}
 			{Children.map(children, (child, key) =>
 				isValidElement(child) ? (
 					<span className="group" key={key}>
@@ -43,7 +34,7 @@ export function Crumb({ href, children }: { href: string; children: ReactNode })
 }
 
 export function ReferenceSelector() {
-	const ref = useRef(null)
+	const ref = useRef<HTMLHeadingElement>(null)
 	const [options] = useState(
 		["units", "weapons", "detachments", "formations", "calculator"].map((option) => {
 			const href = "/reference/" + option
