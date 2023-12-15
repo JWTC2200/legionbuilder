@@ -14,7 +14,7 @@ export default function Home() {
 
 			<section className="mx-4">
 				<h2 className="text-lg font-graduate text-tertiary-700 mt-4">Suggestions or feedback?</h2>
-				<Link href="https://discord.gg/qJc2cZGt" target="_blank" className="hover:underline text-xl flex items-center gap-1 hover:text-tertiary-700 active:text-tertiary-700 focus:text-tertiary-700">
+				<Link href="https://discord.gg/UE3RzpKK" target="_blank" className="hover:underline text-xl flex items-center gap-1 hover:text-tertiary-700 active:text-tertiary-700 focus:text-tertiary-700">
 					Join our Discord! <FaDiscord />
 				</Link>
 				<Link href="/contact" className="hover:underline text-xl flex items-end gap-1 hover:text-tertiary-700 active:text-tertiary-700 focus:text-tertiary-700">
