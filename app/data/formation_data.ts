@@ -49,7 +49,7 @@ export const formationData: FORMATION[] = [
 		name: "Legion Aerial Assault",
 		faction: FACTION.astartes,
 		allegiance: ALLEGIANCE.neutral,
-		compulsory: [1000, 1001, 1002, 1003],
+		compulsory: [1000, 1001, 1001, 1002],
 		optional: [1001, 1002, 1002, 1003, 1008, 1008, 9001, 9002],
 		choice: null,
 	},
