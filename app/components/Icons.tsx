@@ -8,7 +8,7 @@ interface BaseIconProperties {
 	height: Number
 }
 
-interface IconProperties {
+export interface IconProperties {
 	className?: string
 }
 
