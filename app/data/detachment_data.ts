@@ -867,8 +867,8 @@ export const detachmentData: DETACHMENT[] = [
 			{
 				text: "An Auxilia Charonite Ogryn Section can purchase the following upgrades:",
 				options: [
-					{ text: "1 additional Charonite Ogryn", cost: 15 },
-					{ text: "2 additional Charonite Ogryn", cost: 30 },
+					{ text: "2 additional Charonite Ogryn", cost: 15 },
+					{ text: "4 additional Charonite Ogryn", cost: 30 },
 				],
 			},
 		],
