@@ -5,6 +5,10 @@ interface update {
 
 export const updateData: update[] = [
 	{
+		date: "18/12/23",
+		updates: ["Changed game points to an input instead of a dropdown for custom game sizes."],
+	},
+	{
 		date: "12/12/23",
 		updates: ["Added a damage calculator in the references section, feedback appreciated."],
 	},
