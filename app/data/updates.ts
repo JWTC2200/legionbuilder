@@ -6,7 +6,7 @@ interface update {
 export const updateData: update[] = [
 	{
 		date: "19/12/23",
-		updates: ["Added sorting for user lists"],
+		updates: ["Added sorting for user lists. Default sorting is created/last editted"],
 	},
 	{
 		date: "18/12/23",
