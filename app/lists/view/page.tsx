@@ -8,6 +8,7 @@ import FormationHtml from "./components/FormationHtml"
 import ViewLinkButton from "./components/ViewLinkButton"
 import { BreadCrumbs, Crumb } from "@/app/components/BreadCrumbs"
 import { useSearchParams } from "next/navigation"
+import ReferencePopup from "@/app/components/ReferencePopup"
 
 const page = () => {
 	const { list } = listState()
@@ -16,6 +17,7 @@ const page = () => {
 
 	return (
 		<div className="min-h-screen p-4 flex justify-center">
+			<ReferencePopup />
 			{list ? (
 				<div className="w-full max-w-screen-sm">
 					<BreadCrumbs>
