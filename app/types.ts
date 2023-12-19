@@ -1,3 +1,5 @@
+import { Timestamp } from "firebase/firestore"
+
 export enum FACTION {
 	astartes = "Legiones Astartes",
 	solar = "Solar Auxillia",
@@ -251,4 +253,15 @@ export interface CONTACT_FORM_DATA {
 	email: string
 	title: string
 	message: string
+}
+
+// db
+
+export interface DB_ENTRY {
+	formations: number
+	game_size: number
+	list: BUILDER_LIST
+	main_faction: string
+	name: string
+	created: Timestamp
 }

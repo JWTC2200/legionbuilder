@@ -1,12 +1,12 @@
-import { create } from "zustand";
-import { BUILDER_LIST } from "../types";
+import { create } from "zustand"
+import { DB_ENTRY } from "../types"
 
 interface UserListsState {
-  userLists: BUILDER_LIST[];
-  setUserLists: (lists: BUILDER_LIST[]) => void;
+	userLists: DB_ENTRY[]
+	setUserLists: (lists: DB_ENTRY[]) => void
 }
 
 export const userListsState = create<UserListsState>((set) => ({
-  userLists: [],
-  setUserLists: (update) => set(() => ({ userLists: update })),
-}));
+	userLists: [],
+	setUserLists: (update) => set(() => ({ userLists: update })),
+}))

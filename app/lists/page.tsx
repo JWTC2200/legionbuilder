@@ -8,6 +8,7 @@ import UserListTable from "./components/UserListTable"
 import useAuthState from "../Auth"
 import CreateListButtons from "./components/CreateListButtons"
 import ListButtonInfo from "./components/ListButtonInfo"
+import ListSortButton from "./components/ListSortButton"
 
 const page = () => {
 	const userUid = useAuthState((state) => state.uid)
@@ -29,8 +30,26 @@ const page = () => {
 			{userLists.length && userUid ? (
 				<>
 					<ListButtonInfo />
-					<header className="bg-stone-900 px-4 py-2 self-start">
-						<h1 className="text-primary-500 text-xl font-graduate">Lists</h1>
+					<header className="w-full flex flex-col bg-backgrounds-950 font-bold">
+						<div className="w-full flex justify-between items-center gap-1 border-b border-primary-600 px-4 py-1">
+							<ListSortButton sortBy="name" className="flex justify-start items-center gap-1">
+								Lists
+							</ListSortButton>
+							<ListSortButton sortBy="created" className="flex justify-end items-center gap-1">
+								Created
+							</ListSortButton>
+						</div>
+						<div className="flex px-4 py-1 text-sm">
+							<ListSortButton sortBy="main_faction" className="basis-[40%] flex items-center gap-1">
+								Faction
+							</ListSortButton>
+							<ListSortButton sortBy="game_size" className="basis-[30%] flex items-center justify-end gap-1">
+								Points
+							</ListSortButton>
+							<ListSortButton sortBy="formations" className="basis-[30%] flex items-center justify-end gap-1">
+								Formations
+							</ListSortButton>
+						</div>
 					</header>
 
 					<UserListTable />

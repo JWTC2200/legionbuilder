@@ -32,7 +32,9 @@ const UserListEntry = ({ list }: { list: BUILDER_LIST }) => {
 
 			<div className="flex border-b group-odd:border-stone-300 group-even:border-stone-400 last:border-0 py-1 group/profile">
 				<div className="basis-[40%] pl-4">{list.main_faction}</div>
-				<div className="basis-[30%] text-center">{armyTotalPoints} pts</div>
+				<div className="basis-[30%] text-end">
+					{armyTotalPoints}/{list.points} pts
+				</div>
 				<div className="basis-[30%] text-center">
 					{list.formations.length} formation
 					{list.formations.length === 1 ? null : "s"}

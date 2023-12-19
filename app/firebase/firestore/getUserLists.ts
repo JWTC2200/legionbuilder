@@ -1,36 +1,22 @@
-import { BUILDER_LIST } from "@/app/types";
-import { db } from "../config";
-import {
-  DocumentData,
-  collection,
-  getDocs,
-  query,
-  where,
-  doc,
-  serverTimestamp,
-  setDoc,
-} from "firebase/firestore";
+import { BUILDER_LIST, DB_ENTRY } from "@/app/types"
+import { db } from "../config"
+import { DocumentData, collection, getDocs, query, where, doc, serverTimestamp, setDoc } from "firebase/firestore"
 
 export const getUserLists = async (userId: string) => {
-  const q = query(collection(db, "lists"), where("owner", "==", userId));
-  const data: DocumentData[] = [];
-  const querySnapshot = await getDocs(q);
-  querySnapshot.forEach((doc) => data.push(JSON.parse(doc.data().list)));
-  return data;
-};
+	const q = query(collection(db, "lists"), where("owner", "==", userId))
+	const data: DB_ENTRY[] = []
+	const querySnapshot = await getDocs(q)
+	querySnapshot.forEach((doc) => data.push({ ...doc.data(), list: JSON.parse(doc.data().list) } as DB_ENTRY))
+	return data
+}
 
 export const checkUploadPermission = async (listData: BUILDER_LIST) => {
-  const q = query(
-    collection(db, "lists"),
-    where("owner", "==", listData.user_id)
-  );
-  const data: string[] = [];
-  const querySnapshot = await getDocs(q);
-  querySnapshot.forEach((doc) =>
-    data.push(JSON.parse(doc.data().list).list_id)
-  );
-  if (data.includes(listData.list_id) || data.length < 10) {
-    return true;
-  }
-  return false;
-};
+	const q = query(collection(db, "lists"), where("owner", "==", listData.user_id))
+	const data: string[] = []
+	const querySnapshot = await getDocs(q)
+	querySnapshot.forEach((doc) => data.push(JSON.parse(doc.data().list).list_id))
+	if (data.includes(listData.list_id) || data.length < 10) {
+		return true
+	}
+	return false
+}
