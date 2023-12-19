@@ -3,24 +3,19 @@ import { BUILDER_LIST } from "@/app/types"
 import { deleteList } from "@/app/firebase/firestore/deleteList"
 import { ImBin } from "@react-icons/all-files/im/ImBin"
 import useAuthState from "@/app/Auth"
-import { userListsState } from "../state"
 import { toast } from "react-toastify"
-import { loadLists } from "../utils"
 
 const ListDeleteButton = ({ list }: { list: BUILDER_LIST }) => {
 	const [confirmDelete, setConfirmDelete] = useState(false)
 	const userUid = useAuthState((state) => state.uid)
-	const { setUserLists } = userListsState()
 
 	const handleDelete = async () => {
 		console.log(userUid)
 		if (userUid === list.user_id) {
 			deleteList(list.list_id)
 			toast.warning("deleting list")
-			const newUserLists = await loadLists(userUid)
-			setUserLists(newUserLists)
 		} else {
-			toast.warning("Do not have permission to delete this list")
+			toast.warning("You do not have permission to delete this list")
 		}
 	}
 

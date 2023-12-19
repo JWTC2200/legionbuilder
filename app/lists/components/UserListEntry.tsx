@@ -12,7 +12,7 @@ import ListDuplicateButton from "./ListDuplicateButton"
 
 const UserListEntry = ({ list }: { list: BUILDER_LIST }) => {
 	const { setList } = listState()
-	const { mainFactionPoints, allyFactionPoints, armyTotalPoints } = listPointTotals(list)
+	const { armyTotalPoints } = listPointTotals(list)
 
 	return (
 		<div className="flex flex-col odd:bg-stone-100 even:bg-stone-300 text-stone-950 py-1 group">

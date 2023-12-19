@@ -1,7 +1,6 @@
 "use client"
 
 import React, { useEffect } from "react"
-import { loadLists } from "./utils"
 import { userListsState } from "./state"
 import NotSignedIn from "./components/NotSignedIn"
 import UserListTable from "./components/UserListTable"
@@ -9,18 +8,15 @@ import useAuthState from "../Auth"
 import CreateListButtons from "./components/CreateListButtons"
 import ListButtonInfo from "./components/ListButtonInfo"
 import ListSortButton from "./components/ListSortButton"
+import getUserLists from "../firebase/firestore/getUserLists"
 
 const page = () => {
 	const userUid = useAuthState((state) => state.uid)
 	const { userLists, setUserLists } = userListsState()
 
 	useEffect(() => {
-		const getLists = async () => {
-			const fetchedLists = await loadLists(userUid)
-			setUserLists(fetchedLists)
-		}
 		if (userUid) {
-			getLists()
+			getUserLists(setUserLists, userUid)
 		}
 	}, [userUid])
 

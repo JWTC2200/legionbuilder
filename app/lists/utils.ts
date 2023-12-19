@@ -1,11 +1,5 @@
-import { getUserLists } from "../firebase/firestore/getUserLists"
 import { BUILDER_LIST, BUILDER_FORMATION, BUILDER_DETACHMENT_UNIT, DB_ENTRY } from "../types"
 import { toast } from "react-toastify"
-
-export const loadLists = async (userUid: string) => {
-	const lists = (await getUserLists(userUid)) as DB_ENTRY[]
-	return lists
-}
 
 export const addToClipboard = (link: string) => {
 	navigator.clipboard.writeText(link)
