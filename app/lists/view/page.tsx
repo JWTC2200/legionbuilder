@@ -17,7 +17,6 @@ const page = () => {
 
 	return (
 		<div className="min-h-screen p-4 flex justify-center">
-			<ReferencePopup />
 			{list ? (
 				<div className="w-full max-w-screen-sm">
 					<BreadCrumbs>
