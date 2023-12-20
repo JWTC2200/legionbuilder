@@ -8,11 +8,13 @@ import FormationHtml from "./components/FormationHtml"
 import ViewLinkButton from "./components/ViewLinkButton"
 import { BreadCrumbs, Crumb } from "@/app/components/BreadCrumbs"
 import { useSearchParams } from "next/navigation"
+import useAuthState from "@/app/Auth"
 
 const page = () => {
 	const { list } = listState()
 	const searchParams = useSearchParams()
 	const listParams = searchParams.get("listId")
+	const userUid = useAuthState((state) => state.uid)
 
 	return (
 		<div className="min-h-screen p-4 flex justify-center">
@@ -23,7 +25,7 @@ const page = () => {
 						<Crumb href={`/lists/builder${listParams ? `?listId=${listParams}` : ""}`}>Builder</Crumb>
 						<Crumb href={`/lists/view${listParams ? `?listId=${listParams}` : ""}`}>View</Crumb>
 					</BreadCrumbs>
-					<ViewLinkButton className="flex gap-2 mb-4 hover:text-primary-400 active:text-primary-100 items-center">Save link to clipboard</ViewLinkButton>
+					{userUid ? <ViewLinkButton className="flex gap-2 mb-4 hover:text-primary-400 active:text-primary-100 items-center">Save link to clipboard</ViewLinkButton> : null}
 					<ListInfoHtml />
 					{list.formations.map((formation, index) => (
 						<FormationHtml key={"formation" + index} formation={formation} index={index} />
