@@ -4,6 +4,7 @@ import React, { ReactNode, useState } from "react"
 import Icons from "@/app/components/Icons"
 import { userListsState } from "../state"
 import { DB_ENTRY } from "@/app/types"
+import { listPointTotals } from "../utils"
 
 interface properties {
 	className: string
@@ -17,25 +18,47 @@ const ListSortButton = ({ children, className, sortBy }: properties) => {
 	const [reverse, setReverse] = useState<boolean>(false)
 
 	const sortUserLists = () => {
-		const sorted: DB_ENTRY[] = [...userLists].sort((a, b) => {
-			const fieldA = a[sortBy].toString().toLowerCase()
-			const fieldB = b[sortBy].toString().toLowerCase()
-
-			if (fieldA < fieldB) {
-				return -1
-			}
-			if (fieldA > fieldB) {
-				return 1
-			}
-			return 0
-		})
+		let sorted: DB_ENTRY[] = []
 		setReverse((prev) => !prev)
+		if (sortBy === "game_size") {
+			sorted = sortUsedPoints([...userLists]).sort((a, b) => {
+				return a.game_size - b.game_size
+			})
+		} else if (sortBy === "formations") {
+			sorted = [...userLists].sort((a, b) => {
+				return a[sortBy] - b[sortBy]
+			})
+		} else if (sortBy === "main_faction" || sortBy === "name") {
+			sorted = [...userLists].sort((a, b) => {
+				const stringA = a[sortBy].toLowerCase()
+				const stringB = b[sortBy].toLowerCase()
+
+				if (stringA < stringB) {
+					return -1
+				}
+				if (stringA > stringB) {
+					return 1
+				}
+				return 0
+			})
+		} else if (sortBy === "created") {
+			sorted = [...userLists].sort((a, b) => {
+				return Number(a[sortBy]) - Number(b[sortBy])
+			})
+		}
 
 		if (reverse) {
 			setUserLists(sorted.reverse())
 		} else {
 			setUserLists(sorted)
 		}
+	}
+
+	const sortUsedPoints = (array: DB_ENTRY[]) => {
+		const sorted: DB_ENTRY[] = array.sort((a, b) => {
+			return listPointTotals(a.list).armyTotalPoints - listPointTotals(b.list).armyTotalPoints
+		})
+		return sorted
 	}
 
 	return (
