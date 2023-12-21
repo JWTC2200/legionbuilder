@@ -7,7 +7,6 @@ import CreateListButtons from "./lists/components/CreateListButtons"
 
 export default function Home() {
 	return (
-		// <main className="flex flex-col items-start p-2 gap-2 max-w-screen-md text-brown-50 sm:text-lg">
 		<Main>
 			<CreateListButtons className="m-4 self-center flex flex-wrap gap-4 justify-center" />
 			<FrontpageUpdates />
@@ -33,6 +32,5 @@ export default function Home() {
 				<p>Any use of terms from Games Workshop are used without permission. No challenge to their status indended. All rights reserved to their respective owners.</p>
 			</footer>
 		</Main>
-		// </main>
 	)
 }
