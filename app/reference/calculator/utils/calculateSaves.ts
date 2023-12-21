@@ -27,7 +27,12 @@ export const calculateSaves = (weapon: WEAPON_PROFILES, target: UNIT_DATASHEET):
 				.filter((value) => value.value >= structureSave)
 				.map((dice) => dice.probability)
 				.reduce((acc, sum) => acc + sum, 0)
-			finalArmourSave = probability
+
+			if (targetType === UNIT_TYPE.structure && weaponTraits.includes("Graviton Pulse")) {
+				finalArmourSave = 1 - probability
+			} else {
+				finalArmourSave = probability
+			}
 		}
 	} else {
 		if (targetSave > 6) {

@@ -14,11 +14,14 @@ test("Calculate Shots", () => {
 	expect(calculateShotMultiplier({ ...testWeapon, range: "T", dice: 0 }, testTarget)).toBe(1)
 	expect(calculateShotMultiplier({ ...testWeapon, dice: 20 }, testTarget)).toBe(20)
 	expect(calculateShotMultiplier({ ...testWeapon, dice: "-" }, testTarget)).toBe(1)
+	expect(calculateShotMultiplier({ ...testWeapon, traits: [{ name: "Graviton Pulse" }, { name: "Demolisher" }] }, { ...testTarget, unit_type: { type: UNIT_TYPE.structure, value: 0 } })).toBe(3)
+	expect(calculateShotMultiplier({ ...testWeapon, dice: 3, traits: [{ name: "Graviton Pulse" }, { name: "Demolisher" }] }, { ...testTarget, unit_type: { type: UNIT_TYPE.structure, value: 0 } })).toBe(9)
 })
 
 test("Calculate To Hit", () => {
 	expect(calculateToHit(testWeapon, testTarget)).toBe(0.5)
 	expect(calculateToHit({ ...testWeapon, to_hit: null }, testTarget)).toBe(1)
+	expect(calculateToHit({ ...testWeapon, to_hit: 0 }, testTarget)).toBe(5 / 6)
 	expect(calculateToHit(testWeapon, { ...testTarget, special_rules: [{ name: "Flyer" }] })).toBe(1 / 6)
 	expect(calculateToHit({ ...testWeapon, traits: [{ name: "Skyfire" }] }, { ...testTarget, special_rules: [{ name: "Flyer" }] })).toBe(1 / 2)
 	expect(calculateToHit({ ...testWeapon, traits: [{ name: "Tracking" }] }, { ...testTarget, special_rules: [{ name: "Flyer" }] })).toBe(11 / 36)
@@ -30,6 +33,9 @@ test("Calculate To Hit", () => {
 	expect(calculateToHit({ ...testWeapon, to_hit: 7 }, testTarget)).toBe(1 / 6)
 	expect(calculateToHit({ ...testWeapon, to_hit: 1 }, testTarget)).toBe(5 / 6)
 	expect(calculateToHit(testWeapon, { ...testTarget, unit_type: { type: UNIT_TYPE.structure, value: 0 } })).toBe(2 / 3)
+	expect(calculateToHit({ ...testWeapon, traits: [{ name: "Graviton Pulse" }] }, testTarget)).toBe(1 / 3)
+	expect(calculateToHit({ ...testWeapon, traits: [{ name: "Graviton Pulse" }] }, { ...testTarget, special_rules: [{ name: "Flyer" }] })).toBe(1 / 6)
+	expect(calculateToHit({ ...testWeapon, traits: [{ name: "Graviton Pulse" }] }, { ...testTarget, unit_type: { type: UNIT_TYPE.structure, value: 0 } })).toBe(2 / 3)
 })
 
 test("Calculate AP", () => {

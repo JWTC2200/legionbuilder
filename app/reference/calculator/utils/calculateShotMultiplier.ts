@@ -1,4 +1,4 @@
-import { UNIT_DATASHEET, WEAPON_PROFILES } from "@/app/types"
+import { UNIT_DATASHEET, UNIT_TYPE, WEAPON_PROFILES } from "@/app/types"
 
 export const calculateShotMultiplier = (weapon: WEAPON_PROFILES, target: UNIT_DATASHEET) => {
 	const weaponTraits = weapon.traits.map((trait) => trait.name)
@@ -13,6 +13,9 @@ export const calculateShotMultiplier = (weapon: WEAPON_PROFILES, target: UNIT_DA
 
 	if (weapon.range === "T") {
 		multiplier = 1
+	}
+	if (weaponTraits.includes("Graviton Pulse") && targetType === UNIT_TYPE.structure) {
+		multiplier = multiplier * 3
 	}
 
 	return multiplier

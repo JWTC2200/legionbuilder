@@ -6,11 +6,23 @@ export const calculateToHit = (weapon: WEAPON_PROFILES, target: UNIT_DATASHEET):
 	const targetRules = target.special_rules.map((rule) => rule.name)
 	const targetType = target.unit_type.type
 
+	let finalToHit
+
 	if (typeof weapon.to_hit !== "number") {
-		return 1
+		finalToHit = 1
+	} else {
+		finalToHit = (7 - weapon.to_hit) / 6
 	}
 
-	let finalToHit = (7 - weapon.to_hit) / 6
+	if (weaponTraits.includes("Graviton Pulse") && targetType !== UNIT_TYPE.structure) {
+		if (targetRules.includes("Flyer") && !weaponTraits.includes("Skyfire")) {
+			finalToHit = 1 / 6
+		} else {
+			finalToHit = (7 - target.save) / 6
+		}
+	} else if (weaponTraits.includes("Graviton Pulse") && targetType === UNIT_TYPE.structure) {
+		return 2 / 3
+	}
 
 	if (targetRules.includes("Flyer") && !weaponTraits.includes("Skyfire")) {
 		finalToHit = 1 / 6

@@ -25,6 +25,7 @@ export const calculateDamage = (weapon: WEAPON_PROFILES, target: UNIT_DATASHEET)
 		return "0"
 	}
 
+	console.log(`saves: ${calculateSaves(weapon, target)}. shots: ${calculateShotMultiplier(weapon, target)}, tohit ${calculateToHit(weapon, target)}`)
 	let finalDamage = (1 - calculateSaves(weapon, target)) * calculateShotMultiplier(weapon, target) * calculateToHit(weapon, target)
 
 	if (weaponTraits.includes("Deflagrate")) {
