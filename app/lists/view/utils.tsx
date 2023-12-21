@@ -37,7 +37,7 @@ export const slotHTML = (slot: BUILDER_DETACHMENT_SLOT) => {
 	if (slot.selected_unit) {
 		return (
 			<li key={slot.slot_ref} className="relative">
-				- <strong>{slot.type}</strong>: <ReferencePopup detachmentId={slot.id}>{slot.selected_unit.name}</ReferencePopup> {`(${detachmentSize(slot.selected_unit)})`}
+				- <strong>{slot.type}</strong>: <ReferencePopup detachmentId={slot.selected_unit.id}>{slot.selected_unit.name}</ReferencePopup> {`(${detachmentSize(slot.selected_unit)})`}
 				{", "}
 				{detachmentPoints(slot.selected_unit)}pts{}
 				{upgradesHTML(slot.selected_unit.upgrade_options, slot.slot_ref)}
