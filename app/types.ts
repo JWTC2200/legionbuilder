@@ -4,9 +4,10 @@ export enum FACTION {
 	astartes = "Legiones Astartes",
 	solar = "Solar Auxillia",
 	strategic = "Strategic Assets",
+	none = "None",
 }
 
-export const factionTypeArray = Object.values(FACTION)
+export const factionTypeArray = Object.values(FACTION).filter((value) => value !== FACTION.none)
 
 export enum ALLEGIANCE {
 	loyalist = "Loyalist",
@@ -64,6 +65,7 @@ export enum UNIT_TYPE {
 	heavy = "Super-Heavy Vehicle",
 	knight = "Knight",
 	titan = "Titan",
+	structure = "Structure",
 }
 
 export enum SLOTSET {
