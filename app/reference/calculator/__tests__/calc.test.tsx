@@ -76,15 +76,15 @@ test("Calulate Saves", () => {
 
 test("Calculate Damage", () => {
 	expect(calculateDamage(testWeapon, testTarget)).toBe("0.33")
-	expect(calculateDamage({ ...testWeapon, range: "-", to_hit: null }, testTarget)).toBe("melee")
+	expect(calculateDamage({ ...testWeapon, range: "-", to_hit: null }, testTarget)).toBe("Melee")
 	expect(calculateDamage({ ...testWeapon, range: "T", dice: 0 }, testTarget)).toBe("0.33")
 	expect(calculateDamage({ ...testWeapon, traits: [{ name: "Light" }] }, { ...testTarget, unit_type: { type: UNIT_TYPE.knight, value: 4 } })).toBe("0")
 	expect(calculateDamage({ ...testWeapon, traits: [{ name: "Deflagrate" }] }, testTarget)).toBe("0.44")
 	expect(calculateDamage({ ...testWeapon, traits: [{ name: "Deflagrate" }, { name: "Light" }] }, { ...testTarget, unit_type: { type: UNIT_TYPE.cavalry, value: 1 } })).toBe("0.44")
 	expect(calculateDamage({ ...testWeapon, traits: [{ name: "Deflagrate" }, { name: "Light" }] }, { ...testTarget, unit_type: { type: UNIT_TYPE.knight, value: 4 } })).toBe("0")
 	expect(calculateDamage({ ...testWeapon, traits: [{ name: "Deflagrate" }, { name: "Light" }] }, { ...testTarget, unit_type: { type: UNIT_TYPE.walker, value: 1 }, special_rules: [{ name: "Armoured" }] })).toBe("0.27")
-	expect(calculateDamage(testWeapon, { ...testTarget, unit_type: { type: UNIT_TYPE.structure, value: 0 } })).toBe("0")
+	expect(calculateDamage(testWeapon, { ...testTarget, unit_type: { type: UNIT_TYPE.structure, value: 0 } })).toBe("Immune")
 	expect(calculateDamage({ ...testWeapon, ap: 6, traits: [{ name: "Bunker Buster" }] }, { ...testTarget, unit_type: { type: UNIT_TYPE.structure, value: 0 } })).toBe("0.67")
-	expect(calculateDamage({ ...testWeapon, traits: [{ name: "Heavy Beam" }] }, { ...testTarget, save: 2, unit_type: { type: UNIT_TYPE.structure, value: 0 } })).toBe("0")
+	expect(calculateDamage({ ...testWeapon, traits: [{ name: "Heavy Beam" }] }, { ...testTarget, save: 2, unit_type: { type: UNIT_TYPE.structure, value: 0 } })).toBe("0.00")
 	expect(calculateDamage({ ...testWeapon, traits: [{ name: "Demolisher" }] }, { ...testTarget, unit_type: { type: UNIT_TYPE.structure, value: 0 } })).toBe("0.11")
 })

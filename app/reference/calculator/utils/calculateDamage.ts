@@ -9,22 +9,21 @@ export const calculateDamage = (weapon: WEAPON_PROFILES, target: UNIT_DATASHEET)
 	const targetRules = target.special_rules.map((rule) => rule.name)
 	const targetType = target.unit_type.type
 
+	if (targetType === UNIT_TYPE.structure) {
+		const canDamage = weaponTraits.filter((trait) => demolisherTraits.includes(trait))
+		if (!canDamage.length) {
+			return "Immune"
+		}
+	}
+
 	if (weapon.range === "-" && !weapon.to_hit) {
-		console.log(targetType)
 		if (!weaponTraits.includes("Wrecker") || targetType !== UNIT_TYPE.structure) {
-			return "melee"
+			return "Melee"
 		}
 	}
 	if (weaponTraits.includes("Light") && armouredTypes.includes(targetType)) {
 		return "0"
 	}
-	if (targetType === UNIT_TYPE.structure) {
-		const canDamage = weaponTraits.filter((trait) => demolisherTraits.includes(trait))
-		if (!canDamage.length) {
-			return "0"
-		}
-	}
-	// console.log(`tohit: ${calculateToHit()}, saves: ${calculateSaves()}, shots: ${calculateShotMultiplier()}`)
 
 	let finalDamage = (1 - calculateSaves(weapon, target)) * calculateShotMultiplier(weapon, target) * calculateToHit(weapon, target)
 
