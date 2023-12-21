@@ -20,7 +20,7 @@ test("Calculate Shots", () => {
 
 test("Calculate To Hit", () => {
 	expect(calculateToHit(testWeapon, testTarget)).toBe(0.5)
-	expect(calculateToHit({ ...testWeapon, to_hit: null }, testTarget)).toBe(1)
+	expect(calculateToHit({ ...testWeapon, to_hit: null }, testTarget)).toBe(5 / 6)
 	expect(calculateToHit({ ...testWeapon, to_hit: 0 }, testTarget)).toBe(5 / 6)
 	expect(calculateToHit(testWeapon, { ...testTarget, special_rules: [{ name: "Flyer" }] })).toBe(1 / 6)
 	expect(calculateToHit({ ...testWeapon, traits: [{ name: "Skyfire" }] }, { ...testTarget, special_rules: [{ name: "Flyer" }] })).toBe(1 / 2)
