@@ -4,7 +4,6 @@ import React from "react"
 import { addToClipboard } from "../../utils"
 import { FaCopy } from "@react-icons/all-files/fa/FaCopy"
 import { listState } from "../../builder/state"
-import { useSearchParams } from "next/navigation"
 
 interface properties {
 	className?: string

@@ -6,7 +6,7 @@ interface update {
 export const updateData: update[] = [
 	{
 		date: "21/12/23",
-		updates: ["Bug fixes", "Calculator now calculates damage to structures."],
+		updates: ["Bug fixes", "Calculator now calculates damage to structures.", "Still needs some work for Graviton Pulse weapons"],
 	},
 	{
 		date: "19/12/23",

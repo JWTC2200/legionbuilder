@@ -1,7 +1,6 @@
 "use client"
 
-import React from "react"
-import Main from "@/app/components/Main"
+import React, { useState, useEffect } from "react"
 import { listState } from "../builder/state"
 import ListInfoHtml from "./components/ListInfoHtml"
 import FormationHtml from "./components/FormationHtml"
@@ -9,12 +8,26 @@ import ViewLinkButton from "./components/ViewLinkButton"
 import { BreadCrumbs, Crumb } from "@/app/components/BreadCrumbs"
 import { useSearchParams } from "next/navigation"
 import useAuthState from "@/app/Auth"
+import { getList } from "@/app/firebase/firestore/getList"
 
 const page = () => {
+	const [linkExists, setLinkExists] = useState(false)
 	const { list } = listState()
 	const searchParams = useSearchParams()
 	const listParams = searchParams.get("listId")
 	const userUid = useAuthState((state) => state.uid)
+
+	useEffect(() => {
+		const checkList = async () => {
+			const exists = await getList(list.list_id)
+			if (exists) {
+				setLinkExists(true)
+			}
+		}
+		if (userUid) {
+			checkList()
+		}
+	}, [userUid])
 
 	return (
 		<div className="min-h-screen p-4 flex justify-center">
@@ -25,7 +38,7 @@ const page = () => {
 						<Crumb href={`/lists/builder${listParams ? `?listId=${listParams}` : ""}`}>Builder</Crumb>
 						<Crumb href={`/lists/view${listParams ? `?listId=${listParams}` : ""}`}>View</Crumb>
 					</BreadCrumbs>
-					{userUid ? <ViewLinkButton className="flex gap-2 mb-4 hover:text-primary-400 active:text-primary-100 items-center">Save link to clipboard</ViewLinkButton> : null}
+					{linkExists && userUid ? <ViewLinkButton className="flex gap-2 mb-4 hover:text-primary-400 active:text-primary-100 items-center">Save link to clipboard</ViewLinkButton> : null}
 					<ListInfoHtml />
 					{list.formations.map((formation, index) => (
 						<FormationHtml key={"formation" + index} formation={formation} index={index} />
