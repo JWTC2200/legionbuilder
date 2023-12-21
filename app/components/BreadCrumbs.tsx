@@ -9,13 +9,16 @@ import { clickOutside } from "@/app/utils/events"
 export function BreadCrumbs({ children }: { children: ReactNode }) {
 	return (
 		<header className="bg-secondary-900 p-4 py-2 text-lg font-graduate">
-			{Children.map(children, (child, key) =>
-				isValidElement(child) ? (
+			{Children.map(
+				children,
+				(child, key) => (
+					// isValidElement(child) ? (
 					<span className="group" key={key}>
 						{child}
 						<span className="group-last:hidden px-2 text-secondary-500">&gt;</span>
 					</span>
-				) : null
+				)
+				// ) : null
 			)}
 		</header>
 	)
