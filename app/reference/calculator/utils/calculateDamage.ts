@@ -10,7 +10,10 @@ export const calculateDamage = (weapon: WEAPON_PROFILES, target: UNIT_DATASHEET)
 	const targetType = target.unit_type.type
 
 	if (weapon.range === "-" && !weapon.to_hit) {
-		return "melee"
+		console.log(targetType)
+		if (!weaponTraits.includes("Wrecker") || targetType !== UNIT_TYPE.structure) {
+			return "melee"
+		}
 	}
 	if (weaponTraits.includes("Light") && armouredTypes.includes(targetType)) {
 		return "0"
