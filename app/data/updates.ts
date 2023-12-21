@@ -6,7 +6,7 @@ interface update {
 export const updateData: update[] = [
 	{
 		date: "21/12/23",
-		updates: ["Bug fixes", "Calculator now calculates damage to structures."],
+		updates: ["Bug fixes", "Calculator now calculates damage to structures", "Added detachment reference popups for the builder and view pages", "In the builder its a small 'i' next to detachment size", "In view click on a detachment name", "Hope everyone has a nice Christmas! "],
 	},
 	{
 		date: "19/12/23",
