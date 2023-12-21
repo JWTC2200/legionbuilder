@@ -1,14 +1,12 @@
 "use client"
 
 import React from "react"
-import Main from "@/app/components/Main"
 import { listState } from "../builder/state"
 import ListInfoHtml from "./components/ListInfoHtml"
 import FormationHtml from "./components/FormationHtml"
 import ViewLinkButton from "./components/ViewLinkButton"
 import { BreadCrumbs, Crumb } from "@/app/components/BreadCrumbs"
 import { useSearchParams } from "next/navigation"
-import ReferencePopup from "@/app/components/ReferencePopup"
 
 const page = () => {
 	const { list } = listState()
