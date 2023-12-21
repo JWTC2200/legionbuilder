@@ -1,9 +1,9 @@
-import calculateAP from "../reference/calculator/utils/calculateAP"
-import calculateShotMultiplier from "../reference/calculator/utils/calculateShotMultiplier"
-import calculateToHit from "../reference/calculator/utils/calculateToHit"
-import calculateSaves from "../reference/calculator/utils/calculateSaves"
-import calculateDamage from "../reference/calculator/utils/calculateDamage"
-import { ALLEGIANCE, FACTION, UNIT_DATASHEET, UNIT_TYPE, WEAPON_PROFILES } from "../types"
+import calculateAP from "../utils/calculateAP"
+import calculateShotMultiplier from "../utils/calculateShotMultiplier"
+import calculateToHit from "../utils/calculateToHit"
+import calculateSaves from "../utils/calculateSaves"
+import calculateDamage from "../utils/calculateDamage"
+import { ALLEGIANCE, FACTION, UNIT_DATASHEET, UNIT_TYPE, WEAPON_PROFILES } from "../../../types"
 
 const testWeapon: WEAPON_PROFILES = { range: "1", dice: 1, to_hit: 4, ap: 0, traits: [] }
 
@@ -27,6 +27,9 @@ test("Calculate To Hit", () => {
 	expect(calculateToHit({ ...testWeapon, traits: [{ name: "Rapid Fire" }] }, testTarget)).toBe(4 / 6)
 	expect(calculateToHit({ ...testWeapon, to_hit: 2, traits: [{ name: "Rapid Fire" }] }, testTarget)).toBe(1)
 	expect(calculateToHit({ ...testWeapon, to_hit: 2, traits: [{ name: "Rapid Fire" }, { name: "Accurate" }] }, testTarget)).toBe(41 / 36)
+	expect(calculateToHit({ ...testWeapon, to_hit: 7 }, testTarget)).toBe(1 / 6)
+	expect(calculateToHit({ ...testWeapon, to_hit: 1 }, testTarget)).toBe(5 / 6)
+	expect(calculateToHit(testWeapon, { ...testTarget, unit_type: { type: UNIT_TYPE.structure, value: 0 } })).toBe(2 / 3)
 })
 
 test("Calculate AP", () => {
@@ -67,6 +70,8 @@ test("Calulate Saves", () => {
 	expect(calculateSaves({ ...testWeapon, traits: [{ name: "Shred" }] }, testTarget)).toBeCloseTo(1 / 9, 5)
 	expect(calculateSaves({ ...testWeapon, traits: [{ name: "Neutron-flux" }] }, { ...testTarget, special_rules: [{ name: "Cybernetica Cortex" }] })).toBeCloseTo(1 / 9, 5)
 	expect(calculateSaves({ ...testWeapon, ap: 5, traits: [{ name: "Blast" }] }, { ...testTarget, special_rules: [{ name: "Explorator Adaptation" }] })).toBeCloseTo(1 / 6, 5)
+	expect(calculateSaves({ ...testWeapon, traits: [{ name: "Demolisher" }] }, { ...testTarget, unit_type: { type: UNIT_TYPE.structure, value: 0 } })).toBeCloseTo(5 / 6, 5)
+	expect(calculateSaves({ ...testWeapon, traits: [{ name: "Demolisher" }] }, { ...testTarget, save: 2, unit_type: { type: UNIT_TYPE.structure, value: 0 } })).toBe(1)
 })
 
 test("Calculate Damage", () => {
@@ -78,4 +83,8 @@ test("Calculate Damage", () => {
 	expect(calculateDamage({ ...testWeapon, traits: [{ name: "Deflagrate" }, { name: "Light" }] }, { ...testTarget, unit_type: { type: UNIT_TYPE.cavalry, value: 1 } })).toBe("0.44")
 	expect(calculateDamage({ ...testWeapon, traits: [{ name: "Deflagrate" }, { name: "Light" }] }, { ...testTarget, unit_type: { type: UNIT_TYPE.knight, value: 4 } })).toBe("0")
 	expect(calculateDamage({ ...testWeapon, traits: [{ name: "Deflagrate" }, { name: "Light" }] }, { ...testTarget, unit_type: { type: UNIT_TYPE.walker, value: 1 }, special_rules: [{ name: "Armoured" }] })).toBe("0.27")
+	expect(calculateDamage(testWeapon, { ...testTarget, unit_type: { type: UNIT_TYPE.structure, value: 0 } })).toBe("0")
+	expect(calculateDamage({ ...testWeapon, ap: 6, traits: [{ name: "Bunker Buster" }] }, { ...testTarget, unit_type: { type: UNIT_TYPE.structure, value: 0 } })).toBe("0.67")
+	expect(calculateDamage({ ...testWeapon, traits: [{ name: "Heavy Beam" }] }, { ...testTarget, save: 2, unit_type: { type: UNIT_TYPE.structure, value: 0 } })).toBe("0")
+	expect(calculateDamage({ ...testWeapon, traits: [{ name: "Demolisher" }] }, { ...testTarget, unit_type: { type: UNIT_TYPE.structure, value: 0 } })).toBe("0.11")
 })

@@ -3,7 +3,7 @@ interface diceOdds {
 	probability: number
 }
 
-export const twoDiceOdos: diceOdds[] = [
+export const twoDiceOdds: diceOdds[] = [
 	{ value: 2, probability: 1 / 36 },
 	{ value: 3, probability: 1 / 18 },
 	{ value: 4, probability: 1 / 12 },

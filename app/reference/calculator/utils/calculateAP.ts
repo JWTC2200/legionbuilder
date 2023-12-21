@@ -1,4 +1,4 @@
-import { armouredTypes, rerollFail, rerollSuccess } from "../utils"
+import { armouredTypes } from "../utils"
 import { UNIT_DATASHEET, WEAPON_PROFILES } from "@/app/types"
 import { UNIT_TYPE } from "@/app/types"
 

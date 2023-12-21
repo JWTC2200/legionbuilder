@@ -1,7 +1,9 @@
 import { UNIT_TYPE } from "@/app/types"
-import { armouredTypes, rerollFail, rerollSuccess } from "../utils"
+import { rerollFail, rerollSuccess } from "./rerolls"
+import { armouredTypes } from "../utils"
 import { UNIT_DATASHEET, WEAPON_PROFILES } from "@/app/types"
 import calculateAP from "./calculateAP"
+import { twoDiceOdds } from "./diceOdds"
 
 export const calculateSaves = (weapon: WEAPON_PROFILES, target: UNIT_DATASHEET): number => {
 	const weaponTraits = weapon.traits.map((trait) => trait.name)
@@ -13,12 +15,28 @@ export const calculateSaves = (weapon: WEAPON_PROFILES, target: UNIT_DATASHEET):
 	const targetSave = target.save + finalAP
 	let finalArmourSave = 1
 
-	if (targetSave > 6) {
-		finalArmourSave = 0
-	} else if (targetSave <= 1) {
-		finalArmourSave = 1
+	if (targetType === UNIT_TYPE.structure) {
+		const structureSave = weaponTraits.includes("Bunker Buster") ? targetSave + finalAP : targetSave
+		if (structureSave > 12) {
+			finalArmourSave = 0
+		} else if (structureSave <= 2) {
+			console.log("FAU")
+			finalArmourSave = 1
+		} else {
+			const probability = twoDiceOdds
+				.filter((value) => value.value >= structureSave)
+				.map((dice) => dice.probability)
+				.reduce((acc, sum) => acc + sum, 0)
+			finalArmourSave = probability
+		}
 	} else {
-		finalArmourSave = (7 - targetSave) / 6
+		if (targetSave > 6) {
+			finalArmourSave = 0
+		} else if (targetSave <= 1) {
+			finalArmourSave = 1
+		} else {
+			finalArmourSave = (7 - targetSave) / 6
+		}
 	}
 
 	if (weaponTraits.includes("Armourbane") && armouredTypes.includes(targetType)) {

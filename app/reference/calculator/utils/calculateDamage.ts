@@ -1,5 +1,5 @@
-import { UNIT_DATASHEET, WEAPON_PROFILES } from "@/app/types"
-import { armouredTypes } from "../utils"
+import { UNIT_DATASHEET, UNIT_TYPE, WEAPON_PROFILES } from "@/app/types"
+import { armouredTypes, demolisherTraits } from "../utils"
 import calculateShotMultiplier from "./calculateShotMultiplier"
 import calculateToHit from "./calculateToHit"
 import calculateSaves from "./calculateSaves"
@@ -14,6 +14,12 @@ export const calculateDamage = (weapon: WEAPON_PROFILES, target: UNIT_DATASHEET)
 	}
 	if (weaponTraits.includes("Light") && armouredTypes.includes(targetType)) {
 		return "0"
+	}
+	if (targetType === UNIT_TYPE.structure) {
+		const canDamage = weaponTraits.filter((trait) => demolisherTraits.includes(trait))
+		if (!canDamage.length) {
+			return "0"
+		}
 	}
 	// console.log(`tohit: ${calculateToHit()}, saves: ${calculateSaves()}, shots: ${calculateShotMultiplier()}`)
 
