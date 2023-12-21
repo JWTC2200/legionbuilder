@@ -5,6 +5,10 @@ interface update {
 
 export const updateData: update[] = [
 	{
+		date: "21/12/23",
+		updates: ["Bug fixes", "Calculator now calculates damage to structures."],
+	},
+	{
 		date: "19/12/23",
 		updates: ["Added sorting for user lists. Default sorting is created/last editted"],
 	},

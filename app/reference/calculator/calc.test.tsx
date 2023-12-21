@@ -1,9 +1,9 @@
-import calculateAP from "../utils/calculateAP"
-import calculateShotMultiplier from "../utils/calculateShotMultiplier"
-import calculateToHit from "../utils/calculateToHit"
-import calculateSaves from "../utils/calculateSaves"
-import calculateDamage from "../utils/calculateDamage"
-import { ALLEGIANCE, FACTION, UNIT_DATASHEET, UNIT_TYPE, WEAPON_PROFILES } from "../../../types"
+import calculateAP from "./utils/calculateAP"
+import calculateShotMultiplier from "./utils/calculateShotMultiplier"
+import calculateToHit from "./utils/calculateToHit"
+import calculateSaves from "./utils/calculateSaves"
+import calculateDamage from "./utils/calculateDamage"
+import { ALLEGIANCE, FACTION, UNIT_DATASHEET, UNIT_TYPE, WEAPON_PROFILES } from "../../types"
 
 const testWeapon: WEAPON_PROFILES = { range: "1", dice: 1, to_hit: 4, ap: 0, traits: [] }
 
@@ -87,4 +87,5 @@ test("Calculate Damage", () => {
 	expect(calculateDamage({ ...testWeapon, ap: 6, traits: [{ name: "Bunker Buster" }] }, { ...testTarget, unit_type: { type: UNIT_TYPE.structure, value: 0 } })).toBe("0.67")
 	expect(calculateDamage({ ...testWeapon, traits: [{ name: "Heavy Beam" }] }, { ...testTarget, save: 2, unit_type: { type: UNIT_TYPE.structure, value: 0 } })).toBe("0.00")
 	expect(calculateDamage({ ...testWeapon, traits: [{ name: "Demolisher" }] }, { ...testTarget, unit_type: { type: UNIT_TYPE.structure, value: 0 } })).toBe("0.11")
+	expect(calculateDamage({ ...testWeapon, dice: 3, traits: [{ name: "Demolisher" }] }, { ...testTarget, unit_type: { type: UNIT_TYPE.structure, value: 0 } })).toBe("0.33")
 })
