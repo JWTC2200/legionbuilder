@@ -50,7 +50,7 @@ export const slotHTML = (slot: BUILDER_DETACHMENT_SLOT) => {
 export const upgradesHTML = (upgradeArray: BUILDER_DETACHMENT_UNIT_UPGRADES[], slot_ref: string) => {
 	const upgrades = upgradeArray.filter((upgrade) => upgrade.number).map((upgr) => <li key={slot_ref + upgr.name}>{upgr.text ? upgr.text : `${upgr.number} ${upgr.name}`}</li>)
 	if (upgrades.length) {
-		return <ul className="text-xs">{upgrades}</ul>
+		return <ul className="text-xs pl-4">{upgrades}</ul>
 	}
 	return null
 }
