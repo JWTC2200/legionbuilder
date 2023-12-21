@@ -3,7 +3,7 @@ import { calculatorWeapons } from "../state"
 import { unitData } from "@/app/data/unit_data"
 import { weapons } from "@/app/data/weapon_data"
 import { sortedByNameKey } from "@/app/utils/sorting"
-import { WEAPON_DATASHEET } from "@/app/types"
+import { UNIT_DATASHEET, UNIT_TYPE, WEAPON_DATASHEET } from "@/app/types"
 import { FaExchangeAlt } from "@react-icons/all-files/fa/FaExchangeAlt"
 
 const AttackingUnit = () => {
@@ -38,6 +38,19 @@ const AttackingUnit = () => {
 		setUnitOrWeapon((prev) => !prev)
 	}
 
+	const optionsArray = (): UNIT_DATASHEET[] | WEAPON_DATASHEET[] => {
+		if (unitOrWeapon) {
+			const sortedUnits = sortedByNameKey(unitData) as UNIT_DATASHEET[]
+			return sortedUnits.filter((unit) => unit.weapons.length)
+		} else {
+			return sortedByNameKey(weapons) as WEAPON_DATASHEET[]
+		}
+	}
+
+	const filterOptions = (array: UNIT_DATASHEET[] | WEAPON_DATASHEET[]) => {
+		return array.filter((entry) => entry.name.toLowerCase().includes(attackerFilter.toLowerCase().trim()))
+	}
+
 	useEffect(() => {
 		if (selectedAttacker) {
 			handleAddUnitWeapons(selectedAttacker)
@@ -57,13 +70,11 @@ const AttackingUnit = () => {
 			<input type="text" name="attacker" id="attacker" placeholder={`Search ${unitOrWeapon ? " units" : "weapons"}`} className="bg-dataslate w-full p-4 font-graduate placeholder:text-primary-800 focus:outline-none" value={attackerFilter} onChange={(e) => setAttackerFilter(e.target.value)} />
 			<select className="w-full bg-dataslate p-4 font-graduate placeholder:text-primary-950 focus:outline-none" value={selectedAttacker} onChange={(e) => setSelectedAttacker(e.target.value)}>
 				<option value={""}>Select {unitOrWeapon ? "attacking unit" : "weapon"}</option>
-				{(unitOrWeapon ? sortedByNameKey(unitData) : sortedByNameKey(weapons))
-					.filter((entry) => entry.name.toLowerCase().includes(attackerFilter.toLowerCase().trim()))
-					.map((filteredEntries) => (
-						<option key={"unit" + filteredEntries.id} value={filteredEntries.id} className="text-black">
-							{filteredEntries.name}
-						</option>
-					))}
+				{filterOptions(optionsArray()).map((filteredEntries) => (
+					<option key={"unit" + filteredEntries.id} value={filteredEntries.id} className="text-black">
+						{filteredEntries.name}
+					</option>
+				))}
 			</select>
 		</section>
 	)
