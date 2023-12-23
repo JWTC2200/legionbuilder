@@ -20,7 +20,6 @@ export const calculateSaves = (weapon: WEAPON_PROFILES, target: UNIT_DATASHEET):
 		if (structureSave > 12) {
 			finalArmourSave = 0
 		} else if (structureSave <= 2) {
-			console.log("FAU")
 			finalArmourSave = 1
 		} else {
 			const probability = twoDiceOdds
