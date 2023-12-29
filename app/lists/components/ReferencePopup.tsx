@@ -17,7 +17,7 @@ const ReferencePopup = ({ detachmentId, children }: properties) => {
 	const unit = detachmentData.find((detachment) => detachment.id === detachmentId)!
 
 	return (
-		<button className="hover:text-tertiary-800 active:text-tertiary-800 cursor-help" onClick={() => setHidden((prev) => !prev)}>
+		<button className="hover:text-tertiary-800 active:text-tertiary-800 cursor-help select-text" onClick={() => setHidden((prev) => !prev)}>
 			{children ? children : <Icon className="" />}
 			{unit && !hidden ? (
 				<div className="absolute max-w-xl top-0 left-0 pb-24 z-50">
