@@ -1647,7 +1647,7 @@ export const detachmentData: DETACHMENT[] = [
 						text: "Reaver turbo-laser destructor",
 					},
 					{ number: 5, cost: 0, size: 0, text: "Reaver volkite eradicator" },
-					{ number: 6, cost: 0, size: 0, text: "Reaver graviton ceradicator" },
+					{ number: 6, cost: 0, size: 0, text: "Reaver graviton eradicator" },
 					{
 						number: 7,
 						cost: 0,
