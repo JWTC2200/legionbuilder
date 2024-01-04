@@ -4,6 +4,7 @@ interface update {
 }
 
 export const updateData: update[] = [
+	{ date: "04/01/24", updates: ["Increased the amount of Rhinos that can be selected for a Demi-company transports.", "Older lists will need to remake the formation to see the changes."] },
 	{
 		date: "21/12/23",
 		updates: ["Bug fixes", "Calculator now calculates damage to structures", "Added detachment reference popups for the builder and view pages", "In the builder its a small 'i' next to detachment size", "In view click on a detachment name", "Hope everyone has a nice Christmas! "],
