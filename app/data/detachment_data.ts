@@ -1279,7 +1279,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 			{
-				name: "Marauder Pathfider",
+				name: "Marauder Pathfinder",
 				options: [
 					{ number: 1, cost: 0, size: 0 },
 					{ number: 2, cost: 0, size: 0 },

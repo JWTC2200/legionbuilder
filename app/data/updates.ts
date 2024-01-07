@@ -4,6 +4,7 @@ interface update {
 }
 
 export const updateData: update[] = [
+	{ date: "07/01/24", updates: ["Typo fixes"] },
 	{ date: "04/01/24", updates: ["Increased the amount of Rhinos that can be selected for a Demi-company transports.", "Older lists will need to remake the formation to see the changes."] },
 	{
 		date: "21/12/23",
