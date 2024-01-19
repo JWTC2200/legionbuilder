@@ -9,7 +9,7 @@ interface properties {
 	slotSet: SLOTSET
 }
 
-const DetachmentSelect = ({ detachmentSlot, formationSubfaction, slotSet }: properties) => {
+const Select = ({ detachmentSlot, formationSubfaction, slotSet }: properties) => {
 	const { list, setList } = listState()
 
 	const detachmentSelectedHighlight = detachmentSlot.selected_unit ? " text-tertiary-800 font-semibold" : ""
@@ -33,7 +33,9 @@ const DetachmentSelect = ({ detachmentSlot, formationSubfaction, slotSet }: prop
 		})
 	}
 
-	const detachmentOptions: DETACHMENT[] = detachmentSlot.restricted ? detachmentSlot.options.map((option) => detachmentData.filter((detachment) => detachment.id === option)[0]) : detachmentData.filter((detachment) => detachment.detachment_type === detachmentSlot.type && detachment.faction === detachmentSlot.faction && !detachment.unique).concat(detachmentData.filter((detach) => detachmentSlot.options?.includes(detach.id)))
+	const detachmentOptions: DETACHMENT[] = detachmentSlot.restricted
+		? detachmentSlot.options.map((option) => detachmentData.filter((detachment) => detachment.id === option)[0])
+		: detachmentData.filter((detachment) => detachment.detachment_type === detachmentSlot.type && detachment.faction === detachmentSlot.faction && !detachment.unique).concat(detachmentData.filter((detach) => detachmentSlot.options?.includes(detach.id)))
 
 	const selectOptions = filterBySubfaction(detachmentOptions).map((option, index) => (
 		<option key={detachmentSlot.slot_ref + "unitOption" + index} value={option.id} className="text-black">
@@ -98,7 +100,12 @@ const DetachmentSelect = ({ detachmentSlot, formationSubfaction, slotSet }: prop
 		}
 	}
 	return (
-		<select id={`detachment_selector_${detachmentSlot.slot_ref}`} name={`detachment_selector_${detachmentSlot.slot_ref}`} value={detachmentSlot.selected_unit ? detachmentSlot.selected_unit.id : 0} onChange={(e) => changeDetachment(Number(e.target.value))} className={"w-full text-center my-1 py-1 px-2 border border-primary-950 font-graduate hover:text-tertiary-700 active:text-tertiary-700" + detachmentSelectedHighlight}>
+		<select
+			id={`detachment_selector_${detachmentSlot.slot_ref}`}
+			name={`detachment_selector_${detachmentSlot.slot_ref}`}
+			value={detachmentSlot.selected_unit ? detachmentSlot.selected_unit.id : 0}
+			onChange={(e) => changeDetachment(Number(e.target.value))}
+			className={"w-full text-center my-1 py-1 px-2 border border-primary-950 font-graduate hover:text-tertiary-700 active:text-tertiary-700" + detachmentSelectedHighlight}>
 			<option value={"0"} className="text-black">
 				Select Detachment
 			</option>
@@ -107,4 +114,4 @@ const DetachmentSelect = ({ detachmentSlot, formationSubfaction, slotSet }: prop
 	)
 }
 
-export default DetachmentSelect
+export default Select

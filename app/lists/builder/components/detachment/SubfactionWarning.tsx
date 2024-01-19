@@ -6,7 +6,7 @@ interface properties {
 	formationSubfaction?: SUBFACTION_TYPE
 }
 
-const DetachmentSubfactionWarning = ({ selectedUnit, formationSubfaction }: properties) => {
+const SubfactionWarning = ({ selectedUnit, formationSubfaction }: properties) => {
 	return (
 		<>
 			{selectedUnit.subfaction && formationSubfaction ? (
@@ -20,4 +20,4 @@ const DetachmentSubfactionWarning = ({ selectedUnit, formationSubfaction }: prop
 	)
 }
 
-export default DetachmentSubfactionWarning
+export default SubfactionWarning
