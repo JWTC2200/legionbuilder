@@ -1,11 +1,11 @@
 "use client"
 
 import React from "react"
-import { detachmentSize, detachmentPoints } from "../../utils"
+import { detachmentSize, detachmentPoints } from "../../../utils"
 import { BUILDER_DETACHMENT_UNIT } from "@/app/types"
 import ReferencePopup from "@/app/lists/components/ReferencePopup"
 
-const ListBuilderDetachmentDetails = ({ selectedUnit }: { selectedUnit: BUILDER_DETACHMENT_UNIT }) => {
+const DetachmentDetails = ({ selectedUnit }: { selectedUnit: BUILDER_DETACHMENT_UNIT }) => {
 	return (
 		<div className="w-full flex flex-wrap gap-2 sm:gap-4 justify-center items-center relative">
 			<ReferencePopup detachmentId={selectedUnit.id} />
@@ -18,4 +18,4 @@ const ListBuilderDetachmentDetails = ({ selectedUnit }: { selectedUnit: BUILDER_
 	)
 }
 
-export default ListBuilderDetachmentDetails
+export default DetachmentDetails

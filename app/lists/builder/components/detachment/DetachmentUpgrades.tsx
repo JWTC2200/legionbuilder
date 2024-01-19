@@ -1,9 +1,9 @@
 import React from "react"
 import { BUILDER_DETACHMENT_UNIT_UPGRADES, SLOTSET, BUILDER_DETACHMENT_UNIT, BUILDER_DETACHMENT_SLOT } from "@/app/types"
 import { detachmentData } from "@/app/data/detachment_data"
-import { listState } from "../state"
+import { listState } from "../../state"
 
-const ListBuilderDetachmentUpgrades = ({ unitId, upgradeOption, slotSet, refId, slotRef }: { unitId: number; upgradeOption: BUILDER_DETACHMENT_UNIT_UPGRADES; slotSet: SLOTSET; refId: string; slotRef: string }) => {
+const DetachmentUpgrades = ({ unitId, upgradeOption, slotSet, refId, slotRef }: { unitId: number; upgradeOption: BUILDER_DETACHMENT_UNIT_UPGRADES; slotSet: SLOTSET; refId: string; slotRef: string }) => {
 	const detachmentUpgrades = detachmentData.find((detachment) => detachment.id === unitId)
 	if (!detachmentUpgrades) {
 		return null
@@ -114,4 +114,4 @@ const ListBuilderDetachmentUpgrades = ({ unitId, upgradeOption, slotSet, refId, 
 	)
 }
 
-export default ListBuilderDetachmentUpgrades
+export default DetachmentUpgrades

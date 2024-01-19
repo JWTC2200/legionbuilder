@@ -1,11 +1,11 @@
 import { BUILDER_FORMATION } from "@/app/types"
 import React from "react"
 import { formationData } from "@/app/data/formation_data"
-import { formationPoints } from "../../utils"
-import { setBuilderDetachment } from "../utils"
-import { listState } from "../state"
+import { formationPoints } from "../../../utils"
+import { setBuilderDetachment } from "../../utils"
+import { listState } from "../../state"
 
-const ListBuilderFormationSelector = ({ formation }: { formation: BUILDER_FORMATION }) => {
+export const Selector = ({ formation }: { formation: BUILDER_FORMATION }) => {
 	const { list, setList } = listState()
 	const chooseFormation = (id: number) => {
 		const selectedFormation = id
@@ -56,4 +56,4 @@ const ListBuilderFormationSelector = ({ formation }: { formation: BUILDER_FORMAT
 	)
 }
 
-export default ListBuilderFormationSelector
+export default Selector

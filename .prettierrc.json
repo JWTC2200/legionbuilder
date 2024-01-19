@@ -1,7 +1,7 @@
 {
 	"bracketSameLine": true,
 	"bracketSpacing": true,
-	"printWidth": 500,
+	"printWidth": 300,
 	"semi": false,
 	"singleQuote": false,
 	"trailingComma": "es5",

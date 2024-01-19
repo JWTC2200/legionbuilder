@@ -1,11 +1,11 @@
 import React from "react"
 import { BUILDER_FORMATION, FACTION, SUBFACTION_TYPE, subfactionTypeArray } from "@/app/types"
-import { listState } from "../state"
+import { listState } from "../../state"
 
 interface properties {
 	formation: BUILDER_FORMATION
 }
-export const ListBuilderFormationSubfactionSelector = ({ formation }: properties) => {
+export const SubfactionSelector = ({ formation }: properties) => {
 	const { list, setList } = listState()
 
 	const detachmentSelectedHighlight = formation.subfaction ? " text-tertiary-800 font-semibold" : ""
@@ -47,3 +47,5 @@ export const ListBuilderFormationSubfactionSelector = ({ formation }: properties
 		</select>
 	)
 }
+
+export default SubfactionSelector

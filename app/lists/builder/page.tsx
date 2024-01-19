@@ -1,8 +1,8 @@
 "use client"
 
 import React from "react"
-import BuilderWidgetBottom from "./components/BuilderWidgetBottom"
-import BuilderWidgetSide from "./components/BuilderWidgetSide"
+import WidgetBottom from "./components/WidgetBottom"
+import WidgetSide from "./components/WidgetSide"
 import ListBuilder from "./components/ListBuilder"
 import { BreadCrumbs, Crumb } from "@/app/components/BreadCrumbs"
 import { useSearchParams } from "next/navigation"
@@ -18,8 +18,8 @@ const page = () => {
 				<Crumb href={`/lists/builder${listParams ? `?listId=${listParams}` : ""}`}>Builder</Crumb>
 			</BreadCrumbs>
 			<ListBuilder />
-			<BuilderWidgetBottom />
-			<BuilderWidgetSide />
+			<WidgetBottom />
+			<WidgetSide />
 		</div>
 	)
 }

@@ -1,7 +1,7 @@
 import React from "react"
 import { DETACHMENT, BUILDER_DETACHMENT_UNIT, BUILDER_DETACHMENT_UNIT_UPGRADES, BUILDER_DETACHMENT_SLOT, SLOTSET, SUBFACTION_TYPE } from "@/app/types"
 import { detachmentData } from "@/app/data/detachment_data"
-import { listState } from "../state"
+import { listState } from "../../state"
 
 interface properties {
 	formationSubfaction?: SUBFACTION_TYPE
@@ -9,7 +9,7 @@ interface properties {
 	slotSet: SLOTSET
 }
 
-const ListBuilderDetachmentSelect = ({ detachmentSlot, formationSubfaction, slotSet }: properties) => {
+const DetachmentSelect = ({ detachmentSlot, formationSubfaction, slotSet }: properties) => {
 	const { list, setList } = listState()
 
 	const detachmentSelectedHighlight = detachmentSlot.selected_unit ? " text-tertiary-800 font-semibold" : ""
@@ -107,4 +107,4 @@ const ListBuilderDetachmentSelect = ({ detachmentSlot, formationSubfaction, slot
 	)
 }
 
-export default ListBuilderDetachmentSelect
+export default DetachmentSelect

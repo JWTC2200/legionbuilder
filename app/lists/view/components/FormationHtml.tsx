@@ -9,7 +9,10 @@ const FormationHtml = ({ formation, index }: { formation: BUILDER_FORMATION; ind
 	return (
 		<div className="text-base mb-2">
 			<h3 className="sm:text-lg">
-				<span className="font-bold">Formation {index + 1}</span>: {formation.subfaction ? <span className="font-graduate">{formation.subfaction} </span> : null}
+				<span className="font-bold">Formation {index + 1}</span>:{" "}
+				{formation.subfaction ? (
+					<span className="font-graduate">{formation.subfaction} </span>
+				) : null}
 				{formation.name}
 				{", "}
 				{formationPoints(formation)}points
@@ -18,7 +21,10 @@ const FormationHtml = ({ formation, index }: { formation: BUILDER_FORMATION; ind
 			<FormationBreakHtml formation={formation} />
 			<FormationSlotHtml slotArray={formation.compulsory} type={"Compulsory"} />
 			<FormationSlotHtml slotArray={formation.optional} type={"Optional"} />
-			<FormationSlotHtml slotArray={formation.choice ? formation.choice.flat() : null} type={"Choice"} />
+			<FormationSlotHtml
+				slotArray={formation.choice ? formation.choice.flat() : null}
+				type={"Choice"}
+			/>
 		</div>
 	)
 }

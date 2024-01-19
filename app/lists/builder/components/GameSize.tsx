@@ -2,14 +2,12 @@ import React from "react"
 import { listState } from "../state"
 import { FACTION } from "@/app/types"
 
-const ListBuilderGameSize = () => {
+const GameSize = () => {
 	const { list, setList } = listState()
 
 	const handlePoints = (e: string) => {
 		setList({ ...list, points: Number(e) })
 	}
-
-	const gameSizes: number[] = [3000, 2500, 2000, 1500, 1000]
 
 	return (
 		<div className="w-full mx-4 p-4 builder_head_background text-primary-50 flex flex-wrap justify-center gap-4 text-center">
@@ -39,4 +37,4 @@ const ListBuilderGameSize = () => {
 	)
 }
 
-export default ListBuilderGameSize
+export default GameSize

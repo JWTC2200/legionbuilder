@@ -2,7 +2,7 @@ import React from "react"
 import { listState } from "../state"
 import { ImQuill } from "@react-icons/all-files/im/ImQuill"
 
-const ListBuilderListName = () => {
+const ListName = () => {
 	const { list, setList } = listState()
 	return (
 		<div className="text-primary-950 font-semibold flex gap-2 justify-center border border-backgrounds-950 items-center py-2 px-4 rounded-xl max-w-full">
@@ -13,4 +13,4 @@ const ListBuilderListName = () => {
 	)
 }
 
-export default ListBuilderListName
+export default ListName
