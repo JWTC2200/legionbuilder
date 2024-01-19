@@ -20,6 +20,6 @@ describe("Check choice warning appears", () => {
 		]
 		render(<ChoiceWarning array={testArray} />)
 		expect(screen.getByText("Selected too many detachments!")).toBeTruthy()
-		expect(screen.queryByTestId("choice-warning")).toBeTruthy()
+		expect(screen.getByTestId("choice-warning").innerHTML).toBe("Selected too many detachments!")
 	})
 })

@@ -21,6 +21,6 @@ describe("Check compulsory slots warning", () => {
 		]
 		render(<CompulsoryWarning array={testArray} />)
 		expect(screen.getByText("Compulsory detachments missing!")).toBeTruthy()
-		expect(screen.queryByTestId("comp-warning")).toBeTruthy()
+		expect(screen.getByTestId("comp-warning").innerHTML).toBe("Compulsory detachments missing!")
 	})
 })
