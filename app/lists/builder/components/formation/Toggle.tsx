@@ -1,4 +1,3 @@
-import React from "react"
 import { FaRegSquarePlus, FaRegSquareMinus } from "react-icons/fa6"
 
 interface properties {

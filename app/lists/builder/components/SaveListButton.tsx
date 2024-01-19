@@ -1,4 +1,3 @@
-import React from "react"
 import { handleSaveList } from "../utils"
 import { listState } from "../state"
 import useAuthState from "@/app/Auth"

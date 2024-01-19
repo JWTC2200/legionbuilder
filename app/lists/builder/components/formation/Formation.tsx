@@ -1,7 +1,7 @@
 "use client"
 
 import { BUILDER_FORMATION, FACTION, SLOTSET } from "@/app/types"
-import React, { useState } from "react"
+import { useState } from "react"
 import Selector from "./Selector"
 import Toggle from "./Toggle"
 import RemoveBtn from "./RemoveBtn"

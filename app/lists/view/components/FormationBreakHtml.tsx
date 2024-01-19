@@ -1,5 +1,5 @@
 import { BUILDER_FORMATION } from "@/app/types"
-import React from "react"
+
 import { formationBreakPoints } from "../utils"
 
 export const BreakHtml = ({ formation, className }: { formation: BUILDER_FORMATION; className?: string }) => {

@@ -1,4 +1,3 @@
-import React from "react"
 import GameSize from "./GameSize"
 import ListName from "./ListName"
 import AddFormation from "./AddFormation"

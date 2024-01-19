@@ -1,6 +1,5 @@
 "use client"
 
-import React from "react"
 import { BUILDER_DETACHMENT_SLOT, SLOTSET, SUBFACTION_TYPE } from "@/app/types"
 import Title from "./Title"
 import Details from "./Details"
@@ -8,7 +7,6 @@ import Description from "./Description"
 import Select from "./Select"
 import Upgrades from "./Upgrades"
 import SizeWarning from "./SizeWarning"
-import { format } from "path"
 import SubfactionWarning from "./SubfactionWarning"
 
 interface properties {

@@ -1,6 +1,5 @@
 "use client"
 
-import React from "react"
 import { detachmentData } from "@/app/data/detachment_data"
 import { notFound } from "next/navigation"
 import DetachmentDataslate from "@components/DetachmentDataslate"

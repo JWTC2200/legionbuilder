@@ -1,6 +1,5 @@
 "use client"
 
-import React from "react"
 import { useRouter } from "next/navigation"
 import { BUILDER_LIST } from "@/app/types"
 import { FaCopy } from "@react-icons/all-files/fa/FaCopy"

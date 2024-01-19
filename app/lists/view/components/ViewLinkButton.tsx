@@ -1,6 +1,5 @@
 "use client"
 
-import React from "react"
 import { addToClipboard } from "../../utils"
 import { FaCopy } from "@react-icons/all-files/fa/FaCopy"
 import { listState } from "../../builder/state"

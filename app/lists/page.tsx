@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect } from "react"
+import { useEffect } from "react"
 import { userListsState } from "./state"
 import NotSignedIn from "./components/NotSignedIn"
 import UserListTable from "./components/UserListTable"

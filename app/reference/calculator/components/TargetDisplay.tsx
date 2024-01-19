@@ -1,4 +1,3 @@
-import React from "react"
 import { calculatorTarget } from "../state"
 import { Row } from "@/app/components/HTML"
 import SpecialRuleBox from "@/app/components/SpecialRuleBox"

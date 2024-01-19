@@ -1,6 +1,5 @@
 import { BUILDER_FORMATION } from "@/app/types"
 import { formationData } from "@/app/data/formation_data"
-import React from "react"
 
 interface properties {
 	formation: BUILDER_FORMATION

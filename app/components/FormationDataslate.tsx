@@ -1,4 +1,3 @@
-import React from "react"
 import { FORMATION } from "../types"
 import { formationSlotData } from "../data/formation_slot_data"
 import { getDetachmentIcon } from "../utils/detachmentIcons"

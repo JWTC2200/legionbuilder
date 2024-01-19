@@ -1,6 +1,6 @@
 "use client"
 
-import React, { ReactNode, useState } from "react"
+import { ReactNode, useState } from "react"
 import Icons from "@/app/components/Icons"
 import { userListsState } from "../state"
 import { DB_ENTRY } from "@/app/types"

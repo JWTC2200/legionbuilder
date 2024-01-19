@@ -1,5 +1,5 @@
 import { BUILDER_FORMATION } from "@/app/types"
-import React from "react"
+
 import { formationData } from "@/app/data/formation_data"
 import { formationPoints } from "../../../utils"
 import { setBuilderDetachment } from "../../utils"

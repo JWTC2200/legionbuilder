@@ -1,4 +1,3 @@
-import React from "react"
 import { specialRulesData } from "../data/special_rule_data"
 import { SPECIAL_RULE } from "../types"
 

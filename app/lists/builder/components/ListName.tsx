@@ -1,4 +1,3 @@
-import React from "react"
 import { listState } from "../state"
 import { ImQuill } from "@react-icons/all-files/im/ImQuill"
 

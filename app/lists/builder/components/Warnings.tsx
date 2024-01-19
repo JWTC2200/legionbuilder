@@ -1,5 +1,5 @@
 "use client"
-import React from "react"
+
 import { listState } from "../state"
 import { listPointTotals } from "../../utils"
 

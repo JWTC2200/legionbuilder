@@ -1,4 +1,3 @@
-import React from "react"
 import { BUILDER_FORMATION } from "@/app/types"
 import { nanoid } from "nanoid"
 import { listState } from "../state"

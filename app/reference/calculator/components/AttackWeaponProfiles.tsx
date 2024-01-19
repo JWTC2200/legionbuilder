@@ -1,5 +1,5 @@
 import { WEAPON_PROFILES } from "@/app/types"
-import React from "react"
+
 import DamageResult from "./DamageResult"
 import WeaponTraitBox from "@/app/components/WeaponTraitBox"
 

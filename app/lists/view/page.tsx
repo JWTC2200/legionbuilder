@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState, useEffect } from "react"
+import { useState, useEffect } from "react"
 import { listState } from "../builder/state"
 import ListInfoHtml from "./components/ListInfoHtml"
 import FormationHtml from "./components/FormationHtml"

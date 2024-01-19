@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import { useState, useEffect } from "react"
 import { calculatorWeapons } from "../state"
 import { unitData } from "@/app/data/unit_data"
 import { weapons } from "@/app/data/weapon_data"

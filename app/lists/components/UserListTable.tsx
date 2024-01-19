@@ -1,4 +1,3 @@
-import React from "react"
 import UserListEntry from "./UserListEntry"
 import { userListsState } from "../state"
 

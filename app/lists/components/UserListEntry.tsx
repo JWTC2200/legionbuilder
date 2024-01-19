@@ -1,7 +1,7 @@
 "use client"
 
 import { BUILDER_LIST } from "@/app/types"
-import React from "react"
+
 import Link from "next/link"
 import { listState } from "../builder/state"
 import ListCopyButton from "./ListCopyButton"

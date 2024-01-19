@@ -1,4 +1,3 @@
-import React from "react"
 import { weaponTraitsData } from "../data/weapon_traits_data"
 import { WEAPON_TRAIT } from "../types"
 

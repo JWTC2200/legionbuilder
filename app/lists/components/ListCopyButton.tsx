@@ -1,4 +1,3 @@
-import React from "react"
 import { BUILDER_LIST } from "@/app/types"
 import { addToClipboard } from "../utils"
 import { FaLink } from "@react-icons/all-files/fa/FaLink"

@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react"
+import { useState, useEffect } from "react"
 import { calculatorTarget } from "../state"
 import { unitData } from "@/app/data/unit_data"
 import { sortedByNameKey } from "@/app/utils/sorting"
-import TargetUnitDisplay from "./TargetDisplay"
 
 const TargetUnit = () => {
 	const [selectedTarget, setSelectedTarget] = useState<string>("")

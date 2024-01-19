@@ -1,4 +1,3 @@
-import React from "react"
 import { listState } from "../state"
 import { FACTION } from "@/app/types"
 
@@ -15,7 +14,14 @@ const GameSize = () => {
 				<label htmlFor="game_size" className="sm:text-xl font-graduate mr-1">
 					Game size:
 				</label>
-				<input type="number" id="game_size" name="game_size" value={Number(list.points).toString()} onChange={(e) => handlePoints(e.target.value)} className="bg-transparent rounded-sm p-1 sm:text-lg font-semibold hover:text-primary-400 active:text-primary-400 w-[60px] text-right py-1 focus:outline-none" />
+				<input
+					type="number"
+					id="game_size"
+					name="game_size"
+					value={Number(list.points).toString()}
+					onChange={(e) => handlePoints(e.target.value)}
+					className="bg-transparent rounded-sm p-1 sm:text-lg font-semibold hover:text-primary-400 active:text-primary-400 w-[60px] text-right py-1 focus:outline-none"
+				/>
 				<label htmlFor="game_size" className="sm:text-xl font-graduate mr-1">
 					pts
 				</label>

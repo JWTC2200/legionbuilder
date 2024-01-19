@@ -1,4 +1,3 @@
-import React from "react"
 import { getDetachmentIcon } from "@/app/utils/detachmentIcons"
 import { DETACHMENT_TYPE } from "@/app/types"
 

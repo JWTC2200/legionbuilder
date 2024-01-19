@@ -1,4 +1,3 @@
-import React from "react"
 import Link from "next/link"
 import { DETACHMENT } from "../types"
 import { unitData } from "../data/unit_data"

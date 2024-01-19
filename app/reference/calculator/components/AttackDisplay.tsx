@@ -1,5 +1,3 @@
-import React from "react"
-
 import AttackWeapon from "./AttackWeapon"
 import { FiRefreshCw } from "@react-icons/all-files/fi/FiRefreshCw"
 import { calculatorWeapons } from "../state"

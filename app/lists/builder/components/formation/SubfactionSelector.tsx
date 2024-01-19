@@ -1,4 +1,3 @@
-import React from "react"
 import { BUILDER_FORMATION, FACTION, SUBFACTION_TYPE, subfactionTypeArray } from "@/app/types"
 import { listState } from "../../state"
 
@@ -35,7 +34,12 @@ export const SubfactionSelector = ({ formation }: properties) => {
 	}
 
 	return (
-		<select id={`subfaction_selector_${formation.ref_id}`} name={`subfaction_selector_${formation.ref_id}`} className={`w-[280px] text-center mt-2 py-1 px-2 border border-backgrounds-950 font-graduate text-black hover:text-tertiary-800 active:text-tertiary-800 ${detachmentSelectedHighlight}`} value={formation.subfaction} onChange={(e) => changeSubfaction(e.target.value)}>
+		<select
+			id={`subfaction_selector_${formation.ref_id}`}
+			name={`subfaction_selector_${formation.ref_id}`}
+			className={`w-[280px] text-center mt-2 py-1 px-2 border border-backgrounds-950 font-graduate text-black hover:text-tertiary-800 active:text-tertiary-800 ${detachmentSelectedHighlight}`}
+			value={formation.subfaction}
+			onChange={(e) => changeSubfaction(e.target.value)}>
 			<option value="" className="text-backgrounds-950">
 				{formation.faction === FACTION.astartes ? "Choose Legion" : null}
 			</option>

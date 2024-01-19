@@ -2,7 +2,7 @@
 
 import { WEAPON_DATASHEET } from "@/app/types"
 import { Row } from "@/app/components/HTML"
-import React from "react"
+
 import AttackWeaponProfiles from "./AttackWeaponProfiles"
 import { CgCloseR } from "@react-icons/all-files/cg/CgCloseR"
 import { calculatorWeapons } from "../state"

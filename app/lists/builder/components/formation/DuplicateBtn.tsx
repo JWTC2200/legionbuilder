@@ -1,4 +1,3 @@
-import React from "react"
 import { listState } from "../../state"
 import { nanoid } from "nanoid"
 import { toast } from "react-toastify"

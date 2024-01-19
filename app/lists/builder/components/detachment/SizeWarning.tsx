@@ -1,4 +1,3 @@
-import React from "react"
 import { detachmentSize } from "../../../utils"
 import { BUILDER_DETACHMENT_UNIT } from "@/app/types"
 

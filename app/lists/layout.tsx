@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect } from "react"
+import { useEffect } from "react"
 import { ToastContainer } from "react-toastify"
 import { listState } from "./builder/state"
 import { ALLEGIANCE, BUILDER_LIST } from "../types"

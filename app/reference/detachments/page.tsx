@@ -1,6 +1,5 @@
 "use client"
 
-import React from "react"
 import Link from "next/link"
 import { DETACHMENT, factionTypeArray, detachmentTypeArray } from "../../types"
 import { detachmentData } from "../../data/detachment_data"

@@ -1,4 +1,3 @@
-import React from "react"
 import { BUILDER_DETACHMENT_UNIT, SUBFACTION_TYPE } from "@/app/types"
 
 interface properties {

@@ -1,6 +1,6 @@
 "use client"
 
-import React, { ReactNode, useState } from "react"
+import { ReactNode, useState } from "react"
 import Icons from "../../components/Icons"
 import { detachmentData } from "../../data/detachment_data"
 import DetachmentDataslate from "../../components/DetachmentDataslate"

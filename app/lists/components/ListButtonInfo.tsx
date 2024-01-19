@@ -1,4 +1,3 @@
-import React from "react"
 import { FaCopy } from "@react-icons/all-files/fa/FaCopy"
 import { FaEye } from "@react-icons/all-files/fa/FaEye"
 import { FaLink } from "@react-icons/all-files/fa/FaLink"

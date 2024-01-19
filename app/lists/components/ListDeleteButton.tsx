@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import { useState } from "react"
 import { BUILDER_LIST } from "@/app/types"
 import { deleteList } from "@/app/firebase/firestore/deleteList"
 import { ImBin } from "@react-icons/all-files/im/ImBin"

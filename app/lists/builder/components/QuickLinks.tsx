@@ -1,7 +1,7 @@
 "use client"
 
 import { BUILDER_FORMATION } from "@/app/types"
-import React from "react"
+
 import Link from "next/link"
 import { FiChevronDown } from "react-icons/fi"
 import { listState } from "../state"

@@ -1,6 +1,5 @@
 "use client"
 
-import React from "react"
 import { detachmentSize, detachmentPoints } from "../../../utils"
 import { BUILDER_DETACHMENT_UNIT } from "@/app/types"
 import ReferencePopup from "@/app/lists/components/ReferencePopup"

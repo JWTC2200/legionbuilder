@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { listState } from "../builder/state"
 import Link from "next/link"
 
@@ -30,7 +30,10 @@ const CreateListButtons = ({ className }: properties) => {
 				Create List
 			</Link>
 			{localList ? (
-				<Link href="/lists/builder" onClick={handlePreviousList} className="px-8 py-2 banner_background font-graduate text-lg text-center sm:text-2xl rounded-full border-2 border-backgrounds-950 hover:text-primary-100 active:text-primary-100 hover:border-primary-100 active:border-primary-100">
+				<Link
+					href="/lists/builder"
+					onClick={handlePreviousList}
+					className="px-8 py-2 banner_background font-graduate text-lg text-center sm:text-2xl rounded-full border-2 border-backgrounds-950 hover:text-primary-100 active:text-primary-100 hover:border-primary-100 active:border-primary-100">
 					Previous list
 				</Link>
 			) : null}

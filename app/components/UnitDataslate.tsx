@@ -1,4 +1,3 @@
-import React from "react"
 import Link from "next/link"
 import { UNIT_DATASHEET } from "../types"
 import { getUnitWeaponRows } from "../utils/unitweaponrows"

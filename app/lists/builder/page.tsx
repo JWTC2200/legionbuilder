@@ -1,6 +1,5 @@
 "use client"
 
-import React from "react"
 import WidgetBottom from "./components/WidgetBottom"
 import WidgetSide from "./components/WidgetSide"
 import ListBuilder from "./components/ListBuilder"

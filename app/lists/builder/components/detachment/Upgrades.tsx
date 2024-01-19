@@ -1,4 +1,3 @@
-import React from "react"
 import { BUILDER_DETACHMENT_UNIT_UPGRADES, SLOTSET, BUILDER_DETACHMENT_UNIT, BUILDER_DETACHMENT_SLOT } from "@/app/types"
 import { detachmentData } from "@/app/data/detachment_data"
 import { listState } from "../../state"
