@@ -5,7 +5,6 @@ import { BUILDER_FORMATION } from "@/app/types"
 
 export const DuplicateBtn = ({ formation }: { formation: BUILDER_FORMATION }) => {
 	const { list, setList } = listState()
-
 	const duplicateFormation = () => {
 		const duplicate = { ...formation, ref_id: `formation${nanoid()}` }
 		setList({ ...list, formations: [...list.formations, duplicate] })

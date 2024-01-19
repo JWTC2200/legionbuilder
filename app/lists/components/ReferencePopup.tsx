@@ -20,7 +20,8 @@ const ReferencePopup = ({ detachmentId, children }: properties) => {
 		<button className="hover:text-tertiary-800 active:text-tertiary-800 cursor-help select-text" onClick={() => setHidden((prev) => !prev)}>
 			{children ? children : <Icon className="" />}
 			{unit && !hidden ? (
-				<div className="absolute max-w-xl top-0 left-0 pb-24 z-50">
+				<div className="absolute max-w-xl top-0 left-0 z-50 rounded-lg bg-dataslate">
+					<div className=" text-primary-950 font-semibold hover:text-tertiary-800 pt-1">Click to close</div>
 					<DetachmentDataslate detachment={unit} no_related={true} />
 				</div>
 			) : null}
