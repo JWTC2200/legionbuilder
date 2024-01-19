@@ -32,7 +32,7 @@ const page = () => {
 	return (
 		<div className="min-h-screen flex justify-center">
 			{list ? (
-				<div className="w-full px-2 max-w-screen-sm">
+				<div className="w-full px-2 pb-8 max-w-screen-sm">
 					<BreadCrumbs>
 						<Crumb href="/lists">Lists</Crumb>
 						<Crumb href={`/lists/builder${listParams ? `?listId=${listParams}` : ""}`}>Builder</Crumb>

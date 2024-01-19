@@ -23,7 +23,7 @@ const page = () => {
 							.filter((formationFaction) => formationFaction.faction === faction)
 							.map((formation) => (
 								<Row key={formation.name} className="px-4 hover:bg-secondary-700 hover:text-secondary-50 whitespace-nowrap">
-									<Link key={formation.name} href={`/reference/formations/${formation.name.replaceAll(" ", "_")} `} className="block flex items-center gap-2 w-full py-1">
+									<Link key={formation.name} href={`/reference/formations/${formation.name.replaceAll(" ", "_")} `} className="flex items-center gap-2 w-full py-1">
 										<span>{formation.name}</span>
 									</Link>
 								</Row>

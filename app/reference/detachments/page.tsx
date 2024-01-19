@@ -37,7 +37,7 @@ const page = () => {
 					<FactionList faction={faction} key={faction}>
 						{sortByDetachmentType(detachmentData.filter((detachmentFaction) => detachmentFaction.faction === faction && !detachmentFaction.unique)).map((detachment) => (
 							<Row key={detachment.name} className="px-4 hover:bg-secondary-700 hover:text-secondary-50 whitespace-nowrap">
-								<Link key={detachment.name} href={`/reference/detachments/${detachment.name.replaceAll(" ", "_")} `} className="block flex items-center gap-2 w-full py-1">
+								<Link key={detachment.name} href={`/reference/detachments/${detachment.name.replaceAll(" ", "_")} `} className="flex items-center gap-2 w-full py-1">
 									<span>{getDetachmentIcon(detachment.detachment_type)}</span>
 									<span>{detachment.name}</span>
 								</Link>
