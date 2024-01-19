@@ -12,7 +12,10 @@ export const DuplicateBtn = ({ formation }: { formation: BUILDER_FORMATION }) =>
 	}
 
 	return (
-		<button className="p-1 hover:text-orange-700 font-graduate text-sm sm:text-base" onClick={duplicateFormation}>
+		<button
+			className="p-1 hover:text-orange-700 font-graduate text-sm sm:text-base"
+			onClick={duplicateFormation}
+			data-testid="duplicate-btn">
 			Duplicate
 		</button>
 	)

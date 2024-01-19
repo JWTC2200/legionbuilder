@@ -1,21 +1,11 @@
-import { ALLEGIANCE, BUILDER_LIST, FACTION } from "@/app/types"
-import { listState, builderBottomWidget } from "./state"
+import { listState, builderBottomWidget } from "../state"
 import { describe } from "@jest/globals"
 import { act, renderHook } from "@testing-library/react"
+import { testList } from "@/__mocks__/mockLists"
 
 jest.mock("nanoid", () => {
 	return { nanoid: () => "123" }
 })
-
-const testingList: BUILDER_LIST = {
-	points: 200,
-	list_name: "Tester",
-	list_id: "testingtesting",
-	user_id: "bob",
-	main_faction: FACTION.solar,
-	allegiance: ALLEGIANCE.traitor,
-	formations: [],
-}
 
 describe("List state tests", () => {
 	it("list state default values", () => {
@@ -25,7 +15,7 @@ describe("List state tests", () => {
 
 	it("list changes correctly", () => {
 		const { result } = renderHook(() => listState())
-		act(() => result.current.setList(testingList))
+		act(() => result.current.setList(testList))
 
 		const { points, list_name, list_id } = result.current.list
 
@@ -41,7 +31,7 @@ describe("List state tests", () => {
 
 	it("list clears", () => {
 		const { result } = renderHook(() => listState())
-		act(() => result.current.setList(testingList))
+		act(() => result.current.setList(testList))
 		act(() => result.current.clearList())
 		expect(result.current.list.points).toEqual(3000)
 	})
