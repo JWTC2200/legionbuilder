@@ -7,7 +7,7 @@ describe("Check compulsory slots warning", () => {
 	test("Nothing is selected", () => {
 		render(<CompulsoryWarning array={[testDetachmentSlot]} />)
 		expect(screen.getByText("Compulsory detachments missing!")).toBeTruthy()
-		expect(screen.queryByTestId("comp-warning")).toBeTruthy()
+		expect(screen.getByTestId("comp-warning").innerHTML).toBe("Compulsory detachments missing!")
 	})
 	test("1 of 1 slots selected", () => {
 		const testArray: BUILDER_DETACHMENT_SLOT[] = [{ ...testDetachmentSlot, selected_unit: testDetachmentUnit }]

@@ -6,7 +6,6 @@ import calculateSaves from "./calculateSaves"
 
 export const calculateDamage = (weapon: WEAPON_PROFILES, target: UNIT_DATASHEET): string => {
 	const weaponTraits = weapon.traits.map((trait) => trait.name)
-	const targetRules = target.special_rules.map((rule) => rule.name)
 	const targetType = target.unit_type.type
 
 	if (targetType === UNIT_TYPE.structure) {
@@ -21,11 +20,13 @@ export const calculateDamage = (weapon: WEAPON_PROFILES, target: UNIT_DATASHEET)
 			return "Melee"
 		}
 	}
+
 	if (weaponTraits.includes("Light") && armouredTypes.includes(targetType)) {
 		return "0"
 	}
 
-	let finalDamage = (1 - calculateSaves(weapon, target)) * calculateShotMultiplier(weapon, target) * calculateToHit(weapon, target)
+	let finalDamage =
+		(1 - calculateSaves(weapon, target)) * calculateShotMultiplier(weapon, target) * calculateToHit(weapon, target)
 
 	if (weaponTraits.includes("Deflagrate")) {
 		const copyWeapon = {
