@@ -8,7 +8,7 @@ import CreateListButtons from "./lists/components/CreateListButtons"
 export default function Home() {
 	return (
 		<Main>
-			<CreateListButtons className="m-4 self-center flex flex-wrap gap-4 justify-center" />
+			{/* <CreateListButtons className="m-4 self-center flex flex-wrap gap-4 justify-center" /> */}
 			<FrontpageUpdates />
 
 			<section className="mx-4">
