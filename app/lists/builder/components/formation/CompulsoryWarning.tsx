@@ -1,6 +1,6 @@
-import { BUILDER_DETACHMENT_SLOT } from "@/app/types"
+import { BUILDER_FORMATION_SLOT } from "@/app/types"
 
-const CompulsoryWarning = ({ array }: { array: BUILDER_DETACHMENT_SLOT[] }) => {
+const CompulsoryWarning = ({ array }: { array: BUILDER_FORMATION_SLOT[] }) => {
 	const warningHTML = () => {
 		if (array.filter((slot) => slot.selected_unit).length < array.length) {
 			return (

@@ -1,8 +1,20 @@
-import { BUILDER_DETACHMENT_UNIT_UPGRADES, SLOTSET, BUILDER_DETACHMENT_UNIT, BUILDER_DETACHMENT_SLOT } from "@/app/types"
+import { BUILDER_DETACHMENT_UNIT_UPGRADES, SLOTSET, BUILDER_DETACHMENT_UNIT, BUILDER_FORMATION_SLOT } from "@/app/types"
 import { detachmentData } from "@/app/data/detachment_data"
 import { listState } from "../../state"
 
-const Upgrades = ({ unitId, upgradeOption, slotSet, refId, slotRef }: { unitId: number; upgradeOption: BUILDER_DETACHMENT_UNIT_UPGRADES; slotSet: SLOTSET; refId: string; slotRef: string }) => {
+const Upgrades = ({
+	unitId,
+	upgradeOption,
+	slotSet,
+	refId,
+	slotRef,
+}: {
+	unitId: number
+	upgradeOption: BUILDER_DETACHMENT_UNIT_UPGRADES
+	slotSet: SLOTSET
+	refId: string
+	slotRef: string
+}) => {
 	const detachmentUpgrades = detachmentData.find((detachment) => detachment.id === unitId)
 	if (!detachmentUpgrades) {
 		return null
@@ -29,7 +41,10 @@ const Upgrades = ({ unitId, upgradeOption, slotSet, refId, slotRef }: { unitId: 
 		return { ...upgradeOption, number: 0, cost: 0, size: 0 }
 	}
 
-	const updateSelectedUnit = (oldUnit: BUILDER_DETACHMENT_UNIT, newUpgrades: BUILDER_DETACHMENT_UNIT_UPGRADES): BUILDER_DETACHMENT_UNIT => {
+	const updateSelectedUnit = (
+		oldUnit: BUILDER_DETACHMENT_UNIT,
+		newUpgrades: BUILDER_DETACHMENT_UNIT_UPGRADES
+	): BUILDER_DETACHMENT_UNIT => {
 		const upgradeOptionsArray = oldUnit.upgrade_options.map((upgrade) => {
 			if (upgrade.name === newUpgrades.name) {
 				return newUpgrades
@@ -40,7 +55,10 @@ const Upgrades = ({ unitId, upgradeOption, slotSet, refId, slotRef }: { unitId: 
 		return { ...oldUnit, upgrade_options: upgradeOptionsArray }
 	}
 
-	const updateUpgradeSlotArray = (detachmentArray: BUILDER_DETACHMENT_SLOT[], newUpgrade: BUILDER_DETACHMENT_UNIT_UPGRADES): BUILDER_DETACHMENT_SLOT[] => {
+	const updateUpgradeSlotArray = (
+		detachmentArray: BUILDER_FORMATION_SLOT[],
+		newUpgrade: BUILDER_DETACHMENT_UNIT_UPGRADES
+	): BUILDER_FORMATION_SLOT[] => {
 		const newArray = detachmentArray.map((detach) => {
 			if (detach.slot_ref === slotRef) {
 				return {
@@ -99,13 +117,21 @@ const Upgrades = ({ unitId, upgradeOption, slotSet, refId, slotRef }: { unitId: 
 				onChange={(e) => {
 					updateUpgradeChoice(Number(e.target.value))
 				}}
-				className={"w-full text-center text-sm font-graduate p-1 rounded-full border border-primary-950 hover:text-tertiary-700 active:text-tertiary-700" + upgradeSelectedHighlight}>
+				className={
+					"w-full text-center text-sm font-graduate p-1 rounded-full border border-primary-950 hover:text-tertiary-700 active:text-tertiary-700" +
+					upgradeSelectedHighlight
+				}>
 				<option value="0" className="text-black">
 					{upgradeOption.name}
 				</option>
 				{upgradeObject.options.map((upgrade, index) => (
-					<option key={slotRef + "upgrade" + upgradeOption.name + index} value={upgrade.number} className="text-black">
-						{upgrade.text ? `${upgrade.text}` : `${upgradeOption.name}: ${upgrade.number}, ${upgrade.cost}pts`}
+					<option
+						key={slotRef + "upgrade" + upgradeOption.name + index}
+						value={upgrade.number}
+						className="text-black">
+						{upgrade.text
+							? `${upgrade.text}`
+							: `${upgradeOption.name}: ${upgrade.number}, ${upgrade.cost}pts`}
 					</option>
 				))}
 			</select>

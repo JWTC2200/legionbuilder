@@ -2,7 +2,7 @@ import {
 	DETACHMENT,
 	BUILDER_DETACHMENT_UNIT,
 	BUILDER_DETACHMENT_UNIT_UPGRADES,
-	BUILDER_DETACHMENT_SLOT,
+	BUILDER_FORMATION_SLOT,
 	SLOTSET,
 	SUBFACTION_TYPE,
 } from "@/app/types"
@@ -11,7 +11,7 @@ import { listState } from "../../state"
 
 interface properties {
 	formationSubfaction: SUBFACTION_TYPE | null
-	detachmentSlot: BUILDER_DETACHMENT_SLOT
+	detachmentSlot: BUILDER_FORMATION_SLOT
 	slotSet: SLOTSET
 }
 
@@ -21,9 +21,9 @@ const Select = ({ detachmentSlot, formationSubfaction, slotSet }: properties) =>
 	const detachmentSelectedHighlight = detachmentSlot.selected_unit ? " text-tertiary-800 font-semibold" : ""
 
 	const updateSlotArray = (
-		detachmentArray: BUILDER_DETACHMENT_SLOT[],
+		detachmentArray: BUILDER_FORMATION_SLOT[],
 		newUnit: BUILDER_DETACHMENT_UNIT | null
-	): BUILDER_DETACHMENT_SLOT[] => {
+	): BUILDER_FORMATION_SLOT[] => {
 		const newArray = detachmentArray.map((detach) => {
 			if (detach.slot_ref === detachmentSlot.slot_ref) {
 				return { ...detach, selected_unit: newUnit }

@@ -1,6 +1,6 @@
 "use client"
 
-import { BUILDER_DETACHMENT_SLOT, SLOTSET, SUBFACTION_TYPE } from "@/app/types"
+import { BUILDER_FORMATION_SLOT, SLOTSET, SUBFACTION_TYPE } from "@/app/types"
 import Title from "./Title"
 import Details from "./Details"
 import Description from "./Description"
@@ -11,7 +11,7 @@ import SubfactionWarning from "./SubfactionWarning"
 
 interface properties {
 	formationSubfaction: SUBFACTION_TYPE | null
-	detachmentSlot: BUILDER_DETACHMENT_SLOT
+	detachmentSlot: BUILDER_FORMATION_SLOT
 	slotSet: SLOTSET
 }
 

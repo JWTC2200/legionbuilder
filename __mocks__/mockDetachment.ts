@@ -1,6 +1,6 @@
-import { BUILDER_DETACHMENT_SLOT, DETACHMENT_TYPE, FACTION, BUILDER_DETACHMENT_UNIT, ALLEGIANCE } from "@/app/types"
+import { BUILDER_FORMATION_SLOT, DETACHMENT_TYPE, FACTION, BUILDER_DETACHMENT_UNIT, ALLEGIANCE } from "@/app/types"
 
-export const testDetachmentSlot: BUILDER_DETACHMENT_SLOT = {
+export const testDetachmentSlot: BUILDER_FORMATION_SLOT = {
 	ref_id: "test",
 	slot_ref: "test",
 	id: 1,

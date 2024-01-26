@@ -88,7 +88,7 @@ export interface FORMATION_SLOT {
 	id: number
 	type: DETACHMENT_TYPE
 	faction: FACTION
-	restricted?: boolean
+	restricted: boolean
 	options: number[]
 	description?: string
 }
@@ -97,7 +97,7 @@ export interface DETACHMENT {
 	id: number
 	name: string
 	faction: FACTION
-	subfaction?: SUBFACTION_TYPE
+	subfaction: SUBFACTION_TYPE | null
 	allegiance: ALLEGIANCE | null
 	unique: boolean
 	detachment_type: DETACHMENT_TYPE
@@ -209,12 +209,12 @@ export interface BUILDER_FORMATION {
 	id: number
 	faction: FACTION | null
 	subfaction: SUBFACTION_TYPE | null
-	choice: BUILDER_DETACHMENT_SLOT[][] | null
-	compulsory: BUILDER_DETACHMENT_SLOT[] | null
-	optional: BUILDER_DETACHMENT_SLOT[] | null
+	choice: BUILDER_FORMATION_SLOT[][] | null
+	compulsory: BUILDER_FORMATION_SLOT[] | null
+	optional: BUILDER_FORMATION_SLOT[] | null
 }
 
-export interface BUILDER_DETACHMENT_SLOT {
+export interface BUILDER_FORMATION_SLOT {
 	ref_id: string
 	slot_ref: string
 	id: number
@@ -230,7 +230,7 @@ export interface BUILDER_DETACHMENT_UNIT {
 	id: number
 	name: string
 	faction: FACTION
-	subfaction?: SUBFACTION_TYPE
+	subfaction: SUBFACTION_TYPE | null
 	allegiance: ALLEGIANCE | null
 	base_cost: number
 	base_size: number

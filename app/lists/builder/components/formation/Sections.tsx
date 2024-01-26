@@ -1,11 +1,11 @@
 import FormationCompulsoryWarning from "./CompulsoryWarning"
 import Detachment from "../detachment/Detachment"
-import { BUILDER_DETACHMENT_SLOT, SLOTSET, SUBFACTION_TYPE } from "@/app/types"
+import { BUILDER_FORMATION_SLOT, SLOTSET, SUBFACTION_TYPE } from "@/app/types"
 import FormationChoiceWarning from "./ChoiceWarning"
 
 interface properties {
 	formationSubfaction: SUBFACTION_TYPE | null
-	formationSection: BUILDER_DETACHMENT_SLOT[]
+	formationSection: BUILDER_FORMATION_SLOT[]
 	sectionType: SLOTSET
 	index: number
 }

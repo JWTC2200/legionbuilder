@@ -1,7 +1,7 @@
-import { BUILDER_DETACHMENT_SLOT } from "@/app/types"
+import { BUILDER_FORMATION_SLOT } from "@/app/types"
 import { slotHTML, detachmentsTaken } from "../utils"
 
-const FormationSlotHtml = ({ slotArray, type }: { slotArray: BUILDER_DETACHMENT_SLOT[] | null; type: string }) => {
+const FormationSlotHtml = ({ slotArray, type }: { slotArray: BUILDER_FORMATION_SLOT[] | null; type: string }) => {
 	const html = slotArray ? slotArray.map((slot) => slotHTML(slot)) : null
 
 	return (

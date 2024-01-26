@@ -1,6 +1,6 @@
 import {
 	BUILDER_FORMATION,
-	BUILDER_DETACHMENT_SLOT,
+	BUILDER_FORMATION_SLOT,
 	BUILDER_DETACHMENT_UNIT_UPGRADES,
 	BUILDER_LIST,
 	BUILDER_DETACHMENT_UNIT,
@@ -29,7 +29,7 @@ export const formationBreakPoints = (formation: BUILDER_FORMATION): { wounds: nu
 	return { wounds: total, break: Math.ceil(total / 2) }
 }
 
-const formationArrayBreakStrength = (array: BUILDER_DETACHMENT_SLOT[]) => {
+const formationArrayBreakStrength = (array: BUILDER_FORMATION_SLOT[]) => {
 	const breakStrength = array.map((slot) =>
 		slot.selected_unit && slot.type !== DETACHMENT_TYPE.dedicated
 			? calcDetachmentBreakStrength(slot.selected_unit)
@@ -54,7 +54,7 @@ const calcDetachmentBreakStrength = (unit: BUILDER_DETACHMENT_UNIT): number => {
 	return base + upgrades
 }
 
-export const slotHTML = (slot: BUILDER_DETACHMENT_SLOT) => {
+export const slotHTML = (slot: BUILDER_FORMATION_SLOT) => {
 	if (slot.selected_unit) {
 		return (
 			<li key={slot.slot_ref} className="relative">

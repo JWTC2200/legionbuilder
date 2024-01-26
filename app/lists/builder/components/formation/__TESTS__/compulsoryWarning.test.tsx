@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react"
 import CompulsoryWarning from "../CompulsoryWarning"
 import { testDetachmentSlot, testDetachmentUnit } from "@/__mocks__/mockDetachment"
-import { BUILDER_DETACHMENT_SLOT } from "@/app/types"
+import { BUILDER_FORMATION_SLOT } from "@/app/types"
 
 describe("Check compulsory slots warning", () => {
 	test("Nothing is selected", () => {
@@ -10,12 +10,12 @@ describe("Check compulsory slots warning", () => {
 		expect(screen.getByTestId("comp-warning").innerHTML).toBe("Compulsory detachments missing!")
 	})
 	test("1 of 1 slots selected", () => {
-		const testArray: BUILDER_DETACHMENT_SLOT[] = [{ ...testDetachmentSlot, selected_unit: testDetachmentUnit }]
+		const testArray: BUILDER_FORMATION_SLOT[] = [{ ...testDetachmentSlot, selected_unit: testDetachmentUnit }]
 		render(<CompulsoryWarning array={testArray} />)
 		expect(screen.queryByTestId("comp-warning")).toBeNull()
 	})
 	test("1 of 2 slots selected", () => {
-		const testArray: BUILDER_DETACHMENT_SLOT[] = [
+		const testArray: BUILDER_FORMATION_SLOT[] = [
 			{ ...testDetachmentSlot, selected_unit: testDetachmentUnit },
 			testDetachmentSlot,
 		]
