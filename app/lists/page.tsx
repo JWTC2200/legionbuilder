@@ -39,10 +39,14 @@ const page = () => {
 							<ListSortButton sortBy="main_faction" className="basis-[40%] flex items-center gap-1">
 								Faction
 							</ListSortButton>
-							<ListSortButton sortBy="game_size" className="basis-[30%] flex items-center justify-end gap-1">
+							<ListSortButton
+								sortBy="game_size"
+								className="basis-[30%] flex items-center justify-end gap-1">
 								Points
 							</ListSortButton>
-							<ListSortButton sortBy="formations" className="basis-[30%] flex items-center justify-end gap-1">
+							<ListSortButton
+								sortBy="formations"
+								className="basis-[30%] flex items-center justify-end gap-1">
 								Formations
 							</ListSortButton>
 						</div>
