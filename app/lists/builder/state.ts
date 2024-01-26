@@ -19,7 +19,7 @@ const emptyList: BUILDER_LIST = {
 	list_id: nanoid(),
 	user_id: "",
 	main_faction: FACTION.astartes,
-	allegiance: ALLEGIANCE.neutral,
+	allegiance: null,
 	formations: [],
 }
 

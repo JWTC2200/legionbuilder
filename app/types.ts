@@ -12,7 +12,6 @@ export const factionTypeArray = Object.values(FACTION).filter((value) => value !
 export enum ALLEGIANCE {
 	loyalist = "Loyalist",
 	traitor = "Traitor",
-	neutral = "Neutral",
 }
 
 export enum DETACHMENT_TYPE {
@@ -78,8 +77,8 @@ export interface FORMATION {
 	id: number
 	name: string
 	faction: FACTION
-	subfaction?: SUBFACTION_TYPE
-	allegiance: ALLEGIANCE
+	subfaction: SUBFACTION_TYPE | null
+	allegiance: ALLEGIANCE | null
 	compulsory: number[] | null
 	optional: number[] | null
 	choice: number[][] | null
@@ -99,8 +98,8 @@ export interface DETACHMENT {
 	name: string
 	faction: FACTION
 	subfaction?: SUBFACTION_TYPE
-	allegiance: ALLEGIANCE
-	unique?: boolean
+	allegiance: ALLEGIANCE | null
+	unique: boolean
 	detachment_type: DETACHMENT_TYPE
 	base_cost: number
 	base_size: number
@@ -140,9 +139,9 @@ export interface DETACHMENT_UPGRADE_DATASHEET {
 export interface UNIT_DATASHEET {
 	id: number
 	faction: FACTION
-	subfaction?: SUBFACTION_TYPE
-	allegiance: ALLEGIANCE
-	unique?: boolean
+	subfaction: SUBFACTION_TYPE | null
+	allegiance: ALLEGIANCE | null
+	unique: boolean
 	unit_type: { type: UNIT_TYPE; value: number }
 	name: string
 	movement: string
@@ -200,7 +199,7 @@ export interface BUILDER_LIST {
 	list_id: string
 	user_id: string
 	main_faction: FACTION
-	allegiance: ALLEGIANCE
+	allegiance: ALLEGIANCE | null
 	formations: BUILDER_FORMATION[]
 }
 
@@ -209,7 +208,7 @@ export interface BUILDER_FORMATION {
 	ref_id: string
 	id: number
 	faction: FACTION | null
-	subfaction?: SUBFACTION_TYPE
+	subfaction: SUBFACTION_TYPE | null
 	choice: BUILDER_DETACHMENT_SLOT[][] | null
 	compulsory: BUILDER_DETACHMENT_SLOT[] | null
 	optional: BUILDER_DETACHMENT_SLOT[] | null
@@ -221,7 +220,7 @@ export interface BUILDER_DETACHMENT_SLOT {
 	id: number
 	type: DETACHMENT_TYPE
 	faction: FACTION
-	restricted?: boolean
+	restricted: boolean
 	options: number[]
 	description?: string
 	selected_unit: BUILDER_DETACHMENT_UNIT | null
@@ -232,7 +231,7 @@ export interface BUILDER_DETACHMENT_UNIT {
 	name: string
 	faction: FACTION
 	subfaction?: SUBFACTION_TYPE
-	allegiance: ALLEGIANCE
+	allegiance: ALLEGIANCE | null
 	base_cost: number
 	base_size: number
 	max_size: number

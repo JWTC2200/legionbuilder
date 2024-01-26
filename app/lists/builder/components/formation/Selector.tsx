@@ -15,6 +15,7 @@ export const Selector = ({ formation }: { formation: BUILDER_FORMATION }) => {
 					ref_id: formation.ref_id,
 					faction: null,
 					id: 0,
+					subfaction: null,
 					choice: null,
 					compulsory: null,
 					optional: null,
@@ -51,7 +52,11 @@ export const Selector = ({ formation }: { formation: BUILDER_FORMATION }) => {
 					</option>
 				))}
 			</select>
-			{formation.id ? <h3 className="bg-inherit sm:rounded-t-lg sm:text-xl py-2 font-graduate text-center">{formationPoints(formation)} points</h3> : null}
+			{formation.id ? (
+				<h3 className="bg-inherit sm:rounded-t-lg sm:text-xl py-2 font-graduate text-center">
+					{formationPoints(formation)} points
+				</h3>
+			) : null}
 		</div>
 	)
 }

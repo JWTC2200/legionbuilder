@@ -20,7 +20,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
 		const getDblist = async (id: string) => {
 			const data: BUILDER_LIST = await getList(id)
 			if (data) {
-				setList({ ...data, allegiance: ALLEGIANCE.neutral })
+				setList({ ...data, allegiance: null })
 			} else {
 				toast.error("Could not find linked list")
 			}
@@ -31,7 +31,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
 		} else {
 			if (localList) {
 				const local = JSON.parse(localList) as BUILDER_LIST
-				setList({ ...local, allegiance: ALLEGIANCE.neutral })
+				setList({ ...local, allegiance: null })
 			}
 		}
 	}, [listParams])

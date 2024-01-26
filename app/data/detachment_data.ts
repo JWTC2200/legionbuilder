@@ -12,7 +12,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 1000,
 		name: "Legion Command Squad",
 		faction: FACTION.astartes,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.hq,
 		base_cost: 25,
 		base_size: 1,
@@ -27,7 +28,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 1001,
 		name: "Legion Rhino Detachment",
 		faction: FACTION.astartes,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.transport,
 		base_cost: 10,
 		base_size: 1,
@@ -90,7 +92,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 1002,
 		name: "Legion Tactical Detachment",
 		faction: FACTION.astartes,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.core,
 		base_cost: 35,
 		base_size: 4,
@@ -162,7 +165,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 1003,
 		name: "Legion Plasma Gun Support Detachment",
 		faction: FACTION.astartes,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.support,
 		base_cost: 35,
 		base_size: 4,
@@ -193,7 +197,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 1004,
 		name: "Legion Missile Launcher Support Detachment",
 		faction: FACTION.astartes,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.support,
 		base_cost: 40,
 		base_size: 4,
@@ -224,7 +229,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 1005,
 		name: "Legion Assault Detachment",
 		faction: FACTION.astartes,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.support,
 		base_cost: 30,
 		base_size: 4,
@@ -255,7 +261,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 1006,
 		name: "Legion Terminator Detachment",
 		faction: FACTION.astartes,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.support,
 		base_cost: 50,
 		base_size: 4,
@@ -286,7 +293,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 1007,
 		name: "Legion Rapier Battery Detachment",
 		faction: FACTION.astartes,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.support,
 		base_cost: 40,
 		base_size: 2,
@@ -319,7 +327,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 1008,
 		name: "Leviathan Siege Dreadnought Detachment",
 		faction: FACTION.astartes,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.support,
 		base_cost: 75,
 		base_size: 4,
@@ -328,7 +337,11 @@ export const detachmentData: DETACHMENT[] = [
 		related_unit: [],
 		loadout: [
 			{
-				text_option: ["Leviathan storm cannon or cyclone melta lance", "Twin-linked volkite caliver", "Leviathan siege claw"],
+				text_option: [
+					"Leviathan storm cannon or cyclone melta lance",
+					"Twin-linked volkite caliver",
+					"Leviathan siege claw",
+				],
 			},
 		],
 		upgrade_options: [
@@ -354,7 +367,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 1009,
 		name: "Legion Dreadnought Talon",
 		faction: FACTION.astartes,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.support,
 		base_cost: 70,
 		base_size: 4,
@@ -398,7 +412,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 1010,
 		name: "Legion Tarantula Battery",
 		faction: FACTION.astartes,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.bastion,
 		base_cost: 36,
 		base_size: 4,
@@ -434,7 +449,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 1011,
 		name: "Legion Deredeo Dreadnought Detachment",
 		faction: FACTION.astartes,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.bastion,
 		base_cost: 85,
 		base_size: 4,
@@ -443,7 +459,11 @@ export const detachmentData: DETACHMENT[] = [
 		related_unit: [],
 		loadout: [
 			{
-				text_option: ["Hellfire plasma cannonade or Anvilus autocannon battery", "Aiolos missile launcher", "Sarcophagus Mounted weapons"],
+				text_option: [
+					"Hellfire plasma cannonade or Anvilus autocannon battery",
+					"Aiolos missile launcher",
+					"Sarcophagus Mounted weapons",
+				],
 			},
 		],
 		upgrade_options: [
@@ -469,7 +489,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 1012,
 		name: "Legion Predator Squadron",
 		faction: FACTION.astartes,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.battle,
 		base_cost: 115,
 		base_size: 3,
@@ -478,7 +499,10 @@ export const detachmentData: DETACHMENT[] = [
 		related_unit: [],
 		loadout: [
 			{
-				text_option: ["Predator cannon or Predator lascannon", "Sponson Mounted heavy bolters or Sponson Mounted lascannon"],
+				text_option: [
+					"Predator cannon or Predator lascannon",
+					"Sponson Mounted heavy bolters or Sponson Mounted lascannon",
+				],
 			},
 		],
 		upgrade_options: [
@@ -509,7 +533,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 1013,
 		name: "Legion Sicaran Squadron",
 		faction: FACTION.astartes,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.battle,
 		base_cost: 105,
 		base_size: 2,
@@ -518,7 +543,11 @@ export const detachmentData: DETACHMENT[] = [
 		related_unit: [],
 		loadout: [
 			{
-				text_option: ["Hull Mounted heavy bolter", "Twin-linked accelerator autocannon or Omega plasma array", "Sponson Mounted heavy bolters or Sponson Mounted lascannon"],
+				text_option: [
+					"Hull Mounted heavy bolter",
+					"Twin-linked accelerator autocannon or Omega plasma array",
+					"Sponson Mounted heavy bolters or Sponson Mounted lascannon",
+				],
 			},
 		],
 		upgrade_options: [
@@ -547,7 +576,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 1014,
 		name: "Legion Kratos Squadron",
 		faction: FACTION.astartes,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.heavy,
 		base_cost: 150,
 		base_size: 2,
@@ -556,7 +586,11 @@ export const detachmentData: DETACHMENT[] = [
 		related_unit: [],
 		loadout: [
 			{
-				text_option: ["Kratos battlecannon with Co-axial autocannon or Melta blastgun with Co-axial autocannon", "Two Hull Mounted heavy bolter or two Kratos lascannon or two Kratos autocannon", "Sponson Mounted heavy bolters or Sponson Mounted lascannon"],
+				text_option: [
+					"Kratos battlecannon with Co-axial autocannon or Melta blastgun with Co-axial autocannon",
+					"Two Hull Mounted heavy bolter or two Kratos lascannon or two Kratos autocannon",
+					"Sponson Mounted heavy bolters or Sponson Mounted lascannon",
+				],
 			},
 		],
 		upgrade_options: [
@@ -585,7 +619,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 1015,
 		name: "Legion Xiphon Interceptor Squadron",
 		faction: FACTION.astartes,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.air,
 		base_cost: 95,
 		base_size: 1,
@@ -622,7 +657,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 1016,
 		name: "Legion Storm Eagle Squadron",
 		faction: FACTION.astartes,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.air,
 		base_cost: 100,
 		base_size: 1,
@@ -657,7 +693,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 1017,
 		name: "Legion Fire Raptor Squadron",
 		faction: FACTION.astartes,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.air,
 		base_cost: 100,
 		base_size: 1,
@@ -666,7 +703,11 @@ export const detachmentData: DETACHMENT[] = [
 		related_unit: [],
 		loadout: [
 			{
-				text_option: ["Avenger bolt cannon", "Tempest rockets", "Quad heavy bolter batteries, Lascannon batteries or Gravis autocannon batteries"],
+				text_option: [
+					"Avenger bolt cannon",
+					"Tempest rockets",
+					"Quad heavy bolter batteries, Lascannon batteries or Gravis autocannon batteries",
+				],
 			},
 		],
 		upgrade_options: [
@@ -692,7 +733,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 1018,
 		name: "Legion Thunderhawk Gunship",
 		faction: FACTION.astartes,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.air,
 		base_cost: 150,
 		base_size: 1,
@@ -701,7 +743,12 @@ export const detachmentData: DETACHMENT[] = [
 		related_unit: [],
 		loadout: [
 			{
-				text_option: ["Turbo-laser destructor", "Thunderhawk heavy bolters", "Thunderhawk lascannon", "Hellstrike missiles"],
+				text_option: [
+					"Turbo-laser destructor",
+					"Thunderhawk heavy bolters",
+					"Thunderhawk lascannon",
+					"Hellstrike missiles",
+				],
 			},
 		],
 		upgrade_options: [
@@ -730,7 +777,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 2000,
 		name: "Legate Commander Detachment",
 		faction: FACTION.solar,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.hq,
 		base_cost: 16,
 		base_size: 1,
@@ -749,7 +797,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 2001,
 		name: "Auxilia Tactical Command",
 		faction: FACTION.solar,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.hq,
 		base_cost: 10,
 		base_size: 1,
@@ -768,7 +817,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 2002,
 		name: "Auxilia Lasrifle Tercio",
 		faction: FACTION.solar,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.core,
 		base_cost: 30,
 		base_size: 4,
@@ -842,7 +892,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 2003,
 		name: "Auxilia Ogryn Charonite Section",
 		faction: FACTION.solar,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.support,
 		base_cost: 50,
 		base_size: 4,
@@ -877,7 +928,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 2004,
 		name: "Auxilia Veletaris Storm Section",
 		faction: FACTION.solar,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.support,
 		base_cost: 40,
 		base_size: 4,
@@ -912,7 +964,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 2005,
 		name: "Auxilia Rapier Battery",
 		faction: FACTION.solar,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.bastion,
 		base_cost: 50,
 		base_size: 3,
@@ -947,7 +1000,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 2006,
 		name: "Auxilia Tarantula Battery",
 		faction: FACTION.solar,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.bastion,
 		base_cost: 36,
 		base_size: 4,
@@ -983,7 +1037,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 2007,
 		name: "Auxilia Aethon Heavy Sentinel Patrol",
 		faction: FACTION.solar,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.vanguard,
 		base_cost: 35,
 		base_size: 2,
@@ -1020,7 +1075,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 2008,
 		name: "Leman Russ Strike Squadron",
 		faction: FACTION.solar,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.battle,
 		base_cost: 175,
 		base_size: 4,
@@ -1029,7 +1085,10 @@ export const detachmentData: DETACHMENT[] = [
 		related_unit: [],
 		loadout: [
 			{
-				text_option: ["Leman Russ battlecannon or Vanquisher battlecannon", "Hull Mounted heavy bolter or Hull Mounted lascannon"],
+				text_option: [
+					"Leman Russ battlecannon or Vanquisher battlecannon",
+					"Hull Mounted heavy bolter or Hull Mounted lascannon",
+				],
 			},
 		],
 		upgrade_options: [
@@ -1057,7 +1116,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 2009,
 		name: "Malcador Tank Squadron",
 		faction: FACTION.solar,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.battle,
 		base_cost: 165,
 		base_size: 2,
@@ -1066,7 +1126,11 @@ export const detachmentData: DETACHMENT[] = [
 		related_unit: [],
 		loadout: [
 			{
-				text_option: ["Hull Mounted heavy bolter or Hull Mounted lascannon or Hull Mounted autocannon or Hull Mounted demolisher cannon", "Malcador battlecannon or Malcador Vanquisher battlecannon or Malcador lascannon turret", "Malcador heavy bolter sponsons or Malcador lascannon sponsons or Malcador autocannon sponsons"],
+				text_option: [
+					"Hull Mounted heavy bolter or Hull Mounted lascannon or Hull Mounted autocannon or Hull Mounted demolisher cannon",
+					"Malcador battlecannon or Malcador Vanquisher battlecannon or Malcador lascannon turret",
+					"Malcador heavy bolter sponsons or Malcador lascannon sponsons or Malcador autocannon sponsons",
+				],
 			},
 		],
 		upgrade_options: [
@@ -1095,7 +1159,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 2010,
 		name: "Auxilia Super-Heavy Tank Squadron",
 		faction: FACTION.solar,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.heavy,
 		base_cost: 100,
 		base_size: 1,
@@ -1104,7 +1169,12 @@ export const detachmentData: DETACHMENT[] = [
 		related_unit: [],
 		loadout: [
 			{
-				text_option: ["Hull Mounted demolisher cannon and Hull Mounted heavy bolter", "Baneblade cannon with Co-axial autocannon or Hellhammer cannon with Co-axial autocannon", "Baneblade heavy bolter sponsons or Baneblade autocannon sponsons or Baneblade heavy flamer sponsons", "Lascannon sponson turrets"],
+				text_option: [
+					"Hull Mounted demolisher cannon and Hull Mounted heavy bolter",
+					"Baneblade cannon with Co-axial autocannon or Hellhammer cannon with Co-axial autocannon",
+					"Baneblade heavy bolter sponsons or Baneblade autocannon sponsons or Baneblade heavy flamer sponsons",
+					"Lascannon sponson turrets",
+				],
 			},
 		],
 		upgrade_options: [
@@ -1134,7 +1204,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 2011,
 		name: "Auxilia Thunderbolt Squadron",
 		faction: FACTION.solar,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.air,
 		base_cost: 80,
 		base_size: 1,
@@ -1143,7 +1214,11 @@ export const detachmentData: DETACHMENT[] = [
 		related_unit: [],
 		loadout: [
 			{
-				text_option: ["Quad autocannon", "Thunderbolt twin-linked lascannon", "Hellstrike missiles or Skystrike missiles or Wing bombs"],
+				text_option: [
+					"Quad autocannon",
+					"Thunderbolt twin-linked lascannon",
+					"Hellstrike missiles or Skystrike missiles or Wing bombs",
+				],
 			},
 		],
 		upgrade_options: [
@@ -1183,7 +1258,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 2012,
 		name: "Auxilia Avenger Strike Fighter Squadron",
 		faction: FACTION.solar,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.air,
 		base_cost: 85,
 		base_size: 1,
@@ -1192,7 +1268,12 @@ export const detachmentData: DETACHMENT[] = [
 		related_unit: [],
 		loadout: [
 			{
-				text_option: ["Avenger bolt cannon", "Heavy stubber tail gun", "Avenger lascannon or Avenger autocannon", "Hellstrike missiles or Skystrike missiles or Wing bombs"],
+				text_option: [
+					"Avenger bolt cannon",
+					"Heavy stubber tail gun",
+					"Avenger lascannon or Avenger autocannon",
+					"Hellstrike missiles or Skystrike missiles or Wing bombs",
+				],
 			},
 		],
 		upgrade_options: [
@@ -1220,7 +1301,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 2013,
 		name: "Auxilia Lightning Fighter Squadron",
 		faction: FACTION.solar,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.air,
 		base_cost: 85,
 		base_size: 1,
@@ -1229,7 +1311,10 @@ export const detachmentData: DETACHMENT[] = [
 		related_unit: [],
 		loadout: [
 			{
-				text_option: ["Lightning twin lascannons or Lightning twin multi-laser", "Any two of the following: Hellstrike missiles, Skyfire missiles or Phosphex bomb clusters"],
+				text_option: [
+					"Lightning twin lascannons or Lightning twin multi-laser",
+					"Any two of the following: Hellstrike missiles, Skyfire missiles or Phosphex bomb clusters",
+				],
 			},
 		],
 		upgrade_options: [
@@ -1257,7 +1342,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 2014,
 		name: "Auxilia Marauder Bomber Squadron",
 		faction: FACTION.solar,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.air,
 		base_cost: 85,
 		base_size: 1,
@@ -1266,7 +1352,12 @@ export const detachmentData: DETACHMENT[] = [
 		related_unit: [2015, 2016, 2017],
 		loadout: [
 			{
-				text_option: ["Nose Mounted lascannon", "Marauder heavy bolter turrets", "Marauder bomb bay", "Any two of the following: Hellstrike missiles, Skystrike missiles or Wing bombs"],
+				text_option: [
+					"Nose Mounted lascannon",
+					"Marauder heavy bolter turrets",
+					"Marauder bomb bay",
+					"Any two of the following: Hellstrike missiles, Skystrike missiles or Wing bombs",
+				],
 			},
 		],
 		upgrade_options: [
@@ -1329,7 +1420,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 2015,
 		name: "Auxilia Arvus Lighter",
 		faction: FACTION.solar,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.transport,
 		base_cost: 12,
 		base_size: 1,
@@ -1364,7 +1456,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 4000,
 		name: "Questoris Knight Banner",
 		faction: FACTION.strategic,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.knight,
 		base_cost: 180,
 		base_size: 1,
@@ -1375,14 +1468,21 @@ export const detachmentData: DETACHMENT[] = [
 		loadout: [
 			{
 				text: "Each Questoris Knight has one of the following weapon loadouts:",
-				text_option: ["Knight Errant: Thermal Cannon, heavy stubber and a Reaper chainsword*", "Knight Paladin: Rapid-fire battlecannon, heavy stubber and a Reaper chainsword*", "Knight Warden: Questoris-avenger gatling cannon, meltagun and a Reaper chainsword*", "Knight Gallant: Thunderstrike gauntlet, meltagun and a Reaper chainsword*", "Knight Crusader: Heavy stubber and either a Questoris-avenger gatling cannon and thermal cannon, or a rapid-fire battlecannon and thermal cannon*"],
+				text_option: [
+					"Knight Errant: Thermal Cannon, heavy stubber and a Reaper chainsword*",
+					"Knight Paladin: Rapid-fire battlecannon, heavy stubber and a Reaper chainsword*",
+					"Knight Warden: Questoris-avenger gatling cannon, meltagun and a Reaper chainsword*",
+					"Knight Gallant: Thunderstrike gauntlet, meltagun and a Reaper chainsword*",
+					"Knight Crusader: Heavy stubber and either a Questoris-avenger gatling cannon and thermal cannon, or a rapid-fire battlecannon and thermal cannon*",
+				],
 			},
 			{
 				text: "For +15pts, a Questoris Knight may have one of the following weapon loadouts instead:",
 				text_option: ["Knight Styrix", "Knight magaera"],
 			},
 			{
-				itallic_text: "* A Questoris Knight with this loadout may also be equipped with rocket pods for +5 points",
+				itallic_text:
+					"* A Questoris Knight with this loadout may also be equipped with rocket pods for +5 points",
 			},
 		],
 		upgrade_options: [
@@ -1457,7 +1557,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 4001,
 		name: "Acastus Knight Banner",
 		faction: FACTION.strategic,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.knight,
 		base_cost: 250,
 		base_size: 1,
@@ -1467,7 +1568,11 @@ export const detachmentData: DETACHMENT[] = [
 		related_unit: [4003, 4004],
 		loadout: [
 			{
-				text_option: ["Two Twin magana lascannon", "Acastus lascannon or Acastus autocannon", "Ironstorm missile pod or Helios defence missiles"],
+				text_option: [
+					"Two Twin magana lascannon",
+					"Acastus lascannon or Acastus autocannon",
+					"Ironstorm missile pod or Helios defence missiles",
+				],
 			},
 			{
 				text: "Any Acastus Knight may exchange all of its weapons for the following, for +20pts",
@@ -1516,7 +1621,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 4002,
 		name: "Warhound Hunting Pack",
 		faction: FACTION.strategic,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.titan,
 		base_cost: 330,
 		base_size: 1,
@@ -1527,7 +1633,20 @@ export const detachmentData: DETACHMENT[] = [
 		loadout: [
 			{
 				text: "Warhound Titans have two weapons chosen from the list below - it may choose two of the same weapon",
-				text_option: ["Inferno gun", "Vulcan mega-bolter", "Turbo-laser destructor", "Plasma blastgun", "Graviton eradicator", "Conversion beam dissolutor", "Ursus claw", "Natrix shock lance", "Incisor pattern melta lance", "Volkite eradicator", "Warhound shudder missiles", "Warhound swamer missles"],
+				text_option: [
+					"Inferno gun",
+					"Vulcan mega-bolter",
+					"Turbo-laser destructor",
+					"Plasma blastgun",
+					"Graviton eradicator",
+					"Conversion beam dissolutor",
+					"Ursus claw",
+					"Natrix shock lance",
+					"Incisor pattern melta lance",
+					"Volkite eradicator",
+					"Warhound shudder missiles",
+					"Warhound swamer missles",
+				],
 			},
 		],
 		upgrade_options: [
@@ -1559,7 +1678,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 4003,
 		name: "Dire Wolf Heavy Scout Titan",
 		faction: FACTION.strategic,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.titan,
 		base_cost: 385,
 		base_size: 1,
@@ -1588,7 +1708,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 4004,
 		name: "Reaver Battle Titan",
 		faction: FACTION.strategic,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.titan,
 		base_cost: 415,
 		base_size: 1,
@@ -1599,11 +1720,26 @@ export const detachmentData: DETACHMENT[] = [
 		loadout: [
 			{
 				text: "Reaver Titans have two weapons chosen from the list below - it may choose two of the same weapon",
-				text_option: ["Reaver laser blaster", "Reaver gatling blaster", "Reaver volcano cannon", "Reaver melta cannon", "Reaver power fist", "Reaver chainfist"],
+				text_option: [
+					"Reaver laser blaster",
+					"Reaver gatling blaster",
+					"Reaver volcano cannon",
+					"Reaver melta cannon",
+					"Reaver power fist",
+					"Reaver chainfist",
+				],
 			},
 			{
 				text: "Reaver Titans also have one weapon chosen from the list below:",
-				text_option: ["Reaver apocalypse missile launcher", "Reaver vulcan mega-bolter", "Reaver titan warp missile", "Reaver turbo-laser destructor", "Reaver volkite eradicator", "Reaver graviton eradicator", "Reaver conversion beam dissolutor"],
+				text_option: [
+					"Reaver apocalypse missile launcher",
+					"Reaver vulcan mega-bolter",
+					"Reaver titan warp missile",
+					"Reaver turbo-laser destructor",
+					"Reaver volkite eradicator",
+					"Reaver graviton eradicator",
+					"Reaver conversion beam dissolutor",
+				],
 			},
 		],
 		upgrade_options: [
@@ -1663,7 +1799,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 4005,
 		name: "Warbringer Nemesis Titan",
 		faction: FACTION.strategic,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.titan,
 		base_cost: 525,
 		base_size: 1,
@@ -1673,11 +1810,20 @@ export const detachmentData: DETACHMENT[] = [
 		related_unit: [],
 		loadout: [
 			{
-				text_option: ["Anvillus pattern defence batteries", "Ardex-defensor mauler bolt cannon turrets", "Mori quake cannon or Belicosa volcano cannon"],
+				text_option: [
+					"Anvillus pattern defence batteries",
+					"Ardex-defensor mauler bolt cannon turrets",
+					"Mori quake cannon or Belicosa volcano cannon",
+				],
 			},
 			{
 				text: "In addition, a Warbringer Nemesis Titan has two weapons chosen from the list below - it may choose two of the same weapon:",
-				text_option: ["Reaver laser blaster", "Reaver gatling blaster", "Reaver volcano cannon", "Reaver melta cannon"],
+				text_option: [
+					"Reaver laser blaster",
+					"Reaver gatling blaster",
+					"Reaver volcano cannon",
+					"Reaver melta cannon",
+				],
 			},
 		],
 		upgrade_options: [
@@ -1713,7 +1859,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 4006,
 		name: "Warlord Battle Titan",
 		faction: FACTION.strategic,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.titan,
 		base_cost: 600,
 		base_size: 1,
@@ -1727,11 +1874,26 @@ export const detachmentData: DETACHMENT[] = [
 			},
 			{
 				text: "In addition, a Warlord Battle Titan has two weapons chosen from the list below - it may choose two of the same weapon:",
-				text_option: ["Belicosa volcano cannon", "Sunfury plasma annihilator", "Macro-gatling blaster", "Mori quake cannon", "Arioch power claw", "Volkite destructor", "Warlord graviton ruinator", "Conversion beam extripator"],
+				text_option: [
+					"Belicosa volcano cannon",
+					"Sunfury plasma annihilator",
+					"Macro-gatling blaster",
+					"Mori quake cannon",
+					"Arioch power claw",
+					"Volkite destructor",
+					"Warlord graviton ruinator",
+					"Conversion beam extripator",
+				],
 			},
 			{
 				text: "Warlord Battle Titans also have one weapon chosen from the list below:",
-				text_option: ["Apocalypse missile launchers", "Paired gatling blasters", "Paired turbo-laser destructors", "Vulcan mega-bolter array", "Paired laser blasters"],
+				text_option: [
+					"Apocalypse missile launchers",
+					"Paired gatling blasters",
+					"Paired turbo-laser destructors",
+					"Vulcan mega-bolter array",
+					"Paired laser blasters",
+				],
 			},
 		],
 		upgrade_options: [
@@ -1783,7 +1945,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 4007,
 		name: "Warlord-Sinister Battle Titan",
 		faction: FACTION.strategic,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.titan,
 		base_cost: 675,
 		base_size: 1,
@@ -1793,15 +1956,36 @@ export const detachmentData: DETACHMENT[] = [
 		related_unit: [],
 		loadout: [
 			{
-				text_option: ["Sinistramanus Tenebrae", "Arioch Power Claw", "Death Pulse", "Antipathic tempest", "Ardex-defensor mauler bolt cannon turrets", "Ardex-defensor lascannon turrets"],
+				text_option: [
+					"Sinistramanus Tenebrae",
+					"Arioch Power Claw",
+					"Death Pulse",
+					"Antipathic tempest",
+					"Ardex-defensor mauler bolt cannon turrets",
+					"Ardex-defensor lascannon turrets",
+				],
 			},
 			{
 				text: "In addition, a Warlord-Sinister Battle Titan has one weapon chosen from the list below",
-				text_option: ["Apocalypse missile launchers", "Paired gatling blasters", "Paired turbo-laser destructors", "Vulcan mega-bolter array", "Paired laser blasters"],
+				text_option: [
+					"Apocalypse missile launchers",
+					"Paired gatling blasters",
+					"Paired turbo-laser destructors",
+					"Vulcan mega-bolter array",
+					"Paired laser blasters",
+				],
 			},
 			{
 				text: "Warlord-Sinister Battle Titans may exchange its Arioch power claw for one of the following:",
-				text_option: ["Belicosa volcano cannon", "Sunfury plasma annihilator", "Macro-gatling blaster", "Mori quake cannon", "Volkite destructor", "Warlord graviton ruinator", "Conversion beam extripator"],
+				text_option: [
+					"Belicosa volcano cannon",
+					"Sunfury plasma annihilator",
+					"Macro-gatling blaster",
+					"Mori quake cannon",
+					"Volkite destructor",
+					"Warlord graviton ruinator",
+					"Conversion beam extripator",
+				],
 			},
 		],
 		upgrade_options: [
@@ -1840,7 +2024,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 4008,
 		name: "Warmaster Heavy Battle Titan",
 		faction: FACTION.strategic,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.titan,
 		base_cost: 750,
 		base_size: 1,
@@ -1850,11 +2035,24 @@ export const detachmentData: DETACHMENT[] = [
 		related_unit: [],
 		loadout: [
 			{
-				text_option: ["Two Suzerain class plasma destructors", "Revalator missile launcher", "Ardex-defensor mauler bolt cannon turrets", "Ardex-defensor lascannon turrets", "Anvilus pattern defence batteries or Ardex-defensor bomard turrets"],
+				text_option: [
+					"Two Suzerain class plasma destructors",
+					"Revalator missile launcher",
+					"Ardex-defensor mauler bolt cannon turrets",
+					"Ardex-defensor lascannon turrets",
+					"Anvilus pattern defence batteries or Ardex-defensor bomard turrets",
+				],
 			},
 			{
 				text: "In addition, a Warmaster Titan has two weapons chosen from the list below - it may choose two of the same weapon",
-				text_option: ["Apocalypse missile array", "Melta cannon", "Inferno gun", "Vulcan mega-bolter", "Turbo-laser destructor", "Plasma blastun"],
+				text_option: [
+					"Apocalypse missile array",
+					"Melta cannon",
+					"Inferno gun",
+					"Vulcan mega-bolter",
+					"Turbo-laser destructor",
+					"Plasma blastun",
+				],
 			},
 		],
 		upgrade_options: [
@@ -1904,7 +2102,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 4009,
 		name: "Warmaster Iconoclast Titan",
 		faction: FACTION.strategic,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.titan,
 		base_cost: 750,
 		base_size: 1,
@@ -1914,11 +2113,25 @@ export const detachmentData: DETACHMENT[] = [
 		related_unit: [],
 		loadout: [
 			{
-				text_option: ["Desolator chainsword", "Kirius siege drill", "Ardex-defensor mauler bolt cannon turrets", "Ardex-defensor lascannon turrets", "Anvilus pattern defence batteries or Ardex-defensor bomard turrets", "Cruciator gatling array"],
+				text_option: [
+					"Desolator chainsword",
+					"Kirius siege drill",
+					"Ardex-defensor mauler bolt cannon turrets",
+					"Ardex-defensor lascannon turrets",
+					"Anvilus pattern defence batteries or Ardex-defensor bomard turrets",
+					"Cruciator gatling array",
+				],
 			},
 			{
 				text: "In addition, a Warmaster Iconoclast has two weapons chosen from the list below - it may choose two of the same weapon",
-				text_option: ["Apocalypse missile array", "Melta cannon", "Inferno gun", "Vulcan mega-bolter", "Turbo-laser destructor", "Plasma blastun"],
+				text_option: [
+					"Apocalypse missile array",
+					"Melta cannon",
+					"Inferno gun",
+					"Vulcan mega-bolter",
+					"Turbo-laser destructor",
+					"Plasma blastun",
+				],
 			},
 			{
 				text: "A Warmaster Iconoclast ca exchange its Kirus siege drill for a Kirus grav iploder for +10pts",
@@ -1975,7 +2188,8 @@ export const detachmentData: DETACHMENT[] = [
 		id: 4010,
 		name: "Cerastus Knight Banner",
 		faction: FACTION.strategic,
-		allegiance: ALLEGIANCE.neutral,
+		allegiance: null,
+		unique: false,
 		detachment_type: DETACHMENT_TYPE.knight,
 		base_cost: 215,
 		base_size: 1,
@@ -1986,7 +2200,11 @@ export const detachmentData: DETACHMENT[] = [
 		loadout: [
 			{
 				text: "Each Cerastus Knight has one of the following weapon loadouts:",
-				text_option: ["Knight Acheron: Acheron pettern flame cannon, Reaper chainfist and in-build twin-linked heavy bolters", "Knight Castigator: Castigator pattern bolt cannon and a Tempest Warblade", "Knight Lancer: Shock Lance and an Ion gauntlet shield"],
+				text_option: [
+					"Knight Acheron: Acheron pettern flame cannon, Reaper chainfist and in-build twin-linked heavy bolters",
+					"Knight Castigator: Castigator pattern bolt cannon and a Tempest Warblade",
+					"Knight Lancer: Shock Lance and an Ion gauntlet shield",
+				],
 			},
 			{
 				text: "For +20 points, a Cerastus Knight may have one of the following loadouts instead:",
@@ -2052,9 +2270,9 @@ export const detachmentData: DETACHMENT[] = [
 		id: 9000,
 		name: "Demi-company Rhinos",
 		faction: FACTION.astartes,
-		allegiance: ALLEGIANCE.neutral,
-		detachment_type: DETACHMENT_TYPE.transport,
+		allegiance: null,
 		unique: true,
+		detachment_type: DETACHMENT_TYPE.transport,
 		base_cost: 10,
 		base_size: 1,
 		max_size: 31,
@@ -2162,9 +2380,9 @@ export const detachmentData: DETACHMENT[] = [
 		id: 9001,
 		name: "Storm Eagle Dedicated Transports",
 		faction: FACTION.astartes,
-		allegiance: ALLEGIANCE.neutral,
-		detachment_type: DETACHMENT_TYPE.air,
+		allegiance: null,
 		unique: true,
+		detachment_type: DETACHMENT_TYPE.air,
 		base_cost: 100,
 		base_size: 1,
 		max_size: 10,
@@ -2172,7 +2390,12 @@ export const detachmentData: DETACHMENT[] = [
 		related_unit: [],
 		loadout: [
 			{
-				text_option: ["Storm Eagle heavy bolter", "Vengeance launcher", "Wing Mounted lascannon", "Tempest rockets"],
+				text_option: [
+					"Storm Eagle heavy bolter",
+					"Vengeance launcher",
+					"Wing Mounted lascannon",
+					"Tempest rockets",
+				],
 			},
 		],
 		upgrade_options: [
@@ -2205,9 +2428,9 @@ export const detachmentData: DETACHMENT[] = [
 		id: 9002,
 		name: "Thunderhawk Dedicated Transports",
 		faction: FACTION.astartes,
-		allegiance: ALLEGIANCE.neutral,
-		detachment_type: DETACHMENT_TYPE.air,
+		allegiance: null,
 		unique: true,
+		detachment_type: DETACHMENT_TYPE.air,
 		base_cost: 150,
 		base_size: 1,
 		max_size: 10,
@@ -2215,7 +2438,12 @@ export const detachmentData: DETACHMENT[] = [
 		related_unit: [],
 		loadout: [
 			{
-				text_option: ["Turbo-laser destructor", "Thunderhawk heavy bolters", "Thunderhawk lascannon", "Hellstrike missiles"],
+				text_option: [
+					"Turbo-laser destructor",
+					"Thunderhawk heavy bolters",
+					"Thunderhawk lascannon",
+					"Hellstrike missiles",
+				],
 			},
 		],
 		upgrade_options: [
@@ -2248,9 +2476,9 @@ export const detachmentData: DETACHMENT[] = [
 		id: 9003,
 		name: "Tank Commander",
 		faction: FACTION.solar,
-		allegiance: ALLEGIANCE.neutral,
-		detachment_type: DETACHMENT_TYPE.hq,
+		allegiance: null,
 		unique: true,
+		detachment_type: DETACHMENT_TYPE.hq,
 		base_cost: 10,
 		base_size: 1,
 		max_size: 1,

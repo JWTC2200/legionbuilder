@@ -1,9 +1,16 @@
-import { DETACHMENT, BUILDER_DETACHMENT_UNIT, BUILDER_DETACHMENT_UNIT_UPGRADES, BUILDER_DETACHMENT_SLOT, SLOTSET, SUBFACTION_TYPE } from "@/app/types"
+import {
+	DETACHMENT,
+	BUILDER_DETACHMENT_UNIT,
+	BUILDER_DETACHMENT_UNIT_UPGRADES,
+	BUILDER_DETACHMENT_SLOT,
+	SLOTSET,
+	SUBFACTION_TYPE,
+} from "@/app/types"
 import { detachmentData } from "@/app/data/detachment_data"
 import { listState } from "../../state"
 
 interface properties {
-	formationSubfaction?: SUBFACTION_TYPE
+	formationSubfaction: SUBFACTION_TYPE | null
 	detachmentSlot: BUILDER_DETACHMENT_SLOT
 	slotSet: SLOTSET
 }
@@ -13,7 +20,10 @@ const Select = ({ detachmentSlot, formationSubfaction, slotSet }: properties) =>
 
 	const detachmentSelectedHighlight = detachmentSlot.selected_unit ? " text-tertiary-800 font-semibold" : ""
 
-	const updateSlotArray = (detachmentArray: BUILDER_DETACHMENT_SLOT[], newUnit: BUILDER_DETACHMENT_UNIT | null): BUILDER_DETACHMENT_SLOT[] => {
+	const updateSlotArray = (
+		detachmentArray: BUILDER_DETACHMENT_SLOT[],
+		newUnit: BUILDER_DETACHMENT_UNIT | null
+	): BUILDER_DETACHMENT_SLOT[] => {
 		const newArray = detachmentArray.map((detach) => {
 			if (detach.slot_ref === detachmentSlot.slot_ref) {
 				return { ...detach, selected_unit: newUnit }
@@ -26,7 +36,11 @@ const Select = ({ detachmentSlot, formationSubfaction, slotSet }: properties) =>
 	const filterBySubfaction = (array: DETACHMENT[]) => {
 		return array.filter((detachment) => {
 			if (formationSubfaction) {
-				return detachment.subfaction === formationSubfaction || detachment.subfaction === undefined || detachment.id == detachmentSlot.selected_unit?.id
+				return (
+					detachment.subfaction === formationSubfaction ||
+					detachment.subfaction === undefined ||
+					detachment.id == detachmentSlot.selected_unit?.id
+				)
 			}
 			return detachment
 		})
@@ -34,7 +48,14 @@ const Select = ({ detachmentSlot, formationSubfaction, slotSet }: properties) =>
 
 	const detachmentOptions: DETACHMENT[] = detachmentSlot.restricted
 		? detachmentSlot.options.map((option) => detachmentData.filter((detachment) => detachment.id === option)[0])
-		: detachmentData.filter((detachment) => detachment.detachment_type === detachmentSlot.type && detachment.faction === detachmentSlot.faction && !detachment.unique).concat(detachmentData.filter((detach) => detachmentSlot.options?.includes(detach.id)))
+		: detachmentData
+				.filter(
+					(detachment) =>
+						detachment.detachment_type === detachmentSlot.type &&
+						detachment.faction === detachmentSlot.faction &&
+						!detachment.unique
+				)
+				.concat(detachmentData.filter((detach) => detachmentSlot.options?.includes(detach.id)))
 
 	const selectOptions = filterBySubfaction(detachmentOptions).map((option, index) => (
 		<option key={detachmentSlot.slot_ref + "unitOption" + index} value={option.id} className="text-black">
@@ -104,7 +125,10 @@ const Select = ({ detachmentSlot, formationSubfaction, slotSet }: properties) =>
 			name={`detachment_selector_${detachmentSlot.slot_ref}`}
 			value={detachmentSlot.selected_unit ? detachmentSlot.selected_unit.id : 0}
 			onChange={(e) => changeDetachment(Number(e.target.value))}
-			className={"w-full text-center my-1 py-1 px-2 border border-primary-950 font-graduate hover:text-tertiary-700 active:text-tertiary-700" + detachmentSelectedHighlight}>
+			className={
+				"w-full text-center my-1 py-1 px-2 border border-primary-950 font-graduate hover:text-tertiary-700 active:text-tertiary-700" +
+				detachmentSelectedHighlight
+			}>
 			<option value={"0"} className="text-black">
 				Select Detachment
 			</option>

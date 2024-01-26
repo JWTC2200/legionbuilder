@@ -25,7 +25,7 @@ export const SubfactionSelector = ({ formation }: properties) => {
 				...list,
 				formations: [...list.formations].map((forma) => {
 					if (forma.ref_id === formation.ref_id) {
-						return { ...forma, subfaction: undefined }
+						return { ...forma, subfaction: null }
 					}
 					return forma
 				}),
@@ -38,7 +38,7 @@ export const SubfactionSelector = ({ formation }: properties) => {
 			id={`subfaction_selector_${formation.ref_id}`}
 			name={`subfaction_selector_${formation.ref_id}`}
 			className={`w-[280px] text-center mt-2 py-1 px-2 border border-backgrounds-950 font-graduate text-black hover:text-tertiary-800 active:text-tertiary-800 ${detachmentSelectedHighlight}`}
-			value={formation.subfaction}
+			value={formation.subfaction ? formation.subfaction : ""}
 			onChange={(e) => changeSubfaction(e.target.value)}>
 			<option value="" className="text-backgrounds-950">
 				{formation.faction === FACTION.astartes ? "Choose Legion" : null}
