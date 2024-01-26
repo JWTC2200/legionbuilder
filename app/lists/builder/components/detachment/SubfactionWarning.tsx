@@ -6,18 +6,17 @@ interface properties {
 }
 
 const SubfactionWarning = ({ selectedUnit, formationSubfaction }: properties) => {
-	return (
-		<>
-			{selectedUnit.subfaction && formationSubfaction ? (
-				selectedUnit.subfaction !== formationSubfaction ? (
-					<p className="text-center text-red-600 pt-2 font-semibold">
-						This detachment is a {selectedUnit.subfaction} detachment.Your formation is{" "}
-						{formationSubfaction}.
-					</p>
-				) : null
-			) : null}
-		</>
-	)
+	const warning = () => {
+		if (selectedUnit.subfaction !== formationSubfaction) {
+			return (
+				<p className="text-center text-red-600 pt-2 font-semibold">
+					This detachment is a {selectedUnit.subfaction} detachment.Your formation is {formationSubfaction}.
+				</p>
+			)
+		}
+	}
+
+	return selectedUnit.subfaction && formationSubfaction ? warning() : null
 }
 
 export default SubfactionWarning

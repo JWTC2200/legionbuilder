@@ -15,16 +15,25 @@ const WidgetSide = () => {
 	const widgetWidth = sideWidget ? "w-80" : "w-8"
 
 	return (
-		<div className={`fixed flex flex-wrap justify-center items-center lg:hidden bg-secondary-800 text-secondary-50  h-24  right-0 bottom-32 rounded-l-lg text-3xl transition-all z-20` + " " + widgetWidth}>
+		<div
+			className={
+				`fixed flex flex-wrap justify-center items-center lg:hidden bg-secondary-800 text-secondary-50  h-24  right-0 bottom-32 rounded-l-lg text-3xl transition-all z-20` +
+				" " +
+				widgetWidth
+			}>
 			{sideWidget ? (
 				<div className="flex flex-wrap justify-evenly items-center text-center w-10/12 transition-all">
 					<SaveListButton className="bg-white p-2 rounded-full hover:bg-tertiary-700 active:bg-tertiary-700 z-50 text-secondary-800">
 						<FiSave />
 					</SaveListButton>
-					<Link href="/lists/view" className="bg-white p-2 rounded-full hover:bg-tertiary-700 active:bg-tertiary-700 z-50 text-secondary-800">
+					<Link
+						href="/lists/view"
+						className="bg-white p-2 rounded-full hover:bg-tertiary-700 active:bg-tertiary-700 z-50 text-secondary-800">
 						<FiPrinter />
 					</Link>
-					<button onClick={clearList} className="bg-white p-2 rounded-full hover:bg-tertiary-700 active:bg-tertiary-700 z-50 text-secondary-800">
+					<button
+						onClick={clearList}
+						className="bg-white p-2 rounded-full hover:bg-tertiary-700 active:bg-tertiary-700 z-50 text-secondary-800">
 						<ImBin />
 					</button>
 				</div>
