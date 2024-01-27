@@ -73,69 +73,6 @@ export enum SLOTSET {
 	choice = "choice",
 }
 
-export interface FORMATION {
-	id: number
-	name: string
-	faction: FACTION
-	subfaction: SUBFACTION_TYPE | null
-	allegiance: ALLEGIANCE | null
-	compulsory: number[] | null
-	optional: number[] | null
-	choice: number[][] | null
-}
-
-export interface FORMATION_SLOT {
-	id: number
-	type: DETACHMENT_TYPE
-	faction: FACTION
-	restricted: boolean
-	options: number[]
-	description?: string
-}
-
-export interface DETACHMENT {
-	id: number
-	name: string
-	faction: FACTION
-	subfaction: SUBFACTION_TYPE | null
-	allegiance: ALLEGIANCE | null
-	unique: boolean
-	detachment_type: DETACHMENT_TYPE
-	base_cost: number
-	base_size: number
-	max_size: number
-	break_strength?: number
-	main_unit: number[]
-	related_unit: number[]
-	loadout: DETACHMENT_LOADOUT[]
-	upgrade_options: DETACHMENT_UPGRADE[]
-	datasheet_info: DETACHMENT_UPGRADE_DATASHEET[]
-}
-
-export interface DETACHMENT_LOADOUT {
-	text?: string
-	text_option?: string[]
-	weapon_option?: number[]
-	itallic_text?: string
-}
-
-export interface DETACHMENT_UPGRADE {
-	name: string
-	options: {
-		number: number
-		cost: number
-		size: number
-		text?: string
-		break_strength?: number
-	}[]
-}
-
-export interface DETACHMENT_UPGRADE_DATASHEET {
-	text?: string
-	options?: { text: string; cost: number }[]
-	info?: string
-}
-
 export interface UNIT_DATASHEET {
 	id: number
 	faction: FACTION
@@ -191,6 +128,72 @@ export interface SPECIAL_RULE_INFO {
 	description: string[]
 }
 
+export interface FORMATION {
+	id: number
+	name: string
+	faction: FACTION
+	subfaction: SUBFACTION_TYPE | null
+	allegiance: ALLEGIANCE | null
+	formation_slots: FORMATION_SLOTS[]
+}
+
+export interface FORMATION_SLOTS {
+	slot_type: SLOTSET
+	slot_id: number[]
+}
+
+export interface FORMATION_SLOT {
+	id: number
+	type: DETACHMENT_TYPE
+	faction: FACTION
+	restricted: boolean
+	options: number[]
+	description?: string
+}
+
+export interface DETACHMENT {
+	id: number
+	name: string
+	faction: FACTION
+	subfaction: SUBFACTION_TYPE | null
+	allegiance: ALLEGIANCE | null
+	unique: boolean
+	detachment_type: DETACHMENT_TYPE
+	base_cost: number
+	base_size: number
+	max_size: number
+	break_strength?: number
+	main_unit: number[]
+	related_unit: number[]
+	loadout: DETACHMENT_LOADOUT[]
+	upgrade_options: DETACHMENT_UPGRADE[]
+	datasheet_info: DETACHMENT_UPGRADE_DATASHEET[]
+}
+
+export interface DETACHMENT_LOADOUT {
+	text?: string
+	text_option?: string[]
+	weapon_option?: number[]
+	itallic_text?: string
+}
+
+export interface DETACHMENT_UPGRADE {
+	name: string
+	options: {
+		number: number
+		cost: number
+		size: number
+		text?: string
+		break_strength?: number
+	}[]
+}
+
+export interface DETACHMENT_UPGRADE_DATASHEET {
+	text?: string
+	options?: { text: string; cost: number }[]
+	info?: string
+}
+
 // List builder specific types ( effectively mirrors of above types)
 
 export interface BUILDER_LIST {
@@ -209,9 +212,12 @@ export interface BUILDER_FORMATION {
 	id: number
 	faction: FACTION | null
 	subfaction: SUBFACTION_TYPE | null
-	choice: BUILDER_FORMATION_SLOT[][] | null
-	compulsory: BUILDER_FORMATION_SLOT[] | null
-	optional: BUILDER_FORMATION_SLOT[] | null
+	formation_slots: BUILDER_FORMATION_SLOTS[]
+}
+
+export interface BUILDER_FORMATION_SLOTS {
+	slot_type: SLOTSET
+	slot: BUILDER_FORMATION_SLOT
 }
 
 export interface BUILDER_FORMATION_SLOT {
