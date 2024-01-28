@@ -217,7 +217,7 @@ export interface BUILDER_FORMATION {
 
 export interface BUILDER_FORMATION_SLOTS {
 	slot_type: SLOTSET
-	slot: BUILDER_FORMATION_SLOT
+	slot: BUILDER_FORMATION_SLOT[]
 }
 
 export interface BUILDER_FORMATION_SLOT {

@@ -1,4 +1,11 @@
-import { BUILDER_FORMATION, FORMATION_SLOT, BUILDER_FORMATION_SLOT, BUILDER_LIST } from "@/app/types"
+import {
+	BUILDER_FORMATION,
+	FORMATION_SLOT,
+	BUILDER_FORMATION_SLOT,
+	BUILDER_LIST,
+	FORMATION_SLOTS,
+	SLOTSET,
+} from "@/app/types"
 import { formationData } from "@/app/data/formation_data"
 import { formationSlotData } from "@/app/data/formation_slot_data"
 import { toast } from "react-toastify"
@@ -10,15 +17,19 @@ export const setBuilderDetachment = (formationID: number, formationRef: string):
 			...findFormation,
 			ref_id: formationRef,
 			id: formationID,
-			compulsory: getSlots(findFormation.compulsory, formationRef, "compulsorySlot"),
-			optional: getSlots(findFormation.optional, formationRef, "optionalSlot"),
-			choice: getChoiceSlots(findFormation.choice, formationRef),
+			formation_slots: formationSlotHTML(findFormation.formation_slots, formationRef),
 		}
 	}
 	return null
 }
 
-const getSlots = (slotArray: number[] | null, formationRef: string, typeRef: string) => {
+const formationSlotHTML = (formationSlots: FORMATION_SLOTS[], formationRef: string) => {
+	return formationSlots.map((entry) => {
+		return { slot_type: entry.slot_type, slot: getSlots(entry.slot_id, formationRef, entry.slot_type) }
+	})
+}
+
+const getSlots = (slotArray: number[], formationRef: string, typeRef: SLOTSET) => {
 	if (slotArray) {
 		const slots: FORMATION_SLOT[] = slotArray
 			.sort()
@@ -26,6 +37,7 @@ const getSlots = (slotArray: number[] | null, formationRef: string, typeRef: str
 			.filter((exists) => {
 				return exists !== undefined
 			}) as FORMATION_SLOT[]
+
 		const returnedSlots = slots.map((slot, index) => {
 			return {
 				...slot,
@@ -37,19 +49,6 @@ const getSlots = (slotArray: number[] | null, formationRef: string, typeRef: str
 		return returnedSlots
 	}
 	return slotArray
-}
-
-const getChoiceSlots = (slotArray: number[][] | null, formationRef: string): BUILDER_FORMATION_SLOT[][] | null => {
-	if (slotArray && slotArray.length) {
-		// Need to get rid of this Typescript any
-		const choiceArray: any = slotArray.map((secondaryArray, index) => {
-			if (secondaryArray && secondaryArray.length) {
-				return getSlots(secondaryArray, formationRef, `choiceSlots${index}`)
-			}
-		})
-		return choiceArray
-	}
-	return null
 }
 
 export const handleSaveList = (list: BUILDER_LIST) => {

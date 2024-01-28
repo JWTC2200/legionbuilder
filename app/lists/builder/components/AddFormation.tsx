@@ -14,9 +14,7 @@ const AddFormation = () => {
 			id: 0,
 			faction: null,
 			subfaction: null,
-			choice: null,
-			compulsory: null,
-			optional: null,
+			formation_slots: [],
 		}
 		const newList = { ...list, formations: [...list.formations, newFormation] }
 		setList(newList)

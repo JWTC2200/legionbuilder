@@ -16,9 +16,7 @@ export const Selector = ({ formation }: { formation: BUILDER_FORMATION }) => {
 					faction: null,
 					id: 0,
 					subfaction: null,
-					choice: null,
-					compulsory: null,
-					optional: null,
+					formation_slots: [],
 				}
 		if (selectedFormation) {
 			setList({

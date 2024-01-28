@@ -7,10 +7,9 @@ interface properties {
 	formationSubfaction: SUBFACTION_TYPE | null
 	formationSection: BUILDER_FORMATION_SLOT[]
 	sectionType: SLOTSET
-	index: number
 }
 
-export const Sections = ({ formationSubfaction, formationSection, sectionType, index }: properties) => {
+export const Sections = ({ formationSubfaction, formationSection, sectionType }: properties) => {
 	return (
 		<div className="w-full">
 			<div className="w-full text-backgrounds-950 flex flex-col items-center">

@@ -13,35 +13,15 @@ import DuplicateBtn from "./DuplicateBtn"
 
 const Formation = ({ formation }: { formation: BUILDER_FORMATION }) => {
 	const [viewFormation, setViewFormation] = useState<boolean>(true)
-	const compulsoryHTML = formation.compulsory ? (
+
+	const formationSlotHTML = formation.formation_slots.map((slot, index) => (
 		<Sections
+			key={formation.ref_id + slot.slot_type + index}
 			formationSubfaction={formation.subfaction}
-			formationSection={formation.compulsory}
-			sectionType={SLOTSET.compulsory}
-			index={0}
+			formationSection={slot.slot}
+			sectionType={slot.slot_type}
 		/>
-	) : null
-	const optionalHtml = formation.optional ? (
-		<Sections
-			formationSubfaction={formation.subfaction}
-			formationSection={formation.optional}
-			sectionType={SLOTSET.optional}
-			index={0}
-		/>
-	) : null
-	const choiceHtml = formation.choice ? (
-		<div className="w-full flex flex-col">
-			{formation.choice.map((choiceArray, index) => (
-				<Sections
-					key={formation.ref_id + "choiceSet" + index}
-					formationSubfaction={formation.subfaction}
-					formationSection={choiceArray}
-					sectionType={SLOTSET.choice}
-					index={index}
-				/>
-			))}
-		</div>
-	) : null
+	))
 
 	return (
 		<div id={formation.ref_id} className="sm:border-4 border-primary-950 sm:rounded-xl flex flex-col items-center">
@@ -62,9 +42,7 @@ const Formation = ({ formation }: { formation: BUILDER_FORMATION }) => {
 						formation={formation}
 						className="text-black my-2 flex flex-wrap gap-2 font-graduate justify-center"
 					/>
-					{compulsoryHTML}
-					{optionalHtml}
-					{choiceHtml}
+					{formation.formation_slots ? formationSlotHTML : null}
 				</>
 			) : null}
 		</div>

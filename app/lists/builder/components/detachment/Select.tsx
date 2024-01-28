@@ -20,26 +20,13 @@ const Select = ({ detachmentSlot, formationSubfaction, slotSet }: properties) =>
 
 	const detachmentSelectedHighlight = detachmentSlot.selected_unit ? " text-tertiary-800 font-semibold" : ""
 
-	const updateSlotArray = (
-		detachmentArray: BUILDER_FORMATION_SLOT[],
-		newUnit: BUILDER_DETACHMENT_UNIT | null
-	): BUILDER_FORMATION_SLOT[] => {
-		const newArray = detachmentArray.map((detach) => {
-			if (detach.slot_ref === detachmentSlot.slot_ref) {
-				return { ...detach, selected_unit: newUnit }
-			}
-			return detach
-		})
-		return newArray
-	}
-
 	const filterBySubfaction = (array: DETACHMENT[]) => {
 		return array.filter((detachment) => {
 			if (formationSubfaction) {
 				return (
 					detachment.subfaction === formationSubfaction ||
-					detachment.subfaction === undefined ||
-					detachment.id == detachmentSlot.selected_unit?.id
+					detachment.subfaction === null ||
+					detachment.id === detachmentSlot.selected_unit?.id
 				)
 			}
 			return detachment
@@ -85,40 +72,35 @@ const Select = ({ detachmentSlot, formationSubfaction, slotSet }: properties) =>
 
 	const changeDetachment = (id: number) => {
 		const newUnit = createNewUnit(id)
-		if (slotSet === SLOTSET.compulsory || slotSet === SLOTSET.optional) {
-			const newArmyList = {
-				...list,
-				formations: list.formations.map((form) => {
-					if (form.ref_id === detachmentSlot.ref_id) {
-						return {
-							...form,
-							[slotSet]: form[slotSet] ? updateSlotArray(form[slotSet]!, newUnit) : null,
-						}
+		const newArmyList = {
+			...list,
+			formations: list.formations.map((newFormation) => {
+				if (newFormation.ref_id === detachmentSlot.ref_id) {
+					return {
+						...newFormation,
+						formation_slots: newFormation.formation_slots.map((slot) => {
+							if (slot.slot_type === slotSet) {
+								return {
+									...slot,
+									slot: slot.slot.map((detachment) => {
+										if (detachment.slot_ref === detachmentSlot.slot_ref) {
+											return { ...detachment, selected_unit: newUnit }
+										}
+										return detachment
+									}),
+								}
+							}
+							return slot
+						}),
 					}
-					return form
-				}),
-			}
-			setList(newArmyList)
+				}
+				return newFormation
+			}),
 		}
-		if (slotSet === SLOTSET.choice) {
-			const newArmyList = {
-				...list,
-				formations: list.formations.map((form) => {
-					if (form.ref_id === detachmentSlot.ref_id) {
-						if (!form.choice) {
-							return { ...form }
-						}
-						return {
-							...form,
-							choice: form.choice.map((array) => updateSlotArray(array, newUnit)),
-						}
-					}
-					return form
-				}),
-			}
-			setList(newArmyList)
-		}
+
+		setList(newArmyList)
 	}
+
 	return (
 		<select
 			id={`detachment_selector_${detachmentSlot.slot_ref}`}
