@@ -74,39 +74,28 @@ const Upgrades = ({
 	const updateUpgradeChoice = (upgradeId: number): void => {
 		const newUpgrade = newUpgradeObject(upgradeId)
 
-		if (slotSet === SLOTSET.compulsory || slotSet === SLOTSET.optional) {
-			const newArmyList = {
-				...list,
-				formations: list.formations.map((form) => {
-					if (form.ref_id === refId) {
-						return {
-							...form,
-							[slotSet]: form[slotSet] ? updateUpgradeSlotArray(form[slotSet]!, newUpgrade) : null,
-						}
+		const newArmyList = {
+			...list,
+			formations: list.formations.map((newFormation) => {
+				if (newFormation.ref_id === refId) {
+					return {
+						...newFormation,
+						formation_slots: newFormation.formation_slots.map((slot) => {
+							if (slot.slot_type === slotSet) {
+								return {
+									...slot,
+									slot: updateUpgradeSlotArray(slot.slot, newUpgrade),
+								}
+							}
+							return slot
+						}),
 					}
-					return form
-				}),
-			}
-			setList(newArmyList)
+				}
+				return newFormation
+			}),
 		}
-		if (slotSet === SLOTSET.choice) {
-			const newArmyList = {
-				...list,
-				formations: list.formations.map((form) => {
-					if (form.ref_id === refId) {
-						if (!form.choice) {
-							return { ...form }
-						}
-						return {
-							...form,
-							choice: form.choice.map((array) => updateUpgradeSlotArray(array, newUpgrade)),
-						}
-					}
-					return form
-				}),
-			}
-			setList(newArmyList)
-		}
+
+		setList(newArmyList)
 	}
 	return (
 		<div className="flex flex-wrap">

@@ -25,21 +25,17 @@ export const listPointTotals = (list: BUILDER_LIST) => {
 }
 
 export const formationPoints = (formation: BUILDER_FORMATION) => {
-	const compulsorySlotPoints = formation.compulsory ? formation.compulsory.map((detachment) => (detachment.selected_unit ? detachmentPoints(detachment.selected_unit) : 0)).reduce((acc, pts) => acc + pts, 0) : 0
-	const optionalSlotPoints = formation.optional ? formation.optional.map((detachment) => (detachment.selected_unit ? detachmentPoints(detachment.selected_unit) : 0)).reduce((acc, pts) => acc + pts, 0) : 0
-	const choiceSlotPoints = formation.choice
-		? formation.choice
-				.map((choice) =>
-					choice.map((detachment) => {
-						const dpoints = detachment.selected_unit ? detachmentPoints(detachment.selected_unit) : 0
-						return dpoints
-					})
-				)
-				.flat()
-				.reduce((acc, pts) => acc + pts, 0)
-		: 0
-
-	return choiceSlotPoints + compulsorySlotPoints + optionalSlotPoints
+	const points = formation.formation_slots.map((slot) =>
+		slot.slot
+			.map((detachment) => {
+				if (detachment.selected_unit) {
+					return detachmentPoints(detachment.selected_unit)
+				}
+				return 0
+			})
+			.reduce((acc, pts) => acc + pts, 0)
+	)
+	return points.reduce((acc, pts) => acc + pts, 0)
 }
 
 export const detachmentPoints = (detachment: BUILDER_DETACHMENT_UNIT) => {
