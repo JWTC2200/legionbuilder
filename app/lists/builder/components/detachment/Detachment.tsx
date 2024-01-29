@@ -11,6 +11,7 @@ import SubfactionWarning from "./SubfactionWarning"
 import ShowHide from "./ShowHide"
 import UnitUpgrades from "./UnitUpgrades"
 import SelectedUnit from "./SelectedUnit"
+import UpgradeList from "./UpgradeList"
 
 interface properties {
 	formationSubfaction: SUBFACTION_TYPE | null
@@ -26,6 +27,7 @@ const Detachment = ({ formationSubfaction, detachmentSlot, slotSet }: properties
 			<SelectedUnit detachmentSlot={detachmentSlot} formationSubfaction={formationSubfaction} />
 			<div className="px-2">
 				<Select formationSubfaction={formationSubfaction} detachmentSlot={detachmentSlot} slotSet={slotSet} />
+				<UpgradeList detachmentSlot={detachmentSlot} />
 				<UnitUpgrades detachmentSlot={detachmentSlot} slotSet={slotSet} />
 			</div>
 		</div>

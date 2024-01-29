@@ -124,7 +124,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 			{
-				name: "Additional Heavy Support",
+				name: "Additional Missile Support",
 				options: [
 					{ number: 2, cost: 15, size: 2 },
 					{ number: 4, cost: 30, size: 4 },

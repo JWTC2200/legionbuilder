@@ -10,7 +10,7 @@ interface properties {
 const UnitUpgrades = ({ detachmentSlot, slotSet }: properties) => {
 	if (detachmentSlot.selected_unit && detachmentSlot.selected_unit.upgrade_options.length) {
 		return (
-			<ShowHide title="Upgrades">
+			<ShowHide title="Upgrades" subtitle={detachmentSlot.selected_unit.name}>
 				<div className="flex flex-col gap-1">
 					{detachmentSlot.selected_unit.upgrade_options.map((option, index) => (
 						<Upgrades

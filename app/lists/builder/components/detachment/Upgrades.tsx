@@ -2,20 +2,17 @@ import { BUILDER_DETACHMENT_UNIT_UPGRADES, SLOTSET, BUILDER_DETACHMENT_UNIT, BUI
 import { detachmentData } from "@/app/data/detachment_data"
 import { listState } from "../../state"
 
-const Upgrades = ({
-	unitId,
-	upgradeOption,
-	slotSet,
-	refId,
-	slotRef,
-}: {
+interface properties {
 	unitId: number
 	upgradeOption: BUILDER_DETACHMENT_UNIT_UPGRADES
 	slotSet: SLOTSET
 	refId: string
 	slotRef: string
-}) => {
+}
+
+const Upgrades = ({ unitId, upgradeOption, slotSet, refId, slotRef }: properties) => {
 	const detachmentUpgrades = detachmentData.find((detachment) => detachment.id === unitId)
+
 	if (!detachmentUpgrades) {
 		return null
 	}
@@ -107,7 +104,7 @@ const Upgrades = ({
 					updateUpgradeChoice(Number(e.target.value))
 				}}
 				className={
-					"w-full text-center text-sm font-graduate p-1 rounded-full border border-primary-950 hover:text-tertiary-700 active:text-tertiary-700" +
+					"w-full text-center text-sm font-graduate p-1 rounded-full border border-primary-950 hover:text-tertiary-700 active:text-tertiary-700 overflow-auto" +
 					upgradeSelectedHighlight
 				}>
 				<option value="0" className="text-black">

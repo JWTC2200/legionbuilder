@@ -22,8 +22,8 @@ const page = () => {
 				<Crumb href={`/lists/builder${listParams ? `?listId=${listParams}` : ""}`}>Builder</Crumb>
 			</BreadCrumbs>
 			<ListBuilder />
-			<WidgetBottom />
-			<WidgetSide />
+			{/* <WidgetBottom /> */}
+			{/* <WidgetSide /> */}
 		</div>
 	)
 }
