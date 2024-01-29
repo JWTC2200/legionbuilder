@@ -10,7 +10,7 @@ import { formationData } from "@/app/data/formation_data"
 import { formationSlotData } from "@/app/data/formation_slot_data"
 import { toast } from "react-toastify"
 
-export const setBuilderDetachment = (formationID: number, formationRef: string): BUILDER_FORMATION | null => {
+export const newFormation = (formationID: number, formationRef: string): BUILDER_FORMATION | null => {
 	const findFormation = formationData.find((formation) => formation.id === formationID)
 	if (findFormation) {
 		return {
@@ -24,31 +24,29 @@ export const setBuilderDetachment = (formationID: number, formationRef: string):
 }
 
 const formationSlotHTML = (formationSlots: FORMATION_SLOTS[], formationRef: string) => {
-	return formationSlots.map((entry) => {
-		return { slot_type: entry.slot_type, slot: getSlots(entry.slot_id, formationRef, entry.slot_type) }
+	return formationSlots.map((entry, index) => {
+		return { slot_type: entry.slot_type, slot: getSlots(entry.slot_id, formationRef, entry.slot_type, index) }
 	})
 }
 
-const getSlots = (slotArray: number[], formationRef: string, typeRef: SLOTSET) => {
-	if (slotArray) {
-		const slots: FORMATION_SLOT[] = slotArray
-			.sort()
-			.map((id) => formationSlotData.find((slot) => slot.id === id))
-			.filter((exists) => {
-				return exists !== undefined
-			}) as FORMATION_SLOT[]
-
-		const returnedSlots = slots.map((slot, index) => {
-			return {
-				...slot,
-				ref_id: formationRef,
-				slot_ref: formationRef + typeRef + index,
-				selected_unit: null,
-			}
+const getSlots = (slotArray: number[], formationRef: string, typeRef: SLOTSET, formationIndex: number) => {
+	const slots = slotArray
+		.map((id, index) => {
+			const newSlots = formationSlotData
+				.filter((data) => data.id === id)
+				.map((slot) => {
+					return {
+						...slot,
+						ref_id: formationRef,
+						slot_ref: formationRef + typeRef + formationIndex + "_" + index,
+						selected_unit: null,
+					}
+				})
+			return newSlots
 		})
-		return returnedSlots
-	}
-	return slotArray
+		.flat()
+
+	return slots
 }
 
 export const handleSaveList = (list: BUILDER_LIST) => {

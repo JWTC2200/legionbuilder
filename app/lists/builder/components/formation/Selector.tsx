@@ -2,14 +2,14 @@ import { BUILDER_FORMATION } from "@/app/types"
 
 import { formationData } from "@/app/data/formation_data"
 import { formationPoints } from "../../../utils"
-import { setBuilderDetachment } from "../../utils"
+import { newFormation } from "../../utils"
 import { listState } from "../../state"
 
 export const Selector = ({ formation }: { formation: BUILDER_FORMATION }) => {
 	const { list, setList } = listState()
 	const chooseFormation = (id: number) => {
 		const selectedFormation = id
-			? setBuilderDetachment(id, formation.ref_id)
+			? newFormation(id, formation.ref_id)
 			: {
 					name: "",
 					ref_id: formation.ref_id,

@@ -12,7 +12,7 @@ const LoadoutWeapon = ({ detachmentSlot, weaponOption, slotSet }: properties) =>
 	const { list, setList } = listState()
 
 	const buttonStyles =
-		"flex justify-center items-center font-graduate w-6 h-6 border-2 rounded-full bg-backgrounds-950 text-primary-50"
+		"flex justify-center items-center font-graduate w-6 h-6 border-2 rounded-full bg-backgrounds-950 text-primary-50 hover:bg-tertiary-800"
 
 	const updateWeaponLoadout = (
 		slotUnit: BUILDER_DETACHMENT_UNIT,

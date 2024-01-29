@@ -10,7 +10,7 @@ const AddFormation = () => {
 	const addFormation = () => {
 		const newFormation: BUILDER_FORMATION = {
 			name: "",
-			ref_id: `formation${nanoid()}`,
+			ref_id: `${nanoid()}`,
 			id: 0,
 			faction: null,
 			subfaction: null,
