@@ -26,6 +26,7 @@ const Upgrades = ({ unitId, upgradeOption, slotSet, refId, slotRef }: properties
 	const upgradeSelectedHighlight = upgradeOption.number > 0 ? " text-tertiary-800 font-semibold" : ""
 
 	const { list, setList } = listState()
+
 	const newUpgradeObject = (upgradeId: number): BUILDER_DETACHMENT_UNIT_UPGRADES => {
 		if (upgradeId) {
 			const newUpgrade = upgradeObject.options.find((upgrade) => upgrade.number === upgradeId)!

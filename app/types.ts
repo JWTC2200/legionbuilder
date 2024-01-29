@@ -165,12 +165,13 @@ export interface DETACHMENT {
 	break_strength?: number
 	main_unit: number[]
 	related_unit: number[]
-	loadout: DETACHMENT_LOADOUT[]
+	dataslate_loadout: DATASLATE_LOADOUT[]
 	upgrade_options: DETACHMENT_UPGRADE[]
+	loadout_options: DETACHMENT_LOADOUT[]
 	datasheet_info: DETACHMENT_UPGRADE_DATASHEET[]
 }
 
-export interface DETACHMENT_LOADOUT {
+export interface DATASLATE_LOADOUT {
 	text?: string
 	text_option?: string[]
 	weapon_option?: number[]
@@ -186,6 +187,11 @@ export interface DETACHMENT_UPGRADE {
 		text?: string
 		break_strength?: number
 	}[]
+}
+
+export interface DETACHMENT_LOADOUT {
+	location: string
+	options: string[]
 }
 
 export interface DETACHMENT_UPGRADE_DATASHEET {
@@ -243,6 +249,7 @@ export interface BUILDER_DETACHMENT_UNIT {
 	max_size: number
 	break_strength?: number
 	upgrade_options: BUILDER_DETACHMENT_UNIT_UPGRADES[]
+	loadout_options: BUILDER_DETACHMENT_LOADOUT[]
 }
 
 export interface BUILDER_DETACHMENT_UNIT_UPGRADES {
@@ -252,6 +259,11 @@ export interface BUILDER_DETACHMENT_UNIT_UPGRADES {
 	size: number
 	text?: string
 	break_strength?: number
+}
+
+export interface BUILDER_DETACHMENT_LOADOUT {
+	location: string
+	options: { weapon: string; number: number }[]
 }
 
 // CONTACT FORM

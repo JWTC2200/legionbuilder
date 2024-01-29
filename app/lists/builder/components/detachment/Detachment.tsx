@@ -2,16 +2,12 @@
 
 import { BUILDER_FORMATION_SLOT, SLOTSET, SUBFACTION_TYPE } from "@/app/types"
 import Title from "./Title"
-import Details from "./Details"
 import Description from "./Description"
 import Select from "./Select"
-import Upgrades from "./Upgrades"
-import SizeWarning from "./SizeWarning"
-import SubfactionWarning from "./SubfactionWarning"
-import ShowHide from "./ShowHide"
 import UnitUpgrades from "./UnitUpgrades"
 import SelectedUnit from "./SelectedUnit"
 import UpgradeList from "./UpgradeList"
+import LoadoutOptions from "./LoadoutOptions"
 
 interface properties {
 	formationSubfaction: SUBFACTION_TYPE | null
@@ -25,10 +21,11 @@ const Detachment = ({ formationSubfaction, detachmentSlot, slotSet }: properties
 			<Title slotType={detachmentSlot.type} />
 			{detachmentSlot.description ? <Description text={detachmentSlot.description} /> : null}
 			<SelectedUnit detachmentSlot={detachmentSlot} formationSubfaction={formationSubfaction} />
-			<div className="px-2">
+			<div className="px-2 flex flex-col gap-1">
 				<Select formationSubfaction={formationSubfaction} detachmentSlot={detachmentSlot} slotSet={slotSet} />
 				<UpgradeList detachmentSlot={detachmentSlot} />
 				<UnitUpgrades detachmentSlot={detachmentSlot} slotSet={slotSet} />
+				<LoadoutOptions detachmentSlot={detachmentSlot} slotSet={slotSet} />
 			</div>
 		</div>
 	)

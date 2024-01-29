@@ -17,6 +17,9 @@ const SelectedUnit = ({ detachmentSlot, formationSubfaction }: properties) => {
 					formationSubfaction={formationSubfaction}
 				/>
 				<SizeWarning selectedUnit={detachmentSlot.selected_unit} />
+				{/*  */}
+				<button onClick={() => console.log(detachmentSlot.selected_unit)}>TEST</button>
+				{/*  */}
 				<Details selectedUnit={detachmentSlot.selected_unit} />
 			</>
 		)

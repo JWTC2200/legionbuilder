@@ -1,4 +1,4 @@
-import { BUILDER_DETACHMENT_UNIT, BUILDER_FORMATION_SLOT, SLOTSET } from "@/app/types"
+import { BUILDER_FORMATION_SLOT, SLOTSET } from "@/app/types"
 import ShowHide from "./ShowHide"
 import Upgrades from "./Upgrades"
 

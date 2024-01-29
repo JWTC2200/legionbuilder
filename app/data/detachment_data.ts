@@ -21,8 +21,9 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 1,
 		main_unit: [1000],
 		related_unit: [],
-		loadout: [],
+		dataslate_loadout: [],
 		upgrade_options: [],
+		loadout_options: [],
 		datasheet_info: [],
 	},
 	{
@@ -38,7 +39,7 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 20,
 		main_unit: [1001],
 		related_unit: [],
-		loadout: [{ text_option: ["Pintle Mounted twin-linked bolter"] }],
+		dataslate_loadout: [{ text_option: ["Pintle Mounted twin-linked bolter"] }],
 		upgrade_options: [
 			{
 				name: "Additional Rhino",
@@ -79,6 +80,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{ text: "Additional Rhino at 10pts per model." },
 			{
@@ -103,7 +105,7 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 12,
 		main_unit: [1002],
 		related_unit: [1003, 1004],
-		loadout: [{ text_option: ["Legion bolters"] }],
+		dataslate_loadout: [{ text_option: ["Legion bolters"] }],
 		upgrade_options: [
 			{
 				name: "Additional Tactical Legionaries",
@@ -151,6 +153,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "A Legion Tactical Detachment can purchase up to four upgrades. It may purchase the same upgrade multiple times: Each upgrade increases the Detachment size by 2.",
@@ -177,7 +180,7 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 8,
 		main_unit: [1005],
 		related_unit: [],
-		loadout: [{ text_option: ["Plasma gun"] }],
+		dataslate_loadout: [{ text_option: ["Plasma gun"] }],
 		upgrade_options: [
 			{
 				name: "Additional Legionaries",
@@ -187,6 +190,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "A Legion Plasma Gun Support Detachment can purchase the following upgrades:",
@@ -210,7 +214,7 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 8,
 		main_unit: [1006],
 		related_unit: [],
-		loadout: [{ text_option: ["Missile launchers"] }],
+		dataslate_loadout: [{ text_option: ["Missile launchers"] }],
 		upgrade_options: [
 			{
 				name: "Additional Legionaries",
@@ -220,6 +224,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "A Legion Missile Launcher Support Detachment can purchase the following upgrades:",
@@ -243,7 +248,7 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 8,
 		main_unit: [1004],
 		related_unit: [],
-		loadout: [{ text_option: ["Legion bolt pistols"] }],
+		dataslate_loadout: [{ text_option: ["Legion bolt pistols"] }],
 		upgrade_options: [
 			{
 				name: "Additional Assault Marines",
@@ -253,6 +258,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "A Legion Assault Detachment can purchase the following upgrades:",
@@ -276,7 +282,7 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 8,
 		main_unit: [1003],
 		related_unit: [],
-		loadout: [{ text_option: ["Legion combi-bolters"] }],
+		dataslate_loadout: [{ text_option: ["Legion combi-bolters"] }],
 		upgrade_options: [
 			{
 				name: "Additional Terminators",
@@ -286,6 +292,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "A Legion Terminator Detachment can purchase the following upgrades:",
@@ -309,7 +316,7 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 8,
 		main_unit: [1007],
 		related_unit: [],
-		loadout: [{ text_option: ["Laser destroyer array or quad launcher"] }],
+		dataslate_loadout: [{ text_option: ["Laser destroyer array or quad launcher"] }],
 		upgrade_options: [
 			{
 				name: "Additional Rapiers",
@@ -320,6 +327,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "A Legion Rapier Battery Detachment can purchase the following upgrades:",
@@ -344,7 +352,7 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 8,
 		main_unit: [1008],
 		related_unit: [],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text_option: [
 					"Leviathan storm cannon or cyclone melta lance",
@@ -362,6 +370,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "A Leviathan Siege Dreadnought Detachment can purchase the following upgrades:",
@@ -385,7 +394,7 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 10,
 		main_unit: [1009],
 		related_unit: [1008],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text_option: ["Kheres assault cannon or Twin-linked lascannons", "In-built twin-linked bolters"],
 			},
@@ -408,6 +417,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "A Legion Dreadnought Talon can purchase up to three upgrades. It may purchase the same upgrade multiple times: Each upgrade increases the Detachment size by 2.",
@@ -432,7 +442,7 @@ export const detachmentData: DETACHMENT[] = [
 		break_strength: 0,
 		main_unit: [1010],
 		related_unit: [],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text_option: ["Tarantula lascannon battery or Hyperios air-defence missile launcher"],
 			},
@@ -446,6 +456,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "A Legion Tarantula Battery can purchase the following upgrades:",
@@ -469,7 +480,7 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 8,
 		main_unit: [1011],
 		related_unit: [],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text_option: [
 					"Hellfire plasma cannonade or Anvilus autocannon battery",
@@ -487,6 +498,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "A Legion Deredeo Dreadnought Detachmentcan purchase the following upgrades:",
@@ -510,7 +522,7 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 9,
 		main_unit: [1012],
 		related_unit: [],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text_option: [
 					"Predator cannon or Predator lascannon",
@@ -531,6 +543,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "A Legion Predator Squadron can purchase the following upgrades: The same upgrade may be taken more than once",
@@ -555,7 +568,7 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 6,
 		main_unit: [1013],
 		related_unit: [],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text_option: [
 					"Hull Mounted heavy bolter",
@@ -575,6 +588,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "A Legion Sicaran Squadron can purchase the following upgrades: The same upgrade may be taken more than once",
@@ -599,7 +613,7 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 6,
 		main_unit: [1014],
 		related_unit: [],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text_option: [
 					"Kratos battlecannon with Co-axial autocannon or Melta blastgun with Co-axial autocannon",
@@ -617,6 +631,20 @@ export const detachmentData: DETACHMENT[] = [
 					{ number: 3, cost: 170, size: 3 },
 					{ number: 4, cost: 200, size: 4 },
 				],
+			},
+		],
+		loadout_options: [
+			{
+				location: "Turret",
+				options: ["Kratos battlecannon", "Melta blastgun"],
+			},
+			{
+				location: "Sponson",
+				options: ["Heavy bolters", "Lascannons"],
+			},
+			{
+				location: "Hull",
+				options: ["Heavy bolters", "Lascannons", "Autocannons"],
 			},
 		],
 		datasheet_info: [
@@ -643,7 +671,7 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 4,
 		main_unit: [1015],
 		related_unit: [],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text_option: ["Xiphon lascannon array", "Xiphon rotary missile launcher"],
 			},
@@ -658,6 +686,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "A Legion Xiphon Interceptor Squadron can purchase the following upgrades:",
@@ -682,7 +711,7 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 4,
 		main_unit: [1016],
 		related_unit: [],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text_option: ["Storm Eagle heavy bolter", "Vengeance launcher", "Wing Mounted lascannon"],
 			},
@@ -696,6 +725,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "A Legion Storm Eagle Squadron can purchase the following upgrades:",
@@ -719,7 +749,7 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 4,
 		main_unit: [1017],
 		related_unit: [],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text_option: [
 					"Avenger bolt cannon",
@@ -737,6 +767,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "A Legion Storm Eagle Squadron can purchase the following upgrades:",
@@ -760,7 +791,7 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 4,
 		main_unit: [1018],
 		related_unit: [],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text_option: [
 					"Turbo-laser destructor",
@@ -779,6 +810,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "A Legion Thunderhawk Squadron can purchase the following upgrades:",
@@ -805,12 +837,13 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 1,
 		main_unit: [2000],
 		related_unit: [],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text_option: ["Archeotech pistol", "Volkite chargers"],
 			},
 		],
 		upgrade_options: [],
+		loadout_options: [],
 		datasheet_info: [],
 	},
 	{
@@ -826,12 +859,13 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 1,
 		main_unit: [2001],
 		related_unit: [],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text_option: ["Auxillia lasrifles"],
 			},
 		],
 		upgrade_options: [],
+		loadout_options: [],
 		datasheet_info: [],
 	},
 	{
@@ -847,7 +881,7 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 16,
 		main_unit: [2002],
 		related_unit: [9000, 9001],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text_option: ["Auxillia lasrifles"],
 			},
@@ -898,6 +932,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "An Auxilia Lasrifle Tercio can purchase up to six upgrades. It may purchase the same upgrade multiple times: Each upgrade increases the Detachment size by 2.",
@@ -923,7 +958,7 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 8,
 		main_unit: [2004],
 		related_unit: [],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text_option: ["Charonite claws"],
 			},
@@ -937,6 +972,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "An Auxilia Charonite Ogryn Section can purchase the following upgrades:",
@@ -960,7 +996,7 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 8,
 		main_unit: [2003],
 		related_unit: [],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text_option: ["Auxilia laspistols", "Power axes"],
 			},
@@ -974,6 +1010,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "An Auxilia Veletaris Storm Section can purchase the following upgrades:",
@@ -997,7 +1034,7 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 9,
 		main_unit: [2005],
 		related_unit: [],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text_option: ["Laser destroyer array, quad-launcher or mole mortar"],
 			},
@@ -1011,6 +1048,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "An Auxilia Rapier Battery can purchase the following upgrades:",
@@ -1035,7 +1073,7 @@ export const detachmentData: DETACHMENT[] = [
 		break_strength: 0,
 		main_unit: [2006],
 		related_unit: [],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text_option: ["Tarantula lascannon battery or Hyperios air-defence missile launcher"],
 			},
@@ -1049,6 +1087,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "An Auxilia Tarantula Battery can purchase the following upgrades:",
@@ -1072,7 +1111,7 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 8,
 		main_unit: [2007],
 		related_unit: [],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text_option: ["Multi-laser", "Sentinel missile launcher"],
 			},
@@ -1087,6 +1126,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "An Auxilia Aethon Heavy Sentinel Patrol can purchase the following upgrades:",
@@ -1111,7 +1151,7 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 10,
 		main_unit: [2008],
 		related_unit: [],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text_option: [
 					"Leman Russ battlecannon or Vanquisher battlecannon",
@@ -1129,6 +1169,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "A Leman Russ Strike Squadron can purchase the following upgrades:",
@@ -1153,7 +1194,7 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 6,
 		main_unit: [2009],
 		related_unit: [],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text_option: [
 					"Hull Mounted heavy bolter or Hull Mounted lascannon or Hull Mounted autocannon or Hull Mounted demolisher cannon",
@@ -1173,6 +1214,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "A Malcador Tank Squadron can purchase any of the following upgrades: The same upgrade may be taken more than once.",
@@ -1197,7 +1239,7 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 6,
 		main_unit: [2010],
 		related_unit: [],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text_option: [
 					"Hull Mounted demolisher cannon and Hull Mounted heavy bolter",
@@ -1219,6 +1261,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "An Auxilia Super-Heavy Tank Squadron can purchase any of the following upgrades: The same upgrade may be taken more than once.",
@@ -1243,7 +1286,7 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 4,
 		main_unit: [2011],
 		related_unit: [],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text_option: [
 					"Quad autocannon",
@@ -1271,6 +1314,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "Any Thunderbolt Fighter can exchange its Quad autocannon for an Avenger bolt cannon for +3pts per model",
@@ -1298,7 +1342,7 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 4,
 		main_unit: [2012],
 		related_unit: [],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text_option: [
 					"Avenger bolt cannon",
@@ -1318,6 +1362,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "An Auxilia Avenger Strike Fighter Squadron can purchase the following upgrades:",
@@ -1342,7 +1387,7 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 4,
 		main_unit: [2013],
 		related_unit: [],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text_option: [
 					"Lightning twin lascannons or Lightning twin multi-laser",
@@ -1360,6 +1405,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "An Auxilia Lightning Fighter Squadron can purchase the following upgrades:",
@@ -1384,7 +1430,7 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 4,
 		main_unit: [2014],
 		related_unit: [2015, 2016, 2017],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text_option: [
 					"Nose Mounted lascannon",
@@ -1431,6 +1477,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "Any Marauder be upgraded to  one of the following Marauder variants:",
@@ -1463,7 +1510,7 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 20,
 		main_unit: [2018],
 		related_unit: [],
-		loadout: [],
+		dataslate_loadout: [],
 		upgrade_options: [
 			{
 				name: "Additional Arvus Lighter",
@@ -1478,6 +1525,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "Additional Arvus Lighter +12pts per model",
@@ -1501,7 +1549,7 @@ export const detachmentData: DETACHMENT[] = [
 		break_strength: 3,
 		main_unit: [4000],
 		related_unit: [4001, 4002, 4003, 4004],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text: "Each Questoris Knight has one of the following weapon loadouts:",
 				text_option: [
@@ -1562,6 +1610,7 @@ export const detachmentData: DETACHMENT[] = [
 				options: [{ number: 1, cost: 200, size: 3, break_strength: 2 }],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "Questoris Knights can exchange their Reaper chainsword for a thunderstrike gauntlet for +2 points per model.",
@@ -1603,7 +1652,7 @@ export const detachmentData: DETACHMENT[] = [
 		break_strength: 3,
 		main_unit: [4005],
 		related_unit: [4003, 4004],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text_option: [
 					"Two Twin magana lascannon",
@@ -1637,6 +1686,7 @@ export const detachmentData: DETACHMENT[] = [
 				options: [{ number: 1, cost: 200, size: 3, break_strength: 2 }],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "An Acastus Knight Banner can increase its Detachment size by 1 for +250pts",
@@ -1668,7 +1718,7 @@ export const detachmentData: DETACHMENT[] = [
 		break_strength: 4,
 		main_unit: [4006],
 		related_unit: [],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text: "Warhound Titans have two weapons chosen from the list below - it may choose two of the same weapon",
 				text_option: [
@@ -1696,6 +1746,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "A Warhound Hunting pack can purchase one of the following upgrades:",
@@ -1726,7 +1777,7 @@ export const detachmentData: DETACHMENT[] = [
 		break_strength: 4,
 		main_unit: [4007],
 		related_unit: [],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text_option: ["Ardex mega-bolters", "Neutron laser or Volcano cannon or Conversion beam dissipator"],
 			},
@@ -1741,6 +1792,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [],
 	},
 	{
@@ -1757,7 +1809,7 @@ export const detachmentData: DETACHMENT[] = [
 		break_strength: 5,
 		main_unit: [4008],
 		related_unit: [],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text: "Reaver Titans have two weapons chosen from the list below - it may choose two of the same weapon",
 				text_option: [
@@ -1833,6 +1885,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [],
 	},
 	{
@@ -1849,7 +1902,7 @@ export const detachmentData: DETACHMENT[] = [
 		break_strength: 5,
 		main_unit: [4009],
 		related_unit: [],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text_option: [
 					"Anvillus pattern defence batteries",
@@ -1894,6 +1947,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [],
 	},
 	{
@@ -1910,7 +1964,7 @@ export const detachmentData: DETACHMENT[] = [
 		break_strength: 6,
 		main_unit: [4010],
 		related_unit: [],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text_option: ["Ardex-defensor mauler bolt cannon turrets", "Ardex-defensor lascannon turrets"],
 			},
@@ -1981,6 +2035,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [],
 	},
 	{
@@ -1997,7 +2052,7 @@ export const detachmentData: DETACHMENT[] = [
 		break_strength: 6,
 		main_unit: [4011],
 		related_unit: [],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text_option: [
 					"Sinistramanus Tenebrae",
@@ -2061,6 +2116,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [],
 	},
 	{
@@ -2077,7 +2133,7 @@ export const detachmentData: DETACHMENT[] = [
 		break_strength: 7,
 		main_unit: [4012],
 		related_unit: [],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text_option: [
 					"Two Suzerain class plasma destructors",
@@ -2140,6 +2196,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [],
 	},
 	{
@@ -2156,7 +2213,7 @@ export const detachmentData: DETACHMENT[] = [
 		break_strength: 7,
 		main_unit: [4013],
 		related_unit: [],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text_option: [
 					"Desolator chainsword",
@@ -2227,6 +2284,7 @@ export const detachmentData: DETACHMENT[] = [
 				options: [{ number: 1, cost: 10, size: 0 }],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [],
 	},
 	{
@@ -2243,7 +2301,7 @@ export const detachmentData: DETACHMENT[] = [
 		break_strength: 3,
 		main_unit: [4014],
 		related_unit: [4015, 4003, 4004],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text: "Each Cerastus Knight has one of the following weapon loadouts:",
 				text_option: [
@@ -2285,6 +2343,7 @@ export const detachmentData: DETACHMENT[] = [
 				options: [{ number: 1, cost: 200, size: 3, break_strength: 2 }],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "A Cerastus Knight Banner can purchase one of the following upgrades:",
@@ -2325,7 +2384,7 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 31,
 		main_unit: [1001],
 		related_unit: [],
-		loadout: [{ text_option: ["Pintle Mounted twin-linked bolter"] }],
+		dataslate_loadout: [{ text_option: ["Pintle Mounted twin-linked bolter"] }],
 		upgrade_options: [
 			{
 				name: "Additional Rhino",
@@ -2413,6 +2472,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "A Rhino may change its Pintle Mounted twin-linked bolter for one of the following",
@@ -2436,7 +2496,7 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 10,
 		main_unit: [1016],
 		related_unit: [],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text_option: [
 					"Storm Eagle heavy bolter",
@@ -2462,6 +2522,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "A Legion Storm Eagle Squadron can purchase the following upgrades:",
@@ -2485,7 +2546,7 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 10,
 		main_unit: [1018],
 		related_unit: [],
-		loadout: [
+		dataslate_loadout: [
 			{
 				text_option: [
 					"Turbo-laser destructor",
@@ -2511,6 +2572,7 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "A Legion Storm Eagle Squadron can purchase the following upgrades:",
@@ -2535,8 +2597,9 @@ export const detachmentData: DETACHMENT[] = [
 		break_strength: 0,
 		main_unit: [],
 		related_unit: [],
-		loadout: [],
+		dataslate_loadout: [],
 		upgrade_options: [],
+		loadout_options: [],
 		datasheet_info: [],
 	},
 ]

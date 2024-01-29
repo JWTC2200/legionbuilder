@@ -1,4 +1,4 @@
-import { ALLEGIANCE, BUILDER_LIST, FACTION } from "@/app/types"
+import { BUILDER_LIST, FACTION } from "@/app/types"
 import { create } from "zustand"
 import { nanoid } from "nanoid"
 

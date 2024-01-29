@@ -5,6 +5,7 @@ import {
 	BUILDER_FORMATION_SLOT,
 	SLOTSET,
 	SUBFACTION_TYPE,
+	BUILDER_DETACHMENT_LOADOUT,
 } from "@/app/types"
 import { detachmentData } from "@/app/data/detachment_data"
 import { listState } from "../../state"
@@ -53,6 +54,7 @@ const Select = ({ detachmentSlot, formationSubfaction, slotSet }: properties) =>
 	const createNewUnit = (newId: number): BUILDER_DETACHMENT_UNIT | null => {
 		if (newId) {
 			const unitData = detachmentOptions.find((unit) => unit.id === newId)!
+
 			const untDataUnitUpgrades: BUILDER_DETACHMENT_UNIT_UPGRADES[] = unitData.upgrade_options.map((option) => {
 				return {
 					name: option.name,
@@ -61,9 +63,20 @@ const Select = ({ detachmentSlot, formationSubfaction, slotSet }: properties) =>
 					size: 0,
 				}
 			})
+
+			const unitDataLoadout: BUILDER_DETACHMENT_LOADOUT[] = unitData.loadout_options.map((option) => {
+				return {
+					location: option.location,
+					options: option.options.map((weapon) => {
+						return { weapon: weapon, number: 0 }
+					}),
+				}
+			})
+
 			const unitDataUnit: BUILDER_DETACHMENT_UNIT = {
 				...unitData,
 				upgrade_options: untDataUnitUpgrades,
+				loadout_options: unitDataLoadout,
 			}
 			return unitDataUnit
 		}
@@ -108,7 +121,7 @@ const Select = ({ detachmentSlot, formationSubfaction, slotSet }: properties) =>
 			value={detachmentSlot.selected_unit ? detachmentSlot.selected_unit.id : 0}
 			onChange={(e) => changeDetachment(Number(e.target.value))}
 			className={
-				"w-full text-center my-1 py-1 px-2 border border-primary-950 font-graduate hover:text-tertiary-700 active:text-tertiary-700" +
+				"w-full text-center py-1 px-2 border border-primary-950 font-graduate hover:text-tertiary-700 active:text-tertiary-700" +
 				detachmentSelectedHighlight
 			}>
 			<option value={"0"} className="text-black">

@@ -21,7 +21,7 @@ const ShowHide = ({ children, title, subtitle }: properties) => {
 
 			<div
 				className={`fixed right-0 top-0 h-full bg-dataslate border-b-4 border-black pt-20 lg:pt-32 p-1 lg:p-4 w-screen max-w-[400px] ${show ? "translate-x-0" : "translate-x-full"} ease-in-out duration-300 z-20 flex flex-col items-center gap-4`}>
-				<h3 className="clip-path-octagon-lg builder_title_background text-primary-50 font-graduate py-1 px-2 text-center">
+				<h3 className="clip-path-octagon-md builder_title_background text-primary-50 font-graduate py-1 px-2 text-center">
 					{subtitle}
 				</h3>
 				<div className="w-full">{children}</div>
