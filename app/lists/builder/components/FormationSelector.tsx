@@ -1,7 +1,7 @@
-import { ListFormation } from "@/app/types"
+import { ListFormation, ListDetachment } from "@/app/types"
 import { formationData } from "@/app/data/formation_data"
 import { listState } from "@/app/lists/state"
-import { createFormation, resetFormation } from "@/app/lists/builder/utils"
+import { createFormation, resetFormation, createNewDetachments } from "@/app/lists/builder/utils"
 
 interface FormationSelector {
 	formation: ListFormation
@@ -24,6 +24,7 @@ const FormationSelector = ({ formation }: FormationSelector) => {
 						}
 						return form
 					}),
+					detachments: createNewDetachments(newFormation, list),
 				})
 			}
 		}

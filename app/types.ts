@@ -310,6 +310,7 @@ export interface ListFormation {
 }
 
 export interface ListDetachmentGroup {
+	id: string
 	type: SLOT_TYPE
 	detachment_slots: ListDetachmentSlot[]
 }
@@ -320,9 +321,10 @@ export interface ListDetachmentSlot {
 	data_id: number
 	type: DETACHMENT_TYPE
 	faction: FACTION
-	allegiance: ALLEGIANCE | null
+	// allegiance: ALLEGIANCE | null
 	restricted: boolean
 	options: number[]
+	description?: string
 }
 
 export interface ListDetachment {
@@ -330,7 +332,7 @@ export interface ListDetachment {
 	slot_id: string
 	formation_id: string
 	name: string
-	faction: FACTION
+	faction: FACTION | null
 	allegiance: ALLEGIANCE | null
 	subfaction: string | null
 	cost: number

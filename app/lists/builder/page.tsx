@@ -16,7 +16,7 @@ const page = () => {
 	return (
 		<div className="h-screen w-full flex flex-col">
 			{/* ????? */}
-			<button onClick={() => console.log(list.formations)}>TEST</button>
+			<button onClick={() => console.log(list)}>TEST</button>
 			{/* ????? */}
 			<BreadCrumbs>
 				<Crumb href="/lists">Lists</Crumb>
@@ -26,6 +26,7 @@ const page = () => {
 				<FormationAdd />
 				<Formations />
 			</div>
+			<pre>{JSON.stringify(list, null, 2)}</pre>
 		</div>
 	)
 }

@@ -1,7 +1,6 @@
-import { emptyFormation } from "@/app/data/empty_objects"
+import { emptyFormation, emptyDetachment } from "@/app/data/empty_objects"
 import { formationData } from "@/app/data/formation_data"
 import { formationSlotData } from "@/app/data/formation_slot_data"
-import { newFormation } from "@/app/listsold/builder/utils"
 import {
 	List,
 	ListFormation,
@@ -9,6 +8,7 @@ import {
 	ListUpgrade,
 	ListLoadouts,
 	ListDetachmentGroup,
+	ListDetachmentSlot,
 	FORMATION,
 } from "@/app/types"
 
@@ -16,7 +16,7 @@ export const createFormation = (id: number, formation: ListFormation): ListForma
 	const findFormation = formationData.find((formation) => formation.id === id)
 
 	if (findFormation) {
-		const detachmentGroups = createDetachmentGroups(findFormation)
+		const detachmentGroups = createDetachmentGroups(findFormation, formation)
 
 		return {
 			...formation,
@@ -32,35 +32,60 @@ export const createFormation = (id: number, formation: ListFormation): ListForma
 	return null
 }
 
-const createDetachmentGroups = (formation: FORMATION): ListDetachmentGroup[] => {
-	const newDetachmentGroup = formation.formation_slots.map((slot) => {
+const createDetachmentGroups = (formationData: FORMATION, formation: ListFormation): ListDetachmentGroup[] => {
+	const newDetachmentGroup = formationData.formation_slots.map((slot, index) => {
 		return {
+			id: `${formation.id}index${index}`,
 			type: slot.slot_type,
-			detachment_slots: slot.slot_id.map((id) => {
-				const data = formationSlotData.find((data) => data.id === id)
-				if (data) {
-					return { id: "", formation_id: formation.id, data_id: id, type: data.type }
-				}
-			}),
+			detachment_slots: createDetachmentSlots(slot.slot_id, formation, `${formation.id}index${index}`),
 		}
 	})
 
-	return []
+	return newDetachmentGroup
 }
 
-export const resetFormation = (list: List, formation: ListFormation): List => {
-	const newFormations = list.formations.map((form) => {
-		if (form.id === formation.id) {
+const createDetachmentSlots = (ids: number[], formation: ListFormation, idString: string): ListDetachmentSlot[] => {
+	const newSlotArray = ids.map((id) => {
+		return formationSlotData
+			.filter((slot) => slot.id === id)
+			.map((entry, index) => {
+				return {
+					...entry,
+					id: `${idString}${entry.type}${index}`,
+					formation_id: formation.id,
+				} as ListDetachmentSlot
+			})
+	})
+
+	return newSlotArray.flat()
+}
+
+export const createNewDetachments = (formation: ListFormation, list: List): ListDetachment[] => {
+	const newDetachments = formation.detachment_groups
+		.map((group) => group.detachment_slots)
+		.flat()
+		.map((slot) => {
+			return {
+				...emptyDetachment,
+				slot_id: slot.id,
+				formation_id: formation.id,
+			}
+		})
+	const removeOldDetachments = list.detachments.filter((detachment) => detachment.formation_id !== formation.id)
+
+	return [...removeOldDetachments, ...newDetachments]
+}
+
+export const resetFormation = (list: List, prevFormation: ListFormation): List => {
+	const newFormations = list.formations.map((formation) => {
+		if (formation.id === prevFormation.id) {
 			return emptyFormation
 		}
-		return form
+		return formation
 	})
 	const newList: List = {
-		...list,
+		...removeTrioByFormationID(list, prevFormation),
 		formations: newFormations,
-		detachments: removeDetachmentsByFormationID(list, formation),
-		upgrades: removeUpgradesByFormationID(list, formation),
-		loadouts: removeLoadoutsByFormationID(list, formation),
 	}
 	return newList
 }
@@ -68,23 +93,30 @@ export const resetFormation = (list: List, formation: ListFormation): List => {
 export const removeFormation = (list: List, formation: ListFormation): List => {
 	const newFormations = list.formations.filter((form) => form.id !== formation.id)
 	const newList: List = {
-		...list,
+		...removeTrioByFormationID(list, formation),
 		formations: newFormations,
-		detachments: removeDetachmentsByFormationID(list, formation),
-		upgrades: removeUpgradesByFormationID(list, formation),
-		loadouts: removeLoadoutsByFormationID(list, formation),
+		detachments: list.detachments.filter((detachment) => detachment.formation_id !== formation.id),
 	}
 	return newList
 }
 
-export const removeDetachmentsByFormationID = (list: List, formation: ListFormation): ListDetachment[] => {
+const removeTrioByFormationID = (list: List, formation: ListFormation): List => {
+	return {
+		...list,
+		detachments: removeDetachmentsByFormationID(list, formation),
+		upgrades: removeUpgradesByFormationID(list, formation),
+		loadouts: removeLoadoutsByFormationID(list, formation),
+	}
+}
+
+const removeDetachmentsByFormationID = (list: List, formation: ListFormation): ListDetachment[] => {
 	return list.detachments.filter((entry) => entry.formation_id !== formation.id)
 }
 
-export const removeUpgradesByFormationID = (list: List, formation: ListFormation): ListUpgrade[] => {
+const removeUpgradesByFormationID = (list: List, formation: ListFormation): ListUpgrade[] => {
 	return list.upgrades.filter((entry) => entry.formation_id !== formation.id)
 }
 
-export const removeLoadoutsByFormationID = (list: List, formation: ListFormation): ListLoadouts[] => {
+const removeLoadoutsByFormationID = (list: List, formation: ListFormation): ListLoadouts[] => {
 	return list.loadouts.filter((entry) => entry.formation_id !== formation.id)
 }
