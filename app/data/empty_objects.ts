@@ -36,3 +36,20 @@ export const emptyDetachment: ListDetachment = {
 	size: 0,
 	max_size: 0,
 }
+
+export const emptyUpgrade: ListUpgrade = {
+	id: "",
+	formation_id: "",
+	name: "",
+	slot_id: "",
+	number: 0,
+	cost: 0,
+	size: 0,
+}
+
+export const emptyLoadouts: ListLoadouts = {
+	id: "",
+	formation_id: "",
+	slot_id: "",
+	loadouts: [],
+}

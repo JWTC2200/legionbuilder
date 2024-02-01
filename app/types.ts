@@ -306,10 +306,10 @@ export interface ListFormation {
 	faction: FACTION | null
 	allegiance: ALLEGIANCE | null
 	subfaction: string | null
-	detachment_groups: ListDetachmentGroup[]
+	detachment_groups: ListFormationGroup[]
 }
 
-export interface ListDetachmentGroup {
+export interface ListFormationGroup {
 	id: string
 	type: SLOT_TYPE
 	detachment_slots: ListDetachmentSlot[]

@@ -1,4 +1,4 @@
-import { emptyFormation, emptyDetachment } from "@/app/data/empty_objects"
+import { emptyFormation, emptyDetachment, emptyUpgrade, emptyLoadouts } from "@/app/data/empty_objects"
 import { formationData } from "@/app/data/formation_data"
 import { formationSlotData } from "@/app/data/formation_slot_data"
 import {
@@ -7,7 +7,7 @@ import {
 	ListDetachment,
 	ListUpgrade,
 	ListLoadouts,
-	ListDetachmentGroup,
+	ListFormationGroup,
 	ListDetachmentSlot,
 	FORMATION,
 } from "@/app/types"
@@ -32,7 +32,7 @@ export const createFormation = (id: number, formation: ListFormation): ListForma
 	return null
 }
 
-const createDetachmentGroups = (formationData: FORMATION, formation: ListFormation): ListDetachmentGroup[] => {
+const createDetachmentGroups = (formationData: FORMATION, formation: ListFormation): ListFormationGroup[] => {
 	const newDetachmentGroup = formationData.formation_slots.map((slot, index) => {
 		return {
 			id: `${formation.id}index${index}`,
@@ -45,13 +45,13 @@ const createDetachmentGroups = (formationData: FORMATION, formation: ListFormati
 }
 
 const createDetachmentSlots = (ids: number[], formation: ListFormation, idString: string): ListDetachmentSlot[] => {
-	const newSlotArray = ids.map((id) => {
+	const newSlotArray = ids.map((id, mainIndex) => {
 		return formationSlotData
 			.filter((slot) => slot.id === id)
 			.map((entry, index) => {
 				return {
 					...entry,
-					id: `${idString}${entry.type}${index}`,
+					id: `${idString}${entry.type}${mainIndex}`,
 					formation_id: formation.id,
 				} as ListDetachmentSlot
 			})
@@ -60,20 +60,46 @@ const createDetachmentSlots = (ids: number[], formation: ListFormation, idString
 	return newSlotArray.flat()
 }
 
+const getGroupSlots = (formation: ListFormation) => {
+	return formation.detachment_groups.map((group) => group.detachment_slots).flat()
+}
+
 export const createNewDetachments = (formation: ListFormation, list: List): ListDetachment[] => {
-	const newDetachments = formation.detachment_groups
-		.map((group) => group.detachment_slots)
-		.flat()
-		.map((slot) => {
-			return {
-				...emptyDetachment,
-				slot_id: slot.id,
-				formation_id: formation.id,
-			}
-		})
+	const newDetachments = getGroupSlots(formation).map((slot) => {
+		return {
+			...emptyDetachment,
+			slot_id: slot.id,
+			formation_id: formation.id,
+		}
+	})
 	const removeOldDetachments = list.detachments.filter((detachment) => detachment.formation_id !== formation.id)
 
 	return [...removeOldDetachments, ...newDetachments]
+}
+
+export const createNewUpgrades = (formation: ListFormation, list: List): ListUpgrade[] => {
+	const newUpgrades = getGroupSlots(formation).map((slot) => {
+		return {
+			...emptyUpgrade,
+			slot_id: slot.id,
+			formation_id: formation.id,
+		}
+	})
+	const removeOldUpgrades = list.upgrades.filter((upgrade) => upgrade.formation_id !== formation.id)
+
+	return [...removeOldUpgrades, ...newUpgrades]
+}
+export const createNewLoadouts = (formation: ListFormation, list: List): ListLoadouts[] => {
+	const newLoadouts = getGroupSlots(formation).map((slot) => {
+		return {
+			...emptyLoadouts,
+			slot_id: slot.id,
+			formation_id: formation.id,
+		}
+	})
+	const removeOldLoadouts = list.loadouts.filter((loadout) => loadout.formation_id !== formation.id)
+
+	return [...removeOldLoadouts, ...newLoadouts]
 }
 
 export const resetFormation = (list: List, prevFormation: ListFormation): List => {

@@ -26,7 +26,7 @@ const page = () => {
 				<FormationAdd />
 				<Formations />
 			</div>
-			<pre>{JSON.stringify(list, null, 2)}</pre>
+			{/* <pre>{JSON.stringify(list, null, 2)}</pre> */}
 		</div>
 	)
 }

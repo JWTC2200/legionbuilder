@@ -1,7 +1,13 @@
 import { ListFormation, ListDetachment } from "@/app/types"
 import { formationData } from "@/app/data/formation_data"
 import { listState } from "@/app/lists/state"
-import { createFormation, resetFormation, createNewDetachments } from "@/app/lists/builder/utils"
+import {
+	createFormation,
+	resetFormation,
+	createNewDetachments,
+	createNewUpgrades,
+	createNewLoadouts,
+} from "@/app/lists/builder/utils"
 
 interface FormationSelector {
 	formation: ListFormation
@@ -16,15 +22,19 @@ const FormationSelector = ({ formation }: FormationSelector) => {
 		} else {
 			const newFormation = createFormation(id, formation)
 			if (newFormation) {
+				const updatedFormations = list.formations.map((form) => {
+					if (form.id === formation.id) {
+						return newFormation
+					}
+					return form
+				})
+
 				setList({
 					...list,
-					formations: list.formations.map((form) => {
-						if (form.id === formation.id) {
-							return newFormation
-						}
-						return form
-					}),
+					formations: updatedFormations,
 					detachments: createNewDetachments(newFormation, list),
+					upgrades: createNewUpgrades(newFormation, list),
+					loadouts: createNewLoadouts(newFormation, list),
 				})
 			}
 		}
