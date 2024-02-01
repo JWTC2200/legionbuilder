@@ -4,10 +4,9 @@ export enum FACTION {
 	astartes = "Legiones Astartes",
 	solar = "Solar Auxillia",
 	strategic = "Strategic Assets",
-	none = "None",
 }
 
-export const factionTypeArray = Object.values(FACTION).filter((value) => value !== FACTION.none)
+export const factionTypeArray = Object.values(FACTION)
 
 export enum ALLEGIANCE {
 	loyalist = "Loyalist",
@@ -67,7 +66,7 @@ export enum UNIT_TYPE {
 	structure = "Structure",
 }
 
-export enum SLOTSET {
+export enum SLOT_TYPE {
 	compulsory = "compulsory",
 	optional = "optional",
 	choice = "choice",
@@ -138,7 +137,7 @@ export interface FORMATION {
 }
 
 export interface FORMATION_SLOTS {
-	slot_type: SLOTSET
+	slot_type: SLOT_TYPE
 	slot_id: number[]
 }
 
@@ -222,7 +221,7 @@ export interface BUILDER_FORMATION {
 }
 
 export interface BUILDER_FORMATION_SLOTS {
-	slot_type: SLOTSET
+	slot_type: SLOT_TYPE
 	slot: BUILDER_FORMATION_SLOT[]
 }
 
@@ -292,8 +291,8 @@ export interface List {
 	name: string
 	id: string
 	user: string
-	faction: "Solar" | "Astartes"
-	allegiance: "Loyalist" | "Traitor"
+	faction: FACTION
+	allegiance: ALLEGIANCE
 	formations: ListFormation[]
 	detachments: ListDetachment[]
 	upgrades: ListUpgrade[]
@@ -303,25 +302,25 @@ export interface List {
 export interface ListFormation {
 	id: string
 	name: string
-	list_id: string
-	faction: "Solar" | "Astartes"
-	allegiance: "Loyalist" | "Traitor" | null
+	data_id: number
+	faction: FACTION | null
+	allegiance: ALLEGIANCE | null
 	subfaction: string | null
 	detachment_groups: ListDetachmentGroup[]
 }
 
 export interface ListDetachmentGroup {
-	type: "Compulsory" | "Optional" | "Choice"
+	type: SLOT_TYPE
 	detachment_slots: ListDetachmentSlot[]
 }
 
 export interface ListDetachmentSlot {
 	id: string
 	formation_id: string
-	slot_data_id: number
-	type: "HQ" | "Core"
-	faction: "Solar" | "Astartes"
-	allegiance: "Loyalist" | "Traitor" | null
+	data_id: number
+	type: DETACHMENT_TYPE
+	faction: FACTION
+	allegiance: ALLEGIANCE | null
 	restricted: boolean
 	options: number[]
 }
@@ -331,8 +330,8 @@ export interface ListDetachment {
 	slot_id: string
 	formation_id: string
 	name: string
-	faction: "Solar" | "Astartes"
-	allegiance: "Loyalist" | "Traitor" | null
+	faction: FACTION
+	allegiance: ALLEGIANCE | null
 	subfaction: string | null
 	cost: number
 	size: number

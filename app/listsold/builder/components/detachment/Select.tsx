@@ -3,7 +3,7 @@ import {
 	BUILDER_DETACHMENT_UNIT,
 	BUILDER_DETACHMENT_UNIT_UPGRADES,
 	BUILDER_FORMATION_SLOT,
-	SLOTSET,
+	SLOT_TYPE,
 	SUBFACTION_TYPE,
 	BUILDER_DETACHMENT_LOADOUT,
 } from "@/app/types"
@@ -13,7 +13,7 @@ import { listState } from "../../state"
 interface properties {
 	formationSubfaction: SUBFACTION_TYPE | null
 	detachmentSlot: BUILDER_FORMATION_SLOT
-	slotSet: SLOTSET
+	slotSet: SLOT_TYPE
 }
 
 const Select = ({ detachmentSlot, formationSubfaction, slotSet }: properties) => {

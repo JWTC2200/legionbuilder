@@ -1,10 +1,10 @@
-import { BUILDER_FORMATION_SLOT, SLOTSET } from "@/app/types"
+import { BUILDER_FORMATION_SLOT, SLOT_TYPE } from "@/app/types"
 import ShowHide from "./ShowHide"
 import Upgrades from "./Upgrades"
 
 interface properties {
 	detachmentSlot: BUILDER_FORMATION_SLOT
-	slotSet: SLOTSET
+	slotSet: SLOT_TYPE
 }
 
 const UnitUpgrades = ({ detachmentSlot, slotSet }: properties) => {

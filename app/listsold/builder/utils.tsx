@@ -4,7 +4,7 @@ import {
 	BUILDER_FORMATION_SLOT,
 	BUILDER_LIST,
 	FORMATION_SLOTS,
-	SLOTSET,
+	SLOT_TYPE,
 } from "@/app/types"
 import { formationData } from "@/app/data/formation_data"
 import { formationSlotData } from "@/app/data/formation_slot_data"
@@ -29,7 +29,7 @@ const formationSlotHTML = (formationSlots: FORMATION_SLOTS[], formationRef: stri
 	})
 }
 
-const getSlots = (slotArray: number[], formationRef: string, typeRef: SLOTSET, formationIndex: number) => {
+const getSlots = (slotArray: number[], formationRef: string, typeRef: SLOT_TYPE, formationIndex: number) => {
 	const slots = slotArray
 		.map((id, index) => {
 			const newSlots = formationSlotData

@@ -1,6 +1,6 @@
 import { create } from "zustand"
-import { List, DB_ENTRY } from "@/app/types"
-import { emptyList } from "@/app/data/empty_objects"
+import { List, FACTION, ALLEGIANCE, DB_ENTRY } from "../types"
+import { nanoid } from "nanoid"
 
 interface UserListsState {
 	userLists: DB_ENTRY[]
@@ -11,6 +11,19 @@ interface ListState {
 	list: List
 	setList: (update: List) => void
 	clearList: () => void
+}
+
+const emptyList: List = {
+	points: 3000,
+	name: "New List",
+	id: nanoid(),
+	user: "",
+	faction: FACTION.astartes,
+	allegiance: ALLEGIANCE.loyalist,
+	formations: [],
+	detachments: [],
+	upgrades: [],
+	loadouts: [],
 }
 
 export const userListsState = create<UserListsState>((set) => ({

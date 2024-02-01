@@ -1,0 +1,60 @@
+import { ListFormation } from "@/app/types"
+import { formationData } from "@/app/data/formation_data"
+import { listState } from "@/app/lists/state"
+import { createFormation, resetFormation } from "@/app/lists/builder/utils"
+
+interface FormationSelector {
+	formation: ListFormation
+}
+
+const FormationSelector = ({ formation }: FormationSelector) => {
+	const { list, setList } = listState()
+
+	const selectFormation = (id: number) => {
+		if (!id) {
+			setList(resetFormation(list, formation))
+		} else {
+			const newFormation = createFormation(id, formation)
+			if (newFormation) {
+				setList({
+					...list,
+					formations: list.formations.map((form) => {
+						if (form.id === formation.id) {
+							return newFormation
+						}
+						return form
+					}),
+				})
+			}
+		}
+	}
+
+	return (
+		<div className="flex flex-wrap sm:gap-4 items-center justify-center">
+			<select
+				id={`formation_selector_${formation.id}`}
+				name={`formation_selector_${formation.id}`}
+				className="bg-transparent sm:text-xl py-2 font-graduate text-center max-w-[300px] sm:max-w-[400px] lg:max-w-full outline-none hover:text-primary-400 active:text-primary-400"
+				value={formation.data_id}
+				onChange={(e) => {
+					selectFormation(Number(e.target.value))
+				}}>
+				<option value="0" className="text-primary-950">
+					SELECT FORMATION
+				</option>
+				{formationData.map((format) => (
+					<option key={formation.id + format.name} value={format.id} className="text-primary-950">
+						{format.name}
+					</option>
+				))}
+			</select>
+			{/* {formation.id ? (
+        <h3 className="bg-inherit sm:rounded-t-lg sm:text-xl py-2 font-graduate text-center">
+            {formationPoints(formation)} points
+        </h3>
+    ) : null} */}
+		</div>
+	)
+}
+
+export default FormationSelector

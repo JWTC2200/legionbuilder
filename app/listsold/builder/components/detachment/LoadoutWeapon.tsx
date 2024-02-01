@@ -1,11 +1,11 @@
-import { BUILDER_DETACHMENT_LOADOUT, BUILDER_FORMATION_SLOT, BUILDER_DETACHMENT_UNIT, SLOTSET } from "@/app/types"
+import { BUILDER_DETACHMENT_LOADOUT, BUILDER_FORMATION_SLOT, BUILDER_DETACHMENT_UNIT, SLOT_TYPE } from "@/app/types"
 import { listState } from "../../state"
 import { detachmentSize } from "@/app/lists/utils"
 
 interface properties {
 	detachmentSlot: BUILDER_FORMATION_SLOT
 	weaponOption: BUILDER_DETACHMENT_LOADOUT
-	slotSet: SLOTSET
+	slotSet: SLOT_TYPE
 }
 
 const LoadoutWeapon = ({ detachmentSlot, weaponOption, slotSet }: properties) => {

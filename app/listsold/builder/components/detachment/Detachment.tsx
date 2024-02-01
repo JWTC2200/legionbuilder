@@ -1,6 +1,6 @@
 "use client"
 
-import { BUILDER_FORMATION_SLOT, SLOTSET, SUBFACTION_TYPE } from "@/app/types"
+import { BUILDER_FORMATION_SLOT, SLOT_TYPE, SUBFACTION_TYPE } from "@/app/types"
 import Title from "./Title"
 import Description from "./Description"
 import Select from "./Select"
@@ -12,7 +12,7 @@ import LoadoutOptions from "./LoadoutOptions"
 interface properties {
 	formationSubfaction: SUBFACTION_TYPE | null
 	detachmentSlot: BUILDER_FORMATION_SLOT
-	slotSet: SLOTSET
+	slotSet: SLOT_TYPE
 }
 
 const Detachment = ({ formationSubfaction, detachmentSlot, slotSet }: properties) => {

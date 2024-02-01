@@ -1,11 +1,16 @@
-import { BUILDER_DETACHMENT_UNIT_UPGRADES, SLOTSET, BUILDER_DETACHMENT_UNIT, BUILDER_FORMATION_SLOT } from "@/app/types"
+import {
+	BUILDER_DETACHMENT_UNIT_UPGRADES,
+	SLOT_TYPE,
+	BUILDER_DETACHMENT_UNIT,
+	BUILDER_FORMATION_SLOT,
+} from "@/app/types"
 import { detachmentData } from "@/app/data/detachment_data"
 import { listState } from "../../state"
 
 interface properties {
 	unitId: number
 	upgradeOption: BUILDER_DETACHMENT_UNIT_UPGRADES
-	slotSet: SLOTSET
+	slotSet: SLOT_TYPE
 	refId: string
 	slotRef: string
 }
