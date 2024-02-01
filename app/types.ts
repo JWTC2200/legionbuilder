@@ -284,3 +284,82 @@ export interface DB_ENTRY {
 	name: string
 	created: Timestamp
 }
+
+// List object
+
+export interface List {
+	points: number
+	name: string
+	id: string
+	user: string
+	faction: "Solar" | "Astartes"
+	allegiance: "Loyalist" | "Traitor"
+	formations: ListFormation[]
+	detachments: ListDetachment[]
+	upgrades: ListUpgrade[]
+	loadouts: ListLoadouts[]
+}
+
+export interface ListFormation {
+	id: string
+	name: string
+	list_id: string
+	faction: "Solar" | "Astartes"
+	allegiance: "Loyalist" | "Traitor" | null
+	subfaction: string | null
+	detachment_groups: ListDetachmentGroup[]
+}
+
+export interface ListDetachmentGroup {
+	type: "Compulsory" | "Optional" | "Choice"
+	detachment_slots: ListDetachmentSlot[]
+}
+
+export interface ListDetachmentSlot {
+	id: string
+	formation_id: string
+	slot_data_id: number
+	type: "HQ" | "Core"
+	faction: "Solar" | "Astartes"
+	allegiance: "Loyalist" | "Traitor" | null
+	restricted: boolean
+	options: number[]
+}
+
+export interface ListDetachment {
+	id: number
+	slot_id: string
+	formation_id: string
+	name: string
+	faction: "Solar" | "Astartes"
+	allegiance: "Loyalist" | "Traitor" | null
+	subfaction: string | null
+	cost: number
+	size: number
+	max_size: number
+	break_strength?: number
+}
+
+export interface ListUpgrade {
+	id: string
+	formation_id: string
+	name: string
+	slot_id: string
+	number: number
+	cost: number
+	size: number
+	text?: string
+	break_strength?: number
+}
+
+export interface ListLoadouts {
+	id: string
+	formation_id: string
+	slot_id: string
+	loadouts: ListLoadout[]
+}
+
+export interface ListLoadout {
+	weapons: { location: string; weapon: string; cost: number }[]
+	number: number
+}
