@@ -636,15 +636,25 @@ export const detachmentData: DETACHMENT[] = [
 		loadout_options: [
 			{
 				location: "Turret",
-				options: ["Kratos battlecannon", "Melta blastgun"],
+				options: [
+					{ name: "Kratos battlecannon", cost: 0 },
+					{ name: "Melta blastgun", cost: 0 },
+				],
 			},
 			{
 				location: "Sponson",
-				options: ["Heavy bolters", "Lascannons"],
+				options: [
+					{ name: "Heavy bolters", cost: 0 },
+					{ name: "Lascannons", cost: 0 },
+				],
 			},
 			{
 				location: "Hull",
-				options: ["Heavy bolters", "Lascannons", "Autocannons"],
+				options: [
+					{ name: "Heavy bolters", cost: 0 },
+					{ name: "Lascannons", cost: 0 },
+					{ name: "Autocannons", cost: 0 },
+				],
 			},
 		],
 		datasheet_info: [
@@ -1746,7 +1756,42 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
-		loadout_options: [],
+		loadout_options: [
+			{
+				location: "Arm 1",
+				options: [
+					{ name: "Inferno gun", cost: 10 },
+					{ name: "Vulcan mega-bolter", cost: 20 },
+					{ name: "Turbo-laser destructor", cost: 0 },
+					{ name: "Plasma blastgun", cost: 0 },
+					{ name: "Graviton eradicator", cost: 0 },
+					{ name: "Conversion beam dissolutor", cost: 0 },
+					{ name: "Ursus claw", cost: 0 },
+					{ name: "Natrix shock lance", cost: 0 },
+					{ name: "Incisor pattern melta lance", cost: 0 },
+					{ name: "Volkite eradicator", cost: 0 },
+					{ name: "Warhound shudder missiles", cost: 0 },
+					{ name: "Warhound swamer missles", cost: 0 },
+				],
+			},
+			{
+				location: "Arm 2",
+				options: [
+					{ name: "Inferno gun", cost: 10 },
+					{ name: "Vulcan mega-bolter", cost: 20 },
+					{ name: "Turbo-laser destructor", cost: 0 },
+					{ name: "Plasma blastgun", cost: 0 },
+					{ name: "Graviton eradicator", cost: 0 },
+					{ name: "Conversion beam dissolutor", cost: 0 },
+					{ name: "Ursus claw", cost: 0 },
+					{ name: "Natrix shock lance", cost: 0 },
+					{ name: "Incisor pattern melta lance", cost: 0 },
+					{ name: "Volkite eradicator", cost: 0 },
+					{ name: "Warhound shudder missiles", cost: 0 },
+					{ name: "Warhound swamer missles", cost: 0 },
+				],
+			},
+		],
 		datasheet_info: [
 			{
 				text: "A Warhound Hunting pack can purchase one of the following upgrades:",

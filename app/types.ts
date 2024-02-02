@@ -190,7 +190,12 @@ export interface DETACHMENT_UPGRADE {
 
 export interface DETACHMENT_LOADOUT {
 	location: string
-	options: string[]
+	options: DETACHMENT_LOADOUT_WEAPON[]
+}
+
+export interface DETACHMENT_LOADOUT_WEAPON {
+	name: string
+	cost: number
 }
 
 export interface DETACHMENT_UPGRADE_DATASHEET {

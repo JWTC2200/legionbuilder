@@ -137,3 +137,11 @@ const newDetachmentObject = (currentDetachment: ListDetachment, data: DETACHMENT
 		break_strength: data.break_strength,
 	}
 }
+
+export const sideMenuTitle = (text: string): React.ReactNode => {
+	return (
+		<h3 className="clip-path-octagon-md builder_title_background text-primary-50 font-graduate py-1 px-6 text-center">
+			{text}
+		</h3>
+	)
+}
