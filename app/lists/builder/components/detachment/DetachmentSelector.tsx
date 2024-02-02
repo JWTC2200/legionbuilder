@@ -1,5 +1,8 @@
 import { ListDetachmentSlot } from "@/app/types"
 import { listState } from "@/app/lists/state"
+import { detachmentData } from "@/app/data/detachment_data"
+import { getSelectorIdArray, updateAllSlotInfo, filterBySubfactions } from "./utils"
+import { toast } from "react-toastify"
 
 interface properties {
 	detachmentSlot: ListDetachmentSlot
@@ -10,17 +13,38 @@ const DetachmentSelector = ({ detachmentSlot }: properties) => {
 
 	const formationSubfaction = list.formations.find(
 		(formation) => formation.id === detachmentSlot.formation_id
-	)?.subfaction
+	)!.subfaction
 
-	const detachment = list.detachments.find((detachment) => detachment.slot_id === detachmentSlot.id)
+	const detachment = list.detachments.find((detachment) => detachment.slot_id === detachmentSlot.id)!
 
 	const selectedStyling = detachment?.id && " text-tertiary-800 font-semibold"
 
-	const selectDetachment = (e: number) => {}
+	const selectorOptions = filterBySubfactions(
+		getSelectorIdArray(detachmentSlot),
+		formationSubfaction,
+		detachment
+	).map((option, index) => (
+		<option key={detachmentSlot.id + "option" + index} value={option.id} className="text-black">
+			{option.base_cost}pts: {option.name}
+		</option>
+	))
+
+	const selectDetachment = (e: number) => {
+		if (!e) {
+			setList(updateAllSlotInfo(list, detachment, "clear"))
+		} else {
+			const data = detachmentData.find((detachment) => detachment.id === e)!
+			if (!data) {
+				toast.error("Error with detachment")
+				return
+			}
+			setList(updateAllSlotInfo(list, detachment, data))
+		}
+	}
 
 	return (
 		<select
-			value={detachment && detachment.id ? detachment.id : 0}
+			value={detachment && detachment.id ? detachment.id : "0"}
 			onChange={(e) => selectDetachment(Number(e.target.value))}
 			className={
 				"w-full text-center py-1 px-2 border border-primary-950 font-graduate hover:text-tertiary-700 active:text-tertiary-700" +
@@ -29,7 +53,7 @@ const DetachmentSelector = ({ detachmentSlot }: properties) => {
 			<option value={"0"} className="text-black">
 				Select Detachment
 			</option>
-			{/* {selectOptions} */}
+			{selectorOptions}
 		</select>
 	)
 }

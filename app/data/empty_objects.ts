@@ -1,4 +1,4 @@
-import { List, FACTION, ALLEGIANCE, ListFormation, ListDetachment } from "@/app/types"
+import { List, FACTION, ALLEGIANCE, ListFormation, ListDetachment, ListUpgrades, ListLoadouts } from "@/app/types"
 import { nanoid } from "nanoid"
 
 export const emptyList: List = {
@@ -37,18 +37,15 @@ export const emptyDetachment: ListDetachment = {
 	max_size: 0,
 }
 
-export const emptyUpgrade: ListUpgrade = {
-	id: "",
+export const emptyUpgrade: ListUpgrades = {
+	id: 0,
 	formation_id: "",
-	name: "",
 	slot_id: "",
-	number: 0,
-	cost: 0,
-	size: 0,
+	upgrades: [],
 }
 
 export const emptyLoadouts: ListLoadouts = {
-	id: "",
+	id: 0,
 	formation_id: "",
 	slot_id: "",
 	loadouts: [],

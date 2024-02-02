@@ -5,7 +5,7 @@ import {
 	List,
 	ListFormation,
 	ListDetachment,
-	ListUpgrade,
+	ListUpgrades,
 	ListLoadouts,
 	ListFormationGroup,
 	ListDetachmentSlot,
@@ -77,7 +77,7 @@ export const createNewDetachments = (formation: ListFormation, list: List): List
 	return [...removeOldDetachments, ...newDetachments]
 }
 
-export const createNewUpgrades = (formation: ListFormation, list: List): ListUpgrade[] => {
+export const createNewUpgrades = (formation: ListFormation, list: List): ListUpgrades[] => {
 	const newUpgrades = getGroupSlots(formation).map((slot) => {
 		return {
 			...emptyUpgrade,
@@ -139,10 +139,18 @@ const removeDetachmentsByFormationID = (list: List, formation: ListFormation): L
 	return list.detachments.filter((entry) => entry.formation_id !== formation.id)
 }
 
-const removeUpgradesByFormationID = (list: List, formation: ListFormation): ListUpgrade[] => {
+const removeUpgradesByFormationID = (list: List, formation: ListFormation): ListUpgrades[] => {
 	return list.upgrades.filter((entry) => entry.formation_id !== formation.id)
 }
 
 const removeLoadoutsByFormationID = (list: List, formation: ListFormation): ListLoadouts[] => {
 	return list.loadouts.filter((entry) => entry.formation_id !== formation.id)
+}
+
+export const findUpgradeBySlotId = (list: List, id: string): ListUpgrades | undefined => {
+	return list.upgrades.find((upgrade) => upgrade.slot_id === id)
+}
+
+export const findLoadoutBySlotId = (list: List, id: string): ListLoadouts | undefined => {
+	return list.loadouts.find((loadout) => loadout.slot_id === id)
 }

@@ -295,7 +295,7 @@ export interface List {
 	allegiance: ALLEGIANCE
 	formations: ListFormation[]
 	detachments: ListDetachment[]
-	upgrades: ListUpgrade[]
+	upgrades: ListUpgrades[]
 	loadouts: ListLoadouts[]
 }
 
@@ -305,7 +305,7 @@ export interface ListFormation {
 	data_id: number
 	faction: FACTION | null
 	allegiance: ALLEGIANCE | null
-	subfaction: string | null
+	subfaction: SUBFACTION_TYPE | null
 	detachment_groups: ListFormationGroup[]
 }
 
@@ -341,20 +341,25 @@ export interface ListDetachment {
 	break_strength?: number
 }
 
-export interface ListUpgrade {
-	id: string
+export interface ListUpgrades {
+	id: number
 	formation_id: string
-	name: string
 	slot_id: string
+	upgrades: ListUpgrade[]
+}
+
+export interface ListUpgrade {
+	name: string
 	number: number
 	cost: number
 	size: number
 	text?: string
 	break_strength?: number
 }
+// export interface
 
 export interface ListLoadouts {
-	id: string
+	id: number
 	formation_id: string
 	slot_id: string
 	loadouts: ListLoadout[]

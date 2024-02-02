@@ -2,14 +2,16 @@
 
 import { BreadCrumbs, Crumb } from "@/app/components/BreadCrumbs"
 import { useSearchParams } from "next/navigation"
-import { listState } from "../state"
+import { listState, listSidebar } from "../state"
 import FormationAdd from "./components/FormationAdd"
 import Formations from "./components/Formations"
+import SideMenu from "./components/SideMenu"
 
 const page = () => {
 	const searchParams = useSearchParams()
 	const listParams = searchParams.get("listId")
 	const { list } = listState()
+	const { visible } = listSidebar()
 
 	const ids = list.formations.map((form) => form.id)
 
@@ -26,7 +28,8 @@ const page = () => {
 				<FormationAdd />
 				<Formations />
 			</div>
-			{/* <pre>{JSON.stringify(list, null, 2)}</pre> */}
+			<pre>{JSON.stringify(list, null, 2)}</pre>
+			<SideMenu />
 		</div>
 	)
 }
