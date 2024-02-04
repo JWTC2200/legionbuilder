@@ -203,6 +203,13 @@ export const loadoutPoints = (loadout: ListLoadout): number => {
 	return loadout.weapons.reduce((acc, sum) => acc + sum.cost, 0)
 }
 
+export const totalLoadoutPoints = (list: List, slot_id: string): number => {
+	return list.loadouts
+		.filter((loadout) => loadout.slot_id === slot_id)
+		.map((loadouts) => loadouts.loadouts.reduce((acc, sum) => acc + loadoutPoints(sum) * sum.number, 0))
+		.reduce((acc, sum) => acc + sum, 0)
+}
+
 export const loadoutCount = (list: List, slot_id: string): number => {
 	return list.loadouts
 		.filter((loadout) => loadout.slot_id === slot_id)
@@ -215,6 +222,23 @@ export const upgradeSizeCount = (list: List, slot_id: string): number => {
 		.filter((upgrade) => upgrade.slot_id === slot_id)
 		.map((upgrades) => upgrades.upgrades.reduce((acc, sum) => acc + sum.size, 0))
 		.reduce((acc, sum) => acc + sum, 0)
+}
+
+export const upgradeTotalPoints = (list: List, slot_id: string): number => {
+	return list.upgrades
+		.filter((upgrade) => upgrade.slot_id === slot_id)
+		.map((upgrades) => upgrades.upgrades.reduce((acc, sum) => acc + sum.cost, 0))
+		.reduce((acc, sum) => acc + sum, 0)
+}
+
+export const detachmentPoints = (list: List, slot_id: string): number => {
+	return list.detachments
+		.filter((detachment) => detachment.slot_id === slot_id)
+		.reduce((acc, sum) => acc + sum.cost, 0)
+}
+
+export const totalDetachmentPoints = (list: List, slot_id: string): number => {
+	return detachmentPoints(list, slot_id) + upgradeTotalPoints(list, slot_id) + totalLoadoutPoints(list, slot_id)
 }
 
 export const currentDetachmentSize = (list: List, slot_id: string): number => {

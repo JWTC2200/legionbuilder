@@ -1,10 +1,11 @@
 import { useState } from "react"
 import { listState } from "@/app/lists/state"
-import { ListFormation } from "@/app/types"
+import { ALLEGIANCE, ListFormation, FACTION } from "@/app/types"
 import FormationToggle from "./FormationToggle"
 import FormationDelete from "./FormationDelete"
 import FormationSelector from "./FormationSelector"
 import { FormationGroup } from "./FormationGroup"
+import SubfactionSelector from "./SubfactionSelector"
 
 interface properties {
 	formation: ListFormation
@@ -25,8 +26,11 @@ const Formation = ({ formation }: properties) => {
 				<FormationSelector formation={formation} />
 				<FormationDelete formation={formation} />
 			</div>
+			<div className="flex flex-col justify-center items-center py-2 gap-2">
+				{formation.faction === FACTION.astartes ? <SubfactionSelector formation={formation} /> : null}
+			</div>
+
 			{viewFormation && <>{formationGroupHTML}</>}
-			{/* {viewFormation ? <div className="text-black flex flex-col gap-2 ">{formationHTML}</div> : null} */}
 		</div>
 	)
 }
