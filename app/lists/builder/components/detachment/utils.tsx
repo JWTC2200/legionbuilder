@@ -2,6 +2,7 @@ import { detachmentData } from "@/app/data/detachment_data"
 import {
 	DETACHMENT,
 	List,
+	ListFormation,
 	ListDetachment,
 	ListDetachmentSlot,
 	ListUpgrades,
@@ -10,7 +11,7 @@ import {
 	SUBFACTION_TYPE,
 } from "@/app/types"
 import { emptyDetachment, emptyUpgrade, emptyLoadouts } from "@/app/data/empty_objects"
-import { findDetachmentBySlotId } from "../../utils"
+import { findDetachmentBySlotId, findFormationDetachmentSlotIds } from "../../utils"
 import { detachmentSize } from "@/app/listsold/utils"
 
 export const getSelectorIdArray = (detachmentSlot: ListDetachmentSlot): DETACHMENT[] => {
@@ -169,6 +170,7 @@ export const createLoadout = (
 	}
 
 	const newList = updateListLoadouts(list, newLoadoutSlot)
+
 	return newList
 }
 

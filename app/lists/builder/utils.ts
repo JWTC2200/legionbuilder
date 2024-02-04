@@ -10,7 +10,10 @@ import {
 	ListFormationGroup,
 	ListDetachmentSlot,
 	FORMATION,
+	DETACHMENT_TYPE,
 } from "@/app/types"
+import { totalDetachmentPoints } from "./components/detachment/utils"
+import { sum } from "@/app/utils/math"
 
 export const createFormation = (id: number, formation: ListFormation): ListFormation | null => {
 	const findFormation = formationData.find((formation) => formation.id === id)
@@ -72,6 +75,7 @@ export const createNewDetachments = (formation: ListFormation, list: List): List
 			formation_id: formation.id,
 		}
 	})
+
 	const removeOldDetachments = list.detachments.filter((detachment) => detachment.formation_id !== formation.id)
 
 	return [...removeOldDetachments, ...newDetachments]
@@ -85,6 +89,7 @@ export const createNewUpgrades = (formation: ListFormation, list: List): ListUpg
 			formation_id: formation.id,
 		}
 	})
+
 	const removeOldUpgrades = list.upgrades.filter((upgrade) => upgrade.formation_id !== formation.id)
 
 	return [...removeOldUpgrades, ...newUpgrades]
@@ -97,6 +102,7 @@ export const createNewLoadouts = (formation: ListFormation, list: List): ListLoa
 			formation_id: formation.id,
 		}
 	})
+
 	const removeOldLoadouts = list.loadouts.filter((loadout) => loadout.formation_id !== formation.id)
 
 	return [...removeOldLoadouts, ...newLoadouts]
@@ -109,20 +115,24 @@ export const resetFormation = (list: List, prevFormation: ListFormation): List =
 		}
 		return formation
 	})
+
 	const newList: List = {
 		...removeTrioByFormationID(list, prevFormation),
 		formations: newFormations,
 	}
+
 	return newList
 }
 
 export const removeFormation = (list: List, formation: ListFormation): List => {
 	const newFormations = list.formations.filter((form) => form.id !== formation.id)
+
 	const newList: List = {
 		...removeTrioByFormationID(list, formation),
 		formations: newFormations,
 		detachments: list.detachments.filter((detachment) => detachment.formation_id !== formation.id),
 	}
+
 	return newList
 }
 
@@ -157,4 +167,38 @@ export const findLoadoutBySlotId = (list: List, id: string): ListLoadouts | unde
 
 export const findDetachmentBySlotId = (list: List, id: string): ListDetachment | undefined => {
 	return list.detachments.find((detachment) => detachment.slot_id === id)
+}
+
+export const findFormationDetachmentSlotIds = (formation: ListFormation): string[] => {
+	return formation.detachment_groups
+		.map((group) =>
+			group.detachment_slots.filter((type) => type.type !== DETACHMENT_TYPE.dedicated).map((slot) => slot.id)
+		)
+		.flat()
+}
+
+export const totalFormationPoints = (list: List, formation: ListFormation): number => {
+	const slotIds = findFormationDetachmentSlotIds(formation)
+
+	const detachmentPoints = slotIds.map((id) => totalDetachmentPoints(list, id))
+
+	return sum(detachmentPoints)
+}
+
+export const totalListPoints = (list: List) => {
+	const mainFactionPoints = sum(
+		list.formations
+			.filter((formation) => formation.faction === list.faction)
+			.map((formation) => totalFormationPoints(list, formation))
+	)
+
+	const subFactionPoints = sum(
+		list.formations
+			.filter((formation) => formation.faction !== list.faction)
+			.map((formation) => totalFormationPoints(list, formation))
+	)
+
+	const totalListPoints = mainFactionPoints + subFactionPoints
+
+	return { mainFactionPoints: mainFactionPoints, subFactionPoints: subFactionPoints, totalPoints: totalListPoints }
 }

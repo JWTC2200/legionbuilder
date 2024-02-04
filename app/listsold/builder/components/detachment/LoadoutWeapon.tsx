@@ -1,6 +1,7 @@
 import { BUILDER_DETACHMENT_LOADOUT, BUILDER_FORMATION_SLOT, BUILDER_DETACHMENT_UNIT, SLOT_TYPE } from "@/app/types"
 import { listState } from "../../state"
-import { detachmentSize } from "@/app/lists/utils"
+import { detachmentSize } from "@/app/listsold/utils"
+import { sum } from "@/app/utils/math"
 
 interface properties {
 	detachmentSlot: BUILDER_FORMATION_SLOT
@@ -82,7 +83,7 @@ const LoadoutWeapon = ({ detachmentSlot, weaponOption, slotSet }: properties) =>
 	const warning = () => {
 		if (detachmentSlot.selected_unit) {
 			const weaponLimit = detachmentSize(detachmentSlot.selected_unit)
-			const weaponTotal = weaponOption.options.map((weapon) => weapon.number).reduce((acc, num) => acc + num, 0)
+			const weaponTotal = sum(weaponOption.options.map((weapon) => weapon.number))
 			if (weaponTotal > weaponLimit) {
 				return <span className="text-red-500 ml-2">Too many weapons! </span>
 			}

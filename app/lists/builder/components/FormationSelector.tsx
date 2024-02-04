@@ -1,4 +1,4 @@
-import { ListFormation, ListDetachment } from "@/app/types"
+import { ListFormation } from "@/app/types"
 import { formationData } from "@/app/data/formation_data"
 import { listState } from "@/app/lists/state"
 import {
@@ -8,6 +8,7 @@ import {
 	createNewUpgrades,
 	createNewLoadouts,
 } from "@/app/lists/builder/utils"
+import { totalFormationPoints } from "@/app/lists/builder/utils"
 
 interface FormationSelector {
 	formation: ListFormation
@@ -59,11 +60,11 @@ const FormationSelector = ({ formation }: FormationSelector) => {
 					</option>
 				))}
 			</select>
-			{/* {formation.id ? (
-        <h3 className="bg-inherit sm:rounded-t-lg sm:text-xl py-2 font-graduate text-center">
-            {formationPoints(formation)} points
-        </h3>
-    ) : null} */}
+			{formation.id ? (
+				<h3 className="bg-inherit sm:rounded-t-lg sm:text-xl py-2 font-graduate text-center">
+					{totalFormationPoints(list, formation)} points
+				</h3>
+			) : null}
 		</div>
 	)
 }

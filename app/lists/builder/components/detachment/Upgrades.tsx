@@ -69,7 +69,7 @@ const Upgrades = ({ slot_id }: properties) => {
 					updateUpgrades(Number(e.target.value), upgrade.name)
 				}}
 				value={selectValue ? selectValue.number : "0"}
-				className="w-full text-center text-sm font-graduate p-1 rounded-full border border-primary-950 hover:text-tertiary-700 active:text-tertiary-700 overflow-auto text-black">
+				className={`w-full text-center text-sm font-graduate p-1 rounded-full border border-primary-950 hover:text-tertiary-700 active:text-tertiary-700 overflow-auto text-black ${selectValue ? "text-tertiary-700 font-semibold" : ""}`}>
 				<option value="0" className="text-black">
 					{upgrade.name}
 				</option>

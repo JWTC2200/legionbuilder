@@ -41,6 +41,7 @@ const Loadouts = ({ slot_id }: properties) => {
 				{loadout.options.map((option, index2) => (
 					<option
 						key={loadoutSlot.id + "menuSelect" + index + "option" + index2}
+						className="text-black"
 						value={option.name}>{`${option.name} ${option.cost ? option.cost + "pts" : ""}`}</option>
 				))}
 			</select>

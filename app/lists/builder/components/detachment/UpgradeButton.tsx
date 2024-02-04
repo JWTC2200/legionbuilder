@@ -19,7 +19,7 @@ const UpgradeButton = ({ detachmentSlot }: properties) => {
 	return (
 		<button
 			onClick={setupSideMenu}
-			className="flex justify-center items-center w-full font-graduate builder_title_background py-1 px-4 text-primary-50 clip-path-octagon-md hover:text-tertiary-500">
+			className="flex justify-center items-center w-full font-graduate builder_title_background py-1 px-4 text-primary-50 clip-path-octagon-md hover:text-tertiary-500 ">
 			Upgrades {currentUpgrades ? `(${currentUpgrades})` : null}
 		</button>
 	)

@@ -1,5 +1,6 @@
-import { BUILDER_LIST, BUILDER_FORMATION, BUILDER_DETACHMENT_UNIT, DB_ENTRY } from "../types"
+import { BUILDER_LIST, BUILDER_FORMATION, BUILDER_DETACHMENT_UNIT } from "../types"
 import { toast } from "react-toastify"
+import { sum } from "../utils/math"
 
 export const addToClipboard = (link: string) => {
 	navigator.clipboard.writeText(link)
@@ -7,15 +8,17 @@ export const addToClipboard = (link: string) => {
 }
 
 export const listPointTotals = (list: BUILDER_LIST) => {
-	const mainFactionPoints = list.formations
-		.filter((formation) => formation.faction === list.main_faction)
-		.map((formation2) => formationPoints(formation2))
-		.reduce((acc, pts) => acc + pts, 0)
+	const mainFactionPoints = sum(
+		list.formations
+			.filter((formation) => formation.faction === list.main_faction)
+			.map((formation2) => formationPoints(formation2))
+	)
 
-	const allyFactionPoints = list.formations
-		.filter((formation) => formation.faction !== list.main_faction)
-		.map((formation2) => formationPoints(formation2))
-		.reduce((acc, pts) => acc + pts, 0)
+	const allyFactionPoints = sum(
+		list.formations
+			.filter((formation) => formation.faction !== list.main_faction)
+			.map((formation2) => formationPoints(formation2))
+	)
 
 	return {
 		mainFactionPoints,
@@ -26,16 +29,16 @@ export const listPointTotals = (list: BUILDER_LIST) => {
 
 export const formationPoints = (formation: BUILDER_FORMATION) => {
 	const points = formation.formation_slots.map((slot) =>
-		slot.slot
-			.map((detachment) => {
+		sum(
+			slot.slot.map((detachment) => {
 				if (detachment.selected_unit) {
 					return detachmentPoints(detachment.selected_unit)
 				}
 				return 0
 			})
-			.reduce((acc, pts) => acc + pts, 0)
+		)
 	)
-	return points.reduce((acc, pts) => acc + pts, 0)
+	return sum(points)
 }
 
 export const detachmentPoints = (detachment: BUILDER_DETACHMENT_UNIT) => {

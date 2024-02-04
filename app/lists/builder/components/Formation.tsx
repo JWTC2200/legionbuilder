@@ -6,6 +6,7 @@ import FormationDelete from "./FormationDelete"
 import FormationSelector from "./FormationSelector"
 import { FormationGroup } from "./FormationGroup"
 import SubfactionSelector from "./SubfactionSelector"
+import FormationBreakPoints from "./FormationBreakPoints"
 
 interface properties {
 	formation: ListFormation
@@ -26,11 +27,19 @@ const Formation = ({ formation }: properties) => {
 				<FormationSelector formation={formation} />
 				<FormationDelete formation={formation} />
 			</div>
-			<div className="flex flex-col justify-center items-center py-2 gap-2">
-				{formation.faction === FACTION.astartes ? <SubfactionSelector formation={formation} /> : null}
-			</div>
 
-			{viewFormation && <>{formationGroupHTML}</>}
+			{viewFormation && (
+				<>
+					<div className="flex flex-col justify-center items-center py-2 gap-2">
+						{formation.faction === FACTION.astartes ? <SubfactionSelector formation={formation} /> : null}
+						<FormationBreakPoints
+							formation={formation}
+							className="text-black flex flex-wrap gap-2 font-graduate justify-center"
+						/>
+					</div>
+					{formationGroupHTML}
+				</>
+			)}
 		</div>
 	)
 }
