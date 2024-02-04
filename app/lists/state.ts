@@ -15,9 +15,9 @@ interface ListState {
 
 interface ListSidebar {
 	slot_id: string | null
-	type: "upgrade" | "loadouts" | null
+	type: "upgrades" | "loadouts" | null
 	visible: boolean
-	setData: (update: string, type: "upgrade" | "loadouts") => void
+	setData: (update: string, type: "upgrades" | "loadouts") => void
 	closeSidebar: () => void
 	openSidebar: () => void
 }

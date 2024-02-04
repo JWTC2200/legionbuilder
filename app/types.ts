@@ -371,6 +371,12 @@ export interface ListLoadouts {
 }
 
 export interface ListLoadout {
-	weapons: { location: string; weapon: string; cost: number }[]
+	id: string
 	number: number
+	weapons: ListLoadoutWeapon[]
+}
+export interface ListLoadoutWeapon {
+	location: string
+	weapon: string
+	cost: number
 }

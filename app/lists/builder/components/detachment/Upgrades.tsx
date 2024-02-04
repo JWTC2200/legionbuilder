@@ -1,7 +1,7 @@
 import { detachmentData } from "@/app/data/detachment_data"
 import { listState } from "@/app/lists/state"
-import { sideMenuTitle } from "./utils"
 import { List, ListUpgrade, ListUpgrades } from "@/app/types"
+import SideMenuTitle from "../SideMenutitle"
 
 interface properties {
 	slot_id: string | null
@@ -13,16 +13,16 @@ const Upgrades = ({ slot_id }: properties) => {
 	const upgradeSlot = list.upgrades.find((slot) => slot.slot_id === slot_id)
 
 	if (!upgradeSlot) {
-		return sideMenuTitle("Could not find any upgrades")
+		return <SideMenuTitle>Could not find any upgrades</SideMenuTitle>
 	}
 	if (!upgradeSlot.id) {
-		return sideMenuTitle("No unit selected")
+		return <SideMenuTitle>No unit selected</SideMenuTitle>
 	}
 
 	const detachmentInfo = detachmentData.find((detachment) => detachment.id === upgradeSlot.id)
 
 	if (!detachmentInfo) {
-		return sideMenuTitle("Could not find any upgrades")
+		return <SideMenuTitle>Could not find any upgrade data</SideMenuTitle>
 	}
 
 	const updateUpgrades = (e: number, name: string) => {
@@ -87,7 +87,7 @@ const Upgrades = ({ slot_id }: properties) => {
 
 	return (
 		<>
-			{sideMenuTitle(detachmentInfo.name)}
+			<SideMenuTitle>{detachmentInfo.name}</SideMenuTitle>
 			{selectMenus.length ? selectMenus : <div className="font-graduate">This unit has no upgrades</div>}
 		</>
 	)

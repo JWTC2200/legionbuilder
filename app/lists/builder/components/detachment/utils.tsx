@@ -6,9 +6,12 @@ import {
 	ListDetachmentSlot,
 	ListUpgrades,
 	ListLoadouts,
+	ListLoadout,
 	SUBFACTION_TYPE,
 } from "@/app/types"
 import { emptyDetachment, emptyUpgrade, emptyLoadouts } from "@/app/data/empty_objects"
+import { findDetachmentBySlotId } from "../../utils"
+import { detachmentSize } from "@/app/listsold/utils"
 
 export const getSelectorIdArray = (detachmentSlot: ListDetachmentSlot): DETACHMENT[] => {
 	if (detachmentSlot.restricted) {
@@ -138,10 +141,86 @@ const newDetachmentObject = (currentDetachment: ListDetachment, data: DETACHMENT
 	}
 }
 
-export const sideMenuTitle = (text: string): React.ReactNode => {
+export const createLoadout = (
+	list: List,
+	formArray: { location: string; weapon: FormDataEntryValue }[],
+	loadoutSlot: ListLoadouts,
+	detachmentInfo: DETACHMENT,
+	id: string
+): List => {
+	const newLoadout: ListLoadout = {
+		id: id,
+		number: detachmentInfo.base_size,
+		weapons: formArray.map((entry) => {
+			const locationOptions = detachmentInfo.loadout_options.find((option) => option.location === entry.location)!
+			const cost = locationOptions.options.find((weapon) => weapon.name === entry.weapon)!.cost
+
+			return {
+				location: entry.location,
+				weapon: entry.weapon as string,
+				cost: cost,
+			}
+		}),
+	}
+
+	const newLoadoutSlot = {
+		...loadoutSlot,
+		loadouts: [...loadoutSlot.loadouts.filter((loadout) => loadout.id !== newLoadout.id), newLoadout],
+	}
+
+	const newList = updateListLoadouts(list, newLoadoutSlot)
+	return newList
+}
+
+export const incrementLoadout = (list: List, loadoutSlot: ListLoadouts, id: string, value = 1): List => {
+	const newLoadoutSlot = {
+		...loadoutSlot,
+		loadouts: [
+			...loadoutSlot.loadouts
+				.map((loadout) => {
+					if (loadout.id === id) {
+						return { ...loadout, number: loadout.number + value }
+					}
+					return loadout
+				})
+				.filter((loadout) => loadout.number > 0),
+		],
+	}
+
+	const newList = updateListLoadouts(list, newLoadoutSlot)
+
+	return newList
+}
+
+const updateListLoadouts = (list: List, updatedLoadout: ListLoadouts): List => {
+	return {
+		...list,
+		loadouts: [...list.loadouts.filter((slot) => slot.slot_id !== updatedLoadout.slot_id), updatedLoadout],
+	}
+}
+
+export const loadoutPoints = (loadout: ListLoadout): number => {
+	return loadout.weapons.reduce((acc, sum) => acc + sum.cost, 0)
+}
+
+export const loadoutCount = (list: List, slot_id: string): number => {
+	return list.loadouts
+		.filter((loadout) => loadout.slot_id === slot_id)
+		.map((loadouts) => loadouts.loadouts.reduce((acc, sum) => acc + sum.number, 0))
+		.reduce((acc, sum) => acc + sum, 0)
+}
+
+export const upgradeSizeCount = (list: List, slot_id: string): number => {
+	return list.upgrades
+		.filter((upgrade) => upgrade.slot_id === slot_id)
+		.map((upgrades) => upgrades.upgrades.reduce((acc, sum) => acc + sum.size, 0))
+		.reduce((acc, sum) => acc + sum, 0)
+}
+
+export const currentDetachmentSize = (list: List, slot_id: string): number => {
 	return (
-		<h3 className="clip-path-octagon-md builder_title_background text-primary-50 font-graduate py-1 px-6 text-center">
-			{text}
-		</h3>
+		list.detachments
+			.filter((detachment) => detachment.slot_id === slot_id)
+			.reduce((acc, sum) => acc + sum.size, 0) + upgradeSizeCount(list, slot_id)
 	)
 }

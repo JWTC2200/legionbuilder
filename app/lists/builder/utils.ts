@@ -154,3 +154,7 @@ export const findUpgradeBySlotId = (list: List, id: string): ListUpgrades | unde
 export const findLoadoutBySlotId = (list: List, id: string): ListLoadouts | undefined => {
 	return list.loadouts.find((loadout) => loadout.slot_id === id)
 }
+
+export const findDetachmentBySlotId = (list: List, id: string): ListDetachment | undefined => {
+	return list.detachments.find((detachment) => detachment.slot_id === id)
+}

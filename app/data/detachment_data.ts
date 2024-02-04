@@ -1588,30 +1588,6 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 			{
-				name: "Knight Styrix/Magaera upgrade",
-				options: [
-					{ number: 1, cost: 15, size: 0 },
-					{ number: 2, cost: 30, size: 0 },
-					{ number: 3, cost: 45, size: 0 },
-				],
-			},
-			{
-				name: "Rocket pods",
-				options: [
-					{ number: 1, cost: 5, size: 0 },
-					{ number: 2, cost: 10, size: 0 },
-					{ number: 3, cost: 15, size: 0 },
-				],
-			},
-			{
-				name: "Thunderstrike gauntlets",
-				options: [
-					{ number: 1, cost: 2, size: 0 },
-					{ number: 2, cost: 4, size: 0 },
-					{ number: 3, cost: 6, size: 0 },
-				],
-			},
-			{
 				name: "Armiger Talon",
 				options: [{ number: 1, cost: 180, size: 3, break_strength: 2 }],
 			},
@@ -1620,7 +1596,34 @@ export const detachmentData: DETACHMENT[] = [
 				options: [{ number: 1, cost: 200, size: 3, break_strength: 2 }],
 			},
 		],
-		loadout_options: [],
+		loadout_options: [
+			{
+				location: "Chassis",
+				options: [
+					{ name: "Knight Errant", cost: 0 },
+					{ name: "Knight Warden", cost: 0 },
+					{ name: "Knight Crusader", cost: 0 },
+					{ name: "Knight Paladin", cost: 0 },
+					{ name: "Knight Gallant", cost: 0 },
+					{ name: "Knight Styrix", cost: 15 },
+					{ name: "Knight Magaera", cost: 15 },
+				],
+			},
+			{
+				location: "Back",
+				options: [
+					{ name: "None", cost: 0 },
+					{ name: "Rocket Pods", cost: 5 },
+				],
+			},
+			{
+				location: "Arm",
+				options: [
+					{ name: "None", cost: 0 },
+					{ name: "Thunderstrike Gauntlet", cost: 2 },
+				],
+			},
+		],
 		datasheet_info: [
 			{
 				text: "Questoris Knights can exchange their Reaper chainsword for a thunderstrike gauntlet for +2 points per model.",
