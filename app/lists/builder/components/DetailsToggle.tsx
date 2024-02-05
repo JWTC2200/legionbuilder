@@ -16,7 +16,7 @@ const DetailsToggle = ({ formation }: properties) => {
 		}
 	}
 
-	return <button onClick={handleVisibility}>{visible.includes(formation.id) ? "Detailed" : "Simple"}</button>
+	return <button onClick={handleVisibility}>{visible.includes(formation.id) ? "Simple" : "Detailed"}</button>
 }
 
 export default DetailsToggle

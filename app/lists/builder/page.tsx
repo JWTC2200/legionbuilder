@@ -22,7 +22,7 @@ const page = () => {
 				<Crumb href="/lists">Lists</Crumb>
 				<Crumb href={`/lists/builder${listParams ? `?listId=${listParams}` : ""}`}>Builder</Crumb>
 			</BreadCrumbs>
-			<div className="flex flex-col gap-2 w-full max-w-screen-2xl items-center bg-dataslate pb-20 sm:px-4 lg:rounded-xl py-4">
+			<div className="flex flex-col gap-2 w-full max-w-screen-2xl items-center bg-dataslate sm:px-4 lg:rounded-xl py-4">
 				<ListButtons />
 				<ListHeader />
 				<ListName />
@@ -30,7 +30,7 @@ const page = () => {
 				<FormationAdd />
 				<Formations />
 			</div>
-			<pre>{JSON.stringify(list, null, 2)}</pre>
+			<pre className="max-w-[300px]">{JSON.stringify(list, null, 2)}</pre>
 			<SideMenu />
 		</div>
 	)

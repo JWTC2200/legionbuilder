@@ -25,12 +25,10 @@ const LoadoutEntries = ({ loadoutSlot }: properties) => {
 				return (
 					<div
 						key={slot_id + "sidemenuloadout" + index}
-						className="banner_background text-primary-50 font-graduate py-1 px-4 clip-path-halfagon-lg flex flex-col">
-						<div>
-							<span className="font-bold">
-								Loadout {index + 1} (x{loadout.number})
-							</span>{" "}
-							- {points * loadout.number}pts
+						className="bg-secondary-800 text-primary-50 font-graduate py-1 px-4 clip-path-halfagon-lg flex flex-col">
+						<div className="flex justify-between font-semibold text-lg sm:text-xl">
+							<div>x{loadout.number}</div>
+							{points ? <div>{points * loadout.number}pts</div> : null}
 						</div>
 						{loadout.weapons.map((weaponEntry, index2) => {
 							const { location, weapon, cost } = weaponEntry

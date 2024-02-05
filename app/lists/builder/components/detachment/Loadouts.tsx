@@ -34,17 +34,22 @@ const Loadouts = ({ slot_id }: properties) => {
 	const { loadout_options } = detachmentInfo
 	const selectMenus = loadout_options.map((loadout, index) => {
 		return (
-			<select
-				name={loadout.location}
-				key={loadoutSlot.id + "menuSelect" + index}
-				className="w-full text-center text-sm font-graduate p-1 rounded-full border border-primary-950 hover:text-tertiary-700 active:text-tertiary-700 overflow-auto text-black">
-				{loadout.options.map((option, index2) => (
-					<option
-						key={loadoutSlot.id + "menuSelect" + index + "option" + index2}
-						className="text-black"
-						value={option.name}>{`${option.name} ${option.cost ? option.cost + "pts" : ""}`}</option>
-				))}
-			</select>
+			<div key={loadoutSlot.id + "menuSelect" + index}>
+				<label htmlFor={loadout.location} className="font-graduate self-center">
+					{loadout.location}:
+				</label>
+				<select
+					name={loadout.location}
+					id={loadout.location}
+					className="w-full text-center text-sm font-graduate p-1 rounded-full border border-primary-950 hover:text-tertiary-700 active:text-tertiary-700 overflow-auto text-black">
+					{loadout.options.map((option, index2) => (
+						<option
+							key={loadoutSlot.id + "menuSelect" + index + "option" + index2}
+							className="text-black"
+							value={option.name}>{`${option.name} ${option.cost ? option.cost + "pts" : ""}`}</option>
+					))}
+				</select>
+			</div>
 		)
 	})
 
@@ -57,7 +62,7 @@ const Loadouts = ({ slot_id }: properties) => {
 		})
 
 		const newId = array
-			.map((entry) => String(entry.weapon).replaceAll(" ", ""))
+			.map((entry) => String(entry.weapon).replaceAll(" ", "").trim())
 			.sort()
 			.join("")
 
@@ -78,7 +83,7 @@ const Loadouts = ({ slot_id }: properties) => {
 			<form className="flex flex-col gap-1" onSubmit={handleSubmit}>
 				{selectMenus}
 				{selectMenus.length ? (
-					<button type="submit">
+					<button type="submit" className="mt-3">
 						<SideMenutitle>Add</SideMenutitle>
 					</button>
 				) : (

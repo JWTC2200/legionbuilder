@@ -7,6 +7,9 @@ import DetachmentInfo from "./DetachmentInfo"
 import SlotSideMenuBtn from "./SlotSideMenuBtn"
 import { listDetails } from "@/app/lists/state"
 import DetachmentDetails from "./DetachmentDetails"
+import { findLoadoutBySlotId, findUpgradeBySlotId } from "../../utils"
+import { listState } from "@/app/lists/state"
+import { detachmentData } from "@/app/data/detachment_data"
 
 interface properties {
 	detachmentSlot: ListDetachmentSlot
@@ -14,6 +17,13 @@ interface properties {
 
 const DetachmentSlot = ({ detachmentSlot }: properties) => {
 	const { visible } = listDetails()
+	const { list } = listState()
+
+	const upgradeSlot = findUpgradeBySlotId(list, detachmentSlot.id)
+	const loadoutSlot = findLoadoutBySlotId(list, detachmentSlot.id)
+	const detachment = detachmentData.find((detachment) => detachment.id === upgradeSlot?.id)
+	const hasUpgrades = detachment?.upgrade_options.length
+	const hasLoadouts = detachment?.loadout_options.length
 
 	return (
 		<div className="flex flex-col w-full sm:w-[450px]">
@@ -23,11 +33,15 @@ const DetachmentSlot = ({ detachmentSlot }: properties) => {
 				<DetachmentInfo detachmentSlot={detachmentSlot} />
 				<DetachmentWarnings detachmentSlot={detachmentSlot} />
 				<DetachmentSelector detachmentSlot={detachmentSlot} />
-				{visible.includes(detachmentSlot.formation_id) ? (
+				{!visible.includes(detachmentSlot.formation_id) ? (
 					<DetachmentDetails detachmentSlot={detachmentSlot} />
 				) : null}
-				<SlotSideMenuBtn detachmentSlot={detachmentSlot} menuType="upgrades" />
-				<SlotSideMenuBtn detachmentSlot={detachmentSlot} menuType="loadouts" />
+				{upgradeSlot?.id && hasUpgrades ? (
+					<SlotSideMenuBtn detachmentSlot={detachmentSlot} menuType="upgrades" />
+				) : null}
+				{loadoutSlot?.id && hasLoadouts ? (
+					<SlotSideMenuBtn detachmentSlot={detachmentSlot} menuType="loadouts" />
+				) : null}
 			</div>
 		</div>
 	)

@@ -1,6 +1,6 @@
 import { useState } from "react"
-import { listState } from "@/app/lists/state"
-import { ALLEGIANCE, ListFormation, FACTION } from "@/app/types"
+import { listDetails } from "@/app/lists/state"
+import { ListFormation, FACTION } from "@/app/types"
 import FormationToggle from "./FormationToggle"
 import FormationDelete from "./FormationDelete"
 import FormationSelector from "./FormationSelector"
@@ -15,7 +15,6 @@ interface properties {
 
 const Formation = ({ formation }: properties) => {
 	const [viewFormation, setViewFormation] = useState<boolean>(true)
-	const { list } = listState()
 
 	const formationGroupHTML = formation.detachment_groups.map((group) => (
 		<FormationGroup key={group.id} formationGroup={group} />
@@ -24,7 +23,7 @@ const Formation = ({ formation }: properties) => {
 	return (
 		<div id={formation.id} className="sm:border-4 border-primary-950 sm:rounded-xl flex flex-col items-center">
 			<div className="w-full banner_background sm:rounded-t-lg flex flex-wrap  justify-center sm:justify-between items-center text-center px-2">
-				<div className="flex gap-2 items-center">
+				<div className="flex gap-2 items-center font-graduate">
 					<FormationToggle view={viewFormation} toggle={setViewFormation} />
 					<DetailsToggle formation={formation} />
 				</div>
