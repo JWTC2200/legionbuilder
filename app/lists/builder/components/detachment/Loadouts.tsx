@@ -3,7 +3,7 @@ import { listState } from "@/app/lists/state"
 import { createLoadout, incrementLoadout } from "./utils"
 import { FormEvent } from "react"
 import LoadoutEntries from "./LoadoutEntries"
-import LoadoutCountWarning from "../../../components/warnings/LoadoutCountWarning"
+import LoadoutCountWarning from "../warnings/LoadoutCountWarning"
 import SideMenutitle from "../SideMenutitle"
 
 interface properties {

@@ -2091,7 +2091,7 @@ export const detachmentData: DETACHMENT[] = [
 		name: "Warlord-Sinister Battle Titan",
 		faction: FACTION.strategic,
 		subfaction: null,
-		allegiance: null,
+		allegiance: ALLEGIANCE.loyalist,
 		unique: false,
 		detachment_type: DETACHMENT_TYPE.titan,
 		base_cost: 675,

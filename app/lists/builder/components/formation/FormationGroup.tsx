@@ -2,7 +2,7 @@ import { ListFormationGroup, SLOT_TYPE } from "@/app/types"
 import { listState } from "@/app/lists/state"
 import DetachmentSlot from "../detachment/DetachmentSlot"
 import { formationSlotsFilled, formationGroupSlots } from "../../utils"
-import SimpleWarning from "../../../components/warnings/SimpleWarning"
+import SimpleWarning from "../warnings/SimpleWarning"
 
 interface properties {
 	formationGroup: ListFormationGroup

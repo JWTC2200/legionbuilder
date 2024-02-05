@@ -25,6 +25,9 @@ const page = () => {
 				<Crumb href={`/lists/builder${listParams ? `?listId=${listParams}` : ""}`}>Builder</Crumb>
 				<Crumb href={`/lists/view${listParams ? `?listId=${listParams}` : ""}`}>View</Crumb>
 			</BreadCrumbs>
+			<div>
+				<h2 className="font-subrayada text-xl font-bold">{list.name}</h2>
+			</div>
 		</div>
 	)
 }

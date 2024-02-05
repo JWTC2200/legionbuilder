@@ -1,7 +1,7 @@
 import { ListDetachmentSlot } from "@/app/types"
 import { listState } from "@/app/lists/state"
 import { detachmentData } from "@/app/data/detachment_data"
-import { getSelectorIdArray, updateAllSlotInfo, filterBySubfactions } from "./utils"
+import { getSelectorIdArray, updateAllSlotInfo, filterBySubfactions, filterByAllegiance } from "./utils"
 import { toast } from "react-toastify"
 
 interface properties {
@@ -19,11 +19,11 @@ const DetachmentSelector = ({ detachmentSlot }: properties) => {
 
 	const selectedStyling = detachment?.id && " text-tertiary-800 font-semibold"
 
-	const selectorOptions = filterBySubfactions(
-		getSelectorIdArray(detachmentSlot),
-		formationSubfaction,
-		detachment
-	).map((option, index) => (
+	const subfactionFiltered = filterBySubfactions(getSelectorIdArray(detachmentSlot), formationSubfaction, detachment)
+
+	const allegianceFiltered = filterByAllegiance(subfactionFiltered, list.allegiance, detachment)
+
+	const selectorOptions = allegianceFiltered.map((option, index) => (
 		<option key={detachmentSlot.id + "option" + index} value={option.id} className="text-black">
 			{option.base_cost}pts: {option.name}
 		</option>

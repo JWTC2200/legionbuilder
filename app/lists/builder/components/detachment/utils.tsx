@@ -2,17 +2,15 @@ import { detachmentData } from "@/app/data/detachment_data"
 import {
 	DETACHMENT,
 	List,
-	ListFormation,
 	ListDetachment,
 	ListDetachmentSlot,
 	ListUpgrades,
 	ListLoadouts,
 	ListLoadout,
 	SUBFACTION_TYPE,
+	ALLEGIANCE,
 } from "@/app/types"
 import { emptyDetachment, emptyUpgrade, emptyLoadouts } from "@/app/data/empty_objects"
-import { findDetachmentBySlotId, findFormationDetachmentSlotIds } from "../../utils"
-import { detachmentSize } from "@/app/listsold/utils"
 
 export const getSelectorIdArray = (detachmentSlot: ListDetachmentSlot): DETACHMENT[] => {
 	if (detachmentSlot.restricted) {
@@ -39,6 +37,20 @@ export const filterBySubfactions = (
 		return (
 			detachment.subfaction === formationSubfaction ||
 			detachment.subfaction === null ||
+			detachment.id === currentDetachment.id
+		)
+	})
+}
+
+export const filterByAllegiance = (
+	detachmentList: DETACHMENT[],
+	listAllegiance: ALLEGIANCE,
+	currentDetachment: ListDetachment
+): DETACHMENT[] => {
+	return detachmentList.filter((detachment) => {
+		return (
+			detachment.allegiance === listAllegiance ||
+			detachment.allegiance === null ||
 			detachment.id === currentDetachment.id
 		)
 	})

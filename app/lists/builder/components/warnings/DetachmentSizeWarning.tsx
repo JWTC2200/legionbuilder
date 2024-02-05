@@ -1,6 +1,7 @@
-import { currentDetachmentSize } from "../../builder/components/detachment/utils"
-import { findDetachmentBySlotId } from "../../builder/utils"
+import { currentDetachmentSize } from "../detachment/utils"
+import { findDetachmentBySlotId } from "../../utils"
 import { listState } from "@/app/lists/state"
+import SimpleWarning from "./SimpleWarning"
 
 interface properties {
 	slot_id: string
@@ -11,7 +12,7 @@ const DetachmentSizeWarning = ({ slot_id }: properties) => {
 	const detachment = findDetachmentBySlotId(list, slot_id)
 	if (detachment) {
 		return currentDetachmentSize(list, slot_id) > detachment.max_size ? (
-			<div className="text-red-500 font-graduate text-center">Detachment too large!</div>
+			<SimpleWarning>Detachment too large</SimpleWarning>
 		) : null
 	}
 	return null

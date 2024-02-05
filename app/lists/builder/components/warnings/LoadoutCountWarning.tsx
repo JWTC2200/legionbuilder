@@ -1,4 +1,4 @@
-import { loadoutCount, currentDetachmentSize } from "../../builder/components/detachment/utils"
+import { loadoutCount, currentDetachmentSize } from "../detachment/utils"
 import { listState } from "@/app/lists/state"
 
 interface properties {
