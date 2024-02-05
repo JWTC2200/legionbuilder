@@ -5,7 +5,7 @@ import FormationToggle from "./FormationToggle"
 import FormationDelete from "./FormationDelete"
 import FormationSelector from "./FormationSelector"
 import { FormationGroup } from "./FormationGroup"
-import SubfactionSelector from "../SubfactionSelector"
+import SubfactionSelector from "./SubfactionSelector"
 import FormationBreakPoints from "./FormationBreakPoints"
 import DetailsToggle from "./DetailsToggle"
 

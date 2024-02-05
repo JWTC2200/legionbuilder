@@ -32,9 +32,9 @@ const DetachmentDetails = ({ detachmentSlot }: properties) => {
 	}
 
 	return (
-		<div className="flex flex-col gap-1 mt-1">
+		<div className="flex flex-col gap-1">
 			{upgrades?.upgrades.length ? (
-				<div className="flex flex-col gap-1 text-primary-50 font-graduate">
+				<div className="flex flex-col gap-1 text-primary-50 font-graduate mt-1">
 					{upgrades.upgrades.map((upgrade, index) => {
 						const { number, name, cost } = upgrade
 						return (

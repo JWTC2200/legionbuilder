@@ -3,11 +3,16 @@ import { listState } from "../../state"
 import useAuthState from "@/app/Auth"
 import SaveListBtn from "./SaveListBtn"
 import { toast } from "react-toastify"
+import Link from "next/link"
+import { useSearchParams } from "next/navigation"
 
 const ListButtons = () => {
+	const searchParams = useSearchParams()
+	const listParams = searchParams.get("listId")
 	const { clearList } = listState()
 	const userUid = useAuthState((state) => state.uid)
 	const [clearCheck, setClearCheck] = useState(false)
+
 	const buttonStyles =
 		" bg-backgrounds-950 text-primary-50 px-2 py-1 font-bold font-graduate rounded-lg hover:text-primary-600 active:text-primary-400"
 	const clearBtnStyle = "px-4 py-1 rounded-md "
@@ -15,7 +20,9 @@ const ListButtons = () => {
 	return (
 		<div className="w-full flex flex-wrap gap-4 justify-center text-center mt-2">
 			{userUid && <SaveListBtn className={buttonStyles}>Save</SaveListBtn>}
-			<button className={buttonStyles}>View</button>
+			<Link href={`/lists/view${listParams ? `?listId=${listParams}` : ""}`} className={buttonStyles}>
+				View
+			</Link>
 			<button onClick={() => setClearCheck(true)} className={buttonStyles}>
 				Clear
 			</button>

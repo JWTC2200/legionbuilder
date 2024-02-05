@@ -1,4 +1,4 @@
-import { listState } from "../../state"
+import { listState } from "../../../state"
 import { List, ListFormation, SUBFACTION_TYPE, subfactionTypeArray } from "@/app/types"
 
 interface properties {
