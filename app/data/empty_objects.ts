@@ -17,6 +17,7 @@ export const emptyList: List = {
 export const emptyFormation: ListFormation = {
 	id: nanoid(),
 	name: "",
+	nickname: "",
 	data_id: 0,
 	faction: null,
 	allegiance: null,

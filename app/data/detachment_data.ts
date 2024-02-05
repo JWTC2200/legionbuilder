@@ -53,34 +53,16 @@ export const detachmentData: DETACHMENT[] = [
 					{ number: 7, cost: 70, size: 7 },
 				],
 			},
+		],
+		loadout_options: [
 			{
-				name: "Havoc launcher",
+				location: "Hull",
 				options: [
-					{ number: 1, cost: 2, size: 0 },
-					{ number: 2, cost: 4, size: 0 },
-					{ number: 3, cost: 6, size: 0 },
-					{ number: 4, cost: 8, size: 0 },
-					{ number: 5, cost: 10, size: 0 },
-					{ number: 6, cost: 12, size: 0 },
-					{ number: 7, cost: 14, size: 0 },
-					{ number: 8, cost: 16, size: 0 },
-				],
-			},
-			{
-				name: "Multi-melta",
-				options: [
-					{ number: 1, cost: 4, size: 0 },
-					{ number: 2, cost: 8, size: 0 },
-					{ number: 3, cost: 12, size: 0 },
-					{ number: 4, cost: 16, size: 0 },
-					{ number: 5, cost: 20, size: 0 },
-					{ number: 6, cost: 24, size: 0 },
-					{ number: 7, cost: 28, size: 0 },
-					{ number: 8, cost: 32, size: 0 },
+					{ name: "Havoc launcher", cost: 2 },
+					{ name: "Multi-melta", cost: 4 },
 				],
 			},
 		],
-		loadout_options: [],
 		datasheet_info: [
 			{ text: "Additional Rhino at 10pts per model." },
 			{
@@ -327,7 +309,15 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
-		loadout_options: [],
+		loadout_options: [
+			{
+				location: "Main gun",
+				options: [
+					{ name: "Laser destroyer array", cost: 0 },
+					{ name: "Quad-launcher", cost: 0 },
+				],
+			},
+		],
 		datasheet_info: [
 			{
 				text: "A Legion Rapier Battery Detachment can purchase the following upgrades:",
@@ -355,7 +345,7 @@ export const detachmentData: DETACHMENT[] = [
 		dataslate_loadout: [
 			{
 				text_option: [
-					"Leviathan storm cannon or cyclone melta lance",
+					"Leviathan storm cannon or Cyclone melta lance",
 					"Twin-linked volkite caliver",
 					"Leviathan siege claw",
 				],
@@ -370,7 +360,15 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
-		loadout_options: [],
+		loadout_options: [
+			{
+				location: "Arm",
+				options: [
+					{ name: "Leviathan storm cannon", cost: 0 },
+					{ name: "Cyclone melta lance", cost: 0 },
+				],
+			},
+		],
 		datasheet_info: [
 			{
 				text: "A Leviathan Siege Dreadnought Detachment can purchase the following upgrades:",
@@ -417,7 +415,17 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
-		loadout_options: [],
+		loadout_options: [
+			{
+				location: "Arm",
+				options: [
+					{ name: "Kheres assault cannon", cost: 0 },
+					{ name: "Twin-linked lascannons", cost: 0 },
+					{ name: "Leviathan storm cannon", cost: 0 },
+					{ name: "Cyclone melta lance", cost: 0 },
+				],
+			},
+		],
 		datasheet_info: [
 			{
 				text: "A Legion Dreadnought Talon can purchase up to three upgrades. It may purchase the same upgrade multiple times: Each upgrade increases the Detachment size by 2.",
@@ -456,7 +464,15 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
-		loadout_options: [],
+		loadout_options: [
+			{
+				location: "Main gun",
+				options: [
+					{ name: "Tarantula lascannon battery", cost: 0 },
+					{ name: "Hyperios air-defence missile launcher", cost: 0 },
+				],
+			},
+		],
 		datasheet_info: [
 			{
 				text: "A Legion Tarantula Battery can purchase the following upgrades:",

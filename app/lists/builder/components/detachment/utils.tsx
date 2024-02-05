@@ -163,7 +163,7 @@ export const createLoadout = (
 ): List => {
 	const newLoadout: ListLoadout = {
 		id: id,
-		number: detachmentInfo.base_size,
+		number: loadoutSlot.loadouts.length ? 1 : currentDetachmentSize(list, loadoutSlot.slot_id),
 		weapons: formArray.map((entry) => {
 			const locationOptions = detachmentInfo.loadout_options.find((option) => option.location === entry.location)!
 			const cost = locationOptions.options.find((weapon) => weapon.name === entry.weapon)!.cost

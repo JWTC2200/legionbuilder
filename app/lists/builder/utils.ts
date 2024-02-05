@@ -169,12 +169,16 @@ export const findDetachmentBySlotId = (list: List, id: string): ListDetachment |
 	return list.detachments.find((detachment) => detachment.slot_id === id)
 }
 
-export const findFormationDetachmentSlotIds = (formation: ListFormation): string[] => {
+export const findFormationDetachmentBreakSlotIds = (formation: ListFormation): string[] => {
 	return formation.detachment_groups
 		.map((group) =>
 			group.detachment_slots.filter((type) => type.type !== DETACHMENT_TYPE.dedicated).map((slot) => slot.id)
 		)
 		.flat()
+}
+
+export const findFormationDetachmentSlotIds = (formation: ListFormation): string[] => {
+	return formation.detachment_groups.map((group) => group.detachment_slots.map((slot) => slot.id)).flat()
 }
 
 export const totalFormationPoints = (list: List, formation: ListFormation): number => {

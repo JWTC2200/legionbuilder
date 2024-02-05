@@ -4,7 +4,7 @@ import { listState } from "../../state"
 const ListName = () => {
 	const { list, setList } = listState()
 	return (
-		<div className="text-primary-950 font-semibold flex gap-2 justify-center border border-backgrounds-950 items-center py-2 px-4 rounded-xl max-w-full">
+		<div className="font-semibold flex gap-2 justify-center bg-secondary-800 text-primary-50 items-center py-2 px-4 max-w-full clip-path-halfagon-lg">
 			<ImQuill />
 			<input
 				type="text"
@@ -13,7 +13,7 @@ const ListName = () => {
 				maxLength={25}
 				value={list.name}
 				onChange={(e) => setList({ ...list, name: e.target.value })}
-				className="bg-inherit text-center font-graduate text-lg sm:text-xl max-w-[80%] truncate"
+				className="bg-inherit text-center font-graduate text-lg sm:text-xl max-w-[80%] truncate outline-none"
 			/>
 			<ImQuill />
 		</div>

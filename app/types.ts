@@ -307,6 +307,7 @@ export interface List {
 export interface ListFormation {
 	id: string
 	name: string
+	nickname: string
 	data_id: number
 	faction: FACTION | null
 	allegiance: ALLEGIANCE | null

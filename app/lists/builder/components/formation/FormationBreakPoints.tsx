@@ -1,6 +1,6 @@
 import { ListFormation } from "@/app/types"
 import { listState } from "../../../state"
-import { findFormationDetachmentSlotIds } from "../../utils"
+import { findFormationDetachmentBreakSlotIds } from "../../utils"
 import { sum } from "@/app/utils/math"
 
 interface properties {
@@ -11,7 +11,7 @@ interface properties {
 const FormationBreakPoints = ({ formation, className }: properties) => {
 	const { list } = listState()
 
-	const slot_ids = findFormationDetachmentSlotIds(formation)
+	const slot_ids = findFormationDetachmentBreakSlotIds(formation)
 
 	const detachment_break = sum(
 		list.detachments

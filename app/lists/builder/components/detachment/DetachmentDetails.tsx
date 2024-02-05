@@ -32,7 +32,7 @@ const DetachmentDetails = ({ detachmentSlot }: properties) => {
 	}
 
 	return (
-		<div className="flex flex-col gap-1">
+		<div className="flex flex-col">
 			{upgrades?.upgrades.length ? (
 				<div className="flex flex-col gap-1 text-primary-50 font-graduate mt-1">
 					{upgrades.upgrades.map((upgrade, index) => {
@@ -53,7 +53,7 @@ const DetachmentDetails = ({ detachmentSlot }: properties) => {
 				</div>
 			) : null}
 			{loadouts?.loadouts.length ? (
-				<div className="px- flex flex-col gap-1 text-primary-50 font-graduate">
+				<div className="px- flex flex-col gap-1 text-primary-50 font-graduate mt-1">
 					{loadouts.loadouts.map((loadout, index) => {
 						const { number, weapons } = loadout
 						const points = loadoutPoints(loadout)
@@ -70,22 +70,22 @@ const DetachmentDetails = ({ detachmentSlot }: properties) => {
 									{weapons.map((weapons) => {
 										const { location, weapon, cost } = weapons
 										return (
-											<div
-												key={
-													detachmentSlot.id + "lddetail" + index + location
-												}>{`${location}: ${weapon}, ${cost}pts`}</div>
+											<div key={detachmentSlot.id + "lddetail" + index + location}>
+												{`${location}: ${weapon}`}
+												{cost ? `, ${cost}pts` : ""}
+											</div>
 										)
 									})}
 								</div>
-								<div className="flex flex-col justify-between">
+								<div className="flex flex-col justify-between gap-1">
 									<button
 										onClick={() => handleIncrement(loadout.id)}
-										className="self-end my-1 px-2 clip-path-halfagon-md bg-primary-800 hover:bg-primary-700 active:bg-primary-600">
+										className="self-end px-2 clip-path-halfagon-md bg-primary-800 hover:bg-primary-700 active:bg-primary-600">
 										+
 									</button>
 									<button
 										onClick={() => handleRemove(loadout.id)}
-										className="self-end my-1 px-2 clip-path-halfagon-md bg-red-800 hover:bg-red-700 active:bg-red-600">
+										className="self-end px-2 clip-path-halfagon-md bg-red-800 hover:bg-red-700 active:bg-red-600">
 										-
 									</button>
 								</div>
