@@ -1,6 +1,6 @@
 import { ListDetachmentSlot } from "@/app/types"
-import LoadoutCountWarning from "../warnings/LoadoutCountWarning"
-import DetachmentSizeWarning from "../warnings/DetachmentSizeWarning"
+import LoadoutCountWarning from "../../../components/warnings/LoadoutCountWarning"
+import DetachmentSizeWarning from "../../../components/warnings/DetachmentSizeWarning"
 
 interface properties {
 	detachmentSlot: ListDetachmentSlot

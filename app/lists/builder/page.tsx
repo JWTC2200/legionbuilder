@@ -1,14 +1,14 @@
 "use client"
-
+import { List } from "@/app/types"
 import { BreadCrumbs, Crumb } from "@/app/components/BreadCrumbs"
 import { useSearchParams } from "next/navigation"
 import { listState } from "../state"
-import FormationAdd from "./components/FormationAdd"
-import Formations from "./components/Formations"
+import FormationAdd from "./components/formation/FormationAdd"
+import Formations from "./components/formation/Formations"
 import SideMenu from "./components/SideMenu"
 import ListName from "./components/ListName"
 import ListHeader from "./components/ListHeader"
-import ListWarnings from "./components/warnings/ListWarnings"
+import ListWarnings from "../components/warnings/ListWarnings"
 import ListButtons from "./components/ListButtons"
 
 const page = () => {
@@ -30,7 +30,6 @@ const page = () => {
 				<FormationAdd />
 				<Formations />
 			</div>
-			<pre className="max-w-[300px]">{JSON.stringify(list, null, 2)}</pre>
 			<SideMenu />
 		</div>
 	)

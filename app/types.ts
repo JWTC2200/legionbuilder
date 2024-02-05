@@ -283,7 +283,7 @@ export interface CONTACT_FORM_DATA {
 export interface DB_ENTRY {
 	formations: number
 	game_size: number
-	list: BUILDER_LIST
+	list: List
 	main_faction: string
 	name: string
 	created: Timestamp
