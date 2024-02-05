@@ -2,16 +2,19 @@ import { ListDetachmentSlot } from "@/app/types"
 import DetachmentSlotTitle from "./DetachmentSlotTitle"
 import Description from "./Description"
 import DetachmentSelector from "./DetachmentSelector"
-import UpgradeButton from "./UpgradeButton"
-import LoadoutButton from "./LoadoutButton"
 import DetachmentWarnings from "./DetachmentWarnings"
 import DetachmentInfo from "./DetachmentInfo"
+import SlotSideMenuBtn from "./SlotSideMenuBtn"
+import { listDetails } from "@/app/lists/state"
+import DetachmentDetails from "./DetachmentDetails"
 
 interface properties {
 	detachmentSlot: ListDetachmentSlot
 }
 
 const DetachmentSlot = ({ detachmentSlot }: properties) => {
+	const { visible } = listDetails()
+
 	return (
 		<div className="flex flex-col w-full sm:w-[450px]">
 			<DetachmentSlotTitle slotType={detachmentSlot.type} />
@@ -20,8 +23,11 @@ const DetachmentSlot = ({ detachmentSlot }: properties) => {
 				<DetachmentInfo detachmentSlot={detachmentSlot} />
 				<DetachmentWarnings detachmentSlot={detachmentSlot} />
 				<DetachmentSelector detachmentSlot={detachmentSlot} />
-				<UpgradeButton detachmentSlot={detachmentSlot} />
-				<LoadoutButton detachmentSlot={detachmentSlot} />
+				{visible.includes(detachmentSlot.formation_id) ? (
+					<DetachmentDetails detachmentSlot={detachmentSlot} />
+				) : null}
+				<SlotSideMenuBtn detachmentSlot={detachmentSlot} menuType="upgrades" />
+				<SlotSideMenuBtn detachmentSlot={detachmentSlot} menuType="loadouts" />
 			</div>
 		</div>
 	)

@@ -326,7 +326,6 @@ export interface ListDetachmentSlot {
 	data_id: number
 	type: DETACHMENT_TYPE
 	faction: FACTION
-	// allegiance: ALLEGIANCE | null
 	restricted: boolean
 	options: number[]
 	description?: string

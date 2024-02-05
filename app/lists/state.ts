@@ -22,6 +22,11 @@ interface ListSidebar {
 	openSidebar: () => void
 }
 
+interface ListDetails {
+	visible: string[]
+	setVisibility: (update: string[]) => void
+}
+
 export const userListsState = create<UserListsState>((set) => ({
 	userLists: [],
 	setUserLists: (update) => set(() => ({ userLists: update })),
@@ -40,4 +45,9 @@ export const listSidebar = create<ListSidebar>((set) => ({
 	setData: (update, type) => set(() => ({ slot_id: update, type: type })),
 	closeSidebar: () => set(() => ({ visible: false })),
 	openSidebar: () => set(() => ({ visible: true })),
+}))
+
+export const listDetails = create<ListDetails>((set) => ({
+	visible: [],
+	setVisibility: (update) => set(() => ({ visible: update })),
 }))

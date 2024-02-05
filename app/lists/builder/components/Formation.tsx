@@ -7,6 +7,7 @@ import FormationSelector from "./FormationSelector"
 import { FormationGroup } from "./FormationGroup"
 import SubfactionSelector from "./SubfactionSelector"
 import FormationBreakPoints from "./FormationBreakPoints"
+import DetailsToggle from "./DetailsToggle"
 
 interface properties {
 	formation: ListFormation
@@ -23,7 +24,11 @@ const Formation = ({ formation }: properties) => {
 	return (
 		<div id={formation.id} className="sm:border-4 border-primary-950 sm:rounded-xl flex flex-col items-center">
 			<div className="w-full banner_background sm:rounded-t-lg flex flex-wrap  justify-center sm:justify-between items-center text-center px-2">
-				<FormationToggle view={viewFormation} toggle={setViewFormation} />
+				<div className="flex gap-2 items-center">
+					<FormationToggle view={viewFormation} toggle={setViewFormation} />
+					<DetailsToggle formation={formation} />
+				</div>
+
 				<FormationSelector formation={formation} />
 				<FormationDelete formation={formation} />
 			</div>
