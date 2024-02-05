@@ -202,3 +202,13 @@ export const totalListPoints = (list: List) => {
 
 	return { mainFactionPoints: mainFactionPoints, subFactionPoints: subFactionPoints, totalPoints: totalListPoints }
 }
+
+export const formationGroupSlots = (formationGroup: ListFormationGroup): string[] => {
+	return formationGroup.detachment_slots.map((slot) => slot.id)
+}
+
+export const formationSlotsFilled = (list: List, slotIds: string[]) => {
+	return list.detachments
+		.filter((detachment) => slotIds.includes(detachment.slot_id))
+		.filter((detachment) => detachment.id).length
+}
