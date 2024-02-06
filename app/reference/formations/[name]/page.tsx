@@ -2,7 +2,7 @@
 
 import { formationData } from "@/app/data/formation_data"
 import { notFound } from "next/navigation"
-import FormationDataslate from "@components/FormationDataslate"
+import FormationDataslate from "@/app/components/FormationDataslate"
 import { BreadCrumbs, Crumb, ReferenceSelector } from "@components/BreadCrumbs"
 import Main from "@components/Main"
 

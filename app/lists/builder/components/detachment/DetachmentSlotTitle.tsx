@@ -1,4 +1,4 @@
-import { DETACHMENT_TYPE } from "@/app/types/types"
+import { DETACHMENT_TYPE } from "@type/types"
 import { getDetachmentIcon } from "@/app/utils/detachmentIcons"
 
 interface properties {

@@ -1,6 +1,6 @@
-import { ListDetachmentSlot } from "@/app/types/listTypes"
+import { ListDetachmentSlot } from "@type/listTypes"
 import { listSidebar, listState } from "@/app/lists/state"
-import { findLoadoutBySlotId, findUpgradeBySlotId } from "../../utils"
+import { findLoadoutBySlotId, findUpgradeBySlotId } from "@lists/builder/utils"
 
 interface properties {
 	detachmentSlot: ListDetachmentSlot

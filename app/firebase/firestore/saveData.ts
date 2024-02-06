@@ -1,7 +1,7 @@
-import { List } from "@/app/types/listTypes"
-import { db } from "../config"
+import { List } from "@type//listTypes"
+import { db } from "@/app/firebase/config"
 import { setDoc, doc, serverTimestamp } from "firebase/firestore"
-import checkUploadPermission from "./checkUploadPermission"
+import checkUploadPermission from "@/app/firebase/firestore/checkUploadPermission"
 
 export const saveData = async (listData: List) => {
 	try {

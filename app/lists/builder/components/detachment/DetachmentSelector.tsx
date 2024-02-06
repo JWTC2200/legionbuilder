@@ -1,4 +1,4 @@
-import { ListDetachmentSlot } from "@/app/types/types"
+import { ListDetachmentSlot } from "@type/listTypes"
 import { listState } from "@/app/lists/state"
 import { detachmentData } from "@/app/data/detachment_data"
 import { getSelectorIdArray, updateAllSlotInfo, filterBySubfactions, filterByAllegiance } from "./utils"

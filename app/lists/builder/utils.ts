@@ -9,8 +9,8 @@ import {
 	ListLoadouts,
 	ListFormationGroup,
 	ListDetachmentSlot,
-} from "@/app/types/listTypes"
-import { FORMATION, DETACHMENT_TYPE } from "@/app/types/types"
+} from "@type//listTypes"
+import { FORMATION, DETACHMENT_TYPE } from "@type//types"
 import { totalDetachmentPoints } from "./components/detachment/utils"
 import { sum } from "@/app/utils/math"
 

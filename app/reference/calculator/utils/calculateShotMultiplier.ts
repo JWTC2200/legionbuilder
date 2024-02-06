@@ -1,4 +1,4 @@
-import { UNIT_DATASHEET, UNIT_TYPE, WEAPON_PROFILES } from "@/app/types/types"
+import { UNIT_DATASHEET, UNIT_TYPE, WEAPON_PROFILES } from "@type/types"
 
 export const calculateShotMultiplier = (weapon: WEAPON_PROFILES, target: UNIT_DATASHEET) => {
 	const weaponTraits = weapon.traits.map((trait) => trait.name)

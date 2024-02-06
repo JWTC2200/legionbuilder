@@ -1,5 +1,5 @@
 import { listState } from "@/app/lists/state"
-import { FACTION } from "@/app/types/types"
+import { FACTION } from "@type//types"
 
 const ListFaction = () => {
 	const { list, setList } = listState()

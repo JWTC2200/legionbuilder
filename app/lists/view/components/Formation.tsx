@@ -1,7 +1,7 @@
-import { List, ListFormation } from "@/app/types/listTypes"
+import { List, ListFormation } from "@type/listTypes"
 import FormationGroup from "./FormationGroup"
-import { totalFormationPoints } from "../../builder/utils"
-import FormationBreakPoints from "../../builder/components/formation/FormationBreakPoints"
+import { totalFormationPoints } from "@lists/builder/utils"
+import FormationBreakPoints from "@lists/builder/components/formation/FormationBreakPoints"
 
 interface properties {
 	list: List

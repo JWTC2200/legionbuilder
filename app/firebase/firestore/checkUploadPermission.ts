@@ -1,4 +1,4 @@
-import { List } from "@/app/types/types"
+import { List } from "@type/listTypes"
 import { db } from "../config"
 import { collection, getDocs, query, where } from "firebase/firestore"
 

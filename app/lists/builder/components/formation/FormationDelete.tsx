@@ -1,8 +1,8 @@
 import { useState } from "react"
-import { ListFormation } from "@/app/types/listTypes"
-import { listState } from "../../../state"
+import { ListFormation } from "@type/listTypes"
+import { listState } from "@lists/state"
 import { toast } from "react-toastify"
-import { removeFormation } from "../../utils"
+import { removeFormation } from "@lists/builder/utils"
 
 const FormationDelete = ({ formation }: { formation: ListFormation }) => {
 	const { list, setList } = listState()

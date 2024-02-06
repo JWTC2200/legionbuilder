@@ -1,10 +1,10 @@
 import Link from "next/link"
-import { DETACHMENT } from "@/app/types/types"
+import { DETACHMENT } from "@type/types"
 import { unitData } from "@/app/data/unit_data"
 import { notFound } from "next/navigation"
 import { weapons } from "@/app/data/weapon_data"
 import { getUnitWeaponRows } from "@/app/utils/unitweaponrows"
-import SpecialRuleBox from "./SpecialRuleBox"
+import SpecialRuleBox from "@components/SpecialRuleBox"
 import UnitDataslate from "./UnitDataslate"
 import { FaExternalLinkAlt } from "react-icons/fa"
 

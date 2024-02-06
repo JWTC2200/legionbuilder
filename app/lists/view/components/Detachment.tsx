@@ -1,4 +1,4 @@
-import { List, ListDetachment } from "@/app/types/listTypes"
+import { List, ListDetachment } from "@type/listTypes"
 import React from "react"
 import { findLoadoutBySlotId, findUpgradeBySlotId } from "../../builder/utils"
 import { currentDetachmentSize, totalDetachmentPoints } from "../../builder/components/detachment/utils"

@@ -3,7 +3,7 @@
 import { ReactNode, useState } from "react"
 import Icons from "@/app/components/Icons"
 import { userListsState } from "@/app/lists/state"
-import { DB_ENTRY } from "@/app/types/types"
+import { DB_ENTRY } from "@type/types"
 import { totalListPoints } from "../builder/utils"
 
 interface properties {

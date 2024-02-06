@@ -1,4 +1,4 @@
-import { UNIT_TYPE } from "@/app/types/types"
+import { UNIT_TYPE } from "@type/types"
 
 export const armouredTypes = [UNIT_TYPE.vehicle, UNIT_TYPE.heavy, UNIT_TYPE.knight, UNIT_TYPE.titan]
 

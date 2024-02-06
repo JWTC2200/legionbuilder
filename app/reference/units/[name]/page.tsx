@@ -1,6 +1,6 @@
 "use client"
 
-import UnitDataslate from "@components/UnitDataslate"
+import UnitDataslate from "@/app/components/UnitDataslate"
 import { unitData } from "@/app/data/unit_data"
 import { notFound } from "next/navigation"
 import Main from "@components/Main"

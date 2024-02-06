@@ -1,4 +1,4 @@
-import { List } from "@/app/types/listTypes"
+import { List } from "@type//listTypes"
 import { addToClipboard } from "@/app/utils/clipboard"
 import { FaLink } from "@react-icons/all-files/fa/FaLink"
 

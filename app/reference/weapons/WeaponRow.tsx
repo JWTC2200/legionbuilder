@@ -1,5 +1,5 @@
 import { JSX } from "react"
-import { WEAPON_DATASHEET } from "@/app/types/types"
+import { WEAPON_DATASHEET } from "@type/types"
 import WeaponProfile from "./WeaponProfile"
 import { Row } from "@components/HTML"
 

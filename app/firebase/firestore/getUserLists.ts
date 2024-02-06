@@ -1,5 +1,5 @@
-import { DB_ENTRY } from "@/app/types/types"
-import { db } from "../config"
+import { DB_ENTRY } from "@type//types"
+import { db } from "@/app/firebase/config"
 import { collection, query, where, onSnapshot } from "firebase/firestore"
 
 export const getUserLists = (setLists: (lists: DB_ENTRY[]) => void, userUid: string) => {

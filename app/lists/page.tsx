@@ -1,14 +1,14 @@
 "use client"
 
 import { useEffect } from "react"
-import { userListsState } from "./state"
-import useAuthState from "../Auth"
-import getUserLists from "../firebase/firestore/getUserLists"
-import NotSignedIn from "../components/NotSignedIn"
-import CreateListBtn from "./components/CreateListBtn"
-import ListButtonInfo from "./components/ListBtnInfo"
-import ListSortButton from "./components/ListSortButton"
-import UserListsTable from "./components/UserListsTable"
+import { userListsState } from "@lists/state"
+import useAuthState from "@app/Auth"
+import getUserLists from "@app/firebase/firestore/getUserLists"
+import NotSignedIn from "@components/NotSignedIn"
+import CreateListBtn from "@lists/components/CreateListBtn"
+import ListButtonInfo from "@lists/components/ListBtnInfo"
+import ListSortButton from "@lists/components/ListSortButton"
+import UserListsTable from "@lists/components/UserListsTable"
 
 const page = () => {
 	const userUid = useAuthState((state) => state.uid)

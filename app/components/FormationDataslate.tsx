@@ -1,6 +1,6 @@
-import { FORMATION } from "../types/types"
-import { formationSlotData } from "../data/formation_slot_data"
-import { getDetachmentIcon } from "../utils/detachmentIcons"
+import { FORMATION } from "@type/types"
+import { formationSlotData } from "@data/formation_slot_data"
+import { getDetachmentIcon } from "@app/utils/detachmentIcons"
 
 const FormationDataslate = (formation: FORMATION) => {
 	return (
@@ -8,24 +8,22 @@ const FormationDataslate = (formation: FORMATION) => {
 			<div className="border-2 border-black bg-primary-950 text-primary-50 py-1 px-3 mb-2">
 				<h2 className="text-2xl text-center font-graduate font-bold">{formation.name}</h2>
 			</div>
-			{formation.compulsory ? (
-				<div className="flex flex-col items-center">
+			{formation.formation_slots.map((group, index) => (
+				<div key={formation.id + "group" + index} className="flex flex-col items-center">
 					<h2 className="text-2xl w-full text-center font-graduate font-bold bg-primary-950 text-primary-50 py-1 px-3 mb-2">
-						Compulsory Detachments:
+						{`${group.slot_type} Detachments`}
 					</h2>
 					<div className="text-primary-950 flex flex-wrap justify-center items-center gap-4 m-2">
-						{formation.compulsory.sort().map((detachment, index) => {
-							const foundSlot = formationSlotData.find((slot) => slot.id === detachment)
-							if (foundSlot) {
+						{group.slot_id.map((slotId) => {
+							const slot = formationSlotData.find((slot) => slot.id === slotId)
+							if (slot) {
 								return (
 									<div
 										key={"compulsory" + index}
 										className="flex flex-col justify-center items-center text-center bg-primary-950 text-primary-950 w-40 h-32 p-2 border-2 border-black rounded-xl bg-dataslate">
-										<span className="text-3xl">{getDetachmentIcon(foundSlot.type)}</span>
-										<p className="font-semibold font-graduate">{foundSlot.type}</p>
-										{foundSlot.description ? (
-											<p className="italic text-sm">{foundSlot.description}</p>
-										) : null}
+										<span className="text-3xl">{getDetachmentIcon(slot.type)}</span>
+										<p className="font-semibold font-graduate">{slot.type}</p>
+										{slot.description ? <p className="italic text-sm">{slot.description}</p> : null}
 									</div>
 								)
 							}
@@ -33,61 +31,7 @@ const FormationDataslate = (formation: FORMATION) => {
 						})}
 					</div>
 				</div>
-			) : null}
-			{formation.optional ? (
-				<div className="flex flex-col items-center">
-					<h2 className="text-xl w-full text-center font-graduate font-bold bg-primary-950 text-primary-50 py-1 px-3 mb-2">
-						Optional detachments:
-					</h2>
-					<div className="text-primary-950 flex flex-wrap justify-center items-center gap-4 m-2">
-						{formation.optional.sort().map((detachment, index) => {
-							const foundSlot = formationSlotData.find((slot) => slot.id === detachment)
-							if (foundSlot) {
-								return (
-									<div
-										key={"optional" + index}
-										className="flex flex-col justify-center items-center text-center bg-primary-950 text-primary-950 w-40 h-32 p-2 border-2 border-black rounded-xl bg-dataslate">
-										<span className="text-3xl">{getDetachmentIcon(foundSlot.type)}</span>
-										<p className="font-semibold font-graduate">{foundSlot.type}</p>
-										{foundSlot.description ? (
-											<p className="italic text-sm">{foundSlot.description}</p>
-										) : null}
-									</div>
-								)
-							}
-							return null
-						})}
-					</div>
-				</div>
-			) : null}
-			{formation.choice
-				? formation.choice.map((choice, index) => (
-						<div key={"choiceset" + index} className="flex flex-col items-center">
-							<h2 className="text-xl w-full text-center font-graduate font-bold bg-primary-950 text-primary-50 py-1 px-3 mb-2">
-								One of the following:
-							</h2>
-							<div className="text-primary-950 flex flex-wrap justify-center items-center gap-4 m-2">
-								{choice.sort().map((detachment, index2) => {
-									const foundSlot = formationSlotData.find((slot) => slot.id === detachment)
-									if (foundSlot) {
-										return (
-											<div
-												key={"choice" + index2}
-												className="flex flex-col justify-center items-center text-center text-primary-950 w-40 h-32 p-2 border-2 border-black rounded-xl bg-dataslate">
-												<span className="text-3xl">{getDetachmentIcon(foundSlot.type)}</span>
-												<p className="font-semibold font-graduate">{foundSlot.type}</p>
-												{foundSlot.description ? (
-													<p className="italic text-sm">{foundSlot.description}</p>
-												) : null}
-											</div>
-										)
-									}
-									return null
-								})}
-							</div>
-						</div>
-					))
-				: null}
+			))}
 		</article>
 	)
 }

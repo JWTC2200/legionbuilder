@@ -1,7 +1,7 @@
 "use client"
 
 import { useRouter } from "next/navigation"
-import { List } from "@/app/types/listTypes"
+import { List } from "@type//listTypes"
 import { FaCopy } from "@react-icons/all-files/fa/FaCopy"
 import { listState } from "@/app/lists/state"
 import { nanoid } from "nanoid"

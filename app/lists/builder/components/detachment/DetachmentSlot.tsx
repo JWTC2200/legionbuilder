@@ -1,4 +1,4 @@
-import { ListDetachmentSlot } from "@/app/types/types"
+import { ListDetachmentSlot } from "@type/listTypes"
 import DetachmentSlotTitle from "./DetachmentSlotTitle"
 import Description from "./Description"
 import DetachmentSelector from "./DetachmentSelector"

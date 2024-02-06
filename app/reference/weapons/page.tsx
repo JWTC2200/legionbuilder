@@ -9,7 +9,7 @@ import { BreadCrumbs, Crumb, ReferenceSelector } from "@components/BreadCrumbs"
 import { sortedByNameKey } from "@/app/utils/sorting"
 import Main from "@components/Main"
 import Sticky from "@components/Sticky"
-import { WEAPON_DATASHEET } from "@/app/types/types"
+import { WEAPON_DATASHEET } from "@type/types"
 
 const page = () => {
 	const [searchTerm, setSearchTerm] = useState("")

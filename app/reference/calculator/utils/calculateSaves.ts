@@ -1,7 +1,6 @@
-import { UNIT_TYPE } from "@/app/types/types"
 import { rerollFail, rerollSuccess } from "./rerolls"
 import { armouredTypes } from "../utils"
-import { UNIT_DATASHEET, WEAPON_PROFILES } from "@/app/types/types"
+import { UNIT_DATASHEET, WEAPON_PROFILES, UNIT_TYPE } from "@type/types"
 import calculateAP from "./calculateAP"
 import { twoDiceOdds } from "./diceOdds"
 

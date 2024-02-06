@@ -1,5 +1,5 @@
 import WeaponTraitBox from "@components/WeaponTraitBox"
-import { WEAPON_TRAIT, WEAPON_DATASHEET } from "@/app/types/types"
+import { WEAPON_TRAIT, WEAPON_DATASHEET } from "@type/types"
 
 interface properties {
 	range: string

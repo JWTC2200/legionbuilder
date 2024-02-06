@@ -1,6 +1,6 @@
 import { currentDetachmentSize, totalDetachmentPoints } from "./utils"
 import { listState } from "@/app/lists/state"
-import { ListDetachmentSlot } from "@/app/types/types"
+import { ListDetachmentSlot } from "@type/listTypes"
 
 interface properties {
 	detachmentSlot: ListDetachmentSlot

@@ -1,6 +1,6 @@
-import { ListFormation } from "@/app/types/listTypes"
-import { listState } from "../../../state"
-import { findFormationDetachmentBreakSlotIds } from "../../utils"
+import { ListFormation } from "@type/listTypes"
+import { listState } from "@lists/state"
+import { findFormationDetachmentBreakSlotIds } from "@lists/builder/utils"
 import { sum } from "@/app/utils/math"
 
 interface properties {

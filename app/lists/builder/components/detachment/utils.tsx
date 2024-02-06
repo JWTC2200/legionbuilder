@@ -1,13 +1,6 @@
 import { detachmentData } from "@/app/data/detachment_data"
-import {
-	List,
-	ListDetachment,
-	ListDetachmentSlot,
-	ListUpgrades,
-	ListLoadouts,
-	ListLoadout,
-} from "@/app/types/listTypes"
-import { DETACHMENT, SUBFACTION_TYPE, ALLEGIANCE } from "@/app/types/types"
+import { List, ListDetachment, ListDetachmentSlot, ListUpgrades, ListLoadouts, ListLoadout } from "@type/listTypes"
+import { DETACHMENT, SUBFACTION_TYPE, ALLEGIANCE } from "@type/types"
 import { emptyDetachment, emptyUpgrade, emptyLoadouts } from "@/app/data/empty_objects"
 
 export const getSelectorIdArray = (detachmentSlot: ListDetachmentSlot): DETACHMENT[] => {

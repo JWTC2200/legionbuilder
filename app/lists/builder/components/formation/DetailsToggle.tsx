@@ -1,4 +1,4 @@
-import { ListFormation } from "@/app/types/listTypes"
+import { ListFormation } from "@type/listTypes"
 import { listDetails } from "../../../state"
 
 interface properties {

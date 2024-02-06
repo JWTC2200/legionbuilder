@@ -3,7 +3,7 @@ import { calculatorWeapons } from "../state"
 import { unitData } from "@/app/data/unit_data"
 import { weapons } from "@/app/data/weapon_data"
 import { sortedByNameKey } from "@/app/utils/sorting"
-import { UNIT_DATASHEET, UNIT_TYPE, WEAPON_DATASHEET } from "@/app/types/types"
+import { UNIT_DATASHEET, WEAPON_DATASHEET } from "@type/types"
 import { FaExchangeAlt } from "@react-icons/all-files/fa/FaExchangeAlt"
 
 const AttackingUnit = () => {
