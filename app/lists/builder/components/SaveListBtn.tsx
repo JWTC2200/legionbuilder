@@ -22,6 +22,7 @@ const SaveListBtn = ({ className, children }: properties) => {
 		}
 		if (userUid === list.user) {
 			const { uploaded, message } = await saveData(list)
+			console.log(message)
 			if (uploaded) {
 				toast.success(message)
 			} else {

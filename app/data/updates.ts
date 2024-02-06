@@ -4,6 +4,7 @@ interface update {
 }
 
 export const updateData: update[] = [
+	{ date: "06/01/24", updates: ["Added a sidebar for upgrades/loadouts, testing only."] },
 	{ date: "26/01/24", updates: ["Added a duplicate formation button to the builder"] },
 	{ date: "07/01/24", updates: ["Typo fixes"] },
 	{

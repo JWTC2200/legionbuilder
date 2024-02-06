@@ -32,7 +32,7 @@ const DetachmentDetails = ({ detachmentSlot }: properties) => {
 	}
 
 	return (
-		<div className="flex flex-col">
+		<div className="flex flex-col px-1">
 			{upgrades?.upgrades.length ? (
 				<div className="flex flex-col gap-1 text-primary-50 font-graduate mt-1">
 					{upgrades.upgrades.map((upgrade, index) => {
@@ -53,7 +53,7 @@ const DetachmentDetails = ({ detachmentSlot }: properties) => {
 				</div>
 			) : null}
 			{loadouts?.loadouts.length ? (
-				<div className="px- flex flex-col gap-1 text-primary-50 font-graduate mt-1">
+				<div className="flex flex-col gap-1 text-primary-50 font-graduate mt-1">
 					{loadouts.loadouts.map((loadout, index) => {
 						const { number, weapons } = loadout
 						const points = loadoutPoints(loadout)

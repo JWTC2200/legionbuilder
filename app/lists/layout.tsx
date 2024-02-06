@@ -31,6 +31,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
 	return (
 		<Main className="sm:max-w-screen-2xl w-full flex flex-col items-center">
 			<ToastContainer
+				position="bottom-right"
 				autoClose={800}
 				closeOnClick
 				toastStyle={{

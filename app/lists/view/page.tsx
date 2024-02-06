@@ -21,6 +21,8 @@ const page = () => {
 			</div>
 		)
 	}
+	console.log(userUid)
+	console.log(list.user)
 
 	return (
 		<div className="w-full px-2 pb-8 max-w-screen-sm">
@@ -29,7 +31,7 @@ const page = () => {
 				<Crumb href="/lists/builder">Builder</Crumb>
 				<Crumb href="/lists/view">View</Crumb>
 			</BreadCrumbs>
-			{userUid ? (
+			{userUid && userUid !== list.user ? (
 				<SaveListBtn className="text-primary-400 hover:text-primary-600 active:text-primary-300 mb-4">
 					Save copy of list
 				</SaveListBtn>

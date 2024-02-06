@@ -12,7 +12,6 @@ export const saveData = async (listData: List) => {
 			try {
 				const listString = JSON.stringify(listData)
 				const listRef = doc(db, process.env.NEXT_PUBLIC_FIREBASE_LIST_DB!, listData.id)
-				console.log("sending")
 				await setDoc(listRef, {
 					list: listString,
 					owner: listData.user,
