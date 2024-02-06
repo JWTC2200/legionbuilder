@@ -1,9 +1,11 @@
 import { Timestamp } from "firebase/firestore"
+import { List } from "@type/listTypes"
 
 export enum FACTION {
 	astartes = "Legiones Astartes",
 	solar = "Solar Auxillia",
 	strategic = "Strategic Assets",
+	none = "none",
 }
 
 export const factionTypeArray = Object.values(FACTION)

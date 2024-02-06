@@ -29,7 +29,6 @@ const page = () => {
 				<Crumb href="/lists/builder">Builder</Crumb>
 				<Crumb href="/lists/view">View</Crumb>
 			</BreadCrumbs>
-			{/* && userUid !== list.user  */}
 			{userUid ? (
 				<SaveListBtn className="text-primary-400 hover:text-primary-600 active:text-primary-300 mb-4">
 					Save copy of list
@@ -37,8 +36,8 @@ const page = () => {
 			) : null}
 			<div className="text-primary-50">
 				<h2 className="text-lg font-bold">
-					<span className="font-subrayada text-xl">{list.name}</span> -{" "}
-					{`${totalListPoints(list).totalPoints} / ${list.points}pts`}
+					<span className="font-subrayada text-xl">{list.name}</span>
+					{` ${totalListPoints(list).totalPoints} / ${list.points}pts`}
 				</h2>
 				<h3 className="font-graduate">
 					{list.allegiance} {list.faction}
@@ -48,7 +47,6 @@ const page = () => {
 					<Formation key={formation.id} list={list} formation={formation} />
 				))}
 			</div>
-			<pre>{JSON.stringify(list, null, 2)}</pre>
 		</div>
 	)
 }

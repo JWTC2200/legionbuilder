@@ -3,7 +3,6 @@ import Link from "next/link"
 import { FaGithub, FaDiscord } from "react-icons/fa6"
 import { TfiEmail } from "react-icons/tfi"
 import FrontpageUpdates from "@components/FrontpageUpdates"
-import CreateListButtons from "./lists/components/CreateListButtons"
 
 export default function Home() {
 	return (
