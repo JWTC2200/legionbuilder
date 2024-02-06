@@ -1,9 +1,10 @@
-import { ReactNode } from "react";
+import { ReactNode } from "react"
 
-export default function({ className, children } : { children: ReactNode, className?: string }) {
-    return (
-        <main className={`container mx-auto max-w-screen-lg h-full w-full flex-1 ${className ? className : ''}`}>
-            {children}
-        </main>
-    );
+export default function ({ className, children }: { children: ReactNode; className?: string }) {
+	return (
+		<main
+			className={`container mx-auto max-w-screen-lg h-full w-full flex-1 z-10 bg-secondary-900 px-4 ${className ? className : ""}`}>
+			{children}
+		</main>
+	)
 }

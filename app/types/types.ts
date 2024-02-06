@@ -8,7 +8,7 @@ export enum FACTION {
 	none = "none",
 }
 
-export const factionTypeArray = Object.values(FACTION)
+export const factionTypeArray = Object.values(FACTION).filter((entry) => entry !== "none")
 
 export enum ALLEGIANCE {
 	loyalist = "Loyalist",
