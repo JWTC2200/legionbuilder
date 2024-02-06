@@ -14,7 +14,7 @@ const page = () => {
 	const listParams = searchParams.get("listId")
 
 	return (
-		<div className="w-full flex flex-col">
+		<div className="w-full flex flex-col pb-4">
 			<BreadCrumbs>
 				<Crumb href="/lists">Lists</Crumb>
 				<Crumb href={`/lists/builder${listParams ? `?listId=${listParams}` : ""}`}>Builder</Crumb>

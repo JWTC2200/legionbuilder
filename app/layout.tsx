@@ -17,10 +17,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
 		<html lang="en">
-			<div className="fixed w-screen h-screen">
-				<Image src={ATBG} fill alt="background" className="z-0" style={{ objectFit: "cover" }} />
-			</div>
-			<body className="z-0 min-w-screen min-h-screen bg-cover bg-scroll text-secondary-100 flex flex-col items-center text-sm md:text-base">
+			<body className="z-0 min-w-screen min-h-screen bg-secondary-900 bg-scroll text-secondary-100 flex flex-col items-center text-sm md:text-base">
 				<div className="fixed w-screen h-screen">
 					<Image src={ATBG} fill alt="background" className="z-0" style={{ objectFit: "cover" }} />
 				</div>
