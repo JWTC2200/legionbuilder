@@ -335,6 +335,7 @@ export interface ListDetachmentSlot {
 export interface ListDetachment {
 	id: number
 	slot_id: string
+	slot_type: DETACHMENT_TYPE | null
 	formation_id: string
 	name: string
 	faction: FACTION | null

@@ -28,6 +28,7 @@ export const emptyFormation: ListFormation = {
 export const emptyDetachment: ListDetachment = {
 	id: 0,
 	slot_id: "",
+	slot_type: null,
 	formation_id: "",
 	name: "",
 	faction: null,

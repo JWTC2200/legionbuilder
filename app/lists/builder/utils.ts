@@ -73,6 +73,7 @@ export const createNewDetachments = (formation: ListFormation, list: List): List
 			...emptyDetachment,
 			slot_id: slot.id,
 			formation_id: formation.id,
+			slot_type: slot.type,
 		}
 	})
 

@@ -60,7 +60,7 @@ const DetachmentDetails = ({ detachmentSlot }: properties) => {
 						return (
 							<div
 								key={detachmentSlot.id + "lddetail" + index}
-								className="flex justify-between items-center bg-secondary-800 clip-path-octagon-md py-1 px-2">
+								className="flex gap-1 sm:gap-2 justify-between items-center bg-secondary-800 clip-path-octagon-md py-1 px-2">
 								<div className="flex flex-col justify-between font-semibold ">
 									<div className="flex justify-center items-center text-primary-50 px-2 bg-secondary-800 ">{`x${number}`}</div>
 									{points ? <div>{points * loadout.number}pts</div> : null}

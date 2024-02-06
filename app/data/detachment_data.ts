@@ -311,7 +311,7 @@ export const detachmentData: DETACHMENT[] = [
 		],
 		loadout_options: [
 			{
-				location: "Main gun",
+				location: "Main",
 				options: [
 					{ name: "Laser destroyer array", cost: 0 },
 					{ name: "Quad-launcher", cost: 0 },
@@ -466,7 +466,7 @@ export const detachmentData: DETACHMENT[] = [
 		],
 		loadout_options: [
 			{
-				location: "Main gun",
+				location: "Main",
 				options: [
 					{ name: "Tarantula lascannon battery", cost: 0 },
 					{ name: "Hyperios air-defence missile launcher", cost: 0 },
@@ -514,10 +514,18 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
-		loadout_options: [],
+		loadout_options: [
+			{
+				location: "Main",
+				options: [
+					{ name: "Hellfire plasma cannonade", cost: 0 },
+					{ name: "Anvilus autocannon battery", cost: 0 },
+				],
+			},
+		],
 		datasheet_info: [
 			{
-				text: "A Legion Deredeo Dreadnought Detachmentcan purchase the following upgrades:",
+				text: "A Legion Deredeo Dreadnought Detachment can purchase the following upgrades:",
 				options: [
 					{ text: "2 Additional Deredeo", cost: 40 },
 					{ text: "4 Additional Deredeo", cost: 80 },
@@ -559,7 +567,22 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
-		loadout_options: [],
+		loadout_options: [
+			{
+				location: "Turret",
+				options: [
+					{ name: "Predator cannon", cost: 0 },
+					{ name: "Predator lascannon", cost: 0 },
+				],
+			},
+			{
+				location: "Sponsons",
+				options: [
+					{ name: "Heavy bolters", cost: 0 },
+					{ name: "Lascannons", cost: 0 },
+				],
+			},
+		],
 		datasheet_info: [
 			{
 				text: "A Legion Predator Squadron can purchase the following upgrades: The same upgrade may be taken more than once",
@@ -604,7 +627,22 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
-		loadout_options: [],
+		loadout_options: [
+			{
+				location: "Turret",
+				options: [
+					{ name: "Twin-linked accelerator autocannon", cost: 0 },
+					{ name: "Omega plasma array", cost: 0 },
+				],
+			},
+			{
+				location: "Sponsons",
+				options: [
+					{ name: "Heavy bolters", cost: 0 },
+					{ name: "Lascannons", cost: 0 },
+				],
+			},
+		],
 		datasheet_info: [
 			{
 				text: "A Legion Sicaran Squadron can purchase the following upgrades: The same upgrade may be taken more than once",
@@ -1074,7 +1112,16 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
-		loadout_options: [],
+		loadout_options: [
+			{
+				location: "Main",
+				options: [
+					{ name: "Laser destroyer array", cost: 0 },
+					{ name: "Quad-launcher", cost: 0 },
+					{ name: "Mole mortar", cost: 0 },
+				],
+			},
+		],
 		datasheet_info: [
 			{
 				text: "An Auxilia Rapier Battery can purchase the following upgrades:",
@@ -1113,7 +1160,15 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
-		loadout_options: [],
+		loadout_options: [
+			{
+				location: "Main",
+				options: [
+					{ name: "Tarantula lascannon battery", cost: 0 },
+					{ name: "Hyperios air-defence missile launcher", cost: 0 },
+				],
+			},
+		],
 		datasheet_info: [
 			{
 				text: "An Auxilia Tarantula Battery can purchase the following upgrades:",
@@ -1195,7 +1250,22 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
-		loadout_options: [],
+		loadout_options: [
+			{
+				location: "Turret",
+				options: [
+					{ name: "Leman Russ battlecannon", cost: 0 },
+					{ name: "Vanquisher battlecannon", cost: 0 },
+				],
+			},
+			{
+				location: "Hull",
+				options: [
+					{ name: "Heavy bolters", cost: 0 },
+					{ name: "Lascannons", cost: 0 },
+				],
+			},
+		],
 		datasheet_info: [
 			{
 				text: "A Leman Russ Strike Squadron can purchase the following upgrades:",
@@ -1240,7 +1310,33 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
-		loadout_options: [],
+		loadout_options: [
+			{
+				location: "Turret",
+				options: [
+					{ name: "Malcador battlecannon", cost: 0 },
+					{ name: "Vanquisher battlecannon", cost: 0 },
+					{ name: "Lascannon turret", cost: 0 },
+				],
+			},
+			{
+				location: "Hull",
+				options: [
+					{ name: "Heavy bolter", cost: 0 },
+					{ name: "Lascannon", cost: 0 },
+					{ name: "Autocannon", cost: 0 },
+					{ name: "Demolisher cannon", cost: 0 },
+				],
+			},
+			{
+				location: "Sponsons",
+				options: [
+					{ name: "Heavy bolters", cost: 0 },
+					{ name: "Lascannons", cost: 0 },
+					{ name: "Autocannons", cost: 0 },
+				],
+			},
+		],
 		datasheet_info: [
 			{
 				text: "A Malcador Tank Squadron can purchase any of the following upgrades: The same upgrade may be taken more than once.",
@@ -1287,7 +1383,23 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
-		loadout_options: [],
+		loadout_options: [
+			{
+				location: "Turret",
+				options: [
+					{ name: "Baneblade cannon", cost: 0 },
+					{ name: "Hellhammer cannon", cost: 0 },
+				],
+			},
+			{
+				location: "Sponsons",
+				options: [
+					{ name: "Heavy bolters", cost: 0 },
+					{ name: "Heavy flamers", cost: 0 },
+					{ name: "Autocannons", cost: 0 },
+				],
+			},
+		],
 		datasheet_info: [
 			{
 				text: "An Auxilia Super-Heavy Tank Squadron can purchase any of the following upgrades: The same upgrade may be taken more than once.",
@@ -1340,7 +1452,16 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
-		loadout_options: [],
+		loadout_options: [
+			{
+				location: "Wing",
+				options: [
+					{ name: "Hellstrike missiles", cost: 0 },
+					{ name: "Skystrike missiles", cost: 0 },
+					{ name: "Wing bombs", cost: 0 },
+				],
+			},
+		],
 		datasheet_info: [
 			{
 				text: "Any Thunderbolt Fighter can exchange its Quad autocannon for an Avenger bolt cannon for +3pts per model",
@@ -1388,7 +1509,16 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
-		loadout_options: [],
+		loadout_options: [
+			{
+				location: "Wing",
+				options: [
+					{ name: "Hellstrike missiles", cost: 0 },
+					{ name: "Skystrike missiles", cost: 0 },
+					{ name: "Wing bombs", cost: 0 },
+				],
+			},
+		],
 		datasheet_info: [
 			{
 				text: "An Auxilia Avenger Strike Fighter Squadron can purchase the following upgrades:",
@@ -1431,7 +1561,23 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
-		loadout_options: [],
+		loadout_options: [
+			{
+				location: "Hull",
+				options: [
+					{ name: "Lightning twin lascannons", cost: 0 },
+					{ name: "Lightning twin multi-laser", cost: 0 },
+				],
+			},
+			{
+				location: "Wing",
+				options: [
+					{ name: "Hellstrike missiles", cost: 0 },
+					{ name: "Skyfire missiles", cost: 0 },
+					{ name: "Phosphex bomb clusters", cost: 0 },
+				],
+			},
+		],
 		datasheet_info: [
 			{
 				text: "An Auxilia Lightning Fighter Squadron can purchase the following upgrades:",
@@ -1475,35 +1621,26 @@ export const detachmentData: DETACHMENT[] = [
 					{ number: 3, cost: 220, size: 3 },
 				],
 			},
+		],
+		loadout_options: [
 			{
-				name: "Marauder Pathfinder",
+				location: "Chassis",
 				options: [
-					{ number: 1, cost: 0, size: 0 },
-					{ number: 2, cost: 0, size: 0 },
-					{ number: 3, cost: 0, size: 0 },
-					{ number: 4, cost: 0, size: 0 },
+					{ name: "Marauder Bomber", cost: 0 },
+					{ name: "Marauder Pathfinder", cost: 0 },
+					{ name: "Marauder Colossus", cost: 0 },
+					{ name: "Marauder Destroyer", cost: 10 },
 				],
 			},
 			{
-				name: "Marauder Colossus",
+				location: "Wing",
 				options: [
-					{ number: 1, cost: 0, size: 0 },
-					{ number: 2, cost: 0, size: 0 },
-					{ number: 3, cost: 0, size: 0 },
-					{ number: 4, cost: 0, size: 0 },
-				],
-			},
-			{
-				name: "Marauder Destroyer",
-				options: [
-					{ number: 1, cost: 10, size: 0 },
-					{ number: 2, cost: 20, size: 0 },
-					{ number: 3, cost: 30, size: 0 },
-					{ number: 4, cost: 40, size: 0 },
+					{ name: "Hellstrike missiles", cost: 0 },
+					{ name: "Skystrike missiles", cost: 0 },
+					{ name: "Wing bombs", cost: 0 },
 				],
 			},
 		],
-		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "Any Marauder be upgraded to  one of the following Marauder variants:",
@@ -1700,13 +1837,6 @@ export const detachmentData: DETACHMENT[] = [
 				options: [{ number: 1, cost: 250, size: 1, break_strength: 3 }],
 			},
 			{
-				name: "Knight Asterius upgrade",
-				options: [
-					{ number: 1, cost: 20, size: 0 },
-					{ number: 2, cost: 40, size: 0 },
-				],
-			},
-			{
 				name: "Armiger Talon",
 				options: [{ number: 1, cost: 180, size: 3, break_strength: 2 }],
 			},
@@ -1715,7 +1845,31 @@ export const detachmentData: DETACHMENT[] = [
 				options: [{ number: 1, cost: 200, size: 3, break_strength: 2 }],
 			},
 		],
-		loadout_options: [],
+		loadout_options: [
+			{
+				location: "Chassis",
+				options: [
+					{ name: "Two Twin magana lascannon", cost: 0 },
+					{ name: "Two conversion beam cannon", cost: 20 },
+				],
+			},
+			{
+				location: "Chest",
+				options: [
+					{ name: "Acastus lascannon", cost: 0 },
+					{ name: "Acastus autocannon", cost: 0 },
+					{ name: "Volkite culverin", cost: 0 },
+				],
+			},
+			{
+				location: "Back",
+				options: [
+					{ name: "Ironstorm missile pod", cost: 0 },
+					{ name: "Helios defence missiles", cost: 0 },
+					{ name: "Karacnos mortar battery", cost: 0 },
+				],
+			},
+		],
 		datasheet_info: [
 			{
 				text: "An Acastus Knight Banner can increase its Detachment size by 1 for +250pts",
@@ -1779,8 +1933,8 @@ export const detachmentData: DETACHMENT[] = [
 			{
 				location: "Arm 1",
 				options: [
-					{ name: "Inferno gun", cost: 10 },
-					{ name: "Vulcan mega-bolter", cost: 20 },
+					{ name: "Inferno gun", cost: 0 },
+					{ name: "Vulcan mega-bolter", cost: 0 },
 					{ name: "Turbo-laser destructor", cost: 0 },
 					{ name: "Plasma blastgun", cost: 0 },
 					{ name: "Graviton eradicator", cost: 0 },
@@ -1796,8 +1950,8 @@ export const detachmentData: DETACHMENT[] = [
 			{
 				location: "Arm 2",
 				options: [
-					{ name: "Inferno gun", cost: 10 },
-					{ name: "Vulcan mega-bolter", cost: 20 },
+					{ name: "Inferno gun", cost: 0 },
+					{ name: "Vulcan mega-bolter", cost: 0 },
 					{ name: "Turbo-laser destructor", cost: 0 },
 					{ name: "Plasma blastgun", cost: 0 },
 					{ name: "Graviton eradicator", cost: 0 },
@@ -1846,17 +2000,17 @@ export const detachmentData: DETACHMENT[] = [
 				text_option: ["Ardex mega-bolters", "Neutron laser or Volcano cannon or Conversion beam dissipator"],
 			},
 		],
-		upgrade_options: [
+		upgrade_options: [],
+		loadout_options: [
 			{
-				name: "Carapace weapon",
+				location: "Back",
 				options: [
-					{ number: 1, cost: 0, size: 0, text: "Neutron laser" },
-					{ number: 2, cost: 0, size: 0, text: "Volcano cannon" },
-					{ number: 3, cost: 0, size: 0, text: "Conversion beam dissipator" },
+					{ name: "Neutron laser", cost: 0 },
+					{ name: "Volcano cannon", cost: 0 },
+					{ name: "Conversion beam dissipator", cost: 0 },
 				],
 			},
 		],
-		loadout_options: [],
 		datasheet_info: [],
 	},
 	{
@@ -1898,58 +2052,43 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
-		upgrade_options: [
+		upgrade_options: [],
+		loadout_options: [
 			{
-				name: "Arm 1",
+				location: "Arm 1",
 				options: [
-					{ number: 1, cost: 0, size: 0, text: "Reaver laser blaster" },
-					{ number: 2, cost: 0, size: 0, text: "Reaver gatling blaster" },
-					{ number: 3, cost: 0, size: 0, text: "Reaver volcano cannon" },
-					{ number: 4, cost: 0, size: 0, text: "Reaver melta cannon" },
-					{ number: 5, cost: 0, size: 0, text: "Reaver power fist" },
-					{ number: 6, cost: 0, size: 0, text: "Reaver chainfist" },
+					{ name: "Reaver laser blaster", cost: 0 },
+					{ name: "Reaver gatling blaster", cost: 0 },
+					{ name: "Reaver volcano cannon", cost: 0 },
+					{ name: "Reaver melta cannon", cost: 0 },
+					{ name: "Reaver power fist", cost: 0 },
+					{ name: "Reaver chainfist", cost: 0 },
 				],
 			},
 			{
-				name: "Arm 2",
+				location: "Arm 1",
 				options: [
-					{ number: 1, cost: 0, size: 0, text: "Reaver laser blaster" },
-					{ number: 2, cost: 0, size: 0, text: "Reaver gatling blaster" },
-					{ number: 3, cost: 0, size: 0, text: "Reaver volcano cannon" },
-					{ number: 4, cost: 0, size: 0, text: "Reaver melta cannon" },
-					{ number: 5, cost: 0, size: 0, text: "Reaver power fist" },
-					{ number: 6, cost: 0, size: 0, text: "Reaver chainfist" },
+					{ name: "Reaver laser blaster", cost: 0 },
+					{ name: "Reaver gatling blaster", cost: 0 },
+					{ name: "Reaver volcano cannon", cost: 0 },
+					{ name: "Reaver melta cannon", cost: 0 },
+					{ name: "Reaver power fist", cost: 0 },
+					{ name: "Reaver chainfist", cost: 0 },
 				],
 			},
 			{
-				name: "Carapace",
+				location: "Carapace",
 				options: [
-					{
-						number: 1,
-						cost: 0,
-						size: 0,
-						text: "Reaver apocalypse missile launcher",
-					},
-					{ number: 2, cost: 0, size: 0, text: "Reaver vulcan mega-bolter" },
-					{ number: 3, cost: 0, size: 0, text: "Reaver titan warp missile" },
-					{
-						number: 4,
-						cost: 0,
-						size: 0,
-						text: "Reaver turbo-laser destructor",
-					},
-					{ number: 5, cost: 0, size: 0, text: "Reaver volkite eradicator" },
-					{ number: 6, cost: 0, size: 0, text: "Reaver graviton eradicator" },
-					{
-						number: 7,
-						cost: 0,
-						size: 0,
-						text: "Reaver conversion beam dissolutor",
-					},
+					{ name: "Reaver apocalypse missile launcher", cost: 0 },
+					{ name: "Reaver vulcan mega-bolter", cost: 0 },
+					{ name: "Reaver titan warp missile", cost: 0 },
+					{ name: "Reaver turbo-laser destructor", cost: 0 },
+					{ name: "Reaver volkite eradicator", cost: 0 },
+					{ name: "Reaver graviton eradicator", cost: 0 },
+					{ name: "Reaver conversion beam dissolutor", cost: 0 },
 				],
 			},
 		],
-		loadout_options: [],
 		datasheet_info: [],
 	},
 	{
@@ -1984,34 +2123,34 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
-		upgrade_options: [
+		upgrade_options: [],
+		loadout_options: [
 			{
-				name: "Arm 1",
+				location: "Arm 1",
 				options: [
-					{ number: 1, cost: 0, size: 0, text: "Reaver laser blaster" },
-					{ number: 2, cost: 0, size: 0, text: "Reaver gatling blaster" },
-					{ number: 3, cost: 0, size: 0, text: "Reaver volcano cannon" },
-					{ number: 4, cost: 0, size: 0, text: "Reaver melta cannon" },
+					{ name: "Reaver laser blaster", cost: 0 },
+					{ name: "Reaver gatling blaster", cost: 0 },
+					{ name: "Reaver volcano cannon", cost: 0 },
+					{ name: "Reaver melta cannon", cost: 0 },
 				],
 			},
 			{
-				name: "Arm 2",
+				location: "Arm 2",
 				options: [
-					{ number: 1, cost: 0, size: 0, text: "Reaver laser blaster" },
-					{ number: 2, cost: 0, size: 0, text: "Reaver gatling blaster" },
-					{ number: 3, cost: 0, size: 0, text: "Reaver volcano cannon" },
-					{ number: 4, cost: 0, size: 0, text: "Reaver melta cannon" },
+					{ name: "Reaver laser blaster", cost: 0 },
+					{ name: "Reaver gatling blaster", cost: 0 },
+					{ name: "Reaver volcano cannon", cost: 0 },
+					{ name: "Reaver melta cannon", cost: 0 },
 				],
 			},
 			{
-				name: "Carapace",
+				location: "Carapace",
 				options: [
-					{ number: 1, cost: 0, size: 0, text: "Mori quake cannon" },
-					{ number: 2, cost: 0, size: 0, text: "Belicosa volcano cannon" },
+					{ name: "Mori quake cannon", cost: 0 },
+					{ name: "Belicosa volcano cannon", cost: 0 },
 				],
 			},
 		],
-		loadout_options: [],
 		datasheet_info: [],
 	},
 	{
@@ -2056,50 +2195,45 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
-		upgrade_options: [
+		upgrade_options: [],
+		loadout_options: [
 			{
-				name: "Arm 1",
+				location: "Arm 1",
 				options: [
-					{ number: 1, cost: 0, size: 0, text: "Belicosa Volcano Cannon" },
-					{ number: 2, cost: 0, size: 0, text: "Sunfury plasma annihilator" },
-					{ number: 3, cost: 0, size: 0, text: "Macro-gatling blaster" },
-					{ number: 4, cost: 0, size: 0, text: "Mori quake cannon" },
-					{ number: 5, cost: 0, size: 0, text: "Arioch power claw" },
-					{ number: 6, cost: 0, size: 0, text: "Volkite destructor" },
-					{ number: 7, cost: 0, size: 0, text: "Warlord graviton ruinator" },
-					{ number: 8, cost: 0, size: 0, text: "Conversion beam extripator" },
+					{ name: "Belicosa Volcano Cannon", cost: 0 },
+					{ name: "Sunfury plasma annihilator", cost: 0 },
+					{ name: "Macro-gatling blaster", cost: 0 },
+					{ name: "Mori quake cannon", cost: 0 },
+					{ name: "Arioch power claw", cost: 0 },
+					{ name: "Volkite destructor", cost: 0 },
+					{ name: "Warlord graviton ruinator", cost: 0 },
+					{ name: "Conversion beam extripator", cost: 0 },
 				],
 			},
 			{
-				name: "Arm 2",
+				location: "Arm 2",
 				options: [
-					{ number: 1, cost: 0, size: 0, text: "Belicosa Volcano Cannon" },
-					{ number: 2, cost: 0, size: 0, text: "Sunfury plasma annihilator" },
-					{ number: 3, cost: 0, size: 0, text: "Macro-gatling blaster" },
-					{ number: 4, cost: 0, size: 0, text: "Mori quake cannon" },
-					{ number: 5, cost: 0, size: 0, text: "Arioch power claw" },
-					{ number: 6, cost: 0, size: 0, text: "Volkite destructor" },
-					{ number: 7, cost: 0, size: 0, text: "Warlord graviton ruinator" },
-					{ number: 8, cost: 0, size: 0, text: "Conversion beam extripator" },
+					{ name: "Belicosa Volcano Cannon", cost: 0 },
+					{ name: "Sunfury plasma annihilator", cost: 0 },
+					{ name: "Macro-gatling blaster", cost: 0 },
+					{ name: "Mori quake cannon", cost: 0 },
+					{ name: "Arioch power claw", cost: 0 },
+					{ name: "Volkite destructor", cost: 0 },
+					{ name: "Warlord graviton ruinator", cost: 0 },
+					{ name: "Conversion beam extripator", cost: 0 },
 				],
 			},
 			{
-				name: "Carapace",
+				location: "Carapace",
 				options: [
-					{ number: 1, cost: 0, size: 0, text: "Apocalypse missile launchers" },
-					{ number: 2, cost: 0, size: 0, text: "Paired gatling blasters" },
-					{
-						number: 3,
-						cost: 0,
-						size: 0,
-						text: "Paired turbo-laser destructors",
-					},
-					{ number: 4, cost: 0, size: 0, text: "Vulcan mega-bolter array" },
-					{ number: 5, cost: 0, size: 0, text: "Paired laser blasters" },
+					{ name: "Apocalypse missile launchers", cost: 0 },
+					{ name: "Paired gatling blasters", cost: 0 },
+					{ name: "Paired turbo-laser destructors", cost: 0 },
+					{ name: "Vulcan mega-bolter array", cost: 0 },
+					{ name: "Paired laser blasters", cost: 0 },
 				],
 			},
 		],
-		loadout_options: [],
 		datasheet_info: [],
 	},
 	{
@@ -2150,37 +2284,32 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
-		upgrade_options: [
+		upgrade_options: [],
+		loadout_options: [
 			{
-				name: "Arm weapon",
+				location: "Arm weapon",
 				options: [
-					{ number: 1, cost: 0, size: 0, text: "Belicosa Volcano Cannon" },
-					{ number: 2, cost: 0, size: 0, text: "Sunfury plasma annihilator" },
-					{ number: 3, cost: 0, size: 0, text: "Macro-gatling blaster" },
-					{ number: 4, cost: 0, size: 0, text: "Mori quake cannon" },
-					{ number: 5, cost: 0, size: 0, text: "Arioch power claw" },
-					{ number: 6, cost: 0, size: 0, text: "Volkite destructor" },
-					{ number: 7, cost: 0, size: 0, text: "Warlord graviton ruinator" },
-					{ number: 8, cost: 0, size: 0, text: "Conversion beam extripator" },
+					{ name: "Arioch power claw", cost: 0 },
+					{ name: "Belicosa Volcano Cannon", cost: 0 },
+					{ name: "Sunfury plasma annihilator", cost: 0 },
+					{ name: "Macro-gatling blaster", cost: 0 },
+					{ name: "Mori quake cannon", cost: 0 },
+					{ name: "Volkite destructor", cost: 0 },
+					{ name: "Warlord graviton ruinator", cost: 0 },
+					{ name: "Conversion beam extripator", cost: 0 },
 				],
 			},
 			{
-				name: "Carapace",
+				location: "Carapace",
 				options: [
-					{ number: 1, cost: 0, size: 0, text: "Apocalypse missile launchers" },
-					{ number: 2, cost: 0, size: 0, text: "Paired gatling blasters" },
-					{
-						number: 3,
-						cost: 0,
-						size: 0,
-						text: "Paired turbo-laser destructors",
-					},
-					{ number: 4, cost: 0, size: 0, text: "Vulcan mega-bolter array" },
-					{ number: 5, cost: 0, size: 0, text: "Paired laser blasters" },
+					{ name: "Apocalypse missile launchers", cost: 0 },
+					{ name: "Paired gatling blasters", cost: 0 },
+					{ name: "Paired turbo-laser destructors", cost: 0 },
+					{ name: "Vulcan mega-bolter array", cost: 0 },
+					{ name: "Paired laser blasters", cost: 0 },
 				],
 			},
 		],
-		loadout_options: [],
 		datasheet_info: [],
 	},
 	{
@@ -2219,48 +2348,38 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
-		upgrade_options: [
+		upgrade_options: [],
+		loadout_options: [
 			{
-				name: "Shoulder 1",
+				location: "Shoulder 1",
 				options: [
-					{ number: 1, cost: 0, size: 0, text: "Apocalypse missile array" },
-					{ number: 2, cost: 0, size: 0, text: "Melta cannon" },
-					{ number: 3, cost: 0, size: 0, text: "Inferno gun" },
-					{ number: 4, cost: 0, size: 0, text: "Vulcan mega-bolter" },
-					{ number: 5, cost: 0, size: 0, text: "Turbo-laser destructor" },
-					{ number: 6, cost: 0, size: 0, text: "Plasma blastun" },
+					{ name: "Apocalypse missile array", cost: 0 },
+					{ name: "Melta cannon", cost: 0 },
+					{ name: "Inferno gun", cost: 0 },
+					{ name: "Vulcan mega-bolter", cost: 0 },
+					{ name: "Turbo-laser destructor", cost: 0 },
+					{ name: "Plasma blastun", cost: 0 },
 				],
 			},
 			{
-				name: "Shoulder 2",
+				location: "Shoulder 2",
 				options: [
-					{ number: 1, cost: 0, size: 0, text: "Apocalypse missile array" },
-					{ number: 2, cost: 0, size: 0, text: "Melta cannon" },
-					{ number: 3, cost: 0, size: 0, text: "Inferno gun" },
-					{ number: 4, cost: 0, size: 0, text: "Vulcan mega-bolter" },
-					{ number: 5, cost: 0, size: 0, text: "Turbo-laser destructor" },
-					{ number: 6, cost: 0, size: 0, text: "Plasma blastun" },
+					{ name: "Apocalypse missile array", cost: 0 },
+					{ name: "Melta cannon", cost: 0 },
+					{ name: "Inferno gun", cost: 0 },
+					{ name: "Vulcan mega-bolter", cost: 0 },
+					{ name: "Turbo-laser destructor", cost: 0 },
+					{ name: "Plasma blastun", cost: 0 },
 				],
 			},
 			{
-				name: "Turrets",
+				location: "Turrets",
 				options: [
-					{
-						number: 1,
-						cost: 0,
-						size: 0,
-						text: "Anvilus pattern defence batteries",
-					},
-					{
-						number: 2,
-						cost: 0,
-						size: 0,
-						text: "Ardex-defensor bomard turrets",
-					},
+					{ name: "Anvilus pattern defence batteries", cost: 0 },
+					{ name: "Ardex-defensor bomard turrets", cost: 0 },
 				],
 			},
 		],
-		loadout_options: [],
 		datasheet_info: [],
 	},
 	{
@@ -2300,55 +2419,48 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 			{
-				text: "A Warmaster Iconoclast ca exchange its Kirus siege drill for a Kirus grav iploder for +10pts",
+				text: "A Warmaster Iconoclast can exchange its Kirus siege drill for a Kirus grav imploder for +10pts",
 			},
 		],
-		upgrade_options: [
+		upgrade_options: [],
+		loadout_options: [
 			{
-				name: "Shoulder 1",
+				location: "Arm",
 				options: [
-					{ number: 1, cost: 0, size: 0, text: "Apocalypse missile array" },
-					{ number: 2, cost: 0, size: 0, text: "Melta cannon" },
-					{ number: 3, cost: 0, size: 0, text: "Inferno gun" },
-					{ number: 4, cost: 0, size: 0, text: "Vulcan mega-bolter" },
-					{ number: 5, cost: 0, size: 0, text: "Turbo-laser destructor" },
-					{ number: 6, cost: 0, size: 0, text: "Plasma blastun" },
+					{ name: "Kirus siege drill", cost: 0 },
+					{ name: "Kirus grav imploder", cost: 10 },
 				],
 			},
 			{
-				name: "Shoulder 2",
+				location: "Shoulder 1",
 				options: [
-					{ number: 1, cost: 0, size: 0, text: "Apocalypse missile array" },
-					{ number: 2, cost: 0, size: 0, text: "Melta cannon" },
-					{ number: 3, cost: 0, size: 0, text: "Inferno gun" },
-					{ number: 4, cost: 0, size: 0, text: "Vulcan mega-bolter" },
-					{ number: 5, cost: 0, size: 0, text: "Turbo-laser destructor" },
-					{ number: 6, cost: 0, size: 0, text: "Plasma blastun" },
+					{ name: "Apocalypse missile array", cost: 0 },
+					{ name: "Melta cannon", cost: 0 },
+					{ name: "Inferno gun", cost: 0 },
+					{ name: "Vulcan mega-bolter", cost: 0 },
+					{ name: "Turbo-laser destructor", cost: 0 },
+					{ name: "Plasma blastun", cost: 0 },
 				],
 			},
 			{
-				name: "Turrets",
+				location: "Shoulder 2",
 				options: [
-					{
-						number: 1,
-						cost: 0,
-						size: 0,
-						text: "Anvilus pattern defence batteries",
-					},
-					{
-						number: 2,
-						cost: 0,
-						size: 0,
-						text: "Ardex-defensor bomard turrets",
-					},
+					{ name: "Apocalypse missile array", cost: 0 },
+					{ name: "Melta cannon", cost: 0 },
+					{ name: "Inferno gun", cost: 0 },
+					{ name: "Vulcan mega-bolter", cost: 0 },
+					{ name: "Turbo-laser destructor", cost: 0 },
+					{ name: "Plasma blastun", cost: 0 },
 				],
 			},
 			{
-				name: "Kirus grav imploder",
-				options: [{ number: 1, cost: 10, size: 0 }],
+				location: "Turrets",
+				options: [
+					{ name: "Anvilus pattern defence batteries", cost: 0 },
+					{ name: "Ardex-defensor bomard turrets", cost: 0 },
+				],
 			},
 		],
-		loadout_options: [],
 		datasheet_info: [],
 	},
 	{
@@ -2391,14 +2503,6 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 			{
-				name: "Atropos upgrade",
-				options: [
-					{ number: 1, cost: 20, size: 0 },
-					{ number: 2, cost: 40, size: 0 },
-					{ number: 3, cost: 60, size: 0 },
-				],
-			},
-			{
 				name: "Armiger Talon",
 				options: [{ number: 1, cost: 180, size: 3, break_strength: 2 }],
 			},
@@ -2407,7 +2511,17 @@ export const detachmentData: DETACHMENT[] = [
 				options: [{ number: 1, cost: 200, size: 3, break_strength: 2 }],
 			},
 		],
-		loadout_options: [],
+		loadout_options: [
+			{
+				location: "Chassis",
+				options: [
+					{ name: "Knight Acheron", cost: 0 },
+					{ name: "Knight Castigator", cost: 0 },
+					{ name: "Knight Lancer", cost: 0 },
+					{ name: "Knight Atropos", cost: 20 },
+				],
+			},
+		],
 		datasheet_info: [
 			{
 				text: "A Cerastus Knight Banner can purchase one of the following upgrades:",
@@ -2485,58 +2599,16 @@ export const detachmentData: DETACHMENT[] = [
 					{ number: 30, cost: 300, size: 30 },
 				],
 			},
+		],
+		loadout_options: [
 			{
-				name: "Havoc launcher",
+				location: "Hull",
 				options: [
-					{ number: 1, cost: 2, size: 0 },
-					{ number: 2, cost: 4, size: 0 },
-					{ number: 3, cost: 6, size: 0 },
-					{ number: 4, cost: 8, size: 0 },
-					{ number: 5, cost: 10, size: 0 },
-					{ number: 6, cost: 12, size: 0 },
-					{ number: 7, cost: 14, size: 0 },
-					{ number: 8, cost: 16, size: 0 },
-					{ number: 9, cost: 18, size: 0 },
-					{ number: 10, cost: 20, size: 0 },
-					{ number: 11, cost: 22, size: 0 },
-					{ number: 12, cost: 24, size: 0 },
-					{ number: 13, cost: 26, size: 0 },
-					{ number: 14, cost: 28, size: 0 },
-					{ number: 15, cost: 30, size: 0 },
-					{ number: 16, cost: 32, size: 0 },
-					{ number: 17, cost: 34, size: 0 },
-					{ number: 18, cost: 36, size: 0 },
-					{ number: 19, cost: 39, size: 0 },
-					{ number: 20, cost: 40, size: 0 },
-				],
-			},
-			{
-				name: "Multi-melta",
-				options: [
-					{ number: 1, cost: 4, size: 0 },
-					{ number: 2, cost: 8, size: 0 },
-					{ number: 3, cost: 12, size: 0 },
-					{ number: 4, cost: 16, size: 0 },
-					{ number: 5, cost: 20, size: 0 },
-					{ number: 6, cost: 24, size: 0 },
-					{ number: 7, cost: 28, size: 0 },
-					{ number: 8, cost: 32, size: 0 },
-					{ number: 9, cost: 36, size: 0 },
-					{ number: 10, cost: 40, size: 0 },
-					{ number: 11, cost: 44, size: 0 },
-					{ number: 12, cost: 48, size: 0 },
-					{ number: 13, cost: 52, size: 0 },
-					{ number: 14, cost: 56, size: 0 },
-					{ number: 15, cost: 60, size: 0 },
-					{ number: 16, cost: 64, size: 0 },
-					{ number: 17, cost: 68, size: 0 },
-					{ number: 18, cost: 72, size: 0 },
-					{ number: 19, cost: 76, size: 0 },
-					{ number: 20, cost: 80, size: 0 },
+					{ name: "Havoc launcher", cost: 2 },
+					{ name: "Multi-melta", cost: 4 },
 				],
 			},
 		],
-		loadout_options: [],
 		datasheet_info: [
 			{
 				text: "A Rhino may change its Pintle Mounted twin-linked bolter for one of the following",

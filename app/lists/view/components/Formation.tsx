@@ -1,5 +1,7 @@
 import { List, ListFormation } from "@/app/types"
 import FormationGroup from "./FormationGroup"
+import { totalFormationPoints } from "../../builder/utils"
+import FormationBreakPoints from "../../builder/components/formation/FormationBreakPoints"
 
 interface properties {
 	list: List
@@ -8,11 +10,14 @@ interface properties {
 
 const Formation = ({ list, formation }: properties) => {
 	return (
-		<div>
-			<h4 className="font-bold">
-				{formation.nickname ? `${formation.nickname} - ` : null}
-				{`${formation.name}, `}
+		<div className="pt-2 flex flex-col gap-1">
+			<h4 className="font-bold font-graduate border-b border-white text-lg">
+				{formation.nickname ? `${formation.nickname} - ` : ""}
+				{formation.subfaction ? `${formation.subfaction}, ` : ""}
+				{`${formation.name}, ${totalFormationPoints(list, formation)}pts`}
 			</h4>
+			<FormationBreakPoints formation={formation} className="flex gap-2" />
+
 			{formation.detachment_groups.map((group, index) => (
 				<FormationGroup key={formation.id + "group" + index} list={list} formationGroup={group} />
 			))}
