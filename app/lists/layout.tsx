@@ -29,7 +29,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
 	}, [listParams])
 
 	return (
-		<Main className="sm:max-w-screen-2xl w-full flex flex-col items-center">
+		<Main className="sm:max-w-screen-2xl flex flex-col items-center">
 			<ToastContainer
 				position="bottom-right"
 				autoClose={800}

@@ -34,7 +34,7 @@ export default function Home() {
 					Github <FaGithub />
 				</Link>
 			</section>
-			<hr className="border rounded-full bg-stone-900 m-4" />
+			<hr className="border rounded-full bg-stone-900 m-4 w-full" />
 			<footer className="mx-4">
 				<p>This website is unofficial and in no way endorsed by Games Workshop.</p>
 				<p>

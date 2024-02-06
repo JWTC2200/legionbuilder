@@ -1293,8 +1293,8 @@ export const detachmentData: DETACHMENT[] = [
 		dataslate_loadout: [
 			{
 				text_option: [
-					"Hull Mounted heavy bolter or Hull Mounted lascannon or Hull Mounted autocannon or Hull Mounted demolisher cannon",
 					"Malcador battlecannon or Malcador Vanquisher battlecannon or Malcador lascannon turret",
+					"Hull Mounted heavy bolter or Hull Mounted lascannon or Hull Mounted autocannon or Hull Mounted demolisher cannon",
 					"Malcador heavy bolter sponsons or Malcador lascannon sponsons or Malcador autocannon sponsons",
 				],
 			},
