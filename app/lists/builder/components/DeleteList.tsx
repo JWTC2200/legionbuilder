@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { List } from "@/app/types"
+import { List } from "@/app/types/listTypes"
 import { deleteList } from "@/app/firebase/firestore/deleteList"
 import { ImBin } from "@react-icons/all-files/im/ImBin"
 import useAuthState from "@/app/Auth"

@@ -1,5 +1,6 @@
 import { listState } from "../../../state"
-import { List, ListFormation, SUBFACTION_TYPE, subfactionTypeArray } from "@/app/types"
+import { ListFormation } from "@/app/types/listTypes"
+import { SUBFACTION_TYPE, subfactionTypeArray } from "@/app/types/types"
 
 interface properties {
 	formation: ListFormation

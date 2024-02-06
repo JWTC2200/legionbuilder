@@ -3,7 +3,7 @@ import calculateShotMultiplier from "./utils/calculateShotMultiplier"
 import calculateToHit from "./utils/calculateToHit"
 import calculateSaves from "./utils/calculateSaves"
 import calculateDamage from "./utils/calculateDamage"
-import { ALLEGIANCE, FACTION, UNIT_DATASHEET, UNIT_TYPE, WEAPON_PROFILES } from "../../types"
+import { ALLEGIANCE, FACTION, UNIT_DATASHEET, UNIT_TYPE, WEAPON_PROFILES } from "../../types/types"
 
 const testWeapon: WEAPON_PROFILES = { range: "1", dice: 1, to_hit: 4, ap: 0, traits: [] }
 

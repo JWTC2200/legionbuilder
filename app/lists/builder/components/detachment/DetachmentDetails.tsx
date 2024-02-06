@@ -1,4 +1,4 @@
-import { ListDetachmentSlot } from "@/app/types"
+import { ListDetachmentSlot } from "@/app/types/types"
 import { listState } from "@/app/lists/state"
 import { findLoadoutBySlotId, findUpgradeBySlotId } from "@/app/lists/builder/utils"
 import { incrementLoadout, loadoutPoints } from "@/app/lists/builder/components/detachment/utils"

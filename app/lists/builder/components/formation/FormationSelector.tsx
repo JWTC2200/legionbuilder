@@ -1,4 +1,4 @@
-import { ListFormation } from "@/app/types"
+import { ListFormation } from "@/app/types/listTypes"
 import { formationData } from "@/app/data/formation_data"
 import { listState } from "@/app/lists/state"
 import {

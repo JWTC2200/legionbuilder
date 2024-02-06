@@ -1,13 +1,6 @@
-import {
-	DETACHMENT,
-	FORMATION,
-	UNIT_DATASHEET,
-	WEAPON_DATASHEET,
-} from "../types"
+import { DETACHMENT, FORMATION, UNIT_DATASHEET, WEAPON_DATASHEET } from "../types/types"
 
-export const sortedByNameKey = (
-	array: FORMATION[] | DETACHMENT[] | UNIT_DATASHEET[] | WEAPON_DATASHEET[]
-) => {
+export const sortedByNameKey = (array: FORMATION[] | DETACHMENT[] | UNIT_DATASHEET[] | WEAPON_DATASHEET[]) => {
 	return array.sort((a, b) => {
 		const nameA = a.name.toUpperCase()
 		const nameB = b.name.toUpperCase()

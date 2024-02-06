@@ -1,6 +1,6 @@
 "use client"
 
-import { WEAPON_DATASHEET } from "@/app/types"
+import { WEAPON_DATASHEET } from "@/app/types/types"
 import { Row } from "@/app/components/HTML"
 
 import AttackWeaponProfiles from "./AttackWeaponProfiles"

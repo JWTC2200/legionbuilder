@@ -3,7 +3,7 @@ import { calculatorWeapons } from "../state"
 import { unitData } from "@/app/data/unit_data"
 import { weapons } from "@/app/data/weapon_data"
 import { sortedByNameKey } from "@/app/utils/sorting"
-import { UNIT_DATASHEET, UNIT_TYPE, WEAPON_DATASHEET } from "@/app/types"
+import { UNIT_DATASHEET, UNIT_TYPE, WEAPON_DATASHEET } from "@/app/types/types"
 import { FaExchangeAlt } from "@react-icons/all-files/fa/FaExchangeAlt"
 
 const AttackingUnit = () => {
@@ -67,8 +67,19 @@ const AttackingUnit = () => {
 					{unitOrWeapon ? "Weapon" : "Unit"}
 				</button>
 			</h3>
-			<input type="text" name="attacker" id="attacker" placeholder={`Search ${unitOrWeapon ? " units" : "weapons"}`} className="bg-dataslate w-full p-4 font-graduate placeholder:text-primary-800 focus:outline-none" value={attackerFilter} onChange={(e) => setAttackerFilter(e.target.value)} />
-			<select className="w-full bg-dataslate p-4 font-graduate placeholder:text-primary-950 focus:outline-none" value={selectedAttacker} onChange={(e) => setSelectedAttacker(e.target.value)}>
+			<input
+				type="text"
+				name="attacker"
+				id="attacker"
+				placeholder={`Search ${unitOrWeapon ? " units" : "weapons"}`}
+				className="bg-dataslate w-full p-4 font-graduate placeholder:text-primary-800 focus:outline-none"
+				value={attackerFilter}
+				onChange={(e) => setAttackerFilter(e.target.value)}
+			/>
+			<select
+				className="w-full bg-dataslate p-4 font-graduate placeholder:text-primary-950 focus:outline-none"
+				value={selectedAttacker}
+				onChange={(e) => setSelectedAttacker(e.target.value)}>
 				<option value={""}>Select {unitOrWeapon ? "attacking unit" : "weapon"}</option>
 				{filterOptions(optionsArray()).map((filteredEntries) => (
 					<option key={"unit" + filteredEntries.id} value={filteredEntries.id} className="text-black">

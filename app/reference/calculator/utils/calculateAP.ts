@@ -1,6 +1,6 @@
 import { armouredTypes } from "../utils"
-import { UNIT_DATASHEET, WEAPON_PROFILES } from "@/app/types"
-import { UNIT_TYPE } from "@/app/types"
+import { UNIT_DATASHEET, WEAPON_PROFILES } from "@/app/types/types"
+import { UNIT_TYPE } from "@/app/types/types"
 
 export const calculateAP = (weapon: WEAPON_PROFILES, target: UNIT_DATASHEET): number => {
 	const weaponTraits = weapon.traits.map((trait) => trait.name)

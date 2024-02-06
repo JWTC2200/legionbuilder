@@ -1,5 +1,3 @@
-import { BUILDER_LIST } from "@/app/types"
-
 import { db } from "../config"
 import { doc, getDoc } from "firebase/firestore"
 

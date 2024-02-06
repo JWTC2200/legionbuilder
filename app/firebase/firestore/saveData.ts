@@ -1,4 +1,4 @@
-import { BUILDER_LIST, List } from "@/app/types"
+import { List } from "@/app/types/listTypes"
 import { db } from "../config"
 import { setDoc, doc, serverTimestamp } from "firebase/firestore"
 import checkUploadPermission from "./checkUploadPermission"

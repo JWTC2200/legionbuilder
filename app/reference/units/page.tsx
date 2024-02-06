@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { unitData } from "../../data/unit_data"
-import { factionTypeArray } from "../../types"
+import { factionTypeArray } from "../../types/types"
 import Main from "@components/Main"
 import { BreadCrumbs, Crumb, ReferenceSelector } from "@components/BreadCrumbs"
 import Sticky from "@components/Sticky"
@@ -26,7 +26,9 @@ const page = () => {
 							.filter((unitDataslate) => unitDataslate.faction === faction && !unitDataslate.unique)
 							.map((unit) => (
 								<Row key={unit.name} className="px-4 hover:bg-secondary-700 hover:text-secondary-50">
-									<Link href={`/reference/units/${unit.name.replaceAll(" ", "_")} `} className="block w-full py-1">
+									<Link
+										href={`/reference/units/${unit.name.replaceAll(" ", "_")} `}
+										className="block w-full py-1">
 										{unit.name}
 									</Link>
 								</Row>

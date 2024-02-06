@@ -1,4 +1,4 @@
-import { ListFormationGroup, List } from "@/app/types"
+import { ListFormationGroup, List } from "@/app/types/listTypes"
 import Detachment from "./Detachment"
 
 interface properties {

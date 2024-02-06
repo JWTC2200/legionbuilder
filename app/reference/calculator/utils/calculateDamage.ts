@@ -1,4 +1,4 @@
-import { UNIT_DATASHEET, UNIT_TYPE, WEAPON_PROFILES } from "@/app/types"
+import { UNIT_DATASHEET, UNIT_TYPE, WEAPON_PROFILES } from "@/app/types/types"
 import { armouredTypes, demolisherTraits } from "../utils"
 import calculateShotMultiplier from "./calculateShotMultiplier"
 import calculateToHit from "./calculateToHit"

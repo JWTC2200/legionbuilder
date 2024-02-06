@@ -1,4 +1,4 @@
-import { ListLoadouts } from "@/app/types"
+import { ListLoadouts } from "@/app/types/types"
 import { listState } from "@/app/lists/state"
 import { loadoutPoints, incrementLoadout } from "./utils"
 

@@ -1,4 +1,5 @@
-import { ListFormationGroup, SLOT_TYPE } from "@/app/types"
+import { ListFormationGroup } from "@/app/types/listTypes"
+import { SLOT_TYPE } from "@/app/types/types"
 import { listState } from "@/app/lists/state"
 import DetachmentSlot from "../detachment/DetachmentSlot"
 import { formationSlotsFilled, formationGroupSlots } from "../../utils"

@@ -1,4 +1,4 @@
-import { WEAPON_PROFILES } from "@/app/types"
+import { WEAPON_PROFILES } from "@/app/types/types"
 
 import DamageResult from "./DamageResult"
 import WeaponTraitBox from "@/app/components/WeaponTraitBox"

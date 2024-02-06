@@ -1,6 +1,6 @@
 import { detachmentData } from "@/app/data/detachment_data"
 import { listState } from "@/app/lists/state"
-import { List, ListUpgrade, ListUpgrades } from "@/app/types"
+import { List, ListUpgrade, ListUpgrades } from "@/app/types/listTypes"
 import SideMenuTitle from "../SideMenutitle"
 
 interface properties {

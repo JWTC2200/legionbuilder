@@ -1,5 +1,6 @@
 import { create } from "zustand"
-import { List, DB_ENTRY, ListUpgrades, ListLoadouts } from "@/app/types"
+import { List, ListUpgrades, ListLoadouts } from "@/app/types/listTypes"
+import { DB_ENTRY } from "../types/types"
 import { emptyList } from "@/app/data/empty_objects"
 
 interface UserListsState {

@@ -1,4 +1,4 @@
-import { List, FACTION, ALLEGIANCE, ListFormation, ListDetachment, ListUpgrades, ListLoadouts } from "@/app/types"
+import { List, FACTION, ALLEGIANCE, ListFormation, ListDetachment, ListUpgrades, ListLoadouts } from "@/app/types/types"
 import { nanoid } from "nanoid"
 
 export const emptyList: List = {

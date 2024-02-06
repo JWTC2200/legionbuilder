@@ -1,4 +1,4 @@
-import { ListDetachmentSlot } from "@/app/types"
+import { ListDetachmentSlot } from "@/app/types/listTypes"
 import LoadoutCountWarning from "./LoadoutCountWarning"
 import DetachmentSizeWarning from "./DetachmentSizeWarning"
 import DetachmentAllegianceWarning from "./DetachmentAllegianceWarning"

@@ -6,7 +6,7 @@ import Main from "../components/Main"
 import { listState } from "@/app/lists/state"
 import { useSearchParams } from "next/navigation"
 import { getList } from "@/app/firebase/firestore/getList"
-import { List } from "@/app/types"
+import { List } from "@/app/types/listTypes"
 import { toast } from "react-toastify"
 
 const layout = ({ children }: { children: React.ReactNode }) => {

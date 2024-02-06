@@ -1,5 +1,6 @@
 import { useState } from "react"
-import { ListFormation, FACTION } from "@/app/types"
+import { ListFormation } from "@/app/types/listTypes"
+import { FACTION } from "@/app/types/types"
 import FormationToggle from "./FormationToggle"
 import FormationDelete from "./FormationDelete"
 import FormationSelector from "./FormationSelector"

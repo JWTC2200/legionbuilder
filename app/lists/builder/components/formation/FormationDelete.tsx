@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { ListFormation } from "@/app/types"
+import { ListFormation } from "@/app/types/listTypes"
 import { listState } from "../../../state"
 import { toast } from "react-toastify"
 import { removeFormation } from "../../utils"

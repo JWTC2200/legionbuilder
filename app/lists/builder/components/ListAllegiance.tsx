@@ -1,5 +1,5 @@
 import { listState } from "@/app/lists/state"
-import { ALLEGIANCE } from "@/app/types"
+import { ALLEGIANCE } from "@/app/types/types"
 
 const ListAllegiance = () => {
 	const { list, setList } = listState()

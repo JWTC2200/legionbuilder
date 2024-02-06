@@ -9,14 +9,16 @@ import { BreadCrumbs, Crumb, ReferenceSelector } from "@components/BreadCrumbs"
 import { sortedByNameKey } from "@/app/utils/sorting"
 import Main from "@components/Main"
 import Sticky from "@components/Sticky"
-import { WEAPON_DATASHEET } from "@/app/types"
+import { WEAPON_DATASHEET } from "@/app/types/types"
 
 const page = () => {
 	const [searchTerm, setSearchTerm] = useState("")
 
 	const sortedWeapons = sortedByNameKey(weapons) as WEAPON_DATASHEET[]
 
-	const filteredWeapons = sortedWeapons.filter((weapon) => weapon.name.toLowerCase().includes(searchTerm.toLowerCase().trim()))
+	const filteredWeapons = sortedWeapons.filter((weapon) =>
+		weapon.name.toLowerCase().includes(searchTerm.toLowerCase().trim())
+	)
 
 	const weaponRows = filteredWeapons.map((weapon) => <WeaponRow weapon={weapon} key={weapon.id} />)
 
@@ -28,7 +30,15 @@ const page = () => {
 					<ReferenceSelector />
 				</BreadCrumbs>
 				<section>
-					<input type="text" name="search" id="search" placeholder="Enter a search term..." className="bg-dataslate w-full p-4 text-primary-950 font-graduate placeholder:text-primary-950 focus:outline-none" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+					<input
+						type="text"
+						name="search"
+						id="search"
+						placeholder="Enter a search term..."
+						className="bg-dataslate w-full p-4 text-primary-950 font-graduate placeholder:text-primary-950 focus:outline-none"
+						value={searchTerm}
+						onChange={(e) => setSearchTerm(e.target.value)}
+					/>
 				</section>
 				<header className="flex flex-col bg-backgrounds-950 font-bold">
 					<div className="w-full border-b border-primary-600 px-4 py-1">Weapon</div>

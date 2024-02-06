@@ -1,4 +1,4 @@
-import { ListFormation } from "@/app/types"
+import { ListFormation } from "@/app/types/listTypes"
 import { listState } from "../../../state"
 import { findFormationDetachmentBreakSlotIds } from "../../utils"
 import { sum } from "@/app/utils/math"

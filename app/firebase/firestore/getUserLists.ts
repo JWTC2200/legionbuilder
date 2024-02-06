@@ -1,4 +1,4 @@
-import { DB_ENTRY } from "@/app/types"
+import { DB_ENTRY } from "@/app/types/types"
 import { db } from "../config"
 import { collection, query, where, onSnapshot } from "firebase/firestore"
 

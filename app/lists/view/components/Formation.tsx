@@ -1,4 +1,4 @@
-import { List, ListFormation } from "@/app/types"
+import { List, ListFormation } from "@/app/types/listTypes"
 import FormationGroup from "./FormationGroup"
 import { totalFormationPoints } from "../../builder/utils"
 import FormationBreakPoints from "../../builder/components/formation/FormationBreakPoints"

@@ -1,5 +1,19 @@
-import { DETACHMENT_TYPE } from "../types"
-import { APC, ArrowUp, Bullets, Cannon, Cog, GothicCross, JetFighter, Knight, Shield, Skull, Tank, TankTread, Tower } from "@components/Icons"
+import { DETACHMENT_TYPE } from "../types/types"
+import {
+	APC,
+	ArrowUp,
+	Bullets,
+	Cannon,
+	Cog,
+	GothicCross,
+	JetFighter,
+	Knight,
+	Shield,
+	Skull,
+	Tank,
+	TankTread,
+	Tower,
+} from "@components/Icons"
 
 const detachmentIcons: { [key: string]: React.ReactNode } = {
 	[DETACHMENT_TYPE.hq]: <Skull />,
