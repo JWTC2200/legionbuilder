@@ -1,10 +1,11 @@
 import { detachmentData } from "@/app/data/detachment_data"
 import { listState } from "@/app/lists/state"
-import { createLoadout, incrementLoadout } from "./utils"
+import { createLoadout, currentDetachmentSize, incrementLoadout, loadoutCount } from "./utils"
 import { FormEvent } from "react"
 import LoadoutEntries from "./LoadoutEntries"
 import LoadoutCountWarning from "../warnings/LoadoutCountWarning"
 import SideMenutitle from "../SideMenutitle"
+import { toast } from "react-toastify"
 
 interface properties {
 	slot_id: string | null
@@ -62,7 +63,11 @@ const Loadouts = ({ slot_id }: properties) => {
 		})
 
 		const newId = array
-			.map((entry) => String(entry.weapon).replaceAll(" ", "").trim())
+			.map((entry) =>
+				String(entry.weapon + entry.location)
+					.replaceAll(" ", "")
+					.trim()
+			)
 			.sort()
 			.join("")
 

@@ -2,6 +2,7 @@ import { detachmentData } from "@/app/data/detachment_data"
 import { List, ListDetachment, ListDetachmentSlot, ListUpgrades, ListLoadouts, ListLoadout } from "@type/listTypes"
 import { DETACHMENT, SUBFACTION_TYPE, ALLEGIANCE } from "@type/types"
 import { emptyDetachment, emptyUpgrade, emptyLoadouts } from "@/app/data/empty_objects"
+import { toast } from "react-toastify"
 
 export const getSelectorIdArray = (detachmentSlot: ListDetachmentSlot): DETACHMENT[] => {
 	if (detachmentSlot.restricted) {
@@ -178,6 +179,11 @@ export const createLoadout = (
 }
 
 export const incrementLoadout = (list: List, loadoutSlot: ListLoadouts, id: string, value = 1): List => {
+	if (loadoutCount(list, loadoutSlot.slot_id) >= currentDetachmentSize(list, loadoutSlot.slot_id) && value > 0) {
+		toast.warning("Cannot add any more")
+		return list
+	}
+
 	const newLoadoutSlot = {
 		...loadoutSlot,
 		loadouts: [
