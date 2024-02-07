@@ -43,6 +43,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Rhino",
+				unit_ref: 1001,
 				options: [
 					{ number: 1, cost: 10, size: 1 },
 					{ number: 2, cost: 20, size: 2 },
@@ -91,6 +92,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Tactical Legionaries",
+				unit_ref: 1002,
 				options: [
 					{ number: 2, cost: 12, size: 2 },
 					{ number: 4, cost: 24, size: 4 },
@@ -100,6 +102,7 @@ export const detachmentData: DETACHMENT[] = [
 			},
 			{
 				name: "Additional Plasma Support",
+				unit_ref: 1005,
 				options: [
 					{ number: 2, cost: 15, size: 2 },
 					{ number: 4, cost: 30, size: 4 },
@@ -109,6 +112,7 @@ export const detachmentData: DETACHMENT[] = [
 			},
 			{
 				name: "Additional Missile Support",
+				unit_ref: 1005,
 				options: [
 					{ number: 2, cost: 15, size: 2 },
 					{ number: 4, cost: 30, size: 4 },
@@ -118,6 +122,7 @@ export const detachmentData: DETACHMENT[] = [
 			},
 			{
 				name: "Additional Legion Terminators",
+				unit_ref: 1003,
 				options: [
 					{ number: 2, cost: 15, size: 2 },
 					{ number: 4, cost: 30, size: 4 },
@@ -127,6 +132,7 @@ export const detachmentData: DETACHMENT[] = [
 			},
 			{
 				name: "Additional Assault Marines",
+				unit_ref: 1004,
 				options: [
 					{ number: 2, cost: 12, size: 2 },
 					{ number: 4, cost: 24, size: 4 },
@@ -166,6 +172,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Legionaries",
+				unit_ref: 1005,
 				options: [
 					{ number: 2, cost: 15, size: 2 },
 					{ number: 4, cost: 30, size: 4 },
@@ -200,6 +207,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Legionaries",
+				unit_ref: 1006,
 				options: [
 					{ number: 2, cost: 15, size: 2 },
 					{ number: 4, cost: 30, size: 4 },
@@ -234,6 +242,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Assault Marines",
+				unit_ref: 1004,
 				options: [
 					{ number: 2, cost: 12, size: 2 },
 					{ number: 4, cost: 24, size: 4 },
@@ -268,6 +277,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Terminators",
+				unit_ref: 1003,
 				options: [
 					{ number: 2, cost: 15, size: 2 },
 					{ number: 4, cost: 30, size: 4 },
@@ -302,6 +312,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Rapiers",
+				unit_ref: 1007,
 				options: [
 					{ number: 2, cost: 30, size: 2 },
 					{ number: 4, cost: 60, size: 4 },
@@ -354,6 +365,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Leviathan",
+				unit_ref: 1008,
 				options: [
 					{ number: 2, cost: 35, size: 2 },
 					{ number: 4, cost: 70, size: 4 },
@@ -400,6 +412,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Contemptor",
+				unit_ref: 1009,
 				options: [
 					{ number: 2, cost: 30, size: 2 },
 					{ number: 4, cost: 60, size: 4 },
@@ -408,6 +421,7 @@ export const detachmentData: DETACHMENT[] = [
 			},
 			{
 				name: "Additional Leviathan",
+				unit_ref: 1008,
 				options: [
 					{ number: 2, cost: 35, size: 2 },
 					{ number: 4, cost: 70, size: 4 },
@@ -458,6 +472,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Tarantulas",
+				unit_ref: 1010,
 				options: [
 					{ number: 2, cost: 15, size: 2, break_strength: 0 },
 					{ number: 4, cost: 30, size: 4, break_strength: 0 },
@@ -508,6 +523,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Deredeo",
+				unit_ref: 1011,
 				options: [
 					{ number: 2, cost: 40, size: 2 },
 					{ number: 4, cost: 80, size: 4 },
@@ -557,6 +573,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Predators",
+				unit_ref: 1012,
 				options: [
 					{ number: 1, cost: 35, size: 1 },
 					{ number: 2, cost: 70, size: 2 },
@@ -619,6 +636,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Sicaran",
+				unit_ref: 1013,
 				options: [
 					{ number: 1, cost: 40, size: 1 },
 					{ number: 2, cost: 70, size: 2 },
@@ -679,6 +697,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Kratos",
+				unit_ref: 1014,
 				options: [
 					{ number: 1, cost: 60, size: 1 },
 					{ number: 2, cost: 110, size: 2 },
@@ -743,6 +762,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Xiphon",
+				unit_ref: 1015,
 				options: [
 					{ number: 1, cost: 85, size: 1 },
 					{ number: 2, cost: 160, size: 2 },
@@ -783,6 +803,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Storm Eagle",
+				unit_ref: 1016,
 				options: [
 					{ number: 1, cost: 100, size: 1 },
 					{ number: 2, cost: 190, size: 2 },
@@ -825,6 +846,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Fire Raptor",
+				unit_ref: 1017,
 				options: [
 					{ number: 1, cost: 100, size: 1 },
 					{ number: 2, cost: 190, size: 2 },
@@ -868,6 +890,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Thunderhawk Gunship",
+				unit_ref: 1018,
 				options: [
 					{ number: 1, cost: 150, size: 1 },
 					{ number: 2, cost: 280, size: 2 },
@@ -953,6 +976,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Auxiliaries",
+				unit_ref: 2002,
 				options: [
 					{ number: 2, cost: 12, size: 2 },
 					{ number: 4, cost: 24, size: 4 },
@@ -964,6 +988,7 @@ export const detachmentData: DETACHMENT[] = [
 			},
 			{
 				name: "Additional Auxiliaries with Flamers",
+				unit_ref: 9002,
 				options: [
 					{ number: 2, cost: 12, size: 2 },
 					{ number: 4, cost: 24, size: 4 },
@@ -975,6 +1000,7 @@ export const detachmentData: DETACHMENT[] = [
 			},
 			{
 				name: "Additional Veletarii",
+				unit_ref: 9000,
 				options: [
 					{ number: 2, cost: 12, size: 2 },
 					{ number: 4, cost: 24, size: 4 },
@@ -986,6 +1012,7 @@ export const detachmentData: DETACHMENT[] = [
 			},
 			{
 				name: "Additional Charonite Ogryns",
+				unit_ref: 9001,
 				options: [
 					{ number: 2, cost: 15, size: 2 },
 					{ number: 4, cost: 30, size: 4 },
@@ -1030,6 +1057,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Charonite Ogryn",
+				unit_ref: 2004,
 				options: [
 					{ number: 2, cost: 15, size: 2 },
 					{ number: 4, cost: 30, size: 4 },
@@ -1068,6 +1096,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Veletarii",
+				unit_ref: 2003,
 				options: [
 					{ number: 2, cost: 10, size: 2 },
 					{ number: 4, cost: 20, size: 4 },
@@ -1106,6 +1135,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Rapier",
+				unit_ref: 2005,
 				options: [
 					{ number: 3, cost: 40, size: 3 },
 					{ number: 6, cost: 70, size: 6 },
@@ -1154,6 +1184,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Tarantula",
+				unit_ref: 2006,
 				options: [
 					{ number: 2, cost: 15, size: 2, break_strength: 0 },
 					{ number: 4, cost: 25, size: 4, break_strength: 0 },
@@ -1200,6 +1231,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Sentinel",
+				unit_ref: 2007,
 				options: [
 					{ number: 2, cost: 25, size: 2 },
 					{ number: 4, cost: 45, size: 4 },
@@ -1243,6 +1275,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Leman Russ",
+				unit_ref: 2008,
 				options: [
 					{ number: 2, cost: 85, size: 2 },
 					{ number: 4, cost: 160, size: 4 },
@@ -1302,6 +1335,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Malcador",
+				unit_ref: 2009,
 				options: [
 					{ number: 1, cost: 70, size: 1 },
 					{ number: 2, cost: 130, size: 2 },
@@ -1374,6 +1408,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Super-heavy",
+				unit_ref: 2010,
 				options: [
 					{ number: 1, cost: 90, size: 1 },
 					{ number: 2, cost: 180, size: 2 },
@@ -1436,23 +1471,22 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Thunderbolt",
+				unit_ref: 2011,
 				options: [
 					{ number: 1, cost: 80, size: 1 },
 					{ number: 2, cost: 150, size: 2 },
 					{ number: 3, cost: 210, size: 3 },
 				],
 			},
-			{
-				name: "Averger bolt cannon upgrade",
-				options: [
-					{ number: 1, cost: 3, size: 0 },
-					{ number: 2, cost: 6, size: 0 },
-					{ number: 3, cost: 9, size: 0 },
-					{ number: 4, cost: 12, size: 0 },
-				],
-			},
 		],
 		loadout_options: [
+			{
+				location: "Nose",
+				options: [
+					{ name: "Quad autocannon", cost: 0 },
+					{ name: "Avenger bolt cannon upgrade", cost: 3 },
+				],
+			},
 			{
 				location: "Wing",
 				options: [
@@ -1502,6 +1536,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Avenger",
+				unit_ref: 2012,
 				options: [
 					{ number: 1, cost: 85, size: 1 },
 					{ number: 2, cost: 160, size: 2 },
@@ -1554,6 +1589,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Lightning",
+				unit_ref: 2013,
 				options: [
 					{ number: 1, cost: 85, size: 1 },
 					{ number: 2, cost: 160, size: 2 },
@@ -1615,6 +1651,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Marauder",
+				unit_ref: 2014,
 				options: [
 					{ number: 1, cost: 85, size: 1 },
 					{ number: 2, cost: 160, size: 2 },
@@ -1677,6 +1714,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Arvus Lighter",
+				unit_ref: 2018,
 				options: [
 					{ number: 1, cost: 12, size: 1 },
 					{ number: 2, cost: 24, size: 2 },
@@ -1735,6 +1773,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Knight",
+				unit_ref: 4000,
 				options: [
 					{ number: 1, cost: 180, size: 1, break_strength: 3 },
 					{ number: 2, cost: 340, size: 2, break_strength: 3 },
@@ -1742,10 +1781,12 @@ export const detachmentData: DETACHMENT[] = [
 			},
 			{
 				name: "Armiger Talon",
+				unit_ref: 4003,
 				options: [{ number: 1, cost: 180, size: 3, break_strength: 2 }],
 			},
 			{
 				name: "Moriax Talon",
+				unit_ref: 4004,
 				options: [{ number: 1, cost: 200, size: 3, break_strength: 2 }],
 			},
 		],
@@ -1834,14 +1875,17 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Knight",
+				unit_ref: 4005,
 				options: [{ number: 1, cost: 250, size: 1, break_strength: 3 }],
 			},
 			{
 				name: "Armiger Talon",
+				unit_ref: 4003,
 				options: [{ number: 1, cost: 180, size: 3, break_strength: 2 }],
 			},
 			{
 				name: "Moriax Talon",
+				unit_ref: 4004,
 				options: [{ number: 1, cost: 200, size: 3, break_strength: 2 }],
 			},
 		],
@@ -1923,6 +1967,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Warhound",
+				unit_ref: 4006,
 				options: [
 					{ number: 1, cost: 330, size: 1, break_strength: 4 },
 					{ number: 2, cost: 640, size: 2, break_strength: 4 },
@@ -2497,6 +2542,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Knight",
+				unit_ref: 4014,
 				options: [
 					{ number: 1, cost: 200, size: 1, break_strength: 3 },
 					{ number: 2, cost: 390, size: 2, break_strength: 3 },
@@ -2504,10 +2550,12 @@ export const detachmentData: DETACHMENT[] = [
 			},
 			{
 				name: "Armiger Talon",
+				unit_ref: 4003,
 				options: [{ number: 1, cost: 180, size: 3, break_strength: 2 }],
 			},
 			{
 				name: "Moriax Talon",
+				unit_ref: 4004,
 				options: [{ number: 1, cost: 200, size: 3, break_strength: 2 }],
 			},
 		],
@@ -2566,6 +2614,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Rhino",
+				unit_ref: 1001,
 				options: [
 					{ number: 1, cost: 10, size: 1 },
 					{ number: 2, cost: 20, size: 2 },
@@ -2645,6 +2694,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Storm Eagle",
+				unit_ref: 1016,
 				options: [
 					{ number: 1, cost: 100, size: 1 },
 					{ number: 2, cost: 200, size: 2 },
@@ -2695,6 +2745,7 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Thunderhawk Gunship",
+				unit_ref: 1018,
 				options: [
 					{ number: 1, cost: 150, size: 1 },
 					{ number: 2, cost: 300, size: 2 },

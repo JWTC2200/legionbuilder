@@ -29,6 +29,12 @@ const UserListsTable = () => {
 								className="hover:text-tertiary-700 active:text-tertiary-700">
 								<h3 className="">{list.name}</h3>
 							</Link>
+							<Link
+								href={`/lists/play?listId=${list.id}`}
+								onClick={() => setList(list)}
+								className="hover:text-tertiary-700 active:text-tertiary-700">
+								Play
+							</Link>
 							<div className="flex items-center gap-2">
 								<DuplicateList list={list} />
 								<Link href={`${currentUrl}/view?listId=${list.id}`} className="hover:text-tertiary-700">

@@ -22,8 +22,8 @@ const page = () => {
 			<div className="flex flex-col gap-2 w-full max-w-screen-2xl items-center bg-secondary-900 text-primary-50 sm:px-4 lg:rounded-xl py-4">
 				<ListButtons />
 				<ListWarnings />
-				<ListHeader />
 				<ListName />
+				<ListHeader />
 				<FormationAdd />
 				<Formations />
 			</div>

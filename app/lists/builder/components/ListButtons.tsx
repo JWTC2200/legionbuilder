@@ -14,7 +14,7 @@ const ListButtons = () => {
 	const [clearCheck, setClearCheck] = useState(false)
 
 	const buttonStyles =
-		" bg-backgrounds-950 text-primary-50 px-2 py-1 font-bold font-graduate rounded-lg hover:text-primary-600 active:text-primary-400"
+		" banner_background text-primary-50 px-4 py-1 font-bold font-graduate rounded-lg hover:text-primary-500 active:text-primary-400"
 	const clearBtnStyle = "px-4 py-1 rounded-md "
 
 	return (

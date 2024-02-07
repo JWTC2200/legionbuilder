@@ -21,7 +21,7 @@ const page = ({ params: { name } }: { params: { name: string } }) => {
 					<ReferenceSelector />
 				</BreadCrumbs>
 			</Sticky>
-			<UnitDataslate {...unitDataEntry} />
+			<UnitDataslate unit={unitDataEntry} />
 		</Main>
 	)
 }

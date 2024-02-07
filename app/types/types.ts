@@ -181,6 +181,7 @@ export interface DATASLATE_LOADOUT {
 
 export interface DETACHMENT_UPGRADE {
 	name: string
+	unit_ref: number
 	options: {
 		number: number
 		cost: number

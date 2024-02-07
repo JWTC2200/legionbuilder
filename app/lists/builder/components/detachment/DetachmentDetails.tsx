@@ -40,13 +40,11 @@ const DetachmentDetails = ({ detachmentSlot }: properties) => {
 						return (
 							<div
 								key={detachmentSlot.id + "updetail" + index}
-								className="flex bg-secondary-700 clip-path-octagon-md py-1 px-4 justify-between w-full">
+								className="flex bg-secondary-700 clip-path-octagon-md py-1 px-2 justify-between w-full">
 								<div>{`${number} ${name}: ${cost}pts`}</div>
 								<button
 									onClick={() => handleRemoveUpgrade(name)}
-									className="hover:text-red-500 active:text-red-400 active:font-bold">
-									X
-								</button>
+									className="self-end px-2 clip-path-halfagon-md bg-red-800 hover:bg-red-700 active:bg-red-600"></button>
 							</div>
 						)
 					})}

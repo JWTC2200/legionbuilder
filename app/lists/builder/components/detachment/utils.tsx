@@ -206,7 +206,12 @@ export const incrementLoadout = (list: List, loadoutSlot: ListLoadouts, id: stri
 const updateListLoadouts = (list: List, updatedLoadout: ListLoadouts): List => {
 	return {
 		...list,
-		loadouts: [...list.loadouts.filter((slot) => slot.slot_id !== updatedLoadout.slot_id), updatedLoadout],
+		loadouts: list.loadouts.map((slot) => {
+			if (slot.slot_id === updatedLoadout.slot_id) {
+				return updatedLoadout
+			}
+			return slot
+		}),
 	}
 }
 

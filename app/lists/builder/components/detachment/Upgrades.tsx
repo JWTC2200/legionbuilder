@@ -27,11 +27,12 @@ const Upgrades = ({ slot_id }: properties) => {
 
 	const updateUpgrades = (e: number, name: string) => {
 		if (e) {
+			const upgrades = detachmentInfo.upgrade_options.find((upgrade) => upgrade.name === name)!
+
 			const newUpgrade: ListUpgrade = {
 				name: name,
-				...detachmentInfo.upgrade_options
-					.find((upgrade) => upgrade.name === name)!
-					.options.find((option) => option.number === e)!,
+				unit_ref: upgrades.unit_ref,
+				...upgrades.options.find((option) => option.number === e)!,
 			}
 
 			const newUpgradeSlot: ListUpgrades = {

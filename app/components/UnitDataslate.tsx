@@ -4,11 +4,16 @@ import { getUnitWeaponRows } from "../utils/unitweaponrows"
 import SpecialRuleBox from "./SpecialRuleBox"
 import { FaExternalLinkAlt } from "react-icons/fa"
 
-const UnitDataslate = (unit: UNIT_DATASHEET) => {
+interface properties {
+	unit: UNIT_DATASHEET
+	className?: string
+}
+
+const UnitDataslate = ({ unit, className }: properties) => {
 	const unitWeaponRows = getUnitWeaponRows(unit.weapons)
 
 	return (
-		<article className="bg-dataslate p-4 break-inside-avoid clip-path-halfagon-lg">
+		<article className={`bg-dataslate p-4 break-inside-avoid clip-path-halfagon-lg ${className}`}>
 			{/* TITLE */}
 			<header className="flex gap-2 justify-between items-center bg-backgrounds-950 text-primary-50 py-2 px-2 mb-2">
 				<h2 className="text-xl sm:text-2xl font-graduate font-bold">{unit.name}</h2>

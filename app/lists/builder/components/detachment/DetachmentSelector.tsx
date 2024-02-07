@@ -17,14 +17,14 @@ const DetachmentSelector = ({ detachmentSlot }: properties) => {
 
 	const detachment = list.detachments.find((detachment) => detachment.slot_id === detachmentSlot.id)!
 
-	const selectedStyling = detachment?.id && " text-tertiary-800 font-semibold"
+	const selectedStyling = detachment?.id && " text-tertiary-500 font-semibold"
 
 	const subfactionFiltered = filterBySubfactions(getSelectorIdArray(detachmentSlot), formationSubfaction, detachment)
 
 	const allegianceFiltered = filterByAllegiance(subfactionFiltered, list.allegiance, detachment)
 
 	const selectorOptions = allegianceFiltered.map((option, index) => (
-		<option key={detachmentSlot.id + "option" + index} value={option.id} className="text-black">
+		<option key={detachmentSlot.id + "option" + index} value={option.id}>
 			{option.base_cost}pts: {option.name}
 		</option>
 	))
@@ -47,12 +47,10 @@ const DetachmentSelector = ({ detachmentSlot }: properties) => {
 			value={detachment && detachment.id ? detachment.id : "0"}
 			onChange={(e) => selectDetachment(Number(e.target.value))}
 			className={
-				"w-full text-center py-1 px-2 border border-primary-950 font-graduate text-secondary-900 hover:text-tertiary-700 active:text-tertiary-700" +
+				"w-full text-center py-1 px-2 border bg-secondary-700 border-primary-950 font-graduate text-secondary-300 hover:text-tertiary-300 active:text-tertiary-400" +
 				selectedStyling
 			}>
-			<option value={"0"} className="text-black">
-				Select Detachment
-			</option>
+			<option value={"0"}>Select Detachment</option>
 			{selectorOptions}
 		</select>
 	)

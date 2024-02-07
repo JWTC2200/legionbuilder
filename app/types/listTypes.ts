@@ -65,6 +65,7 @@ export interface ListUpgrades {
 
 export interface ListUpgrade {
 	name: string
+	unit_ref: number
 	number: number
 	cost: number
 	size: number

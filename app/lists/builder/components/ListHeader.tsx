@@ -4,7 +4,7 @@ import ListFaction from "./ListFaction"
 
 const ListHeader = () => {
 	return (
-		<div className="w-full mx-4 p-4 builder_head_background text-primary-50 flex flex-wrap justify-center gap-4 text-center">
+		<div className="w-full p-2 builder_title_background sm:clip-path-octagon-lg text-primary-50 flex flex-wrap justify-around gap-4 text-center">
 			<ListFaction />
 			<ListAllegiance />
 			<GameSizeField />

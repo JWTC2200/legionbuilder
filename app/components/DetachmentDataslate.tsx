@@ -163,7 +163,7 @@ const DetachmentDataslate = ({ detachment, no_related }: properties) => {
 						{detachment.related_unit.map((unitNo) => {
 							const foundUnit = unitData.find((unit) => unit.id === unitNo)
 							if (foundUnit) {
-								return <UnitDataslate key={foundUnit.name + unitNo} {...foundUnit} />
+								return <UnitDataslate key={foundUnit.name + unitNo} unit={foundUnit} />
 							}
 							return null
 						})}

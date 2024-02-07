@@ -23,9 +23,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 					<Image src={ATBG} fill alt="background" className="z-0" style={{ objectFit: "cover" }} />
 				</div>
 				<AuthContextProvider>
-					{/* <NavBar />
-					{children} */}
-					<Maintenance />
+					<NavBar />
+					{children}
+					{/* <Maintenance /> */}
 					<Analytics />
 				</AuthContextProvider>
 			</body>
