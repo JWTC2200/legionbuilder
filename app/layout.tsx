@@ -31,5 +31,3 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 		</html>
 	)
 }
-
-// style={{ backgroundImage: 'url("/images/AT_bg.jpg")' }}
