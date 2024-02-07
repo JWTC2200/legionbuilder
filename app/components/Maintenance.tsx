@@ -1,7 +1,7 @@
-import React from "react"
+import Main from "./Main"
 
 const Maintenance = () => {
-	return <div>Maintenance</div>
+	return <Main className="flex font-graduate text-4xl justify-center items-center">Down for maintenance</Main>
 }
 
 export default Maintenance
