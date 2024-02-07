@@ -46,7 +46,7 @@ const FormationSelector = ({ formation }: FormationSelector) => {
 			<select
 				id={`formation_selector_${formation.id}`}
 				name={`formation_selector_${formation.id}`}
-				className="bg-transparent sm:text-xl py-2 font-graduate text-center max-w-[300px] sm:max-w-[400px] lg:max-w-full outline-none hover:text-primary-400 active:text-primary-400"
+				className="bg-secondary-800 clip-path-halfagon-md sm:text-xl py-2 font-graduate text-center max-w-[300px] sm:max-w-[400px] lg:max-w-full outline-none hover:text-primary-400 active:text-primary-400"
 				value={formation.data_id}
 				onChange={(e) => {
 					selectFormation(Number(e.target.value))
@@ -60,11 +60,6 @@ const FormationSelector = ({ formation }: FormationSelector) => {
 					</option>
 				))}
 			</select>
-			{formation.id ? (
-				<h3 className="bg-inherit sm:rounded-t-lg sm:text-xl py-2 font-graduate text-center">
-					{totalFormationPoints(list, formation)} points
-				</h3>
-			) : null}
 		</div>
 	)
 }

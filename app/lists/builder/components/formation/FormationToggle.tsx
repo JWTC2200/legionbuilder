@@ -10,8 +10,18 @@ const FormationToggle = ({ view, toggle }: properties) => {
 		<button
 			type="button"
 			onClick={() => toggle((prev) => !prev)}
-			className="text-xl sm:text-3xl my-1 hover:text-tertiary-700">
-			{view ? <FaRegSquareMinus /> : <FaRegSquarePlus />}
+			className="flex gap-1 items-center text-xl sm:text-3xl w-20 hover:text-tertiary-700">
+			{view ? (
+				<>
+					<FaRegSquareMinus />
+					<span className="text-sm sm:text-md">Hide</span>
+				</>
+			) : (
+				<>
+					<FaRegSquarePlus />
+					<span className="text-sm sm:text-md">Show</span>
+				</>
+			)}
 		</button>
 	)
 }

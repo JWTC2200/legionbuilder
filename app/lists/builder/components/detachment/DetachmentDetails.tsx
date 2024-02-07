@@ -40,7 +40,7 @@ const DetachmentDetails = ({ detachmentSlot }: properties) => {
 						return (
 							<div
 								key={detachmentSlot.id + "updetail" + index}
-								className="flex bg-secondary-800 clip-path-octagon-md py-1 px-4 justify-between w-full">
+								className="flex bg-secondary-700 clip-path-octagon-md py-1 px-4 justify-between w-full">
 								<div>{`${number} ${name}: ${cost}pts`}</div>
 								<button
 									onClick={() => handleRemoveUpgrade(name)}
@@ -60,9 +60,9 @@ const DetachmentDetails = ({ detachmentSlot }: properties) => {
 						return (
 							<div
 								key={detachmentSlot.id + "lddetail" + index}
-								className="flex gap-1 sm:gap-2 justify-between items-center bg-secondary-800 clip-path-octagon-md py-1 px-2">
+								className="flex gap-1 sm:gap-2 justify-between items-center bg-secondary-700 clip-path-octagon-md py-1 px-2">
 								<div className="flex flex-col justify-between font-semibold ">
-									<div className="flex justify-center items-center text-primary-50 px-2 bg-secondary-800 ">{`x${number}`}</div>
+									<div className="flex justify-center items-center text-primary-50 px-2 ">{`x${number}`}</div>
 									{points ? <div>{points * loadout.number}pts</div> : null}
 								</div>
 

@@ -2,7 +2,6 @@
 
 import { listState } from "@/app/lists/state"
 import { BreadCrumbs, Crumb } from "@/app/components/BreadCrumbs"
-import { useSearchParams } from "next/navigation"
 import useAuthState from "@/app/Auth"
 import { totalListPoints } from "../builder/utils"
 import Formation from "./components/Formation"
@@ -10,8 +9,6 @@ import SaveListBtn from "../builder/components/SaveListBtn"
 
 const page = () => {
 	const { list } = listState()
-	const searchParams = useSearchParams()
-	const listParams = searchParams.get("listId")
 	const userUid = useAuthState((state) => state.uid)
 
 	if (!list) {
@@ -21,8 +18,6 @@ const page = () => {
 			</div>
 		)
 	}
-	console.log(userUid)
-	console.log(list.user)
 
 	return (
 		<div className="w-full px-2 pb-8 max-w-screen-sm">
@@ -44,10 +39,13 @@ const page = () => {
 				<h3 className="font-graduate">
 					{list.allegiance} {list.faction}
 				</h3>
-				<h3 className="font-graduate">{`Formations ${list.formations.length}`}</h3>
-				{list.formations.map((formation) => (
-					<Formation key={formation.id} list={list} formation={formation} />
-				))}
+				<h3 className="font-graduate">{`Formations ${list.formations.filter((formation) => formation.name).length}`}</h3>
+				{list.formations.map((formation) => {
+					if (formation.name) {
+						return <Formation key={formation.id} list={list} formation={formation} />
+					}
+					return null
+				})}
 			</div>
 		</div>
 	)

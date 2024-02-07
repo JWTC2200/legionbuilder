@@ -12,8 +12,12 @@ const FormationNickname = ({ formation }: properties) => {
 		setList({
 			...list,
 			formations: [
-				...list.formations.filter((entry) => entry.id !== formation.id),
-				{ ...formation, nickname: e },
+				...list.formations.map((entry) => {
+					if (entry.id === formation.id) {
+						return { ...formation, nickname: e }
+					}
+					return entry
+				}),
 			],
 		})
 	}
@@ -25,7 +29,7 @@ const FormationNickname = ({ formation }: properties) => {
 			maxLength={24}
 			onChange={(e) => handleNickname(e.target.value)}
 			placeholder="Custom formation name"
-			className="bg-secondary-800 py-1 px-4 text-primary-50 font-graduate overflow-auto text-center outline-none clip-path-halfagon-md"
+			className="bg-secondary-700 px-4 h-8 text-primary-50 font-graduate overflow-auto text-center outline-none clip-path-halfagon-md"
 		/>
 	)
 }

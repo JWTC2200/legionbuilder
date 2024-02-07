@@ -25,12 +25,12 @@ const SubfactionSelector = ({ formation }: properties) => {
 	return (
 		<select
 			onChange={(e) => changeSubfaction(e.target.value)}
-			className={`w-[280px] text-center py-1 px-2 border border-backgrounds-950 font-graduate text-black hover:text-tertiary-800 active:text-tertiary-800 ${formation.subfaction ? " text-tertiary-800 font-semibold" : ""}`}>
-			<option value="" className="text-black">
+			className={`w-[280px] text-center h-8 clip-path-halfagon-md bg-secondary-700 font-graduate  hover:text-secondary-100 ${formation.subfaction ? " text-primary-50" : "text-secondary-400"}`}>
+			<option value="" className="text-primary-50">
 				Choose Legion
 			</option>
 			{subfactionTypeArray.map((subfaction) => (
-				<option key={formation.id + subfaction} value={subfaction} className="text-black">
+				<option key={formation.id + subfaction} value={subfaction} className="text-primary-50">
 					{subfaction}
 				</option>
 			))}

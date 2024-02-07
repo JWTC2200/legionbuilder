@@ -47,7 +47,7 @@ const DetachmentSelector = ({ detachmentSlot }: properties) => {
 			value={detachment && detachment.id ? detachment.id : "0"}
 			onChange={(e) => selectDetachment(Number(e.target.value))}
 			className={
-				"w-full text-center py-1 px-2 border border-primary-950 font-graduate hover:text-tertiary-700 active:text-tertiary-700" +
+				"w-full text-center py-1 px-2 border border-primary-950 font-graduate text-secondary-900 hover:text-tertiary-700 active:text-tertiary-700" +
 				selectedStyling
 			}>
 			<option value={"0"} className="text-black">

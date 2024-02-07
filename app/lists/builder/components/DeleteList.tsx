@@ -10,7 +10,6 @@ const DeleteList = ({ list }: { list: List }) => {
 	const userUid = useAuthState((state) => state.uid)
 
 	const handleDelete = async () => {
-		console.log(userUid)
 		if (userUid === list.user) {
 			deleteList(list.id)
 			toast.warning("deleting list")

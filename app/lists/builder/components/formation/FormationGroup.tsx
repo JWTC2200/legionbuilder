@@ -19,7 +19,7 @@ export const FormationGroup = ({ formationGroup }: properties) => {
 	return (
 		<div className="w-full mb-2">
 			<div className="w-full text-backgrounds-950 flex flex-col gap-2 items-center">
-				<h1 className="w-full text-center bg-backgrounds-950 text-backgrounds-50 font-graduate">
+				<h1 className="w-full text-center bg-secondary-700 text-backgrounds-50 font-graduate">
 					~ {type} slots ~
 				</h1>
 				{formationGroup.type === SLOT_TYPE.compulsory && slotsUsed < groupIds.length ? (

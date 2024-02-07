@@ -27,7 +27,7 @@ const ListButtons = () => {
 				Clear
 			</button>
 			{clearCheck && (
-				<div className="fixed top-1/4 banner_background font-graduate p-8 rounded-xl flex flex-col gap-4">
+				<div className="fixed top-1/4 banner_background font-graduate p-8 rounded-xl flex flex-col gap-4 z-30">
 					<div>Do you want to clear the list?</div>
 					<div className="flex justify-around items-center gap-2">
 						<button

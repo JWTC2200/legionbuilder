@@ -22,7 +22,7 @@ const FormationDelete = ({ formation }: { formation: ListFormation }) => {
 	return (
 		<>
 			<button
-				className="p-1 hover:text-orange-700 font-graduate text-sm sm:text-base"
+				className="hover:text-orange-700 font-graduate text-sm sm:text-base"
 				onClick={() => setClearCheck(true)}>
 				Remove
 			</button>

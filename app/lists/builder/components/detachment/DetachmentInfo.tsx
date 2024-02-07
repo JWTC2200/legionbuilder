@@ -15,7 +15,7 @@ const DetachmentInfo = ({ detachmentSlot }: properties) => {
 			<p className="text-sm sm:text-base font-graduate ">
 				Detachment size: {currentDetachmentSize(list, detachmentSlot.id)}
 			</p>
-			<p className="text-sm font-graduate font-bold border-b underline">
+			<p className="text-sm font-graduate font-bold border-b border-primary-50">
 				{totalDetachmentPoints(list, detachmentSlot.id)}
 				<span className="font-normal">pts</span>
 			</p>

@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import { ListFormation } from "@type/listTypes"
 import { FACTION } from "@type/types"
 import FormationToggle from "./FormationToggle"
@@ -7,8 +7,9 @@ import FormationSelector from "./FormationSelector"
 import { FormationGroup } from "./FormationGroup"
 import SubfactionSelector from "./SubfactionSelector"
 import FormationBreakPoints from "./FormationBreakPoints"
-import DetailsToggle from "./DetailsToggle"
 import FormationNickname from "./FormationNickname"
+import { totalFormationPoints } from "@lists/builder/utils"
+import { listState } from "@/app/lists/state"
 
 interface properties {
 	formation: ListFormation
@@ -16,36 +17,66 @@ interface properties {
 
 const Formation = ({ formation }: properties) => {
 	const [viewFormation, setViewFormation] = useState<boolean>(true)
+	const [height, setHeight] = useState<number>(0)
+	const [width, setWidth] = useState(window.innerWidth)
+	const { list } = listState()
+	const outerRef = useRef<HTMLDivElement>(null)
+	const innerRef = useRef<HTMLDivElement>(null)
 
 	const formationGroupHTML = formation.detachment_groups.map((group) => (
 		<FormationGroup key={group.id} formationGroup={group} />
 	))
 
-	return (
-		<div id={formation.id} className="sm:border-4 border-primary-950 sm:rounded-xl flex flex-col items-center">
-			<div className="w-full banner_background sm:rounded-t-lg flex flex-wrap  justify-center sm:justify-between items-center text-center px-2">
-				<div className="flex gap-2 items-center font-graduate">
-					<FormationToggle view={viewFormation} toggle={setViewFormation} />
-					<DetailsToggle formation={formation} />
-				</div>
+	useEffect(() => {
+		if (innerRef.current?.clientHeight) {
+			setHeight(innerRef.current.clientHeight)
+		}
 
+		const handleResize = () => {
+			setWidth(window.innerWidth)
+		}
+
+		window.addEventListener("resize", handleResize)
+
+		return () => {
+			window.removeEventListener("resize", handleResize)
+		}
+	}, [formation.data_id, width])
+
+	return (
+		<div id={formation.id} className=" sm:rounded-xl flex flex-col items-center">
+			<div className="w-full font-graduate builder_title_background sm:rounded-t-lg flex flex-wrap justify-center sm:justify-between items-center text-center p-2 z-10 gap-1">
+				<FormationToggle view={viewFormation} toggle={setViewFormation} />
 				<FormationSelector formation={formation} />
 				<FormationDelete formation={formation} />
 			</div>
+			<div className="overflow-hidden">
+				<div
+					ref={outerRef}
+					style={{ height: viewFormation ? height + "px" : "0px" }}
+					className="transition-all duration-500">
+					<div ref={innerRef}>
+						<div className={"flex flex-col justify-center items-center py-2 gap-2"}>
+							<div className="flex flex-wrap gap-2 items-center justify-center">
+								<FormationNickname formation={formation} />
+								{formation.faction === FACTION.astartes ? (
+									<SubfactionSelector formation={formation} />
+								) : null}
+							</div>
 
-			{viewFormation && (
-				<>
-					<div className="flex flex-col justify-center items-center py-2 gap-2">
-						<FormationNickname formation={formation} />
-						{formation.faction === FACTION.astartes ? <SubfactionSelector formation={formation} /> : null}
-						<FormationBreakPoints
-							formation={formation}
-							className="text-black flex flex-wrap gap-2 font-graduate justify-center"
-						/>
+							<h3 className="bg-inherit sm:rounded-t-lg sm:text-xl font-graduate text-center">
+								{totalFormationPoints(list, formation)} points
+							</h3>
+							<FormationBreakPoints
+								formation={formation}
+								className=" flex flex-wrap gap-2 font-graduate justify-center"
+							/>
+						</div>
+						{formationGroupHTML}
 					</div>
-					{formationGroupHTML}
-				</>
-			)}
+					{height}
+				</div>
+			</div>
 		</div>
 	)
 }

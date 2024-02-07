@@ -26,7 +26,7 @@ const DetachmentSlot = ({ detachmentSlot }: properties) => {
 	const hasLoadouts = detachment?.loadout_options.length
 
 	return (
-		<div className="flex flex-col w-full sm:w-[450px]">
+		<div className="flex flex-col w-full sm:w-[450px] text-primary-50">
 			<DetachmentSlotTitle slotType={detachmentSlot.type} />
 			{detachmentSlot.description && <Description text={detachmentSlot.description} />}
 
@@ -38,7 +38,7 @@ const DetachmentSlot = ({ detachmentSlot }: properties) => {
 			{!visible.includes(detachmentSlot.formation_id) ? (
 				<DetachmentDetails detachmentSlot={detachmentSlot} />
 			) : null}
-			<div className="px-2 flex flex-col gap-1 pt-1">
+			<div className="px-2 pt-1 flex flex-wrap justify-around items-center gap-1">
 				{upgradeSlot?.id && hasUpgrades ? (
 					<SlotSideMenuBtn detachmentSlot={detachmentSlot} menuType="upgrades" />
 				) : null}
