@@ -51,11 +51,11 @@ const FormationSelector = ({ formation }: FormationSelector) => {
 				onChange={(e) => {
 					selectFormation(Number(e.target.value))
 				}}>
-				<option value="0" className="text-primary-950">
+				<option value="0" className="text-primary-50">
 					SELECT FORMATION
 				</option>
 				{formationData.map((format) => (
-					<option key={formation.id + format.name} value={format.id} className="text-primary-950">
+					<option key={formation.id + format.name} value={format.id} className="text-primary-50">
 						{format.name}
 					</option>
 				))}

@@ -3,8 +3,14 @@ import { ListFormation } from "@type/listTypes"
 import { listState } from "@lists/state"
 import { toast } from "react-toastify"
 import { removeFormation } from "@lists/builder/utils"
+import { ImBin } from "@react-icons/all-files/im/ImBin"
 
-const FormationDelete = ({ formation }: { formation: ListFormation }) => {
+interface properties {
+	formation: ListFormation
+	className?: string
+}
+
+const FormationDelete = ({ formation, className }: properties) => {
 	const { list, setList } = listState()
 	const [clearCheck, setClearCheck] = useState(false)
 	const clearBtnStyle = "px-4 py-1 rounded-md "
@@ -21,10 +27,8 @@ const FormationDelete = ({ formation }: { formation: ListFormation }) => {
 
 	return (
 		<>
-			<button
-				className="hover:text-orange-700 font-graduate text-sm sm:text-base"
-				onClick={() => setClearCheck(true)}>
-				Remove
+			<button className={`hover:text-orange-700 ${className}`} onClick={() => setClearCheck(true)}>
+				<ImBin className="text-xl" />
 			</button>
 			{clearCheck && (
 				<div className="fixed top-1/4 translate-x-1/2 right-1/2 banner_background font-graduate p-8 rounded-xl flex flex-col gap-4">

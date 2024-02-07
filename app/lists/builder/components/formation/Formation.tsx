@@ -35,21 +35,27 @@ const Formation = ({ formation }: properties) => {
 		const handleResize = () => {
 			setWidth(window.innerWidth)
 		}
-
 		window.addEventListener("resize", handleResize)
 
 		return () => {
 			window.removeEventListener("resize", handleResize)
 		}
-	}, [formation.data_id, width])
+	}, [list, width])
 
 	return (
-		<div id={formation.id} className=" sm:rounded-xl flex flex-col items-center">
-			<div className="w-full font-graduate builder_title_background sm:rounded-t-lg flex flex-wrap justify-center sm:justify-between items-center text-center p-2 z-10 gap-1">
-				<FormationToggle view={viewFormation} toggle={setViewFormation} />
+		<div
+			id={formation.id}
+			className={`sm:rounded-xl flex flex-col items-center sm:border-2 border-backgrounds-900 overflow-hidden ${viewFormation && "pb-4"}`}>
+			<div className="w-full font-graduate builder_title_background sm:rounded-t-lg flex sm:flex-row flex-col justify-center sm:justify-between items-center text-center py-2 px-6 z-10 gap-2">
+				<FormationToggle view={viewFormation} toggle={setViewFormation} className="hidden sm:block" />
 				<FormationSelector formation={formation} />
-				<FormationDelete formation={formation} />
+				<FormationDelete formation={formation} className="hidden sm:block" />
+				<div className="sm:hidden flex justify-between items-center gap-8">
+					<FormationToggle view={viewFormation} toggle={setViewFormation} />
+					<FormationDelete formation={formation} />
+				</div>
 			</div>
+
 			<div className="overflow-hidden">
 				<div
 					ref={outerRef}
@@ -74,7 +80,6 @@ const Formation = ({ formation }: properties) => {
 						</div>
 						{formationGroupHTML}
 					</div>
-					{height}
 				</div>
 			</div>
 		</div>
