@@ -42,7 +42,7 @@ const page = () => {
 					/>
 				))}
 			</div>
-			<pre>{JSON.stringify(filteredDetachments, null, 2)}</pre>
+			{/* <pre>{JSON.stringify(filteredDetachments, null, 2)}</pre> */}
 		</div>
 	)
 }

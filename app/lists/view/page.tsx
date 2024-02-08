@@ -47,7 +47,7 @@ const page = () => {
 					return null
 				})}
 			</div>
-			<pre>{JSON.stringify(list, null, 2)}</pre>
+			{/* <pre>{JSON.stringify(list, null, 2)}</pre> */}
 		</div>
 	)
 }

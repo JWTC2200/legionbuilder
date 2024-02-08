@@ -4,7 +4,7 @@ interface properties {
 }
 
 const SimpleWarning = ({ children, className }: properties) => {
-	return <div className={"text-red-600 font-bold text-xl font-graduate text-center " + className}>{children}</div>
+	return <div className={"text-red-700 text-xl font-graduate text-center " + className}>{children}</div>
 }
 
 export default SimpleWarning
