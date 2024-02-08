@@ -44,7 +44,9 @@ const DetachmentDetails = ({ detachmentSlot }: properties) => {
 								<div>{`${number} ${name}: ${cost}pts`}</div>
 								<button
 									onClick={() => handleRemoveUpgrade(name)}
-									className="self-end px-2 clip-path-halfagon-md bg-red-800 hover:bg-red-700 active:bg-red-600"></button>
+									className="self-end px-2 clip-path-halfagon-md bg-red-800 hover:bg-red-700 active:bg-red-600">
+									X
+								</button>
 							</div>
 						)
 					})}

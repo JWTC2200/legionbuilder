@@ -60,7 +60,7 @@ const Formation = ({ formation }: properties) => {
 				<div
 					ref={outerRef}
 					style={{ height: viewFormation ? height + "px" : "0px" }}
-					className="transition-all duration-500">
+					className="transition-all duration-300">
 					<div ref={innerRef}>
 						<div className={"flex flex-col justify-center items-center py-2 gap-2"}>
 							<div className="flex flex-wrap gap-2 items-center justify-center">
