@@ -16,7 +16,10 @@ const FormationBreakPoints = ({ formation, className }: properties) => {
 	const detachment_break = sum(
 		list.detachments
 			.filter((detachments) => slot_ids.includes(detachments.slot_id))
-			.map((detachment) => {
+			.map((detachment) => { 
+				if(detachment.break_strength === 0) {
+					return 0
+				}
 				return detachment.break_strength ? detachment.size * detachment.break_strength : detachment.size
 			})
 	)
@@ -26,6 +29,9 @@ const FormationBreakPoints = ({ formation, className }: properties) => {
 			.filter((upgradeSlots) => slot_ids.includes(upgradeSlots.slot_id))
 			.map((upgrade) =>
 				upgrade.upgrades.map((entry) => {
+					if(entry.break_strength === 0) {
+						return 0
+					}
 					return entry.break_strength ? entry.break_strength * entry.size : entry.size
 				})
 			)

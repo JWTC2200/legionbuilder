@@ -3,6 +3,7 @@ import { create } from "zustand"
 interface OrdersState {
 	orders: Orders[]
 	setOrders: (update: Orders[]) => void
+	clearOrders: () => void
 }
 
 interface Orders {
@@ -13,4 +14,5 @@ interface Orders {
 export const ordersState = create<OrdersState>((set) => ({
 	orders: [],
 	setOrders: (update) => set(() => ({ orders: update })),
+	clearOrders: () => set(() => ({ orders: [] })),
 }))

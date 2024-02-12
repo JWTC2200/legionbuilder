@@ -41,7 +41,8 @@ const OrdersSelector = ({ slotId }: properties) => {
 				<option value="fallback" className={orderColorStyle("fallback")}>
 					Fall Back
 				</option>
-			</select>
+				<option value="activated" className={orderColorStyle("activated")}>Activated</option> 
+			</select> 
 		</div>
 	)
 }
