@@ -8,11 +8,25 @@ interface properties {
 const OrdersSelector = ({ slotId }: properties) => {
 	const { orders, setOrders } = ordersState()
 
-	const handleOrders = (e: string) => {
-		setOrders([...orders.filter((order) => order.slot_id !== slotId), { slot_id: slotId, order: e }])
-	}
-
 	const entry = orders.find((orders) => orders.slot_id === slotId)
+
+	const handleOrders = (e: string) => {
+		if (entry) {
+			setOrders([
+				...orders.map((order) => {
+					if (order.slot_id === slotId) {
+						return { ...entry, order: e }
+					}
+					return order
+				}),
+			])
+		} else {
+			setOrders([
+				...orders.filter((order) => order.slot_id !== slotId),
+				{ slot_id: slotId, order: e, activated: false },
+			])
+		}
+	}
 
 	return (
 		<div className="flex gap-1">
@@ -22,8 +36,8 @@ const OrdersSelector = ({ slotId }: properties) => {
 				name={`orderSelect${slotId}`}
 				id={`orderSelect${slotId}`}
 				onChange={(e) => handleOrders(e.target.value)}
-				className={`bg-secondary-900 text-primary-50 font-graduate py-1 px-2 ${orderColorStyle(entry?.order)}`}>
-				<option value="" className="text-primary-50">
+				className={`bg-secondary-800 text-primary-50 font-graduate py-1 px-2 ${entry?.activated ? "text-secondary-500" : orderColorStyle(entry?.order)}`}>
+				<option value="" className="text-secondary-50">
 					None
 				</option>
 				<option value="advance" className={orderColorStyle("advance")}>
@@ -41,8 +55,7 @@ const OrdersSelector = ({ slotId }: properties) => {
 				<option value="fallback" className={orderColorStyle("fallback")}>
 					Fall Back
 				</option>
-				<option value="activated" className={orderColorStyle("activated")}>Activated</option> 
-			</select> 
+			</select>
 		</div>
 	)
 }

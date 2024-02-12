@@ -11,7 +11,7 @@ import { ordersState } from "./state"
 
 const page = () => {
 	const { list } = listState()
-	const { clearOrders } = ordersState()
+	const { clearOrders, viewMode, setView } = ordersState()
 
 	const listFormations = list.formations.filter((formation) => formation.data_id)
 
@@ -36,18 +36,18 @@ const page = () => {
 	}
 
 	return (
-		<div>
+		<div className="sm:px-4">
 			<BreadCrumbs>
 				<Crumb href="/lists">Lists</Crumb>
 				<Crumb href="/lists/play">Play</Crumb>
 			</BreadCrumbs>
-			<div className="flex flex-col items-center w-full justify-center gap-2 py-4 font-graduate">
+			<div className="flex flex-col items-center w-full justify-center gap-4 py-4 font-graduate text-sm sm:text-md">
 				<div className="w-full p-2 builder_title_background sm:clip-path-octagon-lg text-primary-50 flex flex-wrap justify-around gap-4 text-center py-2">
-					<button onClick={clearOrders} className="text-xl hover:text-primary-500 active:text-primary-400">
-						<GrPowerReset />
+					<button onClick={clearOrders} className="text-xl hover:text-primary-500 active:text-primary-400 flex items-center gap-2">
+						<GrPowerReset/> Orders
 					</button>
 					<h2 className="text-2xl">{list.name}</h2>
-					<div></div>
+					<button onClick={setView} className="w-20 text-xl hover:text-primary-500 active:text-primary-400">{viewMode ? "Detailed" : "Simple"}</button>
 				</div>
 				<div className="flex flex-col gap-2">
 					{list.formations.map((formation) => (

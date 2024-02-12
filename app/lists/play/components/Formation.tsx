@@ -19,7 +19,7 @@ const Formation = ({ formation, detachments }: properties) => {
 		return null
 	}
 
-	const brokenStyle = broken ? "text-orange-500" : ""
+	const brokenStyle = broken ? "text-orange-700" : ""
 
 	return (
 		<div className="font-graduate flex flex-col gap-2">
