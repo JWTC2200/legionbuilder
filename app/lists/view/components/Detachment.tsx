@@ -1,7 +1,8 @@
 import { List, ListDetachment } from "@type/listTypes"
-import React from "react"
 import { findLoadoutBySlotId, findUpgradeBySlotId } from "../../builder/utils"
-import { currentDetachmentSize, totalDetachmentPoints } from "../../builder/components/detachment/utils"
+import { currentDetachmentSize, totalDetachmentPoints } from "@lists/builder/components/detachment/utils"
+import { dataslateSideWidget } from "@lists/state"
+import { detachmentData } from "@/app/data/detachment_data"
 
 interface properties {
 	list: List
@@ -10,15 +11,34 @@ interface properties {
 
 const Detachment = ({ list, detachment }: properties) => {
 	const { name, slot_id, id, formation_id } = detachment
+	const { dataslate, visible, setVisible, setDataslate } = dataslateSideWidget()
 	const upgrades = findUpgradeBySlotId(list, slot_id)?.upgrades
 	const loadouts = findLoadoutBySlotId(list, slot_id)?.loadouts
 
+	const unitReference = detachmentData.filter((data) => data.id === detachment.id)
+
+	const handleDetachmentSideWidget = () => {
+		if (unitReference[0]) {
+			if (visible === true && unitReference[0]?.id !== dataslate?.id) {
+				setVisible(true)
+			} else {
+				setVisible(!visible)
+			}
+			setDataslate(unitReference[0])
+		}
+	}
+
 	return (
-		<div className="text-xs sm:text-sm flex flex-col justify-start items-start">
-			<h5 className="text-sm sm:text-md">
-				<span className="font-bold">{detachment.slot_type}:</span>
-				{` ${name} (${currentDetachmentSize(list, slot_id)}), ${totalDetachmentPoints(list, slot_id)}pts`}
-			</h5>
+		<div className="text-xs sm:text-base flex flex-col justify-start items-start">
+			<button onClick={handleDetachmentSideWidget} className="text-start">
+				<h5 className="text-base sm:text-lg">
+					<span className="font-bold">{detachment.slot_type}: </span>
+					<span className="text-primary-500 hover:text-primary-300 active:text-tertiary-400 font-graduate">
+						{name}
+					</span>
+					{` (${currentDetachmentSize(list, slot_id)}), ${totalDetachmentPoints(list, slot_id)}pts`}
+				</h5>
+			</button>
 			{upgrades?.length || loadouts?.length ? (
 				<div className="pl-2 flex flex-col py-1">
 					{upgrades &&

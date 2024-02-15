@@ -6,6 +6,7 @@ import useAuthState from "@/app/Auth"
 import { totalListPoints } from "../builder/utils"
 import Formation from "./components/Formation"
 import SaveListBtn from "../builder/components/SaveListBtn"
+import DataslateSideWidget from "../builder/components/DataslateSideWidget"
 
 const page = () => {
 	const { list } = listState()
@@ -27,7 +28,7 @@ const page = () => {
 				<Crumb href="/lists/view">View</Crumb>
 			</BreadCrumbs>
 			{userUid && userUid !== list.user ? (
-				<SaveListBtn className="text-primary-400 hover:text-primary-600 active:text-primary-300 mb-4">
+				<SaveListBtn className="text-primary-500 hover:text-primary-400 active:text-tertiary-400 font-graduate my-4">
 					Save copy of list
 				</SaveListBtn>
 			) : null}
@@ -47,7 +48,7 @@ const page = () => {
 					return null
 				})}
 			</div>
-			{/* <pre>{JSON.stringify(list, null, 2)}</pre> */}
+			<DataslateSideWidget />
 		</div>
 	)
 }
