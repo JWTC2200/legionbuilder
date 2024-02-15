@@ -1,4 +1,4 @@
-import { UNIT_DATASHEET, UNIT_TYPE, WEAPON_PROFILES } from "@/app/types"
+import { UNIT_DATASHEET, UNIT_TYPE, WEAPON_PROFILES } from "@type/types"
 import { rerollFail } from "./rerolls"
 
 export const calculateToHit = (weapon: WEAPON_PROFILES, target: UNIT_DATASHEET): number => {

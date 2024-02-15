@@ -1,10 +1,10 @@
 import Link from "next/link"
-import { DETACHMENT } from "../types"
-import { unitData } from "../data/unit_data"
+import { DETACHMENT } from "@type/types"
+import { unitData } from "@/app/data/unit_data"
 import { notFound } from "next/navigation"
-import { weapons } from "../data/weapon_data"
-import { getUnitWeaponRows } from "../utils/unitweaponrows"
-import SpecialRuleBox from "./SpecialRuleBox"
+import { weapons } from "@/app/data/weapon_data"
+import { getUnitWeaponRows } from "@/app/utils/unitweaponrows"
+import SpecialRuleBox from "@components/SpecialRuleBox"
 import UnitDataslate from "./UnitDataslate"
 import { FaExternalLinkAlt } from "react-icons/fa"
 
@@ -23,7 +23,9 @@ const DetachmentDataslate = ({ detachment, no_related }: properties) => {
 		return (
 			<tr key={unit.name}>
 				<td className="text-start px-2">
-					<Link href={`/reference/units/${unit.name.replaceAll(" ", "_")}`} className="flex items-center gap-2 hover:text-tertiary-700 active:text-tertiary-600">
+					<Link
+						href={`/reference/units/${unit.name.replaceAll(" ", "_")}`}
+						className="flex items-center gap-2 hover:text-tertiary-700 active:text-tertiary-600">
 						{unit.name} <FaExternalLinkAlt />
 					</Link>
 				</td>
@@ -70,10 +72,10 @@ const DetachmentDataslate = ({ detachment, no_related }: properties) => {
 				<tbody className="text-secondary-900">{mainUnitBasicStats}</tbody>
 			</table>
 			{/* DETACHMENT WEAPONS INFO */}
-			{detachment.loadout.length ? (
+			{detachment.dataslate_loadout.length ? (
 				<div className="mt-2 border-t-2 border-b-2 sm:border-2 border-black">
 					<h3 className="bg-primary-950 text-primary-50 px-2 py-1 font-bold">Weapons</h3>
-					{detachment.loadout.map((loadout, index) => (
+					{detachment.dataslate_loadout.map((loadout, index) => (
 						<div key={"loadout" + index} className="text-primary-950 p-2 flex flex-col gap-1">
 							{loadout.text ? <p>{loadout.text}</p> : null}
 							{loadout.text_option ? (
@@ -161,7 +163,7 @@ const DetachmentDataslate = ({ detachment, no_related }: properties) => {
 						{detachment.related_unit.map((unitNo) => {
 							const foundUnit = unitData.find((unit) => unit.id === unitNo)
 							if (foundUnit) {
-								return <UnitDataslate key={foundUnit.name + unitNo} {...foundUnit} />
+								return <UnitDataslate key={foundUnit.name + unitNo} unit={foundUnit} />
 							}
 							return null
 						})}

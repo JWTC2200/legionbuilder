@@ -2,7 +2,7 @@
 
 import { detachmentData } from "@/app/data/detachment_data"
 import { notFound } from "next/navigation"
-import DetachmentDataslate from "@components/DetachmentDataslate"
+import DetachmentDataslate from "@/app/components/DetachmentDataslate"
 import Main from "@components/Main"
 import { BreadCrumbs, Crumb, ReferenceSelector } from "@components/BreadCrumbs"
 import Sticky from "@components/Sticky"

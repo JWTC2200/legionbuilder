@@ -2,9 +2,9 @@
 
 import { ReactNode, useState } from "react"
 import Icons from "@/app/components/Icons"
-import { userListsState } from "../state"
-import { DB_ENTRY } from "@/app/types"
-import { listPointTotals } from "../utils"
+import { userListsState } from "@/app/lists/state"
+import { DB_ENTRY } from "@type/types"
+import { totalListPoints } from "../builder/utils"
 
 interface properties {
 	className: string
@@ -56,7 +56,7 @@ const ListSortButton = ({ children, className, sortBy }: properties) => {
 
 	const sortUsedPoints = (array: DB_ENTRY[]) => {
 		const sorted: DB_ENTRY[] = array.sort((a, b) => {
-			return listPointTotals(a.list).armyTotalPoints - listPointTotals(b.list).armyTotalPoints
+			return totalListPoints(a.list).totalPoints - totalListPoints(b.list).totalPoints
 		})
 		return sorted
 	}

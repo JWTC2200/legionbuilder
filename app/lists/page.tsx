@@ -1,14 +1,15 @@
 "use client"
 
 import { useEffect } from "react"
-import { userListsState } from "./state"
-import NotSignedIn from "./components/NotSignedIn"
-import UserListTable from "./components/UserListTable"
-import useAuthState from "../Auth"
-import CreateListButtons from "./components/CreateListButtons"
-import ListButtonInfo from "./components/ListButtonInfo"
-import ListSortButton from "./components/ListSortButton"
-import getUserLists from "../firebase/firestore/getUserLists"
+import { userListsState } from "@lists/state"
+import useAuthState from "@app/Auth"
+import getUserLists from "@app/firebase/firestore/getUserLists"
+import NotSignedIn from "@components/NotSignedIn"
+import CreateListBtn from "@lists/components/CreateListBtn"
+import ListButtonInfo from "@lists/components/ListBtnInfo"
+import ListSortButton from "@lists/components/ListSortButton"
+import UserListsTable from "@lists/components/UserListsTable"
+import SideMenutitle from "./builder/components/SideMenutitle"
 
 const page = () => {
 	const userUid = useAuthState((state) => state.uid)
@@ -20,10 +21,19 @@ const page = () => {
 		}
 	}, [userUid])
 
+	if (!userUid) {
+		return (
+			<div className="flex flex-col items-center max-w-2xl w-full gap-4 p-4">
+				<CreateListBtn />
+				<NotSignedIn />
+			</div>
+		)
+	}
+
 	return (
-		<div className="flex flex-col items-center max-w-2xl w-full">
-			<CreateListButtons className="flex m-4 gap-4 justify-center items-center" />
-			{userLists.length && userUid ? (
+		<div className="flex flex-col items-center max-w-2xl w-full gap-4 p-4">
+			<CreateListBtn />
+			{userLists.length ? (
 				<>
 					<ListButtonInfo />
 					<header className="w-full flex flex-col bg-backgrounds-950 font-bold">
@@ -51,11 +61,10 @@ const page = () => {
 							</ListSortButton>
 						</div>
 					</header>
-
-					<UserListTable />
+					<UserListsTable />
 				</>
 			) : (
-				<h2 className="font-graduate text-xl">{userUid ? "You have no saved lists!" : <NotSignedIn />}</h2>
+				<SideMenutitle>You have no saved lists!</SideMenutitle>
 			)}
 		</div>
 	)

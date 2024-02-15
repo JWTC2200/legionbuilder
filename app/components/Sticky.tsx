@@ -11,7 +11,7 @@ export default function ({ className, children }: { className?: string; children
 	})
 
 	return (
-		<section className={`sticky ${className}`} ref={ref} style={{ top: position + "px" }}>
+		<section className={`sticky ${className}`} ref={ref} style={{ top: 0 + "px" }}>
 			{children}
 		</section>
 	)

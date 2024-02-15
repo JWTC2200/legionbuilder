@@ -1,9 +1,9 @@
-import { BUILDER_LIST } from "@/app/types"
-import { db } from "../config"
+import { List } from "@type//listTypes"
+import { db } from "@/app/firebase/config"
 import { setDoc, doc, serverTimestamp } from "firebase/firestore"
-import checkUploadPermission from "./checkUploadPermission"
+import checkUploadPermission from "@/app/firebase/firestore/checkUploadPermission"
 
-export const saveData = async (listData: BUILDER_LIST) => {
+export const saveData = async (listData: List) => {
 	try {
 		const permission = await checkUploadPermission(listData)
 		if (!permission) {
@@ -11,14 +11,14 @@ export const saveData = async (listData: BUILDER_LIST) => {
 		} else {
 			try {
 				const listString = JSON.stringify(listData)
-				const listRef = doc(db, "lists", listData.list_id)
+				const listRef = doc(db, process.env.NEXT_PUBLIC_FIREBASE_LIST_DB!, listData.id)
 				await setDoc(listRef, {
 					list: listString,
-					owner: listData.user_id,
+					owner: listData.user,
 					created: serverTimestamp(),
 					game_size: listData.points,
-					main_faction: listData.main_faction,
-					name: listData.list_name,
+					main_faction: listData.faction,
+					name: listData.name,
 					formations: listData.formations.length,
 				}),
 					{ merge: true }

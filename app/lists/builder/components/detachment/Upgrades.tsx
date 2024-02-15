@@ -1,115 +1,96 @@
-import { BUILDER_DETACHMENT_UNIT_UPGRADES, SLOTSET, BUILDER_DETACHMENT_UNIT, BUILDER_DETACHMENT_SLOT } from "@/app/types"
 import { detachmentData } from "@/app/data/detachment_data"
-import { listState } from "../../state"
+import { listState } from "@/app/lists/state"
+import { List, ListUpgrade, ListUpgrades } from "@type/listTypes"
+import SideMenuTitle from "../SideMenutitle"
 
-const Upgrades = ({ unitId, upgradeOption, slotSet, refId, slotRef }: { unitId: number; upgradeOption: BUILDER_DETACHMENT_UNIT_UPGRADES; slotSet: SLOTSET; refId: string; slotRef: string }) => {
-	const detachmentUpgrades = detachmentData.find((detachment) => detachment.id === unitId)
-	if (!detachmentUpgrades) {
-		return null
-	}
+interface properties {
+	slot_id: string | null
+}
 
-	const upgradeObject = detachmentUpgrades.upgrade_options?.find((upgrade) => upgrade.name === upgradeOption.name)
-
-	if (!upgradeObject) {
-		return null
-	}
-
-	const upgradeSelectedHighlight = upgradeOption.number > 0 ? " text-tertiary-800 font-semibold" : ""
-
+const Upgrades = ({ slot_id }: properties) => {
 	const { list, setList } = listState()
-	const newUpgradeObject = (upgradeId: number): BUILDER_DETACHMENT_UNIT_UPGRADES => {
-		if (upgradeId) {
-			const newUpgrade = upgradeObject.options.find((upgrade) => upgrade.number === upgradeId)!
-			return {
-				...upgradeOption,
-				...newUpgrade,
-				number: upgradeId,
-			}
-		}
-		return { ...upgradeOption, number: 0, cost: 0, size: 0 }
+
+	const upgradeSlot = list.upgrades.find((slot) => slot.slot_id === slot_id)
+
+	if (!upgradeSlot) {
+		return <SideMenuTitle>Could not find any upgrades</SideMenuTitle>
+	}
+	if (!upgradeSlot.id) {
+		return <SideMenuTitle>No unit selected</SideMenuTitle>
 	}
 
-	const updateSelectedUnit = (oldUnit: BUILDER_DETACHMENT_UNIT, newUpgrades: BUILDER_DETACHMENT_UNIT_UPGRADES): BUILDER_DETACHMENT_UNIT => {
-		const upgradeOptionsArray = oldUnit.upgrade_options.map((upgrade) => {
-			if (upgrade.name === newUpgrades.name) {
-				return newUpgrades
-			}
-			return upgrade
-		})
+	const detachmentInfo = detachmentData.find((detachment) => detachment.id === upgradeSlot.id)
 
-		return { ...oldUnit, upgrade_options: upgradeOptionsArray }
+	if (!detachmentInfo) {
+		return <SideMenuTitle>Could not find any upgrade data</SideMenuTitle>
 	}
 
-	const updateUpgradeSlotArray = (detachmentArray: BUILDER_DETACHMENT_SLOT[], newUpgrade: BUILDER_DETACHMENT_UNIT_UPGRADES): BUILDER_DETACHMENT_SLOT[] => {
-		const newArray = detachmentArray.map((detach) => {
-			if (detach.slot_ref === slotRef) {
-				return {
-					...detach,
-					selected_unit: updateSelectedUnit(detach.selected_unit!, newUpgrade),
+	const updateUpgrades = (e: number, name: string) => {
+		if (e) {
+			const upgrades = detachmentInfo.upgrade_options.find((upgrade) => upgrade.name === name)!
+
+			const newUpgrade: ListUpgrade = {
+				name: name,
+				unit_ref: upgrades.unit_ref,
+				...upgrades.options.find((option) => option.number === e)!,
+			}
+
+			const newUpgradeSlot: ListUpgrades = {
+				...upgradeSlot,
+				upgrades: [...upgradeSlot.upgrades.filter((up) => up.name !== newUpgrade.name), newUpgrade],
+			}
+
+			const newList: List = {
+				...list,
+				upgrades: [...list.upgrades.filter((upgrade) => upgrade.slot_id !== slot_id), newUpgradeSlot],
+			}
+
+			setList(newList)
+		} else {
+			const deletedUpgradeArray: ListUpgrades[] = list.upgrades.map((upgradeSlot) => {
+				if (upgradeSlot.slot_id === slot_id) {
+					return {
+						...upgradeSlot,
+						upgrades: upgradeSlot.upgrades.filter((upgrade) => upgrade.name !== name),
+					}
 				}
-			}
-			return detach
-		})
-		return newArray
-	}
+				return upgradeSlot
+			})
 
-	const updateUpgradeChoice = (upgradeId: number): void => {
-		const newUpgrade = newUpgradeObject(upgradeId)
-
-		if (slotSet === SLOTSET.compulsory || slotSet === SLOTSET.optional) {
-			const newArmyList = {
-				...list,
-				formations: list.formations.map((form) => {
-					if (form.ref_id === refId) {
-						return {
-							...form,
-							[slotSet]: form[slotSet] ? updateUpgradeSlotArray(form[slotSet]!, newUpgrade) : null,
-						}
-					}
-					return form
-				}),
-			}
-			setList(newArmyList)
-		}
-		if (slotSet === SLOTSET.choice) {
-			const newArmyList = {
-				...list,
-				formations: list.formations.map((form) => {
-					if (form.ref_id === refId) {
-						if (!form.choice) {
-							return { ...form }
-						}
-						return {
-							...form,
-							choice: form.choice.map((array) => updateUpgradeSlotArray(array, newUpgrade)),
-						}
-					}
-					return form
-				}),
-			}
-			setList(newArmyList)
+			setList({ ...list, upgrades: deletedUpgradeArray })
 		}
 	}
-	return (
-		<div className="flex flex-wrap">
+
+	const selectMenus = detachmentInfo.upgrade_options.map((upgrade, index) => {
+		const selectValue = upgradeSlot.upgrades.find((up) => up.name === upgrade.name)
+		return (
 			<select
-				id={`${slotRef}${upgradeOption.name}`}
-				name={`${slotRef}${upgradeOption.name}`}
-				value={upgradeOption.number}
+				key={upgradeSlot.slot_id + "menuSelect" + index}
 				onChange={(e) => {
-					updateUpgradeChoice(Number(e.target.value))
+					updateUpgrades(Number(e.target.value), upgrade.name)
 				}}
-				className={"w-full text-center text-sm font-graduate p-1 rounded-full border border-primary-950 hover:text-tertiary-700 active:text-tertiary-700" + upgradeSelectedHighlight}>
+				value={selectValue ? selectValue.number : "0"}
+				className={`w-full text-center text-sm font-graduate p-1 rounded-full border border-primary-950 hover:text-tertiary-700 active:text-tertiary-700 overflow-auto text-black ${selectValue ? "text-tertiary-700 font-semibold" : ""}`}>
 				<option value="0" className="text-black">
-					{upgradeOption.name}
+					{upgrade.name}
 				</option>
-				{upgradeObject.options.map((upgrade, index) => (
-					<option key={slotRef + "upgrade" + upgradeOption.name + index} value={upgrade.number} className="text-black">
-						{upgrade.text ? `${upgrade.text}` : `${upgradeOption.name}: ${upgrade.number}, ${upgrade.cost}pts`}
+				{upgrade.options.map((option, index2) => (
+					<option
+						key={upgradeSlot.slot_id + "menuSelect" + index + "option" + index2}
+						value={option.number}
+						className="text-black">
+						{`${upgrade.name} ${option.number}: ${option.cost}pts`}{" "}
 					</option>
 				))}
 			</select>
-		</div>
+		)
+	})
+
+	return (
+		<>
+			<SideMenuTitle>{detachmentInfo.name}</SideMenuTitle>
+			{selectMenus.length ? selectMenus : <div className="font-graduate">This unit has no upgrades</div>}
+		</>
 	)
 }
 

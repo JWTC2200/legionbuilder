@@ -1,4 +1,4 @@
-import { UNIT_DATASHEET, WEAPON_DATASHEET } from "@/app/types"
+import { UNIT_DATASHEET, WEAPON_DATASHEET } from "@type/types"
 import { create } from "zustand"
 
 interface CalcWeapons {

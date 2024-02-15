@@ -3,15 +3,31 @@ import Link from "next/link"
 import { FaGithub, FaDiscord } from "react-icons/fa6"
 import { TfiEmail } from "react-icons/tfi"
 import FrontpageUpdates from "@components/FrontpageUpdates"
-import CreateListButtons from "./lists/components/CreateListButtons"
 
 export default function Home() {
 	return (
-		<Main>
-			{/* <CreateListButtons className="m-4 self-center flex flex-wrap gap-4 justify-center" /> */}
+		<Main className="flex flex-col items-center py-4">
+			<Link
+				href="/lists"
+				className="px-8 py-2 builder_title_background font-graduate text-lg text-center sm:text-2xl rounded-full border-2 border-backgrounds-950 hover:text-primary-100 active:text-primary-100 hover:border-primary-100 active:border-primary-100">
+				Create list
+			</Link>
+
+			<div className="my-4 flex flex-col gap-2">
+				<p>
+					Apologies for any inconvenience, I've made quite a few changes to the site and as a result any
+					previously saved lists won't work anymore.
+				</p>
+				<p>
+					Also to save lists you'll need an account from now on. The builder and view pages still work as
+					normal.
+				</p>
+				<p>Any issues please feel free to let me know, preferably through Discord. Thanks! </p>
+			</div>
+
 			<FrontpageUpdates />
 
-			<section className="mx-4">
+			<section className="mx-4 self-start">
 				<h2 className="text-lg font-graduate text-tertiary-700 mt-4">Suggestions or feedback?</h2>
 				<Link
 					href="https://discord.gg/KhQeqBn8"
@@ -31,7 +47,7 @@ export default function Home() {
 					Github <FaGithub />
 				</Link>
 			</section>
-			<hr className="border rounded-full bg-stone-900 m-4" />
+			<hr className="border rounded-full bg-stone-900 m-4 w-full" />
 			<footer className="mx-4">
 				<p>This website is unofficial and in no way endorsed by Games Workshop.</p>
 				<p>

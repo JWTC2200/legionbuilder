@@ -1,12 +1,68 @@
 import { create } from "zustand"
-import { DB_ENTRY } from "../types"
+import { List } from "@type//listTypes"
+import { DB_ENTRY, DETACHMENT } from "@type/types"
+import { emptyList } from "@data/empty_objects"
 
 interface UserListsState {
 	userLists: DB_ENTRY[]
 	setUserLists: (lists: DB_ENTRY[]) => void
 }
 
+interface ListState {
+	list: List
+	setList: (update: List) => void
+	clearList: () => void
+}
+
+interface ListSidebar {
+	slot_id: string | null
+	type: "upgrades" | "loadouts" | null
+	visible: boolean
+	setData: (update: string, type: "upgrades" | "loadouts") => void
+	closeSidebar: () => void
+	openSidebar: () => void
+}
+
+interface DataslateSideWidget {
+	dataslate: DETACHMENT | null
+	visible: boolean
+	setDataslate: (update: DETACHMENT | null) => void
+	setVisible: (update: boolean) => void
+}
+
+interface ListDetails {
+	visible: string[]
+	setVisibility: (update: string[]) => void
+}
+
 export const userListsState = create<UserListsState>((set) => ({
 	userLists: [],
 	setUserLists: (update) => set(() => ({ userLists: update })),
+}))
+
+export const listState = create<ListState>((set) => ({
+	list: emptyList,
+	setList: (update) => set(() => ({ list: update })),
+	clearList: () => set({ list: emptyList }),
+}))
+
+export const listSidebar = create<ListSidebar>((set) => ({
+	slot_id: null,
+	type: null,
+	visible: false,
+	setData: (update, type) => set(() => ({ slot_id: update, type: type })),
+	closeSidebar: () => set(() => ({ visible: false })),
+	openSidebar: () => set(() => ({ visible: true })),
+}))
+
+export const dataslateSideWidget = create<DataslateSideWidget>((set) => ({
+	dataslate: null,
+	visible: false,
+	setDataslate: (update) => set(() => ({ dataslate: update })),
+	setVisible: (update) => set(() => ({ visible: update })),
+}))
+
+export const listDetails = create<ListDetails>((set) => ({
+	visible: [],
+	setVisibility: (update) => set(() => ({ visible: update })),
 }))

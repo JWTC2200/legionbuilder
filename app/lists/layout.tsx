@@ -2,12 +2,12 @@
 
 import { useEffect } from "react"
 import { ToastContainer } from "react-toastify"
-import { listState } from "./builder/state"
-import { ALLEGIANCE, BUILDER_LIST } from "../types"
+import Main from "@components/Main"
+import { listState } from "@/app/lists/state"
 import { useSearchParams } from "next/navigation"
-import { getList } from "../firebase/firestore/getList"
+import { getList } from "@/app/firebase/firestore/getList"
+import { List } from "@type/listTypes"
 import { toast } from "react-toastify"
-import Main from "../components/Main"
 
 const layout = ({ children }: { children: React.ReactNode }) => {
 	const { setList } = listState()
@@ -15,30 +15,23 @@ const layout = ({ children }: { children: React.ReactNode }) => {
 	const listParams = searchParams.get("listId")
 
 	useEffect(() => {
-		const localList = localStorage.getItem("legionbuilder")
-
-		const getDblist = async (id: string) => {
-			const data: BUILDER_LIST = await getList(id)
+		const getDbList = async (id: string) => {
+			const data: List = await getList(id)
 			if (data) {
-				setList({ ...data, allegiance: ALLEGIANCE.neutral })
+				setList(data)
 			} else {
 				toast.error("Could not find linked list")
 			}
 		}
-
 		if (listParams) {
-			getDblist(listParams)
-		} else {
-			if (localList) {
-				const local = JSON.parse(localList) as BUILDER_LIST
-				setList({ ...local, allegiance: ALLEGIANCE.neutral })
-			}
+			getDbList(listParams)
 		}
 	}, [listParams])
 
 	return (
-		<Main className="sm:max-w-screen-2xl w-full flex flex-col items-center">
+		<Main className="sm:max-w-screen-2xl flex flex-col items-center">
 			<ToastContainer
+				position="bottom-right"
 				autoClose={800}
 				closeOnClick
 				toastStyle={{

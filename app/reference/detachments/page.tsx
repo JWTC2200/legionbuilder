@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { DETACHMENT, factionTypeArray, detachmentTypeArray } from "../../types"
+import { DETACHMENT, factionTypeArray, detachmentTypeArray } from "../../types/types"
 import { detachmentData } from "../../data/detachment_data"
 import { getDetachmentIcon } from "../../utils/detachmentIcons"
 import Main from "@components/Main"
@@ -35,9 +35,19 @@ const page = () => {
 			<div className="w-full lg:flex lg:gap-4">
 				{factionTypeArray.map((faction) => (
 					<FactionList faction={faction} key={faction}>
-						{sortByDetachmentType(detachmentData.filter((detachmentFaction) => detachmentFaction.faction === faction && !detachmentFaction.unique)).map((detachment) => (
-							<Row key={detachment.name} className="px-4 hover:bg-secondary-700 hover:text-secondary-50 whitespace-nowrap">
-								<Link key={detachment.name} href={`/reference/detachments/${detachment.name.replaceAll(" ", "_")} `} className="flex items-center gap-2 w-full py-1">
+						{sortByDetachmentType(
+							detachmentData.filter(
+								(detachmentFaction) =>
+									detachmentFaction.faction === faction && !detachmentFaction.unique
+							)
+						).map((detachment) => (
+							<Row
+								key={detachment.name}
+								className="px-4 hover:bg-secondary-700 hover:text-secondary-50 whitespace-nowrap">
+								<Link
+									key={detachment.name}
+									href={`/reference/detachments/${detachment.name.replaceAll(" ", "_")} `}
+									className="flex items-center gap-2 w-full py-1">
 									<span>{getDetachmentIcon(detachment.detachment_type)}</span>
 									<span>{detachment.name}</span>
 								</Link>

@@ -4,7 +4,7 @@ This is just a file to record my thoughts/issues with the code.
 
 #### - buider/components/BuilderFormation.tsx
 
-Issue with the compulsory/optional/choice sections. When passing slot: BUILDER_DETACHMENT_SLOT into BuilderDetachment will cause crash if the slot references are not correct. Add check to not render detachment if slot is not correct.
+Issue with the compulsory/optional/choice sections. When passing slot: BUILDER_FORMATION_SLOT into BuilderDetachment will cause crash if the slot references are not correct. Add check to not render detachment if slot is not correct.
 
 This isn't an issue if the data is entered correctly.
 

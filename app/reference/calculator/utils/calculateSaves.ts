@@ -1,7 +1,6 @@
-import { UNIT_TYPE } from "@/app/types"
 import { rerollFail, rerollSuccess } from "./rerolls"
 import { armouredTypes } from "../utils"
-import { UNIT_DATASHEET, WEAPON_PROFILES } from "@/app/types"
+import { UNIT_DATASHEET, WEAPON_PROFILES, UNIT_TYPE } from "@type/types"
 import calculateAP from "./calculateAP"
 import { twoDiceOdds } from "./diceOdds"
 
@@ -49,7 +48,10 @@ export const calculateSaves = (weapon: WEAPON_PROFILES, target: UNIT_DATASHEET):
 	if (weaponTraits.includes("Light") && targetRules.includes("Armoured")) {
 		finalArmourSave = rerollFail(finalArmourSave)
 	}
-	if (weaponTraits.includes("Shred") && [UNIT_TYPE.infantry, UNIT_TYPE.cavalry, UNIT_TYPE.walker].includes(targetType)) {
+	if (
+		weaponTraits.includes("Shred") &&
+		[UNIT_TYPE.infantry, UNIT_TYPE.cavalry, UNIT_TYPE.walker].includes(targetType)
+	) {
 		finalArmourSave = rerollSuccess(finalArmourSave)
 	}
 	if (weaponTraits.includes("Neutron-flux") && targetRules.includes("Cybernetica Cortex")) {
@@ -64,7 +66,11 @@ export const calculateSaves = (weapon: WEAPON_PROFILES, target: UNIT_DATASHEET):
 		}
 	})
 	if (targetRules.includes("Explorator Adaptation")) {
-		if (weaponTraits.includes("Barrage") || weaponTraits.includes("Heavy Barrage") || weaponTraits.includes("Blast")) {
+		if (
+			weaponTraits.includes("Barrage") ||
+			weaponTraits.includes("Heavy Barrage") ||
+			weaponTraits.includes("Blast")
+		) {
 			allSaves.push(1 / 6)
 		}
 	}

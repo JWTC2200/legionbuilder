@@ -1,72 +1,64 @@
-"use client"
-
-import { BUILDER_FORMATION, FACTION, SLOTSET } from "@/app/types"
 import { useState } from "react"
-import Selector from "./Selector"
-import Toggle from "./Toggle"
-import RemoveBtn from "./RemoveBtn"
-import BreakHtml from "../../../view/components/FormationBreakHtml"
-import Sections from "./Sections"
+import { ListFormation } from "@type/listTypes"
+import { FACTION } from "@type/types"
+import FormationToggle from "./FormationToggle"
+import FormationDelete from "./FormationDelete"
+import FormationSelector from "./FormationSelector"
+import { FormationGroup } from "./FormationGroup"
 import SubfactionSelector from "./SubfactionSelector"
-import SubfactionWarning from "./SubfactionWarning"
-import DuplicateBtn from "./DuplicateBtn"
+import FormationBreakPoints from "./FormationBreakPoints"
+import FormationNickname from "./FormationNickname"
+import { totalFormationPoints } from "@lists/builder/utils"
+import { listState } from "@/app/lists/state"
+import ResizingBox from "@/app/components/ResizingBox"
 
-const Formation = ({ formation }: { formation: BUILDER_FORMATION }) => {
+interface properties {
+	formation: ListFormation
+}
+
+const Formation = ({ formation }: properties) => {
 	const [viewFormation, setViewFormation] = useState<boolean>(true)
-	const compulsoryHTML = formation.compulsory ? (
-		<Sections
-			formationSubfaction={formation.subfaction}
-			formationSection={formation.compulsory}
-			sectionType={SLOTSET.compulsory}
-			index={0}
-		/>
-	) : null
-	const optionalHtml = formation.optional ? (
-		<Sections
-			formationSubfaction={formation.subfaction}
-			formationSection={formation.optional}
-			sectionType={SLOTSET.optional}
-			index={0}
-		/>
-	) : null
-	const choiceHtml = formation.choice ? (
-		<div className="w-full flex flex-col">
-			{formation.choice.map((choiceArray, index) => (
-				<Sections
-					key={formation.ref_id + "choiceSet" + index}
-					formationSubfaction={formation.subfaction}
-					formationSection={choiceArray}
-					sectionType={SLOTSET.choice}
-					index={index}
-				/>
-			))}
-		</div>
-	) : null
+	const { list } = listState()
+
+	const formationGroupHTML = formation.detachment_groups.map((group) => (
+		<FormationGroup key={group.id} formationGroup={group} />
+	))
 
 	return (
-		<div id={formation.ref_id} className="sm:border-4 border-primary-950 sm:rounded-xl flex flex-col items-center">
-			<div className="w-full banner_background sm:rounded-t-lg flex flex-wrap  justify-center sm:justify-between items-center text-center px-2">
-				<Toggle view={viewFormation} toggle={setViewFormation} />
-				<Selector formation={formation} />
-				<div className="flex gap-2">
-					{/* <DuplicateBtn formation={formation} /> */}
-					<RemoveBtn formation={formation} />
+		<div
+			id={formation.id}
+			className={`sm:rounded-xl flex flex-col items-center sm:border-2 border-backgrounds-900 overflow-hidden ${viewFormation && "pb-4"}`}>
+			<div className="w-full font-graduate builder_title_background sm:rounded-t-lg flex sm:flex-row flex-col justify-center sm:justify-between items-center text-center py-2 px-6 z-10 gap-2">
+				<FormationToggle view={viewFormation} toggle={setViewFormation} className="hidden sm:block" />
+				<FormationSelector formation={formation} />
+				<FormationDelete formation={formation} className="hidden sm:block" />
+				<div className="sm:hidden flex justify-between items-center gap-8">
+					<FormationToggle view={viewFormation} toggle={setViewFormation} />
+					<FormationDelete formation={formation} />
 				</div>
 			</div>
-			<SubfactionWarning formation={formation} />
-
-			{viewFormation ? (
-				<>
-					{formation.faction === FACTION.astartes ? <SubfactionSelector formation={formation} /> : null}
-					<BreakHtml
-						formation={formation}
-						className="text-black my-2 flex flex-wrap gap-2 font-graduate justify-center"
-					/>
-					{compulsoryHTML}
-					{optionalHtml}
-					{choiceHtml}
-				</>
-			) : null}
+			<div className="overflow-hidden">
+				<ResizingBox toggle={viewFormation}>
+					<>
+						<div className={"flex flex-col justify-center items-center py-2 gap-2"}>
+							<div className="flex flex-wrap gap-2 items-center justify-center">
+								<FormationNickname formation={formation} />
+								{formation.faction === FACTION.astartes ? (
+									<SubfactionSelector formation={formation} />
+								) : null}
+							</div>
+							<h3 className="bg-inherit sm:rounded-t-lg sm:text-xl font-graduate text-center">
+								{totalFormationPoints(list, formation)} points
+							</h3>
+							<FormationBreakPoints
+								formation={formation}
+								className=" flex flex-wrap gap-2 font-graduate justify-center"
+							/>
+						</div>
+						{formationGroupHTML}
+					</>
+				</ResizingBox>
+			</div>
 		</div>
 	)
 }
