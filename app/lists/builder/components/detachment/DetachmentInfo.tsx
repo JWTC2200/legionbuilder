@@ -19,14 +19,16 @@ const DetachmentInfo = ({ detachmentSlot }: properties) => {
 
 	const handleDetachmentSideWidget = () => {
 		if (unitReference[0]) {
+			if (unitReference[0].id === dataslate?.id) {
+				setVisible(!visible)
+			}
 			setDataslate(unitReference[0])
-			setVisible(true)
 		}
 	}
 
 	return (
 		<div className="w-full flex flex-wrap gap-2 sm:gap-4 justify-center items-center relative">
-			{unitReference[0] ? (
+			{unitReference[0] && !unitReference[0].unique ? (
 				<button onClick={handleDetachmentSideWidget} className="font-graduate">
 					?
 				</button>
