@@ -8,7 +8,15 @@ import { BreadCrumbs, Crumb } from "@/app/components/BreadCrumbs"
 import { GrPowerReset } from "react-icons/gr"
 import { playState } from "./state"
 import Scoreboard from "./components/Scoreboard"
+import { useRouter } from "next/navigation"
+
 const page = () => {
+	const router = useRouter()
+
+	router.replace("/lists")
+
+	return null
+
 	const { playList, clearOrders, viewMode, setView } = playState()
 
 	const listFormations = playList.formations.filter((formation) => formation.data_id)
@@ -39,14 +47,18 @@ const page = () => {
 				<Crumb href="/lists">Lists</Crumb>
 				<Crumb href="/lists/play">Play</Crumb>
 			</BreadCrumbs>
-			<Scoreboard/>
+			<Scoreboard />
 			<div className="flex flex-col items-center w-full justify-center gap-4 py-4 font-graduate text-sm sm:text-md">
 				<div className="w-full p-2 builder_title_background sm:clip-path-octagon-lg text-primary-50 flex flex-wrap justify-around gap-4 text-center py-2">
-					<button onClick={clearOrders} className="text-xl hover:text-primary-500 active:text-primary-400 flex items-center gap-2">
-						<GrPowerReset/> Orders
+					<button
+						onClick={clearOrders}
+						className="text-xl hover:text-primary-500 active:text-primary-400 flex items-center gap-2">
+						<GrPowerReset /> Orders
 					</button>
 					<h2 className="text-2xl">{playList.name}</h2>
-					<button onClick={setView} className="w-20 text-xl hover:text-primary-500 active:text-primary-400">{viewMode ? "Detailed" : "Simple"}</button>
+					<button onClick={setView} className="w-20 text-xl hover:text-primary-500 active:text-primary-400">
+						{viewMode ? "Detailed" : "Simple"}
+					</button>
 				</div>
 				<div className="flex flex-col gap-2">
 					{playList.formations.map((formation) => (

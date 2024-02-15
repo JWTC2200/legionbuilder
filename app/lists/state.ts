@@ -1,6 +1,6 @@
 import { create } from "zustand"
 import { List } from "@type//listTypes"
-import { DB_ENTRY } from "@type/types"
+import { DB_ENTRY, DETACHMENT } from "@type/types"
 import { emptyList } from "@data/empty_objects"
 
 interface UserListsState {
@@ -21,6 +21,13 @@ interface ListSidebar {
 	setData: (update: string, type: "upgrades" | "loadouts") => void
 	closeSidebar: () => void
 	openSidebar: () => void
+}
+
+interface DataslateSideWidget {
+	dataslate: DETACHMENT | null
+	visible: boolean
+	setDataslate: (update: DETACHMENT | null) => void
+	setVisible: (update: boolean) => void
 }
 
 interface ListDetails {
@@ -46,6 +53,13 @@ export const listSidebar = create<ListSidebar>((set) => ({
 	setData: (update, type) => set(() => ({ slot_id: update, type: type })),
 	closeSidebar: () => set(() => ({ visible: false })),
 	openSidebar: () => set(() => ({ visible: true })),
+}))
+
+export const dataslateSideWidget = create<DataslateSideWidget>((set) => ({
+	dataslate: null,
+	visible: false,
+	setDataslate: (update) => set(() => ({ dataslate: update })),
+	setVisible: (update) => set(() => ({ visible: update })),
 }))
 
 export const listDetails = create<ListDetails>((set) => ({

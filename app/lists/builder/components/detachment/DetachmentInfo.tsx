@@ -1,10 +1,9 @@
-import { unitData } from "@/app/data/unit_data"
 import { currentDetachmentSize, totalDetachmentPoints } from "./utils"
 import { listState } from "@/app/lists/state"
 import { ListDetachmentSlot } from "@type/listTypes"
 import { findDetachmentBySlotId } from "../../utils"
-import ReferencePopup from "./ReferencePopup"
 import { detachmentData } from "@/app/data/detachment_data"
+import { dataslateSideWidget } from "@/app/lists/state"
 
 interface properties {
 	detachmentSlot: ListDetachmentSlot
@@ -12,13 +11,26 @@ interface properties {
 
 const DetachmentInfo = ({ detachmentSlot }: properties) => {
 	const { list } = listState()
+	const { dataslate, visible, setVisible, setDataslate } = dataslateSideWidget()
 
 	const selectedUnit = findDetachmentBySlotId(list, detachmentSlot.id)
 
 	const unitReference = detachmentData.filter((detachment) => detachment.id === selectedUnit?.id)
 
+	const handleDetachmentSideWidget = () => {
+		if (unitReference[0]) {
+			setDataslate(unitReference[0])
+			setVisible(true)
+		}
+	}
+
 	return (
 		<div className="w-full flex flex-wrap gap-2 sm:gap-4 justify-center items-center relative">
+			{unitReference[0] ? (
+				<button onClick={handleDetachmentSideWidget} className="font-graduate">
+					?
+				</button>
+			) : null}
 			<p className="text-sm sm:text-base font-graduate ">
 				Detachment size: {currentDetachmentSize(list, detachmentSlot.id)}
 			</p>

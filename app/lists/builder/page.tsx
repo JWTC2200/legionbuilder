@@ -8,6 +8,7 @@ import ListHeader from "./components/ListHeader"
 import ListWarnings from "./components/warnings/ListWarnings"
 import ListButtons from "./components/ListButtons"
 import ListInfo from "./components/ListInfo"
+import DataslateSideWidget from "./components/DataslateSideWidget"
 
 const page = () => {
 	return (
@@ -26,6 +27,7 @@ const page = () => {
 				<Formations />
 			</div>
 			<SideMenu />
+			<DataslateSideWidget />
 		</div>
 	)
 }
