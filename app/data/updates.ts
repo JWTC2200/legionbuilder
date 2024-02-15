@@ -4,7 +4,15 @@ interface update {
 }
 
 export const updateData: update[] = [
-	{ date: "06/01/24", updates: ["Added a sidebar for upgrades/loadouts, testing only."] },
+	{
+		date: "15/01/24",
+		updates: ["Saving lists now requires an account", "Password reset added to the login page"],
+	},
+	{
+		date: "13/01/24",
+		updates: ["Changed the detachment infomation popup in the builder", "Changed look of builder & view pages"],
+	},
+	{ date: "06/01/24", updates: ["Added a sidebar for upgrades/loadouts."] },
 	{ date: "26/01/24", updates: ["Added a duplicate formation button to the builder"] },
 	{ date: "07/01/24", updates: ["Typo fixes"] },
 	{

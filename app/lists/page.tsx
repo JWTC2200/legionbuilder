@@ -9,6 +9,7 @@ import CreateListBtn from "@lists/components/CreateListBtn"
 import ListButtonInfo from "@lists/components/ListBtnInfo"
 import ListSortButton from "@lists/components/ListSortButton"
 import UserListsTable from "@lists/components/UserListsTable"
+import SideMenutitle from "./builder/components/SideMenutitle"
 
 const page = () => {
 	const userUid = useAuthState((state) => state.uid)
@@ -63,7 +64,7 @@ const page = () => {
 					<UserListsTable />
 				</>
 			) : (
-				<div>no lists</div>
+				<SideMenutitle>You have no saved lists!</SideMenutitle>
 			)}
 		</div>
 	)

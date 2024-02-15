@@ -9,7 +9,7 @@ export default function Home() {
 		<Main className="flex flex-col items-center py-4">
 			<Link
 				href="/lists"
-				className="px-8 py-2 banner_background font-graduate text-lg text-center sm:text-2xl rounded-full border-2 border-backgrounds-950 hover:text-primary-100 active:text-primary-100 hover:border-primary-100 active:border-primary-100">
+				className="px-8 py-2 builder_title_background font-graduate text-lg text-center sm:text-2xl rounded-full border-2 border-backgrounds-950 hover:text-primary-100 active:text-primary-100 hover:border-primary-100 active:border-primary-100">
 				Create list
 			</Link>
 			<FrontpageUpdates />
