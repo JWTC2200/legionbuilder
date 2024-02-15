@@ -4,7 +4,7 @@ export const orderColorStyle = (order: string | undefined): string => {
 	} else if (order === "advance") {
 		return "text-primary-500"
 	} else if (order === "march") {
-		return "text-blue-500"
+		return "text-blue-400"
 	} else if (order === "charge") {
 		return "text-red-600"
 	} else if (order === "fallback") {

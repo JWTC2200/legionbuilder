@@ -1,16 +1,16 @@
 import { ListDetachment } from "@/app/types/listTypes"
-import { listState } from "@lists/state"
-import { findDetachmentBySlotId, findLoadoutBySlotId, findUpgradeBySlotId } from "../../builder/utils"
+import { playState } from "../state"
+import {  findLoadoutBySlotId, findUpgradeBySlotId } from "../../builder/utils"
 
 interface properties {
 	detachment: ListDetachment
 }
 
 const DetachmentDetails = ({ detachment }: properties) => {
-	const { list } = listState()
+	const {playList} = playState()
 
-	const upgrades = findUpgradeBySlotId(list, detachment.slot_id)
-	const loadouts = findLoadoutBySlotId(list, detachment.slot_id)
+	const upgrades = findUpgradeBySlotId(playList, detachment.slot_id)
+	const loadouts = findLoadoutBySlotId(playList, detachment.slot_id)
 
 	if (!upgrades?.upgrades.length && !loadouts?.loadouts.length) {
 		return null

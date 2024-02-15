@@ -1,4 +1,4 @@
-import { ordersState } from "@lists/play/state"
+import { playState } from "@lists/play/state"
 import { orderColorStyle } from "../utils"
 
 interface properties {
@@ -6,7 +6,7 @@ interface properties {
 }
 
 const OrdersSelector = ({ slotId }: properties) => {
-	const { orders, setOrders } = ordersState()
+	const { orders, setOrders } = playState()
 
 	const entry = orders.find((orders) => orders.slot_id === slotId)
 
@@ -30,7 +30,7 @@ const OrdersSelector = ({ slotId }: properties) => {
 
 	return (
 		<div className="flex gap-1">
-			<label htmlFor={`orderSelect${slotId}`}>Orders:</label>
+			<label htmlFor={`orderSelect${slotId}`} className="flex items-center">Orders:</label>
 			<select
 				value={entry ? entry.order : ""}
 				name={`orderSelect${slotId}`}

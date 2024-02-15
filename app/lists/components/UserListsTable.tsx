@@ -1,6 +1,6 @@
 import React from "react"
 import { userListsState, listState } from "@/app/lists/state"
-
+import { playState } from "../play/state"
 import Link from "next/link"
 import { FaEye } from "@react-icons/all-files/fa/FaEye"
 import { totalListPoints } from "../builder/utils"
@@ -11,6 +11,8 @@ import ListClipLink from "../builder/components/ListClipLink"
 const UserListsTable = () => {
 	const { userLists } = userListsState()
 	const { setList } = listState()
+	const {setPlayList} = playState()
+
 
 	const currentUrl = window.location.href
 
@@ -31,7 +33,7 @@ const UserListsTable = () => {
 							</Link>
 							<Link
 								href={`/lists/play?listId=${list.id}`}
-								onClick={() => setList(list)}
+								onClick={() => setPlayList(list)}
 								className="hover:text-tertiary-700 active:text-tertiary-700">
 								Play
 							</Link>

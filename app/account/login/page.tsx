@@ -44,7 +44,6 @@ const page = () => {
 		<Main className="flex flex-col gap-6 items-center">
 			<section className="flex flex-col gap-12 p-4 w-full lg:w-1/2">
 				<BreadCrumbs>
-					{/* <Crumb href="/account">Account</Crumb> */}
 					<Crumb href="/account/login">Login</Crumb>
 				</BreadCrumbs>
 
@@ -60,6 +59,7 @@ const page = () => {
 							value={email}
 							onChange={(e) => setEmail(e.target.value)}
 							className="text-secondary-200 bg-secondary-700 w-3/4 p-1 px-2"
+							required
 						/>
 					</div>
 					<div className="flex items-center w-full">
@@ -71,6 +71,7 @@ const page = () => {
 							value={password}
 							onChange={(e) => setPassword(e.target.value)}
 							className="text-secondary-200 bg-secondary-700 w-3/4 p-1 px-2"
+							required
 						/>
 					</div>
 					<div className="w-full">
@@ -89,8 +90,11 @@ const page = () => {
 					</Link>
 					.
 					<br />
-					Please note: An account is NOT required to use the builder. An account is only required if you want
-					to save more than one list or create links for sharing with other players.
+					Forgotten your email? Request a password reset{" "}
+					<Link href="/account/reset" className="text-primary-500 hover:text-primary-100">
+						here
+					</Link>
+					.
 				</p>
 			</section>
 		</Main>
