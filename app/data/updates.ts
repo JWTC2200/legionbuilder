@@ -4,6 +4,7 @@ interface update {
 }
 
 export const updateData: update[] = [
+	{ date: "18/02/24", updates: ["Login should persist between sessions"] },
 	{
 		date: "15/02/24",
 		updates: ["Saving lists now requires an account", "Password reset added to the login page"],

@@ -30,7 +30,7 @@ export default function Home() {
 			<section className="mx-4 self-start">
 				<h2 className="text-lg font-graduate text-tertiary-700 mt-4">Suggestions or feedback?</h2>
 				<Link
-					href="https://discord.gg/UCShWkeBhF"
+					href="https://discord.gg/kEXsZdThSe"
 					target="_blank"
 					className="hover:underline text-xl flex items-center gap-1 hover:text-tertiary-700 active:text-tertiary-700 focus:text-tertiary-700 mt-2">
 					Join our Discord! <FaDiscord />
