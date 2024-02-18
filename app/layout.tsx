@@ -8,7 +8,6 @@ import "react-toastify/dist/ReactToastify.css"
 
 import NavBar from "@components/navigation/NavBar"
 import AuthContextProvider from "./firebase/auth/AuthContext"
-import Maintenance from "./components/Maintenance"
 
 export const metadata: Metadata = {
 	title: "Legion Builder",

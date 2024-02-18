@@ -13,7 +13,7 @@ export default function Home() {
 				Create list
 			</Link>
 
-			<div className="my-4 flex flex-col gap-2">
+			<div className="m-4 flex flex-col gap-2">
 				<p>
 					Apologies for any inconvenience, I've made quite a few changes to the site and as a result any
 					previously saved lists won't work anymore.
