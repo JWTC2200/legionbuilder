@@ -30,7 +30,7 @@ const Detachment = ({ list, detachment }: properties) => {
 
 	return (
 		<div className="text-xs sm:text-base flex flex-col justify-start items-start">
-			<button onClick={handleDetachmentSideWidget} className="text-start">
+			<button onClick={handleDetachmentSideWidget} className="text-start select-text">
 				<h5 className="text-base sm:text-lg">
 					<span className="font-bold">{detachment.slot_type}: </span>
 					<span className="text-primary-500 hover:text-primary-300 active:text-tertiary-400 font-graduate">
