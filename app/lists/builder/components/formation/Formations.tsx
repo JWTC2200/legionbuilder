@@ -7,7 +7,7 @@ const Formations = () => {
 	const formationHTML = () => {
 		if (list.formations.length) {
 			return (
-				<div className="pb-20 flex flex-col gap-4">
+				<div className="flex flex-col gap-4">
 					{list.formations.map((formation) => (
 						<Formation formation={formation} key={formation.id} />
 					))}
