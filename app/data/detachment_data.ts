@@ -1546,6 +1546,13 @@ export const detachmentData: DETACHMENT[] = [
 		],
 		loadout_options: [
 			{
+				location: "Nose",
+				options: [
+					{ name: "Avenger lascannon", cost: 0 },
+					{ name: "Avenger autocannon", cost: 0 },
+				],
+			},
+			{
 				location: "Wing",
 				options: [
 					{ name: "Hellstrike missiles", cost: 0 },

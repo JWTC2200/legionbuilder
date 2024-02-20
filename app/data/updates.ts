@@ -4,6 +4,14 @@ interface update {
 }
 
 export const updateData: update[] = [
+	{
+		date: "20/02/24",
+		updates: [
+			"Additional wing weapon options for SA Lightnings & Marauders",
+			"Added missing nose weapon option for Avengers",
+			"Added a widget at the bottom of the builder page to show some list details",
+		],
+	},
 	{ date: "18/02/24", updates: ["Login should persist between sessions"] },
 	{
 		date: "15/02/24",
