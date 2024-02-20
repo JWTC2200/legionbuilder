@@ -1606,7 +1606,15 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 			{
-				location: "Wing",
+				location: "Wing 1",
+				options: [
+					{ name: "Hellstrike missiles", cost: 0 },
+					{ name: "Skyfire missiles", cost: 0 },
+					{ name: "Phosphex bomb clusters", cost: 0 },
+				],
+			},
+			{
+				location: "Wing 2",
 				options: [
 					{ name: "Hellstrike missiles", cost: 0 },
 					{ name: "Skyfire missiles", cost: 0 },
@@ -1670,7 +1678,15 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 			{
-				location: "Wing",
+				location: "Wing 1",
+				options: [
+					{ name: "Hellstrike missiles", cost: 0 },
+					{ name: "Skystrike missiles", cost: 0 },
+					{ name: "Wing bombs", cost: 0 },
+				],
+			},
+			{
+				location: "Wing 2",
 				options: [
 					{ name: "Hellstrike missiles", cost: 0 },
 					{ name: "Skystrike missiles", cost: 0 },
