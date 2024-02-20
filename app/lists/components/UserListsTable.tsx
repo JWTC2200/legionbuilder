@@ -30,7 +30,7 @@ const UserListsTable = () => {
 								className="hover:text-tertiary-700 active:text-tertiary-700">
 								<h3 className="">{list.name}</h3>
 							</Link>
-							<div className="flex items-center gap-2">
+							<div className="flex items-center gap-2 text-xl">
 								<DuplicateList list={list} />
 								<Link href={`${currentUrl}/view?listId=${list.id}`} className="hover:text-tertiary-700">
 									<FaEye />
