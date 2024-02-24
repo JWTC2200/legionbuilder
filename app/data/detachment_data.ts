@@ -1814,7 +1814,7 @@ export const detachmentData: DETACHMENT[] = [
 			{
 				name: "Armiger Talon",
 				unit_ref: 4003,
-				options: [{ number: 1, cost: 180, size: 3, break_strength: 2 }],
+				options: [{ number: 1, cost: 180, td_ek: 30, size: 3, break_strength: 2 }],
 			},
 			{
 				name: "Moriax Talon",
@@ -1826,7 +1826,7 @@ export const detachmentData: DETACHMENT[] = [
 			{
 				location: "Chassis",
 				options: [
-					{ name: "Knight Errant", cost: 0 },
+					{ name: "Knight Errant", cost: 0, td_ek: 10 },
 					{ name: "Knight Warden", cost: 0 },
 					{ name: "Knight Crusader", cost: 0 },
 					{ name: "Knight Paladin", cost: 0 },
@@ -1913,7 +1913,7 @@ export const detachmentData: DETACHMENT[] = [
 			{
 				name: "Armiger Talon",
 				unit_ref: 4003,
-				options: [{ number: 1, cost: 180, size: 3, break_strength: 2 }],
+				options: [{ number: 1, cost: 180, td_ek: 30, size: 3, break_strength: 2 }],
 			},
 			{
 				name: "Moriax Talon",
@@ -2018,7 +2018,7 @@ export const detachmentData: DETACHMENT[] = [
 					{ name: "Conversion beam dissolutor", cost: 0 },
 					{ name: "Ursus claw", cost: 0 },
 					{ name: "Natrix shock lance", cost: 0 },
-					{ name: "Incisor pattern melta lance", cost: 0 },
+					{ name: "Incisor pattern melta lance", cost: 0, td_ek: 20 },
 					{ name: "Volkite eradicator", cost: 0 },
 					{ name: "Warhound shudder missiles", cost: 0 },
 					{ name: "Warhound swamer missles", cost: 0 },
@@ -2035,7 +2035,7 @@ export const detachmentData: DETACHMENT[] = [
 					{ name: "Conversion beam dissolutor", cost: 0 },
 					{ name: "Ursus claw", cost: 0 },
 					{ name: "Natrix shock lance", cost: 0 },
-					{ name: "Incisor pattern melta lance", cost: 0 },
+					{ name: "Incisor pattern melta lance", cost: 0, td_ek: 20 },
 					{ name: "Volkite eradicator", cost: 0 },
 					{ name: "Warhound shudder missiles", cost: 0 },
 					{ name: "Warhound swamer missles", cost: 0 },
@@ -2083,7 +2083,7 @@ export const detachmentData: DETACHMENT[] = [
 				location: "Back",
 				options: [
 					{ name: "Neutron laser", cost: 0 },
-					{ name: "Volcano cannon", cost: 0 },
+					{ name: "Volcano cannon", cost: 0, td_ek: 20 },
 					{ name: "Conversion beam dissipator", cost: 0 },
 				],
 			},
@@ -2136,8 +2136,8 @@ export const detachmentData: DETACHMENT[] = [
 				options: [
 					{ name: "Reaver laser blaster", cost: 0 },
 					{ name: "Reaver gatling blaster", cost: 0 },
-					{ name: "Reaver volcano cannon", cost: 0 },
-					{ name: "Reaver melta cannon", cost: 0 },
+					{ name: "Reaver volcano cannon", cost: 0, td_ek: 30 },
+					{ name: "Reaver melta cannon", cost: 0, td_ek: 40 },
 					{ name: "Reaver power fist", cost: 0 },
 					{ name: "Reaver chainfist", cost: 0 },
 				],
@@ -2147,8 +2147,8 @@ export const detachmentData: DETACHMENT[] = [
 				options: [
 					{ name: "Reaver laser blaster", cost: 0 },
 					{ name: "Reaver gatling blaster", cost: 0 },
-					{ name: "Reaver volcano cannon", cost: 0 },
-					{ name: "Reaver melta cannon", cost: 0 },
+					{ name: "Reaver volcano cannon", cost: 0, td_ek: 30 },
+					{ name: "Reaver melta cannon", cost: 0, td_ek: 40 },
 					{ name: "Reaver power fist", cost: 0 },
 					{ name: "Reaver chainfist", cost: 0 },
 				],
@@ -2158,7 +2158,7 @@ export const detachmentData: DETACHMENT[] = [
 				options: [
 					{ name: "Reaver apocalypse missile launcher", cost: 0 },
 					{ name: "Reaver vulcan mega-bolter", cost: 0 },
-					{ name: "Reaver titan warp missile", cost: 0 },
+					{ name: "Reaver titan warp missile", cost: 0, td_ek: 30 },
 					{ name: "Reaver turbo-laser destructor", cost: 0 },
 					{ name: "Reaver volkite eradicator", cost: 0 },
 					{ name: "Reaver graviton eradicator", cost: 0 },
@@ -2207,8 +2207,8 @@ export const detachmentData: DETACHMENT[] = [
 				options: [
 					{ name: "Reaver laser blaster", cost: 0 },
 					{ name: "Reaver gatling blaster", cost: 0 },
-					{ name: "Reaver volcano cannon", cost: 0 },
-					{ name: "Reaver melta cannon", cost: 0 },
+					{ name: "Reaver volcano cannon", cost: 0, td_ek: 30 },
+					{ name: "Reaver melta cannon", cost: 0, td_ek: 40 },
 				],
 			},
 			{
@@ -2216,15 +2216,15 @@ export const detachmentData: DETACHMENT[] = [
 				options: [
 					{ name: "Reaver laser blaster", cost: 0 },
 					{ name: "Reaver gatling blaster", cost: 0 },
-					{ name: "Reaver volcano cannon", cost: 0 },
-					{ name: "Reaver melta cannon", cost: 0 },
+					{ name: "Reaver volcano cannon", cost: 0, td_ek: 30 },
+					{ name: "Reaver melta cannon", cost: 0, td_ek: 40 },
 				],
 			},
 			{
 				location: "Carapace",
 				options: [
 					{ name: "Mori quake cannon", cost: 0 },
-					{ name: "Belicosa volcano cannon", cost: 0 },
+					{ name: "Belicosa volcano cannon", cost: 0, td_ek: 40 },
 				],
 			},
 		],
@@ -2277,7 +2277,7 @@ export const detachmentData: DETACHMENT[] = [
 			{
 				location: "Arm 1",
 				options: [
-					{ name: "Belicosa Volcano Cannon", cost: 0 },
+					{ name: "Belicosa Volcano Cannon", cost: 0, td_ek: 40 },
 					{ name: "Sunfury plasma annihilator", cost: 0 },
 					{ name: "Macro-gatling blaster", cost: 0 },
 					{ name: "Mori quake cannon", cost: 0 },
@@ -2290,7 +2290,7 @@ export const detachmentData: DETACHMENT[] = [
 			{
 				location: "Arm 2",
 				options: [
-					{ name: "Belicosa Volcano Cannon", cost: 0 },
+					{ name: "Belicosa Volcano Cannon", cost: 0, td_ek: 40 },
 					{ name: "Sunfury plasma annihilator", cost: 0 },
 					{ name: "Macro-gatling blaster", cost: 0 },
 					{ name: "Mori quake cannon", cost: 0 },
@@ -2367,7 +2367,7 @@ export const detachmentData: DETACHMENT[] = [
 				location: "Arm weapon",
 				options: [
 					{ name: "Arioch power claw", cost: 0 },
-					{ name: "Belicosa Volcano Cannon", cost: 0 },
+					{ name: "Belicosa Volcano Cannon", cost: 0, td_ek: 40 },
 					{ name: "Sunfury plasma annihilator", cost: 0 },
 					{ name: "Macro-gatling blaster", cost: 0 },
 					{ name: "Mori quake cannon", cost: 0 },
@@ -2398,6 +2398,7 @@ export const detachmentData: DETACHMENT[] = [
 		unique: false,
 		detachment_type: DETACHMENT_TYPE.titan,
 		base_cost: 750,
+		td_ek: 40,
 		base_size: 1,
 		max_size: 1,
 		break_strength: 7,
@@ -2431,7 +2432,7 @@ export const detachmentData: DETACHMENT[] = [
 				location: "Shoulder 1",
 				options: [
 					{ name: "Apocalypse missile array", cost: 0 },
-					{ name: "Melta cannon", cost: 0 },
+					{ name: "Melta cannon", cost: 0, td_ek: 20 },
 					{ name: "Inferno gun", cost: 0 },
 					{ name: "Vulcan mega-bolter", cost: 0 },
 					{ name: "Turbo-laser destructor", cost: 0 },
@@ -2442,7 +2443,7 @@ export const detachmentData: DETACHMENT[] = [
 				location: "Shoulder 2",
 				options: [
 					{ name: "Apocalypse missile array", cost: 0 },
-					{ name: "Melta cannon", cost: 0 },
+					{ name: "Melta cannon", cost: 0, td_ek: 20 },
 					{ name: "Inferno gun", cost: 0 },
 					{ name: "Vulcan mega-bolter", cost: 0 },
 					{ name: "Turbo-laser destructor", cost: 0 },
@@ -2512,7 +2513,7 @@ export const detachmentData: DETACHMENT[] = [
 				location: "Shoulder 1",
 				options: [
 					{ name: "Apocalypse missile array", cost: 0 },
-					{ name: "Melta cannon", cost: 0 },
+					{ name: "Melta cannon", cost: 0, td_ek: 20 },
 					{ name: "Inferno gun", cost: 0 },
 					{ name: "Vulcan mega-bolter", cost: 0 },
 					{ name: "Turbo-laser destructor", cost: 0 },
@@ -2523,7 +2524,7 @@ export const detachmentData: DETACHMENT[] = [
 				location: "Shoulder 2",
 				options: [
 					{ name: "Apocalypse missile array", cost: 0 },
-					{ name: "Melta cannon", cost: 0 },
+					{ name: "Melta cannon", cost: 0, td_ek: 20 },
 					{ name: "Inferno gun", cost: 0 },
 					{ name: "Vulcan mega-bolter", cost: 0 },
 					{ name: "Turbo-laser destructor", cost: 0 },
@@ -2583,7 +2584,7 @@ export const detachmentData: DETACHMENT[] = [
 			{
 				name: "Armiger Talon",
 				unit_ref: 4003,
-				options: [{ number: 1, cost: 180, size: 3, break_strength: 2 }],
+				options: [{ number: 1, cost: 180, td_ek: 30, size: 3, break_strength: 2 }],
 			},
 			{
 				name: "Moriax Talon",

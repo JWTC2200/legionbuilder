@@ -74,14 +74,18 @@ const Upgrades = ({ slot_id }: properties) => {
 				<option value="0" className="text-black">
 					{upgrade.name}
 				</option>
-				{upgrade.options.map((option, index2) => (
-					<option
-						key={upgradeSlot.slot_id + "menuSelect" + index + "option" + index2}
-						value={option.number}
-						className="text-black">
-						{`${upgrade.name} ${option.number}: ${option.cost}pts`}{" "}
-					</option>
-				))}
+				{upgrade.options.map((option, index2) => {
+					const cost =
+						list.gamemode === "titandeath" && option.td_ek ? option.cost + option.td_ek : option.cost
+					return (
+						<option
+							key={upgradeSlot.slot_id + "menuSelect" + index + "option" + index2}
+							value={option.number}
+							className="text-black">
+							{`${upgrade.name} ${option.number}: ${cost}pts`}{" "}
+						</option>
+					)
+				})}
 			</select>
 		)
 	})

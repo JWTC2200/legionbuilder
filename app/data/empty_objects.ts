@@ -3,6 +3,7 @@ import { List, ListFormation, ListDetachment, ListUpgrades, ListLoadouts } from 
 import { nanoid } from "nanoid"
 
 export const emptyList: List = {
+	gamemode: "standard",
 	points: 3000,
 	name: "New List",
 	id: nanoid(),

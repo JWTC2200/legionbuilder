@@ -1,6 +1,7 @@
 import { FACTION, ALLEGIANCE, SUBFACTION_TYPE, SLOT_TYPE, DETACHMENT_TYPE } from "./types"
 
 export interface List {
+	gamemode?: "standard" | "titandeath"
 	points: number
 	name: string
 	id: string
@@ -68,6 +69,7 @@ export interface ListUpgrade {
 	unit_ref: number
 	number: number
 	cost: number
+	td_ek?: number //titandeath engine killer cost
 	size: number
 	text?: string
 	break_strength?: number

@@ -23,11 +23,14 @@ const DetachmentSelector = ({ detachmentSlot }: properties) => {
 
 	const allegianceFiltered = filterByAllegiance(subfactionFiltered, list.allegiance, detachment)
 
-	const selectorOptions = allegianceFiltered.map((option, index) => (
-		<option key={detachmentSlot.id + "option" + index} value={option.id}>
-			{option.base_cost}pts: {option.name}
-		</option>
-	))
+	const selectorOptions = allegianceFiltered.map((option, index) => {
+		const cost = list.gamemode === "titandeath" && option.td_ek ? option.base_cost + option.td_ek : option.base_cost
+		return (
+			<option key={detachmentSlot.id + "option" + index} value={option.id}>
+				{cost}pts: {option.name}
+			</option>
+		)
+	})
 
 	const selectDetachment = (e: number) => {
 		if (!e) {

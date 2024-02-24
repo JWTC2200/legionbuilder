@@ -10,8 +10,12 @@ import ListButtons from "./components/ListButtons"
 import ListInfo from "./components/ListInfo"
 import DataslateSideWidget from "./components/DataslateSideWidget"
 import BottomWidget from "./components/BottomWidget"
+import ListGamemode from "./components/ListGamemode"
+
+import { listState } from "../state"
 
 const page = () => {
+	const { list } = listState()
 	return (
 		<div className="w-full flex flex-col pb-24">
 			<BreadCrumbs>
@@ -21,6 +25,7 @@ const page = () => {
 			<div className="flex flex-col gap-2 w-full max-w-screen-2xl items-center bg-secondary-900 text-primary-50 sm:px-4 lg:rounded-xl">
 				<ListButtons />
 				<ListWarnings />
+				<ListGamemode />
 				<ListName />
 				<ListHeader />
 				<ListInfo />
@@ -30,6 +35,8 @@ const page = () => {
 			<SideWidget />
 			<DataslateSideWidget />
 			<BottomWidget />
+
+			<pre>{JSON.stringify(list, null, 2)}</pre>
 		</div>
 	)
 }

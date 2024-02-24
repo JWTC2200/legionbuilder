@@ -43,12 +43,18 @@ const Loadouts = ({ slot_id }: properties) => {
 					name={loadout.location}
 					id={loadout.location}
 					className="w-full text-center text-sm font-graduate p-1 rounded-full border border-primary-950 hover:text-tertiary-700 active:text-tertiary-700 overflow-auto text-black">
-					{loadout.options.map((option, index2) => (
-						<option
-							key={loadoutSlot.id + "menuSelect" + index + "option" + index2}
-							className="text-black"
-							value={option.name}>{`${option.name} ${option.cost ? option.cost + "pts" : ""}`}</option>
-					))}
+					{loadout.options.map((option, index2) => {
+						const optionCost =
+							list.gamemode === "titandeath"
+								? option.cost + (option.td_ek ? option.td_ek : 0)
+								: option.cost
+						return (
+							<option
+								key={loadoutSlot.id + "menuSelect" + index + "option" + index2}
+								className="text-black"
+								value={option.name}>{`${option.name} ${optionCost ? optionCost + "pts" : ""}`}</option>
+						)
+					})}
 				</select>
 			</div>
 		)

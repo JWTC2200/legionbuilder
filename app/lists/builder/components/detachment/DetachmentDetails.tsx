@@ -36,12 +36,15 @@ const DetachmentDetails = ({ detachmentSlot }: properties) => {
 			{upgrades?.upgrades.length ? (
 				<div className="flex flex-col gap-1 text-primary-50 font-graduate mt-1">
 					{upgrades.upgrades.map((upgrade, index) => {
-						const { number, name, cost } = upgrade
+						const { number, name, cost, td_ek } = upgrade
+
+						const upgradeCost = list.gamemode === "titandeath" && td_ek ? cost + td_ek : cost
+
 						return (
 							<div
 								key={detachmentSlot.id + "updetail" + index}
 								className="flex bg-secondary-700 clip-path-octagon-md py-1 px-2 justify-between w-full">
-								<div>{`${number} ${name}: ${cost}pts`}</div>
+								<div>{`${number} ${name}: ${upgradeCost}pts`}</div>
 								<button
 									onClick={() => handleRemoveUpgrade(name)}
 									className="self-end px-2 clip-path-halfagon-md bg-red-800 hover:bg-red-700 active:bg-red-600">

@@ -59,7 +59,7 @@ export const updateAllSlotInfo = (
 	const detachmentUpdate =
 		detachmentData === "clear"
 			? resetDetachment(currentDetachment)
-			: newDetachmentObject(currentDetachment, detachmentData)
+			: newDetachmentObject(currentDetachment, detachmentData, list)
 
 	const upgradeUpdate =
 		detachmentData === "clear"
@@ -131,7 +131,9 @@ const resetLoadout = (loadouts: ListLoadouts): ListLoadouts => {
 	return { ...emptyLoadouts, slot_id: loadouts.slot_id, formation_id: loadouts.formation_id }
 }
 
-const newDetachmentObject = (currentDetachment: ListDetachment, data: DETACHMENT): ListDetachment => {
+const newDetachmentObject = (currentDetachment: ListDetachment, data: DETACHMENT, list: List): ListDetachment => {
+	const cost = list.gamemode === "titandeath" && data.td_ek ? data.base_cost + data.td_ek : data.base_cost
+
 	return {
 		...currentDetachment,
 		id: data.id,
@@ -139,7 +141,7 @@ const newDetachmentObject = (currentDetachment: ListDetachment, data: DETACHMENT
 		faction: data.faction,
 		allegiance: data.allegiance,
 		subfaction: data.subfaction,
-		cost: data.base_cost,
+		cost: cost,
 		size: data.base_size,
 		max_size: data.max_size,
 		break_strength: data.break_strength,
@@ -158,12 +160,14 @@ export const createLoadout = (
 		number: loadoutSlot.loadouts.length ? 1 : currentDetachmentSize(list, loadoutSlot.slot_id),
 		weapons: formArray.map((entry) => {
 			const locationOptions = detachmentInfo.loadout_options.find((option) => option.location === entry.location)!
-			const cost = locationOptions.options.find((weapon) => weapon.name === entry.weapon)!.cost
+			const weapon = locationOptions.options.find((weapon) => weapon.name === entry.weapon)!
+			const cost = weapon.cost
+			const tdcost = weapon.td_ek ? cost + weapon.td_ek : cost
 
 			return {
 				location: entry.location,
 				weapon: entry.weapon as string,
-				cost: cost,
+				cost: list.gamemode === "titandeath" ? tdcost : cost,
 			}
 		}),
 	}
@@ -243,7 +247,7 @@ export const upgradeSizeCount = (list: List, slot_id: string): number => {
 export const upgradeTotalPoints = (list: List, slot_id: string): number => {
 	return list.upgrades
 		.filter((upgrade) => upgrade.slot_id === slot_id)
-		.map((upgrades) => upgrades.upgrades.reduce((acc, sum) => acc + sum.cost, 0))
+		.map((upgrades) => upgrades.upgrades.reduce((acc, sum) => acc + sum.cost + (sum.td_ek ? sum.td_ek : 0), 0))
 		.reduce((acc, sum) => acc + sum, 0)
 }
 

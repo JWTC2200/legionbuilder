@@ -17,6 +17,9 @@ interface FormationSelector {
 const FormationSelector = ({ formation }: FormationSelector) => {
 	const { list, setList } = listState()
 
+	const filteredFormations =
+		list.gamemode === "titandeath" ? formationData.filter((formation) => formation.id >= 4000) : formationData
+
 	const selectFormation = (id: number) => {
 		if (!id) {
 			setList(resetFormation(list, formation))
@@ -54,7 +57,7 @@ const FormationSelector = ({ formation }: FormationSelector) => {
 				<option value="0" className="text-primary-50">
 					SELECT FORMATION
 				</option>
-				{formationData.map((format) => (
+				{filteredFormations.map((format) => (
 					<option key={formation.id + format.name} value={format.id} className="text-primary-50">
 						{format.name}
 					</option>

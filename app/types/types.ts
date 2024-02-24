@@ -161,6 +161,7 @@ export interface DETACHMENT {
 	unique: boolean
 	detachment_type: DETACHMENT_TYPE
 	base_cost: number
+	td_ek?: number //titandeath enginekiller
 	base_size: number
 	max_size: number
 	break_strength?: number
@@ -185,6 +186,7 @@ export interface DETACHMENT_UPGRADE {
 	options: {
 		number: number
 		cost: number
+		td_ek?: number //titandeath engine killer cost
 		size: number
 		text?: string
 		break_strength?: number
@@ -199,6 +201,7 @@ export interface DETACHMENT_LOADOUT {
 export interface DETACHMENT_LOADOUT_WEAPON {
 	name: string
 	cost: number
+	td_ek?: number //titandeath engine killer cost
 }
 
 export interface DETACHMENT_UPGRADE_DATASHEET {
