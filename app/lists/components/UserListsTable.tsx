@@ -28,7 +28,12 @@ const UserListsTable = () => {
 								href="/lists/builder"
 								onClick={() => setList(list)}
 								className="hover:text-tertiary-700 active:text-tertiary-700">
-								<h3 className="">{list.name}</h3>
+								<h3 className="">
+									{list.name}
+									<span className="pl-2 capitalize">
+										({list.gamemode ? list.gamemode : "standard"})
+									</span>
+								</h3>
 							</Link>
 							<div className="flex items-center gap-2 text-xl">
 								<DuplicateList list={list} />

@@ -43,10 +43,14 @@ const Detachment = ({ list, detachment }: properties) => {
 				<div className="pl-2 flex flex-col py-1">
 					{upgrades &&
 						upgrades.map((upgrade, index) => {
+							const upgradeCost =
+								list.gamemode === "titandeath" && upgrade.td_ek
+									? upgrade.td_ek + upgrade.cost
+									: upgrade.cost
 							return (
 								<div
 									key={`${id}up${index}`}
-									className="">{`${upgrade.number} ${upgrade.name} ${upgrade.cost}pts`}</div>
+									className="">{`${upgrade.number} ${upgrade.name} ${upgradeCost}pts`}</div>
 							)
 						})}
 					{loadouts &&

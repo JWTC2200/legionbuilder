@@ -9,7 +9,8 @@ const CreateListBtn = () => {
 	const router = useRouter()
 
 	const handleCreateNew = () => {
-		setList({ ...emptyList, gamemode: gamemode })
+		const points = gamemode === "titandeath" ? 6000 : 3000
+		setList({ ...emptyList, gamemode: gamemode, points: points })
 		router.push("/lists/builder")
 	}
 

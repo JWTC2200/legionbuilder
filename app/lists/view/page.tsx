@@ -37,6 +37,7 @@ const page = () => {
 					<span className="font-subrayada text-xl">{list.name}</span>
 					{` ${totalListPoints(list).totalPoints} / ${list.points}pts`}
 				</h2>
+				<h3 className="font-graduate capitalize">{`Gamemode: ${list.gamemode ? list.gamemode : "Standard"}`}</h3>
 				<h3 className="font-graduate">
 					{list.allegiance} {list.faction}
 				</h3>

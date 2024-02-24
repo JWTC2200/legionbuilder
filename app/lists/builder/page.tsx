@@ -35,8 +35,6 @@ const page = () => {
 			<SideWidget />
 			<DataslateSideWidget />
 			<BottomWidget />
-
-			<pre>{JSON.stringify(list, null, 2)}</pre>
 		</div>
 	)
 }
