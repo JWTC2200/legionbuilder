@@ -4,6 +4,7 @@ interface update {
 }
 
 export const updateData: update[] = [
+	{ date: "24/02/24", updates: ["Added missing Fire Raptor turret weapon options"] },
 	{
 		date: "20/02/24",
 		updates: [

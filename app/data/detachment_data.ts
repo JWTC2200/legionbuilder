@@ -853,7 +853,16 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
-		loadout_options: [],
+		loadout_options: [
+			{
+				location: "Turrets",
+				options: [
+					{ name: "Heavy bolters", cost: 0 },
+					{ name: "Lascannons", cost: 0 },
+					{ name: "Autocannons", cost: 0 },
+				],
+			},
+		],
 		datasheet_info: [
 			{
 				text: "A Legion Storm Eagle Squadron can purchase the following upgrades:",
