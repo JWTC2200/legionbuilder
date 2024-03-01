@@ -11,7 +11,7 @@ interface UserListsState {
 interface ListState {
 	list: List
 	setList: (update: List) => void
-	clearList: () => void
+	clearList: (update: List) => void
 }
 
 interface ListSidebar {
@@ -43,7 +43,7 @@ export const userListsState = create<UserListsState>((set) => ({
 export const listState = create<ListState>((set) => ({
 	list: emptyList,
 	setList: (update) => set(() => ({ list: update })),
-	clearList: () => set({ list: emptyList }),
+	clearList: (update) => set({ list: { ...emptyList, gamemode: update.gamemode, points: update.points } }),
 }))
 
 export const listSidebar = create<ListSidebar>((set) => ({

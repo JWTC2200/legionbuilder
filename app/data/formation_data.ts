@@ -133,9 +133,8 @@ export const formationData: FORMATION[] = [
 		subfaction: null,
 		allegiance: null,
 		formation_slots: [
-			{ slot_type: SLOT_TYPE.compulsory, slot_id: [2000, 9005, 2009, 2009] },
-			{ slot_type: SLOT_TYPE.optional, slot_id: [2002, 2001, 2008, 2003, 2003] },
-			{ slot_type: SLOT_TYPE.choice, slot_id: [2005, 2007, 2008] },
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [2000, 2007, 2007, 2007] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [2002, 2002, 2009, 2009] },
 		],
 	},
 	{
@@ -145,9 +144,8 @@ export const formationData: FORMATION[] = [
 		subfaction: null,
 		allegiance: null,
 		formation_slots: [
-			{ slot_type: SLOT_TYPE.compulsory, slot_id: [2000, 9005, 2009, 2009] },
-			{ slot_type: SLOT_TYPE.optional, slot_id: [2002, 2001, 2008, 2003, 2003] },
-			{ slot_type: SLOT_TYPE.choice, slot_id: [2005, 2007, 2008] },
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [2000, 2001, 2001, 2002] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [2003, 2003, 2002, 2008, 9009] },
 		],
 	},
 	{
@@ -157,9 +155,8 @@ export const formationData: FORMATION[] = [
 		subfaction: null,
 		allegiance: null,
 		formation_slots: [
-			{ slot_type: SLOT_TYPE.compulsory, slot_id: [2000, 9005, 2009, 2009] },
-			{ slot_type: SLOT_TYPE.optional, slot_id: [2002, 2001, 2008, 2003, 2003] },
-			{ slot_type: SLOT_TYPE.choice, slot_id: [2005, 2007, 2008] },
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [9004, 2006, 2006, 2006] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [2006, 2006] },
 		],
 	},
 	// ********************************************************************

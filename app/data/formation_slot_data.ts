@@ -79,6 +79,10 @@ export const formationSlotData: FORMATION_SLOT[] = [
 		restricted: false,
 		options: [],
 	},
+
+	// ********************************************************************
+	// ************************* SOLAR AUXILIA SLOTS **********************
+	// ********************************************************************
 	{
 		id: 2000,
 		type: DETACHMENT_TYPE.hq,
@@ -157,6 +161,9 @@ export const formationSlotData: FORMATION_SLOT[] = [
 		options: [],
 	},
 
+	// ********************************************************************
+	// ************************* KNIGHTS/TITAN SLOTS **********************
+	// ********************************************************************
 	{
 		id: 4000,
 		type: DETACHMENT_TYPE.knight,
@@ -314,5 +321,13 @@ export const formationSlotData: FORMATION_SLOT[] = [
 		restricted: true,
 		options: [9005],
 		description: "Dedicated transport Dreadnought Drop Pods",
+	},
+	{
+		id: 9009,
+		type: DETACHMENT_TYPE.dedicated,
+		faction: FACTION.solar,
+		restricted: true,
+		options: [9006],
+		description: "Dedicated transport Dracosans",
 	},
 ]

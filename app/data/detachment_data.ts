@@ -1143,7 +1143,7 @@ export const detachmentData: DETACHMENT[] = [
 				location: "pintle",
 				options: [
 					{ name: "none", cost: 0 },
-					{ name: "multi-melta", cost: 2 },
+					{ name: "multi-melta", cost: 5 },
 				],
 			},
 		],
@@ -1153,7 +1153,7 @@ export const detachmentData: DETACHMENT[] = [
 			},
 			{
 				text: "Any Spartan may be equipped with one of the following:",
-				options: [{ text: "Pintle Mounted multi-melta", cost: 2 }],
+				options: [{ text: "Pintle Mounted multi-melta", cost: 5 }],
 			},
 		],
 	},
@@ -2187,6 +2187,330 @@ export const detachmentData: DETACHMENT[] = [
 		datasheet_info: [
 			{
 				text: "Additional Arvus Lighter +12pts per model",
+			},
+		],
+	},
+	{
+		id: 2016,
+		name: "Auxilia Dracosan Detachment",
+		faction: FACTION.solar,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: DETACHMENT_TYPE.transport,
+		base_cost: 37,
+		base_size: 1,
+		max_size: 8,
+		main_unit: [2019],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: ["Hull Mounted twin lascannon"],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Dracosan",
+				unit_ref: 2019,
+				options: [
+					{ number: 1, cost: 37, size: 1 },
+					{ number: 2, cost: 74, size: 2 },
+					{ number: 3, cost: 111, size: 3 },
+					{ number: 4, cost: 148, size: 4 },
+					{ number: 5, cost: 185, size: 5 },
+					{ number: 6, cost: 222, size: 6 },
+					{ number: 7, cost: 259, size: 7 },
+				],
+			},
+		],
+		loadout_options: [
+			{
+				location: "Hull",
+				options: [
+					{ name: "Twin lascannons", cost: 0 },
+					{ name: "Demolisher Cannon", cost: 5 },
+				],
+			},
+		],
+		datasheet_info: [
+			{
+				text: "Any Dracosan may exchange its Hull Mounted twin lascannon for a Hull Mounted demolisher cannon for +5pts per model. Any model that does replaces its Transport (4) special rule with the Transport (2) special rule",
+			},
+		],
+	},
+	{
+		id: 2017,
+		name: "Auxilia Cyclops Detachment",
+		faction: FACTION.solar,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: DETACHMENT_TYPE.support,
+		base_cost: 40,
+		base_size: 2,
+		max_size: 6,
+		main_unit: [2020],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: [
+					"Demolition charge or an incineration charge. All models in the Detachment must be equipped with the same weapons",
+				],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Cyclops",
+				unit_ref: 2020,
+				options: [
+					{ number: 2, cost: 40, size: 2 },
+					{ number: 4, cost: 80, size: 4 },
+				],
+			},
+		],
+		loadout_options: [
+			{
+				location: "Charge",
+				options: [
+					{ name: "Demolition charge", cost: 0 },
+					{ name: "Incineration charge", cost: 0 },
+				],
+			},
+		],
+		datasheet_info: [
+			{
+				text: "An Auxilia Cyclops Battery can purchase one of the following upgrades:",
+				options: [
+					{ text: "Increase the Detachment size by 2", cost: 40 },
+					{ text: "Increase the Detachment size by 5", cost: 80 },
+				],
+			},
+		],
+	},
+	{
+		id: 2018,
+		name: "Auxilia Malcador Infernus Squadron",
+		faction: FACTION.solar,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: DETACHMENT_TYPE.battle,
+		base_cost: 165,
+		base_size: 1,
+		max_size: 3,
+		main_unit: [2021],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: ["Malcador inferno gun", "Malcador autocannon sponsons or Malcador lascannon sponsons"],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Malcador",
+				unit_ref: 2021,
+				options: [
+					{ number: 1, cost: 70, size: 1 },
+					{ number: 2, cost: 140, size: 2 },
+				],
+			},
+		],
+		loadout_options: [
+			{
+				location: "Sponsons",
+				options: [
+					{ name: "Lascannons", cost: 0 },
+					{ name: "Autocannons", cost: 0 },
+				],
+			},
+		],
+		datasheet_info: [
+			{
+				text: "A Malcador Infernus Squadron can purchase one of the following upgrades.",
+				options: [
+					{ text: "Increase the Detachment size by 1", cost: 70 },
+					{ text: "Increase the Detachment size by 2", cost: 140 },
+				],
+			},
+		],
+	},
+	{
+		id: 2019,
+		name: "Auxilia Valdor Infernus Squadron",
+		faction: FACTION.solar,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: DETACHMENT_TYPE.battle,
+		base_cost: 165,
+		base_size: 1,
+		max_size: 3,
+		main_unit: [2022],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: ["Neutron beam laser", "Malcador autocannon sponsons or Malcador lascannon sponsons"],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Valdor",
+				unit_ref: 2022,
+				options: [
+					{ number: 1, cost: 70, size: 1 },
+					{ number: 2, cost: 140, size: 2 },
+				],
+			},
+		],
+		loadout_options: [
+			{
+				location: "Sponsons",
+				options: [
+					{ name: "Lascannons", cost: 0 },
+					{ name: "Autocannons", cost: 0 },
+				],
+			},
+		],
+		datasheet_info: [
+			{
+				text: "An Auxilia Valdor Squadron can purchase one of the following upgrades.",
+				options: [
+					{ text: "Increase the Detachment size by 1", cost: 70 },
+					{ text: "Increase the Detachment size by 2", cost: 140 },
+				],
+			},
+		],
+	},
+	{
+		id: 2020,
+		name: "Auxilia Stormhammer Squadron",
+		faction: FACTION.solar,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: DETACHMENT_TYPE.heavy,
+		base_cost: 165,
+		base_size: 1,
+		max_size: 3,
+		main_unit: [2023],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: [
+					"Stormhammer cannon with Co-axial multi-laser",
+					"Dual battlecannon",
+					"Hull Mounted lascannon",
+					"Stormhammer multi-laser sponsons",
+				],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Stormhammer",
+				unit_ref: 2023,
+				options: [
+					{ number: 1, cost: 100, size: 1 },
+					{ number: 2, cost: 200, size: 2 },
+				],
+			},
+		],
+		loadout_options: [
+			{
+				location: "Sponsons",
+				options: [
+					{ name: "Multi-lasers", cost: 0 },
+					{ name: "Lascannons", cost: 4 },
+				],
+			},
+		],
+		datasheet_info: [
+			{
+				text: "An Auxilia Stormhammer Squadron can purchase one of the following upgrades.",
+				options: [
+					{ text: "Increase the Detachment size by 1", cost: 100 },
+					{ text: "Increase the Detachment size by 2", cost: 200 },
+				],
+			},
+			{
+				text: "Any Stormhammer may exchange its Stormhammer multi-laser sponsons for Stormhammer lascannon sponsons for +4pts per model",
+			},
+		],
+	},
+	{
+		id: 2021,
+		name: "Auxilia Medusa Battery",
+		faction: FACTION.solar,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: DETACHMENT_TYPE.artillery,
+		base_cost: 130,
+		base_size: 4,
+		max_size: 12,
+		main_unit: [2024],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: ["Medusa siege gun"],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Medusa",
+				unit_ref: 2024,
+				options: [
+					{ number: 4, cost: 130, size: 4 },
+					{ number: 8, cost: 260, size: 8 },
+				],
+			},
+		],
+		loadout_options: [],
+		datasheet_info: [
+			{
+				text: "An Auxilia Medusa Battery can purchase one of the following upgrades.",
+				options: [
+					{ text: "Increase the Detachment size by 4", cost: 100 },
+					{ text: "Increase the Detachment size by 8", cost: 200 },
+				],
+			},
+		],
+	},
+	{
+		id: 2022,
+		name: "Auxilia Basilisk Battery",
+		faction: FACTION.solar,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: DETACHMENT_TYPE.artillery,
+		base_cost: 140,
+		base_size: 4,
+		max_size: 12,
+		main_unit: [2025],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: ["Earthshaker cannon"],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Basilisk",
+				unit_ref: 2025,
+				options: [
+					{ number: 4, cost: 130, size: 4 },
+					{ number: 8, cost: 260, size: 8 },
+				],
+			},
+		],
+		loadout_options: [],
+		datasheet_info: [
+			{
+				text: "An Auxilia Basilisk Battery can purchase one of the following upgrades.",
+				options: [
+					{ text: "Increase the Detachment size by 4", cost: 140 },
+					{ text: "Increase the Detachment size by 8", cost: 280 },
+				],
 			},
 		],
 	},
@@ -3404,6 +3728,76 @@ export const detachmentData: DETACHMENT[] = [
 		datasheet_info: [
 			{
 				text: "A Legion Drop Pod Detachment can purchase one Palisade Drop Pod for each Drop Pod in this Detachment for +32pts per model.",
+			},
+		],
+	},
+	{
+		id: 9006,
+		name: "Auxilia Dracosan Detachment",
+		faction: FACTION.solar,
+		subfaction: null,
+		allegiance: null,
+		unique: true,
+		detachment_type: DETACHMENT_TYPE.dedicated,
+		base_cost: 37,
+		base_size: 1,
+		max_size: 30,
+		main_unit: [2019],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: ["Hull Mounted twin lascannon"],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Dracosan",
+				unit_ref: 2019,
+				options: [
+					{ number: 1, cost: 37, size: 1 },
+					{ number: 2, cost: 74, size: 2 },
+					{ number: 3, cost: 111, size: 3 },
+					{ number: 4, cost: 148, size: 4 },
+					{ number: 5, cost: 185, size: 5 },
+					{ number: 6, cost: 222, size: 6 },
+					{ number: 7, cost: 259, size: 7 },
+					{ number: 8, cost: 296, size: 8 },
+					{ number: 9, cost: 333, size: 9 },
+					{ number: 10, cost: 370, size: 10 },
+					{ number: 11, cost: 407, size: 11 },
+					{ number: 12, cost: 444, size: 12 },
+					{ number: 13, cost: 481, size: 13 },
+					{ number: 14, cost: 518, size: 14 },
+					{ number: 15, cost: 555, size: 15 },
+					{ number: 16, cost: 592, size: 16 },
+					{ number: 17, cost: 629, size: 17 },
+					{ number: 18, cost: 666, size: 18 },
+					{ number: 19, cost: 703, size: 19 },
+					{ number: 20, cost: 704, size: 20 },
+					{ number: 21, cost: 777, size: 21 },
+					{ number: 22, cost: 814, size: 22 },
+					{ number: 23, cost: 851, size: 23 },
+					{ number: 24, cost: 888, size: 24 },
+					{ number: 25, cost: 925, size: 25 },
+					{ number: 26, cost: 962, size: 26 },
+					{ number: 27, cost: 999, size: 27 },
+					{ number: 28, cost: 1036, size: 28 },
+					{ number: 29, cost: 1073, size: 29 },
+				],
+			},
+		],
+		loadout_options: [
+			{
+				location: "Hull",
+				options: [
+					{ name: "Twin lascannons", cost: 0 },
+					{ name: "Demolisher Cannon", cost: 5 },
+				],
+			},
+		],
+		datasheet_info: [
+			{
+				text: "Any Dracosan may exchange its Hull Mounted twin lascannon for a Hull Mounted demolisher cannon for +5pts per model. Any model that does replaces its Transport (4) special rule with the Transport (2) special rule",
 			},
 		],
 	},

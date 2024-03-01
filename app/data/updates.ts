@@ -6,7 +6,10 @@ interface update {
 export const updateData: update[] = [
 	{
 		date: "02/03/24",
-		updates: ["Resizing of the formation boxes in the builder titan formations look nicer on desktop."],
+		updates: [
+			"Titandeath mode selector when creating a list from the list page.",
+			"Resizing of the formation boxes in the builder. Should look a bit nicer on desktop",
+		],
 	},
 	{ date: "24/02/24", updates: ["Added missing Fire Raptor turret weapon options"] },
 	{

@@ -13,16 +13,20 @@ export default function Home() {
 				Create list
 			</Link>
 
-			<div className="m-4 flex flex-col gap-2">
+			<div className="m-4 flex flex-col gap-2 text-lg sm:text-xl">
+				<p>Units and formations from The Great Slaughter have been added.</p>
 				<p>
-					Apologies for any inconvenience, I've made quite a few changes to the site and as a result any
-					previously saved lists won't work anymore.
+					There is also a selector to create lists for Titandeath. You can find it at the top of the lists
+					page{" "}
+					<Link
+						href={`https://legionbuilder.app/lists`}
+						className="text-primary-500 hover:text-primary-300 active:text-tertiary-400 underline">
+						here
+					</Link>
+					.
 				</p>
-				<p>
-					Also to save lists you'll need an account from now on. The builder and view pages still work as
-					normal.
-				</p>
-				<p>Any issues please feel free to let me know, preferably through Discord. Thanks! </p>
+				<p>As usual, if there are any errors please contact me!</p>
+				<p>Enjoy!</p>
 			</div>
 
 			<FrontpageUpdates />

@@ -31,7 +31,10 @@ const DetachmentDataslate = ({ detachment, no_related }: properties) => {
 				</td>
 				<td className="text-center">{unit.movement}</td>
 				<td className="text-center">{unit.save}+</td>
-				<td className="text-center">+{unit.caf}</td>
+				<td className="text-center">
+					{unit.caf >= 0 ? "+" : ""}
+					{unit.caf}
+				</td>
 				<td className="text-center">{unit.morale ? unit.morale + "+" : "-"}</td>
 				<td className="text-center pr-4">{unit.wounds}</td>
 			</tr>

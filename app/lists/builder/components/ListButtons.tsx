@@ -9,7 +9,7 @@ import { useSearchParams } from "next/navigation"
 const ListButtons = () => {
 	const searchParams = useSearchParams()
 	const listParams = searchParams.get("listId")
-	const { clearList } = listState()
+	const { list, clearList } = listState()
 	const userUid = useAuthState((state) => state.uid)
 	const [clearCheck, setClearCheck] = useState(false)
 
@@ -40,7 +40,7 @@ const ListButtons = () => {
 						<button
 							onClick={() => {
 								setClearCheck(false)
-								clearList()
+								clearList(list)
 								toast.warning("List cleared")
 							}}
 							className={clearBtnStyle + "bg-red-600 hover:bg-red-700 active:bg-red-500"}>

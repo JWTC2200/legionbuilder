@@ -10,7 +10,9 @@ const testWeapon: WEAPON_PROFILES = { range: "1", dice: 1, to_hit: 4, ap: 0, tra
 const testTarget: UNIT_DATASHEET = {
 	id: 1,
 	faction: FACTION.astartes,
-	allegiance: ALLEGIANCE.neutral,
+	subfaction: null,
+	allegiance: ALLEGIANCE.loyalist,
+	unique: false,
 	unit_type: { type: UNIT_TYPE.infantry, value: 1 },
 	name: "Tester",
 	movement: "10",

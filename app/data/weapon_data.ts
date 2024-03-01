@@ -1506,6 +1506,162 @@ export const weapons: WEAPON_DATASHEET[] = [
 			},
 		],
 	},
+	{
+		id: 2048,
+		name: "Hull Mounted twin lascannon",
+		profiles: [
+			{
+				range: '22"',
+				dice: 1,
+				to_hit: 4,
+				ap: 1,
+				traits: [{ name: "Accurate" }, { name: "Arc", value: "Front" }, { name: "Anti-tank" }],
+			},
+		],
+	},
+	{
+		id: 2049,
+		name: "Demolition Charge",
+		profiles: [
+			{
+				range: "-",
+				dice: 1,
+				to_hit: 3,
+				ap: 1,
+				traits: [{ name: "Blast", value: '3"' }, { name: "Demolisher" }],
+			},
+		],
+	},
+	{
+		id: 2050,
+		name: "Incineration Charge",
+		profiles: [
+			{
+				range: "-",
+				dice: 1,
+				to_hit: 3,
+				ap: 1,
+				traits: [{ name: "Blast", value: '3"' }, { name: "Ignores Cover" }, { name: "Light AT" }],
+			},
+		],
+	},
+	{
+		id: 2051,
+		name: "Malcador inferno gun",
+		profiles: [
+			{
+				range: "T",
+				dice: null,
+				to_hit: 4,
+				ap: 1,
+				traits: [{ name: "Arc", value: "Front" }, { name: "Firestorm" }, { name: "Light-AT" }],
+			},
+		],
+	},
+	{
+		id: 2052,
+		name: "Neutron beam laser",
+		profiles: [
+			{
+				range: '22"',
+				dice: 1,
+				to_hit: 4,
+				ap: 3,
+				traits: [{ name: "Arc", value: "Front" }, { name: "Shock Pulse" }],
+			},
+		],
+	},
+	{
+		id: 2053,
+		name: "Stormhmmer cannon",
+		profiles: [
+			{
+				range: '28"',
+				dice: 2,
+				to_hit: 4,
+				ap: 2,
+				traits: [{ name: "Arc", value: "Front" }, { name: "Shred" }],
+			},
+		],
+	},
+	{
+		id: 2054,
+		name: "Dual battlecannon",
+		profiles: [
+			{
+				range: '25"',
+				dice: 2,
+				to_hit: 4,
+				ap: 1,
+				traits: [{ name: "Arc", value: "Front" }],
+			},
+		],
+	},
+	{
+		id: 2055,
+		name: "Co-axial multi-laser",
+		profiles: [
+			{
+				range: '14"',
+				dice: 2,
+				to_hit: 4,
+				ap: 0,
+				traits: [{ name: "Arc", value: "Front" }, { name: "Co-axial" }, { name: "Light AT" }],
+			},
+		],
+	},
+	{
+		id: 2056,
+		name: "Stormhammer multi-laser sponsons",
+		profiles: [
+			{
+				range: '24"',
+				dice: 5,
+				to_hit: 4,
+				ap: 0,
+				traits: [{ name: "Light AT" }, { name: "Point Defence" }],
+			},
+		],
+	},
+	{
+		id: 2057,
+		name: "Stormhammer lascannon sponsons",
+		profiles: [
+			{
+				range: '22"',
+				dice: 4,
+				to_hit: 4,
+				ap: 1,
+				traits: [{ name: "Anti-tank" }],
+			},
+		],
+	},
+	{
+		id: 2058,
+		name: "Medusa siege gun",
+		profiles: [
+			{
+				range: '12"',
+				dice: 1,
+				to_hit: 4,
+				ap: 3,
+				traits: [{ name: "Arc", value: "Front" }, { name: "Demolisher" }, { name: "Barrage" }],
+			},
+		],
+	},
+	{
+		id: 2059,
+		name: "Earthshaker cannon",
+		profiles: [
+			{
+				range: '8"-90"',
+				dice: 1,
+				to_hit: 4,
+				ap: 2,
+				traits: [{ name: "Arc", value: "Front" }, { name: "Barrage" }],
+			},
+		],
+	},
 
 	// ********************************************************************
 	// ***********************KNIGHT & TITAN WEAPONS **********************
