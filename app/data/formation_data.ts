@@ -64,6 +64,28 @@ export const formationData: FORMATION[] = [
 			{ slot_type: SLOT_TYPE.optional, slot_id: [1001, 1002, 1002, 1003, 1008, 1008, 9001, 9002] },
 		],
 	},
+	{
+		id: 1004,
+		name: "Legion Sky-hunter Phalanx",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		formation_slots: [
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [9006, 9006, 9006, 9006] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [2004, 2004, 2008, 1003] },
+		],
+	},
+	{
+		id: 1005,
+		name: "Legion Drop Pod Assault",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		formation_slots: [
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [1000, 1001, 1001, 1002] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [1001, 1001, 1002, 1002, 1008, 9007, 9008] },
+		],
+	},
 	// ********************************************************************
 	// ******************* SOLAR AUXILIA FORMATIONS **********************
 	// ********************************************************************
@@ -95,6 +117,42 @@ export const formationData: FORMATION[] = [
 	{
 		id: 2002,
 		name: "Solar Auxilia Pioneer Company",
+		faction: FACTION.solar,
+		subfaction: null,
+		allegiance: null,
+		formation_slots: [
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [2000, 9005, 2009, 2009] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [2002, 2001, 2008, 2003, 2003] },
+			{ slot_type: SLOT_TYPE.choice, slot_id: [2005, 2007, 2008] },
+		],
+	},
+	{
+		id: 2003,
+		name: "Solar Auxilia Artillery Company",
+		faction: FACTION.solar,
+		subfaction: null,
+		allegiance: null,
+		formation_slots: [
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [2000, 9005, 2009, 2009] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [2002, 2001, 2008, 2003, 2003] },
+			{ slot_type: SLOT_TYPE.choice, slot_id: [2005, 2007, 2008] },
+		],
+	},
+	{
+		id: 2004,
+		name: "Solar Auxilia Mechanised Infantry Sub-cohort",
+		faction: FACTION.solar,
+		subfaction: null,
+		allegiance: null,
+		formation_slots: [
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [2000, 9005, 2009, 2009] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [2002, 2001, 2008, 2003, 2003] },
+			{ slot_type: SLOT_TYPE.choice, slot_id: [2005, 2007, 2008] },
+		],
+	},
+	{
+		id: 2005,
+		name: "Solar Auxilia Super-heavy Company",
 		faction: FACTION.solar,
 		subfaction: null,
 		allegiance: null,

@@ -108,19 +108,22 @@ const DetachmentDataslate = ({ detachment, no_related }: properties) => {
 				</div>
 			) : null}
 			{/* WEAPON STATS SECTION */}
-			<table className="w-full mt-4 sm:border-2 border-black">
-				<thead className="bg-primary-950 text-primary-50">
-					<tr>
-						<th className="text-start px-2">Weapon</th>
-						<th className="text-center">Range</th>
-						<th className="text-center">Dice</th>
-						<th className="text-center">To Hit</th>
-						<th className="text-center">AP</th>
-						<th className="text-start px-2">Traits</th>
-					</tr>
-				</thead>
-				<tbody className="text-secondary-900">{weaponRows}</tbody>
-			</table>
+			{detachment.dataslate_loadout.length ? (
+				<table className="w-full mt-4 sm:border-2 border-black">
+					<thead className="bg-primary-950 text-primary-50">
+						<tr>
+							<th className="text-start px-2">Weapon</th>
+							<th className="text-center">Range</th>
+							<th className="text-center">Dice</th>
+							<th className="text-center">To Hit</th>
+							<th className="text-center">AP</th>
+							<th className="text-start px-2">Traits</th>
+						</tr>
+					</thead>
+					<tbody className="text-secondary-900">{weaponRows}</tbody>
+				</table>
+			) : null}
+
 			{/* DATASHEET INFO */}
 			{detachment.datasheet_info.length ? (
 				<div className="mt-2 border-t-2 border-b-2 sm:border-2 border-black">

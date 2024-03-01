@@ -917,6 +917,431 @@ export const detachmentData: DETACHMENT[] = [
 			},
 		],
 	},
+	{
+		id: 1019,
+		name: "Legion Outrider Squadron",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: DETACHMENT_TYPE.vanguard,
+		base_cost: 30,
+		base_size: 2,
+		max_size: 6,
+		main_unit: [1019],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: ["Twin-linked bolters", "Twin plasma guns"],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Outriders",
+				unit_ref: 1019,
+				options: [
+					{ number: 2, cost: 30, size: 2 },
+					{ number: 4, cost: 60, size: 4 },
+				],
+			},
+		],
+		loadout_options: [],
+		datasheet_info: [
+			{
+				text: "A Legion Outrider Squadron can purchase one of the following upgrades:",
+				options: [
+					{ text: "Increase the Detachment size by 2", cost: 30 },
+					{ text: "Increase the Detachment size by 4", cost: 60 },
+				],
+			},
+		],
+	},
+	{
+		id: 1020,
+		name: "Legion Scimitar Jetbike Squadron",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: DETACHMENT_TYPE.vanguard,
+		base_cost: 35,
+		base_size: 3,
+		max_size: 9,
+		main_unit: [1020],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: ["Scimitar heavy bolter"],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Jetbike",
+				unit_ref: 1020,
+				options: [
+					{ number: 3, cost: 35, size: 3 },
+					{ number: 6, cost: 70, size: 6 },
+				],
+			},
+		],
+		loadout_options: [],
+		datasheet_info: [
+			{
+				text: "A Legion Scimitar Jetbike Squadron can purchase one of the following upgrades:",
+				options: [
+					{ text: "Increase the Detachment size by 3", cost: 35 },
+					{ text: "Increase the Detachment size by 6", cost: 70 },
+				],
+			},
+		],
+	},
+	{
+		id: 1021,
+		name: "Legion Land Speeder Squadron",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: DETACHMENT_TYPE.vanguard,
+		base_cost: 30,
+		base_size: 2,
+		max_size: 6,
+		main_unit: [1021],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: ["Plasma cannon", "Heavy bolter"],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Land Speeder",
+				unit_ref: 1021,
+				options: [
+					{ number: 2, cost: 30, size: 2 },
+					{ number: 4, cost: 60, size: 4 },
+				],
+			},
+		],
+		loadout_options: [
+			{
+				location: "weapons",
+				options: [
+					{ name: "Plasma/bolter", cost: 0 },
+					{ name: "Melta/flamer", cost: 0 },
+				],
+			},
+		],
+		datasheet_info: [
+			{
+				text: "One in every two Landspeeders can exchange its plasma cannon and heavy bolter for a Nose Mounted heavy flamer and a Multi-melta for no additional cost",
+			},
+			{
+				text: "A Legion Land Speeder Squadron can purchase one of the following upgrades:",
+				options: [
+					{ text: "Increase the Detachment size by 2", cost: 30 },
+					{ text: "Increase the Detachment size by 4", cost: 60 },
+				],
+			},
+		],
+	},
+	{
+		id: 1022,
+		name: "Legion Javelin Squadron",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: DETACHMENT_TYPE.vanguard,
+		base_cost: 33,
+		base_size: 2,
+		max_size: 6,
+		main_unit: [1022],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: ["Nose Mounted heavy flamer", "Sponson Mounted lascannon"],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Javelin",
+				unit_ref: 1022,
+				options: [
+					{ number: 2, cost: 33, size: 2 },
+					{ number: 4, cost: 66, size: 4 },
+				],
+			},
+		],
+		loadout_options: [
+			{
+				location: "sponsons",
+				options: [
+					{ name: "lascannons", cost: 0 },
+					{ name: "missile launcher", cost: 2 },
+				],
+			},
+		],
+		datasheet_info: [
+			{
+				text: "Any Javelin may exchange its Sponson Mounted lascannon for a Cyclone missile launcher for +2pts per model",
+			},
+			{
+				text: "A Legion Javelin Squadron can purchase one of the following upgrades:",
+				options: [
+					{ text: "Increase the Detachment size by 2", cost: 33 },
+					{ text: "Increase the Detachment size by 4", cost: 66 },
+				],
+			},
+		],
+	},
+	{
+		id: 1023,
+		name: "Legion Spartan Detachment",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: DETACHMENT_TYPE.transport,
+		base_cost: 80,
+		base_size: 1,
+		max_size: 8,
+		main_unit: [1023],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: [
+					"Sponson Mounted quad lascannon or Sponson Mounted laser destroyers",
+					"Hull Mounted heavy bolters",
+				],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Spartan",
+				unit_ref: 1023,
+				options: [
+					{ number: 1, cost: 80, size: 1 },
+					{ number: 2, cost: 160, size: 2 },
+					{ number: 3, cost: 240, size: 3 },
+					{ number: 4, cost: 320, size: 4 },
+					{ number: 5, cost: 400, size: 5 },
+					{ number: 6, cost: 480, size: 6 },
+					{ number: 7, cost: 560, size: 7 },
+				],
+			},
+		],
+		loadout_options: [
+			{
+				location: "hull",
+				options: [
+					{ name: "heavy bolter", cost: 0 },
+					{ name: "lascannon", cost: 2 },
+				],
+			},
+			{
+				location: "pintle",
+				options: [
+					{ name: "none", cost: 0 },
+					{ name: "multi-melta", cost: 2 },
+				],
+			},
+		],
+		datasheet_info: [
+			{
+				text: "Any Spartan may exchange its Hull Mounted heavy bolter for a Hull Mounted lascannon  for +2pts per model",
+			},
+			{
+				text: "Any Spartan may be equipped with one of the following:",
+				options: [{ text: "Pintle Mounted multi-melta", cost: 2 }],
+			},
+		],
+	},
+	{
+		id: 1024,
+		name: "Legion Land Raider Detachment",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: DETACHMENT_TYPE.transport,
+		base_cost: 40,
+		base_size: 1,
+		max_size: 8,
+		main_unit: [1024],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: ["Sponson Mounted twin-linked lascannon"],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Land Raider",
+				unit_ref: 1024,
+				options: [
+					{ number: 1, cost: 40, size: 1 },
+					{ number: 2, cost: 80, size: 2 },
+					{ number: 3, cost: 120, size: 3 },
+					{ number: 4, cost: 160, size: 4 },
+					{ number: 5, cost: 200, size: 5 },
+					{ number: 6, cost: 240, size: 6 },
+					{ number: 7, cost: 280, size: 7 },
+				],
+			},
+		],
+		loadout_options: [
+			{
+				location: "pintle",
+				options: [
+					{ name: "none", cost: 0 },
+					{ name: "multi-melta", cost: 5 },
+				],
+			},
+		],
+		datasheet_info: [
+			{
+				text: "For every three Land Raiders in the Detachment, one Land Raider can be equipped with a Pintle Mounted multi-melta for +5pts per model.",
+			},
+		],
+	},
+	{
+		id: 1025,
+		name: "Legion Drop Pod Detachment",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: DETACHMENT_TYPE.transport,
+		base_cost: 6,
+		base_size: 1,
+		max_size: 8,
+		break_strength: 0,
+		main_unit: [1025],
+		related_unit: [1027],
+		dataslate_loadout: [
+			{
+				text_option: ["Turrent Mounted twin bolter"],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Drop Pod",
+				unit_ref: 1025,
+				options: [
+					{ number: 1, cost: 6, size: 1, break_strength: 0 },
+					{ number: 2, cost: 12, size: 2, break_strength: 0 },
+					{ number: 4, cost: 18, size: 4, break_strength: 0 },
+					{ number: 5, cost: 24, size: 5, break_strength: 0 },
+					{ number: 3, cost: 30, size: 3, break_strength: 0 },
+					{ number: 6, cost: 36, size: 6, break_strength: 0 },
+					{ number: 7, cost: 42, size: 7, break_strength: 0 },
+				],
+			},
+			{
+				name: "Palisade Drop Pod",
+				unit_ref: 1027,
+				options: [
+					{ number: 1, cost: 32, size: 1, break_strength: 0 },
+					{ number: 2, cost: 64, size: 2, break_strength: 0 },
+					{ number: 3, cost: 96, size: 3, break_strength: 0 },
+					{ number: 4, cost: 128, size: 4, break_strength: 0 },
+				],
+			},
+		],
+		loadout_options: [],
+		datasheet_info: [
+			{
+				text: "A Legion Drop Pod Detachment can purchase one Palisade Drop Pod for each Drop Pod in this Detachment for +32pts per model.",
+			},
+		],
+	},
+	{
+		id: 1026,
+		name: "Dreadnought Drop Pod Detachment",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: DETACHMENT_TYPE.transport,
+		base_cost: 7,
+		base_size: 1,
+		max_size: 8,
+		break_strength: 0,
+		main_unit: [1026],
+		related_unit: [1027],
+		dataslate_loadout: [],
+		upgrade_options: [
+			{
+				name: "Additional Drop Pod",
+				unit_ref: 1026,
+				options: [
+					{ number: 1, cost: 7, size: 1, break_strength: 0 },
+					{ number: 2, cost: 14, size: 2, break_strength: 0 },
+					{ number: 4, cost: 21, size: 4, break_strength: 0 },
+					{ number: 5, cost: 28, size: 5, break_strength: 0 },
+					{ number: 3, cost: 35, size: 3, break_strength: 0 },
+					{ number: 6, cost: 42, size: 6, break_strength: 0 },
+					{ number: 7, cost: 49, size: 7, break_strength: 0 },
+				],
+			},
+			{
+				name: "Palisade Drop Pod",
+				unit_ref: 1027,
+				options: [
+					{ number: 1, cost: 32, size: 1, break_strength: 0 },
+					{ number: 2, cost: 64, size: 2, break_strength: 0 },
+					{ number: 3, cost: 96, size: 3, break_strength: 0 },
+					{ number: 4, cost: 128, size: 4, break_strength: 0 },
+				],
+			},
+		],
+		loadout_options: [],
+		datasheet_info: [
+			{
+				text: "A Dreadnought Drop Pod Detachment can purchase one Palisade Drop Pod for each Drop Pod in this Detachment for +32pts per model.",
+			},
+		],
+	},
+	{
+		id: 1027,
+		name: "Legion Deathstorm Drop Pod Battery",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: DETACHMENT_TYPE.support,
+		base_cost: 32,
+		base_size: 2,
+		max_size: 6,
+		main_unit: [1028],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: ["Nose Mounted heavy flamer", "Sponson Mounted lascannon"],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional drop pod",
+				unit_ref: 1022,
+				options: [
+					{ number: 2, cost: 32, size: 2 },
+					{ number: 4, cost: 64, size: 4 },
+				],
+			},
+		],
+		loadout_options: [],
+		datasheet_info: [
+			{
+				text: "A Legion Deathstorm Drop Pod Battery can purchase one of the following upgrades:",
+				options: [
+					{ text: "Increase the Detachment size by 2", cost: 32 },
+					{ text: "Increase the Detachment size by 4", cost: 64 },
+				],
+			},
+		],
+	},
 	// ********************************************************************
 	// ********************** SOlAR AUXLIA DETACHMENTS ********************
 	// ********************************************************************
@@ -2821,5 +3246,165 @@ export const detachmentData: DETACHMENT[] = [
 		upgrade_options: [],
 		loadout_options: [],
 		datasheet_info: [],
+	},
+	{
+		id: 9004,
+		name: "Legion Drop Pod Detachment",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		unique: true,
+		detachment_type: DETACHMENT_TYPE.transport,
+		base_cost: 6,
+		base_size: 1,
+		max_size: 8,
+		break_strength: 0,
+		main_unit: [1025],
+		related_unit: [1027],
+		dataslate_loadout: [
+			{
+				text_option: ["Turrent Mounted twin bolter"],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Drop Pod",
+				unit_ref: 1025,
+				options: [
+					{ number: 1, cost: 6, size: 1 },
+					{ number: 2, cost: 12, size: 2 },
+					{ number: 3, cost: 18, size: 3 },
+					{ number: 4, cost: 24, size: 4 },
+					{ number: 5, cost: 30, size: 5 },
+					{ number: 6, cost: 36, size: 6 },
+					{ number: 7, cost: 42, size: 7 },
+					{ number: 8, cost: 48, size: 8 },
+					{ number: 9, cost: 54, size: 9 },
+					{ number: 10, cost: 60, size: 10 },
+					{ number: 11, cost: 66, size: 11 },
+					{ number: 12, cost: 72, size: 12 },
+					{ number: 13, cost: 78, size: 13 },
+					{ number: 14, cost: 84, size: 14 },
+					{ number: 15, cost: 90, size: 15 },
+					{ number: 16, cost: 96, size: 16 },
+					{ number: 17, cost: 102, size: 17 },
+					{ number: 18, cost: 108, size: 18 },
+					{ number: 19, cost: 114, size: 19 },
+					{ number: 20, cost: 120, size: 20 },
+					{ number: 21, cost: 126, size: 21 },
+					{ number: 22, cost: 132, size: 22 },
+					{ number: 23, cost: 138, size: 23 },
+					{ number: 24, cost: 144, size: 24 },
+					{ number: 25, cost: 150, size: 25 },
+					{ number: 26, cost: 156, size: 26 },
+					{ number: 27, cost: 162, size: 27 },
+					{ number: 28, cost: 168, size: 28 },
+					{ number: 29, cost: 174, size: 29 },
+					{ number: 30, cost: 180, size: 30 },
+				],
+			},
+			{
+				name: "Palisade Drop Pod",
+				unit_ref: 1027,
+				options: [
+					{ number: 1, cost: 32, size: 1 },
+					{ number: 2, cost: 64, size: 2 },
+					{ number: 3, cost: 96, size: 3 },
+					{ number: 4, cost: 128, size: 4 },
+					{ number: 5, cost: 160, size: 5 },
+					{ number: 6, cost: 192, size: 6 },
+					{ number: 7, cost: 224, size: 7 },
+					{ number: 8, cost: 256, size: 8 },
+					{ number: 9, cost: 288, size: 9 },
+					{ number: 10, cost: 320, size: 10 },
+				],
+			},
+		],
+		loadout_options: [],
+		datasheet_info: [
+			{
+				text: "A Legion Drop Pod Detachment can purchase one Palisade Drop Pod for each Drop Pod in this Detachment for +32pts per model.",
+			},
+		],
+	},
+	{
+		id: 9005,
+		name: "Dreadnought Drop Pod Detachment",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		unique: true,
+		detachment_type: DETACHMENT_TYPE.transport,
+		base_cost: 6,
+		base_size: 1,
+		max_size: 8,
+		break_strength: 0,
+		main_unit: [1026],
+		related_unit: [1027],
+		dataslate_loadout: [
+			{
+				text_option: ["Turrent Mounted twin bolter"],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Drop Pod",
+				unit_ref: 1025,
+				options: [
+					{ number: 1, cost: 67, size: 1 },
+					{ number: 2, cost: 14, size: 2 },
+					{ number: 3, cost: 21, size: 3 },
+					{ number: 4, cost: 28, size: 4 },
+					{ number: 5, cost: 35, size: 5 },
+					{ number: 6, cost: 42, size: 6 },
+					{ number: 7, cost: 49, size: 7 },
+					{ number: 8, cost: 56, size: 8 },
+					{ number: 9, cost: 63, size: 9 },
+					{ number: 10, cost: 70, size: 10 },
+					{ number: 11, cost: 77, size: 11 },
+					{ number: 12, cost: 84, size: 12 },
+					{ number: 13, cost: 91, size: 13 },
+					{ number: 14, cost: 98, size: 14 },
+					{ number: 15, cost: 105, size: 15 },
+					{ number: 16, cost: 112, size: 16 },
+					{ number: 17, cost: 119, size: 17 },
+					{ number: 18, cost: 126, size: 18 },
+					{ number: 19, cost: 133, size: 19 },
+					{ number: 20, cost: 140, size: 20 },
+					{ number: 21, cost: 147, size: 21 },
+					{ number: 22, cost: 154, size: 22 },
+					{ number: 23, cost: 161, size: 23 },
+					{ number: 24, cost: 168, size: 24 },
+					{ number: 25, cost: 175, size: 25 },
+					{ number: 26, cost: 182, size: 26 },
+					{ number: 27, cost: 189, size: 27 },
+					{ number: 28, cost: 196, size: 28 },
+					{ number: 29, cost: 203, size: 29 },
+					{ number: 30, cost: 210, size: 30 },
+				],
+			},
+			{
+				name: "Palisade Drop Pod",
+				unit_ref: 1027,
+				options: [
+					{ number: 1, cost: 32, size: 1 },
+					{ number: 2, cost: 64, size: 2 },
+					{ number: 3, cost: 96, size: 3 },
+					{ number: 4, cost: 128, size: 4 },
+					{ number: 5, cost: 160, size: 5 },
+					{ number: 6, cost: 192, size: 6 },
+					{ number: 7, cost: 224, size: 7 },
+					{ number: 8, cost: 256, size: 8 },
+					{ number: 9, cost: 288, size: 9 },
+					{ number: 10, cost: 320, size: 10 },
+				],
+			},
+		],
+		loadout_options: [],
+		datasheet_info: [
+			{
+				text: "A Legion Drop Pod Detachment can purchase one Palisade Drop Pod for each Drop Pod in this Detachment for +32pts per model.",
+			},
+		],
 	},
 ]

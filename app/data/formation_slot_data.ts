@@ -1,3 +1,4 @@
+import { FaC } from "react-icons/fa6"
 import { DETACHMENT_TYPE, FACTION, FORMATION_SLOT } from "../types/types"
 
 export const formationSlotData: FORMATION_SLOT[] = [
@@ -289,5 +290,29 @@ export const formationSlotData: FORMATION_SLOT[] = [
 		restricted: true,
 		options: [2004],
 		description: "Storm Section",
+	},
+	{
+		id: 9006,
+		type: DETACHMENT_TYPE.vanguard,
+		faction: FACTION.astartes,
+		restricted: true,
+		options: [1019, 1020, 1021, 1022],
+		description: "Rapid Reaction Force",
+	},
+	{
+		id: 9007,
+		type: DETACHMENT_TYPE.dedicated,
+		faction: FACTION.astartes,
+		restricted: true,
+		options: [9004],
+		description: "Dedicated transport Drop Pods",
+	},
+	{
+		id: 9008,
+		type: DETACHMENT_TYPE.dedicated,
+		faction: FACTION.astartes,
+		restricted: true,
+		options: [9005],
+		description: "Dedicated transport Dreadnought Drop Pods",
 	},
 ]

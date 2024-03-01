@@ -689,6 +689,175 @@ export const weapons: WEAPON_DATASHEET[] = [
 			},
 		],
 	},
+	{
+		id: 1049,
+		name: "Twin-linked bolters",
+		profiles: [
+			{
+				range: '8"',
+				dice: 1,
+				to_hit: 5,
+				ap: 0,
+				traits: [{ name: "Assault" }, { name: "Light" }, { name: "Point Defence" }],
+			},
+		],
+	},
+	{
+		id: 1050,
+		name: "Twin plasma guns",
+		profiles: [
+			{
+				range: '10"',
+				dice: 1,
+				to_hit: 4,
+				ap: 1,
+				traits: [{ name: "Light AT" }],
+			},
+		],
+	},
+	{
+		id: 1051,
+		name: "Scimitar heavy bolter",
+		profiles: [
+			{
+				range: '12"',
+				dice: 2,
+				to_hit: 5,
+				ap: 0,
+				traits: [{ name: "Light" }, { name: "Point Defence" }],
+			},
+		],
+	},
+	{
+		id: 1052,
+		name: "Multi-melta",
+		profiles: [
+			{
+				range: '6"',
+				dice: 1,
+				to_hit: 4,
+				ap: 3,
+				traits: [{ name: "Anti-tank" }],
+			},
+		],
+	},
+	{
+		id: 1053,
+		name: "Plasma cannon",
+		profiles: [
+			{
+				range: '12"',
+				dice: 1,
+				to_hit: 4,
+				ap: 1,
+				traits: [{ name: "Light AT" }],
+			},
+		],
+	},
+	{
+		id: 1054,
+		name: "Heavy bolter",
+		profiles: [
+			{
+				range: '12"',
+				dice: 2,
+				to_hit: 5,
+				ap: 0,
+				traits: [{ name: "Light" }, { name: "Point Defence" }],
+			},
+		],
+	},
+	{
+		id: 1055,
+		name: "Nose Mounted heavy flamer",
+		profiles: [
+			{
+				range: '6"',
+				dice: 1,
+				to_hit: 4,
+				ap: 0,
+				traits: [{ name: "Arc", value: "Front" }, { name: "Light" }, { name: "Ignores Cover" }],
+			},
+		],
+	},
+	{
+		id: 1056,
+		name: "Cyclone missile launcher",
+		profiles: [
+			{
+				range: '20"',
+				dice: 2,
+				to_hit: 4,
+				ap: 0,
+				traits: [{ name: "Arc", value: "Front" }, { name: "Light" }, { name: "Ignores Cover" }],
+			},
+		],
+	},
+	{
+		id: 1057,
+		name: "Sponson Mounted quad lascannon",
+		profiles: [
+			{
+				range: '22"',
+				dice: 2,
+				to_hit: 4,
+				ap: 1,
+				traits: [{ name: "Accurate" }, { name: "Arc", value: "Front" }, { name: "Anti-tank" }],
+			},
+		],
+	},
+	{
+		id: 1058,
+		name: "Sponson Mounted laser destroyers",
+		profiles: [
+			{
+				range: '15"',
+				dice: 2,
+				to_hit: 4,
+				ap: 2,
+				traits: [{ name: "Accurate" }, { name: "Arc", value: "Front" }, { name: "Anti-tank" }],
+			},
+		],
+	},
+	{
+		id: 1059,
+		name: "Sponson Mounted twin-linked lascannon",
+		profiles: [
+			{
+				range: '22"',
+				dice: 1,
+				to_hit: 4,
+				ap: 1,
+				traits: [{ name: "Accurate" }, { name: "Arc", value: "Front" }, { name: "Anti-tank" }],
+			},
+		],
+	},
+	{
+		id: 1060,
+		name: "Turret Mounted twin bolter",
+		profiles: [
+			{
+				range: '8"',
+				dice: 1,
+				to_hit: 5,
+				ap: 0,
+				traits: [{ name: "Assault" }, { name: "Light" }, { name: "Point Defence" }],
+			},
+		],
+	},
+	{
+		id: 1061,
+		name: "Deathstorm missile launcher",
+		profiles: [
+			{
+				range: '10"',
+				dice: "D3+2",
+				to_hit: 6,
+				ap: 1,
+				traits: [{ name: "Light AT" }, { name: "Limited", value: 1 }, { name: "saturation Fire" }],
+			},
+		],
+	},
 	// ********************************************************************
 	// ************************ SOlAR AUXLIA WEAPONS **********************
 	// ********************************************************************
