@@ -27,8 +27,9 @@ const Formation = ({ formation }: properties) => {
 	return (
 		<div
 			id={formation.id}
-			className={`sm:rounded-xl flex flex-grow min-w-1/2 flex-col items-center sm:border-2 border-backgrounds-900 overflow-hidden ${viewFormation && "pb-4"}`}>
-			<div className="w-full font-graduate builder_title_background sm:rounded-t-lg flex sm:flex-row flex-col justify-center sm:justify-between items-center text-center py-2 px-6 z-10 gap-2">
+			className={`sm:rounded-xl flex flex-grow flex-col min-w-0 items-center overflow-hidden ${viewFormation && "pb-4"}`}>
+			<div
+				className={`w-full font-graduate builder_title_background sm:rounded-t-lg flex sm:flex-row flex-col justify-center sm:justify-between items-center text-center py-2 px-6 z-10 gap-2 ${!viewFormation && "sm:rounded-b-lg"}`}>
 				<FormationToggle view={viewFormation} toggle={setViewFormation} className="hidden sm:block" />
 				<FormationSelector formation={formation} />
 				<FormationDelete formation={formation} className="hidden sm:block" />
@@ -37,8 +38,14 @@ const Formation = ({ formation }: properties) => {
 					<FormationDelete formation={formation} />
 				</div>
 			</div>
-			<div className="overflow-hidden">
-				<ResizingBox toggle={viewFormation}>
+			<div className="overflow-hidden w-full">
+				<ResizingBox
+					toggle={viewFormation}
+					className={
+						viewFormation
+							? "sm:border-b-2 sm:border-l-2 sm:border-r-2 rounded-b-xl border-backgrounds-900 pb-2"
+							: ""
+					}>
 					<>
 						<div className={"flex flex-col justify-center items-center py-2 gap-2"}>
 							<div className="flex flex-wrap gap-2 items-center justify-center">

@@ -3,9 +3,10 @@ import { useState, useRef, useEffect } from "react"
 interface properties {
 	children: React.ReactNode
 	toggle?: boolean
+	className?: string
 }
 
-const ResizingBox = ({ children, toggle = true }: properties) => {
+const ResizingBox = ({ children, toggle = true, className }: properties) => {
 	const [height, setHeight] = useState<number>(0)
 	const [width, setWidth] = useState(window.innerWidth)
 	const outerRef = useRef<HTMLDivElement>(null)
@@ -27,7 +28,7 @@ const ResizingBox = ({ children, toggle = true }: properties) => {
 	}, [children, width])
 
 	return (
-		<div className="overflow-hidden">
+		<div className={`overflow-hidden ${className}`}>
 			<div
 				ref={outerRef}
 				style={{ height: toggle ? height + "px" : "0px" }}
