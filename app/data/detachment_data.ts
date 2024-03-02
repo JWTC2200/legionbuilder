@@ -2389,7 +2389,7 @@ export const detachmentData: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: DETACHMENT_TYPE.heavy,
-		base_cost: 165,
+		base_cost: 100,
 		base_size: 1,
 		max_size: 3,
 		main_unit: [2023],
