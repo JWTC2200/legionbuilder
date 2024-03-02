@@ -1615,7 +1615,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 		name: "Stormhammer multi-laser sponsons",
 		profiles: [
 			{
-				range: '24"',
+				range: '14"',
 				dice: 5,
 				to_hit: 4,
 				ap: 0,

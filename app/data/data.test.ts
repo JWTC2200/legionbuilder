@@ -10,7 +10,7 @@ const getIds = (array: any): number => {
 	return uniqueIds.length
 }
 
-test("Data files all have unique ids", () => {
+test("Data file entries have unique ids", () => {
 	expect(getIds(detachmentData)).toBe(detachmentData.length)
 	expect(getIds(formationData)).toBe(formationData.length)
 	expect(getIds(weapons)).toBe(weapons.length)

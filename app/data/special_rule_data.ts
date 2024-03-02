@@ -197,6 +197,11 @@ export const specialRulesData: SPECIAL_RULE_INFO[] = [
 		description: [],
 	},
 	{
+		name: "Remote Controlled Detonation",
+		tooltip: "Great Slaughter p.118",
+		description: [],
+	},
+	{
 		name: "Shield Generator",
 		tooltip: "Main Rulebook p.95",
 		description: [],
