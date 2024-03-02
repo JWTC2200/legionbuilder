@@ -72,7 +72,7 @@ export const formationData: FORMATION[] = [
 		allegiance: null,
 		formation_slots: [
 			{ slot_type: SLOT_TYPE.compulsory, slot_id: [9006, 9006, 9006, 9006] },
-			{ slot_type: SLOT_TYPE.optional, slot_id: [2004, 2004, 2008, 1003] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [1004, 1004, 1008, 1003] },
 		],
 	},
 	{

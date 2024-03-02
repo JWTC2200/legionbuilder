@@ -1573,7 +1573,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 	},
 	{
 		id: 2053,
-		name: "Stormhmmer cannon",
+		name: "Stormhammer cannon",
 		profiles: [
 			{
 				range: '28"',
