@@ -1318,7 +1318,7 @@ export const detachmentData: DETACHMENT[] = [
 		related_unit: [],
 		dataslate_loadout: [
 			{
-				text_option: ["Nose Mounted heavy flamer", "Sponson Mounted lascannon"],
+				text_option: ["Deathstorm missile launcher"],
 			},
 		],
 		upgrade_options: [
@@ -3581,7 +3581,7 @@ export const detachmentData: DETACHMENT[] = [
 		detachment_type: DETACHMENT_TYPE.transport,
 		base_cost: 6,
 		base_size: 1,
-		max_size: 8,
+		max_size: 31,
 		break_strength: 0,
 		main_unit: [1025],
 		related_unit: [1027],
@@ -3661,7 +3661,7 @@ export const detachmentData: DETACHMENT[] = [
 		detachment_type: DETACHMENT_TYPE.transport,
 		base_cost: 6,
 		base_size: 1,
-		max_size: 8,
+		max_size: 31,
 		break_strength: 0,
 		main_unit: [1026],
 		related_unit: [1027],
