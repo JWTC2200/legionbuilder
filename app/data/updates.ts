@@ -5,6 +5,10 @@ interface update {
 
 export const updateData: update[] = [
 	{
+		date: "06/03/24",
+		updates: ["Few fixes with points"],
+	},
+	{
 		date: "02/03/24",
 		updates: [
 			"Titandeath mode selector when creating a list from the list page.",

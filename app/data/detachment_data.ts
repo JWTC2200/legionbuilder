@@ -3675,7 +3675,7 @@ export const detachmentData: DETACHMENT[] = [
 				name: "Additional Drop Pod",
 				unit_ref: 1025,
 				options: [
-					{ number: 1, cost: 67, size: 1 },
+					{ number: 1, cost: 7, size: 1 },
 					{ number: 2, cost: 14, size: 2 },
 					{ number: 3, cost: 21, size: 3 },
 					{ number: 4, cost: 28, size: 4 },
