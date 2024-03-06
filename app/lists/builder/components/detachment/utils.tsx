@@ -247,7 +247,12 @@ export const upgradeSizeCount = (list: List, slot_id: string): number => {
 export const upgradeTotalPoints = (list: List, slot_id: string): number => {
 	return list.upgrades
 		.filter((upgrade) => upgrade.slot_id === slot_id)
-		.map((upgrades) => upgrades.upgrades.reduce((acc, sum) => acc + sum.cost + (sum.td_ek ? sum.td_ek : 0), 0))
+		.map((upgrades) =>
+			upgrades.upgrades.reduce(
+				(acc, sum) => acc + sum.cost + (sum.td_ek && list.gamemode === "titandeath" ? sum.td_ek : 0),
+				0
+			)
+		)
 		.reduce((acc, sum) => acc + sum, 0)
 }
 
