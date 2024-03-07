@@ -2476,8 +2476,8 @@ export const detachmentData: DETACHMENT[] = [
 			{
 				text: "An Auxilia Medusa Battery can purchase one of the following upgrades.",
 				options: [
-					{ text: "Increase the Detachment size by 4", cost: 100 },
-					{ text: "Increase the Detachment size by 8", cost: 200 },
+					{ text: "Increase the Detachment size by 4", cost: 130 },
+					{ text: "Increase the Detachment size by 8", cost: 260 },
 				],
 			},
 		],

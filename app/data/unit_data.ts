@@ -420,7 +420,7 @@ export const unitData: UNIT_DATASHEET[] = [
 		unique: false,
 		unit_type: { type: UNIT_TYPE.vehicle, value: 2 },
 		name: "Land Raider",
-		movement: '8"',
+		movement: '9"',
 		save: 2,
 		caf: 2,
 		morale: 3,
