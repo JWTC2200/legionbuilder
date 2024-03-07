@@ -1025,7 +1025,7 @@ export const detachmentData: DETACHMENT[] = [
 		],
 		loadout_options: [
 			{
-				location: "weapons",
+				location: "Weapon pair",
 				options: [
 					{ name: "Plasma/bolter", cost: 0 },
 					{ name: "Melta/flamer", cost: 0 },
@@ -1075,10 +1075,10 @@ export const detachmentData: DETACHMENT[] = [
 		],
 		loadout_options: [
 			{
-				location: "sponsons",
+				location: "Sponsons",
 				options: [
-					{ name: "lascannons", cost: 0 },
-					{ name: "missile launcher", cost: 2 },
+					{ name: "Lascannons", cost: 0 },
+					{ name: "Missile launcher", cost: 2 },
 				],
 			},
 		],
@@ -1133,17 +1133,24 @@ export const detachmentData: DETACHMENT[] = [
 		],
 		loadout_options: [
 			{
-				location: "hull",
+				location: "Sponsons",
 				options: [
-					{ name: "heavy bolter", cost: 0 },
-					{ name: "lascannon", cost: 2 },
+					{ name: "Quad lascannons", cost: 0 },
+					{ name: "Laser destroyers", cost: 0 },
 				],
 			},
 			{
-				location: "pintle",
+				location: "Hull",
 				options: [
-					{ name: "none", cost: 0 },
-					{ name: "multi-melta", cost: 5 },
+					{ name: "Heavy bolter", cost: 0 },
+					{ name: "Lascannon", cost: 2 },
+				],
+			},
+			{
+				location: "Pintle",
+				options: [
+					{ name: "None", cost: 0 },
+					{ name: "Multi-melta", cost: 5 },
 				],
 			},
 		],
@@ -1192,10 +1199,10 @@ export const detachmentData: DETACHMENT[] = [
 		],
 		loadout_options: [
 			{
-				location: "pintle",
+				location: "Pintle",
 				options: [
-					{ name: "none", cost: 0 },
-					{ name: "multi-melta", cost: 5 },
+					{ name: "None", cost: 0 },
+					{ name: "Multi-melta", cost: 5 },
 				],
 			},
 		],

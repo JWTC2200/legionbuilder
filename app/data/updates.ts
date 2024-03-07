@@ -5,6 +5,10 @@ interface update {
 
 export const updateData: update[] = [
 	{
+		date: "07/03/24",
+		updates: ["Added Spartan sponson loadouts"],
+	},
+	{
 		date: "06/03/24",
 		updates: ["Few fixes with points"],
 	},
