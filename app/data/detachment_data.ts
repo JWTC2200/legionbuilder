@@ -2584,7 +2584,7 @@ export const detachmentData: DETACHMENT[] = [
 				options: [
 					{ name: "Knight Errant", cost: 0, td_ek: 10 },
 					{ name: "Knight Warden", cost: 0 },
-					{ name: "Knight Crusader", cost: 0 },
+					{ name: "Knight Crusader", cost: 0, td_ek: 10 },
 					{ name: "Knight Paladin", cost: 0 },
 					{ name: "Knight Gallant", cost: 0 },
 					{ name: "Knight Styrix", cost: 15 },
