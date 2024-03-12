@@ -25,6 +25,7 @@ const SubfactionSelector = ({ formation }: properties) => {
 	return (
 		<select
 			onChange={(e) => changeSubfaction(e.target.value)}
+			value={formation.subfaction as string}
 			className={`w-[280px] text-center h-8 clip-path-halfagon-md bg-secondary-700 font-graduate  hover:text-secondary-100 ${formation.subfaction ? " text-primary-50" : "text-secondary-400"}`}>
 			<option value="" className="text-primary-50">
 				Choose Legion

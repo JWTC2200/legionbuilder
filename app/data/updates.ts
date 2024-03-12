@@ -5,6 +5,10 @@ interface update {
 
 export const updateData: update[] = [
 	{
+		date: "12/03/24",
+		updates: ["Should properly show each formations legion. It was saving but not displaying properly"],
+	},
+	{
 		date: "07/03/24",
 		updates: ["Added Spartan sponson loadouts"],
 	},
