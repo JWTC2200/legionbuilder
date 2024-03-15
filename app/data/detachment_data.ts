@@ -2343,7 +2343,7 @@ export const detachmentData: DETACHMENT[] = [
 	},
 	{
 		id: 2019,
-		name: "Auxilia Valdor Infernus Squadron",
+		name: "Auxilia Valdor Squadron",
 		faction: FACTION.solar,
 		subfaction: null,
 		allegiance: null,
