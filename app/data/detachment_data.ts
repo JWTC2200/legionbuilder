@@ -1285,9 +1285,9 @@ export const detachmentData: DETACHMENT[] = [
 				options: [
 					{ number: 1, cost: 7, size: 1, break_strength: 0 },
 					{ number: 2, cost: 14, size: 2, break_strength: 0 },
-					{ number: 4, cost: 21, size: 4, break_strength: 0 },
-					{ number: 5, cost: 28, size: 5, break_strength: 0 },
-					{ number: 3, cost: 35, size: 3, break_strength: 0 },
+					{ number: 3, cost: 21, size: 3, break_strength: 0 },
+					{ number: 4, cost: 28, size: 4, break_strength: 0 },
+					{ number: 5, cost: 35, size: 5, break_strength: 0 },
 					{ number: 6, cost: 42, size: 6, break_strength: 0 },
 					{ number: 7, cost: 49, size: 7, break_strength: 0 },
 				],

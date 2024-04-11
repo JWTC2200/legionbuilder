@@ -303,7 +303,7 @@ export const formationSlotData: FORMATION_SLOT[] = [
 		type: DETACHMENT_TYPE.vanguard,
 		faction: FACTION.astartes,
 		restricted: true,
-		options: [1019, 1020, 1021, 1022],
+		options: [1020, 1021, 1022],
 		description: "Rapid Reaction Force",
 	},
 	{

@@ -5,7 +5,7 @@ import SimpleWarning from "./SimpleWarning"
 const ListWarnings = () => {
 	const { list } = listState()
 
-	const { subFactionPoints, totalPoints } = totalListPoints(list)
+	const { mainFactionPoints, totalPoints } = totalListPoints(list)
 
 	const allegianceArray = list.detachments
 		.map((detachment) => detachment.allegiance)
@@ -14,8 +14,8 @@ const ListWarnings = () => {
 	return (
 		<div className="text-red-600 font-graduate">
 			{totalPoints > list.points && <SimpleWarning>Total points for list has exceeded game size</SimpleWarning>}
-			{subFactionPoints > list.points * 0.3 && list.gamemode !== "titandeath" && (
-				<SimpleWarning>Ally points more than 30% of list</SimpleWarning>
+			{mainFactionPoints < list.points * 0.7 && list.gamemode !== "titandeath" && (
+				<SimpleWarning>Main faction must be at least 70% of list</SimpleWarning>
 			)}
 			{allegianceArray.length ? <SimpleWarning>Detachments with wrong allegiance</SimpleWarning> : null}
 		</div>
