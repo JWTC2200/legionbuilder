@@ -1,4 +1,4 @@
-import { FORMATION, FACTION, ALLEGIANCE, SUBFACTION_TYPE, SLOT_TYPE } from "../types/types"
+import { FORMATION, FACTION, SLOT_TYPE } from "@type/types"
 
 export const formationData: FORMATION[] = [
 	{

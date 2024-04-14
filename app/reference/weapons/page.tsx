@@ -3,7 +3,6 @@
 import { useState } from "react"
 import { weapons } from "@/app/data/weapon_data"
 import WeaponRow from "@/app/reference/weapons/WeaponRow"
-import ToTopOfPageWidget from "@/app/components/ToTopOfPageWidget"
 import NoWeapon from "./NoWeapon"
 import { BreadCrumbs, Crumb, ReferenceSelector } from "@components/BreadCrumbs"
 import { sortedByNameKey } from "@/app/utils/sorting"
