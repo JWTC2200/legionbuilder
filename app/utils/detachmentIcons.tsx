@@ -29,6 +29,7 @@ const detachmentIcons: { [key: string]: React.ReactNode } = {
 	[DETACHMENT_TYPE.transport]: <ArrowUp />,
 	[DETACHMENT_TYPE.knight]: <Knight />,
 	[DETACHMENT_TYPE.titan]: <Cog />,
+	[DETACHMENT_TYPE.dedicated]: <ArrowUp />,
 }
 
 export const getDetachmentIcon = (type: DETACHMENT_TYPE) => {

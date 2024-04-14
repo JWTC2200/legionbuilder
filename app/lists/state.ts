@@ -1,6 +1,6 @@
 import { create } from "zustand"
 import { List } from "@type//listTypes"
-import { DB_ENTRY, DETACHMENT } from "@type/types"
+import { DB_ENTRY, DETACHMENT, FORMATION } from "@type/types"
 import { emptyList } from "@data/empty_objects"
 
 interface UserListsState {
@@ -25,8 +25,10 @@ interface ListSidebar {
 
 interface DataslateSideWidget {
 	dataslate: DETACHMENT | null
+	formation: FORMATION | null
 	visible: boolean
 	setDataslate: (update: DETACHMENT | null) => void
+	setFormation: (update: FORMATION | null) => void
 	setVisible: (update: boolean) => void
 }
 
@@ -57,8 +59,10 @@ export const listSidebar = create<ListSidebar>((set) => ({
 
 export const dataslateSideWidget = create<DataslateSideWidget>((set) => ({
 	dataslate: null,
+	formation: null,
 	visible: false,
-	setDataslate: (update) => set(() => ({ dataslate: update })),
+	setDataslate: (update) => set(() => ({ dataslate: update, formation: null })),
+	setFormation: (update) => set(() => ({ formation: update, dataslate: null })),
 	setVisible: (update) => set(() => ({ visible: update })),
 }))
 

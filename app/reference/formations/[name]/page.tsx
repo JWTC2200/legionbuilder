@@ -2,7 +2,7 @@
 
 import { formationData } from "@/app/data/formation_data"
 import { notFound } from "next/navigation"
-import FormationDataslate from "@/app/components/FormationDataslate"
+import FormationDataslate from "@app/reference/formations/[name]/FormationDataslate"
 import { BreadCrumbs, Crumb, ReferenceSelector } from "@components/BreadCrumbs"
 import Main from "@components/Main"
 
@@ -19,7 +19,7 @@ const page = ({ params: { name } }: { params: { name: string } }) => {
 				<ReferenceSelector />
 			</BreadCrumbs>
 
-			<FormationDataslate {...formationEntry} />
+			<FormationDataslate formation={formationEntry} />
 		</Main>
 	)
 }

@@ -53,7 +53,6 @@ const page = () => {
 			</Sticky>
 
 			<section className="flex flex-col">{weaponRows.length ? weaponRows : <NoWeapon />}</section>
-			<ToTopOfPageWidget />
 		</Main>
 	)
 }

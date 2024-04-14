@@ -1,8 +1,8 @@
 "use client"
 
 import Link from "next/link"
-import { formationData } from "../../data/formation_data"
-import { factionTypeArray } from "../../types/types"
+import { formationData } from "@data/formation_data"
+import { factionTypeArray } from "@type/types"
 import Main from "@components/Main"
 import { BreadCrumbs, Crumb, ReferenceSelector } from "@components/BreadCrumbs"
 import { Row } from "@components/HTML"

@@ -136,6 +136,12 @@ export interface FORMATION {
 	subfaction: SUBFACTION_TYPE | null
 	allegiance: ALLEGIANCE | null
 	formation_slots: FORMATION_SLOTS[]
+	rules: FORMATION_RULES[]
+}
+
+export interface FORMATION_RULES {
+	name: string
+	text: string
 }
 
 export interface FORMATION_SLOTS {

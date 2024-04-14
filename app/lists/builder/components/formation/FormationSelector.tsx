@@ -8,7 +8,8 @@ import {
 	createNewUpgrades,
 	createNewLoadouts,
 } from "@/app/lists/builder/utils"
-import { totalFormationPoints } from "@/app/lists/builder/utils"
+import { FaCircleQuestion } from "react-icons/fa6"
+import { dataslateSideWidget } from "@/app/lists/state"
 
 interface FormationSelector {
 	formation: ListFormation
@@ -16,6 +17,7 @@ interface FormationSelector {
 
 const FormationSelector = ({ formation }: FormationSelector) => {
 	const { list, setList } = listState()
+	const sideWidget = dataslateSideWidget()
 
 	const filteredFormations =
 		list.gamemode === "titandeath" ? formationData.filter((formation) => formation.id >= 4000) : formationData
@@ -44,13 +46,21 @@ const FormationSelector = ({ formation }: FormationSelector) => {
 		}
 	}
 
+	const handleFormationSideWIdget = () => {
+		const formationInfo = formationData.find((formationData) => formationData.id === formation.data_id)
+		if (formationInfo) {
+			sideWidget.setFormation(formationInfo)
+			sideWidget.setVisible(true)
+		}
+	}
+
 	return (
-		<div className="flex flex-wrap sm:gap-4 items-center justify-center">
+		<div className="flex sm:gap-4 items-center justify-center">
 			<select
 				id={`formation_selector_${formation.id}`}
 				name={`formation_selector_${formation.id}`}
 				className="bg-secondary-800 clip-path-halfagon-md sm:text-xl py-2 font-graduate text-center max-w-[300px] sm:max-w-[400px] lg:max-w-full outline-none hover:text-primary-400 active:text-primary-400"
-				value={formation.data_id}
+				value={formation.data_id ? formation.data_id : ""}
 				onChange={(e) => {
 					selectFormation(Number(e.target.value))
 				}}>
@@ -63,6 +73,11 @@ const FormationSelector = ({ formation }: FormationSelector) => {
 					</option>
 				))}
 			</select>
+			<button
+				onClick={handleFormationSideWIdget}
+				className="font-graduate text-xl sm:text-2xl font-bold text-tertiary-300 hover:text-primary-300 active:text-tertiary-500 p-1">
+				<FaCircleQuestion />
+			</button>
 		</div>
 	)
 }
