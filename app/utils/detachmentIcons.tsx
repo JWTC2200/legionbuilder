@@ -1,4 +1,4 @@
-import { DETACHMENT_TYPE } from "../types/types"
+import { DETACHMENT_TYPE } from "@type/types"
 import {
 	APC,
 	ArrowUp,

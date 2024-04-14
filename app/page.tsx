@@ -56,7 +56,7 @@ export default function Home() {
 				<p>This website is unofficial and in no way endorsed by Games Workshop.</p>
 				<p>
 					Any use of terms from Games Workshop are used without permission. No challenge to their status
-					indended. All rights reserved to their respective owners.
+					intended. All rights reserved to their respective owners.
 				</p>
 			</footer>
 		</Main>

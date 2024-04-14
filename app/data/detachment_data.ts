@@ -1,4 +1,4 @@
-import { DETACHMENT, FACTION, ALLEGIANCE, DETACHMENT_TYPE, SUBFACTION_TYPE } from "../types/types"
+import { DETACHMENT, FACTION, ALLEGIANCE, DETACHMENT_TYPE } from "@type/types"
 
 // astartes 1000-1999, solar 2000-2999, knights-titans 4000-4999, unique detachments 9000-9999
 
