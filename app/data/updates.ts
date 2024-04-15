@@ -5,17 +5,11 @@ interface update {
 
 export const updateData: update[] = [
 	{
-		date: "16/04/24",
-		updates: [
-			"Added missing rules from Legion Astrannii Formation",
-			"Added a button to the /lists, /builder, /view pages that will show the models required to create the list.",
-		],
-	},
-	{
 		date: "15/04/24",
 		updates: [
 			"Added formation special rules to the reference.",
 			"Added a button to the builder to display formation info.",
+			"Added a button to the /lists, /builder, /view pages that will show the models within the list.",
 		],
 	},
 	{

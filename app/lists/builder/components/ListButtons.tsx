@@ -24,6 +24,9 @@ const ListButtons = () => {
 
 	return (
 		<div className="w-full flex flex-wrap gap-4 justify-center text-center mt-2">
+			<button onClick={() => setVisible(!visible)} className={buttonStyles}>
+				<FaListAlt />
+			</button>
 			{userUid && (
 				<SaveListBtn className={buttonStyles}>
 					<FaSave />
@@ -58,9 +61,6 @@ const ListButtons = () => {
 					</div>
 				</div>
 			)}
-			<button onClick={() => setVisible(!visible)} className={buttonStyles}>
-				<FaListAlt />
-			</button>
 		</div>
 	)
 }

@@ -68,11 +68,11 @@ function ListModelsList() {
 		.filter((length) => length.length)
 		.map((faction) => {
 			return (
-				<div>
-					<div className="banner_background text-primary-50 clip-path-halfagon-md text-center">
+				<div className="w-full">
+					<div className="banner_background text-primary-50 clip-path-halfagon-md text-center text-xl py-1 sm:py-2">
 						{faction[0].faction}
 					</div>
-					<div className="px-2">
+					<div className="px-2 pt-1 text-lg">
 						{faction.map((model) => {
 							return (
 								<div>
@@ -86,18 +86,14 @@ function ListModelsList() {
 		})
 
 	return (
-		visible && (
-			<div
-				onClick={() => setVisible(false)}
-				className={
-					"fixed bg-dataslate clip-path-halfagon-lg mt-32 min-w-[320px] p-2 sm:p-4 top-0 left-1/2 -translate-x-1/2 text-backgrounds-900 font-graduate overflow-auto z-50 flex flex-col gap-2"
-				}>
-				<SideMenutitle>Click to close</SideMenutitle>
-				{<h3 className="text-center font-semibold text-lg">{list.name}</h3>}
-				{unitHTML}
-				{unitHTML.length ? null : <p className="text-center">No Models</p>}
-			</div>
-		)
+		<div
+			onClick={() => setVisible(false)}
+			className={`fixed left-0 top-0 h-full bg-dataslate pt-20 lg:pt-32 p-1 lg:p-4 w-screen min-w-[320px] max-w-[600px] overflow-auto text-backgrounds-950 ease-in-out duration-200 z-20 flex flex-col items-center gap-2  font-graduate ${!visible ? "-translate-x-full" : "-translate-x-0"}`}>
+			<SideMenutitle>Click to close</SideMenutitle>
+			{<h3 className="text-center font-semibold text-lg font-subrayada">{list.name}</h3>}
+			{unitHTML}
+			{unitHTML.length ? null : <p className="text-center">No Models</p>}
+		</div>
 	)
 }
 
