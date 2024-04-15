@@ -1,16 +1,18 @@
 "use client"
 
-import { listState } from "@/app/lists/state"
+import { listModelState, listState } from "@/app/lists/state"
 import { BreadCrumbs, Crumb } from "@/app/components/BreadCrumbs"
 import useAuthState from "@/app/Auth"
 import { totalListPoints } from "../builder/utils"
 import Formation from "./components/Formation"
 import SaveListBtn from "../builder/components/SaveListBtn"
 import DataslateSideWidget from "../builder/components/DataslateSideWidget"
+import { FaListAlt } from "@react-icons/all-files/fa/FaListAlt"
 
 const page = () => {
 	const { list } = listState()
 	const userUid = useAuthState((state) => state.uid)
+	const { visible, setVisible } = listModelState()
 
 	if (!list) {
 		return (
@@ -32,6 +34,11 @@ const page = () => {
 					Save copy of list
 				</SaveListBtn>
 			) : null}
+			<button
+				onClick={() => setVisible(!visible)}
+				className="flex items-center text-primary-500 hover:text-primary-400 active:text-tertiary-400 font-graduate py-2">
+				<FaListAlt className="mr-2  text-xl" /> List Models
+			</button>
 			<div className="text-primary-50">
 				<h2 className="text-lg font-bold">
 					<span className="font-subrayada text-xl">{list.name}</span>

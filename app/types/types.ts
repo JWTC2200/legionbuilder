@@ -234,3 +234,9 @@ export interface DB_ENTRY {
 	name: string
 	created: Timestamp
 }
+
+export interface ListModelsNames {
+	name: string
+	number: number
+	faction: FACTION
+}

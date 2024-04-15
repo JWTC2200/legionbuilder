@@ -1,9 +1,13 @@
 import { useState } from "react"
-import { listState } from "../../state"
+import { listModelState, listState } from "../../state"
 import useAuthState from "@/app/Auth"
 import SaveListBtn from "./SaveListBtn"
 import { toast } from "react-toastify"
 import Link from "next/link"
+import { FaSave } from "@react-icons/all-files/fa/FaSave"
+import { FaEye } from "@react-icons/all-files/fa/FaEye"
+import { ImBin } from "@react-icons/all-files/im/ImBin"
+import { FaListAlt } from "@react-icons/all-files/fa/FaListAlt"
 import { useSearchParams } from "next/navigation"
 
 const ListButtons = () => {
@@ -12,19 +16,24 @@ const ListButtons = () => {
 	const { list, clearList } = listState()
 	const userUid = useAuthState((state) => state.uid)
 	const [clearCheck, setClearCheck] = useState(false)
+	const { visible, setVisible } = listModelState()
 
 	const buttonStyles =
-		" banner_background text-primary-50 px-4 py-1 font-bold font-graduate rounded-lg hover:text-primary-500 active:text-primary-400"
+		" banner_background text-primary-50 px-4 py-2 font-bold font-graduate rounded-lg hover:text-primary-500 active:text-primary-400 flex items-center"
 	const clearBtnStyle = "px-4 py-1 rounded-md "
 
 	return (
 		<div className="w-full flex flex-wrap gap-4 justify-center text-center mt-2">
-			{userUid && <SaveListBtn className={buttonStyles}>Save</SaveListBtn>}
+			{userUid && (
+				<SaveListBtn className={buttonStyles}>
+					<FaSave />
+				</SaveListBtn>
+			)}
 			<Link href={`/lists/view${listParams ? `?listId=${listParams}` : ""}`} className={buttonStyles}>
-				View
+				<FaEye />
 			</Link>
 			<button onClick={() => setClearCheck(true)} className={buttonStyles}>
-				Clear
+				<ImBin />
 			</button>
 			{clearCheck && (
 				<div className="fixed top-1/4 banner_background font-graduate p-8 rounded-xl flex flex-col gap-4 z-30">
@@ -49,6 +58,9 @@ const ListButtons = () => {
 					</div>
 				</div>
 			)}
+			<button onClick={() => setVisible(!visible)} className={buttonStyles}>
+				<FaListAlt />
+			</button>
 		</div>
 	)
 }

@@ -1,5 +1,5 @@
 import { ListFormation } from "@type/listTypes"
-import { listDetails } from "../../../state"
+import { listDetails } from "@lists/state"
 
 interface properties {
 	formation: ListFormation

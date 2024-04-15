@@ -37,6 +37,11 @@ interface ListDetails {
 	setVisibility: (update: string[]) => void
 }
 
+interface ListModelsState {
+	visible: boolean
+	setVisible: (update: boolean) => void
+}
+
 export const userListsState = create<UserListsState>((set) => ({
 	userLists: [],
 	setUserLists: (update) => set(() => ({ userLists: update })),
@@ -69,4 +74,9 @@ export const dataslateSideWidget = create<DataslateSideWidget>((set) => ({
 export const listDetails = create<ListDetails>((set) => ({
 	visible: [],
 	setVisibility: (update) => set(() => ({ visible: update })),
+}))
+
+export const listModelState = create<ListModelsState>((set) => ({
+	visible: false,
+	setVisible: (update) => set(() => ({ visible: update })),
 }))

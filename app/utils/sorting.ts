@@ -1,4 +1,4 @@
-import { DETACHMENT, FORMATION, UNIT_DATASHEET, WEAPON_DATASHEET } from "../types/types"
+import { DETACHMENT, FORMATION, UNIT_DATASHEET, WEAPON_DATASHEET } from "@type/types"
 
 export const sortedByNameKey = (array: FORMATION[] | DETACHMENT[] | UNIT_DATASHEET[] | WEAPON_DATASHEET[]) => {
 	return array.sort((a, b) => {

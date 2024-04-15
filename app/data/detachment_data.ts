@@ -3666,7 +3666,7 @@ export const detachmentData: DETACHMENT[] = [
 		allegiance: null,
 		unique: true,
 		detachment_type: DETACHMENT_TYPE.transport,
-		base_cost: 6,
+		base_cost: 7,
 		base_size: 1,
 		max_size: 31,
 		break_strength: 0,

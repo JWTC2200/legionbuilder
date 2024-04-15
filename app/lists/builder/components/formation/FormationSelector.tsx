@@ -49,8 +49,12 @@ const FormationSelector = ({ formation }: FormationSelector) => {
 	const handleFormationSideWIdget = () => {
 		const formationInfo = formationData.find((formationData) => formationData.id === formation.data_id)
 		if (formationInfo) {
+			if (sideWidget.formation?.id === formationInfo.id) {
+				sideWidget.setVisible(!sideWidget.visible)
+			} else {
+				sideWidget.setVisible(true)
+			}
 			sideWidget.setFormation(formationInfo)
-			sideWidget.setVisible(true)
 		}
 	}
 

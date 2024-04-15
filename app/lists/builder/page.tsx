@@ -15,7 +15,6 @@ import ListGamemode from "./components/ListGamemode"
 import { listState } from "../state"
 
 const page = () => {
-	const { list } = listState()
 	return (
 		<div className="w-full flex flex-col pb-24">
 			<BreadCrumbs>

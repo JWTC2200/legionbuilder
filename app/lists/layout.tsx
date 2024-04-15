@@ -8,6 +8,7 @@ import { useSearchParams } from "next/navigation"
 import { getList } from "@/app/firebase/firestore/getList"
 import { List } from "@type/listTypes"
 import { toast } from "react-toastify"
+import ListModelsList from "@lists/components/ListModelsList"
 
 const layout = ({ children }: { children: React.ReactNode }) => {
 	const { setList } = listState()
@@ -43,6 +44,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
 				pauseOnFocusLoss={false}
 			/>
 			{children}
+			<ListModelsList />
 		</Main>
 	)
 }
