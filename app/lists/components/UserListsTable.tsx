@@ -41,7 +41,7 @@ const UserListsTable = () => {
 								<h3 className="">{`${list.name} (${list.gamemode ? list.gamemode : "standard"})`}</h3>
 							</Link>
 							<div className="flex items-center gap-2 text-xl">
-								<button onClick={() => handleListModels(list)}>
+								<button onClick={() => handleListModels(list)} className="hover:text-tertiary-700">
 									<FaListAlt />
 								</button>
 								<DuplicateList list={list} />
