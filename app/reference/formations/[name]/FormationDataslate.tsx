@@ -19,7 +19,7 @@ const FormationDataslate = ({ formation }: properties) => {
 	})
 
 	return (
-		<article className="max-w-screen-xl p-2 border-2 border-black bg-dataslate rounded-lg">
+		<article className="max-w-screen-xl sm:p-2 bg-dataslate clip-path-halfagon-lg">
 			<div className="border-2 border-black bg-primary-950 text-primary-50 py-1 px-3 mb-2">
 				<h2 className="text-2xl py-1 text-center font-graduate font-bold">{formation.name}</h2>
 			</div>

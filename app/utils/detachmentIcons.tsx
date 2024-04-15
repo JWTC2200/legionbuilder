@@ -14,6 +14,7 @@ import {
 	TankTread,
 	Tower,
 } from "@components/Icons"
+import React from "react"
 
 const detachmentIcons: { [key: string]: React.ReactNode } = {
 	[DETACHMENT_TYPE.hq]: <Skull />,

@@ -5,10 +5,17 @@ interface update {
 
 export const updateData: update[] = [
 	{
+		date: "15/04/24",
+		updates: [
+			"Added formation special rules to the reference.",
+			"Added a button to the builder to display formation info.",
+		],
+	},
+	{
 		date: "11/04/24",
 		updates: [
 			"Changed a list builder warning from no more than 30% allies to 70% of list must be from the main faction. This is just a friendly warning when making matched play list and doesn't prevent you from making lists ignoring matched play requirements.",
-			"Fixed an issue with trying to view a Tank Commanders non-existant dataslate",
+			"Fixed an issue with trying to view a Tank Commanders non-existent dataslate",
 			"Corrected an error with additional Dreadnought Drop pods",
 		],
 	},

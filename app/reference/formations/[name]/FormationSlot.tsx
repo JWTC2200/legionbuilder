@@ -10,7 +10,7 @@ function FormationSlot({ slotId }: properties) {
 
 	return slot ? (
 		<div className="flex flex-col justify-center items-center text-center bg-primary-950 text-primary-950 w-40 h-32 p-2 border-2 border-black rounded-xl bg-dataslate">
-			<span className="text-3xl">{getDetachmentIcon(slot.type)}</span>
+			{getDetachmentIcon(slot.type)}
 			<p className="font-semibold font-graduate">{slot.type}</p>
 			{slot.description ? <p className="italic text-sm">{slot.description}</p> : null}
 		</div>
