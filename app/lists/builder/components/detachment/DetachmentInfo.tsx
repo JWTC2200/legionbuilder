@@ -30,7 +30,7 @@ const DetachmentInfo = ({ detachmentSlot }: properties) => {
 
 	return (
 		<div className="w-full flex flex-wrap gap-2 sm:gap-4 justify-center items-center relative py-1">
-			{unitReference[0] && !unitReference[0].unique ? (
+			{unitReference[0]?.main_unit.length ? (
 				<button
 					onClick={handleDetachmentSideWidget}
 					className="font-graduate text-xl sm:text-2xl font-bold text-tertiary-300 hover:text-primary-300 active:text-tertiary-500 p-1">
