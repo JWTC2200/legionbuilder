@@ -5,6 +5,12 @@ interface update {
 
 export const updateData: update[] = [
 	{
+		date: "18/04/24",
+		updates: [
+			"Fixed an issue with Legion Tactical Detachments extra Missile support counting as Plasma support in the list models. You might have to reselect the additional missile support to fix it.",
+		],
+	},
+	{
 		date: "15/04/24",
 		updates: [
 			"Added formation special rules to the reference.",
