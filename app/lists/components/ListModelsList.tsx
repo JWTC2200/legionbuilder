@@ -26,7 +26,7 @@ function ListModelsList() {
 		.map((upgrade) =>
 			upgrade.upgrades.map((entry) => {
 				const unitInfo = unitData.filter((unit) => unit.id === entry.unit_ref)[0]
-				return { name: unitInfo.name, number: entry.number, faction: unitInfo.faction }
+				return { name: unitInfo.name, number: entry.size, faction: unitInfo.faction }
 			})
 		)
 		.flat()
