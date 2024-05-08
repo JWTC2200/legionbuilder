@@ -8,7 +8,6 @@ export const updateData: update[] = [
 		date: "07/05/24",
 		updates: [
 			"Fixed typo with Knight Moirax.",
-			"Added missing tempest rockets to Storm Eagle.",
 			"Fixed list models counding Moirax and Armiger Talons as only one model.",
 		],
 	},
