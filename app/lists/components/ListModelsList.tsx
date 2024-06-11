@@ -75,7 +75,7 @@ function ListModelsList() {
 					<div className="px-2 pt-1 text-lg">
 						{faction.map((model) => {
 							return (
-								<div>
+								<div key={`${model.name}xx${model.number}`}>
 									{model.name}, {model.number}
 								</div>
 							)
