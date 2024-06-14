@@ -5,6 +5,13 @@ interface update {
 
 export const updateData: update[] = [
 	{
+		date: "14/06/24",
+		updates: [
+			"Fixed incorrect Auxilia Basilisk Costs",
+			"Tweaked the slot type bar colour to hopefully make it more visible. I'll tackle this more thoroughly with the next book release. Hope this helps for now.",
+		],
+	},
+	{
 		date: "07/05/24",
 		updates: [
 			"Fixed typo with Knight Moirax.",

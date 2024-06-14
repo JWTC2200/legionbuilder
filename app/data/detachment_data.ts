@@ -2505,8 +2505,8 @@ export const detachmentData: DETACHMENT[] = [
 				name: "Additional Basilisk",
 				unit_ref: 2025,
 				options: [
-					{ number: 4, cost: 130, size: 4 },
-					{ number: 8, cost: 260, size: 8 },
+					{ number: 4, cost: 140, size: 4 },
+					{ number: 8, cost: 280, size: 8 },
 				],
 			},
 		],
