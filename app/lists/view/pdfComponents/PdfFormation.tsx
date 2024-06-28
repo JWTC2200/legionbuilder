@@ -22,7 +22,7 @@ const PdfFormation = ({ list, formation }: Properties) => {
 				{formation.name}, {totalFormationPoints(list, formation)}pts
 			</Text>
 			<PdfBreakPoints list={list} formation={formation} />
-			{formation.detachment_groups.map((group, index) => {
+			{formation.detachment_groups.map((group) => {
 				return <PdfFormationGroup list={list} formationGroup={group} />
 			})}
 		</View>

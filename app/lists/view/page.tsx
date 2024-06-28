@@ -9,7 +9,7 @@ import Formation from "./components/Formation"
 import SaveListBtn from "../builder/components/SaveListBtn"
 import DataslateSideWidget from "../builder/components/DataslateSideWidget"
 import { FaListAlt } from "@react-icons/all-files/fa/FaListAlt"
-import { Document, Page, StyleSheet, Text, View } from "@react-pdf/renderer"
+import { Document, Page, StyleSheet } from "@react-pdf/renderer"
 import { pdfStyles } from "@lists/view/pdfStyles"
 import dynamic from "next/dynamic"
 import PdfFormation from "@lists/view/pdfComponents/PdfFormation"
@@ -66,7 +66,7 @@ const page = () => {
 			</button>
 			<button>
 				<PDFDownloadLink document={<ListPdf />} fileName={list.name}>
-					{({ blob, url, loading, error }) => (loading ? "Loading document..." : "Download now!")}
+					{({ loading }) => (loading ? "Loading document..." : "Download pdf")}
 				</PDFDownloadLink>
 			</button>
 
