@@ -1,5 +1,6 @@
 "use client"
 
+import React from "react"
 import { listModelState, listState } from "@/app/lists/state"
 import { BreadCrumbs, Crumb } from "@/app/components/BreadCrumbs"
 import useAuthState from "@/app/Auth"
@@ -9,10 +10,10 @@ import SaveListBtn from "../builder/components/SaveListBtn"
 import DataslateSideWidget from "../builder/components/DataslateSideWidget"
 import { FaListAlt } from "@react-icons/all-files/fa/FaListAlt"
 import { Document, Page, StyleSheet, Text, View } from "@react-pdf/renderer"
-import React from "react"
 import { pdfStyles } from "@lists/view/pdfStyles"
-
 import dynamic from "next/dynamic"
+import PdfFormation from "@lists/view/pdfComponents/PdfFormation"
+import PdfListInfo from "@lists/view/pdfComponents/PdfListInfo"
 
 const PDFDownloadLink = dynamic(() => import("@react-pdf/renderer").then((mod) => mod.PDFDownloadLink), {
 	ssr: false,
@@ -33,22 +34,13 @@ const page = () => {
 		)
 	}
 
-	const MyDoc = () => {
+	const ListPdf = () => {
 		return (
 			<Document>
 				<Page size="A4" style={styles.page}>
-					<View style={styles.section}>
-						<Text>
-							<Text>{list.name}</Text>
-							{` ${totalListPoints(list).totalPoints} / ${list.points}pts`}
-						</Text>
-					</View>
+					<PdfListInfo list={list} />
 					{list.formations.map((formation) => {
-						return (
-							<View style={styles.section}>
-								<Text>{formation.name}</Text>
-							</View>
-						)
+						return <PdfFormation list={list} formation={formation} />
 					})}
 				</Page>
 			</Document>
@@ -73,7 +65,7 @@ const page = () => {
 				<FaListAlt className="mr-2  text-xl" /> List Models
 			</button>
 			<button>
-				<PDFDownloadLink document={<MyDoc />} fileName="somename.pdf">
+				<PDFDownloadLink document={<ListPdf />} fileName={list.name}>
 					{({ blob, url, loading, error }) => (loading ? "Loading document..." : "Download now!")}
 				</PDFDownloadLink>
 			</button>
