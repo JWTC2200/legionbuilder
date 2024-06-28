@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { Analytics } from "@vercel/analytics/react"
-import { ReactNode } from "react"
+import { ReactNode, Suspense } from "react"
 import ATBG from "public/images/AT_bg.jpg"
 import Image from "next/image"
 import "./globals.css"
@@ -22,9 +22,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 					<Image src={ATBG} fill alt="background" className="z-0" style={{ objectFit: "cover" }} />
 				</div>
 				<AuthContextProvider>
-					<NavBar />
-					{children}
-					{/* <Maintenance /> */}
+					<Suspense>
+						<NavBar />
+						{children}
+					</Suspense>
 					<Analytics />
 				</AuthContextProvider>
 			</body>
