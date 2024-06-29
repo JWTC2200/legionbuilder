@@ -5,6 +5,10 @@ interface update {
 
 export const updateData: update[] = [
 	{
+		date: "29/06/2024",
+		updates: ["Fixed Legion Command Squad detachment dataslate", "Fixed a few typos here and there"],
+	},
+	{
 		date: "14/06/24",
 		updates: [
 			"Fixed incorrect Auxilia Basilisk Costs",

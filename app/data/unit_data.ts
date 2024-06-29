@@ -24,7 +24,7 @@ export const unitData: UNIT_DATASHEET[] = [
 			{ name: "Commander" },
 			{ name: "Inspire", value: '8"' },
 			{ name: "Invulnerable Save", value: "6+" },
-			{ name: "Master Tactitian" },
+			{ name: "Master Tactician" },
 			{ name: "Medicae" },
 		],
 	},

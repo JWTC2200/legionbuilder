@@ -21,7 +21,7 @@ export const detachmentData: DETACHMENT[] = [
 		max_size: 1,
 		main_unit: [1000],
 		related_unit: [],
-		dataslate_loadout: [],
+		dataslate_loadout: [{ text_option: ["Legion combi-bolters"] }],
 		upgrade_options: [],
 		loadout_options: [],
 		datasheet_info: [],
