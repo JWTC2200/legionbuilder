@@ -55,6 +55,15 @@ export const pdfStyles: Styles = {
 	detachment_slot_type: {
 		fontSize: "12px",
 	},
+	boxes: {
+		flexDirection: "row",
+		gap: "2px",
+	},
+	box: {
+		height: "10px",
+		width: "10px",
+		border: true,
+	},
 	upgrades: {
 		marginLeft: "10px",
 	},

@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from "@react-pdf/renderer"
 import { pdfStyles } from "@lists/view/pdfStyles"
 import { currentDetachmentSize, totalDetachmentPoints } from "@lists/builder/components/detachment/utils"
 import { findLoadoutBySlotId, findUpgradeBySlotId } from "@lists/builder/utils"
+import PdfDamageBoxes from "@lists/view/pdfComponents/PdfDamageBoxes"
 
 interface properties {
 	list: List
@@ -21,6 +22,7 @@ const PdfDetachment = ({ list, detachment }: properties) => {
 				<Text style={styles.detachment_slot_type}>{detachment.slot_type}</Text>: {detachment.name} (
 				{currentDetachmentSize(list, detachment.slot_id)}), {totalDetachmentPoints(list, detachment.slot_id)}pts
 			</Text>
+			<PdfDamageBoxes list={list} detachment={detachment} />
 			{upgrades?.length ? (
 				<View style={styles.upgrades}>
 					{upgrades.map((upgrade) => {
