@@ -4,7 +4,6 @@ import { StyleSheet, Text, View } from "@react-pdf/renderer"
 import { pdfStyles } from "@lists/view/pdfStyles"
 import { currentDetachmentSize, totalDetachmentPoints } from "@lists/builder/components/detachment/utils"
 import { findLoadoutBySlotId, findUpgradeBySlotId } from "@lists/builder/utils"
-import PdfDamageBoxes from "@lists/view/pdfComponents/PdfDamageBoxes"
 
 interface properties {
 	list: List
@@ -22,34 +21,34 @@ const PdfDetachment = ({ list, detachment }: properties) => {
 				<Text style={styles.detachment_slot_type}>{detachment.slot_type}</Text>: {detachment.name} (
 				{currentDetachmentSize(list, detachment.slot_id)}), {totalDetachmentPoints(list, detachment.slot_id)}pts
 			</Text>
-			<PdfDamageBoxes list={list} detachment={detachment} />
+
 			{upgrades?.length ? (
 				<View style={styles.upgrades}>
-					{upgrades.map((upgrade) => {
+					{upgrades.map((upgrade, index) => {
 						const upgradeCost =
 							list.gamemode === "titandeath" && upgrade.td_ek
 								? upgrade.td_ek + upgrade.cost
 								: upgrade.cost
 						return (
-							<Text>
+							<Text key={`pdf-upgrades-${detachment.slot_id}-${index}`}>
 								- {upgrade.number} {upgrade.name} {upgradeCost}pts
 							</Text>
 						)
 					})}
-					)
 				</View>
 			) : null}
+
 			{loadouts?.length ? (
 				<View style={styles.loadouts}>
 					<Text>Loadouts: </Text>
-					{loadouts.map((loadout) => {
+					{loadouts.map((loadout, index) => {
 						return (
-							<View style={styles.loadout}>
+							<View style={styles.loadout} key={`pdf-loadout-${detachment.slot_id}-${index}`}>
 								<Text style={styles.loadout_number}>x{loadout.number}</Text>
 								<View>
-									{loadout.weapons.map((weapon) => {
+									{loadout.weapons.map((weapon, indexTwo) => {
 										return (
-											<Text>
+											<Text key={`pdf-loadout-${detachment.slot_id}-${index}-${indexTwo}`}>
 												{weapon.location}: {weapon.weapon}
 												{weapon.cost ? `, ${weapon.cost}pts` : ""}
 											</Text>
@@ -58,7 +57,7 @@ const PdfDetachment = ({ list, detachment }: properties) => {
 								</View>
 							</View>
 						)
-					})}{" "}
+					})}
 				</View>
 			) : null}
 		</View>

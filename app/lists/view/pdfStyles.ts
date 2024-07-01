@@ -8,8 +8,7 @@ export const pdfStyles: Styles = {
 	},
 	list_info: {
 		fontSize: "12px",
-		border: true,
-		borderWidth: "2px",
+		border: "2px",
 		marginBottom: "4px",
 	},
 	list_title: {
@@ -28,7 +27,7 @@ export const pdfStyles: Styles = {
 	},
 	formation: {
 		marginBottom: "8px",
-		border: true,
+		border: "1px",
 		padding: "4px",
 	},
 	formation_name: {
@@ -50,30 +49,50 @@ export const pdfStyles: Styles = {
 		marginBottom: "3px",
 	},
 	detachment: {
-		marginBottom: "4px",
+		marginBottom: "0px",
 	},
 	detachment_slot_type: {
 		fontSize: "12px",
 	},
+	box_detachment: {
+		marginLeft: "12px",
+	},
+	box_spacing: {
+		marginBottom: "1px",
+		marginTop: "1px",
+	},
 	boxes: {
+		marginTop: "3px",
 		flexDirection: "row",
-		gap: "2px",
+		gap: "3px",
+	},
+	box_name: {
+		marginRight: "2px",
+		marginTop: "4px",
+	},
+	box_unit: {
+		flexDirection: "row",
+		marginRight: "2px",
 	},
 	box: {
-		height: "10px",
-		width: "10px",
-		border: true,
+		height: "8px",
+		width: "8px",
+		border: "1px",
+		marginRight: "1px",
 	},
 	upgrades: {
 		marginLeft: "10px",
+		marginTop: "2px",
+		marginBottom: "2px",
 	},
 	loadouts: {
 		marginTop: "2px",
-		marginBottom: "4px",
+		marginBottom: "2px",
 		marginLeft: "10px",
 	},
 	loadout: {
 		flexDirection: "row",
+		marginBottom: "2px",
 	},
 	loadout_number: {
 		alignSelf: "center",

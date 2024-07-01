@@ -66,7 +66,7 @@ export interface ListUpgrades {
 
 export interface ListUpgrade {
 	name: string
-	unit_ref: number
+	unit_ref: number //unitData.id
 	number: number
 	cost: number
 	td_ek?: number //titandeath engine killer cost

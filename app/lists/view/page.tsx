@@ -14,6 +14,7 @@ import { pdfStyles } from "@lists/view/pdfStyles"
 import dynamic from "next/dynamic"
 import PdfFormation from "@lists/view/pdfComponents/PdfFormation"
 import PdfListInfo from "@lists/view/pdfComponents/PdfListInfo"
+import PdfDamageFormation from "@lists/view/pdfComponents/PdfDamageFormation"
 
 const PDFDownloadLink = dynamic(() => import("@react-pdf/renderer").then((mod) => mod.PDFDownloadLink), {
 	ssr: false,
@@ -39,8 +40,27 @@ const page = () => {
 			<Document>
 				<Page size="A4" style={styles.page}>
 					<PdfListInfo list={list} />
-					{list.formations.map((formation) => {
-						return <PdfFormation list={list} formation={formation} />
+					{list.formations.map((formation, index) => {
+						return <PdfFormation list={list} formation={formation} key={`pdf-${formation.id}-${index}`} />
+					})}
+				</Page>
+			</Document>
+		)
+	}
+
+	const ListDamageBoxesPdf = () => {
+		return (
+			<Document>
+				<Page size="A4" style={styles.page}>
+					<PdfListInfo list={list} />
+					{list.formations.map((formation, index) => {
+						return (
+							<PdfDamageFormation
+								list={list}
+								formation={formation}
+								key={`damage-pdf-${formation.id}-${index}`}
+							/>
+						)
 					})}
 				</Page>
 			</Document>
@@ -66,7 +86,12 @@ const page = () => {
 			</button>
 			<button>
 				<PDFDownloadLink document={<ListPdf />} fileName={list.name}>
-					{({ loading }) => (loading ? "Loading document..." : "Download pdf")}
+					{({ loading }) => (loading ? "Loading document..." : "List pdf")}
+				</PDFDownloadLink>
+			</button>
+			<button>
+				<PDFDownloadLink document={<ListDamageBoxesPdf />} fileName={`${list.name}-damage`}>
+					{({ loading }) => (loading ? "Loading document..." : "List damage pdf")}
 				</PDFDownloadLink>
 			</button>
 

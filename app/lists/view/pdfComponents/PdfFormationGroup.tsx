@@ -25,7 +25,9 @@ const PdfFormationGroup = ({ list, formationGroup }: Properties) => {
 		<View style={styles.formation_group}>
 			<Text style={styles.formation_group_type}>{formationGroup.type}</Text>
 			{detachments.map((detachment) => {
-				return <PdfDetachment list={list} detachment={detachment} />
+				return (
+					<PdfDetachment list={list} detachment={detachment} key={`pdf-detachment-${detachment.slot_id}`} />
+				)
 			})}
 		</View>
 	)
