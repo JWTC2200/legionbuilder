@@ -3472,12 +3472,7 @@ export const detachmentData: DETACHMENT[] = [
 		related_unit: [],
 		dataslate_loadout: [
 			{
-				text_option: [
-					"Storm Eagle heavy bolter",
-					"Vengeance launcher",
-					"Wing Mounted lascannon",
-					"Tempest rockets",
-				],
+				text_option: ["Storm Eagle heavy bolter", "Vengeance launcher", "Wing Mounted lascannon"],
 			},
 		],
 		upgrade_options: [

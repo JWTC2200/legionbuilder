@@ -92,7 +92,7 @@ export const formationData: FORMATION[] = [
 			},
 			{
 				name: "Aerial Assault",
-				text: "All Detachments within the Formation that do no have the Flyer special rule must bein the game Embarked upon a Transport with the Flyer special rule.",
+				text: "All Detachments within the Formation that do not have the Flyer special rule must begin the game Embarked upon a Transport with the Flyer special rule.",
 			},
 		],
 	},
