@@ -865,7 +865,7 @@ export const detachmentData: DETACHMENT[] = [
 		],
 		datasheet_info: [
 			{
-				text: "A Legion Storm Eagle Squadron can purchase the following upgrades:",
+				text: "A Legion Fire Raptor Squadron can purchase the following upgrades:",
 				options: [
 					{ text: "1 additional Fire Raptor", cost: 100 },
 					{ text: "2 additional Fire Raptor", cost: 190 },
