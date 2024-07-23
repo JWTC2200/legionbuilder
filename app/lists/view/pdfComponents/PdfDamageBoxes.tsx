@@ -5,7 +5,7 @@ import { List, ListDetachment } from "@type/listTypes"
 import { currentDetachmentSize, totalDetachmentPoints } from "@lists/builder/components/detachment/utils"
 import { detachmentData } from "@data/detachment_data"
 import { unitData } from "@data/unit_data"
-import { findUpgradeBySlotId } from "@lists/builder/utils"
+import { findDetachmentSlot, findUpgradeBySlotId } from "@lists/builder/utils"
 
 interface properties {
 	list: List
@@ -22,12 +22,12 @@ const PdfDamageBoxes = ({ list, detachment }: properties) => {
 	const styles = StyleSheet.create(pdfStyles)
 
 	const detachmentInfo = detachmentData.find((entry) => entry.id === detachment.id)!
-	const mainUnit = unitData.find((unit) => unit.id === detachmentInfo.main_unit[0])!
+	const mainUnit = unitData.find((unit) => unit.id === detachmentInfo.main_unit[0])
 
 	const detachmentObject: PdFUnitObject = {
-		name: mainUnit.name,
+		name: mainUnit ? mainUnit.name : detachment.name,
 		number: detachmentInfo.base_size,
-		wounds: mainUnit.wounds,
+		wounds: mainUnit ? mainUnit.wounds : 0,
 	}
 
 	const upgrades = list.upgrades.find((upgrade) => upgrade.slot_id === detachment.slot_id)!
@@ -80,8 +80,9 @@ const PdfDamageBoxes = ({ list, detachment }: properties) => {
 	return (
 		<View>
 			<Text style={styles.box_spacing}>
-				<Text>{detachment.slot_type}</Text>: {detachment.name} (
-				{currentDetachmentSize(list, detachment.slot_id)}), {totalDetachmentPoints(list, detachment.slot_id)}pts
+				<Text>{detachment.slot_type ? detachment.slot_type : findDetachmentSlot(list, detachment).type}</Text>:{" "}
+				{detachment.name} ({currentDetachmentSize(list, detachment.slot_id)}),{" "}
+				{totalDetachmentPoints(list, detachment.slot_id)}pts
 			</Text>
 			{elements}
 		</View>

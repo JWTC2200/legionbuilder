@@ -56,14 +56,16 @@ export const pdfStyles: Styles = {
 	},
 	box_detachment: {
 		marginLeft: "12px",
+		flexDirection: "row",
 	},
 	box_spacing: {
 		marginBottom: "1px",
 		marginTop: "1px",
 	},
 	boxes: {
-		marginTop: "3px",
+		marginLeft: "3px",
 		flexDirection: "row",
+		alignItems: "center",
 		gap: "3px",
 	},
 	box_name: {

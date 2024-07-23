@@ -157,6 +157,13 @@ const removeLoadoutsByFormationID = (list: List, formation: ListFormation): List
 	return list.loadouts.filter((entry) => entry.formation_id !== formation.id)
 }
 
+export const findDetachmentSlot = (list: List, detachment: ListDetachment): ListDetachmentSlot => {
+	return list.formations
+		.find((formation) => formation.id === detachment.formation_id)!
+		.detachment_groups.map((group) => group.detachment_slots.filter((slot) => slot.id === detachment.slot_id))
+		.flat()[0]
+}
+
 export const findUpgradeBySlotId = (list: List, id: string): ListUpgrades | undefined => {
 	return list.upgrades.find((upgrade) => upgrade.slot_id === id)
 }

@@ -3343,7 +3343,7 @@ export const detachmentData: DETACHMENT[] = [
 				options: [{ number: 1, cost: 180, td_ek: 30, size: 3, break_strength: 2 }],
 			},
 			{
-				name: "Moriax Talon",
+				name: "Moirax Talon",
 				unit_ref: 4004,
 				options: [{ number: 1, cost: 200, size: 3, break_strength: 2 }],
 			},

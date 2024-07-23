@@ -3,6 +3,8 @@ import Link from "next/link"
 import { FaGithub, FaDiscord } from "react-icons/fa6"
 import { TfiEmail } from "react-icons/tfi"
 import FrontpageUpdates from "@components/FrontpageUpdates"
+import React from "react"
+import Image from "next/image"
 
 export default function Home() {
 	return (
@@ -14,19 +16,33 @@ export default function Home() {
 			</Link>
 
 			<div className="m-4 flex flex-col gap-2 text-lg sm:text-xl">
-				<p>Units and formations from The Great Slaughter have been added.</p>
-				<p>
-					There is also a selector to create lists for Titandeath. You can find it at the top of the lists
-					page{" "}
-					<Link
-						href={`https://legionbuilder.app/lists`}
-						className="text-primary-500 hover:text-primary-300 active:text-tertiary-400 underline">
-						here
-					</Link>
-					.
-				</p>
-				<p>As usual, if there are any errors please contact me!</p>
-				<p>Enjoy!</p>
+				<p>I've added two buttons to the list view page for download list PDFs</p>
+				<Image
+					src="/images/pdfbuttons.png"
+					alt={"Image of PDF download links"}
+					className={"rounded-xl"}
+					width={600}
+					height={400}
+				/>
+				<p>One is for the list with detachment upgrades and loadouts.</p>
+
+				<p>The other has damage boxes for the list so you can more easily record casualties.</p>
+				<div className={"flex flex-col gap-4 sm:max-w-full"}>
+					<Image
+						src={"/images/listpdf.png"}
+						alt={"Image of list PDF"}
+						className={"rounded-xl"}
+						width={600}
+						height={400}
+					/>
+					<Image
+						src={"/images/listdamagepdf.png"}
+						alt={"Image of list damage boxes"}
+						className={"rounded-xl"}
+						width={600}
+						height={400}
+					/>
+				</div>
 			</div>
 
 			<FrontpageUpdates />

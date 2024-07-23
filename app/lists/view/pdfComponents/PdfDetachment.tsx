@@ -3,7 +3,7 @@ import { List, ListDetachment } from "@type/listTypes"
 import { StyleSheet, Text, View } from "@react-pdf/renderer"
 import { pdfStyles } from "@lists/view/pdfStyles"
 import { currentDetachmentSize, totalDetachmentPoints } from "@lists/builder/components/detachment/utils"
-import { findLoadoutBySlotId, findUpgradeBySlotId } from "@lists/builder/utils"
+import { findDetachmentSlot, findLoadoutBySlotId, findUpgradeBySlotId } from "@lists/builder/utils"
 
 interface properties {
 	list: List
@@ -18,8 +18,11 @@ const PdfDetachment = ({ list, detachment }: properties) => {
 	return (
 		<View style={styles.detachment}>
 			<Text>
-				<Text style={styles.detachment_slot_type}>{detachment.slot_type}</Text>: {detachment.name} (
-				{currentDetachmentSize(list, detachment.slot_id)}), {totalDetachmentPoints(list, detachment.slot_id)}pts
+				<Text style={styles.detachment_slot_type}>
+					{detachment.slot_type ? detachment.slot_type : findDetachmentSlot(list, detachment).type}
+				</Text>
+				: {detachment.name} ({currentDetachmentSize(list, detachment.slot_id)}),{" "}
+				{totalDetachmentPoints(list, detachment.slot_id)}pts
 			</Text>
 
 			{upgrades?.length ? (
@@ -31,7 +34,7 @@ const PdfDetachment = ({ list, detachment }: properties) => {
 								: upgrade.cost
 						return (
 							<Text key={`pdf-upgrades-${detachment.slot_id}-${index}`}>
-								- {upgrade.number} {upgrade.name} {upgradeCost}pts
+								{upgrade.number} {upgrade.name} {upgradeCost}pts
 							</Text>
 						)
 					})}
@@ -44,7 +47,7 @@ const PdfDetachment = ({ list, detachment }: properties) => {
 					{loadouts.map((loadout, index) => {
 						return (
 							<View style={styles.loadout} key={`pdf-loadout-${detachment.slot_id}-${index}`}>
-								<Text style={styles.loadout_number}>x{loadout.number}</Text>
+								<Text style={styles.loadout_number}>{loadout.number}x</Text>
 								<View>
 									{loadout.weapons.map((weapon, indexTwo) => {
 										return (

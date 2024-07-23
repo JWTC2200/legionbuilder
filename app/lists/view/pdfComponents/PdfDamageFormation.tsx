@@ -33,7 +33,7 @@ const PdfDamageFormation = ({ list, formation }: Properties) => {
 				}
 
 				return (
-					<View style={styles.formation_group} key={`damage-formation-pdf-${formation.id}-${index}`}>
+					<View key={`damage-formation-pdf-${formation.id}-${index}`}>
 						{groupDetachments.map((detachment, index) => {
 							return (
 								<PdfDamageBoxes

@@ -1,5 +1,5 @@
 import { List, ListDetachment } from "@type/listTypes"
-import { findLoadoutBySlotId, findUpgradeBySlotId } from "../../builder/utils"
+import { findLoadoutBySlotId, findUpgradeBySlotId, findDetachmentSlot } from "../../builder/utils"
 import { currentDetachmentSize, totalDetachmentPoints } from "@lists/builder/components/detachment/utils"
 import { dataslateSideWidget } from "@lists/state"
 import { detachmentData } from "@/app/data/detachment_data"
@@ -32,13 +32,16 @@ const Detachment = ({ list, detachment }: properties) => {
 		<div className="text-xs sm:text-base flex flex-col justify-start items-start">
 			<button onClick={handleDetachmentSideWidget} className="text-start select-text">
 				<h5 className="text-base sm:text-lg">
-					<span className="font-bold">{detachment.slot_type}: </span>
+					<span className="font-bold">
+						{detachment.slot_type ? detachment.slot_type : findDetachmentSlot(list, detachment).type}:{" "}
+					</span>
 					<span className="text-primary-500 hover:text-primary-300 active:text-tertiary-400 font-graduate">
 						{name}
 					</span>
 					{` (${currentDetachmentSize(list, slot_id)}), ${totalDetachmentPoints(list, slot_id)}pts`}
 				</h5>
 			</button>
+
 			{upgrades?.length || loadouts?.length ? (
 				<div className="pl-2 flex flex-col py-1">
 					{upgrades &&
