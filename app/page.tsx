@@ -15,7 +15,7 @@ export default function Home() {
 				Create list
 			</Link>
 
-			<div className="m-4 flex flex-col gap-2 text-lg sm:text-xl">
+			<div className="m-4 flex flex-col items-center gap-2 text-lg sm:text-xl">
 				<p>I've added two buttons to the list view page for download list PDFs</p>
 				<Image
 					src="/images/pdfbuttons.png"
@@ -43,6 +43,7 @@ export default function Home() {
 						height={400}
 					/>
 				</div>
+				<p>As usual feel free to contact me on Discord if you have any issues or suggestions. Thanks!</p>
 			</div>
 
 			<FrontpageUpdates />
