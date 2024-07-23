@@ -9,6 +9,7 @@ import Formation from "./components/Formation"
 import SaveListBtn from "../builder/components/SaveListBtn"
 import DataslateSideWidget from "../builder/components/DataslateSideWidget"
 import { FaListAlt } from "@react-icons/all-files/fa/FaListAlt"
+import { FaFileDownload } from "@react-icons/all-files/fa/FaFileDownload"
 import { Document, Page, StyleSheet } from "@react-pdf/renderer"
 import { pdfStyles } from "@lists/view/pdfStyles"
 import dynamic from "next/dynamic"
@@ -79,26 +80,49 @@ const page = () => {
 					Save copy of list
 				</SaveListBtn>
 			) : null}
-			<button
-				onClick={() => setVisible(!visible)}
-				className="flex items-center text-primary-500 hover:text-primary-400 active:text-tertiary-400 font-graduate py-2">
-				<FaListAlt className="mr-2  text-xl" /> List Models
-			</button>
-			<button>
-				<PDFDownloadLink document={<ListPdf />} fileName={list.name}>
-					{({ loading }) => (loading ? "Loading document..." : "List pdf")}
-				</PDFDownloadLink>
-			</button>
-			<button>
-				<PDFDownloadLink document={<ListDamageBoxesPdf />} fileName={`${list.name}-damage`}>
-					{({ loading }) => (loading ? "Loading document..." : "List damage pdf")}
-				</PDFDownloadLink>
-			</button>
+			<div className={"flex flex-col gap-2 max-w-max mb-2"}>
+				<button
+					onClick={() => setVisible(!visible)}
+					className="flex items-center text-primary-500 hover:text-primary-400 active:text-tertiary-400 font-graduate">
+					<FaListAlt className="mr-1 text-xl" /> List Models
+				</button>
+				<button className="flex items-center text-primary-500 hover:text-primary-400 active:text-tertiary-400 font-graduate">
+					<PDFDownloadLink document={<ListPdf />} fileName={list.name} className={"flex items-center"}>
+						{({ loading }) =>
+							loading ? (
+								"Loading document..."
+							) : (
+								<>
+									<FaFileDownload className="mr-1 text-xl" />
+									List pdf
+								</>
+							)
+						}
+					</PDFDownloadLink>
+				</button>
+				<button className="flex items-center text-primary-500 hover:text-primary-400 active:text-tertiary-400 font-graduate">
+					<PDFDownloadLink
+						document={<ListDamageBoxesPdf />}
+						fileName={`${list.name}-damage`}
+						className={"flex items-center"}>
+						{({ loading }) =>
+							loading ? (
+								"Loading document..."
+							) : (
+								<>
+									<FaFileDownload className="mr-1 text-xl" />
+									Damage box pdf
+								</>
+							)
+						}
+					</PDFDownloadLink>
+				</button>
+			</div>
 
 			<div className="text-primary-50">
 				<h2 className="text-lg font-bold">
 					<span className="font-subrayada text-xl">{list.name}</span>
-					{` ${totalListPoints(list).totalPoints} / ${list.points}pts`}
+					{` ${totalListPoints(list).totalPoints} / ${list.points}pts`}w
 				</h2>
 				<h3 className="font-graduate capitalize">{`Gamemode: ${list.gamemode ? list.gamemode : "Standard"}`}</h3>
 				<h3 className="font-graduate">
