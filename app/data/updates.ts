@@ -5,6 +5,13 @@ interface update {
 
 export const updateData: update[] = [
 	{
+		date: "23/07/24",
+		updates: [
+			"Fixed a typo for Cerastus Knight Moriax Talon upgrades. The incorrect version will still appear until you manually remove it from your list, sorry!",
+			"Added two pdf download buttons for list pdfs on the list view page.",
+		],
+	},
+	{
 		date: "29/06/2024",
 		updates: ["Fixed Legion Command Squad detachment dataslate", "Fixed a few typos here and there"],
 	},

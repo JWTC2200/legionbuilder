@@ -1,4 +1,5 @@
 "use client"
+
 import { BreadCrumbs, Crumb } from "@/app/components/BreadCrumbs"
 import FormationAdd from "./components/formation/FormationAdd"
 import Formations from "./components/formation/Formations"
@@ -11,8 +12,6 @@ import ListInfo from "./components/ListInfo"
 import DataslateSideWidget from "./components/DataslateSideWidget"
 import BottomWidget from "./components/BottomWidget"
 import ListGamemode from "./components/ListGamemode"
-
-import { listState } from "../state"
 
 const page = () => {
 	return (

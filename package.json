@@ -11,11 +11,12 @@
   },
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
+    "@react-pdf/renderer": "^3.4.4",
     "@vercel/analytics": "^1.1.1",
     "eslint-config-airbnb": "^19.0.4",
     "firebase": "^10.7.0",
     "nanoid": "^5.0.3",
-    "next": "14.0.3",
+    "next": "^14.2.4",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^4.12.0",

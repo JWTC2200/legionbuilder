@@ -1,3 +1,5 @@
+"use client"
+
 import { useState } from "react"
 import { listModelState, listState } from "../../state"
 import useAuthState from "@/app/Auth"
