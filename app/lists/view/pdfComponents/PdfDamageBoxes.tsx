@@ -5,7 +5,7 @@ import { List, ListDetachment } from "@type/listTypes"
 import { currentDetachmentSize, totalDetachmentPoints } from "@lists/builder/components/detachment/utils"
 import { detachmentData } from "@data/detachment_data"
 import { unitData } from "@data/unit_data"
-import { findDetachmentSlot, findUpgradeBySlotId } from "@lists/builder/utils"
+import { findDetachmentSlot } from "@lists/builder/utils"
 
 interface properties {
 	list: List

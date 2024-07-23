@@ -10,7 +10,7 @@ interface properties {
 }
 
 const Detachment = ({ list, detachment }: properties) => {
-	const { name, slot_id, id, formation_id } = detachment
+	const { name, slot_id, id } = detachment
 	const { dataslate, visible, setVisible, setDataslate } = dataslateSideWidget()
 	const upgrades = findUpgradeBySlotId(list, slot_id)?.upgrades
 	const loadouts = findLoadoutBySlotId(list, slot_id)?.loadouts
@@ -19,7 +19,7 @@ const Detachment = ({ list, detachment }: properties) => {
 
 	const handleDetachmentSideWidget = () => {
 		if (unitReference[0]) {
-			if (visible === true && unitReference[0]?.id !== dataslate?.id) {
+			if (visible && unitReference[0]?.id !== dataslate?.id) {
 				setVisible(true)
 			} else {
 				setVisible(!visible)

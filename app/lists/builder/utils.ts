@@ -1,16 +1,16 @@
-import { emptyFormation, emptyDetachment, emptyUpgrade, emptyLoadouts } from "@/app/data/empty_objects"
+import { emptyDetachment, emptyFormation, emptyLoadouts, emptyUpgrade } from "@/app/data/empty_objects"
 import { formationData } from "@/app/data/formation_data"
 import { formationSlotData } from "@/app/data/formation_slot_data"
 import {
 	List,
-	ListFormation,
 	ListDetachment,
-	ListUpgrades,
-	ListLoadouts,
-	ListFormationGroup,
 	ListDetachmentSlot,
+	ListFormation,
+	ListFormationGroup,
+	ListLoadouts,
+	ListUpgrades,
 } from "@type//listTypes"
-import { FORMATION, DETACHMENT_TYPE } from "@type//types"
+import { DETACHMENT_TYPE, FORMATION } from "@type//types"
 import { totalDetachmentPoints } from "./components/detachment/utils"
 import { sum } from "@/app/utils/math"
 
@@ -35,22 +35,20 @@ export const createFormation = (id: number, formation: ListFormation): ListForma
 }
 
 const createDetachmentGroups = (formationData: FORMATION, formation: ListFormation): ListFormationGroup[] => {
-	const newDetachmentGroup = formationData.formation_slots.map((slot, index) => {
+	return formationData.formation_slots.map((slot, index) => {
 		return {
 			id: `${formation.id}index${index}`,
 			type: slot.slot_type,
 			detachment_slots: createDetachmentSlots(slot.slot_id, formation, `${formation.id}index${index}`),
 		}
 	})
-
-	return newDetachmentGroup
 }
 
 const createDetachmentSlots = (ids: number[], formation: ListFormation, idString: string): ListDetachmentSlot[] => {
 	const newSlotArray = ids.map((id, mainIndex) => {
 		return formationSlotData
 			.filter((slot) => slot.id === id)
-			.map((entry, index) => {
+			.map((entry) => {
 				return {
 					...entry,
 					id: `${idString}${entry.type}${mainIndex}`,
@@ -116,24 +114,20 @@ export const resetFormation = (list: List, prevFormation: ListFormation): List =
 		return formation
 	})
 
-	const newList: List = {
+	return {
 		...removeTrioByFormationID(list, prevFormation),
 		formations: newFormations,
 	}
-
-	return newList
 }
 
 export const removeFormation = (list: List, formation: ListFormation): List => {
 	const newFormations = list.formations.filter((form) => form.id !== formation.id)
 
-	const newList: List = {
+	return {
 		...removeTrioByFormationID(list, formation),
 		formations: newFormations,
 		detachments: list.detachments.filter((detachment) => detachment.formation_id !== formation.id),
 	}
-
-	return newList
 }
 
 const removeTrioByFormationID = (list: List, formation: ListFormation): List => {

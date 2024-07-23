@@ -10,7 +10,7 @@ export default function Home() {
 	return (
 		<Main className="flex flex-col items-center py-4">
 			<Link
-				href="/lists"
+				href="lists"
 				className="px-8 py-2 builder_title_background font-graduate text-lg text-center sm:text-2xl rounded-full border-2 border-backgrounds-950 hover:text-primary-100 active:text-primary-100 hover:border-primary-100 active:border-primary-100">
 				Create list
 			</Link>
@@ -56,7 +56,7 @@ export default function Home() {
 					Join our Discord! <FaDiscord />
 				</Link>
 				<Link
-					href="/contact"
+					href="contact"
 					className="hover:underline text-xl flex items-end gap-1 hover:text-tertiary-700 active:text-tertiary-700 focus:text-tertiary-700 mt-2">
 					Contact me <TfiEmail />
 				</Link>
