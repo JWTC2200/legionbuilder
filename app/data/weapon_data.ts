@@ -1817,7 +1817,71 @@ export const weapons: WEAPON_DATASHEET[] = [
 			},
 		],
 	},
-
+	{
+		id: 2064,
+		name: "Hull Mounted heavy bolter turret",
+		profiles: [
+			{
+				range: '12"',
+				dice: 2,
+				to_hit: 5,
+				ap: 0,
+				traits: [{ name: "Arc", value: "Front" }, { name: "Light" }, { name: "Point Defence" }],
+			},
+		],
+	},
+	{
+		id: 2065,
+		name: "Shadowsword heavy bolter sponsons",
+		profiles: [
+			{
+				range: '12"',
+				dice: 4,
+				to_hit: 5,
+				ap: 0,
+				traits: [{ name: "Arc", value: "Front" }, { name: "Light" }, { name: "Point Defence" }],
+			},
+		],
+	},
+	{
+		id: 2066,
+		name: "Stormsword heavy bolter sponsons",
+		profiles: [
+			{
+				range: '12"',
+				dice: 4,
+				to_hit: 5,
+				ap: 0,
+				traits: [{ name: "Arc", value: "Front" }, { name: "Light" }, { name: "Point Defence" }],
+			},
+		],
+	},
+	{
+		id: 2067,
+		name: "Stormsword siege cannon",
+		profiles: [
+			{
+				range: '30"',
+				dice: 1,
+				to_hit: 3,
+				ap: 2,
+				traits: [{ name: "Arc", value: "Front" }, { name: "Demolisher" }, { name: "Ignores Cover" }],
+			},
+		],
+	},
+	{
+		id: 2068,
+		name: "Stormblade heavy bolter sponsons",
+		profiles: [
+			{
+				range: '12"',
+				dice: 4,
+				to_hit: 5,
+				ap: 0,
+				traits: [{ name: "Arc", value: "Front" }, { name: "Light" }, { name: "Point Defence" }],
+			},
+		],
+	},
 	// ********************************************************************
 	// ***********************KNIGHT & TITAN WEAPONS **********************
 	// ********************************************************************

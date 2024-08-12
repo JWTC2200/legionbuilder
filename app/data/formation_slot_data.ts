@@ -368,4 +368,20 @@ export const formationSlotData: FORMATION_SLOT[] = [
 		options: [9009],
 		description: "Dedicated transport Termites",
 	},
+	{
+		id: 9015,
+		type: DETACHMENT_TYPE.battle,
+		faction: FACTION.solar,
+		restricted: true,
+		options: [2008, 2023, 2024, 2025, 2026],
+		description: "Leman Russ",
+	},
+	{
+		id: 9016,
+		type: DETACHMENT_TYPE.heavy,
+		faction: FACTION.solar,
+		restricted: true,
+		options: [2027],
+		description: "Auxilia Shadowsword",
+	},
 ]

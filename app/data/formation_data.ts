@@ -1,4 +1,4 @@
-import { FORMATION, FACTION, SLOT_TYPE } from "@type/types"
+import { FACTION, FORMATION, SLOT_TYPE } from "@type/types"
 
 export const formationData: FORMATION[] = [
 	{
@@ -286,6 +286,48 @@ export const formationData: FORMATION[] = [
 			{
 				name: "Mobile Fortifications",
 				text: "While two or more models from this Formation are within range of the same Objective marker, increase the Tactical Strength of each model from this Formation that is within range of that Objective marker by 1 when determining which player captures that Objective marker.",
+			},
+		],
+	},
+	{
+		id: 2006,
+		name: "Solar Auxilia Leman Russ Spearhead",
+		faction: FACTION.solar,
+		subfaction: null,
+		allegiance: null,
+		formation_slots: [
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [9004, 9015, 9015, 9015] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [2004, 2005, 2006, 2008] },
+		],
+		rules: [
+			{
+				name: "Armored Company",
+				text: "Leman RUss slots in this Formation must be filled with Leman Russ Strike Squadrons, Leman Russ Executioner Squadrons, Leman Russ Demolisher Squadrons, Leman Russ Annihilator Squadrons or Leman Russ Exterminator Squadrons",
+			},
+			{
+				name: "Tank Commander",
+				text: " One Super-heavy Vehicle model from a Compulsory Detachment must be upgraded to a Tank Commander for +10 points (see page 178 of the Legions Imperialis Rulebook).",
+			},
+		],
+	},
+	{
+		id: 2007,
+		name: "Solar Auxilia Titan Hunter Company",
+		faction: FACTION.solar,
+		subfaction: null,
+		allegiance: null,
+		formation_slots: [
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [9016, 9016, 9016] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [2006, 2006] },
+		],
+		rules: [
+			{
+				name: "Tank Commander",
+				text: " One Super-heavy Vehicle model from a Compulsory Detachment must be upgraded to a Tank Commander for +10 points (see page 178 of the Legions Imperialis Rulebook).",
+			},
+			{
+				name: "Titan Hunters",
+				text: "If an Auxilia Shadowsword Detachment from this Formation that is issued with a First Fire Order is firing at a Titan Detachment, volcano cannon that models in the Auxilia Shadowsword Detachment are equipped with are treated as having the Accurate weapon trait",
 			},
 		],
 	},

@@ -3050,6 +3050,138 @@ export const detachmentData: DETACHMENT[] = [
 			},
 		],
 	},
+	{
+		id: 2027,
+		name: "Auxilia Shadowsword Squadron",
+		faction: FACTION.solar,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: [DETACHMENT_TYPE.heavy],
+		base_cost: 140,
+		base_size: 1,
+		max_size: 3,
+		main_unit: [2030],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: [
+					"Volcano cannnon",
+					"Hull Mounted heavy bolter turret",
+					"Shadowsword heavy bolter sponsons",
+					"Lascannon sponson turrets",
+				],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Shadowsword",
+				unit_ref: 2030,
+				options: [
+					{ number: 1, cost: 130, size: 1 },
+					{ number: 2, cost: 260, size: 2 },
+				],
+			},
+		],
+		loadout_options: [],
+		datasheet_info: [
+			{
+				text: "A Auxilia Shadowsword Squadron can purchase the following upgrades:",
+				options: [
+					{ text: "1 additional Shadowsword", cost: 130 },
+					{ text: "2 additional Shadowsword", cost: 260 },
+				],
+			},
+		],
+	},
+	{
+		id: 2028,
+		name: "Auxilia Stormsword Squadron",
+		faction: FACTION.solar,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: [DETACHMENT_TYPE.heavy],
+		base_cost: 100,
+		base_size: 1,
+		max_size: 3,
+		main_unit: [2031],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: [
+					"Stormsword siege cannon",
+					"Hull Mounted heavy bolter turret",
+					"Shadowsword heavy bolter sponsons",
+					"Lascannon sponson turrets",
+				],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Stormsword",
+				unit_ref: 2031,
+				options: [
+					{ number: 1, cost: 90, size: 1 },
+					{ number: 2, cost: 180, size: 2 },
+				],
+			},
+		],
+		loadout_options: [],
+		datasheet_info: [
+			{
+				text: "A Auxilia Stormsword Squadron can purchase the following upgrades:",
+				options: [
+					{ text: "1 additional Stormsword", cost: 90 },
+					{ text: "2 additional Stormsword", cost: 180 },
+				],
+			},
+		],
+	},
+	{
+		id: 2028,
+		name: "Auxilia Stormblade Squadron",
+		faction: FACTION.solar,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: [DETACHMENT_TYPE.heavy],
+		base_cost: 120,
+		base_size: 1,
+		max_size: 3,
+		main_unit: [2032],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: [
+					"Plasma blastgun",
+					"Hull Mounted heavy bolter turret",
+					"Shadowsword heavy bolter sponsons",
+					"Lascannon sponson turrets",
+				],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Stormblade",
+				unit_ref: 2032,
+				options: [
+					{ number: 1, cost: 110, size: 1 },
+					{ number: 2, cost: 220, size: 2 },
+				],
+			},
+		],
+		loadout_options: [],
+		datasheet_info: [
+			{
+				text: "A Auxilia Stormblade Squadron can purchase the following upgrades:",
+				options: [
+					{ text: "1 additional Stormblade", cost: 110 },
+					{ text: "2 additional Stormblade", cost: 220 },
+				],
+			},
+		],
+	},
 	// ********************************************************************
 	// *********************KNIGHT & TITAN DETACHMENTS ********************
 	// ********************************************************************
