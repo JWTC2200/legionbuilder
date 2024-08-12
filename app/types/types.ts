@@ -165,7 +165,7 @@ export interface DETACHMENT {
 	subfaction: SUBFACTION_TYPE | null
 	allegiance: ALLEGIANCE | null
 	unique: boolean
-	detachment_type: DETACHMENT_TYPE
+	detachment_type: DETACHMENT_TYPE[]
 	base_cost: number
 	td_ek?: number //titandeath enginekiller
 	base_size: number

@@ -9,13 +9,14 @@ import { BreadCrumbs, Crumb, ReferenceSelector } from "@components/BreadCrumbs"
 import Sticky from "@components/Sticky"
 import { Row } from "@components/HTML"
 import FactionList from "@/app/reference/FactionList"
+import { sortedByNameKey } from "@app/utils/sorting"
 
 const page = () => {
 	const sortByDetachmentType = (array: DETACHMENT[]): DETACHMENT[] => {
 		let sortedArray = []
 		for (let i = 0; i < detachmentTypeArray.length; i++) {
 			for (let j = 0; j < array.length; j++) {
-				if (array[j].detachment_type === detachmentTypeArray[i]) {
+				if (array[j].detachment_type[0] === detachmentTypeArray[i]) {
 					sortedArray.push(array[j])
 				}
 			}
@@ -36,10 +37,12 @@ const page = () => {
 				{factionTypeArray.map((faction) => (
 					<FactionList faction={faction} key={faction}>
 						{sortByDetachmentType(
-							detachmentData.filter(
-								(detachmentFaction) =>
-									detachmentFaction.faction === faction && !detachmentFaction.unique
-							)
+							sortedByNameKey(
+								detachmentData.filter(
+									(detachmentFaction) =>
+										detachmentFaction.faction === faction && !detachmentFaction.unique
+								)
+							) as DETACHMENT[]
 						).map((detachment) => (
 							<Row
 								key={detachment.name}
@@ -48,7 +51,7 @@ const page = () => {
 									key={detachment.name}
 									href={`/reference/detachments/${detachment.name.replaceAll(" ", "_")} `}
 									className="flex items-center gap-2 w-full py-1">
-									<span>{getDetachmentIcon(detachment.detachment_type)}</span>
+									<span>{getDetachmentIcon(detachment.detachment_type[0])}</span>
 									<span>{detachment.name}</span>
 								</Link>
 							</Row>

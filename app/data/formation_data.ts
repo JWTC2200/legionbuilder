@@ -155,6 +155,27 @@ export const formationData: FORMATION[] = [
 			},
 		],
 	},
+	{
+		id: 1007,
+		name: "Legion Subterranean Assault",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		formation_slots: [
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [1000, 1001, 1001, 1002] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [1001, 1001, 1002, 1002, 9014] },
+		],
+		rules: [
+			{
+				name: "Dedicated Transports",
+				text: "All Legiones Astartes Detachments within this Formation that contain only Infantry models (excluding models with the Deep Strike special rule) must be upgraded with Legion Termites as Dedicated Transports.",
+			},
+			{
+				name: "Subterranean Assault",
+				text: 'When a Detachment from this Formation that has been upgraded with Legion Termites as Dedicated Transports Deep Strikes, after placing and scattering the initial model, roll a D6 for each enemy Detachment with a Scale of 2 or less that is within 6" of that initial model. On a 5+, that enemy Detachment suffers the effects of the Quake trait as if a hit had been scored against it by a weapon with that trait.',
+			},
+		],
+	},
 	// ********************************************************************
 	// ******************* SOLAR AUXILIA FORMATIONS **********************
 	// ********************************************************************

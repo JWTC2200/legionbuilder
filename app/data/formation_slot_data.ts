@@ -360,4 +360,12 @@ export const formationSlotData: FORMATION_SLOT[] = [
 		options: [9008],
 		description: "Dedicated transport Land Raiders",
 	},
+	{
+		id: 9014,
+		type: DETACHMENT_TYPE.dedicated,
+		faction: FACTION.astartes,
+		restricted: true,
+		options: [9009],
+		description: "Dedicated transport Termites",
+	},
 ]

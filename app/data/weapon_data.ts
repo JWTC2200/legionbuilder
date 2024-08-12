@@ -1765,6 +1765,58 @@ export const weapons: WEAPON_DATASHEET[] = [
 			},
 		],
 	},
+	{
+		id: 2060,
+		name: "Exterminator autocannon",
+		profiles: [
+			{
+				range: '16"',
+				dice: 3,
+				to_hit: 5,
+				ap: 1,
+				traits: [{ name: "Light AT" }],
+			},
+		],
+	},
+	{
+		id: 2061,
+		name: "Executioner plasma cannon",
+		profiles: [
+			{
+				range: '12"',
+				dice: 2,
+				to_hit: 4,
+				ap: 1,
+				traits: [{ name: "Light AT" }],
+			},
+		],
+	},
+	{
+		id: 2062,
+		name: "Demolisher cannon",
+		profiles: [
+			{
+				range: '12"',
+				dice: 1,
+				to_hit: 4,
+				ap: 3,
+				traits: [{ name: "Demolisher" }, { name: "Ignores Cover" }],
+			},
+		],
+	},
+	{
+		id: 2063,
+		name: "Annihilator twin lascannon",
+		profiles: [
+			{
+				range: '22"',
+				dice: 1,
+				to_hit: 4,
+				ap: 1,
+				traits: [{ name: "Accurate" }, { name: "Anti-tank" }],
+			},
+		],
+	},
 
 	// ********************************************************************
 	// ***********************KNIGHT & TITAN WEAPONS **********************

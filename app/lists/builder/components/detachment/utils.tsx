@@ -13,7 +13,7 @@ export const getSelectorIdArray = (detachmentSlot: ListDetachmentSlot): DETACHME
 	return detachmentData
 		.filter(
 			(detachment) =>
-				detachment.detachment_type === detachmentSlot.type &&
+				detachment.detachment_type.includes(detachmentSlot.type) &&
 				detachment.faction === detachmentSlot.faction &&
 				!detachment.unique
 		)
