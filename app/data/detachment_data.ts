@@ -1,4 +1,4 @@
-import { DETACHMENT, FACTION, ALLEGIANCE, DETACHMENT_TYPE } from "@type/types"
+import { ALLEGIANCE, DETACHMENT, DETACHMENT_TYPE, FACTION } from "@type/types"
 
 // astartes 1000-1999, solar 2000-2999, knights-titans 4000-4999, unique detachments 9000-9999
 
@@ -1220,7 +1220,7 @@ export const detachmentData: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: DETACHMENT_TYPE.transport,
-		base_cost: 6,
+		base_cost: 18,
 		base_size: 1,
 		max_size: 8,
 		break_strength: 0,
@@ -1228,7 +1228,7 @@ export const detachmentData: DETACHMENT[] = [
 		related_unit: [1027],
 		dataslate_loadout: [
 			{
-				text_option: ["Turrent Mounted twin bolter"],
+				text_option: ["Turret Mounted twin bolter"],
 			},
 		],
 		upgrade_options: [
@@ -1348,6 +1348,208 @@ export const detachmentData: DETACHMENT[] = [
 				],
 			},
 		],
+	},
+	{
+		id: 1028,
+		name: "Legion Sicaran Punisher Squadron",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: DETACHMENT_TYPE.battle,
+		base_cost: 110,
+		base_size: 2,
+		max_size: 6,
+		main_unit: [1029],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: [
+					"Hull Mounted heavy bolter",
+					"Punisher rotary cannon",
+					"Sponson Mounted heavy bolters or Sponson Mounted lascannon",
+				],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Sicaran",
+				unit_ref: 1029,
+				options: [
+					{ number: 1, cost: 50, size: 1 },
+					{ number: 2, cost: 100, size: 2 },
+					{ number: 3, cost: 150, size: 3 },
+					{ number: 4, cost: 200, size: 4 },
+				],
+			},
+		],
+		loadout_options: [
+			{
+				location: "Sponsons",
+				options: [
+					{ name: "Heavy bolters", cost: 0 },
+					{ name: "Lascannons", cost: 0 },
+				],
+			},
+		],
+		datasheet_info: [
+			{
+				text: "A Legion Sicaran Punisher Squadron can purchase any of the following upgrades. It may purchase the same upgrade multiple times, to a maximum Detachment size of 6:",
+				options: [
+					{ text: "1 additional Sicaran", cost: 50 },
+					{ text: "2 additional Sicaran", cost: 100 },
+					{ text: "4 additional Sicaran", cost: 200 },
+				],
+			},
+		],
+	},
+	{
+		id: 1029,
+		name: "Legion Sicaran Arcus Squadron",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: DETACHMENT_TYPE.battle,
+		base_cost: 115,
+		base_size: 2,
+		max_size: 6,
+		main_unit: [1030],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: [
+					"Hull Mounted heavy bolter",
+					"Arcus missile launcher",
+					"Sponson Mounted heavy bolters or Sponson Mounted lascannon",
+				],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Sicaran",
+				unit_ref: 1030,
+				options: [
+					{ number: 1, cost: 60, size: 1 },
+					{ number: 2, cost: 110, size: 2 },
+					{ number: 3, cost: 170, size: 3 },
+					{ number: 4, cost: 220, size: 4 },
+				],
+			},
+		],
+		loadout_options: [
+			{
+				location: "Sponsons",
+				options: [
+					{ name: "Heavy bolters", cost: 0 },
+					{ name: "Lascannons", cost: 0 },
+				],
+			},
+		],
+		datasheet_info: [
+			{
+				text: "A Legion Sicaran Punisher Squadron can purchase any of the following upgrades. It may purchase the same upgrade multiple times, to a maximum Detachment size of 6:",
+				options: [
+					{ text: "1 additional Sicaran", cost: 60 },
+					{ text: "2 additional Sicaran", cost: 110 },
+					{ text: "4 additional Sicaran", cost: 220 },
+				],
+			},
+		],
+	},
+	{
+		id: 1030,
+		name: "Legion Sabre Squadron",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: DETACHMENT_TYPE.light,
+		base_cost: 120,
+		base_size: 4,
+		max_size: 8,
+		main_unit: [1031],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: [
+					"Hull Mounted neutron blaster or Hull Mounted Anvilus autocannon",
+					"Hull Mounted heavy bolter or Hull Mounted multi-melta",
+					"Sabre missiles",
+				],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Sabre",
+				unit_ref: 1031,
+				options: [
+					{ number: 2, cost: 55, size: 2 },
+					{ number: 4, cost: 110, size: 4 },
+				],
+			},
+		],
+		loadout_options: [
+			{
+				location: "Main",
+				options: [
+					{ name: "Neutron blaster", cost: 0 },
+					{ name: "Anvilus autocannon", cost: 0 },
+				],
+			},
+			{
+				location: "hull",
+				options: [
+					{ name: "Heavy bolters", cost: 0 },
+					{ name: "Multi-melta", cost: 0 },
+				],
+			},
+		],
+		datasheet_info: [
+			{
+				text: "A Legion Sabre Squadron can purchase any of the following upgrades:",
+				options: [
+					{ text: "2 additional Sabre", cost: 55 },
+					{ text: "4 additional Sabre", cost: 110 },
+				],
+			},
+		],
+	},
+	{
+		id: 1031,
+		name: "Legion Termite Detachment",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: DETACHMENT_TYPE.transport,
+		base_cost: 18,
+		base_size: 1,
+		max_size: 8,
+		main_unit: [1032],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: ["Termite twin-linked bolters"],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Termite",
+				unit_ref: 1032,
+				options: [
+					{ number: 1, cost: 18, size: 1 },
+					{ number: 2, cost: 36, size: 2 },
+					{ number: 3, cost: 54, size: 3 },
+					{ number: 4, cost: 72, size: 4 },
+					{ number: 5, cost: 90, size: 5 },
+					{ number: 6, cost: 108, size: 6 },
+					{ number: 7, cost: 126, size: 7 },
+				],
+			},
+		],
+		loadout_options: [],
+		datasheet_info: [],
 	},
 	// ********************************************************************
 	// ********************** SOlAR AUXLIA DETACHMENTS ********************
@@ -3589,7 +3791,7 @@ export const detachmentData: DETACHMENT[] = [
 		related_unit: [1027],
 		dataslate_loadout: [
 			{
-				text_option: ["Turrent Mounted twin bolter"],
+				text_option: ["Turret Mounted twin bolter"],
 			},
 		],
 		upgrade_options: [
@@ -3669,7 +3871,7 @@ export const detachmentData: DETACHMENT[] = [
 		related_unit: [1027],
 		dataslate_loadout: [
 			{
-				text_option: ["Turrent Mounted twin bolter"],
+				text_option: ["Turret Mounted twin bolter"],
 			},
 		],
 		upgrade_options: [
@@ -3800,6 +4002,139 @@ export const detachmentData: DETACHMENT[] = [
 		datasheet_info: [
 			{
 				text: "Any Dracosan may exchange its Hull Mounted twin lascannon for a Hull Mounted demolisher cannon for +5pts per model. Any model that does replaces its Transport (4) special rule with the Transport (2) special rule",
+			},
+		],
+	},
+	{
+		id: 9007,
+		name: "Legion Spartan Detachment",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: DETACHMENT_TYPE.transport,
+		base_cost: 80,
+		base_size: 1,
+		max_size: 8,
+		main_unit: [1023],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: [
+					"Sponson Mounted quad lascannon or Sponson Mounted laser destroyers",
+					"Hull Mounted heavy bolters",
+				],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Spartan",
+				unit_ref: 1023,
+				options: [
+					{ number: 1, cost: 80, size: 1 },
+					{ number: 2, cost: 160, size: 2 },
+					{ number: 3, cost: 240, size: 3 },
+					{ number: 4, cost: 320, size: 4 },
+					{ number: 5, cost: 400, size: 5 },
+					{ number: 6, cost: 480, size: 6 },
+					{ number: 7, cost: 560, size: 7 },
+					{ number: 8, cost: 640, size: 8 },
+					{ number: 9, cost: 720, size: 9 },
+					{ number: 10, cost: 800, size: 10 },
+				],
+			},
+		],
+		loadout_options: [
+			{
+				location: "Sponsons",
+				options: [
+					{ name: "Quad lascannons", cost: 0 },
+					{ name: "Laser destroyers", cost: 0 },
+				],
+			},
+			{
+				location: "Hull",
+				options: [
+					{ name: "Heavy bolter", cost: 0 },
+					{ name: "Lascannon", cost: 2 },
+				],
+			},
+			{
+				location: "Pintle",
+				options: [
+					{ name: "None", cost: 0 },
+					{ name: "Multi-melta", cost: 5 },
+				],
+			},
+		],
+		datasheet_info: [
+			{
+				text: "Any Spartan may exchange its Hull Mounted heavy bolter for a Hull Mounted lascannon  for +2pts per model",
+			},
+			{
+				text: "Any Spartan may be equipped with one of the following:",
+				options: [{ text: "Pintle Mounted multi-melta", cost: 5 }],
+			},
+		],
+	},
+	{
+		id: 9008,
+		name: "Legion Land Raider Detachment",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: DETACHMENT_TYPE.transport,
+		base_cost: 40,
+		base_size: 1,
+		max_size: 8,
+		main_unit: [1024],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: ["Sponson Mounted twin-linked lascannon"],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Land Raider",
+				unit_ref: 1024,
+				options: [
+					{ number: 1, cost: 40, size: 1 },
+					{ number: 2, cost: 80, size: 2 },
+					{ number: 3, cost: 120, size: 3 },
+					{ number: 4, cost: 160, size: 4 },
+					{ number: 5, cost: 200, size: 5 },
+					{ number: 6, cost: 240, size: 6 },
+					{ number: 7, cost: 280, size: 7 },
+					{ number: 8, cost: 320, size: 8 },
+					{ number: 9, cost: 360, size: 9 },
+					{ number: 10, cost: 400, size: 10 },
+					{ number: 11, cost: 440, size: 11 },
+					{ number: 12, cost: 480, size: 12 },
+					{ number: 13, cost: 520, size: 13 },
+					{ number: 14, cost: 560, size: 14 },
+					{ number: 15, cost: 600, size: 15 },
+					{ number: 16, cost: 640, size: 16 },
+					{ number: 17, cost: 680, size: 17 },
+					{ number: 18, cost: 720, size: 18 },
+					{ number: 19, cost: 760, size: 19 },
+					{ number: 20, cost: 800, size: 20 },
+				],
+			},
+		],
+		loadout_options: [
+			{
+				location: "Pintle",
+				options: [
+					{ name: "None", cost: 0 },
+					{ name: "Multi-melta", cost: 5 },
+				],
+			},
+		],
+		datasheet_info: [
+			{
+				text: "For every three Land Raiders in the Detachment, one Land Raider can be equipped with a Pintle Mounted multi-melta for +5pts per model.",
 			},
 		],
 	},

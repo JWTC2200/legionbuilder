@@ -1,4 +1,3 @@
-import { FaC } from "react-icons/fa6"
 import { DETACHMENT_TYPE, FACTION, FORMATION_SLOT } from "../types/types"
 
 export const formationSlotData: FORMATION_SLOT[] = [
@@ -329,5 +328,36 @@ export const formationSlotData: FORMATION_SLOT[] = [
 		restricted: true,
 		options: [9006],
 		description: "Dedicated transport Dracosans",
+	},
+	{
+		id: 9010,
+		type: DETACHMENT_TYPE.support,
+		faction: FACTION.astartes,
+		restricted: true,
+		options: [1006],
+		description: "Legion Terminators",
+	},
+	{
+		id: 9011,
+		type: DETACHMENT_TYPE.support,
+		faction: FACTION.astartes,
+		restricted: true,
+		options: [1006, 1009, 1009],
+	},
+	{
+		id: 9012,
+		type: DETACHMENT_TYPE.dedicated,
+		faction: FACTION.astartes,
+		restricted: true,
+		options: [9007],
+		description: "Dedicated transport Spartans",
+	},
+	{
+		id: 9013,
+		type: DETACHMENT_TYPE.dedicated,
+		faction: FACTION.astartes,
+		restricted: true,
+		options: [9008],
+		description: "Dedicated transport Land Raiders",
 	},
 ]

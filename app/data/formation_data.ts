@@ -134,6 +134,27 @@ export const formationData: FORMATION[] = [
 			},
 		],
 	},
+	{
+		id: 1006,
+		name: "Legion Heavy Assault Spearhead",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		formation_slots: [
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [9010, 9010, 9011, 9011] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [1005, 1005, 1008, 1006, 1006, 9012, 9013] },
+		],
+		rules: [
+			{
+				name: "Heavy Assault",
+				text: "Support Detachment slots in this Formation must be filled with Legion Terminator Detachments, Legion Dreadnought Talons or Leviathan Siege Dreadnought Detachments.",
+			},
+			{
+				name: "Dedicated Transports",
+				text: "All Legiones Astartes Detachments within this Formation that contain only Infantry models must be upgraded with Legion Spartans or Legion Land Raiders as Dedicated Transports.",
+			},
+		],
+	},
 	// ********************************************************************
 	// ******************* SOLAR AUXILIA FORMATIONS **********************
 	// ********************************************************************

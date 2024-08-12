@@ -858,6 +858,109 @@ export const weapons: WEAPON_DATASHEET[] = [
 			},
 		],
 	},
+	{
+		id: 1062,
+		name: "Punisher rotary cannon",
+		profiles: [
+			{
+				range: '12"',
+				dice: 4,
+				to_hit: 4,
+				ap: 1,
+				traits: [{ name: "Light AT" }, { name: "Rapid Fire" }],
+			},
+		],
+	},
+	{
+		id: 1063,
+		name: "Arcus missile launcher",
+		profiles: [
+			{
+				range: '16"',
+				dice: 2,
+				to_hit: 4,
+				ap: 2,
+				traits: [{ name: "Anti-tank" }, { name: "Rapid Fire" }, { name: "Ripple Fire" }],
+			},
+			{
+				range: '20"',
+				dice: 2,
+				to_hit: 5,
+				ap: 2,
+				traits: [{ name: "Anti-tank" }, { name: "Skyfire" }, { name: "Tracking" }],
+			},
+		],
+	},
+	{
+		id: 1064,
+		name: "Hull Mounted Anvilus autocannon",
+		profiles: [
+			{
+				range: '16"',
+				dice: 3,
+				to_hit: 5,
+				ap: 1,
+				traits: [{ name: "Arc", value: "Front" }, { name: "Light AT" }],
+			},
+		],
+	},
+	{
+		id: 1065,
+		name: "Hull Mounted neutron blaster",
+		profiles: [
+			{
+				range: '12"',
+				dice: 1,
+				to_hit: 4,
+				ap: 3,
+				traits: [{ name: "Arc", value: "Front" }, { name: "Anti-tank" }, { name: "Shock Pulse" }],
+			},
+		],
+	},
+	{
+		id: 1066,
+		name: "Sabre missiles",
+		profiles: [
+			{
+				range: '12"',
+				dice: 1,
+				to_hit: 5,
+				ap: 1,
+				traits: [{ name: "Arc", value: "Front" }, { name: "Light AT" }],
+			},
+		],
+	},
+	{
+		id: 1067,
+		name: "Hull Mounted multi-melta",
+		profiles: [
+			{
+				range: '6"',
+				dice: 1,
+				to_hit: 4,
+				ap: 3,
+				traits: [{ name: "Arc", value: "Front" }, { name: "Anti-tank" }],
+			},
+		],
+	},
+	{
+		id: 1068,
+		name: "Termite twin-linked bolters",
+		profiles: [
+			{
+				range: '8"',
+				dice: 2,
+				to_hit: 5,
+				ap: 0,
+				traits: [
+					{ name: "Arc", value: "Front" },
+					{ name: "Assault" },
+					{ name: "Light" },
+					{ name: "Point Defence" },
+				],
+			},
+		],
+	},
 	// ********************************************************************
 	// ************************ SOlAR AUXLIA WEAPONS **********************
 	// ********************************************************************
