@@ -1,7 +1,7 @@
 import { detachmentData } from "@/app/data/detachment_data"
-import { List, ListDetachment, ListDetachmentSlot, ListUpgrades, ListLoadouts, ListLoadout } from "@type/listTypes"
-import { DETACHMENT, SUBFACTION_TYPE, ALLEGIANCE } from "@type/types"
-import { emptyDetachment, emptyUpgrade, emptyLoadouts } from "@/app/data/empty_objects"
+import { List, ListDetachment, ListDetachmentSlot, ListLoadout, ListLoadouts, ListUpgrades } from "@type/listTypes"
+import { ALLEGIANCE, DETACHMENT, SUBFACTION_TYPE } from "@type/types"
+import { emptyDetachment, emptyLoadouts, emptyUpgrade } from "@/app/data/empty_objects"
 import { toast } from "react-toastify"
 
 export const getSelectorIdArray = (detachmentSlot: ListDetachmentSlot): DETACHMENT[] => {
@@ -177,9 +177,7 @@ export const createLoadout = (
 		loadouts: [...loadoutSlot.loadouts.filter((loadout) => loadout.id !== newLoadout.id), newLoadout],
 	}
 
-	const newList = updateListLoadouts(list, newLoadoutSlot)
-
-	return newList
+	return updateListLoadouts(list, newLoadoutSlot)
 }
 
 export const incrementLoadout = (list: List, loadoutSlot: ListLoadouts, id: string, value = 1): List => {
@@ -202,9 +200,7 @@ export const incrementLoadout = (list: List, loadoutSlot: ListLoadouts, id: stri
 		],
 	}
 
-	const newList = updateListLoadouts(list, newLoadoutSlot)
-
-	return newList
+	return updateListLoadouts(list, newLoadoutSlot)
 }
 
 const updateListLoadouts = (list: List, updatedLoadout: ListLoadouts): List => {

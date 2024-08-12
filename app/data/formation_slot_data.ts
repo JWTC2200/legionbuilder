@@ -1,4 +1,4 @@
-import { DETACHMENT_TYPE, FACTION, FORMATION_SLOT } from "../types/types"
+import { DETACHMENT_TYPE, FACTION, FORMATION_SLOT } from "@type/types"
 
 export const formationSlotData: FORMATION_SLOT[] = [
 	{

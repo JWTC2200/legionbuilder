@@ -1,4 +1,4 @@
-import { WEAPON_DATASHEET } from "../types/types"
+import { WEAPON_DATASHEET } from "@type/types"
 
 // astartes 1000-1999, solar 2000-2999, knights-titans 4000-4999
 

@@ -1,9 +1,9 @@
 "use client"
 
 import Link from "next/link"
-import { DETACHMENT, factionTypeArray, detachmentTypeArray } from "../../types/types"
-import { detachmentData } from "../../data/detachment_data"
-import { getDetachmentIcon } from "../../utils/detachmentIcons"
+import { DETACHMENT, factionTypeArray, detachmentTypeArray } from "@type/types"
+import { detachmentData } from "@data/detachment_data"
+import { getDetachmentIcon } from "@app/utils/detachmentIcons"
 import Main from "@components/Main"
 import { BreadCrumbs, Crumb, ReferenceSelector } from "@components/BreadCrumbs"
 import Sticky from "@components/Sticky"
