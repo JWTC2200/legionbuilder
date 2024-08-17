@@ -1,8 +1,5 @@
 import { listState } from "@/app/lists/state"
 import { ALLEGIANCE } from "@type/types"
-import { removeFormation } from "@lists/builder/utils"
-import { List, ListFormation } from "@type/listTypes"
-import { all } from "deepmerge"
 
 const ListAllegiance = () => {
 	const { list, setList } = listState()
