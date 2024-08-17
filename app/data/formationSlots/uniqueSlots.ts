@@ -100,7 +100,7 @@ export const uniqueSlots: FORMATION_SLOT[] = [
 		type: DETACHMENT_TYPE.support,
 		faction: FACTION.astartes,
 		restricted: true,
-		options: [1006, 1009, 1009],
+		options: [1006, 1008, 1009],
 	},
 	{
 		id: 9012,
