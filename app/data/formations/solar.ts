@@ -22,7 +22,7 @@ export const solar: FORMATION[] = [
 		rules: [
 			{
 				name: "Disciplined Ranks",
-				text: " Compulsory COre Detachment slots within this Formation must be filled with Auxilia Lasrifle Tercio Detachments",
+				text: " Compulsory Core Detachment slots within this Formation must be filled with Auxilia Lasrifle Tercio Detachments",
 			},
 		],
 	},

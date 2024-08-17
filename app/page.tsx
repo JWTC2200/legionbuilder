@@ -9,6 +9,12 @@ import Image from "next/image"
 export default function Home() {
 	return (
 		<Main className="flex flex-col items-center py-4">
+			<div className="m-4 flex flex-col items-center text-center gap-2 text-lg sm:text-xl">
+				<p>Detachments and regular Formations from The Devastation of Tallarn book have been added!</p>
+				<p>Formations of Legend and Battle Honours should come in a later update.</p>
+				<p>Have fun!</p>
+			</div>
+
 			<Link
 				href="lists"
 				className="px-8 py-2 builder_title_background font-graduate text-lg text-center sm:text-2xl rounded-full border-2 border-backgrounds-950 hover:text-primary-100 active:text-primary-100 hover:border-primary-100 active:border-primary-100">
@@ -48,7 +54,7 @@ export default function Home() {
 
 			<FrontpageUpdates />
 
-			<section className="mx-4 self-start">
+			<div className="mx-4 self-start">
 				<h2 className="text-lg font-graduate text-tertiary-700 mt-4">Suggestions or feedback?</h2>
 				<Link
 					href="https://discord.gg/kEXsZdThSe"
@@ -67,7 +73,7 @@ export default function Home() {
         hover:text-tertiary-700 hover:underline active:text-tertiary-700 focus:text-tertiary-700 mt-2">
 					Github <FaGithub />
 				</Link>
-			</section>
+			</div>
 			<hr className="border rounded-full bg-stone-900 m-4 w-full" />
 			<footer className="mx-4">
 				<p>This website is unofficial and in no way endorsed by Games Workshop.</p>
