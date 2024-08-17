@@ -145,7 +145,7 @@ export const solar: FORMATION[] = [
 		subfaction: null,
 		allegiance: null,
 		formation_slots: [
-			{ slot_type: SLOT_TYPE.compulsory, slot_id: [9016, 9016, 9016] },
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [9004, 9016, 9016, 9016] },
 			{ slot_type: SLOT_TYPE.optional, slot_id: [2006, 2006] },
 		],
 		rules: [
