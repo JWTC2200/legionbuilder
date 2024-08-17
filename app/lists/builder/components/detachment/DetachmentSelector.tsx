@@ -15,6 +15,11 @@ const DetachmentSelector = ({ detachmentSlot }: properties) => {
 		(formation) => formation.id === detachmentSlot.formation_id
 	)!.subfaction
 
+	const compulsory = list.formations
+		.find((formation) => formation.id === detachmentSlot.formation_id)!
+		.detachment_groups.find((group) => group.type === "compulsory")!
+		.detachment_slots.filter((slot) => slot.id === detachmentSlot.id).length
+
 	const detachment = list.detachments.find((detachment) => detachment.slot_id === detachmentSlot.id)!
 
 	const selectedStyling = detachment?.id && " text-tertiary-500 font-semibold"
@@ -45,6 +50,18 @@ const DetachmentSelector = ({ detachmentSlot }: properties) => {
 		}
 	}
 
+	const nullOption = () => {
+		if (!compulsory) {
+			return <option value={"0"}>Select Detachment</option>
+		}
+
+		if (selectorOptions.length === 0 || selectorOptions.length > 1) {
+			return <option value={"0"}>Select Detachment</option>
+		}
+
+		return null
+	}
+
 	return (
 		<select
 			value={detachment && detachment.id ? detachment.id : "0"}
@@ -53,7 +70,8 @@ const DetachmentSelector = ({ detachmentSlot }: properties) => {
 				"w-full text-center py-1 px-2 border bg-secondary-700 border-primary-950 font-graduate text-secondary-300 hover:text-tertiary-300 active:text-tertiary-400" +
 				selectedStyling
 			}>
-			<option value={"0"}>Select Detachment</option>
+			{nullOption()}
+			{/* <option value={"0"}>Select Detachment</option> */}
 			{selectorOptions}
 		</select>
 	)
