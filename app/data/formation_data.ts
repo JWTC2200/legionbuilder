@@ -1,6 +1,7 @@
 import { FACTION, FORMATION, SLOT_TYPE } from "@type/types"
 import { astartes } from "@data/formations/astartes"
 import { solar } from "@data/formations/solar"
+import { legends } from "@data/formations/legends"
 
 export const formationData: FORMATION[] = [
 	...astartes,
@@ -52,4 +53,7 @@ export const formationData: FORMATION[] = [
 		formation_slots: [{ slot_type: SLOT_TYPE.compulsory, slot_id: [4001] }],
 		rules: [],
 	},
+
+	// Legends should go last
+	...legends,
 ]

@@ -8,19 +8,7 @@ const ListAllegiance = () => {
 	const { list, setList } = listState()
 
 	const changeAllegiance = (allegiance: ALLEGIANCE) => {
-		const invalidFormations = list.formations.filter((formation) => {
-			if (formation.allegiance !== null && formation.allegiance !== allegiance) return formation
-		})
-
-		const removeInvalidFormations = (list: List, formations: ListFormation[], count: number): List => {
-			if (count >= formations.length) return list
-
-			return removeInvalidFormations(removeFormation(list, formations[count]), formations, count + 1)
-		}
-
-		console.log(invalidFormations.map((formation) => formation.name))
-
-		setList({ ...removeInvalidFormations(list, invalidFormations, 0), allegiance: allegiance })
+		setList({ ...list, allegiance: allegiance })
 	}
 
 	return (

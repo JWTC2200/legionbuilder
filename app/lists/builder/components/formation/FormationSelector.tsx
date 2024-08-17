@@ -134,6 +134,7 @@ const FormationSelector = ({ formation }: FormationSelector) => {
 				</option>
 				{filteredFormations().map((format) => (
 					<option key={formation.id + format.name} value={format.id} className="text-primary-50">
+						{format.subfaction ? `${format.subfaction} ` : ""}
 						{format.name}
 					</option>
 				))}

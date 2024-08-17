@@ -11,7 +11,7 @@ const DetachmentAllegianceWarning = ({ slot_id }: properties) => {
 	const detachment = findDetachmentBySlotId(list, slot_id)
 	if (detachment) {
 		return detachment.allegiance !== null && detachment.allegiance !== list.allegiance ? (
-			<SimpleWarning>Detachment allegiance different from list</SimpleWarning>
+			<SimpleWarning>{detachment.allegiance} only detachment!</SimpleWarning>
 		) : null
 	}
 
