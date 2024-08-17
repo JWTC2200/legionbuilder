@@ -66,9 +66,9 @@ function ListModelsList() {
 
 	const unitHTML = sortModelsByFaction
 		.filter((length) => length.length)
-		.map((faction) => {
+		.map((faction, index) => {
 			return (
-				<div className="w-full" key={`list-models-list-${faction}`}>
+				<div className="w-full" key={`list-models-list-${index}`}>
 					<div className="banner_background text-primary-50 clip-path-halfagon-md text-center text-xl py-1 sm:py-2">
 						{faction[0].faction}
 					</div>
