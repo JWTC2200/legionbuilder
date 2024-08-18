@@ -36,7 +36,7 @@ export const legends: FORMATION[] = [
 		rules: [
 			{
 				name: "Sons of Perturabo",
-				text: "This FOrmation must be from the Iron Warriors Legion and can only be included in an Army with the Traitor Allegiance",
+				text: "This Formation must be from the Iron Warriors Legion and can only be included in an Army with the Traitor Allegiance",
 			},
 			{
 				name: "Hammerblow Assault",

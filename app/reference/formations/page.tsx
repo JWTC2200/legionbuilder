@@ -29,7 +29,9 @@ const page = () => {
 										key={formation.name}
 										href={`/reference/formations/${formation.name.replaceAll(" ", "_")} `}
 										className="flex items-center gap-2 w-full py-1">
-										<span>{formation.name}</span>
+										<span>
+											{formation.subfaction ? formation.subfaction + ": " : ""} {formation.name}
+										</span>
 									</Link>
 								</Row>
 							))}
