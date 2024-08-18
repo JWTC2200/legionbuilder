@@ -32,8 +32,14 @@ const FormationSelector = ({ formation }: FormationSelector) => {
 	const { list, setList } = listState()
 	const sideWidget = dataslateSideWidget()
 
-	const filteredFormations =
-		list.gamemode === "titandeath" ? formationData.filter((formation) => formation.id >= 4000) : formationData
+	const filteredFormations = () => {
+		const gameModeFormations =
+			list.gamemode === "titandeath" ? formationData.filter((formation) => formation.id >= 4000) : formationData
+
+		return gameModeFormations.filter((formation) => {
+			if (formation.allegiance === null || formation.allegiance === list.allegiance) return formation
+		})
+	}
 
 	const selectFormation = (id: number) => {
 		if (!id) {
@@ -126,8 +132,9 @@ const FormationSelector = ({ formation }: FormationSelector) => {
 				<option value="0" className="text-primary-50">
 					SELECT FORMATION
 				</option>
-				{filteredFormations.map((format) => (
+				{filteredFormations().map((format) => (
 					<option key={formation.id + format.name} value={format.id} className="text-primary-50">
+						{format.subfaction ? `${format.subfaction} ` : ""}
 						{format.name}
 					</option>
 				))}

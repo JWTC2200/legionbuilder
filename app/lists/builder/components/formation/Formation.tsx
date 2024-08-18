@@ -11,6 +11,7 @@ import FormationNickname from "./FormationNickname"
 import { totalFormationPoints } from "@lists/builder/utils"
 import { listState } from "@/app/lists/state"
 import ResizingBox from "@/app/components/ResizingBox"
+import SimpleWarning from "@lists/builder/components/warnings/SimpleWarning"
 
 interface properties {
 	formation: ListFormation
@@ -48,6 +49,9 @@ const Formation = ({ formation }: properties) => {
 					}>
 					<>
 						<div className={"flex flex-col justify-center items-center py-2 gap-2"}>
+							{formation.allegiance !== null && formation.allegiance !== list.allegiance ? (
+								<SimpleWarning>{formation.allegiance} only formation!</SimpleWarning>
+							) : null}
 							<div className="flex flex-wrap gap-2 items-center justify-center">
 								<FormationNickname formation={formation} />
 								{formation.faction === FACTION.astartes ? (
