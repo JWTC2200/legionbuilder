@@ -49,7 +49,7 @@ export const legends: FORMATION[] = [
 		name: "Harrow Group Arcadus",
 		faction: FACTION.astartes,
 		subfaction: SUBFACTION_TYPE.alphaLegion,
-		allegiance: ALLEGIANCE.traitor,
+		allegiance: null,
 		formation_slots: [
 			{ slot_type: SLOT_TYPE.compulsory, slot_id: [7006, 7006, 7007, 7008] },
 			{ slot_type: SLOT_TYPE.optional, slot_id: [7009, 7007, 7008] },
