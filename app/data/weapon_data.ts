@@ -1882,6 +1882,19 @@ export const weapons: WEAPON_DATASHEET[] = [
 			},
 		],
 	},
+	{
+		id: 2069,
+		name: "Lascannon sponson turrets",
+		profiles: [
+			{
+				range: '22"',
+				dice: 1,
+				to_hit: 4,
+				ap: 1,
+				traits: [{ name: "Anti-tank" }],
+			},
+		],
+	},
 	// ********************************************************************
 	// ***********************KNIGHT & TITAN WEAPONS **********************
 	// ********************************************************************
