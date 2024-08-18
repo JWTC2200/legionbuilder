@@ -81,4 +81,57 @@ export const legends: FORMATION_SLOT[] = [
 		restricted: true,
 		options: [7009],
 	},
+
+	// Tallarn Reborn Carmine Ambush Tercio
+	{
+		id: 7010,
+		type: DETACHMENT_TYPE.battle,
+		faction: FACTION.solar,
+		restricted: true,
+		options: [7010],
+	},
+	{
+		id: 7011,
+		type: DETACHMENT_TYPE.battle,
+		faction: FACTION.solar,
+		restricted: true,
+		options: [7011],
+	},
+	{
+		id: 7012,
+		type: DETACHMENT_TYPE.battle,
+		faction: FACTION.solar,
+		restricted: true,
+		options: [7012],
+	},
+	{
+		id: 7013,
+		type: DETACHMENT_TYPE.vanguard,
+		faction: FACTION.solar,
+		restricted: true,
+		options: [7013],
+	},
+
+	// Galibed Oathsworn Thyreos Siege Breaker Company
+	{
+		id: 7014,
+		type: DETACHMENT_TYPE.heavy,
+		faction: FACTION.solar,
+		restricted: true,
+		options: [7014],
+	},
+	{
+		id: 7015,
+		type: DETACHMENT_TYPE.artillery,
+		faction: FACTION.solar,
+		restricted: true,
+		options: [7015],
+	},
+	{
+		id: 7016,
+		type: DETACHMENT_TYPE.artillery,
+		faction: FACTION.solar,
+		restricted: true,
+		options: [7016],
+	},
 ]

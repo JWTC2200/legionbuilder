@@ -65,4 +65,42 @@ export const legends: FORMATION[] = [
 			},
 		],
 	},
+	{
+		id: 7003,
+		name: "Tallarn Reborn Carmine Ambush Tercio",
+		faction: FACTION.solar,
+		subfaction: null,
+		allegiance: ALLEGIANCE.loyalist,
+		formation_slots: [
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [9004, 7010, 7011, 7012] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [7013, 7013] },
+		],
+		rules: [
+			{
+				name: "Defenders of Tallarn",
+				text: "This formation can only be included in an Army with the Loyalist Allegiance",
+			},
+			{
+				name: "Ambush Tercio",
+				text: "Detachments from this Formation have the Forward Deployment and Scout special rules",
+			},
+		],
+	},
+	{
+		id: 7004,
+		name: "Galibed Oathsworn Thyreos Siege Breaker Company",
+		faction: FACTION.solar,
+		subfaction: null,
+		allegiance: ALLEGIANCE.traitor,
+		formation_slots: [
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [7014, 7015, 7016] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [7014, 7015] },
+		],
+		rules: [
+			{
+				name: "Despoilers of Tallarn",
+				text: "This formation can only be included in an Army with the Traitor Allegiance",
+			},
+		],
+	},
 ]
