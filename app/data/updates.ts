@@ -5,6 +5,13 @@ interface update {
 
 export const updateData: update[] = [
 	{
+		date: "18/08/24",
+		updates: [
+			"Added Formations of Legend",
+			"Compulsory slots will now be automatically filled if they have only one valid option",
+		],
+	},
+	{
 		date: "17/08/24",
 		updates: ["Added Detachments and Formations for Devastation of Tallarn."],
 	},

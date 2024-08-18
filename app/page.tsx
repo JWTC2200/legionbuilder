@@ -10,8 +10,11 @@ export default function Home() {
 	return (
 		<Main className="flex flex-col items-center py-4">
 			<div className="m-4 flex flex-col items-center text-center gap-2 text-lg sm:text-xl">
-				<p>Detachments and regular Formations from The Devastation of Tallarn book have been added!</p>
-				<p>Formations of Legend and Battle Honours should come in a later update.</p>
+				<p>
+					Detachments, Formations and Formations of Legend from The Devastation of Tallarn book have been
+					added!
+				</p>
+				<p>Battle Honours should come in a later update.</p>
 				<p>Have fun!</p>
 			</div>
 
