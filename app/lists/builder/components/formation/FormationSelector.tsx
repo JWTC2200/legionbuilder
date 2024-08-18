@@ -34,7 +34,9 @@ const FormationSelector = ({ formation }: FormationSelector) => {
 
 	const filteredFormations = () => {
 		const gameModeFormations =
-			list.gamemode === "titandeath" ? formationData.filter((formation) => formation.id >= 4000) : formationData
+			list.gamemode === "titandeath"
+				? formationData.filter((formation) => formation.id >= 4000 && formation.id <= 4999)
+				: formationData
 
 		return gameModeFormations.filter((formation) => {
 			if (formation.allegiance === null || formation.allegiance === list.allegiance) return formation
