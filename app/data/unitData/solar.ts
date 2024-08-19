@@ -568,7 +568,7 @@ export const solar: UNIT_DATASHEET[] = [
 		allegiance: null,
 		unique: false,
 		unit_type: { type: UNIT_TYPE.heavy, value: 3 },
-		name: "Stormsblade",
+		name: "Stormblade",
 		movement: '6"',
 		save: 2,
 		caf: 2,

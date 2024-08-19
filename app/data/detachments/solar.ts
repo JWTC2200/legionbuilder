@@ -1456,7 +1456,7 @@ export const solar: DETACHMENT[] = [
 		],
 	},
 	{
-		id: 2028,
+		id: 2029,
 		name: "Auxilia Stormblade Squadron",
 		faction: FACTION.solar,
 		subfaction: null,
