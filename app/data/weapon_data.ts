@@ -2211,7 +2211,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 	},
 	{
 		id: 4023,
-		name: "Acastus lascanon",
+		name: "Acastus lascannon",
 		profiles: [
 			{
 				range: '22"',
