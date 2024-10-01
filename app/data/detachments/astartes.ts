@@ -1330,7 +1330,7 @@ export const astartes: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional drop pod",
-				unit_ref: 1022,
+				unit_ref: 1028,
 				options: [
 					{ number: 2, cost: 32, size: 2 },
 					{ number: 4, cost: 64, size: 4 },
