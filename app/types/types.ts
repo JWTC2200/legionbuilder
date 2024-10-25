@@ -240,3 +240,9 @@ export interface ListModelsNames {
 	number: number
 	faction: FACTION
 }
+
+export interface CollectionEntry {
+	faction: FACTION
+	name: string
+	number: number
+}

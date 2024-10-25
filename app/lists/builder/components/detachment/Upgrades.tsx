@@ -1,7 +1,7 @@
 import { detachmentData } from "@/app/data/detachment_data"
 import { listState } from "@/app/lists/state"
 import { List, ListUpgrade, ListUpgrades } from "@type/listTypes"
-import SideMenuTitle from "../SideMenutitle"
+import SideMenuTitle from "../SideMenuTitle"
 
 interface properties {
 	slot_id: string | null

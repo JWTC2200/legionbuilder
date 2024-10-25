@@ -8,6 +8,7 @@ import { BreadCrumbs, Crumb, ReferenceSelector } from "@components/BreadCrumbs"
 import Sticky from "@components/Sticky"
 import { Row } from "@components/HTML"
 import FactionList from "@/app/reference/FactionList"
+import { sortUnitDatasheets } from "@app/utils/sorting"
 
 const page = () => {
 	return (
@@ -22,17 +23,19 @@ const page = () => {
 			<div className="w-full lg:flex lg:gap-4">
 				{factionTypeArray.map((faction) => (
 					<FactionList faction={faction} key={faction}>
-						{unitData
-							.filter((unitDataslate) => unitDataslate.faction === faction && !unitDataslate.unique)
-							.map((unit) => (
-								<Row key={unit.name} className="px-4 hover:bg-secondary-700 hover:text-secondary-50">
-									<Link
-										href={`/reference/units/${unit.name.replaceAll(" ", "_")} `}
-										className="block w-full py-1">
-										{unit.name}
-									</Link>
-								</Row>
-							))}
+						{sortUnitDatasheets(
+							unitData.filter(
+								(unitDataslate) => unitDataslate.faction === faction && !unitDataslate.unique
+							)
+						).map((unit) => (
+							<Row key={unit.name} className="px-4 hover:bg-secondary-700 hover:text-secondary-50">
+								<Link
+									href={`/reference/units/${unit.name.replaceAll(" ", "_")} `}
+									className="block w-full py-1">
+									{unit.name}
+								</Link>
+							</Row>
+						))}
 					</FactionList>
 				))}
 			</div>

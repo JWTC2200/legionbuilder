@@ -1,6 +1,6 @@
 import React from "react"
 import { listModelState, listState } from "@lists/state"
-import SideMenutitle from "@lists/builder/components/SideMenutitle"
+import SideMenuTitle from "@lists/builder/components/SideMenuTitle"
 import { detachmentData } from "@data/detachment_data"
 import { unitData } from "@data/unit_data"
 import { factionTypeArray, ListModelsNames } from "@type/types"
@@ -89,7 +89,7 @@ function ListModelsList() {
 		<div
 			onClick={() => setVisible(false)}
 			className={`fixed left-0 top-0 h-full bg-dataslate pt-20 lg:pt-32 p-1 lg:p-4 w-screen min-w-[320px] max-w-[600px] overflow-auto text-backgrounds-950 ease-in-out duration-200 z-20 flex flex-col items-center gap-2  font-graduate ${!visible ? "-translate-x-full" : "-translate-x-0"}`}>
-			<SideMenutitle>Click to close</SideMenutitle>
+			<SideMenuTitle>Click to close</SideMenuTitle>
 			{<h3 className="text-center font-semibold text-lg font-subrayada">{list.name}</h3>}
 			{unitHTML}
 			{unitHTML.length ? null : <p className="text-center">No Models</p>}

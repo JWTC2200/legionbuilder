@@ -24,13 +24,18 @@ export default function NavBar() {
 					}>
 					<ol className="flex flex-col lg:flex-row gap-6 mt-40 lg:-mt-0">
 						<NavItem>
-							<NavLink path="/reference" icon="skull">
+							<NavLink path="/reference" icon="book">
 								Reference
 							</NavLink>
 						</NavItem>
 						<NavItem>
-							<NavLink path="/lists" icon="builder">
+							<NavLink path="/lists" icon="lists">
 								Lists
+							</NavLink>
+						</NavItem>
+						<NavItem>
+							<NavLink path={"/collection"} icon={"collection"}>
+								Collection
 							</NavLink>
 						</NavItem>
 						{authenticated ? (
