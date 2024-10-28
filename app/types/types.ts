@@ -152,6 +152,7 @@ export interface FORMATION_RULES {
 export interface FORMATION_SLOTS {
 	slot_type: SLOT_TYPE
 	slot_id: number[]
+	text?: string
 }
 
 export interface FORMATION_SLOT {

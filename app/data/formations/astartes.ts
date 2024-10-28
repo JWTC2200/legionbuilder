@@ -16,7 +16,7 @@ export const astartes: FORMATION[] = [
 			{ slot_type: SLOT_TYPE.compulsory, slot_id: [1000, 1002, 1001, 1001] },
 			{ slot_type: SLOT_TYPE.optional, slot_id: [1009, 1001, 1010, 1010, 1002, 1002, 1003, 9000] },
 			{ slot_type: SLOT_TYPE.choice, slot_id: [1004, 1008] },
-			{ slot_type: SLOT_TYPE.choice, slot_id: [1007, 1005, 1006] },
+			{ slot_type: SLOT_TYPE.choice, slot_id: [1007, 1005, 1006], text: "Up to one of the following" },
 		],
 		rules: [
 			{
@@ -38,7 +38,7 @@ export const astartes: FORMATION[] = [
 		formation_slots: [
 			{ slot_type: SLOT_TYPE.compulsory, slot_id: [1000, 1002, 1001, 1009] },
 			{ slot_type: SLOT_TYPE.optional, slot_id: [1009, 1009, 1001, 1007, 1002, 1002, 1008] },
-			{ slot_type: SLOT_TYPE.choice, slot_id: [1006, 1007] },
+			{ slot_type: SLOT_TYPE.choice, slot_id: [1006, 1007], text: "Up to one of the following" },
 		],
 		rules: [],
 	},
@@ -51,7 +51,7 @@ export const astartes: FORMATION[] = [
 		formation_slots: [
 			{ slot_type: SLOT_TYPE.compulsory, slot_id: [1005, 1005, 1006] },
 			{ slot_type: SLOT_TYPE.optional, slot_id: [1004, 1005, 1005, 1006] },
-			{ slot_type: SLOT_TYPE.choice, slot_id: [1008, 1006] },
+			{ slot_type: SLOT_TYPE.choice, slot_id: [1008, 1006], text: "Up to one of the following" },
 		],
 		rules: [],
 	},

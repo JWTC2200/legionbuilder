@@ -10,7 +10,7 @@ interface properties {
 }
 
 export const FormationGroup = ({ formationGroup }: properties) => {
-	const { type, detachment_slots } = formationGroup
+	const { type, detachment_slots, text } = formationGroup
 	const { list } = listState()
 
 	const groupIds = formationGroupSlots(formationGroup)
@@ -22,6 +22,7 @@ export const FormationGroup = ({ formationGroup }: properties) => {
 				<h1 className="w-full text-center bg-tertiary-600 text-backgrounds-50 font-graduate">
 					~ {type} slots ~
 				</h1>
+				{text ? <div className={"font-graduate text-sm italic text-primary-50"}>{text}</div> : null}
 				{formationGroup.type === SLOT_TYPE.compulsory && slotsUsed < groupIds.length ? (
 					<SimpleWarning>Empty compulsory slots!</SimpleWarning>
 				) : null}

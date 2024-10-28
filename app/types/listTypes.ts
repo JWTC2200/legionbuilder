@@ -29,6 +29,7 @@ export interface ListFormationGroup {
 	id: string
 	type: SLOT_TYPE
 	detachment_slots: ListDetachmentSlot[]
+	text: string
 }
 
 export interface ListDetachmentSlot {

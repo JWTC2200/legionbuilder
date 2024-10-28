@@ -40,6 +40,7 @@ const createDetachmentGroups = (formationData: FORMATION, formation: ListFormati
 			id: `${formation.id}index${index}`,
 			type: slot.slot_type,
 			detachment_slots: createDetachmentSlots(slot.slot_id, formation, `${formation.id}index${index}`),
+			text: slot.text ? slot.text : "",
 		}
 	})
 }

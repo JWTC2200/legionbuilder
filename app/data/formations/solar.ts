@@ -16,8 +16,8 @@ export const solar: FORMATION[] = [
 		formation_slots: [
 			{ slot_type: SLOT_TYPE.compulsory, slot_id: [2000, 9003, 9003, 2002] },
 			{ slot_type: SLOT_TYPE.optional, slot_id: [2010, 2010, 2010, 2002, 2002, 2005, 2001] },
-			{ slot_type: SLOT_TYPE.choice, slot_id: [2004, 2003] },
-			{ slot_type: SLOT_TYPE.choice, slot_id: [2007, 2005, 2008] },
+			{ slot_type: SLOT_TYPE.choice, slot_id: [2004, 2003], text: "Up to one of the following" },
+			{ slot_type: SLOT_TYPE.choice, slot_id: [2007, 2005, 2008], text: "Up to one of the following" },
 		],
 		rules: [
 			{
@@ -35,7 +35,7 @@ export const solar: FORMATION[] = [
 		formation_slots: [
 			{ slot_type: SLOT_TYPE.compulsory, slot_id: [9004, 2005, 2005, 2006] },
 			{ slot_type: SLOT_TYPE.optional, slot_id: [2005, 2005, 2006] },
-			{ slot_type: SLOT_TYPE.choice, slot_id: [2005, 2007, 2008] },
+			{ slot_type: SLOT_TYPE.choice, slot_id: [2005, 2007, 2008], text: "Up to one of the following" },
 		],
 		rules: [
 			{
@@ -53,7 +53,7 @@ export const solar: FORMATION[] = [
 		formation_slots: [
 			{ slot_type: SLOT_TYPE.compulsory, slot_id: [2000, 9005, 2009, 2009] },
 			{ slot_type: SLOT_TYPE.optional, slot_id: [2002, 2001, 2008, 2003, 2003] },
-			{ slot_type: SLOT_TYPE.choice, slot_id: [2005, 2007, 2008] },
+			{ slot_type: SLOT_TYPE.choice, slot_id: [2005, 2007, 2008], text: "Up to one of the following" },
 		],
 		rules: [
 			{
