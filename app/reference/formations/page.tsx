@@ -2,13 +2,15 @@
 
 import Link from "next/link"
 import { formationData } from "@data/formation_data"
-import { factionTypeArray } from "@type/types"
+import { FACTION } from "@type/types"
 import Main from "@components/Main"
 import { BreadCrumbs, Crumb, ReferenceSelector } from "@components/BreadCrumbs"
 import { Row } from "@components/HTML"
 import FactionList from "@/app/reference/FactionList"
 
 const page = () => {
+	const factionsWitFormations = Object.values(FACTION).filter((faction) => faction !== FACTION.none)
+
 	return (
 		<Main>
 			<BreadCrumbs>
@@ -17,7 +19,7 @@ const page = () => {
 			</BreadCrumbs>
 
 			<div className="w-full grid lg:grid-cols-2 lg:gap-4">
-				{factionTypeArray.map((faction) => (
+				{factionsWitFormations.map((faction) => (
 					<FactionList faction={faction} key={faction}>
 						{formationData
 							.filter((formationFaction) => formationFaction.faction === faction)
