@@ -6,8 +6,8 @@ export enum FACTION {
 	solar = "Solar Auxillia",
 	mechanicum = "Mechanicum",
 	strategic = "Strategic Assets",
-	collegiaTitanica = "The Collegia Titanica",
-	questorisFamilia = "The QUestoris Familia",
+	collegiaTitanica = "Collegia Titanica",
+	questorisFamilia = "Questoris Familia",
 	none = "none",
 }
 

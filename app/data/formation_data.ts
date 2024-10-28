@@ -3,11 +3,15 @@ import { astartes } from "@data/formations/astartes"
 import { solar } from "@data/formations/solar"
 import { legends } from "@data/formations/legends"
 import { mechanicum } from "@data/formations/mechanicum"
+import { collegiaTitanica } from "@data/formations/collegiaTitanica"
+import { questorisFamilia } from "@data/formations/questorisFamilia"
 
 export const formationData: FORMATION[] = [
 	...astartes,
 	...solar,
 	...mechanicum,
+	...collegiaTitanica,
+	...questorisFamilia,
 	{
 		id: 1,
 		name: "Legion Astranii Class Augumented Spearhead",

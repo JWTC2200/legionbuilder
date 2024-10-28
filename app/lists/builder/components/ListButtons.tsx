@@ -29,6 +29,7 @@ const ListButtons = () => {
 			<button onClick={() => setVisible(!visible)} className={buttonStyles}>
 				<FaListAlt />
 			</button>
+			<button onClick={() => console.log(list)}>TEST</button>
 			{userUid && (
 				<SaveListBtn className={buttonStyles}>
 					<FaSave />
