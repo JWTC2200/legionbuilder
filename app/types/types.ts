@@ -4,11 +4,16 @@ import { List } from "@type/listTypes"
 export enum FACTION {
 	astartes = "Legiones Astartes",
 	solar = "Solar Auxillia",
+	mechanicum = "Mechanicum",
 	strategic = "Strategic Assets",
+	collegiaTitanica = "The Collegia Titanica",
+	questorisFamilia = "The QUestoris Familia",
 	none = "none",
 }
 
-export const factionTypeArray = Object.values(FACTION).filter((entry) => entry !== "none")
+export const factionTypeArray = Object.values(FACTION).filter(
+	(entry) => ![FACTION.none, FACTION.collegiaTitanica, FACTION.questorisFamilia].includes(entry)
+)
 
 export enum ALLEGIANCE {
 	loyalist = "Loyalist",

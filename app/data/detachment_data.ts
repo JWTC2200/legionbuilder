@@ -4,6 +4,7 @@ import { solar } from "@data/detachments/solar"
 import { strategicAssets } from "@data/detachments/strategicAssets"
 import { uniqueDetachments } from "@data/detachments/uniqueDetachments"
 import { legends } from "@data/detachments/legends"
+import { mechanicum } from "@data/detachments/mechanicum"
 
 // astartes 1000-1999, solar 2000-2999, knights-titans 4000-4999, legends 7000-7999, unique detachments 9000-9999
 
@@ -12,6 +13,7 @@ import { legends } from "@data/detachments/legends"
 export const detachmentData: DETACHMENT[] = [
 	...astartes,
 	...solar,
+	...mechanicum,
 	...strategicAssets,
 	...uniqueDetachments,
 	...legends,

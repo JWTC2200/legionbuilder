@@ -3,10 +3,12 @@ import { astartes } from "@data/formationSlots/astartes"
 import { solar } from "@data/formationSlots/solar"
 import { uniqueSlots } from "@data/formationSlots/uniqueSlots"
 import { legends } from "@data/formationSlots/legends"
+import { mechanicum } from "@data/formationSlots/mechanicum"
 
 export const formationSlotData: FORMATION_SLOT[] = [
 	...astartes,
 	...solar,
+	...mechanicum,
 	...uniqueSlots,
 	...legends,
 

@@ -16,7 +16,7 @@ const page = () => {
 				<ReferenceSelector />
 			</BreadCrumbs>
 
-			<div className="w-full lg:flex lg:gap-4">
+			<div className="w-full grid lg:grid-cols-2 lg:gap-4">
 				{factionTypeArray.map((faction) => (
 					<FactionList faction={faction} key={faction}>
 						{formationData

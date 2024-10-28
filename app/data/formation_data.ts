@@ -2,10 +2,12 @@ import { FACTION, FORMATION, SLOT_TYPE } from "@type/types"
 import { astartes } from "@data/formations/astartes"
 import { solar } from "@data/formations/solar"
 import { legends } from "@data/formations/legends"
+import { mechanicum } from "@data/formations/mechanicum"
 
 export const formationData: FORMATION[] = [
 	...astartes,
 	...solar,
+	...mechanicum,
 	{
 		id: 1,
 		name: "Legion Astranii Class Augumented Spearhead",
