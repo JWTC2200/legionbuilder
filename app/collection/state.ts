@@ -12,6 +12,8 @@ interface CollectionState {
 	setCollection: (update: CollectionItem[]) => void
 	faction: FACTION
 	setFaction: (update: FACTION) => void
+	compare: boolean
+	setCompare: (update: boolean) => void
 }
 
 export interface CollectionList {
@@ -24,4 +26,6 @@ export const collectionState = create<CollectionState>((set) => ({
 	setCollection: (update) => set(() => ({ collection: update })),
 	faction: FACTION.astartes,
 	setFaction: (update) => set(() => ({ faction: update })),
+	compare: false,
+	setCompare: (update) => set(() => ({ compare: update })),
 }))
