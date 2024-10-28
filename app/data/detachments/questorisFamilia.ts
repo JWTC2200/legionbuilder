@@ -20,7 +20,11 @@ export const questorisFamilia: DETACHMENT[] = [
 		max_size: 9,
 		main_unit: [4003],
 		related_unit: [],
-		dataslate_loadout: [],
+		dataslate_loadout: [
+			{
+				text: "A Questoris Knight Armiger is armed with a Termal spear and Reaper chain-cleaver or Armiger autocannon",
+			},
+		],
 		upgrade_options: [
 			{
 				name: "Additional Knight Armigers",
@@ -57,7 +61,11 @@ export const questorisFamilia: DETACHMENT[] = [
 		max_size: 9,
 		main_unit: [4004],
 		related_unit: [],
-		dataslate_loadout: [],
+		dataslate_loadout: [
+			{
+				text: "Each Knight Moirax is armed with Armiger lightning locks or a Volkite veuglaire and a Gyges siege claw",
+			},
+		],
 		upgrade_options: [
 			{
 				name: "Additional Knight Moirax",
