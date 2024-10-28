@@ -33,13 +33,15 @@ export default function NavBar() {
 								Lists
 							</NavLink>
 						</NavItem>
-						<NavItem>
-							<NavLink path={"/collection"} icon={"collection"}>
-								Collection
-							</NavLink>
-						</NavItem>
 						{authenticated ? (
-							<Account />
+							<>
+								<NavItem>
+									<NavLink path={"/collection"} icon={"collection"}>
+										Collection
+									</NavLink>
+								</NavItem>
+								<Account />
+							</>
 						) : (
 							<NavItem>
 								<NavLink path="/account/login" icon="login">
