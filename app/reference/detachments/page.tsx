@@ -45,10 +45,9 @@ const page = () => {
 							) as DETACHMENT[]
 						).map((detachment) => (
 							<Row
-								key={detachment.name}
+								key={detachment.name + faction}
 								className="px-4 hover:bg-secondary-700 hover:text-secondary-50 whitespace-nowrap">
 								<Link
-									key={detachment.name}
 									href={`/reference/detachments/${detachment.name.replaceAll(" ", "_")} `}
 									className="flex items-center gap-2 w-full py-1">
 									<span>{getDetachmentIcon(detachment.detachment_type[0])}</span>

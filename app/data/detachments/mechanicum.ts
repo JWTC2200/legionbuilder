@@ -697,7 +697,7 @@ export const mechanicum: DETACHMENT[] = [
 		faction: FACTION.mechanicum,
 		subfaction: null,
 		allegiance: null,
-		unique: false,
+		unique: true,
 		detachment_type: [DETACHMENT_TYPE.dedicated],
 		base_cost: 15,
 		base_size: 1,
