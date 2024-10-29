@@ -5,11 +5,13 @@ import { legends } from "@data/formations/legends"
 import { mechanicum } from "@data/formations/mechanicum"
 import { collegiaTitanica } from "@data/formations/collegiaTitanica"
 import { questorisFamilia } from "@data/formations/questorisFamilia"
+import { darkMechanicum } from "@data/formations/darkMechanicum"
 
 export const formationData: FORMATION[] = [
 	...astartes,
 	...solar,
 	...mechanicum,
+	...darkMechanicum,
 	...collegiaTitanica,
 	...questorisFamilia,
 	{

@@ -251,9 +251,7 @@ export const mechanicum: DETACHMENT[] = [
 				options: [
 					{ text: "1 additional Arlatax", cost: 35 },
 					{ text: "2 additional Arlatax", cost: 65 },
-					{ text: "3 additional Arlatax", cost: 100 },
 					{ text: "4 additional Arlatax", cost: 110 },
-					{ text: "5 additional Arlatax", cost: 145 },
 				],
 			},
 		],

@@ -6,11 +6,13 @@ import { legends } from "@data/formationSlots/legends"
 import { mechanicum } from "@data/formationSlots/mechanicum"
 import { collegiaTitanica } from "@data/formationSlots/collegiaTitanica"
 import { questorisFamilia } from "@data/formationSlots/questorisFamilia"
+import { darkMechanicum } from "@data/formationSlots/darkMechanicum"
 
 export const formationSlotData: FORMATION_SLOT[] = [
 	...astartes,
 	...solar,
 	...mechanicum,
+	...darkMechanicum,
 	...collegiaTitanica,
 	...questorisFamilia,
 	...uniqueSlots,

@@ -2276,6 +2276,200 @@ export const weapons: WEAPON_DATASHEET[] = [
 		],
 	},
 	// ********************************************************************
+	// ********************* DARK MECHANICUM WEAPONS **********************
+	// ********************************************************************
+	{
+		id: 5000,
+		name: "Scintillax lascutter",
+		profiles: [
+			{
+				range: `4"`,
+				dice: 1,
+				to_hit: 3,
+				ap: 1,
+				traits: [{ name: "Anti-tank" }, { name: "Arc", value: "Front" }, { name: "Bunker Buster" }],
+			},
+		],
+	},
+	{
+		id: 5001,
+		name: "Exo-planar cannon",
+		profiles: [
+			{
+				range: `10"`,
+				dice: 2,
+				to_hit: 4,
+				ap: 1,
+				traits: [{ name: "Light" }, { name: "Ignores Cover" }, { name: "Shred" }],
+			},
+		],
+	},
+	{
+		id: 5002,
+		name: "Storm laser",
+		profiles: [
+			{
+				range: '15"',
+				dice: 3,
+				to_hit: 5,
+				ap: 1,
+				traits: [
+					{ name: "Arc", value: "Front" },
+					{ name: "Light AT" },
+					{ name: "Rapid Fire" },
+					{ name: "Shieldbane" },
+				],
+			},
+		],
+	},
+	{
+		id: 5003,
+		name: "Errax meltagun",
+		profiles: [
+			{
+				range: '6"',
+				dice: 1,
+				to_hit: 4,
+				ap: 3,
+				traits: [{ name: "Anti-tank" }],
+			},
+		],
+	},
+	{
+		id: 5004,
+		name: "Stalker maxima bolters",
+		profiles: [
+			{
+				range: '8"',
+				dice: 3,
+				to_hit: 5,
+				ap: 0,
+				traits: [{ name: "Assault" }, { name: "Light" }, { name: "Point Defence" }],
+			},
+		],
+	},
+	{
+		id: 5005,
+		name: "Errax lascutters",
+		profiles: [
+			{
+				range: '4"',
+				dice: 1,
+				to_hit: 4,
+				ap: 2,
+				traits: [{ name: "Anti-tank" }, { name: "Bunker Buster" }],
+			},
+		],
+	},
+	{
+		id: 5006,
+		name: "Exo-planar repeators",
+		profiles: [
+			{
+				range: `10"`,
+				dice: 1,
+				to_hit: 5,
+				ap: 0,
+				traits: [{ name: "Light" }, { name: "Shred" }],
+			},
+		],
+	},
+	{
+		id: 5007,
+		name: "Harpax lascutters",
+		profiles: [
+			{
+				range: '4"',
+				dice: 1,
+				to_hit: 5,
+				ap: 1,
+				traits: [{ name: "Anti-tank" }, { name: "Bunker Buster" }],
+			},
+		],
+	},
+	{
+		id: 5008,
+		name: "Storm laser flenser",
+		profiles: [
+			{
+				range: '22"',
+				dice: 3,
+				to_hit: 4,
+				ap: 1,
+				traits: [{ name: "Arc", value: "Front" }, { name: "Light AT" }, { name: "Shieldbane" }],
+			},
+		],
+	},
+	{
+		id: 5009,
+		name: "Exo-planar bombard",
+		profiles: [
+			{
+				range: '15"',
+				dice: 3,
+				to_hit: 4,
+				ap: 1,
+				traits: [
+					{ name: "Arc", value: "Front" },
+					{ name: "Bypass" },
+					{ name: "Ignores Cover" },
+					{ name: "Shred" },
+				],
+			},
+		],
+	},
+	{
+		id: 5010,
+		name: "Storm laser array",
+		profiles: [
+			{
+				range: '15"',
+				dice: 5,
+				to_hit: 4,
+				ap: 1,
+				traits: [
+					{ name: "Arc", value: "Front" },
+					{ name: "Light AT" },
+					{ name: "Rapid Fire" },
+					{ name: "Shieldbane" },
+				],
+			},
+		],
+	},
+	{
+		id: 5011,
+		name: "Serperos lascutters",
+		profiles: [
+			{
+				range: '4"',
+				dice: 1,
+				to_hit: 2,
+				ap: 3,
+				traits: [
+					{ name: "Anti-tank" },
+					{ name: "Arc", value: "Front" },
+					{ name: "Bunker Buster" },
+					{ name: "Enginer Killer", value: 1 },
+					{ name: "Rend" },
+				],
+			},
+		],
+	},
+	{
+		id: 5012,
+		name: "Irradiation engine",
+		profiles: [
+			{
+				range: '10"',
+				dice: 3,
+				to_hit: 4,
+				ap: 3,
+				traits: [{ name: "Arc", value: "Front" }, { name: "Ignores Cover" }, { name: "Light AT" }],
+			},
+		],
+	},
+
+	// ********************************************************************
 	// ***********************KNIGHT & TITAN WEAPONS **********************
 	// ********************************************************************
 	{
