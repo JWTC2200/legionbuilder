@@ -1,6 +1,6 @@
 import { WEAPON_DATASHEET } from "@type/types"
 
-// astartes 1000-1999, solar 2000-2999, knights-titans 4000-4999
+// astartes 1000-1999, solar 2000-2999, mechanicum 3000-3999, knights-titans 4000-4999
 
 export const weapons: WEAPON_DATASHEET[] = [
 	// ********************************************************************
@@ -1892,6 +1892,269 @@ export const weapons: WEAPON_DATASHEET[] = [
 				to_hit: 4,
 				ap: 1,
 				traits: [{ name: "Anti-tank" }],
+			},
+		],
+	},
+	// ********************************************************************
+	// ********************** MECHANICUM WEAPONS **************************
+	// ********************************************************************
+	{
+		id: 3000,
+		name: "Volkite serpenta",
+		profiles: [
+			{
+				range: '6"',
+				dice: 1,
+				to_hit: 5,
+				ap: 0,
+				traits: [{ name: "Deflagrate" }, { name: "Light" }],
+			},
+		],
+	},
+	{
+		id: 3001,
+		name: "Meltagun",
+		profiles: [
+			{
+				range: '6"',
+				dice: 1,
+				to_hit: 4,
+				ap: 3,
+				traits: [{ name: "Anti-tank" }],
+			},
+		],
+	},
+	{
+		id: 3002,
+		name: "Las-locks",
+		profiles: [
+			{
+				range: '6"',
+				dice: 1,
+				to_hit: 6,
+				ap: 0,
+				traits: [{ name: "Light" }],
+			},
+		],
+	},
+	{
+		id: 3003,
+		name: "Lightning guns",
+		profiles: [
+			{
+				range: '8"',
+				dice: 2,
+				to_hit: 5,
+				ap: 1,
+				traits: [{ name: "Light AT" }],
+			},
+		],
+	},
+	{
+		id: 3004,
+		name: "Thallax plasma-fusil",
+		profiles: [
+			{
+				range: '10"',
+				dice: 1,
+				to_hit: 4,
+				ap: 1,
+				traits: [{ name: "Light AT" }],
+			},
+		],
+	},
+	{
+		id: 3005,
+		name: "Maxima bolters",
+		profiles: [
+			{
+				range: '8"',
+				dice: 2,
+				to_hit: 5,
+				ap: 0,
+				traits: [{ name: "Assault" }, { name: "Light" }],
+			},
+		],
+	},
+	{
+		id: 3006,
+		name: "Conversion beamers",
+		profiles: [
+			{
+				range: '4-22"',
+				dice: 1,
+				to_hit: 4,
+				ap: 2,
+				traits: [],
+			},
+		],
+	},
+	{
+		id: 3007,
+		name: "Myrmidon volkites",
+		profiles: [
+			{
+				range: '12"',
+				dice: 2,
+				to_hit: 4,
+				ap: 0,
+				traits: [{ name: "Deflagrate" }, { name: "Light" }],
+			},
+		],
+	},
+	{
+		id: 3008,
+		name: "Autocannon",
+		profiles: [
+			{
+				range: '16"',
+				dice: 2,
+				to_hit: 5,
+				ap: 1,
+				traits: [{ name: "Light AT" }],
+			},
+		],
+	},
+	{
+		id: 3009,
+		name: "Graviton hammers",
+		profiles: [
+			{
+				range: "-",
+				dice: null,
+				to_hit: null,
+				ap: 2,
+				traits: [{ name: "Wrecker", value: 1 }],
+			},
+		],
+	},
+	{
+		id: 3010,
+		name: "Mauler bolt cannon",
+		profiles: [
+			{
+				range: '8"',
+				dice: 3,
+				to_hit: 5,
+				ap: 1,
+				traits: [{ name: "Light AT" }],
+			},
+		],
+	},
+	{
+		id: 3011,
+		name: "In-built bolters",
+		profiles: [
+			{
+				range: '8"',
+				dice: 1,
+				to_hit: 5,
+				ap: 0,
+				traits: [{ name: "Assault" }, { name: "Light" }],
+			},
+		],
+	},
+	{
+		id: 3012,
+		name: "Volkite incinerators",
+		profiles: [
+			{
+				range: '6"',
+				dice: 2,
+				to_hit: 5,
+				ap: 0,
+				traits: [{ name: "Deflagrate" }, { name: "Light" }],
+			},
+		],
+	},
+	{
+		id: 3013,
+		name: "Rotor cannon",
+		profiles: [
+			{
+				range: '12"',
+				dice: 3,
+				to_hit: 5,
+				ap: 1,
+				traits: [{ name: "Light" }, { name: "Rapid Fire" }],
+			},
+		],
+	},
+	{
+		id: 3014,
+		name: "Power blade arrays",
+		profiles: [
+			{
+				range: "-",
+				dice: null,
+				to_hit: null,
+				ap: "-",
+				traits: [{ name: "Rend" }],
+			},
+		],
+	},
+	{
+		id: 3015,
+		name: "Arc blasters",
+		profiles: [
+			{
+				range: '10"',
+				dice: 2,
+				to_hit: 4,
+				ap: 0,
+				traits: [{ name: "Neutron-flux" }],
+			},
+		],
+	},
+	{
+		id: 3016,
+		name: "Vultarax havoc launcher",
+		profiles: [
+			{
+				range: '15"',
+				dice: 2,
+				to_hit: 4,
+				ap: 0,
+				traits: [{ name: "Light AT" }],
+			},
+		],
+	},
+	{
+		id: 3017,
+		name: "Plasma mortar",
+		profiles: [
+			{
+				range: '18"',
+				dice: 1,
+				to_hit: 3,
+				ap: 1,
+				traits: [{ name: "Demolisher" }, { name: "Ignores Cover" }],
+			},
+		],
+	},
+	{
+		id: 3018,
+		name: "Sollex heavy-las",
+		profiles: [
+			{
+				range: '22"',
+				dice: 1,
+				to_hit: 4,
+				ap: 1,
+				traits: [{ name: "Armourbane" }],
+			},
+		],
+	},
+	{
+		id: 3019,
+		name: "Graviton ram",
+		profiles: [
+			{
+				range: "-",
+				dice: null,
+				to_hit: null,
+				ap: "-",
+				traits: [{ name: "Wrecker", value: 2 }],
 			},
 		],
 	},
