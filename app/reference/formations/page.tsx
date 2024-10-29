@@ -2,15 +2,13 @@
 
 import Link from "next/link"
 import { formationData } from "@data/formation_data"
-import { FACTION } from "@type/types"
+import { factionsWitFormations } from "@type/types"
 import Main from "@components/Main"
 import { BreadCrumbs, Crumb, ReferenceSelector } from "@components/BreadCrumbs"
 import { Row } from "@components/HTML"
 import FactionList from "@/app/reference/FactionList"
 
 const page = () => {
-	const factionsWitFormations = Object.values(FACTION).filter((faction) => faction !== FACTION.none)
-
 	return (
 		<Main>
 			<BreadCrumbs>

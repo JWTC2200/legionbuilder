@@ -5,6 +5,7 @@ export enum FACTION {
 	astartes = "Legiones Astartes",
 	solar = "Solar Auxillia",
 	mechanicum = "Mechanicum",
+	darkMechanicum = "Dark Mechanicum",
 	strategic = "Strategic Assets",
 	collegiaTitanica = "Collegia Titanica",
 	questorisFamilia = "Questoris Familia",
@@ -14,6 +15,8 @@ export enum FACTION {
 export const factionTypeArray = Object.values(FACTION).filter(
 	(entry) => ![FACTION.none, FACTION.collegiaTitanica, FACTION.questorisFamilia].includes(entry)
 )
+
+export const factionsWitFormations = Object.values(FACTION).filter((faction) => faction !== FACTION.none)
 
 export enum ALLEGIANCE {
 	loyalist = "Loyalist",

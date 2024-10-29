@@ -2158,6 +2158,123 @@ export const weapons: WEAPON_DATASHEET[] = [
 			},
 		],
 	},
+	{
+		id: 3020,
+		name: "Lightning locks",
+		profiles: [
+			{
+				range: '12"',
+				dice: 2,
+				to_hit: 5,
+				ap: 1,
+				traits: [{ name: "Arc", value: "Front" }, { name: "Point Defence" }],
+			},
+		],
+	},
+	{
+		id: 3021,
+		name: "Karacnos mortar battery",
+		profiles: [
+			{
+				range: '30"',
+				dice: 2,
+				to_hit: 4,
+				ap: 1,
+				traits: [{ name: "Arc", value: "Front" }, { name: "Barrage" }, { name: "Ignores Cover" }],
+			},
+		],
+	},
+	{
+		id: 3022,
+		name: "Shock ram",
+		profiles: [
+			{
+				range: "-",
+				dice: null,
+				to_hit: null,
+				ap: 2,
+				traits: [{ name: "Wrecker", value: 2 }],
+			},
+		],
+	},
+	{
+		id: 3023,
+		name: "Krios lightning cannon",
+		profiles: [
+			{
+				range: '22"',
+				dice: 2,
+				to_hit: 5,
+				ap: 2,
+				traits: [{ name: "Arc", value: "Front" }],
+			},
+		],
+	},
+	{
+		id: 3024,
+		name: "Irad-scourer",
+		profiles: [
+			{
+				range: '16"',
+				dice: 2,
+				to_hit: 4,
+				ap: 2,
+				traits: [{ name: "Arc", value: "Front" }, { name: "Light AT" }, { name: "Ignores Cover" }],
+			},
+		],
+	},
+	{
+		id: 3025,
+		name: "Volkite caliver sponsons",
+		profiles: [
+			{
+				range: '12"',
+				dice: 1,
+				to_hit: 4,
+				ap: 0,
+				traits: [{ name: "Accurate" }, { name: "Deflagrate" }, { name: "Light" }, { name: "Point Defence" }],
+			},
+		],
+	},
+	{
+		id: 3026,
+		name: "Pulsar-fusil",
+		profiles: [
+			{
+				range: '12"',
+				dice: 1,
+				to_hit: 3,
+				ap: 3,
+				traits: [{ name: "Anti-tank" }, { name: "Arc", value: "Front" }],
+			},
+		],
+	},
+	{
+		id: 3027,
+		name: "Twin-linked volkite calivers",
+		profiles: [
+			{
+				range: '12"',
+				dice: 1,
+				to_hit: 4,
+				ap: 0,
+				traits: [{ name: "Accurate" }, { name: "Deflagrate" }, { name: "Light" }],
+			},
+		],
+	},
+	{
+		id: 3028,
+		name: "Twin-linked mauler bolt cannon",
+		profiles: [
+			{
+				range: '8"',
+				dice: 3,
+				to_hit: 5,
+				ap: 1,
+				traits: [{ name: "Arc", value: "Front" }, { name: "Light AT" }],
+			},
+		],
+	},
 	// ********************************************************************
 	// ***********************KNIGHT & TITAN WEAPONS **********************
 	// ********************************************************************
