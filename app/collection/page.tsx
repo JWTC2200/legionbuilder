@@ -42,39 +42,42 @@ const page = () => {
 	}, [userUid])
 
 	return (
-		<div className={"font-graduate"}>
+		<div className={"font-graduate py-4 sm:pb-8 w-full text-lg sm:text-base text-secondary-200"}>
 			<BreadCrumbs>
 				<Crumb href={"collection"}>Collection</Crumb>
 			</BreadCrumbs>
+			<div className={"flex flex-col items-center mt-4"}>
+				<div className={"flex justify-center flex-wrap sm:gap-8 gap-4"}>
+					<button
+						onClick={() => setCollection([])}
+						className={
+							"builder_title_background rounded-full py-1 px-4 hover:text-primary-100 active:text-primary-100 hover:border-2 border-backgrounds-950 hover:border-primary-100 active:border-primary-100"
+						}>
+						Reset collection
+					</button>
+					<button
+						onClick={() => handleSave()}
+						className={
+							"builder_title_background rounded-full py-1 px-4 hover:text-primary-100 active:text-primary-100 border-2 border-backgrounds-950 hover:border-primary-100 active:border-primary-100"
+						}>
+						Save collection
+					</button>
+				</div>
+				<div className={"px-2"}>
+					<select
+						value={faction}
+						onChange={(e) => setFaction(e.target.value as FACTION)}
+						className={
+							"w-full text-center my-4 py-1 px-2 bg-secondary-900 border-b-2 border-primary-950 text-xl font-graduate text-secondary-300 hover:text-tertiary-300 active:text-tertiary-400"
+						}>
+						{factionTypeArray.map((faction) => (
+							<option key={`collection-selector-${faction}`}>{faction}</option>
+						))}
+					</select>
 
-			<div className={"flex justify-center flex-wrap sm:gap-8 gap-4"}>
-				<button
-					onClick={() => setCollection([])}
-					className={
-						"builder_title_background rounded-full py-1 px-4 hover:text-primary-100 active:text-primary-100 hover:border-2 border-backgrounds-950 hover:border-primary-100 active:border-primary-100"
-					}>
-					Reset collection
-				</button>
-				<button
-					onClick={() => handleSave()}
-					className={
-						"builder_title_background rounded-full py-1 px-4 hover:text-primary-100 active:text-primary-100 border-2 border-backgrounds-950 hover:border-primary-100 active:border-primary-100"
-					}>
-					Save collection
-				</button>
+					<CollectionFaction />
+				</div>
 			</div>
-			<select
-				value={faction}
-				onChange={(e) => setFaction(e.target.value as FACTION)}
-				className={
-					"w-full text-center my-4 py-1 px-2 bg-secondary-900 border-primary-950 text-xl font-graduate text-secondary-300 hover:text-tertiary-300 active:text-tertiary-400"
-				}>
-				{factionTypeArray.map((faction) => (
-					<option key={`collection-selector-${faction}`}>{faction}</option>
-				))}
-			</select>
-
-			<CollectionFaction />
 		</div>
 	)
 }

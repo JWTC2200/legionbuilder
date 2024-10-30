@@ -10,13 +10,16 @@ const ListModelsOwned = ({ name, number }: properties) => {
 	const { collection } = collectionState()
 
 	const collectionModel = collection.find((model) => model.name === name)
-	const ownedNumber = collectionModel ? collectionModel.number : 0
+	const owned = collectionModel ? collectionModel.number : 0
+	const insufficient = owned < number
 
-	const styles = ownedNumber < number ? "text-red-600" : ""
+	const styles = insufficient ? "text-red-600" : ""
 
 	return (
 		<span>
-			/<span className={styles}>{ownedNumber}</span>
+			{" "}
+			({insufficient ? <span className={styles}>{number - owned} missing, </span> : null}
+			<span className={styles}>{owned} owned</span>)
 		</span>
 	)
 }

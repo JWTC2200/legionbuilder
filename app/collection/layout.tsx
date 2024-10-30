@@ -14,7 +14,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
 	}, [userUid])
 
 	return (
-		<Main className="sm:max-w-screen-2xl flex flex-col items-center">
+		<Main>
 			{userUid ? (
 				<>
 					<ToastContainer

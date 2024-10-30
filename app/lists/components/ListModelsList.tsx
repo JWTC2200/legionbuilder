@@ -78,7 +78,9 @@ function ListModelsList() {
 					<div className="px-2 pt-1 text-lg">
 						{faction.map((model) => {
 							return (
-								<div key={`${model.name}xx${model.number}`}>
+								<div
+									key={`${model.name}xx${model.number}`}
+									className={"border-b border-backgrounds-950 last:border-none"}>
 									{model.name}, {model.number}
 									{compare ? <ListModelsOwned name={model.name} number={model.number} /> : null}
 								</div>

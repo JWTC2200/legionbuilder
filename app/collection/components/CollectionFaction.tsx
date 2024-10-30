@@ -14,7 +14,7 @@ const CollectionFaction = () => {
 	const filteredUnits = unitData.filter((unit) => !unit.unique)
 
 	return (
-		<ol className={"grid sm:grid-cols-2 lg:grid-cols-3"}>
+		<ol className={""}>
 			{sortUnitDatasheets(filteredUnits)
 				.filter((unit) => unit.faction === faction)
 				.map((match) => (

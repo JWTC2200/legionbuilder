@@ -9,47 +9,42 @@ import Image from "next/image"
 export default function Home() {
 	return (
 		<Main className="flex flex-col items-center py-4">
-			<div className="m-4 flex flex-col items-center text-center gap-2 text-lg sm:text-xl">
-				<p>
-					Detachments, Formations and Formations of Legend from The Devastation of Tallarn book have been
-					added!
-				</p>
-				<p>Battle Honours should come in a later update.</p>
-				<p>Have fun!</p>
-			</div>
-
 			<Link
 				href="lists"
 				className="px-8 py-2 builder_title_background font-graduate text-lg text-center sm:text-2xl rounded-full border-2 border-backgrounds-950 hover:text-primary-100 active:text-primary-100 hover:border-primary-100 active:border-primary-100">
 				Create list
 			</Link>
 
+			<div className="m-4 flex flex-col items-center text-center gap-2 text-lg sm:text-xl">
+				<p>Detachments, Formations from The Rise of the Dark Mechanicum book have been added!</p>
+				<p>Formations of Legend will be added later.</p>
+			</div>
+
 			<div className="m-4 flex flex-col items-center gap-2 text-lg sm:text-xl">
-				<p>I've added two buttons to the list view page for download list PDFs</p>
+				<p>
+					I've added a new page where logged in users can keep track of what models they have in their
+					collction.
+				</p>
 				<Image
-					src="/images/pdfbuttons.png"
+					src="/images/collection.png"
 					alt={"Image of PDF download links"}
 					className={"rounded-xl"}
-					width={600}
+					width={500}
 					height={400}
 				/>
-				<p>One is for the list with detachment upgrades and loadouts.</p>
+				<p>
+					Users can now compare the models within a list to their collection to see which models they may be
+					missing.
+				</p>
 
-				<p>The other has damage boxes for the list so you can more easily record casualties.</p>
+				<p>You can toggle this function with the 'compare collection' button.</p>
 				<div className={"flex flex-col gap-4 sm:max-w-full"}>
 					<Image
-						src={"/images/listpdf.png"}
+						src={"/images/testmechacollection.png"}
 						alt={"Image of list PDF"}
 						className={"rounded-xl"}
-						width={600}
-						height={400}
-					/>
-					<Image
-						src={"/images/listdamagepdf.png"}
-						alt={"Image of list damage boxes"}
-						className={"rounded-xl"}
-						width={600}
-						height={400}
+						width={400}
+						height={200}
 					/>
 				</div>
 				<p>As usual feel free to contact me on Discord if you have any issues or suggestions. Thanks!</p>
