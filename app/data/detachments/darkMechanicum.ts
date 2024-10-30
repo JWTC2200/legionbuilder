@@ -576,7 +576,7 @@ export const darkMechanicum: DETACHMENT[] = [
 		base_cost: 175,
 		base_size: 2,
 		max_size: 6,
-		main_unit: [5003],
+		main_unit: [5004],
 		related_unit: [],
 		dataslate_loadout: [
 			{

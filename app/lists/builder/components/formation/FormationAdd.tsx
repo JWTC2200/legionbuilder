@@ -3,6 +3,7 @@ import { toast } from "react-toastify"
 import { FiPlus } from "react-icons/fi"
 import { emptyFormation } from "@/app/data/empty_objects"
 import { nanoid } from "nanoid"
+import Filter from "@lists/builder/components/formation/Filter"
 
 const FormationAdd = () => {
 	const { list, setList } = listState()
@@ -14,7 +15,8 @@ const FormationAdd = () => {
 	}
 
 	return (
-		<div className="w-full text-primary-50 flex flex-col justify-center gap-2">
+		<div className="text-primary-50 flex justify-center items-center gap-4">
+			{/* <Filter /> */}
 			<div className="builder_title_background flex flex-wrap justify-center items-center text-center gap-4 w-max mx-auto rounded-full px-3 border-4 border-backgrounds-950 hover:border-primary-400">
 				<button
 					onClick={addFormation}

@@ -8,12 +8,13 @@ import { questorisFamilia } from "@data/formations/questorisFamilia"
 import { darkMechanicum } from "@data/formations/darkMechanicum"
 
 export const formationData: FORMATION[] = [
-	...astartes,
-	...solar,
-	...mechanicum,
-	...darkMechanicum,
-	...collegiaTitanica,
-	...questorisFamilia,
+	...astartes, //1000-1999
+	...solar, //2000-2999
+	...mechanicum, //3000-3999
+	...darkMechanicum, //5000-5999
+	...collegiaTitanica, //8000-8099
+	...questorisFamilia, //8100-8199
+	...legends, //7000-7999
 	{
 		id: 1,
 		name: "Legion Astranii Class Augumented Spearhead",
@@ -61,7 +62,4 @@ export const formationData: FORMATION[] = [
 		formation_slots: [{ slot_type: SLOT_TYPE.compulsory, slot_id: [4001] }],
 		rules: [],
 	},
-
-	// Legends should go last
-	...legends,
 ]

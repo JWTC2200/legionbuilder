@@ -2,7 +2,7 @@
 // *************** COLLEGIA TITANICA FORMATION SLOTS ******************
 // ********************************************************************
 
-// 8000-8100
+// 8000-8099
 
 import { DETACHMENT_TYPE, FACTION, FORMATION_SLOT } from "@type/types"
 

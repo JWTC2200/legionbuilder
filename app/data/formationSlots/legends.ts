@@ -13,6 +13,7 @@ export const legends: FORMATION_SLOT[] = [
 		faction: FACTION.astartes,
 		restricted: true,
 		options: [7000],
+		description: "Legion Sicaran Squadron",
 	},
 	{
 		id: 7001,
@@ -20,6 +21,7 @@ export const legends: FORMATION_SLOT[] = [
 		faction: FACTION.astartes,
 		restricted: true,
 		options: [7001],
+		description: "Legion Sicaran Squadron",
 	},
 	{
 		id: 7002,
@@ -27,6 +29,7 @@ export const legends: FORMATION_SLOT[] = [
 		faction: FACTION.astartes,
 		restricted: true,
 		options: [7002],
+		description: "Legion Sabre Squadron",
 	},
 
 	//Iron Warriors Proioxis Macro-Assault Wing
@@ -36,6 +39,7 @@ export const legends: FORMATION_SLOT[] = [
 		faction: FACTION.astartes,
 		restricted: true,
 		options: [7003],
+		description: "Legion Terminator Detachment",
 	},
 	{
 		id: 7004,
@@ -43,6 +47,7 @@ export const legends: FORMATION_SLOT[] = [
 		faction: FACTION.astartes,
 		restricted: true,
 		options: [7004],
+		description: "Legion Spartan Detachment",
 	},
 	{
 		id: 7005,
@@ -50,6 +55,7 @@ export const legends: FORMATION_SLOT[] = [
 		faction: FACTION.astartes,
 		restricted: true,
 		options: [7005],
+		description: "Legion Kratos Squadron",
 	},
 
 	// Alpha Legion Harrow Group Arcadus
@@ -59,6 +65,7 @@ export const legends: FORMATION_SLOT[] = [
 		faction: FACTION.astartes,
 		restricted: true,
 		options: [7006],
+		description: "Legion Sicaran Punisher Squadron",
 	},
 	{
 		id: 7007,
@@ -66,6 +73,7 @@ export const legends: FORMATION_SLOT[] = [
 		faction: FACTION.astartes,
 		restricted: true,
 		options: [7007],
+		description: "Legion Plasma Gun Support Detachment",
 	},
 	{
 		id: 7008,
@@ -73,6 +81,7 @@ export const legends: FORMATION_SLOT[] = [
 		faction: FACTION.astartes,
 		restricted: true,
 		options: [7008],
+		description: "Legion Land Raider Detachment",
 	},
 	{
 		id: 7009,
@@ -80,6 +89,7 @@ export const legends: FORMATION_SLOT[] = [
 		faction: FACTION.astartes,
 		restricted: true,
 		options: [7009],
+		description: "Legion Sabre Squadron",
 	},
 
 	// Tallarn Reborn Carmine Ambush Tercio
@@ -89,6 +99,7 @@ export const legends: FORMATION_SLOT[] = [
 		faction: FACTION.solar,
 		restricted: true,
 		options: [7010],
+		description: "Leman Russ Strike Squadron",
 	},
 	{
 		id: 7011,
@@ -96,6 +107,7 @@ export const legends: FORMATION_SLOT[] = [
 		faction: FACTION.solar,
 		restricted: true,
 		options: [7011],
+		description: "Leman Russ Annihilator Squadron",
 	},
 	{
 		id: 7012,
@@ -103,6 +115,7 @@ export const legends: FORMATION_SLOT[] = [
 		faction: FACTION.solar,
 		restricted: true,
 		options: [7012],
+		description: "Leman Russ Executioner Squadron",
 	},
 	{
 		id: 7013,
@@ -110,6 +123,7 @@ export const legends: FORMATION_SLOT[] = [
 		faction: FACTION.solar,
 		restricted: true,
 		options: [7013],
+		description: "Auxilia Aethon Heavy Sentinel Patrol",
 	},
 
 	// Galibed Oathsworn Thyreos Siege Breaker Company
@@ -119,6 +133,7 @@ export const legends: FORMATION_SLOT[] = [
 		faction: FACTION.solar,
 		restricted: true,
 		options: [7014],
+		description: "Auxilia Stormsword Squadron",
 	},
 	{
 		id: 7015,
@@ -126,6 +141,7 @@ export const legends: FORMATION_SLOT[] = [
 		faction: FACTION.solar,
 		restricted: true,
 		options: [7015],
+		description: "Auxilia Basilisk Battery",
 	},
 	{
 		id: 7016,
@@ -133,5 +149,156 @@ export const legends: FORMATION_SLOT[] = [
 		faction: FACTION.solar,
 		restricted: true,
 		options: [7016],
+		description: "Auxilia Medusa Battery",
+	},
+
+	// Demi-maniple Aeterna
+	{
+		id: 7017,
+		type: DETACHMENT_TYPE.titan,
+		faction: FACTION.strategic,
+		restricted: true,
+		options: [7017],
+		description: "Reaver Battle Titan",
+	},
+	{
+		id: 7018,
+		type: DETACHMENT_TYPE.knight,
+		faction: FACTION.strategic,
+		restricted: true,
+		options: [7018],
+		description: "Questoris Knight Banner",
+	},
+	{
+		id: 7019,
+		type: DETACHMENT_TYPE.battle,
+		faction: FACTION.mechanicum,
+		restricted: true,
+		options: [7019],
+		description: "Krios Venator Squadron",
+	},
+	{
+		id: 7020,
+		type: DETACHMENT_TYPE.titan,
+		faction: FACTION.strategic,
+		restricted: true,
+		options: [7020],
+		description: "Warhound Hunting Pack",
+	},
+	{
+		id: 7021,
+		type: DETACHMENT_TYPE.knight,
+		faction: FACTION.strategic,
+		restricted: true,
+		options: [7021],
+		description: "Cerastus Knight Banner",
+	},
+	{
+		id: 7022,
+		type: DETACHMENT_TYPE.vanguard,
+		faction: FACTION.mechanicum,
+		restricted: true,
+		options: [7022],
+		description: "Vultarax Stratos-automata Squadron",
+	},
+
+	// Exsomnis-tertia Cybernetica Cohort
+	{
+		id: 7023,
+		type: DETACHMENT_TYPE.hq,
+		faction: FACTION.mechanicum,
+		restricted: true,
+		options: [7023],
+		description: "Archmagos Prime on Abeyant",
+	},
+	{
+		id: 7024,
+		type: DETACHMENT_TYPE.support,
+		faction: FACTION.mechanicum,
+		restricted: true,
+		options: [7024],
+		description: "Domitar Battle-automata Maniple",
+	},
+	{
+		id: 7025,
+		type: DETACHMENT_TYPE.support,
+		faction: FACTION.mechanicum,
+		restricted: true,
+		options: [7025],
+		description: "Castellax Battle-automata Maniple",
+	},
+	{
+		id: 7026,
+		type: DETACHMENT_TYPE.vanguard,
+		faction: FACTION.mechanicum,
+		restricted: true,
+		options: [7026],
+		description: "Vorax Battle-automata Maniple",
+	},
+	{
+		id: 7027,
+		type: DETACHMENT_TYPE.support,
+		faction: FACTION.mechanicum,
+		restricted: true,
+		options: [7027],
+		description: "Tech-Priest Auxilia",
+	},
+	{
+		id: 7028,
+		type: DETACHMENT_TYPE.bastion,
+		faction: FACTION.mechanicum,
+		restricted: true,
+		options: [7028],
+		description: "Thanatar Siege-automata Maniple",
+	},
+
+	// Sibilans Taghma
+	{
+		id: 7029,
+		type: DETACHMENT_TYPE.hq,
+		faction: FACTION.darkMechanicum,
+		restricted: true,
+		options: [7029],
+		description: "Scintillax 'Cyclops' Noospheric Stalker Network",
+	},
+	{
+		id: 7030,
+		type: DETACHMENT_TYPE.core,
+		faction: FACTION.darkMechanicum,
+		restricted: true,
+		options: [7030],
+		description: "Adsecularis Tech-thrall Covenant",
+	},
+	{
+		id: 7031,
+		type: DETACHMENT_TYPE.heavy,
+		faction: FACTION.darkMechanicum,
+		restricted: true,
+		options: [7031],
+		description: "Serperos 'Overlord' Heavy Stalker Maniple",
+	},
+	{
+		id: 7032,
+		type: DETACHMENT_TYPE.support,
+		faction: FACTION.darkMechanicum,
+		restricted: true,
+		options: [7032],
+		description: "Myrmidon Secutor Host",
+	},
+	{
+		id: 7033,
+		type: DETACHMENT_TYPE.dedicated,
+		faction: FACTION.darkMechanicum,
+		restricted: true,
+		options: [7033],
+		description: "Triaros Armoured Conveyor",
+	},
+	{
+		id: 7034,
+		type: DETACHMENT_TYPE.core,
+		faction: FACTION.darkMechanicum,
+		restricted: true,
+		options: [7034],
+		description: "Adsecularis Tech-thrall Covenant",
 	},
 ]

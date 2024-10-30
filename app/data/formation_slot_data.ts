@@ -9,14 +9,14 @@ import { questorisFamilia } from "@data/formationSlots/questorisFamilia"
 import { darkMechanicum } from "@data/formationSlots/darkMechanicum"
 
 export const formationSlotData: FORMATION_SLOT[] = [
-	...astartes,
-	...solar,
-	...mechanicum,
-	...darkMechanicum,
-	...collegiaTitanica,
-	...questorisFamilia,
-	...uniqueSlots,
-	...legends,
+	...astartes, // 1000-1999
+	...solar, //2000-2999
+	...mechanicum, //3000-3999
+	...darkMechanicum, //5000-5999
+	...collegiaTitanica, //8000-8099
+	...questorisFamilia, //8100-8199
+	...uniqueSlots, //9000-9999
+	...legends, //7000-7999
 
 	// ********************************************************************
 	// ************************* KNIGHTS/TITAN SLOTS **********************

@@ -28,6 +28,7 @@ export const legends: FORMATION[] = [
 				text: "Detachments from this Formation have the Macro-extinction Targeting Protocols special rule.",
 			},
 		],
+		legend: true,
 	},
 	{
 		id: 7001,
@@ -50,6 +51,7 @@ export const legends: FORMATION[] = [
 				text: "Legion Terminator models from this Formation increase their CAF by 2 during any round in which they Disembarked form a Spartan model form this Formation.",
 			},
 		],
+		legend: true,
 	},
 	{
 		id: 7002,
@@ -72,6 +74,7 @@ export const legends: FORMATION[] = [
 				text: "Detachments from this Formation have the Outflank and Scout special rules.",
 			},
 		],
+		legend: true,
 	},
 	{
 		id: 7003,
@@ -94,6 +97,7 @@ export const legends: FORMATION[] = [
 				text: "Detachments from this Formation have the Forward Deployment and Scout special rules",
 			},
 		],
+		legend: true,
 	},
 	{
 		id: 7004,
@@ -112,5 +116,71 @@ export const legends: FORMATION[] = [
 				text: "This formation can only be included in an Army with the Traitor Allegiance",
 			},
 		],
+		legend: true,
+	},
+	{
+		id: 7005,
+		name: "Demi-maniple Aeterna",
+		faction: FACTION.mechanicum,
+		subfaction: null,
+		allegiance: ALLEGIANCE.loyalist,
+		formation_slots: [
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [7017, 7018, 7019] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [7020, 7021, 7022] },
+		],
+		rules: [
+			legendRules,
+			{
+				name: "Defenders of Magma City",
+				text: "This Formation can only be included in an Army with the Loyalist Allegiance",
+			},
+			{
+				name: "Children of the Storm",
+				text: "Once per game, when a Titan from this Formation finishes its activation during the Combat phase, it may immediately fire one of its weapons again.",
+			},
+		],
+		legend: true,
+	},
+	{
+		id: 7006,
+		name: "Exsomnis-tertia Cybernetica Cohort",
+		faction: FACTION.mechanicum,
+		subfaction: null,
+		allegiance: ALLEGIANCE.loyalist,
+		formation_slots: [
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [7023, 7024, 7025, 7025, 7026] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [7027, 7025, 7025, 7024, 7026, 7028] },
+		],
+		rules: [
+			legendRules,
+			{
+				name: "Defenders of Magma City",
+				text: "This Formation can only be included in an Army with the Loyalist Allegiance",
+			},
+		],
+		legend: true,
+	},
+	{
+		id: 7007,
+		name: "Sibilans Taghma",
+		faction: FACTION.darkMechanicum,
+		subfaction: null,
+		allegiance: ALLEGIANCE.traitor,
+		formation_slots: [
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [7029, 7030, 7030, 7031, 7032, 7033] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [7034, 7032, 7033, 7032, 7033, 7031] },
+		],
+		rules: [
+			legendRules,
+			{
+				name: "Servants of Kelbor-Hal",
+				text: "This Formation can only be included in an Army with the Traitor Allegiance",
+			},
+			{
+				name: "Protocol - Scourge",
+				text: `While a Detachment from this Formation with the Networked Anima special rule is within 8" of a model with the Noosphere Controller special rule from this Formation, all models in that Detachment increase the range of their weapons by 4"`,
+			},
+		],
+		legend: true,
 	},
 ]

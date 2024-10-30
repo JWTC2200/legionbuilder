@@ -18,6 +18,7 @@ import {
 } from "@lists/builder/components/detachment/utils"
 import { DETACHMENT } from "@type/types"
 import { detachmentData } from "@data/detachment_data"
+import { sortFormationFactions } from "@app/utils/sorting"
 
 interface FormationSelector {
 	formation: ListFormation
@@ -134,8 +135,9 @@ const FormationSelector = ({ formation }: FormationSelector) => {
 				<option value="0" className="text-primary-50">
 					SELECT FORMATION
 				</option>
-				{filteredFormations().map((format) => (
+				{sortFormationFactions(filteredFormations()).map((format) => (
 					<option key={formation.id + format.name} value={format.id} className="text-primary-50">
+						{format.legend ? "FoL: " : null}
 						{format.subfaction ? `${format.subfaction} ` : ""}
 						{format.name}
 					</option>

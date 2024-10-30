@@ -42,6 +42,15 @@ interface ListModelsState {
 	setVisible: (update: boolean) => void
 }
 
+interface FactionFilterState {
+	mainFaction: boolean
+	alliedFaction: boolean
+	legends: boolean
+	setMainFaction: (update: boolean) => void
+	setAlliedFaction: (update: boolean) => void
+	setLegends: (update: boolean) => void
+}
+
 export const userListsState = create<UserListsState>((set) => ({
 	userLists: [],
 	setUserLists: (update) => set(() => ({ userLists: update })),
@@ -79,4 +88,13 @@ export const listDetails = create<ListDetails>((set) => ({
 export const listModelState = create<ListModelsState>((set) => ({
 	visible: false,
 	setVisible: (update) => set(() => ({ visible: update })),
+}))
+
+export const factionFilterState = create<FactionFilterState>((set) => ({
+	mainFaction: false,
+	alliedFaction: false,
+	legends: false,
+	setMainFaction: (update) => set(() => ({ mainFaction: update })),
+	setAlliedFaction: (update) => set(() => ({ alliedFaction: update })),
+	setLegends: (update) => set(() => ({ legends: update })),
 }))

@@ -145,6 +145,7 @@ export interface FORMATION {
 	allegiance: ALLEGIANCE | null
 	formation_slots: FORMATION_SLOTS[]
 	rules: FORMATION_RULES[]
+	legend?: boolean
 }
 
 export interface FORMATION_RULES {

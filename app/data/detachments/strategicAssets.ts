@@ -377,7 +377,7 @@ export const strategicAssets: DETACHMENT[] = [
 				],
 			},
 			{
-				location: "Arm 1",
+				location: "Arm 2",
 				options: [
 					{ name: "Reaver laser blaster", cost: 0 },
 					{ name: "Reaver gatling blaster", cost: 0 },
