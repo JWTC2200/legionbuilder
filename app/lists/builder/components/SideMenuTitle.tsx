@@ -4,7 +4,7 @@ interface properties {
 	children: React.ReactNode
 }
 
-const SideMenutitle = ({ children }: properties) => {
+const SideMenuTitle = ({ children }: properties) => {
 	return (
 		<h3 className="clip-path-octagon-md builder_title_background text-primary-50 font-graduate py-1 px-6 text-center">
 			{children}
@@ -12,4 +12,4 @@ const SideMenutitle = ({ children }: properties) => {
 	)
 }
 
-export default SideMenutitle
+export default SideMenuTitle

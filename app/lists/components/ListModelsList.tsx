@@ -1,15 +1,18 @@
 import React from "react"
 import { listModelState, listState } from "@lists/state"
-import SideMenutitle from "@lists/builder/components/SideMenutitle"
+import SideMenuTitle from "@lists/builder/components/SideMenuTitle"
 import { detachmentData } from "@data/detachment_data"
 import { unitData } from "@data/unit_data"
-import { factionTypeArray, ListModelsNames } from "@type/types"
+import { factionTypeArray, ListModel } from "@type/types"
+import ListModelsOwned from "@lists/components/ListModelsOwned"
+import { collectionState } from "@app/collection/state"
 
 function ListModelsList() {
 	const { list } = listState()
 	const { visible, setVisible } = listModelState()
+	const { compare, setCompare } = collectionState()
 
-	const detachmentModels: ListModelsNames[] = list.detachments
+	const detachmentModels: ListModel[] = list.detachments
 		.filter((detachments) => detachments.id)
 		.map((detachment) => {
 			const detachmentInfo = detachmentData.filter((entry) => entry.id === detachment.id)[0]
@@ -21,7 +24,7 @@ function ListModelsList() {
 			return { name: unitName, number: detachment.size, faction: detachmentInfo.faction }
 		})
 
-	const upgradeModels: ListModelsNames[] = list.upgrades
+	const upgradeModels: ListModel[] = list.upgrades
 		.filter((upgrades) => upgrades.upgrades.length)
 		.map((upgrade) =>
 			upgrade.upgrades.map((entry) => {
@@ -31,12 +34,12 @@ function ListModelsList() {
 		)
 		.flat()
 
-	const allModels: ListModelsNames[] = [...detachmentModels, ...upgradeModels].filter((model) => model.name)
+	const allModels: ListModel[] = [...detachmentModels, ...upgradeModels].filter((model) => model.name)
 
 	const uniqueModelNames = Array.from(new Set(allModels.map((model) => model.name)))
 
-	const groupByModelNames: ListModelsNames[] = uniqueModelNames.map((modelName) => {
-		const matchedModels: ListModelsNames[] = allModels.filter((model) => model.name === modelName)
+	const groupByModelNames: ListModel[] = uniqueModelNames.map((modelName) => {
+		const matchedModels: ListModel[] = allModels.filter((model) => model.name === modelName)
 
 		return {
 			name: modelName,
@@ -45,7 +48,7 @@ function ListModelsList() {
 		}
 	})
 
-	const sortByModelName: ListModelsNames[] = groupByModelNames.sort((a, b) => {
+	const sortByModelName: ListModel[] = groupByModelNames.sort((a, b) => {
 		const nameA = a.name.toUpperCase()
 		const nameB = b.name.toUpperCase()
 
@@ -60,7 +63,7 @@ function ListModelsList() {
 		return 0
 	})
 
-	const sortModelsByFaction: ListModelsNames[][] = factionTypeArray.map((faction) => {
+	const sortModelsByFaction: ListModel[][] = factionTypeArray.map((faction) => {
 		return sortByModelName.filter((model) => model.faction === faction)
 	})
 
@@ -77,6 +80,7 @@ function ListModelsList() {
 							return (
 								<div key={`${model.name}xx${model.number}`}>
 									{model.name}, {model.number}
+									{compare ? <ListModelsOwned name={model.name} number={model.number} /> : null}
 								</div>
 							)
 						})}
@@ -85,12 +89,24 @@ function ListModelsList() {
 			)
 		})
 
+	const handleCollectionCompare = (e: any) => {
+		e.stopPropagation()
+		setCompare(!compare)
+	}
+
 	return (
 		<div
 			onClick={() => setVisible(false)}
 			className={`fixed left-0 top-0 h-full bg-dataslate pt-20 lg:pt-32 p-1 lg:p-4 w-screen min-w-[320px] max-w-[600px] overflow-auto text-backgrounds-950 ease-in-out duration-200 z-20 flex flex-col items-center gap-2  font-graduate ${!visible ? "-translate-x-full" : "-translate-x-0"}`}>
-			<SideMenutitle>Click to close</SideMenutitle>
+			<SideMenuTitle>Click to close</SideMenuTitle>
 			{<h3 className="text-center font-semibold text-lg font-subrayada">{list.name}</h3>}
+			<button
+				onClick={(e) => handleCollectionCompare(e)}
+				className={
+					"text-primary-50 builder_title_background rounded-full py-1 px-4 hover:text-primary-100 active:text-primary-100 border-2 border-backgrounds-950 hover:border-primary-600 active:border-primary-600"
+				}>
+				Compare Collection
+			</button>
 			{unitHTML}
 			{unitHTML.length ? null : <p className="text-center">No Models</p>}
 		</div>

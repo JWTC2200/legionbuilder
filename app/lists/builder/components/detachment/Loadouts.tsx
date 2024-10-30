@@ -4,7 +4,7 @@ import { createLoadout, currentDetachmentSize, incrementLoadout, loadoutCount } 
 import { FormEvent } from "react"
 import LoadoutEntries from "./LoadoutEntries"
 import LoadoutCountWarning from "../warnings/LoadoutCountWarning"
-import SideMenutitle from "../SideMenutitle"
+import SideMenuTitle from "../SideMenuTitle"
 import { toast } from "react-toastify"
 
 interface properties {
@@ -20,16 +20,16 @@ const Loadouts = ({ slot_id }: properties) => {
 	const loadoutSlot = list.loadouts.find((slot) => slot.slot_id === slot_id)
 
 	if (!loadoutSlot) {
-		return <SideMenutitle>Could not find any loadout options</SideMenutitle>
+		return <SideMenuTitle>Could not find any loadout options</SideMenuTitle>
 	}
 	if (!loadoutSlot.id) {
-		return <SideMenutitle>No unit selected</SideMenutitle>
+		return <SideMenuTitle>No unit selected</SideMenuTitle>
 	}
 
 	const detachmentInfo = detachmentData.find((detachment) => detachment.id === loadoutSlot.id)
 
 	if (!detachmentInfo) {
-		return <SideMenutitle>Could not find loadout data</SideMenutitle>
+		return <SideMenuTitle>Could not find loadout data</SideMenuTitle>
 	}
 
 	const { loadout_options } = detachmentInfo
@@ -90,15 +90,15 @@ const Loadouts = ({ slot_id }: properties) => {
 
 	return (
 		<>
-			<SideMenutitle>{detachmentInfo.name}</SideMenutitle>
+			<SideMenuTitle>{detachmentInfo.name}</SideMenuTitle>
 			<form className="flex flex-col gap-1" onSubmit={handleSubmit}>
 				{selectMenus}
 				{selectMenus.length ? (
 					<button type="submit" className="mt-3">
-						<SideMenutitle>Add</SideMenutitle>
+						<SideMenuTitle>Add</SideMenuTitle>
 					</button>
 				) : (
-					<SideMenutitle>No loadout options</SideMenutitle>
+					<SideMenuTitle>No loadout options</SideMenuTitle>
 				)}
 			</form>
 			<LoadoutCountWarning slot_id={loadoutSlot.slot_id} />
