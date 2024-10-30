@@ -2,6 +2,7 @@ import Main from "./components/Main"
 import Link from "next/link"
 import { FaGithub, FaDiscord } from "react-icons/fa6"
 import { TfiEmail } from "react-icons/tfi"
+import { FaCoffee } from "react-icons/fa"
 import FrontpageUpdates from "@components/FrontpageUpdates"
 import React from "react"
 import Image from "next/image"
@@ -47,6 +48,15 @@ export default function Home() {
 						height={200}
 					/>
 				</div>
+				<div className={"my-4 text-center"}>
+					I've created a{" "}
+					<Link
+						href={"https://buymeacoffee.com/legionbuilder"}
+						className="text-primary-500 hover:text-tertiary-700 hover:underline active:text-tertiary-700 focus:text-tertiary-700 mt-2">
+						buymeacoffee
+					</Link>{" "}
+					account for the site. Thanks for everyone's support, I really appreciate it!
+				</div>
 				<p>As usual feel free to contact me on Discord if you have any issues or suggestions. Thanks!</p>
 			</div>
 
@@ -67,9 +77,13 @@ export default function Home() {
 				</Link>
 				<Link
 					href="https://github.com/JWTC2200/legionbuilder"
-					className="mb-2 text-xl flex items-center gap-1
-        hover:text-tertiary-700 hover:underline active:text-tertiary-700 focus:text-tertiary-700 mt-2">
+					className="mb-2 text-xl flex items-center gap-1	hover:text-tertiary-700 hover:underline active:text-tertiary-700 focus:text-tertiary-700 mt-2">
 					Github <FaGithub />
+				</Link>
+				<Link
+					href={"https://buymeacoffee.com/legionbuilder"}
+					className="mb-2 text-xl flex items-center gap-1 hover:text-tertiary-700 hover:underline active:text-tertiary-700 focus:text-tertiary-700 mt-2">
+					Buymeacoffee <FaCoffee />
 				</Link>
 			</div>
 			<hr className="border rounded-full bg-stone-900 m-4 w-full" />
