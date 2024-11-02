@@ -422,7 +422,7 @@ export const darkMechanicum: DETACHMENT[] = [
 		allegiance: ALLEGIANCE.traitor,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.core],
-		base_cost: 75,
+		base_cost: 45,
 		base_size: 1,
 		max_size: 9,
 		main_unit: [5001],
