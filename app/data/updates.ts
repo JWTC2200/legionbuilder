@@ -6,9 +6,14 @@ interface update {
 export const updateData: update[] = [
 	{
 		date: "02/11/24",
+		updates: ["Mechanicus Tech-Priests can now upgrade with another 1-2 models."],
+	},
+	{
+		date: "02/11/24",
 		updates: [
 			"Added standard Formations and Detachments for Mechanicum, Dark Mechanicum, Collegia Titanica & Questoris Familia.",
-			"Added a new page for logged in users to keep track of the collections. Added a button to compare a users collection with a lists required models in the list models popup.",
+			"Added a new page for logged in users to keep track of the collections.",
+			"Added a button to compare a users collection with a lists required models in the list models popup.",
 		],
 	},
 	{

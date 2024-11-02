@@ -23,7 +23,7 @@ export default function Home() {
 			<div className="m-4 flex flex-col items-center gap-2 text-lg sm:text-xl">
 				<p>
 					I've added a new page where logged in users can keep track of what models they have in their
-					collction.
+					collection.
 				</p>
 				<Image
 					src="/images/collection.png"

@@ -131,7 +131,16 @@ export const mechanicum: DETACHMENT[] = [
 		main_unit: [3004],
 		related_unit: [],
 		dataslate_loadout: [],
-		upgrade_options: [],
+		upgrade_options: [
+			{
+				name: "Additional Tech-Priest",
+				unit_ref: 3004,
+				options: [
+					{ number: 1, cost: 15, size: 1 },
+					{ number: 2, cost: 30, size: 2 },
+				],
+			},
+		],
 		loadout_options: [],
 		datasheet_info: [],
 	},
