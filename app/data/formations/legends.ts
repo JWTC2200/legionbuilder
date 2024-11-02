@@ -167,8 +167,8 @@ export const legends: FORMATION[] = [
 		subfaction: null,
 		allegiance: ALLEGIANCE.traitor,
 		formation_slots: [
-			{ slot_type: SLOT_TYPE.compulsory, slot_id: [7029, 7030, 7030, 7031, 7032, 7033] },
-			{ slot_type: SLOT_TYPE.optional, slot_id: [7034, 7032, 7033, 7032, 7033, 7031] },
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [7029, 7030, 7030, 7031, 7032] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [7034, 7032, 7032, 7031] },
 		],
 		rules: [
 			legendRules,
