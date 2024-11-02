@@ -18,7 +18,6 @@ export default function Home() {
 
 			<div className="m-4 flex flex-col items-center text-center gap-2 text-lg sm:text-xl">
 				<p>Detachments, Formations from The Rise of the Dark Mechanicum book have been added!</p>
-				<p>Formations of Legend will be added later.</p>
 			</div>
 
 			<div className="m-4 flex flex-col items-center gap-2 text-lg sm:text-xl">
