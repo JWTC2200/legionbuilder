@@ -878,7 +878,7 @@ export const legends: DETACHMENT[] = [
 			{
 				name: "Dedicated Triaros",
 				unit_ref: 3017,
-				options: [{ number: 2, cost: 0, size: 2, break_strength: 0, mandatory: true }],
+				options: [{ number: 2, cost: 0, size: 2, break_strength: 0 }],
 			},
 		],
 		loadout_options: [],
