@@ -52,7 +52,7 @@ export const collegiaTitanica: FORMATION_SLOT[] = [
 		type: DETACHMENT_TYPE.titan,
 		faction: FACTION.collegiaTitanica,
 		restricted: true,
-		options: [4008],
+		options: [4008, 4009],
 		description: "Warmaster",
 	},
 ]

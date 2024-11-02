@@ -56,7 +56,7 @@ export const questorisFamilia: DETACHMENT[] = [
 		allegiance: null,
 		unique: true,
 		detachment_type: [DETACHMENT_TYPE.knight],
-		base_cost: 180,
+		base_cost: 200,
 		base_size: 3,
 		max_size: 9,
 		main_unit: [4004],
