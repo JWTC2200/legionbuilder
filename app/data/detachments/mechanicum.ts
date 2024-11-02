@@ -506,6 +506,7 @@ export const mechanicum: DETACHMENT[] = [
 					{ number: 3, cost: 155, size: 3 },
 					{ number: 4, cost: 185, size: 4 },
 					{ number: 5, cost: 240, size: 5 },
+					{ number: 6, cost: 285, size: 6 },
 				],
 			},
 		],
