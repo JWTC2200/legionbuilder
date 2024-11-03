@@ -62,7 +62,7 @@ const FormationSelector = ({ formation }: FormationSelector) => {
 					<option
 						key={formation.id + format.name}
 						value={format.id}
-						className={"text-primary-50 " + factionColours(format.faction)}>
+						className={factionColours(format.faction)}>
 						{format.legend ? "FoL: " : null}
 						{format.subfaction ? `${format.subfaction} ` : ""}
 						{format.name}

@@ -31,7 +31,7 @@ const ListFaction = () => {
 						<option
 							key={`list-faction-selector-${faction}`}
 							value={faction}
-							className={"text-primary-950 bg-secondary-800 " + factionColours(faction)}>
+							className={"bg-secondary-800 " + factionColours(faction)}>
 							{faction}
 						</option>
 					))}
