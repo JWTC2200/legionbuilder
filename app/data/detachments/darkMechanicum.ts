@@ -580,7 +580,7 @@ export const darkMechanicum: DETACHMENT[] = [
 		related_unit: [],
 		dataslate_loadout: [
 			{
-				text_option: ["Exo-planar bomard or Storm laser array", "Serperos lascutters or Irradiation engine"],
+				text_option: ["Exo-planar bombard or Storm laser array", "Serperos lascutters or Irradiation engine"],
 			},
 		],
 		upgrade_options: [

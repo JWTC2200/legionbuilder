@@ -2449,7 +2449,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 					{ name: "Anti-tank" },
 					{ name: "Arc", value: "Front" },
 					{ name: "Bunker Buster" },
-					{ name: "Enginer Killer", value: 1 },
+					{ name: "Engine Killer", value: 1 },
 					{ name: "Rend" },
 				],
 			},
