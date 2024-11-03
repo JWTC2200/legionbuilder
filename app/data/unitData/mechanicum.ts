@@ -284,7 +284,7 @@ export const mechanicum: UNIT_DATASHEET[] = [
 		caf: 0,
 		morale: 3,
 		wounds: 1,
-		weapons: [3020, 3021],
+		weapons: [3020, 3021, 3022],
 		special_rules: [],
 	},
 	{

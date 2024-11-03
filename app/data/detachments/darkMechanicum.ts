@@ -591,7 +591,7 @@ export const darkMechanicum: DETACHMENT[] = [
 					{ number: 1, cost: 85, size: 1 },
 					{ number: 2, cost: 150, size: 2 },
 					{ number: 3, cost: 230, size: 3 },
-					{ number: 4, cost: 315, size: 4 },
+					{ number: 4, cost: 300, size: 4 },
 				],
 			},
 		],
