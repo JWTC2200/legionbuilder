@@ -4,7 +4,7 @@ import { FiPlus } from "react-icons/fi"
 import { emptyFormation } from "@/app/data/empty_objects"
 import { nanoid } from "nanoid"
 import { setFormation } from "@lists/builder/components/formation/utils"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { FACTION, factionsWitFormations } from "@type/types"
 import { formationData } from "@data/formation_data"
 import factionColours from "@app/utils/factionColours"
@@ -42,6 +42,18 @@ const FormationAdd = () => {
 		.filter((formation) => formation.faction === select.faction)
 		.filter((formation) => formation.allegiance === list.allegiance || formation.allegiance === null)
 
+	// change formation selector to match list faction, easier when loading into an existing list.
+	useEffect(() => {
+		if (list.gamemode === "titandeath") {
+			setSelect({
+				faction: FACTION.strategic,
+				formation: 4001,
+			})
+		} else {
+			handleFactionChange(list.faction)
+		}
+	}, [list.faction, list.gamemode])
+
 	return (
 		<div className="text-primary-50 w-full flex flex-wrap justify-evenly gap-4 sm:px-4 py-2 bg-secondary-800 ">
 			{/* <Filter /> */}
@@ -52,14 +64,16 @@ const FormationAdd = () => {
 					"bg-inherit clip-path-halfagon-md sm:text-xl px-2 font-graduate text-center outline-none hover:text-primary-400 " +
 					factionColours(select.faction)
 				}>
-				{factionsWitFormations.map((faction) => (
-					<option
-						value={faction}
-						key={`formation-add-faction-${faction}`}
-						className={factionColours(faction)}>
-						{faction}
-					</option>
-				))}
+				{list.gamemode !== "titandeath" &&
+					factionsWitFormations.map((faction) => (
+						<option
+							value={faction}
+							key={`formation-add-faction-${faction}`}
+							className={factionColours(faction)}>
+							{faction}
+						</option>
+					))}
+				{list.gamemode === "titandeath" && <option value={FACTION.strategic}>{FACTION.strategic}</option>}
 			</select>
 			<select
 				value={select.formation}
