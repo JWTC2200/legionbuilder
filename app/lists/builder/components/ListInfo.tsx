@@ -6,7 +6,7 @@ const ListInfo = () => {
 	const { subFactionPoints, totalPoints } = totalListPoints(list)
 
 	return (
-		<div className="flex flex-wrap gap-4 justify-around items-center text-center font-graduate text-md sm:text-lg w-full p-2 sm:rounded-lg">
+		<div className="flex flex-wrap gap-4 justify-around items-center text-center font-graduate text-md sm:text-lg w-full p-2 sm:rounded-lg bg-secondary-800">
 			<div>{`Formations: ${list.formations.length}`}</div>
 			<div>{`Total: ${totalPoints}pts`}</div>
 			<div>{`Allies: ${subFactionPoints}pts`}</div>

@@ -1,11 +1,11 @@
-import { ListDetachment, ListFormation } from "@type/listTypes"
+import { ListFormation } from "@type/listTypes"
 import { formationData } from "@/app/data/formation_data"
 import { listState } from "@/app/lists/state"
 import { FaCircleQuestion } from "react-icons/fa6"
 import { dataslateSideWidget } from "@/app/lists/state"
-import { DETACHMENT } from "@type/types"
 import { sortFormationFactions } from "@app/utils/sorting"
 import { setFormation } from "@lists/builder/components/formation/utils"
+import factionColours from "@app/utils/factionColours"
 
 interface FormationSelector {
 	formation: ListFormation
@@ -26,7 +26,7 @@ const FormationSelector = ({ formation }: FormationSelector) => {
 		})
 	}
 
-	const handleFormationSideWIdget = () => {
+	const handleFormationSideWidget = () => {
 		const formationInfo = formationData.find((formationData) => formationData.id === formation.data_id)
 		if (formationInfo) {
 			if (sideWidget.formation?.id === formationInfo.id) {
@@ -43,11 +43,14 @@ const FormationSelector = ({ formation }: FormationSelector) => {
 	}
 
 	return (
-		<div className="flex sm:gap-4 items-center justify-center">
+		<div className="flex sm:gap-4 items-center justify-center ">
 			<select
 				id={`formation_selector_${formation.id}`}
 				name={`formation_selector_${formation.id}`}
-				className="bg-secondary-800 clip-path-halfagon-md sm:text-xl py-2 font-graduate text-center max-w-[300px] sm:max-w-[400px] lg:max-w-full outline-none hover:text-primary-400 active:text-primary-400"
+				className={
+					"bg-secondary-800 sm:text-xl p-2 font-graduate text-center max-w-[70vw] lg:max-w-full outline-none " +
+					(formation.faction ? factionColours(formation.faction) : "")
+				}
 				value={formation.data_id ? formation.data_id : ""}
 				onChange={(e) => {
 					selectFormation(Number(e.target.value))
@@ -56,7 +59,10 @@ const FormationSelector = ({ formation }: FormationSelector) => {
 					SELECT FORMATION
 				</option>
 				{sortFormationFactions(filteredFormations()).map((format) => (
-					<option key={formation.id + format.name} value={format.id} className="text-primary-50">
+					<option
+						key={formation.id + format.name}
+						value={format.id}
+						className={"text-primary-50 " + factionColours(format.faction)}>
 						{format.legend ? "FoL: " : null}
 						{format.subfaction ? `${format.subfaction} ` : ""}
 						{format.name}
@@ -64,7 +70,7 @@ const FormationSelector = ({ formation }: FormationSelector) => {
 				))}
 			</select>
 			<button
-				onClick={handleFormationSideWIdget}
+				onClick={handleFormationSideWidget}
 				className="font-graduate text-xl sm:text-2xl font-bold text-tertiary-300 hover:text-primary-300 active:text-tertiary-500 p-1">
 				<FaCircleQuestion />
 			</button>

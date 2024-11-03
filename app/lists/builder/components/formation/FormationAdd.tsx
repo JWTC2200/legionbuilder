@@ -7,6 +7,7 @@ import { setFormation } from "@lists/builder/components/formation/utils"
 import { useState } from "react"
 import { FACTION, factionsWitFormations } from "@type/types"
 import { formationData } from "@data/formation_data"
+import factionColours from "@app/utils/factionColours"
 
 const FormationAdd = () => {
 	const { list, setList } = listState()
@@ -42,30 +43,39 @@ const FormationAdd = () => {
 		.filter((formation) => formation.allegiance === list.allegiance || formation.allegiance === null)
 
 	return (
-		<div className="text-primary-50 flex flex-wrap items-center justify-center gap-4 max-w-full sm:px-4 rounded-full py-2 bg-secondary-800 ">
+		<div className="text-primary-50 w-full flex flex-wrap justify-evenly gap-4 sm:px-4 py-2 bg-secondary-800 ">
 			{/* <Filter /> */}
 			<select
 				value={select.faction}
 				onChange={(e) => handleFactionChange(e.target.value as FACTION)}
-				className="bg-inherit clip-path-halfagon-md sm:text-xl px-2 font-graduate text-center lg:max-w-full outline-none hover:text-primary-400 active:text-primary-400">
+				className={
+					"bg-inherit clip-path-halfagon-md sm:text-xl px-2 font-graduate text-center outline-none hover:text-primary-400 " +
+					factionColours(select.faction)
+				}>
 				{factionsWitFormations.map((faction) => (
-					<option value={faction}>{faction}</option>
+					<option
+						value={faction}
+						key={`formation-add-faction-${faction}`}
+						className={factionColours(faction)}>
+						{faction}
+					</option>
 				))}
 			</select>
 			<select
 				value={select.formation}
 				onChange={(e) => setSelect({ ...select, formation: Number(e.target.value) })}
-				className="max-w-full bg-inherit clip-path-halfagon-md sm:text-xl px-2 font-graduate lg:max-w-full outline-none hover:text-primary-400 active:text-primary-400 text-center">
+				className={
+					"max-w-full bg-inherit clip-path-halfagon-md sm:text-xl px-2 font-graduate lg:max-w-full outline-none text-center " +
+					factionColours(select.faction)
+				}>
 				{filteredFactions.map((entry) => (
-					<option value={entry.id} className={"text-right"}>
+					<option value={entry.id} key={`formation-add-formation-${entry.name}`} className={"text-right"}>
 						{entry.name}
 					</option>
 				))}
 			</select>
-			<div className="builder_title_background flex flex-wrap justify-center items-center text-center gap-4 w-max mx-auto rounded-full px-3 border-4 border-backgrounds-950 hover:border-primary-400">
-				<button
-					onClick={fillFormation}
-					className="p-1 hover:text-primary-400 font-graduate sm:text-xl flex items-center gap-1">
+			<div className="builder_title_background flex justify-center items-center text-center gap-4 rounded-full px-3 border-4 border-backgrounds-950 hover:border-primary-400 ">
+				<button onClick={fillFormation} className="p-1 font-graduate sm:text-xl flex items-center gap-1">
 					<FiPlus /> Add formation
 					<FiPlus />
 				</button>

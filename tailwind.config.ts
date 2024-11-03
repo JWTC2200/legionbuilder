@@ -49,6 +49,13 @@ const config: Config = {
 					"900": "hsl(24, 60%, 26%)",
 					"950": "hsl(23, 69%, 14%)",
 				},
+				astartes: colors.sky,
+				solar: colors.lime,
+				mechanicus: colors.orange,
+				darkMechanicus: colors.red,
+				strategic: colors.amber,
+				collegia: colors.yellow,
+				questoris: colors.blue,
 			},
 			fontSize: {
 				lg: "110%",
