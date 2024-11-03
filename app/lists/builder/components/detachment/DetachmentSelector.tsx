@@ -22,8 +22,6 @@ const DetachmentSelector = ({ detachmentSlot }: properties) => {
 
 	const detachment = list.detachments.find((detachment) => detachment.slot_id === detachmentSlot.id)!
 
-	const selectedStyling = detachment?.id && " text-tertiary-500 font-semibold"
-
 	const subfactionFiltered = filterBySubfactions(getSelectorIdArray(detachmentSlot), formationSubfaction, detachment)
 
 	const allegianceFiltered = filterByAllegiance(subfactionFiltered, list.allegiance, detachment)
@@ -67,11 +65,10 @@ const DetachmentSelector = ({ detachmentSlot }: properties) => {
 			value={detachment && detachment.id ? detachment.id : "0"}
 			onChange={(e) => selectDetachment(Number(e.target.value))}
 			className={
-				"w-full text-center py-1 px-2 border bg-secondary-700 border-primary-950 font-graduate text-secondary-300 hover:text-tertiary-300 active:text-tertiary-400" +
-				selectedStyling
+				"w-full text-center py-1 px-2 border bg-secondary-700 border-primary-950 font-graduate text-secondary-300 hover:text-tertiary-300 active:text-tertiary-400 " +
+				(detachment?.id && "text-tertiary-500 font-semibold")
 			}>
 			{nullOption()}
-			{/* <option value={"0"}>Select Detachment</option> */}
 			{selectorOptions}
 		</select>
 	)

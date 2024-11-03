@@ -30,14 +30,10 @@ const Formation = ({ formation }: properties) => {
 			id={formation.id}
 			className={`sm:rounded-xl flex flex-grow flex-col min-w-0 items-center overflow-hidden ${viewFormation && "pb-4"}`}>
 			<div
-				className={`w-full font-graduate builder_title_background sm:rounded-t-lg flex sm:flex-row flex-col justify-center sm:justify-between items-center text-center py-2 px-6 z-10 gap-2 ${!viewFormation && "sm:rounded-b-lg"}`}>
-				<FormationToggle view={viewFormation} toggle={setViewFormation} className="hidden sm:block" />
+				className={`w-full font-graduate builder_title_background sm:rounded-t-lg flex justify-around sm:justify-between items-center text-center p-2 sm:px-6 z-10 gap-2 ${!viewFormation && "sm:rounded-b-lg"}`}>
+				<FormationToggle view={viewFormation} toggle={setViewFormation} />
 				<FormationSelector formation={formation} />
-				<FormationDelete formation={formation} className="hidden sm:block" />
-				<div className="sm:hidden flex justify-between items-center gap-8">
-					<FormationToggle view={viewFormation} toggle={setViewFormation} />
-					<FormationDelete formation={formation} />
-				</div>
+				<FormationDelete formation={formation} />
 			</div>
 			<div className="overflow-hidden w-full">
 				<ResizingBox

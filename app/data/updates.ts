@@ -5,6 +5,14 @@ interface update {
 
 export const updateData: update[] = [
 	{
+		date: "03/11/24",
+		updates: [
+			"Added options to the formation add button in the list builder so they can be filtered by faction.",
+			"Added some colour to differentiate the factions. Hopefully this makes things a little bit clearer.",
+			"Fixes to detachment errors. ",
+		],
+	},
+	{
 		date: "02/11/24",
 		updates: ["Mechanicus Tech-Priests can now upgrade with another 1-2 models."],
 	},
