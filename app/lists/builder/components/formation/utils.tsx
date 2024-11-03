@@ -21,8 +21,6 @@ interface SlotOptions {
 }
 
 export const setFormation = (id: number, formation: ListFormation, list: List, setList: (update: List) => void) => {
-	console.log(id)
-
 	if (!id) {
 		setList(resetFormation(list, formation))
 	} else {
