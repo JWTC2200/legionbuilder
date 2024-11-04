@@ -127,7 +127,7 @@ export const mechanicum: DETACHMENT[] = [
 		detachment_type: [DETACHMENT_TYPE.support],
 		base_cost: 15,
 		base_size: 1,
-		max_size: 1,
+		max_size: 3,
 		main_unit: [3004],
 		related_unit: [],
 		dataslate_loadout: [],
