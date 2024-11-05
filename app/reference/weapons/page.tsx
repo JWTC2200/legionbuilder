@@ -9,6 +9,7 @@ import { sortedByNameKey } from "@/app/utils/sorting"
 import Main from "@components/Main"
 import Sticky from "@components/Sticky"
 import { WEAPON_DATASHEET } from "@type/types"
+import referenceAddresses from "@app/reference/addresses"
 
 const page = () => {
 	const [searchTerm, setSearchTerm] = useState("")
@@ -26,7 +27,7 @@ const page = () => {
 			<Sticky className="z-10">
 				<BreadCrumbs>
 					<Crumb href="/reference">Reference</Crumb>
-					<ReferenceSelector />
+					<ReferenceSelector addresses={referenceAddresses} />
 				</BreadCrumbs>
 				<section>
 					<input

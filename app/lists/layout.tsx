@@ -11,7 +11,7 @@ import { toast } from "react-toastify"
 import ListModelsList from "@lists/components/ListModelsList"
 import useAuthState from "@app/Auth"
 import getCollection from "@app/firebase/firestore/getCollection"
-import { collectionState } from "@app/collection/state"
+import { collectionState } from "@app/tools/collection/state"
 
 const layout = ({ children }: { children: React.ReactNode }) => {
 	const userUid = useAuthState((state) => state.uid)

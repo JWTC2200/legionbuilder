@@ -32,7 +32,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
 					{children}
 				</>
 			) : (
-				<div className={"mt-8 font-graduate"}>You need to be logged in to use this feature.</div>
+				<div className={"mt-8 font-graduate"}>You need to be logged in to use tools.</div>
 			)}
 		</Main>
 	)

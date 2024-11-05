@@ -1,14 +1,15 @@
 "use client"
 
 import { factionTypeArray, FACTION } from "@type/types"
-import CollectionFaction from "@app/collection/components/CollectionFaction"
-import { CollectionList, collectionState } from "@app/collection/state"
+import CollectionFaction from "@app/tools/collection/components/CollectionFaction"
+import { CollectionList, collectionState } from "@app/tools/collection/state"
 import useAuthState from "@app/Auth"
 import saveCollection from "@app/firebase/firestore/saveCollection"
 import { toast } from "react-toastify"
 import getCollection from "@app/firebase/firestore/getCollection"
 import { useEffect } from "react"
-import { BreadCrumbs, Crumb } from "@components/BreadCrumbs"
+import { BreadCrumbs, Crumb, ReferenceSelector } from "@components/BreadCrumbs"
+import toolsAddresses from "@app/tools/addresses"
 
 const page = () => {
 	const { collection, setCollection, faction, setFaction } = collectionState()
@@ -44,7 +45,8 @@ const page = () => {
 	return (
 		<div className={"font-graduate py-4 sm:pb-8 w-full text-lg sm:text-base text-secondary-200"}>
 			<BreadCrumbs>
-				<Crumb href={"collection"}>Collection</Crumb>
+				<Crumb href={"/tools"}>Tools</Crumb>
+				<ReferenceSelector addresses={toolsAddresses} />
 			</BreadCrumbs>
 			<div className={"flex flex-col items-center mt-4"}>
 				<div className={"flex justify-center flex-wrap sm:gap-8 gap-4"}>

@@ -1,9 +1,9 @@
 import React from "react"
 import { FACTION, UNIT_DATASHEET, UNIT_TYPE } from "@type/types"
 import { unitData } from "@data/unit_data"
-import CollectionInput from "@app/collection/components/CollectionInput"
+import CollectionInput from "@app/tools/collection/components/CollectionInput"
 import { sortUnitDatasheets } from "@app/utils/sorting"
-import { collectionState } from "@app/collection/state"
+import { collectionState } from "@app/tools/collection/state"
 
 interface properties {
 	faction: FACTION

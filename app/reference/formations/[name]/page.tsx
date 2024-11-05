@@ -5,6 +5,7 @@ import { notFound } from "next/navigation"
 import FormationDataslate from "@app/reference/formations/[name]/FormationDataslate"
 import { BreadCrumbs, Crumb, ReferenceSelector } from "@components/BreadCrumbs"
 import Main from "@components/Main"
+import referenceAddresses from "@app/reference/addresses"
 
 const page = ({ params: { name } }: { params: { name: string } }) => {
 	const formationName = name.replaceAll("_", " ")
@@ -16,7 +17,7 @@ const page = ({ params: { name } }: { params: { name: string } }) => {
 		<Main>
 			<BreadCrumbs>
 				<Crumb href="/reference">Reference</Crumb>
-				<ReferenceSelector />
+				<ReferenceSelector addresses={referenceAddresses} />
 			</BreadCrumbs>
 
 			<FormationDataslate formation={formationEntry} />

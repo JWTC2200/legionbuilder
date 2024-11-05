@@ -4,13 +4,14 @@ import { BreadCrumbs, Crumb, ReferenceSelector } from "@/app/components/BreadCru
 import AttackingUnit from "./components/AttackingUnit"
 import TargetUnit from "./components/TargetUnit"
 import CalculatorResults from "./components/CalculatorResults"
+import toolsAddresses from "@app/tools/addresses"
 
 const page = () => {
 	return (
-		<Main>
+		<>
 			<BreadCrumbs>
-				<Crumb href="/reference">Reference</Crumb>
-				<ReferenceSelector />
+				<Crumb href={"/tools"}>Tools</Crumb>
+				<ReferenceSelector addresses={toolsAddresses} />
 			</BreadCrumbs>
 			<section className="flex flex-col w-full p-4 text-primary-950">
 				<div className="flex flex-col md:flex-row gap-4 justify-center items-center">
@@ -19,7 +20,7 @@ const page = () => {
 				</div>
 				<CalculatorResults />
 			</section>
-		</Main>
+		</>
 	)
 }
 

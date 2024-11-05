@@ -26,9 +26,9 @@ export const FormationGroup = ({ formationGroup }: properties) => {
 				{formationGroup.type === SLOT_TYPE.compulsory && slotsUsed < groupIds.length ? (
 					<SimpleWarning>Empty compulsory slots!</SimpleWarning>
 				) : null}
-				{formationGroup.type === SLOT_TYPE.choice && slotsUsed > 1 ? (
-					<SimpleWarning>Too many detachments</SimpleWarning>
-				) : null}
+				{/* {formationGroup.type === SLOT_TYPE.choice && slotsUsed > 1 ? ( */}
+				{/* 	<SimpleWarning>Too many detachments</SimpleWarning> */}
+				{/* ) : null} */}
 				<div className="flex flex-wrap gap-2 sm:px-2 justify-center">
 					{detachment_slots.map((slot) => (
 						<DetachmentSlot key={slot.id} detachmentSlot={slot} />

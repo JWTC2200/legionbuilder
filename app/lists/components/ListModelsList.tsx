@@ -5,7 +5,7 @@ import { detachmentData } from "@data/detachment_data"
 import { unitData } from "@data/unit_data"
 import { factionTypeArray, ListModel } from "@type/types"
 import ListModelsOwned from "@lists/components/ListModelsOwned"
-import { collectionState } from "@app/collection/state"
+import { collectionState } from "@app/tools/collection/state"
 
 function ListModelsList() {
 	const { list } = listState()

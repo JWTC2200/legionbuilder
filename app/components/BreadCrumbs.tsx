@@ -1,6 +1,6 @@
 "use client"
 
-import { Children, ReactNode, useRef, useState } from "react"
+import { Children, ReactNode, useEffect, useRef, useState } from "react"
 import { usePathname } from "next/navigation"
 import Link from "next/link"
 import { CaretDown, CaretUp } from "@components/Icons"
@@ -31,11 +31,11 @@ export function Crumb({ href, children }: { href: string; children: ReactNode })
 	)
 }
 
-export function ReferenceSelector() {
+export function ReferenceSelector({ addresses }: { addresses: { prefix: string; addresses: string[] } }) {
 	const ref = useRef<HTMLHeadingElement>(null)
-	const [options] = useState(
-		["units", "weapons", "detachments", "formations", "calculator"].map((option) => {
-			const href = "/reference/" + option
+	const [options, setOptions] = useState(
+		addresses.addresses.map((option) => {
+			const href = `/${addresses.prefix}/${option}`
 
 			return {
 				href,
@@ -58,12 +58,16 @@ export function ReferenceSelector() {
 				{!open ? <CaretDown /> : <CaretUp />}
 			</button>
 
-			<div className={`absolute z-50 bottom-o -left-2 ${open ? "max-h-[158px]" : "max-h-0"} bg-secondary-900 overflow-hidden transition-all`}>
+			<div
+				className={`absolute z-50 bottom-o -left-2 ${open ? "max-h-[250px]" : "max-h-0"} bg-secondary-900 overflow-hidden transition-all`}>
 				<ol className="p-2 pt-3 clip-path-halfagon-sm space-y-1">
 					{options.map((option) => {
 						return (
 							<li key={option.href} className="px-2">
-								<Link href={option.href} className="text-primary-400 hover:text-primary-200" onClick={toggleOpen}>
+								<Link
+									href={option.href}
+									className="text-primary-400 hover:text-primary-200"
+									onClick={toggleOpen}>
 									{option.text}
 								</Link>
 							</li>

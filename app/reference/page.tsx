@@ -21,9 +21,6 @@ const page = () => {
 				<Item href="/reference/formations" icon="banner">
 					Formations
 				</Item>
-				<Item href="/reference/calculator" icon="calculator">
-					Calculator
-				</Item>
 			</section>
 		</Main>
 	)

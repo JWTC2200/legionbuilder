@@ -1,5 +1,5 @@
 import useAuthState from "@app/Auth"
-import { collectionState } from "@app/collection/state"
+import { collectionState } from "@app/tools/collection/state"
 
 interface properties {
 	name: string

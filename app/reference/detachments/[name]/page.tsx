@@ -6,6 +6,7 @@ import DetachmentDataslate from "@/app/components/DetachmentDataslate"
 import Main from "@components/Main"
 import { BreadCrumbs, Crumb, ReferenceSelector } from "@components/BreadCrumbs"
 import Sticky from "@components/Sticky"
+import referenceAddresses from "@app/reference/addresses"
 
 const page = ({ params: { name } }: { params: { name: string } }) => {
 	const detachmentName = name.replaceAll("_", " ")
@@ -19,7 +20,7 @@ const page = ({ params: { name } }: { params: { name: string } }) => {
 			<Sticky className="z-10">
 				<BreadCrumbs>
 					<Crumb href="/reference">Reference</Crumb>
-					<ReferenceSelector />
+					<ReferenceSelector addresses={referenceAddresses} />
 				</BreadCrumbs>
 			</Sticky>
 
