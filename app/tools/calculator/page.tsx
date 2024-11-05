@@ -1,5 +1,5 @@
 "use client"
-import Main from "@/app/components/Main"
+
 import { BreadCrumbs, Crumb, ReferenceSelector } from "@/app/components/BreadCrumbs"
 import AttackingUnit from "./components/AttackingUnit"
 import TargetUnit from "./components/TargetUnit"

@@ -1,6 +1,5 @@
 "use client"
 
-import { useEffect } from "react"
 import Main from "@components/Main"
 import useAuthState from "@app/Auth"
 import { ToastContainer } from "react-toastify"

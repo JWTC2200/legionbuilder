@@ -1,6 +1,6 @@
 "use client"
 
-import { Children, ReactNode, useEffect, useRef, useState } from "react"
+import { Children, ReactNode, useRef, useState } from "react"
 import { usePathname } from "next/navigation"
 import Link from "next/link"
 import { CaretDown, CaretUp } from "@components/Icons"
@@ -33,7 +33,7 @@ export function Crumb({ href, children }: { href: string; children: ReactNode })
 
 export function ReferenceSelector({ addresses }: { addresses: { prefix: string; addresses: string[] } }) {
 	const ref = useRef<HTMLHeadingElement>(null)
-	const [options, setOptions] = useState(
+	const [options] = useState(
 		addresses.addresses.map((option) => {
 			const href = `/${addresses.prefix}/${option}`
 
