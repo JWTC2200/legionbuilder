@@ -8,11 +8,6 @@ import { ToastContainer } from "react-toastify"
 const layout = ({ children }: { children: React.ReactNode }) => {
 	const userUid = useAuthState((state) => state.uid)
 
-	useEffect(() => {
-		if (userUid) {
-		}
-	}, [userUid])
-
 	return (
 		<Main>
 			{userUid ? (

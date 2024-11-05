@@ -6,8 +6,6 @@ import { CollectionList, collectionState } from "@app/tools/collection/state"
 import useAuthState from "@app/Auth"
 import saveCollection from "@app/firebase/firestore/saveCollection"
 import { toast } from "react-toastify"
-import getCollection from "@app/firebase/firestore/getCollection"
-import { useEffect } from "react"
 import { BreadCrumbs, Crumb, ReferenceSelector } from "@components/BreadCrumbs"
 import toolsAddresses from "@app/tools/addresses"
 
@@ -28,19 +26,6 @@ const page = () => {
 			}
 		}
 	}
-
-	const handleGet = async () => {
-		if (!userUid) {
-			toast.warning("You are not logged in")
-		} else {
-			const collections = await getCollection(userUid)
-			setCollection(collections[0].collection)
-		}
-	}
-
-	useEffect(() => {
-		handleGet()
-	}, [userUid])
 
 	return (
 		<div className={"font-graduate py-4 sm:pb-8 w-full text-lg sm:text-base text-secondary-200"}>

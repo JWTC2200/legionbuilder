@@ -8,6 +8,7 @@ import "react-toastify/dist/ReactToastify.css"
 
 import NavBar from "@components/navigation/NavBar"
 import AuthContextProvider from "./firebase/auth/AuthContext"
+import UserData from "@app/UserData"
 
 export const metadata: Metadata = {
 	title: "Legion Builder",
@@ -23,8 +24,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 				</div>
 				<AuthContextProvider>
 					<Suspense>
-						<NavBar />
-						{children}
+						<UserData>
+							<NavBar />
+							{children}
+						</UserData>
 					</Suspense>
 					<Analytics />
 				</AuthContextProvider>

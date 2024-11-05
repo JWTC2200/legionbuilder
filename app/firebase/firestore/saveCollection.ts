@@ -1,5 +1,4 @@
-import { checkCollection } from "@app/firebase/firestore/checkCollection"
-import { CollectionList } from "@app/collection/state"
+import { CollectionList } from "@app/tools/collection/state"
 import { db } from "@app/firebase/config"
 import { doc, serverTimestamp, setDoc } from "firebase/firestore"
 

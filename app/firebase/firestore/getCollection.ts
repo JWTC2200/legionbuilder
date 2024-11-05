@@ -1,6 +1,6 @@
-import { collection, doc, getDoc, getDocs, onSnapshot, query, where } from "firebase/firestore"
+import { collection, getDocs, query, where } from "firebase/firestore"
 import { db } from "@/app/firebase/config"
-import { CollectionList, collectionState } from "@app/collection/state"
+import { CollectionList } from "@app/tools/collection/state"
 
 export const getCollection = async (user: string) => {
 	const q = query(collection(db, process.env.NEXT_PUBLIC_FIREBASE_COLLECTION_DB!), where("owner", "==", user))
