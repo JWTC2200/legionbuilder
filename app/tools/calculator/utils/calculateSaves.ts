@@ -12,7 +12,7 @@ export const calculateSaves = (weapon: WEAPON_PROFILES, target: UNIT_DATASHEET):
 	const finalAP = calculateAP(weapon, target)
 
 	const targetSave = target.save + finalAP
-	let finalArmourSave = 1
+	let finalArmourSave: number
 
 	if (targetType === UNIT_TYPE.structure) {
 		const structureSave = weaponTraits.includes("Bunker Buster") ? targetSave + finalAP : targetSave
