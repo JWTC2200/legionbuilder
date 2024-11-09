@@ -121,7 +121,7 @@ export const mechanicum: FORMATION[] = [
 		],
 	},
 	{
-		id: 3004,
+		id: 3005,
 		name: "Itnerant Cybernetica Cohort (vanguard)",
 		faction: FACTION.mechanicum,
 		subfaction: null,
