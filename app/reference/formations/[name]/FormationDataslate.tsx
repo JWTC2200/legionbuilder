@@ -26,6 +26,7 @@ const FormationDataslate = ({ formation }: properties) => {
 					{formation.name}
 				</h2>
 			</div>
+
 			{formationRules}
 			{formationSlots}
 		</article>

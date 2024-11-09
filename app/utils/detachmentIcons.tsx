@@ -1,38 +1,22 @@
 import { DETACHMENT_TYPE } from "@type/types"
-import {
-	APC,
-	ArrowUp,
-	Bullets,
-	Cannon,
-	Cog,
-	GothicCross,
-	JetFighter,
-	Knight,
-	Shield,
-	Skull,
-	Tank,
-	TankTread,
-	Tower,
-} from "@components/Icons"
-import React from "react"
 
-const detachmentIcons: { [key: string]: React.ReactNode } = {
-	[DETACHMENT_TYPE.hq]: <Skull />,
-	[DETACHMENT_TYPE.core]: <Shield />,
-	[DETACHMENT_TYPE.support]: <Bullets />,
-	[DETACHMENT_TYPE.vanguard]: <GothicCross />,
-	[DETACHMENT_TYPE.light]: <APC />,
-	[DETACHMENT_TYPE.battle]: <Tank />,
-	[DETACHMENT_TYPE.heavy]: <TankTread />,
-	[DETACHMENT_TYPE.artillery]: <Cannon />,
-	[DETACHMENT_TYPE.air]: <JetFighter />,
-	[DETACHMENT_TYPE.bastion]: <Tower />,
-	[DETACHMENT_TYPE.transport]: <ArrowUp />,
-	[DETACHMENT_TYPE.knight]: <Knight />,
-	[DETACHMENT_TYPE.titan]: <Cog />,
-	[DETACHMENT_TYPE.dedicated]: <ArrowUp />,
+const matchIcon: { [key: string]: string } = {
+	[DETACHMENT_TYPE.hq]: "skull",
+	[DETACHMENT_TYPE.core]: "shield",
+	[DETACHMENT_TYPE.support]: "bullets",
+	[DETACHMENT_TYPE.vanguard]: "gothicCross",
+	[DETACHMENT_TYPE.light]: "apc",
+	[DETACHMENT_TYPE.battle]: "tank",
+	[DETACHMENT_TYPE.heavy]: "tankTread",
+	[DETACHMENT_TYPE.artillery]: "cannon",
+	[DETACHMENT_TYPE.air]: "jetFighter",
+	[DETACHMENT_TYPE.bastion]: "tower",
+	[DETACHMENT_TYPE.transport]: "arrowUp",
+	[DETACHMENT_TYPE.knight]: "knight",
+	[DETACHMENT_TYPE.titan]: "cog",
+	[DETACHMENT_TYPE.dedicated]: "arrowUp",
 }
 
 export const getDetachmentIcon = (type: DETACHMENT_TYPE) => {
-	return detachmentIcons[type]
+	return matchIcon[type]
 }
