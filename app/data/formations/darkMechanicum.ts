@@ -139,7 +139,6 @@ export const darkMechanicum: FORMATION[] = [
 					"Cybernetica Cortex (X) special rule",
 			},
 			{
-				name: "Cybernetica Cortex",
 				text: `All Detachments included in this Support Formation with the Cybernetica Cortex (X) special rule replace the variant they have with Cybernetica Cortex (March, Charge) and have the Dread Aura (3") special rule`,
 			},
 		],

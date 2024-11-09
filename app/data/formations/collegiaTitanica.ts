@@ -120,7 +120,6 @@ export const collegiaTitanica: FORMATION[] = [
 					"Mechanicum Taghmata Army List must have the Cybernetica Cortex (X) special rule",
 			},
 			{
-				name: "Cortex Controller",
 				text:
 					"All Titan Detachments within this Support Formation gain the Cortex Controller special rule. A Titan model\n" +
 					'from this Support Formation counts its Tactical Strength as equal to its remaining Wounds while within 3" of a\n' +

@@ -179,20 +179,13 @@ export const solar: FORMATION[] = [
 			supportFormationText(FACTION.solar),
 			{
 				name: "Master of Automata",
-				text:
-					"HQ Detachment slots in this Support Formation must be filled by HQ Detachments chosen\n" +
-					"from the Solar Auxilia Army List. HQ Detachments chosen from the Solar Auxilia Army List in this Support\n" +
-					"Formation gain the Cortex Controller special rule",
+				text: "HQ Detachment slots in this Support Formation must be filled by HQ Detachments chosen from the Solar Auxilia Army List. HQ Detachments chosen from the Solar Auxilia Army List in this Support Formation gain the Cortex Controller special rule",
 			},
 			{
 				name: "Cybernetica Cortex",
-				text:
-					"Optional Support, Vanguard and Bastion Detachment slots in this Support Formation must be filled with\n" +
-					"Detachments from the Mechanicum Taghmata Army List. Detachments taken from the Mechanicum Taghmata\n" +
-					"Army List in this way must have the Cybernetica Cortex (X) special rule",
+				text: "Optional Support, Vanguard and Bastion Detachment slots in this Support Formation must be filled with Detachments from the Mechanicum Taghmata Army List. Detachments taken from the Mechanicum Taghmata Army List in this way must have the Cybernetica Cortex (X) special rule",
 			},
 			{
-				name: "Core Detachments",
 				text: "Core Detachment slots in this Support Formation may be filled by Core Detachments chosen from the Solar	Auxilia Army List or with Thallax Cohort Detachments chosen from the Mechanicum Taghmata Army List",
 			},
 		],

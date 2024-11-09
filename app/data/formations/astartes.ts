@@ -179,23 +179,13 @@ export const astartes: FORMATION[] = [
 				text: `HQ Detachment slots in this Support Formation must be filled by HQ Detachments chosen from the Legiones Astartes Army List`,
 			},
 			{
-				name: "Cybernetica Cortex",
 				text: `Support, Vanguard and Bastion Detachment slots in this Support Formation must be filled with Detachments from the Mechanicum Taghmata Army List. Detachments taken from the Mechanicum Taghmata Army List in this way must have the Cybernetica Cortex (X) special rule`,
 			},
 			{
-				name: "Core Detachments",
-				text:
-					"Core Detachment slots in this Support Formation may be filled by Core Detachments chosen from the Legiones\n" +
-					"Astartes Army List or with Thallax Cohort Detachments chosen from the Mechanicum Taghmata Army List. HQ\n" +
-					"and Core Detachments chosen from the Legiones Astartes Army List in this Support Formation gain the Cortex\n" +
-					"Controller special rule",
+				text: "Core Detachment slots in this Support Formation may be filled by Core Detachments chosen from the Legiones Astartes Army List or with Thallax Cohort Detachments chosen from the Mechanicum Taghmata Army List. HQ and Core Detachments chosen from the Legiones Astartes Army List in this Support Formation gain the Cortex Controller special rule",
 			},
 			{
-				name: "Line",
-				text:
-					"Detachments from the Mechanicum Taghmata Army List in this Support Formation do not gain the Legiones\n" +
-					"Astartes special rule selected for this Support Formation, but instead gain the Line special rule while that\n" +
-					'Detachment is within 8" of a Legiones Astartes Detachment from the same Support Formation',
+				text: `Detachments from the Mechanicum Taghmata Army List in this Support Formation do not gain the Legiones Astartes special rule selected for this Support Formation, but instead gain the Line special rule while that Detachment is within 8" of a Legiones Astartes Detachment from the same Support Formation`,
 			},
 		],
 	},

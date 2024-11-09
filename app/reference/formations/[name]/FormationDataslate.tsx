@@ -8,8 +8,8 @@ interface properties {
 const FormationDataslate = ({ formation }: properties) => {
 	const formationRules = formation.rules.length ? (
 		<div className="pb-2 px-2 space-y-2">
-			{formation.rules.map((rule) => {
-				return <FormationRule rule={rule} key={rule.name} />
+			{formation.rules.map((rule, index) => {
+				return <FormationRule rule={rule} key={`${formation.name}-rule-${index}`} />
 			})}
 		</div>
 	) : null

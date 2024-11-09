@@ -7,7 +7,7 @@ interface properties {
 function FormationRule({ rule }: properties) {
 	return (
 		<div className="text-primary-900">
-			<span className="font-bold font-graduate">{rule.name}</span>: {rule.text}
+			{rule.name ? <span className="font-bold font-graduate">{rule.name}:</span> : ""} {rule.text}
 		</div>
 	)
 }

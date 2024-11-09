@@ -149,7 +149,7 @@ export interface FORMATION {
 }
 
 export interface FORMATION_RULES {
-	name: string
+	name?: string
 	text: string
 }
 
