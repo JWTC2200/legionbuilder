@@ -1,4 +1,4 @@
-import { FACTION, FORMATION, FORMATION_RULES, SLOT_TYPE } from "@type/types"
+import { FACTION, FORMATION, SLOT_TYPE } from "@type/types"
 import { astartes } from "@data/formations/astartes"
 import { solar } from "@data/formations/solar"
 import { legends } from "@data/formations/legends"
