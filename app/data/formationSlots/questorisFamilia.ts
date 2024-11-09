@@ -55,4 +55,39 @@ export const questorisFamilia: FORMATION_SLOT[] = [
 		options: [8105],
 		description: "Knight Styrix/Magaera",
 	},
+
+	// unique slots
+
+	{
+		id: 8106,
+		type: DETACHMENT_TYPE.knight,
+		faction: FACTION.questorisFamilia,
+		restricted: true,
+		options: [8102, 8103, 8104],
+		description: "Knight",
+	},
+	{
+		id: 8107,
+		type: DETACHMENT_TYPE.vanguard,
+		faction: FACTION.questorisFamilia,
+		restricted: true,
+		options: [3011, 3012],
+		description: "Knight Household Retainer Cohorts",
+	},
+	{
+		id: 8108,
+		type: DETACHMENT_TYPE.support,
+		faction: FACTION.questorisFamilia,
+		restricted: true,
+		options: [3007, 3008, 3009],
+		description: "Knight Household Aegis Cohorts",
+	},
+	{
+		id: 8109,
+		type: DETACHMENT_TYPE.bastion,
+		faction: FACTION.questorisFamilia,
+		restricted: true,
+		options: [3013],
+		description: "Knight Household Aegis Cohorts",
+	},
 ]

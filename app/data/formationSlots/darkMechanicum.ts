@@ -119,4 +119,28 @@ export const darkMechanicum: FORMATION_SLOT[] = [
 		options: [5901],
 		description: "Triaros Armoured Conveyors",
 	},
+	{
+		id: 5904,
+		type: DETACHMENT_TYPE.support,
+		faction: FACTION.darkMechanicum,
+		restricted: true,
+		options: [3007, 3008, 3009],
+		description: "Ironbound Ruinhost",
+	},
+	{
+		id: 5905,
+		type: DETACHMENT_TYPE.vanguard,
+		faction: FACTION.darkMechanicum,
+		restricted: true,
+		options: [3011, 3012],
+		description: "Ironbound Ruinhost",
+	},
+	{
+		id: 5906,
+		type: DETACHMENT_TYPE.bastion,
+		faction: FACTION.darkMechanicum,
+		restricted: true,
+		options: [3013],
+		description: "Ironbound Ruinhost",
+	},
 ]

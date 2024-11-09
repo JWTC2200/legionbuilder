@@ -1,4 +1,5 @@
 import { FACTION, FORMATION, SLOT_TYPE } from "@type/types"
+import { supportFormationText } from "@data/formations/formationRules"
 
 // ********************************************************************
 // *********************** ASTARTES FORMATIONS ************************
@@ -153,6 +154,48 @@ export const astartes: FORMATION[] = [
 			{
 				name: "Subterranean Assault",
 				text: 'When a Detachment from this Formation that has been upgraded with Legion Termites as Dedicated Transports Deep Strikes, after placing and scattering the initial model, roll a D6 for each enemy Detachment with a Scale of 2 or less that is within 6" of that initial model. On a 5+, that enemy Detachment suffers the effects of the Quake trait as if a hit had been scored against it by a weapon with that trait.',
+			},
+		],
+	},
+	{
+		id: 1008,
+		name: "Brethren of Iron",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		formation_slots: [
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [1000, 1011, 1011] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [1011, 1012, 1013, 1013] },
+			{
+				slot_type: SLOT_TYPE.choice,
+				slot_id: [1013, 1014, 1014],
+				text: "ONE Support slot or TWO Vanguard slots",
+			},
+		],
+		rules: [
+			supportFormationText(FACTION.astartes),
+			{
+				name: "Forge Lord",
+				text: `HQ Detachment slots in this Support Formation must be filled by HQ Detachments chosen from the Legiones Astartes Army List`,
+			},
+			{
+				name: "Cybernetica Cortex",
+				text: `Support, Vanguard and Bastion Detachment slots in this Support Formation must be filled with Detachments from the Mechanicum Taghmata Army List. Detachments taken from the Mechanicum Taghmata Army List in this way must have the Cybernetica Cortex (X) special rule`,
+			},
+			{
+				name: "Core Detachments",
+				text:
+					"Core Detachment slots in this Support Formation may be filled by Core Detachments chosen from the Legiones\n" +
+					"Astartes Army List or with Thallax Cohort Detachments chosen from the Mechanicum Taghmata Army List. HQ\n" +
+					"and Core Detachments chosen from the Legiones Astartes Army List in this Support Formation gain the Cortex\n" +
+					"Controller special rule",
+			},
+			{
+				name: "Line",
+				text:
+					"Detachments from the Mechanicum Taghmata Army List in this Support Formation do not gain the Legiones\n" +
+					"Astartes special rule selected for this Support Formation, but instead gain the Line special rule while that\n" +
+					'Detachment is within 8" of a Legiones Astartes Detachment from the same Support Formation',
 			},
 		],
 	},

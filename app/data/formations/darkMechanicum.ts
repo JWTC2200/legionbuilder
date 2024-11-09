@@ -5,6 +5,7 @@
 // 5000-5999
 
 import { ALLEGIANCE, FACTION, FORMATION, SLOT_TYPE } from "@type/types"
+import { supportFormationText } from "@data/formations/formationRules"
 
 export const darkMechanicum: FORMATION[] = [
 	{
@@ -106,6 +107,40 @@ export const darkMechanicum: FORMATION[] = [
 			{
 				name: "Dedicated Transports",
 				text: "Any Dark Mechanicum Detachment within the Formation that contain only Infantry or Walker models may be upgraded with Triaros Armoured Conveyors as Dedicated Transports",
+			},
+		],
+	},
+	{
+		id: 5004,
+		name: "Ironbound Ruinhost",
+		faction: FACTION.darkMechanicum,
+		subfaction: null,
+		allegiance: null,
+		formation_slots: [
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [5000, 5904, 5904] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [5904, 5904, 5905, 5906] },
+			{
+				slot_type: SLOT_TYPE.choice,
+				slot_id: [5904, 5904, 5905, 5905],
+				text: "TWO Support slots or TWO Vanguard slots",
+			},
+		],
+		rules: [
+			{
+				name: "Legionbuilder note",
+				text: "The Automata Maelifica rule seems to conflict with the HQ choices, as I don't think any of them have Cortex Controller. So for now its a standard Dark Mechanicum HQ slot",
+			},
+			supportFormationText(FACTION.darkMechanicum),
+			{
+				name: "Automata Malefica",
+				text:
+					"All slots within this Support Formation must be filled by Detachments taken from the\n" +
+					"Mechanicum Taghmata Army List. Detachments taken from the Mechanicum Taghmata Army List must have the\n" +
+					"Cybernetica Cortex (X) special rule",
+			},
+			{
+				name: "Cybernetica Cortex",
+				text: `All Detachments included in this Support Formation with the Cybernetica Cortex (X) special rule replace the variant they have with Cybernetica Cortex (March, Charge) and have the Dread Aura (3") special rule`,
 			},
 		],
 	},

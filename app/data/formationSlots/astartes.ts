@@ -84,4 +84,39 @@ export const astartes: FORMATION_SLOT[] = [
 		restricted: false,
 		options: [],
 	},
+
+	// unique slots
+
+	{
+		id: 1011,
+		type: DETACHMENT_TYPE.core,
+		faction: FACTION.astartes,
+		restricted: true,
+		options: [1002, 3003],
+		description: "Brethren of Iron",
+	},
+	{
+		id: 1012,
+		type: DETACHMENT_TYPE.bastion,
+		faction: FACTION.astartes,
+		restricted: true,
+		options: [3013],
+		description: "Brethren of Iron",
+	},
+	{
+		id: 1013,
+		type: DETACHMENT_TYPE.support,
+		faction: FACTION.astartes,
+		restricted: true,
+		options: [3007, 3008, 3009],
+		description: "Brethren of Iron",
+	},
+	{
+		id: 1014,
+		type: DETACHMENT_TYPE.vanguard,
+		faction: FACTION.astartes,
+		restricted: true,
+		options: [3011, 3012],
+		description: "Brethren of Iron",
+	},
 ]

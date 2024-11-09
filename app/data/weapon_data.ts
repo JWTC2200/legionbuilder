@@ -2127,7 +2127,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 				range: '18"',
 				dice: 1,
 				to_hit: 3,
-				ap: 1,
+				ap: 3,
 				traits: [{ name: "Demolisher" }, { name: "Ignores Cover" }],
 			},
 		],

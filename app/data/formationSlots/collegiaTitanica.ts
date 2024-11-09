@@ -55,4 +55,22 @@ export const collegiaTitanica: FORMATION_SLOT[] = [
 		options: [4008, 4009],
 		description: "Warmaster",
 	},
+
+	// unique slots
+	{
+		id: 8006,
+		type: DETACHMENT_TYPE.support,
+		faction: FACTION.collegiaTitanica,
+		restricted: true,
+		options: [3007, 3008, 3009],
+		description: "Collegia Titanica Support Cohorts",
+	},
+	{
+		id: 8007,
+		type: DETACHMENT_TYPE.bastion,
+		faction: FACTION.collegiaTitanica,
+		restricted: true,
+		options: [3013],
+		description: "Collegia Titanica Support Cohorts",
+	},
 ]

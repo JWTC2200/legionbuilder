@@ -1,4 +1,5 @@
 import { FACTION, FORMATION, SLOT_TYPE } from "@type/types"
+import { supportFormationText } from "@data/formations/formationRules"
 
 // ********************************************************************
 // ******************* SOLAR AUXILIA FORMATIONS **********************
@@ -151,11 +152,48 @@ export const solar: FORMATION[] = [
 		rules: [
 			{
 				name: "Tank Commander",
-				text: " One Super-heavy Vehicle model from a Compulsory Detachment must be upgraded to a Tank Commander for +10 points (see page 178 of the Legions Imperialis Rulebook).",
+				text: "One Super-heavy Vehicle model from a Compulsory Detachment must be upgraded to a Tank Commander for +10 points (see page 178 of the Legions Imperialis Rulebook).",
 			},
 			{
 				name: "Titan Hunters",
 				text: "If an Auxilia Shadowsword Detachment from this Formation that is issued with a First Fire Order is firing at a Titan Detachment, volcano cannon that models in the Auxilia Shadowsword Detachment are equipped with are treated as having the Accurate weapon trait",
+			},
+		],
+	},
+	{
+		id: 2008,
+		name: "Iron Cohort",
+		faction: FACTION.solar,
+		subfaction: null,
+		allegiance: null,
+		formation_slots: [
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [2000, 2012, 2011, 2011] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [2000, 2011, 2014, 2015] },
+			{
+				slot_type: SLOT_TYPE.choice,
+				slot_id: [2014, 2014, 2013, 2013],
+				text: "TWO Support slots or TWO Vanguard slots",
+			},
+		],
+		rules: [
+			supportFormationText(FACTION.solar),
+			{
+				name: "Master of Automata",
+				text:
+					"HQ Detachment slots in this Support Formation must be filled by HQ Detachments chosen\n" +
+					"from the Solar Auxilia Army List. HQ Detachments chosen from the Solar Auxilia Army List in this Support\n" +
+					"Formation gain the Cortex Controller special rule",
+			},
+			{
+				name: "Cybernetica Cortex",
+				text:
+					"Optional Support, Vanguard and Bastion Detachment slots in this Support Formation must be filled with\n" +
+					"Detachments from the Mechanicum Taghmata Army List. Detachments taken from the Mechanicum Taghmata\n" +
+					"Army List in this way must have the Cybernetica Cortex (X) special rule",
+			},
+			{
+				name: "Core Detachments",
+				text: "Core Detachment slots in this Support Formation may be filled by Core Detachments chosen from the Solar	Auxilia Army List or with Thallax Cohort Detachments chosen from the Mechanicum Taghmata Army List",
 			},
 		],
 	},

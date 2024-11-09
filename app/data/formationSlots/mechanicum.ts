@@ -135,4 +135,20 @@ export const mechanicum: FORMATION_SLOT[] = [
 		options: [3902],
 		description: "Triaros Armoured Conveyors",
 	},
+	{
+		id: 3017,
+		type: DETACHMENT_TYPE.support,
+		faction: FACTION.mechanicum,
+		restricted: true,
+		options: [3007, 3008, 3009],
+		description: "Itinerant Cybernetica Cohort",
+	},
+	{
+		id: 3018,
+		type: DETACHMENT_TYPE.vanguard,
+		faction: FACTION.mechanicum,
+		restricted: true,
+		options: [3011, 3012],
+		description: "Itinerant Cybernetica Cohort",
+	},
 ]

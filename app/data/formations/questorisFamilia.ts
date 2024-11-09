@@ -1,4 +1,5 @@
 import { FACTION, FORMATION, SLOT_TYPE } from "@type/types"
+import { supportFormationText } from "@data/formations/formationRules"
 
 // ********************************************************************
 // ****************** QUESTORIS FAMILIA FORMATIONS ********************
@@ -67,6 +68,82 @@ export const questorisFamilia: FORMATION[] = [
 			{
 				name: "Favoured by the Omnissiah",
 				text: "All Questoris Knights in this Formation must have the Knight Styrix or Knight Magaera weapon loadout. All Armiger slots must be filled with Mechanicum Knight Moirax Talons",
+			},
+		],
+	},
+	{
+		id: 8104,
+		name: "Knight Household Retainer Cohorts",
+		faction: FACTION.questorisFamilia,
+		subfaction: null,
+		allegiance: null,
+		formation_slots: [
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [8106, 8107, 8107] },
+			{
+				slot_type: SLOT_TYPE.optional,
+				slot_id: [8106, 8106, 8103, 8103, 8107, 8107, 8107],
+			},
+		],
+		rules: [
+			supportFormationText(FACTION.questorisFamilia),
+			{
+				name: "Household Vanguard",
+				text:
+					"All Vanguard Detachment slots within this Support Formation must be filled by\n" +
+					"Detachments taken from the Mechanicum Taghmata Army List. Detachments taken from the Mechanicum\n" +
+					"Taghmata Army List must have the Cybernetica Cortex (X) special rule",
+			},
+			{
+				name: "Special rules",
+				text:
+					"Knight Detachments in this Support Formation gain special rules depending on the Compulsory\n" +
+					"Detachments chosen",
+			},
+			{
+				name: "Vorax Battle-automata",
+				text:
+					"If all Compulsory Vanguard Detachment slots are filled with Vorax Battle-automata Maniple Detachments,\n" +
+					"then all Knight Detachments in this Support Formation gain the Forward Deployment special rule",
+			},
+			{
+				name: "Vultarax Stratos-automata",
+				text:
+					"If all Compulsory Vanguard Detachment slots are filled with Vultarax Stratos-automata Squadron\n" +
+					"Detachments, then all Knight Detachments in this Support Formation gain the Outflank special rule",
+			},
+			{
+				name: "Cortex Controller",
+				text:
+					"All Questoris Knight Banner and Cerastus Knight Banner Detachments within this Support Formation gain the\n" +
+					"Cortex Controller special rule",
+			},
+		],
+	},
+	{
+		id: 8105,
+		name: "Knight Household Aegis Cohorts",
+		faction: FACTION.questorisFamilia,
+		subfaction: null,
+		allegiance: null,
+		formation_slots: [
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [8106, 8108, 8108] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [8106, 8108, 8108, 8109, 8109] },
+		],
+		rules: [
+			supportFormationText(FACTION.questorisFamilia),
+			{
+				name: "Inducted Automata",
+				text:
+					"All slots within this Support Formation, apart from Knight Detachment slots, must be filled\n" +
+					"by Detachments taken from the Mechanicum Taghmata Army List. Detachments taken from the Mechanicum\n" +
+					"Taghmata Army List must have the Cybernetica Cortex (X) special rule",
+			},
+			{
+				name: "Cortex Controller",
+				text:
+					"All Knight Detachments within this Support Formation gain the Cortex Controller special rule. Questoris\n" +
+					"Knight Armiger Talons and Mechanicum Knight Moirax Talons cannot be taken as Detachment Upgrades for\n" +
+					"Detachments taken in Knight Detachment slots",
 			},
 		],
 	},

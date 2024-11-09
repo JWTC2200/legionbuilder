@@ -84,4 +84,46 @@ export const solar: FORMATION_SLOT[] = [
 		restricted: false,
 		options: [],
 	},
+	// unique slots
+
+	{
+		id: 2011,
+		type: DETACHMENT_TYPE.core,
+		faction: FACTION.solar,
+		restricted: true,
+		options: [2002, 3003],
+		description: "Iron Cohort",
+	},
+	{
+		id: 2012,
+		type: DETACHMENT_TYPE.support,
+		faction: FACTION.solar,
+		restricted: true,
+		options: [3004],
+		description: "Tech-Priest Auxilia",
+	},
+	{
+		id: 2013,
+		type: DETACHMENT_TYPE.vanguard,
+		faction: FACTION.solar,
+		restricted: true,
+		options: [3011, 3012],
+		description: "Iron Cohort",
+	},
+	{
+		id: 2014,
+		type: DETACHMENT_TYPE.support,
+		faction: FACTION.solar,
+		restricted: true,
+		options: [3007, 3008, 3009],
+		description: "Iron Cohort",
+	},
+	{
+		id: 2015,
+		type: DETACHMENT_TYPE.bastion,
+		faction: FACTION.solar,
+		restricted: true,
+		options: [3013],
+		description: "Iron Cohort",
+	},
 ]

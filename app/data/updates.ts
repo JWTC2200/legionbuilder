@@ -4,6 +4,7 @@ interface update {
 }
 
 export const updateData: update[] = [
+	{ date: "09/11/24", updates: ["Added Support Formations from Warhammer Community."] },
 	{ date: "05/11/24", updates: ["Moved Calculator and Collection into a Tools section."] },
 	{
 		date: "03/11/24",
