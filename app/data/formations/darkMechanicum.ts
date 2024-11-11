@@ -126,17 +126,10 @@ export const darkMechanicum: FORMATION[] = [
 			},
 		],
 		rules: [
-			{
-				name: "Legionbuilder note",
-				text: "The Automata Maelifica rule seems to conflict with the HQ choices, as I don't think any of them have Cortex Controller. So for now its a standard Dark Mechanicum HQ slot",
-			},
 			supportFormationText(FACTION.darkMechanicum),
 			{
 				name: "Automata Malefica",
-				text:
-					"All slots within this Support Formation must be filled by Detachments taken from the\n" +
-					"Mechanicum Taghmata Army List. Detachments taken from the Mechanicum Taghmata Army List must have the\n" +
-					"Cybernetica Cortex (X) special rule",
+				text: "All slots within this Support Formation must be filled by Detachments taken from the Mechanicum Taghmata Army List. Detachments taken from the Mechanicum Taghmata Army List must have the Cybernetica Cortex (X) special rule or the Cortex Controller special rule",
 			},
 			{
 				text: `All Detachments included in this Support Formation with the Cybernetica Cortex (X) special rule replace the variant they have with Cybernetica Cortex (March, Charge) and have the Dread Aura (3") special rule`,
