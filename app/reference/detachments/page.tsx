@@ -44,18 +44,23 @@ const page = () => {
 										detachmentFaction.faction === faction && !detachmentFaction.unique
 								)
 							) as DETACHMENT[]
-						).map((detachment) => (
-							<Row
-								key={detachment.name + faction}
-								className="px-4 hover:bg-secondary-700 hover:text-secondary-50 whitespace-nowrap">
-								<Link
-									href={`/reference/detachments/${detachment.name.replaceAll(" ", "_")} `}
-									className="flex items-center gap-2 w-full py-1">
-									<span>{getDetachmentIcon(detachment.detachment_type[0])}</span>
-									<span>{detachment.name}</span>
-								</Link>
-							</Row>
-						))}
+						).map((detachment) => {
+							const Icon = getDetachmentIcon(detachment.detachment_type[0])
+							return (
+								<Row
+									key={detachment.name + faction}
+									className="px-4 hover:bg-secondary-700 hover:text-secondary-50 whitespace-nowrap">
+									<Link
+										href={`/reference/detachments/${detachment.name.replaceAll(" ", "_")} `}
+										className="flex items-center gap-2 w-full py-1">
+										<span>
+											<Icon className={"h-4 w-4 sm:h-6 sm:w-6"} />{" "}
+										</span>
+										<span>{detachment.name}</span>
+									</Link>
+								</Row>
+							)
+						})}
 					</FactionList>
 				))}
 			</div>

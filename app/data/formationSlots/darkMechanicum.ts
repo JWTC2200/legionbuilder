@@ -124,7 +124,7 @@ export const darkMechanicum: FORMATION_SLOT[] = [
 		type: DETACHMENT_TYPE.support,
 		faction: FACTION.darkMechanicum,
 		restricted: true,
-		options: [3007, 3008, 3009],
+		options: [5004, 3007, 3008, 3009],
 		description: "Ironbound Ruinhost",
 	},
 	{

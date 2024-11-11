@@ -117,7 +117,7 @@ export const darkMechanicum: FORMATION[] = [
 		subfaction: null,
 		allegiance: null,
 		formation_slots: [
-			{ slot_type: SLOT_TYPE.compulsory, slot_id: [5000, 5904, 5904] },
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [3000, 5904, 5904] },
 			{ slot_type: SLOT_TYPE.optional, slot_id: [5904, 5904, 5905, 5906] },
 			{
 				slot_type: SLOT_TYPE.choice,

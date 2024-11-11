@@ -1,4 +1,5 @@
 import { DETACHMENT_TYPE } from "@type/types"
+import Icons from "@components/Icons"
 
 const matchIcon: { [key: string]: string } = {
 	[DETACHMENT_TYPE.hq]: "skull",
@@ -18,5 +19,5 @@ const matchIcon: { [key: string]: string } = {
 }
 
 export const getDetachmentIcon = (type: DETACHMENT_TYPE) => {
-	return matchIcon[type]
+	return Icons[matchIcon[type]]
 }
