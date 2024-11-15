@@ -29,7 +29,17 @@ const CollectionInput = ({ unit }: properties) => {
 		<li className={"group grid grid-cols-5 gap-4 py-1 px-3 items-center odd:bg-backgrounds-950"}>
 			<div className={"col-span-3 group-hover:text-tertiary-500 "}>{unit.name}</div>
 			<div className={"col-span-2 justify-center items-center grid grid-cols-5 gap-4"}>
-				<span className={"col-span-2 text-center"}>{inputValue ? inputValue.number : 0}</span>
+				<span className={"col-span-2 text-center"}>
+					<input
+						type="number"
+						value={inputValue ? Number(inputValue.number).toString() : 0}
+						className={
+							"max-w-10 text-right bg-inherit outline-none focus:border-2 border-tertiary-500 rounded"
+						}
+						onChange={(e) => updateCollection(Number(e.target.value))}
+					/>
+				</span>
+
 				<FaArrowAltCircleUp
 					className={
 						"col-span-1 text-primary-500 hover:text-tertiary-500 active:text-tertiary-300 text-xl cursor-pointer"
