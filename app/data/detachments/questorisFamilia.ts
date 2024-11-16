@@ -22,7 +22,7 @@ export const questorisFamilia: DETACHMENT[] = [
 		related_unit: [],
 		dataslate_loadout: [
 			{
-				text: "A Questoris Knight Armiger is armed with a Termal spear and Reaper chain-cleaver or Armiger autocannon",
+				text: "A Questoris Knight Armiger is armed with a Thermal spear and Reaper chain-cleaver or Armiger autocannon",
 			},
 		],
 		upgrade_options: [
@@ -35,7 +35,15 @@ export const questorisFamilia: DETACHMENT[] = [
 				],
 			},
 		],
-		loadout_options: [],
+		loadout_options: [
+			{
+				location: "Weapons",
+				options: [
+					{ name: "Thermal spear and Reaper chain-cleaver", cost: 0 },
+					{ name: "Armiger autocannon", cost: 0 },
+				],
+			},
+		],
 		datasheet_info: [
 			{
 				text: "A Mechanicum Knight Armigers Talon may purchase up to two upgrades. It may purchase the same upgrade multiple times: Each upgrade increases the Detachment size by 3.",
@@ -76,7 +84,15 @@ export const questorisFamilia: DETACHMENT[] = [
 				],
 			},
 		],
-		loadout_options: [],
+		loadout_options: [
+			{
+				location: "weapons",
+				options: [
+					{ name: "Armiger lightning locks", cost: 0 },
+					{ name: "Volkite veuglaire and Siege claw", cost: 0 },
+				],
+			},
+		],
 		datasheet_info: [
 			{
 				text: "A Mechanicum Knight Moirax Talon may purchase up to two upgrades. It may purchase the same upgrade multiple times: Each upgrade increases the Detachment size by 3.",
