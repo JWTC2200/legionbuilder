@@ -1,8 +1,10 @@
 import { rerollFail, rerollSuccess } from "./rerolls"
 import { armouredTypes } from "../utils"
-import { UNIT_DATASHEET, WEAPON_PROFILES, UNIT_TYPE } from "@type/types"
+import { UNIT_DATASHEET, UNIT_TYPE, WEAPON_PROFILES } from "@type/types"
 import calculateAP from "./calculateAP"
 import { twoDiceOdds } from "./diceOdds"
+import { SpecialRule } from "@type/specialRules"
+import { WeaponTraits } from "@type/weaponTraits"
 
 export const calculateSaves = (weapon: WEAPON_PROFILES, target: UNIT_DATASHEET): number => {
 	const weaponTraits = weapon.traits.map((trait) => trait.name)
@@ -15,7 +17,7 @@ export const calculateSaves = (weapon: WEAPON_PROFILES, target: UNIT_DATASHEET):
 	let finalArmourSave: number
 
 	if (targetType === UNIT_TYPE.structure) {
-		const structureSave = weaponTraits.includes("Bunker Buster") ? targetSave + finalAP : targetSave
+		const structureSave = weaponTraits.includes(WeaponTraits.bunkerBuster) ? targetSave + finalAP : targetSave
 		if (structureSave > 12) {
 			finalArmourSave = 0
 		} else if (structureSave <= 2) {
@@ -26,7 +28,7 @@ export const calculateSaves = (weapon: WEAPON_PROFILES, target: UNIT_DATASHEET):
 				.map((dice) => dice.probability)
 				.reduce((acc, sum) => acc + sum, 0)
 
-			if (targetType === UNIT_TYPE.structure && weaponTraits.includes("Graviton Pulse")) {
+			if (targetType === UNIT_TYPE.structure && weaponTraits.includes(WeaponTraits.gravitonPulse)) {
 				finalArmourSave = 1 - probability
 			} else {
 				finalArmourSave = probability
@@ -42,34 +44,37 @@ export const calculateSaves = (weapon: WEAPON_PROFILES, target: UNIT_DATASHEET):
 		}
 	}
 
-	if (weaponTraits.includes("Armourbane") && armouredTypes.includes(targetType)) {
+	if (weaponTraits.includes(WeaponTraits.armourbane) && armouredTypes.includes(targetType)) {
 		finalArmourSave = rerollSuccess(finalArmourSave)
 	}
-	if (weaponTraits.includes("Light") && targetRules.includes("Armoured")) {
+	if (weaponTraits.includes(WeaponTraits.light) && targetRules.includes(SpecialRule.armoured)) {
 		finalArmourSave = rerollFail(finalArmourSave)
 	}
 	if (
-		weaponTraits.includes("Shred") &&
+		weaponTraits.includes(WeaponTraits.shred) &&
 		[UNIT_TYPE.infantry, UNIT_TYPE.cavalry, UNIT_TYPE.walker].includes(targetType)
 	) {
 		finalArmourSave = rerollSuccess(finalArmourSave)
 	}
-	if (weaponTraits.includes("Neutron-flux") && targetRules.includes("Cybernetica Cortex")) {
+	if (weaponTraits.includes(WeaponTraits.neutronFlux) && targetRules.includes(SpecialRule.cyberneticaCortex)) {
 		finalArmourSave = rerollSuccess(finalArmourSave)
 	}
 
 	// array of all additional saves
 	const allSaves = [finalArmourSave]
 	target.special_rules.forEach((rule) => {
-		if (rule.name === "Jink" || (rule.name === "Invulnerable Save" && !weaponTraits.includes("Psi"))) {
+		if (
+			rule.name === SpecialRule.jink ||
+			(rule.name === SpecialRule.invulnerableSave && !weaponTraits.includes(WeaponTraits.psi))
+		) {
 			allSaves.push((7 - Number(String(rule.value!).replace("+", ""))) / 6)
 		}
 	})
-	if (targetRules.includes("Explorator Adaptation")) {
+	if (targetRules.includes(SpecialRule.exploratorAdaptation)) {
 		if (
-			weaponTraits.includes("Barrage") ||
-			weaponTraits.includes("Heavy Barrage") ||
-			weaponTraits.includes("Blast")
+			weaponTraits.includes(WeaponTraits.barrage) ||
+			weaponTraits.includes(WeaponTraits.heavyBarrage) ||
+			weaponTraits.includes(WeaponTraits.blast)
 		) {
 			allSaves.push(1 / 6)
 		}

@@ -1,4 +1,5 @@
 import { FACTION, UNIT_DATASHEET, UNIT_TYPE } from "@type/types"
+import { SpecialRule } from "@type/specialRules"
 
 export const uniqueUnits: UNIT_DATASHEET[] = [
 	// ********************************************************************
@@ -19,7 +20,7 @@ export const uniqueUnits: UNIT_DATASHEET[] = [
 		morale: 4,
 		wounds: 1,
 		weapons: [2004, 2005],
-		special_rules: [{ name: "Independant" }, { name: "Line" }],
+		special_rules: [{ name: SpecialRule.independent }, { name: SpecialRule.line }],
 	},
 	{
 		id: 9001,
@@ -35,7 +36,7 @@ export const uniqueUnits: UNIT_DATASHEET[] = [
 		morale: 4,
 		wounds: 1,
 		weapons: [2006],
-		special_rules: [{ name: "Furious Charge" }, { name: "Independant" }],
+		special_rules: [{ name: SpecialRule.furiousCharge }, { name: SpecialRule.independent }],
 	},
 	{
 		id: 9002,
@@ -51,7 +52,7 @@ export const uniqueUnits: UNIT_DATASHEET[] = [
 		morale: 4,
 		wounds: 1,
 		weapons: [2003],
-		special_rules: [{ name: "Chain of Command" }, { name: "Line" }],
+		special_rules: [{ name: SpecialRule.chainOfCommand }, { name: SpecialRule.line }],
 	},
 	{
 		id: 10000,

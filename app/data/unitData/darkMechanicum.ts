@@ -5,6 +5,7 @@
 // 5000-5999
 
 import { ALLEGIANCE, FACTION, UNIT_DATASHEET, UNIT_TYPE } from "@type/types"
+import { SpecialRule } from "@type/specialRules"
 
 export const darkMechanicum: UNIT_DATASHEET[] = [
 	{
@@ -22,10 +23,10 @@ export const darkMechanicum: UNIT_DATASHEET[] = [
 		wounds: 2,
 		weapons: [5000, 5001, 5002],
 		special_rules: [
-			{ name: "Construct Shields", value: 1 },
-			{ name: "Noospehere Controller" },
-			{ name: "Nimble" },
-			{ name: "Traitor" },
+			{ name: SpecialRule.constructShields, value: 1 },
+			{ name: SpecialRule.noosphereController },
+			{ name: SpecialRule.nimble },
+			{ name: SpecialRule.traitor },
 		],
 	},
 	{
@@ -43,10 +44,10 @@ export const darkMechanicum: UNIT_DATASHEET[] = [
 		wounds: 2,
 		weapons: [5003, 5004, 5005],
 		special_rules: [
-			{ name: "Construct Shields", value: 1 },
-			{ name: "Networked Anima" },
-			{ name: "Nimble" },
-			{ name: "Traitor" },
+			{ name: SpecialRule.constructShields, value: 1 },
+			{ name: SpecialRule.networkedAnima },
+			{ name: SpecialRule.nimble },
+			{ name: SpecialRule.traitor },
 		],
 	},
 	{
@@ -63,7 +64,11 @@ export const darkMechanicum: UNIT_DATASHEET[] = [
 		morale: null,
 		wounds: 1,
 		weapons: [5006, 5007],
-		special_rules: [{ name: "Jump Packs" }, { name: "Networked Anima" }, { name: "Traitor" }],
+		special_rules: [
+			{ name: SpecialRule.jumpPacks },
+			{ name: SpecialRule.networkedAnima },
+			{ name: SpecialRule.traitor },
+		],
 	},
 	{
 		id: 5003,
@@ -79,7 +84,11 @@ export const darkMechanicum: UNIT_DATASHEET[] = [
 		morale: null,
 		wounds: 2,
 		weapons: [5001, 5004, 4025, 5008],
-		special_rules: [{ name: "Networked Anima" }, { name: "Nimble" }, { name: "Traitor" }],
+		special_rules: [
+			{ name: SpecialRule.networkedAnima },
+			{ name: SpecialRule.nimble },
+			{ name: SpecialRule.traitor },
+		],
 	},
 	{
 		id: 5004,
@@ -96,10 +105,10 @@ export const darkMechanicum: UNIT_DATASHEET[] = [
 		wounds: 2,
 		weapons: [5009, 5010, 5011, 5012],
 		special_rules: [
-			{ name: "Construct Shields", value: 2 },
-			{ name: "Networked Anima" },
-			{ name: "Nimble" },
-			{ name: "Traitor" },
+			{ name: SpecialRule.constructShields, value: 2 },
+			{ name: SpecialRule.networkedAnima },
+			{ name: SpecialRule.nimble },
+			{ name: SpecialRule.traitor },
 		],
 	},
 ]

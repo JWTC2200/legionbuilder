@@ -3,6 +3,7 @@
 // ********************************************************************
 
 import { FACTION, UNIT_DATASHEET, UNIT_TYPE } from "@type/types"
+import { SpecialRule } from "@type/specialRules"
 
 export const mechanicum: UNIT_DATASHEET[] = [
 	{
@@ -20,10 +21,10 @@ export const mechanicum: UNIT_DATASHEET[] = [
 		wounds: 1,
 		weapons: [3000],
 		special_rules: [
-			{ name: "Battlesmith" },
-			{ name: "Commander" },
-			{ name: "Cortex Controller" },
-			{ name: "Invulnerable Save", value: "5+" },
+			{ name: SpecialRule.battlesmith },
+			{ name: SpecialRule.commander },
+			{ name: SpecialRule.cortexController },
+			{ name: SpecialRule.invulnerableSave, value: "5+" },
 		],
 	},
 	{
@@ -41,10 +42,10 @@ export const mechanicum: UNIT_DATASHEET[] = [
 		wounds: 2,
 		weapons: [3000, 3001],
 		special_rules: [
-			{ name: "Battlesmith" },
-			{ name: "Commander" },
-			{ name: "Cortex Controller" },
-			{ name: "Invulnerable Save", value: "5+" },
+			{ name: SpecialRule.battlesmith },
+			{ name: SpecialRule.commander },
+			{ name: SpecialRule.cortexController },
+			{ name: SpecialRule.invulnerableSave, value: "5+" },
 		],
 	},
 	{
@@ -77,7 +78,7 @@ export const mechanicum: UNIT_DATASHEET[] = [
 		morale: 3,
 		wounds: 1,
 		weapons: [3003, 3004],
-		special_rules: [{ name: "Jump Packs" }],
+		special_rules: [{ name: SpecialRule.jumpPacks }],
 	},
 	{
 		id: 3004,
@@ -94,10 +95,10 @@ export const mechanicum: UNIT_DATASHEET[] = [
 		wounds: 1,
 		weapons: [],
 		special_rules: [
-			{ name: "Attached Deployment" },
-			{ name: "Battlesmith" },
-			{ name: "Cortex Controller" },
-			{ name: "Invulnerable Save", value: "6+" },
+			{ name: SpecialRule.attachedDeployment },
+			{ name: SpecialRule.battlesmith },
+			{ name: SpecialRule.cortexController },
+			{ name: SpecialRule.invulnerableSave, value: "6+" },
 		],
 	},
 	{
@@ -114,7 +115,7 @@ export const mechanicum: UNIT_DATASHEET[] = [
 		morale: 3,
 		wounds: 1,
 		weapons: [3005],
-		special_rules: [{ name: "Implacable" }],
+		special_rules: [{ name: SpecialRule.implacable }],
 	},
 	{
 		id: 3006,
@@ -130,7 +131,7 @@ export const mechanicum: UNIT_DATASHEET[] = [
 		morale: 3,
 		wounds: 1,
 		weapons: [3006, 3007],
-		special_rules: [{ name: "Implacable" }],
+		special_rules: [{ name: SpecialRule.implacable }],
 	},
 	{
 		id: 3007,
@@ -147,10 +148,10 @@ export const mechanicum: UNIT_DATASHEET[] = [
 		wounds: 2,
 		weapons: [3008, 1053],
 		special_rules: [
-			{ name: "Armoured" },
-			{ name: "Cybernetica Cortex", value: "Advance, Charge" },
-			{ name: "Invulnerable Save", value: "6+" },
-			{ name: "Jump Packs" },
+			{ name: SpecialRule.armoured },
+			{ name: SpecialRule.cyberneticaCortex, value: "Advance, Charge" },
+			{ name: SpecialRule.invulnerableSave, value: "6+" },
+			{ name: SpecialRule.jumpPacks },
 		],
 	},
 	{
@@ -168,9 +169,9 @@ export const mechanicum: UNIT_DATASHEET[] = [
 		wounds: 2,
 		weapons: [1006, 3009],
 		special_rules: [
-			{ name: "Armoured" },
-			{ name: "Cybernetica Cortex", value: "Advance, March" },
-			{ name: "Invulnerable Save", value: "6+" },
+			{ name: SpecialRule.armoured },
+			{ name: SpecialRule.cyberneticaCortex, value: "Advance, March" },
+			{ name: SpecialRule.invulnerableSave, value: "6+" },
 		],
 	},
 	{
@@ -188,9 +189,9 @@ export const mechanicum: UNIT_DATASHEET[] = [
 		wounds: 2,
 		weapons: [3010, 3011],
 		special_rules: [
-			{ name: "Armoured" },
-			{ name: "Cybernetica Cortex", value: "Advance, March" },
-			{ name: "Invulnerable Save", value: "6+" },
+			{ name: SpecialRule.armoured },
+			{ name: SpecialRule.cyberneticaCortex, value: "Advance, March" },
+			{ name: SpecialRule.invulnerableSave, value: "6+" },
 		],
 	},
 	{
@@ -207,7 +208,7 @@ export const mechanicum: UNIT_DATASHEET[] = [
 		morale: 3,
 		wounds: 1,
 		weapons: [3012],
-		special_rules: [{ name: "Jump Packs" }],
+		special_rules: [{ name: SpecialRule.jumpPacks }],
 	},
 	{
 		id: 3011,
@@ -224,9 +225,9 @@ export const mechanicum: UNIT_DATASHEET[] = [
 		wounds: 2,
 		weapons: [3013, 3003, 3014],
 		special_rules: [
-			{ name: "Cybernetica Cortex", value: "Charge, March" },
-			{ name: "Forward Deployment" },
-			{ name: "Invulnerable Save", value: "6+" },
+			{ name: SpecialRule.cyberneticaCortex, value: "Charge, March" },
+			{ name: SpecialRule.forwardDeployment },
+			{ name: SpecialRule.invulnerableSave, value: "6+" },
 		],
 	},
 	{
@@ -244,11 +245,11 @@ export const mechanicum: UNIT_DATASHEET[] = [
 		wounds: 2,
 		weapons: [3015, 3016],
 		special_rules: [
-			{ name: "Armoured" },
-			{ name: "Cybernetica Cortex", value: "Advance, March" },
-			{ name: "Invulnerable Save", value: "6+" },
-			{ name: "Outflank" },
-			{ name: "Skimmer" },
+			{ name: SpecialRule.armoured },
+			{ name: SpecialRule.cyberneticaCortex, value: "Advance, March" },
+			{ name: SpecialRule.invulnerableSave, value: "6+" },
+			{ name: SpecialRule.outflank },
+			{ name: SpecialRule.skimmer },
 		],
 	},
 	{
@@ -266,9 +267,9 @@ export const mechanicum: UNIT_DATASHEET[] = [
 		wounds: 2,
 		weapons: [3017, 3018, 3019, 3010],
 		special_rules: [
-			{ name: "Armoured" },
-			{ name: "Cybernetica Cortex", value: "Advance, First Fire" },
-			{ name: "Invulnerable Save", value: "6+" },
+			{ name: SpecialRule.armoured },
+			{ name: SpecialRule.cyberneticaCortex, value: "Advance, First Fire" },
+			{ name: SpecialRule.invulnerableSave, value: "6+" },
 		],
 	},
 	{
@@ -333,6 +334,6 @@ export const mechanicum: UNIT_DATASHEET[] = [
 		morale: 3,
 		wounds: 1,
 		weapons: [3027, 3028],
-		special_rules: [{ name: "Large Transport", value: 4 }],
+		special_rules: [{ name: SpecialRule.largeTransport, value: 4 }],
 	},
 ]

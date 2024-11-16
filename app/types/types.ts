@@ -1,5 +1,7 @@
 import { Timestamp } from "firebase/firestore"
 import { List } from "@type/listTypes"
+import { SpecialRule } from "@type/specialRules"
+import { WeaponTraits } from "@type/weaponTraits"
 
 export enum FACTION {
 	astartes = "Legiones Astartes",
@@ -116,12 +118,12 @@ export interface WEAPON_PROFILES {
 // Weapon trait / special rules
 
 export interface WEAPON_TRAIT {
-	name: string
+	name: WeaponTraits
 	value?: number | string
 }
 
 export interface SPECIAL_RULE {
-	name: string
+	name: SpecialRule
 	value?: number | string
 }
 

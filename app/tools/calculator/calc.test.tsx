@@ -4,6 +4,7 @@ import calculateToHit from "./utils/calculateToHit"
 import calculateSaves from "./utils/calculateSaves"
 import calculateDamage from "./utils/calculateDamage"
 import { ALLEGIANCE, FACTION, UNIT_DATASHEET, UNIT_TYPE, WEAPON_PROFILES } from "@type/types"
+import { SpecialRule } from "@type/specialRules"
 
 const testWeapon: WEAPON_PROFILES = { range: "1", dice: 1, to_hit: 4, ap: 0, traits: [] }
 
@@ -47,23 +48,23 @@ test("Calculate To Hit", () => {
 	expect(calculateToHit(testWeapon, testTarget)).toBe(0.5)
 	expect(calculateToHit({ ...testWeapon, to_hit: null }, testTarget)).toBe(5 / 6)
 	expect(calculateToHit({ ...testWeapon, to_hit: 0 }, testTarget)).toBe(5 / 6)
-	expect(calculateToHit(testWeapon, { ...testTarget, special_rules: [{ name: "Flyer" }] })).toBe(1 / 6)
+	expect(calculateToHit(testWeapon, { ...testTarget, special_rules: [{ name: SpecialRule.flyer }] })).toBe(1 / 6)
 	expect(
 		calculateToHit(
 			{ ...testWeapon, traits: [{ name: "Skyfire" }] },
-			{ ...testTarget, special_rules: [{ name: "Flyer" }] }
+			{ ...testTarget, special_rules: [{ name: SpecialRule.flyer }] }
 		)
 	).toBe(1 / 2)
 	expect(
 		calculateToHit(
 			{ ...testWeapon, traits: [{ name: "Tracking" }] },
-			{ ...testTarget, special_rules: [{ name: "Flyer" }] }
+			{ ...testTarget, special_rules: [{ name: SpecialRule.flyer }] }
 		)
 	).toBe(11 / 36)
 	expect(
 		calculateToHit(
 			{ ...testWeapon, traits: [{ name: "Accurate" }] },
-			{ ...testTarget, special_rules: [{ name: "Flyer" }] }
+			{ ...testTarget, special_rules: [{ name: SpecialRule.flyer }] }
 		)
 	).toBe(11 / 36)
 	expect(calculateToHit({ ...testWeapon, traits: [{ name: "Accurate" }] }, testTarget)).toBe(3 / 4)
@@ -81,7 +82,7 @@ test("Calculate To Hit", () => {
 	expect(
 		calculateToHit(
 			{ ...testWeapon, traits: [{ name: "Graviton Pulse" }] },
-			{ ...testTarget, special_rules: [{ name: "Flyer" }] }
+			{ ...testTarget, special_rules: [{ name: SpecialRule.flyer }] }
 		)
 	).toBe(1 / 6)
 	expect(
@@ -131,7 +132,7 @@ test("Calculate AP", () => {
 	expect(
 		calculateAP(
 			{ ...testWeapon, ap: 3, traits: [{ name: "Light" }] },
-			{ ...testTarget, special_rules: [{ name: "Armoured" }] }
+			{ ...testTarget, special_rules: [{ name: SpecialRule.armoured }] }
 		)
 	).toBe(0)
 })
@@ -139,23 +140,23 @@ test("Calculate AP", () => {
 test("Calulate Saves", () => {
 	expect(calculateSaves(testWeapon, testTarget)).toBe(1 / 3)
 	expect(
-		calculateSaves(testWeapon, { ...testTarget, special_rules: [{ name: "Invulnerable Save", value: 6 }] })
+		calculateSaves(testWeapon, { ...testTarget, special_rules: [{ name: SpecialRule.invulnerableSave, value: 6 }] })
 	).toBe(1 / 3)
 	expect(
-		calculateSaves(testWeapon, { ...testTarget, special_rules: [{ name: "Invulnerable Save", value: 4 }] })
+		calculateSaves(testWeapon, { ...testTarget, special_rules: [{ name: SpecialRule.invulnerableSave, value: 4 }] })
 	).toBe(1 / 2)
 	expect(
 		calculateSaves(
 			{ ...testWeapon, traits: [{ name: "Psi" }] },
-			{ ...testTarget, special_rules: [{ name: "Invulnerable Save", value: 4 }] }
+			{ ...testTarget, special_rules: [{ name: SpecialRule.invulnerableSave, value: 4 }] }
 		)
 	).toBe(1 / 3)
 	expect(
 		calculateSaves(testWeapon, {
 			...testTarget,
 			special_rules: [
-				{ name: "Invulnerable Save", value: 6 },
-				{ name: "Jink", value: 3 },
+				{ name: SpecialRule.invulnerableSave, value: 6 },
+				{ name: SpecialRule.jink, value: 3 },
 			],
 		})
 	).toBe(2 / 3)
@@ -174,7 +175,7 @@ test("Calulate Saves", () => {
 			{
 				...testTarget,
 				unit_type: { type: UNIT_TYPE.vehicle, value: 1 },
-				special_rules: [{ name: "Invulnerable Save", value: 3 }],
+				special_rules: [{ name: SpecialRule.invulnerableSave, value: 3 }],
 			}
 		)
 	).toBe(2 / 3)
@@ -187,20 +188,20 @@ test("Calulate Saves", () => {
 	expect(
 		calculateSaves(
 			{ ...testWeapon, ap: 3, traits: [{ name: "Light" }] },
-			{ ...testTarget, special_rules: [{ name: "Armoured" }] }
+			{ ...testTarget, special_rules: [{ name: SpecialRule.armoured }] }
 		)
 	).toBeCloseTo(5 / 9, 5)
 	expect(calculateSaves({ ...testWeapon, traits: [{ name: "Shred" }] }, testTarget)).toBeCloseTo(1 / 9, 5)
 	expect(
 		calculateSaves(
 			{ ...testWeapon, traits: [{ name: "Neutron-flux" }] },
-			{ ...testTarget, special_rules: [{ name: "Cybernetica Cortex" }] }
+			{ ...testTarget, special_rules: [{ name: SpecialRule.cyberneticaCortex }] }
 		)
 	).toBeCloseTo(1 / 9, 5)
 	expect(
 		calculateSaves(
 			{ ...testWeapon, ap: 5, traits: [{ name: "Blast" }] },
-			{ ...testTarget, special_rules: [{ name: "Explorator Adaptation" }] }
+			{ ...testTarget, special_rules: [{ name: SpecialRule.exploratorAdaptation }] }
 		)
 	).toBeCloseTo(1 / 6, 5)
 	expect(
@@ -249,7 +250,11 @@ test("Calculate Damage", () => {
 	expect(
 		calculateDamage(
 			{ ...testWeapon, traits: [{ name: "Deflagrate" }, { name: "Light" }] },
-			{ ...testTarget, unit_type: { type: UNIT_TYPE.walker, value: 1 }, special_rules: [{ name: "Armoured" }] }
+			{
+				...testTarget,
+				unit_type: { type: UNIT_TYPE.walker, value: 1 },
+				special_rules: [{ name: SpecialRule.armoured }],
+			}
 		)
 	).toBe("0.27")
 	expect(calculateDamage(testWeapon, { ...testTarget, unit_type: { type: UNIT_TYPE.structure, value: 0 } })).toBe(

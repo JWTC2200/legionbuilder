@@ -1,4 +1,5 @@
 import { FACTION, UNIT_DATASHEET, UNIT_TYPE } from "@type/types"
+import { SpecialRule } from "@type/specialRules"
 
 export const solar: UNIT_DATASHEET[] = [
 	// ********************************************************************
@@ -19,11 +20,11 @@ export const solar: UNIT_DATASHEET[] = [
 		wounds: 1,
 		weapons: [2000, 2001],
 		special_rules: [
-			{ name: "Commander" },
-			{ name: "Inspire", value: '8"' },
-			{ name: "Invulnerable Save", value: "6+" },
-			{ name: "Master Tactitian" },
-			{ name: "Solar Auxilia HQ", value: '10"' },
+			{ name: SpecialRule.commander },
+			{ name: SpecialRule.inspire, value: '8"' },
+			{ name: SpecialRule.invulnerableSave, value: "6+" },
+			{ name: SpecialRule.masterTactician },
+			{ name: SpecialRule.solarAuxiliaHQ, value: '10"' },
 		],
 	},
 	{
@@ -41,9 +42,9 @@ export const solar: UNIT_DATASHEET[] = [
 		wounds: 1,
 		weapons: [2002],
 		special_rules: [
-			{ name: "Commander" },
-			{ name: "Inspire", value: '8"' },
-			{ name: "Solar Auxilia HQ", value: '6"' },
+			{ name: SpecialRule.commander },
+			{ name: SpecialRule.inspire, value: '8"' },
+			{ name: SpecialRule.solarAuxiliaHQ, value: '6"' },
 		],
 	},
 	{
@@ -60,7 +61,7 @@ export const solar: UNIT_DATASHEET[] = [
 		morale: 4,
 		wounds: 1,
 		weapons: [2002, 2003],
-		special_rules: [{ name: "Chain of Command" }, { name: "Line" }],
+		special_rules: [{ name: SpecialRule.chainOfCommand }, { name: SpecialRule.line }],
 	},
 	{
 		id: 2003,
@@ -76,7 +77,7 @@ export const solar: UNIT_DATASHEET[] = [
 		morale: 4,
 		wounds: 1,
 		weapons: [2004, 2005],
-		special_rules: [{ name: "Steadfast" }],
+		special_rules: [{ name: SpecialRule.steadfast }],
 	},
 	{
 		id: 2004,
@@ -92,7 +93,7 @@ export const solar: UNIT_DATASHEET[] = [
 		morale: 4,
 		wounds: 1,
 		weapons: [2006],
-		special_rules: [{ name: "Furious Charge" }],
+		special_rules: [{ name: SpecialRule.furiousCharge }],
 	},
 	{
 		id: 2005,
@@ -108,7 +109,7 @@ export const solar: UNIT_DATASHEET[] = [
 		morale: 4,
 		wounds: 1,
 		weapons: [1008, 1009, 2007],
-		special_rules: [{ name: "Bulky" }, { name: "Chain of Command" }],
+		special_rules: [{ name: SpecialRule.bulky }, { name: SpecialRule.chainOfCommand }],
 	},
 	{
 		id: 2006,
@@ -124,7 +125,7 @@ export const solar: UNIT_DATASHEET[] = [
 		morale: null,
 		wounds: 1,
 		weapons: [1017, 1018],
-		special_rules: [{ name: "Automated Sentry" }],
+		special_rules: [{ name: SpecialRule.automatedSentry }],
 	},
 	{
 		id: 2007,
@@ -140,7 +141,7 @@ export const solar: UNIT_DATASHEET[] = [
 		morale: 4,
 		wounds: 1,
 		weapons: [2008, 2009],
-		special_rules: [{ name: "Forward Deployment" }],
+		special_rules: [{ name: SpecialRule.forwardDeployment }],
 	},
 	{
 		id: 2008,
@@ -156,7 +157,7 @@ export const solar: UNIT_DATASHEET[] = [
 		morale: 4,
 		wounds: 1,
 		weapons: [2010, 2011, 1027, 2012],
-		special_rules: [{ name: "Chain of Command" }, { name: "Explorator Adaptation" }],
+		special_rules: [{ name: SpecialRule.chainOfCommand }, { name: SpecialRule.exploratorAdaptation }],
 	},
 	{
 		id: 2009,
@@ -172,7 +173,7 @@ export const solar: UNIT_DATASHEET[] = [
 		morale: 4,
 		wounds: 2,
 		weapons: [2013, 2014, 2015, 2016, 2017, 2018, 1027, 2012, 2019, 2020],
-		special_rules: [{ name: "Chain of Command" }, { name: "Explorator Adaptation" }],
+		special_rules: [{ name: SpecialRule.chainOfCommand }, { name: SpecialRule.exploratorAdaptation }],
 	},
 	{
 		id: 2010,
@@ -188,7 +189,7 @@ export const solar: UNIT_DATASHEET[] = [
 		morale: 4,
 		wounds: 2,
 		weapons: [2021, 2022, 1031, 2020, 1027, 2023, 2024, 2025, 2026],
-		special_rules: [{ name: "Chain of Command" }, { name: "Explorator Adaptation" }],
+		special_rules: [{ name: SpecialRule.chainOfCommand }, { name: SpecialRule.exploratorAdaptation }],
 	},
 	{
 		id: 2011,
@@ -204,7 +205,11 @@ export const solar: UNIT_DATASHEET[] = [
 		morale: null,
 		wounds: 1,
 		weapons: [2027, 2028, 1041, 1048, 2031, 2032],
-		special_rules: [{ name: "Flyer" }, { name: "Interceptor" }, { name: "Jink", value: "5+" }],
+		special_rules: [
+			{ name: SpecialRule.flyer },
+			{ name: SpecialRule.interceptor },
+			{ name: SpecialRule.jink, value: "5+" },
+		],
 	},
 	{
 		id: 2012,
@@ -220,7 +225,11 @@ export const solar: UNIT_DATASHEET[] = [
 		morale: null,
 		wounds: 1,
 		weapons: [1041, 2033, 2034, 2035, 1048, 2031, 2032],
-		special_rules: [{ name: "Flyer" }, { name: "Interceptor" }, { name: "Jink", value: "5+" }],
+		special_rules: [
+			{ name: SpecialRule.flyer },
+			{ name: SpecialRule.interceptor },
+			{ name: SpecialRule.jink, value: "5+" },
+		],
 	},
 	{
 		id: 2013,
@@ -236,7 +245,11 @@ export const solar: UNIT_DATASHEET[] = [
 		morale: null,
 		wounds: 1,
 		weapons: [2036, 2037, 1048, 2031, 2038],
-		special_rules: [{ name: "Flyer" }, { name: "Interceptor" }, { name: "Jink", value: "5+" }],
+		special_rules: [
+			{ name: SpecialRule.flyer },
+			{ name: SpecialRule.interceptor },
+			{ name: SpecialRule.jink, value: "5+" },
+		],
 	},
 	{
 		id: 2014,
@@ -252,7 +265,7 @@ export const solar: UNIT_DATASHEET[] = [
 		morale: null,
 		wounds: 1,
 		weapons: [2039, 2040, 2041, 1048, 2031, 2032],
-		special_rules: [{ name: "Flyer" }, { name: "Jink", value: "5+" }],
+		special_rules: [{ name: SpecialRule.flyer }, { name: SpecialRule.jink, value: "5+" }],
 	},
 	{
 		id: 2015,
@@ -277,7 +290,11 @@ export const solar: UNIT_DATASHEET[] = [
 				],
 			},
 		],
-		special_rules: [{ name: "Auger Array" }, { name: "Flyer" }, { name: "Jink", value: "5+" }],
+		special_rules: [
+			{ name: SpecialRule.augerArray },
+			{ name: SpecialRule.flyer },
+			{ name: SpecialRule.jink, value: "5+" },
+		],
 	},
 	{
 		id: 2016,
@@ -303,7 +320,7 @@ export const solar: UNIT_DATASHEET[] = [
 				],
 			},
 		],
-		special_rules: [{ name: "Flyer" }, { name: "Jink", value: "5+" }],
+		special_rules: [{ name: SpecialRule.flyer }, { name: SpecialRule.jink, value: "5+" }],
 	},
 	{
 		id: 2017,
@@ -330,7 +347,7 @@ export const solar: UNIT_DATASHEET[] = [
 				],
 			},
 		],
-		special_rules: [{ name: "Flyer" }, { name: "Jink", value: "5+" }],
+		special_rules: [{ name: SpecialRule.flyer }, { name: SpecialRule.jink, value: "5+" }],
 	},
 	{
 		id: 2018,
@@ -347,10 +364,10 @@ export const solar: UNIT_DATASHEET[] = [
 		wounds: 1,
 		weapons: [],
 		special_rules: [
-			{ name: "Flyer" },
-			{ name: "Hover" },
-			{ name: "Jink", value: "5+" },
-			{ name: "Transport", value: 2 },
+			{ name: SpecialRule.flyer },
+			{ name: SpecialRule.hover },
+			{ name: SpecialRule.jink, value: "5+" },
+			{ name: SpecialRule.transport, value: 2 },
 		],
 	},
 	{
@@ -367,7 +384,7 @@ export const solar: UNIT_DATASHEET[] = [
 		morale: 4,
 		wounds: 1,
 		weapons: [2048, 2020],
-		special_rules: [{ name: "Explorator Adaptation" }, { name: "Transport", value: 4 }],
+		special_rules: [{ name: SpecialRule.exploratorAdaptation }, { name: SpecialRule.transport, value: 4 }],
 	},
 	{
 		id: 2020,
@@ -383,7 +400,7 @@ export const solar: UNIT_DATASHEET[] = [
 		morale: null,
 		wounds: 1,
 		weapons: [2049, 2050],
-		special_rules: [{ name: "Compact" }, { name: "Remote Controlled Detonation" }],
+		special_rules: [{ name: SpecialRule.compact }, { name: SpecialRule.remoteDetonation }],
 	},
 	{
 		id: 2021,
@@ -399,7 +416,7 @@ export const solar: UNIT_DATASHEET[] = [
 		morale: 4,
 		wounds: 2,
 		weapons: [2051, 2017, 2018],
-		special_rules: [{ name: "Chain of Command" }, { name: "Explorator Adaptation" }],
+		special_rules: [{ name: SpecialRule.chainOfCommand }, { name: SpecialRule.exploratorAdaptation }],
 	},
 	{
 		id: 2022,
@@ -415,7 +432,7 @@ export const solar: UNIT_DATASHEET[] = [
 		morale: 4,
 		wounds: 2,
 		weapons: [2052, 2017, 2018],
-		special_rules: [{ name: "Chain of Command" }, { name: "Explorator Adaptation" }],
+		special_rules: [{ name: SpecialRule.chainOfCommand }, { name: SpecialRule.exploratorAdaptation }],
 	},
 	{
 		id: 2023,
@@ -431,7 +448,7 @@ export const solar: UNIT_DATASHEET[] = [
 		morale: 4,
 		wounds: 2,
 		weapons: [2053, 2054, 2055, 2012, 2056, 2057],
-		special_rules: [{ name: "Chain of Command" }, { name: "Explorator Adaptation" }],
+		special_rules: [{ name: SpecialRule.chainOfCommand }, { name: SpecialRule.exploratorAdaptation }],
 	},
 	{
 		id: 2024,
@@ -447,7 +464,7 @@ export const solar: UNIT_DATASHEET[] = [
 		morale: 4,
 		wounds: 1,
 		weapons: [2058],
-		special_rules: [{ name: "Chain of Command" }, { name: "Explorator Adaptation" }],
+		special_rules: [{ name: SpecialRule.chainOfCommand }, { name: SpecialRule.exploratorAdaptation }],
 	},
 	{
 		id: 2025,
@@ -463,7 +480,7 @@ export const solar: UNIT_DATASHEET[] = [
 		morale: 4,
 		wounds: 1,
 		weapons: [2059],
-		special_rules: [{ name: "Chain of Command" }, { name: "Explorator Adaptation" }],
+		special_rules: [{ name: SpecialRule.chainOfCommand }, { name: SpecialRule.exploratorAdaptation }],
 	},
 	{
 		id: 2026,
@@ -479,7 +496,7 @@ export const solar: UNIT_DATASHEET[] = [
 		morale: 4,
 		wounds: 1,
 		weapons: [2060, 1027, 2012],
-		special_rules: [{ name: "Chain of Command" }, { name: "Explorator Adaptation" }],
+		special_rules: [{ name: SpecialRule.chainOfCommand }, { name: SpecialRule.exploratorAdaptation }],
 	},
 	{
 		id: 2027,
@@ -495,7 +512,7 @@ export const solar: UNIT_DATASHEET[] = [
 		morale: 4,
 		wounds: 1,
 		weapons: [2061, 1027, 2012],
-		special_rules: [{ name: "Chain of Command" }, { name: "Explorator Adaptation" }],
+		special_rules: [{ name: SpecialRule.chainOfCommand }, { name: SpecialRule.exploratorAdaptation }],
 	},
 	{
 		id: 2028,
@@ -511,7 +528,7 @@ export const solar: UNIT_DATASHEET[] = [
 		morale: 4,
 		wounds: 1,
 		weapons: [2062, 1027, 2012],
-		special_rules: [{ name: "Chain of Command" }, { name: "Explorator Adaptation" }],
+		special_rules: [{ name: SpecialRule.chainOfCommand }, { name: SpecialRule.exploratorAdaptation }],
 	},
 	{
 		id: 2029,
@@ -527,7 +544,7 @@ export const solar: UNIT_DATASHEET[] = [
 		morale: 4,
 		wounds: 1,
 		weapons: [2063, 1027, 2012],
-		special_rules: [{ name: "Chain of Command" }, { name: "Explorator Adaptation" }],
+		special_rules: [{ name: SpecialRule.chainOfCommand }, { name: SpecialRule.exploratorAdaptation }],
 	},
 	{
 		id: 2030,
@@ -543,7 +560,7 @@ export const solar: UNIT_DATASHEET[] = [
 		morale: 4,
 		wounds: 2,
 		weapons: [4041, 2064, 2065, 2069],
-		special_rules: [{ name: "Chain of Command" }, { name: "Explorator Adaptation" }],
+		special_rules: [{ name: SpecialRule.chainOfCommand }, { name: SpecialRule.exploratorAdaptation }],
 	},
 	{
 		id: 2031,
@@ -559,7 +576,7 @@ export const solar: UNIT_DATASHEET[] = [
 		morale: 4,
 		wounds: 2,
 		weapons: [2067, 2064, 2066, 2069],
-		special_rules: [{ name: "Chain of Command" }, { name: "Explorator Adaptation" }],
+		special_rules: [{ name: SpecialRule.chainOfCommand }, { name: SpecialRule.exploratorAdaptation }],
 	},
 	{
 		id: 2032,
@@ -575,6 +592,6 @@ export const solar: UNIT_DATASHEET[] = [
 		morale: 4,
 		wounds: 2,
 		weapons: [4030, 2064, 2068, 2069],
-		special_rules: [{ name: "Chain of Command" }, { name: "Explorator Adaptation" }],
+		special_rules: [{ name: SpecialRule.chainOfCommand }, { name: SpecialRule.exploratorAdaptation }],
 	},
 ]

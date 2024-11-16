@@ -3,6 +3,7 @@ import { armouredTypes, demolisherTraits } from "../utils"
 import calculateShotMultiplier from "./calculateShotMultiplier"
 import calculateToHit from "./calculateToHit"
 import calculateSaves from "./calculateSaves"
+import { WeaponTraits } from "@type/weaponTraits"
 
 export const calculateDamage = (weapon: WEAPON_PROFILES, target: UNIT_DATASHEET): string => {
 	const weaponTraits = weapon.traits.map((trait) => trait.name)
@@ -16,23 +17,23 @@ export const calculateDamage = (weapon: WEAPON_PROFILES, target: UNIT_DATASHEET)
 	}
 
 	if (weapon.range === "-" && !weapon.to_hit) {
-		if (!weaponTraits.includes("Wrecker") || targetType !== UNIT_TYPE.structure) {
+		if (!weaponTraits.includes(WeaponTraits.wrecker) || targetType !== UNIT_TYPE.structure) {
 			return "Melee"
 		}
 	}
 
-	if (weaponTraits.includes("Light") && armouredTypes.includes(targetType)) {
+	if (weaponTraits.includes(WeaponTraits.light) && armouredTypes.includes(targetType)) {
 		return "0"
 	}
 
 	let finalDamage =
 		(1 - calculateSaves(weapon, target)) * calculateShotMultiplier(weapon, target) * calculateToHit(weapon, target)
 
-	if (weaponTraits.includes("Deflagrate")) {
+	if (weaponTraits.includes(WeaponTraits.deflagrate)) {
 		const copyWeapon = {
 			...weapon,
 			traits: weapon.traits.filter((trait) => {
-				if (trait.name !== "Deflagrate") {
+				if (trait.name !== WeaponTraits.deflagrate) {
 					return trait
 				}
 			}),

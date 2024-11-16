@@ -128,7 +128,7 @@ export const strategicAssets: DETACHMENT[] = [
 		dataslate_loadout: [
 			{
 				text_option: [
-					"Two Twin magana lascannon",
+					"Two Twin magna lascannon",
 					"Acastus lascannon or Acastus autocannon",
 					"Ironstorm missile pod or Helios defence missiles",
 				],
@@ -159,7 +159,7 @@ export const strategicAssets: DETACHMENT[] = [
 			{
 				location: "Chassis",
 				options: [
-					{ name: "Two Twin magana lascannon", cost: 0 },
+					{ name: "Two Twin magna lascannon", cost: 0 },
 					{ name: "Two conversion beam cannon", cost: 20 },
 				],
 			},

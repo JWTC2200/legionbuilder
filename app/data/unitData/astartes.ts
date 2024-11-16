@@ -1,4 +1,5 @@
 import { FACTION, UNIT_DATASHEET, UNIT_TYPE } from "@type/types"
+import { SpecialRule } from "@type/specialRules"
 
 export const astartes: UNIT_DATASHEET[] = [
 	// ********************************************************************
@@ -19,11 +20,11 @@ export const astartes: UNIT_DATASHEET[] = [
 		wounds: 1,
 		weapons: [1000],
 		special_rules: [
-			{ name: "Commander" },
-			{ name: "Inspire", value: '8"' },
-			{ name: "Invulnerable Save", value: "6+" },
-			{ name: "Master Tactician" },
-			{ name: "Medicae" },
+			{ name: SpecialRule.commander },
+			{ name: SpecialRule.inspire, value: '8"' },
+			{ name: SpecialRule.invulnerableSave, value: "6+" },
+			{ name: SpecialRule.masterTactician },
+			{ name: SpecialRule.medicae },
 		],
 	},
 	{
@@ -40,7 +41,7 @@ export const astartes: UNIT_DATASHEET[] = [
 		morale: 3,
 		wounds: 1,
 		weapons: [1001, 1002, 1003],
-		special_rules: [{ name: "Transport", value: 2 }],
+		special_rules: [{ name: SpecialRule.transport, value: 2 }],
 	},
 	{
 		id: 1002,
@@ -73,11 +74,11 @@ export const astartes: UNIT_DATASHEET[] = [
 		wounds: 1,
 		weapons: [1000],
 		special_rules: [
-			{ name: "Bulky" },
-			{ name: "Deep Strike" },
-			{ name: "Implacable" },
-			{ name: "Invulnerable Save", value: "6+" },
-			{ name: "Steadfast" },
+			{ name: SpecialRule.bulky },
+			{ name: SpecialRule.deepStrike },
+			{ name: SpecialRule.implacable },
+			{ name: SpecialRule.invulnerableSave, value: "6+" },
+			{ name: SpecialRule.steadfast },
 		],
 	},
 	{
@@ -94,7 +95,7 @@ export const astartes: UNIT_DATASHEET[] = [
 		morale: 3,
 		wounds: 1,
 		weapons: [1007],
-		special_rules: [{ name: "Independant" }, { name: "Jump Packs" }],
+		special_rules: [{ name: SpecialRule.independent }, { name: SpecialRule.jumpPacks }],
 	},
 	{
 		id: 1005,
@@ -142,7 +143,7 @@ export const astartes: UNIT_DATASHEET[] = [
 		morale: 3,
 		wounds: 1,
 		weapons: [1008, 1009],
-		special_rules: [{ name: "Bulky" }],
+		special_rules: [{ name: SpecialRule.bulky }],
 	},
 	{
 		id: 1008,
@@ -158,7 +159,7 @@ export const astartes: UNIT_DATASHEET[] = [
 		morale: 3,
 		wounds: 1,
 		weapons: [1010, 1011, 1012, 1013],
-		special_rules: [{ name: "Armoured" }, { name: "Invulnerable Save", value: "5+" }],
+		special_rules: [{ name: SpecialRule.armoured }, { name: SpecialRule.invulnerableSave, value: "5+" }],
 	},
 	{
 		id: 1009,
@@ -174,7 +175,7 @@ export const astartes: UNIT_DATASHEET[] = [
 		morale: 3,
 		wounds: 1,
 		weapons: [1014, 1015, 1016],
-		special_rules: [{ name: "Armoured" }, { name: "Invulnerable Save", value: "6+" }],
+		special_rules: [{ name: SpecialRule.armoured }, { name: SpecialRule.invulnerableSave, value: "6+" }],
 	},
 	{
 		id: 1010,
@@ -190,7 +191,7 @@ export const astartes: UNIT_DATASHEET[] = [
 		morale: null,
 		wounds: 1,
 		weapons: [1017, 1018],
-		special_rules: [{ name: "Automated Sentry" }],
+		special_rules: [{ name: SpecialRule.automatedSentry }],
 	},
 	{
 		id: 1011,
@@ -206,7 +207,11 @@ export const astartes: UNIT_DATASHEET[] = [
 		morale: 3,
 		wounds: 1,
 		weapons: [1019, 1020, 1021, 1022],
-		special_rules: [{ name: "Armoured" }, { name: "Invulnerable Save", value: "5+" }, { name: "Tracking Array" }],
+		special_rules: [
+			{ name: SpecialRule.armoured },
+			{ name: SpecialRule.invulnerableSave, value: "5+" },
+			{ name: SpecialRule.trackingArray },
+		],
 	},
 	{
 		id: 1012,
@@ -270,7 +275,11 @@ export const astartes: UNIT_DATASHEET[] = [
 		morale: null,
 		wounds: 1,
 		weapons: [1035, 1036],
-		special_rules: [{ name: "Flyer" }, { name: "Interceptor" }, { name: "Jink", value: "5+" }],
+		special_rules: [
+			{ name: SpecialRule.flyer },
+			{ name: SpecialRule.interceptor },
+			{ name: SpecialRule.jink, value: "5+" },
+		],
 	},
 	{
 		id: 1016,
@@ -287,10 +296,10 @@ export const astartes: UNIT_DATASHEET[] = [
 		wounds: 1,
 		weapons: [1037, 1038, 1040],
 		special_rules: [
-			{ name: "Assault Transport", value: 5 },
-			{ name: "Flyer" },
-			{ name: "Hover" },
-			{ name: "Jink", value: "5+" },
+			{ name: SpecialRule.assaultTransport, value: 5 },
+			{ name: SpecialRule.flyer },
+			{ name: SpecialRule.hover },
+			{ name: SpecialRule.jink, value: "5+" },
 		],
 	},
 	{
@@ -307,7 +316,11 @@ export const astartes: UNIT_DATASHEET[] = [
 		morale: null,
 		wounds: 1,
 		weapons: [1041, 1039, 1042, 1043, 1044],
-		special_rules: [{ name: "Flyer" }, { name: "Hover" }, { name: "Jink", value: "5+" }],
+		special_rules: [
+			{ name: SpecialRule.flyer },
+			{ name: SpecialRule.hover },
+			{ name: SpecialRule.jink, value: "5+" },
+		],
 	},
 	{
 		id: 1018,
@@ -324,10 +337,10 @@ export const astartes: UNIT_DATASHEET[] = [
 		wounds: 2,
 		weapons: [1045, 1046, 1047, 1048],
 		special_rules: [
-			{ name: "Flyer" },
-			{ name: "Hover" },
-			{ name: "Jink", value: "5+" },
-			{ name: "Large Assault Transport", value: 8 },
+			{ name: SpecialRule.flyer },
+			{ name: SpecialRule.hover },
+			{ name: SpecialRule.jink, value: "5+" },
+			{ name: SpecialRule.largeAssaultTransport, value: 8 },
 		],
 	},
 	{
@@ -344,7 +357,7 @@ export const astartes: UNIT_DATASHEET[] = [
 		morale: 3,
 		wounds: 1,
 		weapons: [1049, 1050],
-		special_rules: [{ name: "Jink", value: "6+" }],
+		special_rules: [{ name: SpecialRule.jink, value: "6+" }],
 	},
 	{
 		id: 1020,
@@ -360,7 +373,7 @@ export const astartes: UNIT_DATASHEET[] = [
 		morale: 3,
 		wounds: 1,
 		weapons: [1051],
-		special_rules: [{ name: "Jink", value: "6+" }, { name: "Skimmer" }],
+		special_rules: [{ name: SpecialRule.jink, value: "6+" }, { name: SpecialRule.skimmer }],
 	},
 	{
 		id: 1021,
@@ -376,7 +389,7 @@ export const astartes: UNIT_DATASHEET[] = [
 		morale: 3,
 		wounds: 1,
 		weapons: [1052, 1053, 1054, 1055],
-		special_rules: [{ name: "Jink", value: "6+" }, { name: "Skimmer" }],
+		special_rules: [{ name: SpecialRule.jink, value: "6+" }, { name: SpecialRule.skimmer }],
 	},
 	{
 		id: 1022,
@@ -392,7 +405,7 @@ export const astartes: UNIT_DATASHEET[] = [
 		morale: 3,
 		wounds: 1,
 		weapons: [1055, 1026, 1056],
-		special_rules: [{ name: "Jink", value: "6+" }, { name: "Skimmer" }],
+		special_rules: [{ name: SpecialRule.jink, value: "6+" }, { name: SpecialRule.skimmer }],
 	},
 	{
 		id: 1023,
@@ -408,7 +421,7 @@ export const astartes: UNIT_DATASHEET[] = [
 		morale: 3,
 		wounds: 2,
 		weapons: [1057, 1027, 1058, 2012, 1002],
-		special_rules: [{ name: "Assault Transport", value: "5" }],
+		special_rules: [{ name: SpecialRule.assaultTransport, value: "5" }],
 	},
 	{
 		id: 1024,
@@ -424,7 +437,7 @@ export const astartes: UNIT_DATASHEET[] = [
 		morale: 3,
 		wounds: 1,
 		weapons: [1059, 1002],
-		special_rules: [{ name: "Forward Deployment" }, { name: "Assault Transport", value: "2" }],
+		special_rules: [{ name: SpecialRule.forwardDeployment }, { name: SpecialRule.assaultTransport, value: "2" }],
 	},
 	{
 		id: 1025,
@@ -433,14 +446,14 @@ export const astartes: UNIT_DATASHEET[] = [
 		allegiance: null,
 		unique: false,
 		unit_type: { type: UNIT_TYPE.vehicle, value: 2 },
-		name: "Drop Pod",
+		name: SpecialRule.dropPod,
 		movement: "-",
 		save: 4,
 		caf: -3,
 		morale: null,
 		wounds: 1,
 		weapons: [1060],
-		special_rules: [{ name: "Drop Pod" }, { name: "Transport", value: "2" }],
+		special_rules: [{ name: SpecialRule.dropPod }, { name: SpecialRule.transport, value: "2" }],
 	},
 	{
 		id: 1026,
@@ -456,7 +469,7 @@ export const astartes: UNIT_DATASHEET[] = [
 		morale: null,
 		wounds: 1,
 		weapons: [],
-		special_rules: [{ name: "Drop Pod" }, { name: "Large Transport", value: "2" }],
+		special_rules: [{ name: SpecialRule.dropPod }, { name: SpecialRule.largeTransport, value: "2" }],
 	},
 	{
 		id: 1027,
@@ -472,7 +485,7 @@ export const astartes: UNIT_DATASHEET[] = [
 		morale: null,
 		wounds: 1,
 		weapons: [],
-		special_rules: [{ name: "Drop Pod" }, { name: "Shield Generator", value: "5" }],
+		special_rules: [{ name: SpecialRule.dropPod }, { name: SpecialRule.shieldGenerator, value: "5" }],
 	},
 	{
 		id: 1028,
@@ -488,7 +501,7 @@ export const astartes: UNIT_DATASHEET[] = [
 		morale: null,
 		wounds: 1,
 		weapons: [1061],
-		special_rules: [{ name: "Drop Pod" }],
+		special_rules: [{ name: SpecialRule.dropPod }],
 	},
 	{
 		id: 1029,
@@ -536,7 +549,7 @@ export const astartes: UNIT_DATASHEET[] = [
 		morale: 3,
 		wounds: 1,
 		weapons: [1064, 1065, 1027, 1067, 1066],
-		special_rules: [{ name: "Nimble" }],
+		special_rules: [{ name: SpecialRule.nimble }],
 	},
 	{
 		id: 1032,
@@ -552,7 +565,7 @@ export const astartes: UNIT_DATASHEET[] = [
 		morale: 3,
 		wounds: 1,
 		weapons: [1068],
-		special_rules: [{ name: "Deep Strike" }, { name: "Transport", value: 2 }],
+		special_rules: [{ name: SpecialRule.deepStrike }, { name: SpecialRule.transport, value: 2 }],
 	},
 	{
 		id: 1033,
@@ -569,10 +582,10 @@ export const astartes: UNIT_DATASHEET[] = [
 		wounds: 2,
 		weapons: [1030, 1031, 1032, 1027, 1024, 1026, 1033, 1034],
 		special_rules: [
-			{ name: "Commander" },
-			{ name: "Inspire", value: '8"' },
-			{ name: "Invulnerable Save", value: "6+" },
-			{ name: "Master Tactician" },
+			{ name: SpecialRule.commander },
+			{ name: SpecialRule.inspire, value: '8"' },
+			{ name: SpecialRule.invulnerableSave, value: "6+" },
+			{ name: SpecialRule.masterTactician },
 		],
 	},
 	{
@@ -590,10 +603,10 @@ export const astartes: UNIT_DATASHEET[] = [
 		wounds: 1,
 		weapons: [1027, 1062, 1028, 1029, 1024, 1026],
 		special_rules: [
-			{ name: "Commander" },
-			{ name: "Inspire", value: '8"' },
-			{ name: "Invulnerable Save", value: "6+" },
-			{ name: "Master Tactician" },
+			{ name: SpecialRule.commander },
+			{ name: SpecialRule.inspire, value: '8"' },
+			{ name: SpecialRule.invulnerableSave, value: "6+" },
+			{ name: SpecialRule.masterTactician },
 		],
 	},
 	{
@@ -611,10 +624,10 @@ export const astartes: UNIT_DATASHEET[] = [
 		wounds: 1,
 		weapons: [1023, 1024, 1025, 1026],
 		special_rules: [
-			{ name: "Commander" },
-			{ name: "Inspire", value: '8"' },
-			{ name: "Invulnerable Save", value: "6+" },
-			{ name: "Master Tactician" },
+			{ name: SpecialRule.commander },
+			{ name: SpecialRule.inspire, value: '8"' },
+			{ name: SpecialRule.invulnerableSave, value: "6+" },
+			{ name: SpecialRule.masterTactician },
 		],
 	},
 ]

@@ -1,4 +1,5 @@
 import { ALLEGIANCE, FACTION, UNIT_DATASHEET, UNIT_TYPE } from "@type/types"
+import { SpecialRule } from "@type/specialRules"
 
 export const strategicAssets: UNIT_DATASHEET[] = [
 	// ********************************************************************
@@ -18,7 +19,11 @@ export const strategicAssets: UNIT_DATASHEET[] = [
 		morale: 2,
 		wounds: 3,
 		weapons: [4000, 4001, 4002, 4003, 4004, 4005, 4006, 4007],
-		special_rules: [{ name: "Independant" }, { name: "Ion Shields", value: "4+" }, { name: "Nimble" }],
+		special_rules: [
+			{ name: SpecialRule.independent },
+			{ name: SpecialRule.ionShields, value: "4+" },
+			{ name: SpecialRule.nimble },
+		],
 	},
 	{
 		id: 4001,
@@ -40,11 +45,11 @@ export const strategicAssets: UNIT_DATASHEET[] = [
 			},
 		],
 		special_rules: [
-			{ name: "Blessed Auto-simulacra" },
-			{ name: "Independant" },
-			{ name: "Ionic Flare Shield" },
-			{ name: "Ion Shields", value: "4+" },
-			{ name: "Nimble" },
+			{ name: SpecialRule.blessedAutosimulacra },
+			{ name: SpecialRule.independent },
+			{ name: SpecialRule.ionicFlareShield },
+			{ name: SpecialRule.ionShields, value: "4+" },
+			{ name: SpecialRule.nimble },
 		],
 	},
 	{
@@ -67,11 +72,11 @@ export const strategicAssets: UNIT_DATASHEET[] = [
 			},
 		],
 		special_rules: [
-			{ name: "Blessed Auto-simulacra" },
-			{ name: "Independant" },
-			{ name: "Ionic Flare Shield" },
-			{ name: "Ion Shields", value: "4+" },
-			{ name: "Nimble" },
+			{ name: SpecialRule.blessedAutosimulacra },
+			{ name: SpecialRule.independent },
+			{ name: SpecialRule.ionicFlareShield },
+			{ name: SpecialRule.ionShields, value: "4+" },
+			{ name: SpecialRule.nimble },
 		],
 	},
 	{
@@ -93,7 +98,7 @@ export const strategicAssets: UNIT_DATASHEET[] = [
 				options: ["Thermal spear and Reaper chain-cleaver or Armiger autocannon"],
 			},
 		],
-		special_rules: [{ name: "Ion Shields", value: "5+" }, { name: "Nimble" }],
+		special_rules: [{ name: SpecialRule.ionShields, value: "5+" }, { name: SpecialRule.nimble }],
 	},
 	{
 		id: 4004,
@@ -114,7 +119,11 @@ export const strategicAssets: UNIT_DATASHEET[] = [
 				options: ["Armiger lightning locks or a volkite veuglaire and a Gyges siege claw"],
 			},
 		],
-		special_rules: [{ name: "Ionic Flare Shield" }, { name: "Ion Shields", value: "5+" }, { name: "Nimble" }],
+		special_rules: [
+			{ name: SpecialRule.ionicFlareShield },
+			{ name: SpecialRule.ionShields, value: "5+" },
+			{ name: SpecialRule.nimble },
+		],
 	},
 	{
 		id: 4005,
@@ -131,9 +140,9 @@ export const strategicAssets: UNIT_DATASHEET[] = [
 		wounds: 3,
 		weapons: [4020, 4021, 4022, 4023, 4024, 4025, 4026, 4027],
 		special_rules: [
-			{ name: "Blessed Auto-simulacra" },
-			{ name: "Independant" },
-			{ name: "Ion Shields", value: "4+" },
+			{ name: SpecialRule.blessedAutosimulacra },
+			{ name: SpecialRule.independent },
+			{ name: SpecialRule.ionShields, value: "4+" },
 		],
 	},
 	{
@@ -150,7 +159,7 @@ export const strategicAssets: UNIT_DATASHEET[] = [
 		morale: null,
 		wounds: 4,
 		weapons: [4028, 1045, 4030, 4031, 4032, 4033, 4034, 4035, 4036, 4037, 4038, 4039],
-		special_rules: [{ name: "Agile" }, { name: "Void Shields", value: 2 }],
+		special_rules: [{ name: SpecialRule.agile }, { name: SpecialRule.voidShields, value: 2 }],
 	},
 	{
 		id: 4007,
@@ -166,7 +175,11 @@ export const strategicAssets: UNIT_DATASHEET[] = [
 		morale: null,
 		wounds: 4,
 		weapons: [4040, 4041, 4042, 4043],
-		special_rules: [{ name: "Agile" }, { name: "Infiltrate" }, { name: "Void Shields", value: 2 }],
+		special_rules: [
+			{ name: SpecialRule.agile },
+			{ name: SpecialRule.infiltrate },
+			{ name: SpecialRule.voidShields, value: 2 },
+		],
 	},
 	{
 		id: 4008,
@@ -182,7 +195,7 @@ export const strategicAssets: UNIT_DATASHEET[] = [
 		morale: null,
 		wounds: 5,
 		weapons: [4044, 4045, 4046, 4047, 4048, 4049, 4050, 4051, 4052, 4053, 4054, 4055, 4056],
-		special_rules: [{ name: "Void Shields", value: 4 }],
+		special_rules: [{ name: SpecialRule.voidShields, value: 4 }],
 	},
 	{
 		id: 4009,
@@ -198,7 +211,7 @@ export const strategicAssets: UNIT_DATASHEET[] = [
 		morale: null,
 		wounds: 5,
 		weapons: [4044, 4045, 4046, 4047, 4057, 4058, 4059, 4060],
-		special_rules: [{ name: "Void Shields", value: 6 }],
+		special_rules: [{ name: SpecialRule.voidShields, value: 6 }],
 	},
 	{
 		id: 4010,
@@ -214,7 +227,7 @@ export const strategicAssets: UNIT_DATASHEET[] = [
 		morale: null,
 		wounds: 6,
 		weapons: [4058, 4061, 4062, 4057, 4063, 4072, 4064, 4065, 4066, 4067, 4068, 4059, 4069, 4070, 4071],
-		special_rules: [{ name: "Void Shields", value: 6 }],
+		special_rules: [{ name: SpecialRule.voidShields, value: 6 }],
 	},
 	{
 		id: 4011,
@@ -233,10 +246,10 @@ export const strategicAssets: UNIT_DATASHEET[] = [
 			4073, 4058, 4061, 4062, 4057, 4072, 4063, 4064, 4065, 4066, 4067, 4068, 4059, 4069, 4070, 4071, 4074, 4075,
 		],
 		special_rules: [
-			{ name: "Dread Aura" },
-			{ name: "Loyalist" },
-			{ name: "Necrotechia" },
-			{ name: "Void Shields", value: 6 },
+			{ name: SpecialRule.dreadAura },
+			{ name: SpecialRule.loyalist },
+			{ name: SpecialRule.necrotechia },
+			{ name: SpecialRule.voidShields, value: 6 },
 		],
 	},
 	{
@@ -253,7 +266,7 @@ export const strategicAssets: UNIT_DATASHEET[] = [
 		morale: null,
 		wounds: 7,
 		weapons: [4076, 4077, 4030, 4078, 4028, 1045, 4031, 4079, 4059, 4069, 4080, 4060],
-		special_rules: [{ name: "Void Shields", value: 12 }],
+		special_rules: [{ name: SpecialRule.voidShields, value: 12 }],
 	},
 	{
 		id: 4013,
@@ -269,7 +282,7 @@ export const strategicAssets: UNIT_DATASHEET[] = [
 		morale: null,
 		wounds: 7,
 		weapons: [4082, 4083, 4084, 4085, 4030, 4078, 4028, 1045, 4031, 4079, 4059, 4069, 4080, 4060],
-		special_rules: [{ name: "Void Shields", value: 12 }],
+		special_rules: [{ name: SpecialRule.voidShields, value: 12 }],
 	},
 	{
 		id: 4014,
@@ -286,10 +299,10 @@ export const strategicAssets: UNIT_DATASHEET[] = [
 		wounds: 3,
 		weapons: [4086, 4087, 4088, 4089, 4090, 4091, 4092],
 		special_rules: [
-			{ name: "Furious Charge" },
-			{ name: "Independant" },
-			{ name: "Ion Shields", value: "4+" },
-			{ name: "Nimble" },
+			{ name: SpecialRule.furiousCharge },
+			{ name: SpecialRule.independent },
+			{ name: SpecialRule.ionShields, value: "4+" },
+			{ name: SpecialRule.nimble },
 		],
 	},
 	{
@@ -308,11 +321,11 @@ export const strategicAssets: UNIT_DATASHEET[] = [
 		weapons: [4093, 4094],
 		loadout: [{ options: ["Graviton singularity cannon", "Atropos lascutter"] }],
 		special_rules: [
-			{ name: "Furious Charge" },
-			{ name: "Independant" },
-			{ name: "Ion Shields", value: "3+" },
-			{ name: "Macro-extinction Targeting protocols" },
-			{ name: "Nimble" },
+			{ name: SpecialRule.furiousCharge },
+			{ name: SpecialRule.independent },
+			{ name: SpecialRule.ionShields, value: "3+" },
+			{ name: SpecialRule.macroextinction },
+			{ name: SpecialRule.nimble },
 		],
 	},
 ]
