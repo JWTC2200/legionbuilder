@@ -3,7 +3,6 @@ import { WeaponTraits } from "@type/weaponTraits"
 
 export const calculateShotMultiplier = (weapon: WEAPON_PROFILES, target: UNIT_DATASHEET) => {
 	const weaponTraits = weapon.traits.map((trait) => trait.name)
-	const targetRules = target.special_rules.map((rule) => rule.name)
 	const targetType = target.unit_type.type
 
 	let multiplier = 1

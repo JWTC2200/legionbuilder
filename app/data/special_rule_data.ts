@@ -1,4 +1,4 @@
-import { SPECIAL_RULE_INFO } from "../types/types"
+import { SPECIAL_RULE_INFO } from "@type/types"
 import { SpecialRule } from "@type/specialRules"
 
 export const specialRulesData: SPECIAL_RULE_INFO[] = [
