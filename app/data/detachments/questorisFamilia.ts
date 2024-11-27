@@ -18,6 +18,7 @@ export const questorisFamilia: DETACHMENT[] = [
 		base_cost: 180,
 		base_size: 3,
 		max_size: 9,
+		break_strength: 2,
 		main_unit: [4003],
 		related_unit: [],
 		dataslate_loadout: [
@@ -30,8 +31,8 @@ export const questorisFamilia: DETACHMENT[] = [
 				name: "Additional Knight Armigers",
 				unit_ref: 4003,
 				options: [
-					{ number: 3, cost: 160, size: 3 },
-					{ number: 6, cost: 320, size: 6 },
+					{ number: 3, cost: 160, size: 3, break_strength: 2 },
+					{ number: 6, cost: 320, size: 6, break_strength: 2 },
 				],
 			},
 		],
@@ -67,6 +68,7 @@ export const questorisFamilia: DETACHMENT[] = [
 		base_cost: 200,
 		base_size: 3,
 		max_size: 9,
+		break_strength: 2,
 		main_unit: [4004],
 		related_unit: [],
 		dataslate_loadout: [
@@ -79,8 +81,8 @@ export const questorisFamilia: DETACHMENT[] = [
 				name: "Additional Knight Moirax",
 				unit_ref: 4004,
 				options: [
-					{ number: 3, cost: 180, size: 3 },
-					{ number: 6, cost: 360, size: 6 },
+					{ number: 3, cost: 180, size: 3, break_strength: 2 },
+					{ number: 6, cost: 360, size: 6, break_strength: 2 },
 				],
 			},
 		],
