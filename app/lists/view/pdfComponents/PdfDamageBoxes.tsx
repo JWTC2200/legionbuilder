@@ -6,7 +6,6 @@ import { currentDetachmentSize, totalDetachmentPoints } from "@lists/builder/com
 import { detachmentData } from "@data/detachment_data"
 import { unitData } from "@data/unit_data"
 import { findDetachmentSlot } from "@lists/builder/utils"
-import main from "@components/Main"
 
 interface properties {
 	list: List
