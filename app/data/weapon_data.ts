@@ -2557,7 +2557,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 	},
 	{
 		id: 5006,
-		name: "Exo-planar repeators",
+		name: "Exo-planar repeaters",
 		profiles: [
 			{
 				range: `10"`,

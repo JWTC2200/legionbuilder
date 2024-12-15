@@ -12,6 +12,7 @@ import { totalFormationPoints } from "@lists/builder/utils"
 import { listState } from "@/app/lists/state"
 import ResizingBox from "@/app/components/ResizingBox"
 import SimpleWarning from "@lists/builder/components/warnings/SimpleWarning"
+import FormationShift from "@lists/builder/components/formation/FormationShift"
 
 interface properties {
 	formation: ListFormation
@@ -33,7 +34,10 @@ const Formation = ({ formation }: properties) => {
 				className={`w-full font-graduate builder_title_background sm:rounded-t-lg flex justify-around sm:justify-between items-center text-center p-2 sm:px-6 z-10 gap-2 ${!viewFormation && "sm:rounded-b-lg"}`}>
 				<FormationToggle view={viewFormation} toggle={setViewFormation} />
 				<FormationSelector formation={formation} />
-				<FormationDelete formation={formation} />
+				<div className={"flex gap-2"}>
+					<FormationShift formation={formation} />
+					<FormationDelete formation={formation} />
+				</div>
 			</div>
 			<div className="overflow-hidden w-full">
 				<ResizingBox
