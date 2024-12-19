@@ -48,7 +48,7 @@ const FormationSelector = ({ formation }: FormationSelector) => {
 				id={`formation_selector_${formation.id}`}
 				name={`formation_selector_${formation.id}`}
 				className={
-					"bg-secondary-800 sm:text-xl p-2 font-graduate text-center max-w-[70vw] lg:max-w-full outline-none " +
+					"bg-secondary-800 sm:text-xl p-2 font-graduate text-center max-w-[60vw] sm:max-w-[70vw] lg:max-w-full outline-none " +
 					(formation.faction ? factionColours(formation.faction) : "")
 				}
 				value={formation.data_id ? formation.data_id : ""}

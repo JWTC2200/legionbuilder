@@ -68,12 +68,16 @@ export const astartes: FORMATION[] = [
 		],
 		rules: [
 			{
+				name: "Legionbuilder note",
+				text: "There is some ambiguity regarding the optional Vanguard slot. There are differences between the physical and digital copies of the rulebook (which have a Core slot). I own the physical copy so I'll leave it as a Vanguard slot until an official Errata. For now the Vanguard slot has no valid options due to the 'Aerial Assault' formation rule",
+			},
+			{
 				name: "Dedicated Transports",
 				text: "Any Legiones Astartes Detachment within a Legion Aerial Assault Formation can be upgraded with Legion Storm Eagles or Legion Thunderhawks as Dedicated Transports, at a cost of +100 points per Storm Eagle and +150 points per Legion Thunderhawk",
 			},
 			{
 				name: "Aerial Assault",
-				text: "All Detachments within the Formation that do not have the Flyer special rule must begin the game Embarked upon a Transport with the Flyer special rule.",
+				text: "All Detachments within the Formation that do not have the Flyer special rule must begin the game Embarked upon a Transport with the Flyer special rule",
 			},
 		],
 	},

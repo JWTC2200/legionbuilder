@@ -31,7 +31,7 @@ const Formation = ({ formation }: properties) => {
 			id={formation.id}
 			className={`sm:rounded-xl flex flex-grow flex-col min-w-0 items-center overflow-hidden ${viewFormation && "pb-4"}`}>
 			<div
-				className={`w-full font-graduate builder_title_background sm:rounded-t-lg flex justify-around sm:justify-between items-center text-center p-2 sm:px-6 z-10 gap-2 ${!viewFormation && "sm:rounded-b-lg"}`}>
+				className={`w-full font-graduate builder_title_background sm:rounded-t-lg flex justify-around sm:justify-between items-center text-center p-1 sm:p-2 sm:px-6 z-10 sm:gap-2 ${!viewFormation && "sm:rounded-b-lg"}`}>
 				<FormationToggle view={viewFormation} toggle={setViewFormation} />
 				<FormationSelector formation={formation} />
 				<div className={"flex gap-2"}>
