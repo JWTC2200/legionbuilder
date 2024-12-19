@@ -6,6 +6,16 @@ import Link from "next/link"
 import { CaretDown, CaretUp } from "@components/Icons"
 import { clickOutside } from "@/app/utils/events"
 
+interface Addresses {
+	prefix: string
+	addresses: string[]
+}
+
+interface Crumb {
+	href: string
+	children: ReactNode
+}
+
 export function BreadCrumbs({ children }: { children: ReactNode }) {
 	return (
 		<header className="bg-secondary-900 p-4 py-2 text-lg font-graduate flex flex-wrap">
@@ -19,7 +29,7 @@ export function BreadCrumbs({ children }: { children: ReactNode }) {
 	)
 }
 
-export function Crumb({ href, children }: { href: string; children: ReactNode }) {
+export function Crumb({ href, children }: Crumb) {
 	const active = usePathname().endsWith(href)
 
 	return !active ? (
@@ -31,8 +41,7 @@ export function Crumb({ href, children }: { href: string; children: ReactNode })
 	)
 }
 
-export function ReferenceSelector() {
-	const addresses = { prefix: "reference", addresses: ["units", "weapons", "detachments", "formations"] }
+export function ReferenceSelector({ addresses }: { addresses: Addresses }) {
 	const ref = useRef<HTMLHeadingElement>(null)
 	const [options] = useState(
 		addresses.addresses.map((option) => {
