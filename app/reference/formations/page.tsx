@@ -7,14 +7,13 @@ import Main from "@components/Main"
 import { BreadCrumbs, Crumb, ReferenceSelector } from "@components/BreadCrumbs"
 import { Row } from "@components/HTML"
 import FactionList from "@/app/reference/FactionList"
-import referenceAddresses from "@app/reference/addresses"
 
 const page = () => {
 	return (
 		<Main>
 			<BreadCrumbs>
 				<Crumb href="/reference">Reference</Crumb>
-				<ReferenceSelector addresses={referenceAddresses} />
+				<ReferenceSelector />
 			</BreadCrumbs>
 
 			<div className="w-full grid lg:grid-cols-2 lg:gap-4">

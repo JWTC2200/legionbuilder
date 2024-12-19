@@ -2,13 +2,13 @@
 
 import UnitDataslate from "@/app/components/UnitDataslate"
 import { unitData } from "@/app/data/unit_data"
-import { notFound } from "next/navigation"
+import { notFound, usePathname } from "next/navigation"
 import Main from "@components/Main"
 import { BreadCrumbs, Crumb, ReferenceSelector } from "@components/BreadCrumbs"
 import Sticky from "@components/Sticky"
-import referenceAddresses from "@app/reference/addresses"
 
 const page = ({ params: { name } }: { params: { name: string } }) => {
+	const pathname = usePathname()
 	const unitName = name.replaceAll("_", " ")
 	const unitDataEntry = unitData.find((unit) => unit.name === unitName)
 	if (!unitDataEntry) {
@@ -19,7 +19,8 @@ const page = ({ params: { name } }: { params: { name: string } }) => {
 			<Sticky className="z-10">
 				<BreadCrumbs>
 					<Crumb href="/reference">Reference</Crumb>
-					<ReferenceSelector addresses={referenceAddresses} />
+					<Crumb href={"/reference/units"}>Units</Crumb>
+					<Crumb href={pathname}>{unitName}</Crumb>
 				</BreadCrumbs>
 			</Sticky>
 			<UnitDataslate unit={unitDataEntry} />

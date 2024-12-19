@@ -1,14 +1,14 @@
 "use client"
 
 import { detachmentData } from "@/app/data/detachment_data"
-import { notFound } from "next/navigation"
+import { notFound, usePathname } from "next/navigation"
 import DetachmentDataslate from "@/app/components/DetachmentDataslate"
 import Main from "@components/Main"
 import { BreadCrumbs, Crumb, ReferenceSelector } from "@components/BreadCrumbs"
 import Sticky from "@components/Sticky"
-import referenceAddresses from "@app/reference/addresses"
 
 const page = ({ params: { name } }: { params: { name: string } }) => {
+	const pathname = usePathname()
 	const detachmentName = name.replaceAll("_", " ")
 	const detachmentDataEntry = detachmentData.find((detachment) => detachment.name === detachmentName)
 
@@ -20,7 +20,8 @@ const page = ({ params: { name } }: { params: { name: string } }) => {
 			<Sticky className="z-10">
 				<BreadCrumbs>
 					<Crumb href="/reference">Reference</Crumb>
-					<ReferenceSelector addresses={referenceAddresses} />
+					<Crumb href={"/reference/detachments"}>Detachments</Crumb>
+					<Crumb href={pathname}>{detachmentName}</Crumb>
 				</BreadCrumbs>
 			</Sticky>
 

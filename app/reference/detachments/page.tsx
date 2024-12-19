@@ -10,7 +10,6 @@ import Sticky from "@components/Sticky"
 import { Row } from "@components/HTML"
 import FactionList from "@/app/reference/FactionList"
 import { sortedByNameKey } from "@app/utils/sorting"
-import referenceAddresses from "@app/reference/addresses"
 
 const page = () => {
 	const sortByDetachmentType = (array: DETACHMENT[]): DETACHMENT[] => {
@@ -30,7 +29,7 @@ const page = () => {
 			<Sticky className="z-10">
 				<BreadCrumbs>
 					<Crumb href="/reference">Reference</Crumb>
-					<ReferenceSelector addresses={referenceAddresses} />
+					<ReferenceSelector />
 				</BreadCrumbs>
 			</Sticky>
 

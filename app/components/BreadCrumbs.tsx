@@ -8,7 +8,7 @@ import { clickOutside } from "@/app/utils/events"
 
 export function BreadCrumbs({ children }: { children: ReactNode }) {
 	return (
-		<header className="bg-secondary-900 p-4 py-2 text-lg font-graduate">
+		<header className="bg-secondary-900 p-4 py-2 text-lg font-graduate flex flex-wrap">
 			{Children.map(children, (child, key) => (
 				<span className="group" key={key}>
 					{child}
@@ -31,7 +31,8 @@ export function Crumb({ href, children }: { href: string; children: ReactNode })
 	)
 }
 
-export function ReferenceSelector({ addresses }: { addresses: { prefix: string; addresses: string[] } }) {
+export function ReferenceSelector() {
+	const addresses = { prefix: "reference", addresses: ["units", "weapons", "detachments", "formations"] }
 	const ref = useRef<HTMLHeadingElement>(null)
 	const [options] = useState(
 		addresses.addresses.map((option) => {

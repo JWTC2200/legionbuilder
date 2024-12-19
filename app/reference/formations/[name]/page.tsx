@@ -1,13 +1,13 @@
 "use client"
 
 import { formationData } from "@/app/data/formation_data"
-import { notFound } from "next/navigation"
+import { notFound, usePathname } from "next/navigation"
 import FormationDataslate from "@app/reference/formations/[name]/FormationDataslate"
 import { BreadCrumbs, Crumb, ReferenceSelector } from "@components/BreadCrumbs"
 import Main from "@components/Main"
-import referenceAddresses from "@app/reference/addresses"
 
 const page = ({ params: { name } }: { params: { name: string } }) => {
+	const pathname = usePathname()
 	const formationName = name.replaceAll("_", " ")
 	const formationEntry = formationData.find((formation) => formation.name === formationName)
 	if (!formationEntry) {
@@ -17,7 +17,8 @@ const page = ({ params: { name } }: { params: { name: string } }) => {
 		<Main>
 			<BreadCrumbs>
 				<Crumb href="/reference">Reference</Crumb>
-				<ReferenceSelector addresses={referenceAddresses} />
+				<Crumb href={"/reference/formations"}>Formations</Crumb>
+				<Crumb href={pathname}>{formationName}</Crumb>
 			</BreadCrumbs>
 
 			<FormationDataslate formation={formationEntry} />
