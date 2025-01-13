@@ -151,4 +151,12 @@ export const mechanicum: FORMATION_SLOT[] = [
 		options: [3011, 3012],
 		description: "Itinerant Cybernetica Cohort",
 	},
+	{
+		id: 3019,
+		type: DETACHMENT_TYPE.knight,
+		faction: FACTION.strategic,
+		restricted: true,
+		options: [4001],
+		description: "Acastus Knight Banner",
+	},
 ]

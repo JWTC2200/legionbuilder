@@ -247,7 +247,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 		name: "In-built twin-linked bolter",
 		profiles: [
 			{
-				range: '6"',
+				range: '8"',
 				dice: 1,
 				to_hit: 5,
 				ap: 0,

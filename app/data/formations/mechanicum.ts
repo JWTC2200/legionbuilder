@@ -90,7 +90,7 @@ export const mechanicum: FORMATION[] = [
 		formation_slots: [
 			{ slot_type: SLOT_TYPE.compulsory, slot_id: [3000, 3002, 3009, 3009] },
 			{ slot_type: SLOT_TYPE.optional, slot_id: [3000, 3002, 3002, 3009, 3005] },
-			{ slot_type: SLOT_TYPE.choice, slot_id: [4001, 8102], text: "One of the following" },
+			{ slot_type: SLOT_TYPE.choice, slot_id: [4001, 3019], text: "One of the following" },
 		],
 		rules: [],
 	},
