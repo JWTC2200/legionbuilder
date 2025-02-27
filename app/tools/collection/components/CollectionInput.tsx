@@ -5,6 +5,7 @@ import { UNIT_DATASHEET } from "@type/types"
 import { collectionState } from "@app/tools/collection/state"
 import { FaArrowAltCircleUp, FaArrowAltCircleDown } from "react-icons/fa"
 import { ImBin } from "@react-icons/all-files/im/ImBin"
+import factionColours from "@app/utils/factionColours"
 
 interface properties {
 	unit: UNIT_DATASHEET
@@ -27,7 +28,12 @@ const CollectionInput = ({ unit }: properties) => {
 
 	return (
 		<li className={"group grid grid-cols-5 gap-4 py-1 px-3 items-center odd:bg-backgrounds-950"}>
-			<div className={"col-span-3 group-hover:text-tertiary-500 "}>{unit.name}</div>
+			<div
+				className={
+					"col-span-3 group-hover:text-tertiary-500 " + (inputValue?.number && factionColours(unit.faction))
+				}>
+				{unit.name}
+			</div>
 			<div className={"col-span-2 justify-center items-center grid grid-cols-5 gap-4"}>
 				<span className={"col-span-2 text-center"}>
 					<input

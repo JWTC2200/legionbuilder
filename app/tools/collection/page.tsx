@@ -8,6 +8,7 @@ import saveCollection from "@app/firebase/firestore/saveCollection"
 import { toast } from "react-toastify"
 import { BreadCrumbs, Crumb, ReferenceSelector } from "@components/BreadCrumbs"
 import toolsAddresses from "@app/tools/addresses"
+import factionColours from "@app/utils/factionColours"
 
 const page = () => {
 	const { collection, setCollection, faction, setFaction } = collectionState()
@@ -55,10 +56,13 @@ const page = () => {
 						value={faction}
 						onChange={(e) => setFaction(e.target.value as FACTION)}
 						className={
-							"w-full text-center my-4 py-1 px-2 bg-secondary-900 border-b-2 border-primary-950 text-xl font-graduate text-secondary-300 hover:text-tertiary-300 active:text-tertiary-400"
+							"w-full text-center my-4 py-1 px-2 bg-secondary-900 border-b-2 border-primary-950 text-xl font-graduate hover:text-tertiary-300 active:text-tertiary-400 " +
+							factionColours(faction)
 						}>
 						{factionTypeArray.map((faction) => (
-							<option key={`collection-selector-${faction}`}>{faction}</option>
+							<option key={`collection-selector-${faction}`} className={factionColours(faction)}>
+								{faction}
+							</option>
 						))}
 					</select>
 
