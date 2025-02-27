@@ -6,6 +6,7 @@ import { mechanicum } from "@data/formations/mechanicum"
 import { collegiaTitanica } from "@data/formations/collegiaTitanica"
 import { questorisFamilia } from "@data/formations/questorisFamilia"
 import { darkMechanicum } from "@data/formations/darkMechanicum"
+import { customFormations } from "@data/formations/customFormations"
 
 export const formationData: FORMATION[] = [
 	...astartes, //1000-1999
@@ -62,4 +63,8 @@ export const formationData: FORMATION[] = [
 		formation_slots: [{ slot_type: SLOT_TYPE.compulsory, slot_id: [4001] }],
 		rules: [],
 	},
+	// ********************************************************************
+	// ************************** OPEN FORMATIONS *************************
+	// ********************************************************************
+	...customFormations, // 2-5
 ]
