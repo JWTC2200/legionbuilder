@@ -6,6 +6,11 @@
 
 import { FACTION, FORMATION, SLOT_TYPE } from "@type/types"
 
+const rules = {
+	name: "Custom formation",
+	text: "This formation is for people who want to use the list builder to create their own custom Formations.",
+}
+
 export const customFormations: FORMATION[] = [
 	{
 		id: 2,
@@ -20,7 +25,7 @@ export const customFormations: FORMATION[] = [
 			},
 			{
 				slot_type: SLOT_TYPE.optional,
-				slot_id: [1000, 1000, 1000],
+				slot_id: [1000, 1000, 1000, 1000, 1000, 1000],
 			},
 			{
 				slot_type: SLOT_TYPE.optional,
@@ -63,12 +68,7 @@ export const customFormations: FORMATION[] = [
 				slot_id: [1010, 1010, 1010, 1010, 1010, 1010],
 			},
 		],
-		rules: [
-			{
-				name: "Custom formation",
-				text: "This formation is to allow people to create their own custom formations. It is not an official Formation!",
-			},
-		],
+		rules: [rules],
 	},
 	{
 		id: 3,
@@ -83,7 +83,7 @@ export const customFormations: FORMATION[] = [
 			},
 			{
 				slot_type: SLOT_TYPE.optional,
-				slot_id: [2000, 2000, 2000],
+				slot_id: [2000, 2000, 2000, 2000, 2000, 2000],
 			},
 			{
 				slot_type: SLOT_TYPE.optional,
@@ -126,12 +126,7 @@ export const customFormations: FORMATION[] = [
 				slot_id: [2010, 2010, 2010, 2010, 2010, 2010],
 			},
 		],
-		rules: [
-			{
-				name: "Custom formation",
-				text: "This formation is to allow people to create their own custom formations. It is not an official Formation!",
-			},
-		],
+		rules: [rules],
 	},
 	{
 		id: 4,
@@ -146,7 +141,7 @@ export const customFormations: FORMATION[] = [
 			},
 			{
 				slot_type: SLOT_TYPE.optional,
-				slot_id: [3000, 3000, 3000],
+				slot_id: [3000, 3000, 3000, 3000, 3000, 3000],
 			},
 			{
 				slot_type: SLOT_TYPE.optional,
@@ -189,12 +184,7 @@ export const customFormations: FORMATION[] = [
 				slot_id: [3010, 3010, 3010, 3010, 3010, 3010],
 			},
 		],
-		rules: [
-			{
-				name: "Custom formation",
-				text: "This formation is to allow people to create their own custom formations. It is not an official Formation!",
-			},
-		],
+		rules: [rules],
 	},
 	{
 		id: 5,
@@ -209,7 +199,7 @@ export const customFormations: FORMATION[] = [
 			},
 			{
 				slot_type: SLOT_TYPE.optional,
-				slot_id: [5000, 5000, 5000],
+				slot_id: [5000, 5000, 5000, 5000, 5000, 5000],
 			},
 			{
 				slot_type: SLOT_TYPE.optional,
@@ -252,11 +242,6 @@ export const customFormations: FORMATION[] = [
 				slot_id: [5010, 5010, 5010, 5010, 5010, 5010],
 			},
 		],
-		rules: [
-			{
-				name: "Custom formation",
-				text: "This formation is to allow people to create their own custom formations. It is not an official Formation!",
-			},
-		],
+		rules: [rules],
 	},
 ]

@@ -16,45 +16,22 @@ export default function Home() {
 				Create list
 			</Link>
 
-			<div className="m-4 flex flex-col items-center text-center gap-2 text-lg sm:text-xl">
-				<p>Detachments, Formations from The Rise of the Dark Mechanicum book have been added!</p>
-			</div>
-
-			<div className="m-4 flex flex-col items-center gap-2 text-lg sm:text-xl">
-				<p>
-					I've added a new page where logged in users can keep track of what models they have in their
-					collection.
-				</p>
-				<Image
-					src="/images/collection.png"
-					alt={"Image of PDF download links"}
-					className={"rounded-xl"}
-					width={500}
-					height={400}
-				/>
-				<p>
-					Users can now compare the models within a list to their collection to see which models they may be
-					missing.
-				</p>
-
-				<p>You can toggle this function with the 'compare collection' button.</p>
-				<div className={"flex flex-col gap-4 sm:max-w-full"}>
-					<Image
-						src={"/images/testmechacollection.png"}
-						alt={"Image of list PDF"}
-						className={"rounded-xl"}
-						width={400}
-						height={200}
-					/>
+			<div className="m-4 flex flex-col gap-4 text-lg sm:text-xl">
+				<div>
+					I've added a 'Custom Formation' for Astartes, Solar, Mechanicus and Dark Mechanicus. It's simply a
+					bunch of detachment slots for each type so users can create their own formations outside of the
+					official ones.
 				</div>
-				<div className={"my-4 text-center"}>
-					I've created a{" "}
+				<div>It has six of each detachment type slot which I hope is enough!</div>
+
+				<div>
+					LegionBuilder has an official{" "}
 					<Link
 						href={"https://buymeacoffee.com/legionbuilder"}
 						className="text-primary-500 hover:text-tertiary-700 hover:underline active:text-tertiary-700 focus:text-tertiary-700 mt-2">
 						buymeacoffee
 					</Link>{" "}
-					account for the site. Thanks for everyone's support, I really appreciate it!
+					account!
 				</div>
 				<p>As usual feel free to contact me on Discord if you have any issues or suggestions. Thanks!</p>
 			</div>

@@ -5,6 +5,10 @@ interface update {
 
 export const updateData: update[] = [
 	{
+		date: "28/02/25",
+		updates: ["Added a Custom Formation for Astartes, Solar, Mechanicus and Dark Mechanicus"],
+	},
+	{
 		date: "15/12/24",
 		updates: [
 			"Added buttons to the builder page to change the order of formations in a list",
