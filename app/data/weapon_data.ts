@@ -961,11 +961,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 				dice: 2,
 				to_hit: 4,
 				ap: 2,
-				traits: [
-					{ name: WeaponTraits.antitank },
-					{ name: WeaponTraits.rapidFire },
-					{ name: WeaponTraits.rippleFire },
-				],
+				traits: [{ name: WeaponTraits.antitank }, { name: WeaponTraits.rippleFire }],
 			},
 			{
 				range: '20"',

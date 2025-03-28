@@ -595,7 +595,7 @@ export const darkMechanicum: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Serperos",
-				unit_ref: 5003,
+				unit_ref: 5004,
 				options: [
 					{ number: 1, cost: 85, size: 1 },
 					{ number: 2, cost: 150, size: 2 },
