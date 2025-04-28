@@ -88,16 +88,8 @@ const page = () => {
 				</button>
 				<button className="flex items-center text-primary-500 hover:text-primary-400 active:text-tertiary-400 font-graduate">
 					<PDFDownloadLink document={<ListPdf />} fileName={list.name} className={"flex items-center"}>
-						{({ loading }) =>
-							loading ? (
-								"Loading document..."
-							) : (
-								<>
-									<FaFileDownload className="mr-1 text-xl" />
-									List pdf
-								</>
-							)
-						}
+						<FaFileDownload className="mr-1 text-xl" />
+						List pdf
 					</PDFDownloadLink>
 				</button>
 				<button className="flex items-center text-primary-500 hover:text-primary-400 active:text-tertiary-400 font-graduate">
@@ -105,16 +97,8 @@ const page = () => {
 						document={<ListDamageBoxesPdf />}
 						fileName={`${list.name}-damage`}
 						className={"flex items-center"}>
-						{({ loading }) =>
-							loading ? (
-								"Loading document..."
-							) : (
-								<>
-									<FaFileDownload className="mr-1 text-xl" />
-									Damage box pdf
-								</>
-							)
-						}
+						<FaFileDownload className="mr-1 text-xl" />
+						Damage box pdf
 					</PDFDownloadLink>
 				</button>
 			</div>
