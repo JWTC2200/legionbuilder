@@ -2113,7 +2113,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 	},
 	{
 		id: 3004,
-		name: "Thallax plasma-fusil",
+		name: "Myrmidon plasma-fusil",
 		profiles: [
 			{
 				range: '10"',

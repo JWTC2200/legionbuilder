@@ -77,7 +77,7 @@ export const mechanicum: UNIT_DATASHEET[] = [
 		caf: 1,
 		morale: 3,
 		wounds: 1,
-		weapons: [3003, 3004],
+		weapons: [3003, 1052],
 		special_rules: [{ name: SpecialRule.jumpPacks }],
 	},
 	{
@@ -114,7 +114,7 @@ export const mechanicum: UNIT_DATASHEET[] = [
 		caf: 6,
 		morale: 3,
 		wounds: 1,
-		weapons: [3005],
+		weapons: [3004, 3005],
 		special_rules: [{ name: SpecialRule.implacable }],
 	},
 	{
@@ -334,6 +334,6 @@ export const mechanicum: UNIT_DATASHEET[] = [
 		morale: 3,
 		wounds: 1,
 		weapons: [3027, 3028],
-		special_rules: [{ name: SpecialRule.largeTransport, value: 4 }],
+		special_rules: [{ name: SpecialRule.transport, value: 4 }],
 	},
 ]

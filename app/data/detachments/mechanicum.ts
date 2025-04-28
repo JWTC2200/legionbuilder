@@ -93,7 +93,7 @@ export const mechanicum: DETACHMENT[] = [
 		max_size: 8,
 		main_unit: [3003],
 		related_unit: [],
-		dataslate_loadout: [{ text_option: ["Lightning guns", "Thallax plasma-fusil"] }],
+		dataslate_loadout: [{ text_option: ["Lightning guns", "Multi-melta"] }],
 		upgrade_options: [
 			{
 				name: "Additional Thallax",
@@ -157,7 +157,7 @@ export const mechanicum: DETACHMENT[] = [
 		max_size: 8,
 		main_unit: [3005],
 		related_unit: [],
-		dataslate_loadout: [{ text_option: ["Maxima bolters"] }],
+		dataslate_loadout: [{ text_option: ["Maxima bolters", "Myrmidon plasma-fusil"] }],
 		upgrade_options: [
 			{
 				name: "Additional Myrmidon",
@@ -194,7 +194,7 @@ export const mechanicum: DETACHMENT[] = [
 		max_size: 8,
 		main_unit: [3006],
 		related_unit: [],
-		dataslate_loadout: [{ text_option: ["Myrmidon volkites or conversion beamers"] }],
+		dataslate_loadout: [{ text_option: ["Myrmidon volkites", "Conversion beamers"] }],
 		upgrade_options: [
 			{
 				name: "Additional Myrmidon",

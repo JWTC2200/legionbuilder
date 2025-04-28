@@ -501,7 +501,7 @@ export const astartes: UNIT_DATASHEET[] = [
 		morale: null,
 		wounds: 1,
 		weapons: [1061],
-		special_rules: [{ name: SpecialRule.dropPod }],
+		special_rules: [{ name: SpecialRule.dropPod }, { name: SpecialRule.orbitalAssault }],
 	},
 	{
 		id: 1029,
