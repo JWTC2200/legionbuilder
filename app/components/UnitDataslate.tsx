@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { UNIT_DATASHEET } from "../types/types"
+import { UNIT_DATASHEET } from "@type/types"
 import { getUnitWeaponRows } from "../utils/unitweaponrows"
 import SpecialRuleBox from "./SpecialRuleBox"
 import { FaExternalLinkAlt } from "react-icons/fa"
@@ -43,7 +43,7 @@ const UnitDataslate = ({ unit, className }: properties) => {
 								{unit.name} <FaExternalLinkAlt />
 							</Link>
 						</td>
-						<td className="text-center">{unit.movement}"</td>
+						<td className="text-center">{unit.movement}</td>
 						<td className="text-center">{unit.save}+</td>
 						<td className="text-center">
 							{Number(unit.caf) > 0 ? "+" : null}
