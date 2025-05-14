@@ -32,7 +32,7 @@ const ResizingBox = ({ children, toggle = true, className }: properties) => {
 			<div
 				ref={outerRef}
 				style={{ height: toggle ? height + "px" : "0px" }}
-				className="transition-all duration-300">
+				className="transition-all duration-500">
 				<div ref={innerRef}>{children}</div>
 			</div>
 		</div>

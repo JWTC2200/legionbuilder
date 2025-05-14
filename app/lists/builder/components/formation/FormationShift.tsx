@@ -1,7 +1,7 @@
 import React from "react"
 import { listState } from "@lists/state"
 import { ListFormation } from "@type/listTypes"
-import { BsArrowUpSquareFill, BsArrowDownSquareFill } from "react-icons/bs"
+import { IoMdArrowDown, IoMdArrowUp } from "react-icons/io"
 
 interface properties {
 	formation: ListFormation
@@ -25,16 +25,20 @@ function FormationShift({ formation }: properties) {
 	}
 
 	return formationsLength > 1 ? (
-		<div className={"flex flex-col sm:flex-row gap-1"}>
+		<div className={"flex flex-col md:flex-row gap-1"}>
 			{formationIndex > 0 ? (
-				<BsArrowUpSquareFill
-					className={"text-xl cursor-pointer hover:text-tertiary-500 active:text-primary-400"}
+				<IoMdArrowUp
+					className={
+						"text-xl cursor-pointer hover:text-tertiary-500 active:text-primary-400 hover:border-tertiary-500 active:border-primary-400 border-2 rounded-full"
+					}
 					onClick={() => formationIndex > 0 && shiftFormation("up")}
 				/>
 			) : null}{" "}
 			{formationIndex < formationsLength - 1 ? (
-				<BsArrowDownSquareFill
-					className={"text-xl cursor-pointer hover:text-tertiary-500 active:text-primary-400"}
+				<IoMdArrowDown
+					className={
+						"text-xl cursor-pointer hover:text-tertiary-500 active:text-primary-400 hover:border-tertiary-500 active:border-primary-400 border-2 rounded-full"
+					}
 					onClick={() => formationIndex < formationsLength - 1 && shiftFormation("down")}
 				/>
 			) : null}

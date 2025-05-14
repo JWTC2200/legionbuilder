@@ -578,7 +578,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 		name: "Vengeance launcher",
 		profiles: [
 			{
-				range: '15"',
+				range: '25"',
 				dice: 2,
 				to_hit: 4,
 				ap: 1,
