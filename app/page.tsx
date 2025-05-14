@@ -5,7 +5,7 @@ import { TfiEmail } from "react-icons/tfi"
 import { FaCoffee } from "react-icons/fa"
 import FrontpageUpdates from "@components/FrontpageUpdates"
 import React from "react"
-import Image from "next/image"
+import { IoDuplicateSharp } from "react-icons/io5"
 
 export default function Home() {
 	return (
@@ -18,11 +18,13 @@ export default function Home() {
 
 			<div className="m-4 flex flex-col gap-4 text-lg sm:text-xl">
 				<div>
-					I've added a 'Custom Formation' for Astartes, Solar, Mechanicus and Dark Mechanicus. It's simply a
-					bunch of detachment slots for each type so users can create their own formations outside of the
-					official ones.
+					A new duplicate formation button has been added to the list builder! This has been requested a lot,
+					sorry it's taken so long.
 				</div>
-				<div>It has six of each detachment type slot which I hope is enough!</div>
+				<div className={"flex gap-2 items-center mb-8"}>
+					To the right of the formation selector is a <IoDuplicateSharp /> button which will add the exact
+					same formation to the list, with all upgrades and loadouts.
+				</div>
 
 				<div>
 					LegionBuilder has an official{" "}
