@@ -1,0 +1,16 @@
+version: 2
+updates:
+    - package-ecosystem: "npm"
+      directory: "/"
+      schedule:
+          interval: "monthly"
+      allow:
+          - dependency-type: "all"
+            update-type: "version-update:semver-patch"
+    - package-ecosystem: "github-actions"
+      directory: "/"
+      schedule:
+          interval: "monthly"
+      allow:
+          - dependency-type: "all"
+            update-type: "version-update:semver-major"
