@@ -1,0 +1,31 @@
+name: Build and Test
+
+on:
+    pull_request:
+        branches:
+            - master
+
+permissions:
+    contents: read
+    checks: write
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        env:
+            NODE_OPTIONS: "--max-old-space-size=4096"
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Set up Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: '18'
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Run tests
+              run: npm test
