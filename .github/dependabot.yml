@@ -4,13 +4,11 @@ updates:
       directory: "/"
       schedule:
           interval: "monthly"
-      allow:
-          - dependency-type: "all"
-            update-type: "version-update:semver-patch"
+      ignore:
+          - update-types: ["version-update:semver-major", "version-update:semver-minor"]
     - package-ecosystem: "github-actions"
       directory: "/"
       schedule:
           interval: "monthly"
-      allow:
-          - dependency-type: "all"
-            update-type: "version-update:semver-major"
+      ignore:
+          - update-types: ["version-update:semver-major", "version-update:semver-minor"]
