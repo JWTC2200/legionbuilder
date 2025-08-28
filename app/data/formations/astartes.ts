@@ -16,7 +16,7 @@ export const astartes: FORMATION[] = [
 		formation_slots: [
 			{ slot_type: SLOT_TYPE.compulsory, slot_id: [1000, 1002, 1001, 1001] },
 			{ slot_type: SLOT_TYPE.optional, slot_id: [1009, 1001, 1010, 1010, 1002, 1002, 1003, 9000] },
-			{ slot_type: SLOT_TYPE.choice, slot_id: [1004, 1008] },
+			{ slot_type: SLOT_TYPE.choice, slot_id: [1004, 1008], text: "Up to one of the following" },
 			{ slot_type: SLOT_TYPE.choice, slot_id: [1007, 1005, 1006], text: "Up to one of the following" },
 		],
 		rules: [
