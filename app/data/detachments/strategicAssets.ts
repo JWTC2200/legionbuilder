@@ -205,10 +205,10 @@ export const strategicAssets: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.titan],
-		base_cost: 330,
+		base_cost: 300,
 		base_size: 1,
 		max_size: 3,
-		break_strength: 4,
+		break_strength: 5,
 		main_unit: [4006],
 		related_unit: [],
 		dataslate_loadout: [
@@ -235,8 +235,8 @@ export const strategicAssets: DETACHMENT[] = [
 				name: "Additional Warhound",
 				unit_ref: 4006,
 				options: [
-					{ number: 1, cost: 330, size: 1, break_strength: 4 },
-					{ number: 2, cost: 640, size: 2, break_strength: 4 },
+					{ number: 1, cost: 330, size: 1, break_strength: 5 },
+					{ number: 2, cost: 640, size: 2, break_strength: 5 },
 				],
 			},
 		],
@@ -282,11 +282,11 @@ export const strategicAssets: DETACHMENT[] = [
 				options: [
 					{
 						text: "Increase the Detachment size by 1",
-						cost: 330,
+						cost: 300,
 					},
 					{
 						text: "Increase the Detachment size by 2",
-						cost: 640,
+						cost: 600,
 					},
 				],
 			},
@@ -332,10 +332,10 @@ export const strategicAssets: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.titan],
-		base_cost: 415,
+		base_cost: 400,
 		base_size: 1,
 		max_size: 1,
-		break_strength: 5,
+		break_strength: 6,
 		main_unit: [4008],
 		related_unit: [],
 		dataslate_loadout: [
@@ -475,7 +475,7 @@ export const strategicAssets: DETACHMENT[] = [
 		base_cost: 600,
 		base_size: 1,
 		max_size: 1,
-		break_strength: 6,
+		break_strength: 7,
 		main_unit: [4010],
 		related_unit: [],
 		dataslate_loadout: [
@@ -631,11 +631,11 @@ export const strategicAssets: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.titan],
-		base_cost: 750,
+		base_cost: 850,
 		td_ek: 40,
 		base_size: 1,
 		max_size: 1,
-		break_strength: 7,
+		break_strength: 8,
 		main_unit: [4012],
 		related_unit: [],
 		dataslate_loadout: [
@@ -705,7 +705,7 @@ export const strategicAssets: DETACHMENT[] = [
 		base_cost: 750,
 		base_size: 1,
 		max_size: 1,
-		break_strength: 7,
+		break_strength: 8,
 		main_unit: [4013],
 		related_unit: [],
 		dataslate_loadout: [

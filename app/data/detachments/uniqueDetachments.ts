@@ -1,6 +1,7 @@
 import { DETACHMENT, DETACHMENT_TYPE, FACTION } from "@type/types"
 
 // unique detachments 9000-9999
+// mostly for dedicated transports
 
 export const uniqueDetachments: DETACHMENT[] = [
 	{

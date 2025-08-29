@@ -4,6 +4,8 @@ import { DETACHMENT_TYPE, FACTION, FORMATION_SLOT } from "@type/types"
 // *************************** LEGEND SLOTS ***************************
 // ********************************************************************
 
+// All legend slots should have a matching legend detachment with the same id number as its only option
+
 // 7000-7999
 export const legends: FORMATION_SLOT[] = [
 	// Iron Hands Seeker-Killer Clave Ultor
@@ -300,5 +302,105 @@ export const legends: FORMATION_SLOT[] = [
 		restricted: true,
 		options: [7034],
 		description: "Adsecularis Tech-thrall Covenant",
+	},
+
+	// Death Guard Reaping Host
+	{
+		id: 7035,
+		type: DETACHMENT_TYPE.hq,
+		faction: FACTION.astartes,
+		restricted: true,
+		options: [7035],
+		description: "Legion Command Detachment",
+	},
+	{
+		id: 7036,
+		type: DETACHMENT_TYPE.support,
+		faction: FACTION.astartes,
+		restricted: true,
+		options: [7036],
+		description: "Legion Missile Launcher Support Detachment",
+	},
+	{
+		id: 7037,
+		type: DETACHMENT_TYPE.support,
+		faction: FACTION.astartes,
+		restricted: true,
+		options: [7037],
+		description: "Legion Terminator Detachment",
+	},
+	{
+		id: 7038,
+		type: DETACHMENT_TYPE.dedicated,
+		faction: FACTION.astartes,
+		restricted: true,
+		options: [7038],
+		description: "Terminator Dedicated Spartans",
+	},
+	{
+		id: 7039,
+		type: DETACHMENT_TYPE.support,
+		faction: FACTION.astartes,
+		restricted: true,
+		options: [7039],
+		description: "Legion Rapier Battery",
+	},
+
+	// White Scars Chogorian Warband
+	{
+		id: 7040,
+		type: DETACHMENT_TYPE.vanguard,
+		faction: FACTION.astartes,
+		restricted: true,
+		options: [7040],
+		description: "Legion Scimitar Jetbike Squadron",
+	},
+	{
+		id: 7041,
+		type: DETACHMENT_TYPE.vanguard,
+		faction: FACTION.astartes,
+		restricted: true,
+		options: [7041],
+		description: "Legion Land Speeder Squadron",
+	},
+	{
+		id: 7042,
+		type: DETACHMENT_TYPE.vanguard,
+		faction: FACTION.astartes,
+		restricted: true,
+		options: [7042],
+		description: "Legion Javelin Squadron",
+	},
+	{
+		id: 7043,
+		type: DETACHMENT_TYPE.vanguard,
+		faction: FACTION.astartes,
+		restricted: true,
+		options: [7043],
+		description: "Legion Outrider Squadron",
+	},
+	{
+		id: 7044,
+		type: DETACHMENT_TYPE.core,
+		faction: FACTION.astartes,
+		restricted: true,
+		options: [7044],
+		description: "Legion Tactical Detachment",
+	},
+	{
+		id: 7045,
+		type: DETACHMENT_TYPE.dedicated,
+		faction: FACTION.astartes,
+		restricted: true,
+		options: [7045],
+		description: "Rhino Dedicated Transports",
+	},
+	{
+		id: 7046,
+		type: DETACHMENT_TYPE.light,
+		faction: FACTION.astartes,
+		restricted: true,
+		options: [7046],
+		description: "Legion Sabre Squadron",
 	},
 ]

@@ -451,7 +451,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 				range: '10"',
 				dice: 1,
 				to_hit: 4,
-				ap: 4,
+				ap: 2,
 				traits: [{ name: WeaponTraits.antitank }, { name: WeaponTraits.armourbane }],
 			},
 		],
@@ -495,11 +495,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 				dice: 2,
 				to_hit: 5,
 				ap: 1,
-				traits: [
-					{ name: WeaponTraits.accurate },
-					{ name: WeaponTraits.arc, value: "Front" },
-					{ name: WeaponTraits.lightAT },
-				],
+				traits: [{ name: WeaponTraits.arc, value: "Front" }, { name: WeaponTraits.lightAT }],
 			},
 		],
 	},
@@ -512,11 +508,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 				dice: 1,
 				to_hit: 4,
 				ap: 1,
-				traits: [
-					{ name: WeaponTraits.accurate },
-					{ name: WeaponTraits.arc, value: "Front" },
-					{ name: WeaponTraits.antitank },
-				],
+				traits: [{ name: WeaponTraits.arc, value: "Front" }, { name: WeaponTraits.antitank }],
 			},
 		],
 	},
@@ -1047,6 +1039,132 @@ export const weapons: WEAPON_DATASHEET[] = [
 					{ name: WeaponTraits.light },
 					{ name: WeaponTraits.pointDefence },
 				],
+			},
+		],
+	},
+	{
+		id: 1069,
+		name: "Scorpius missile launcher",
+		profiles: [
+			{
+				range: '18"',
+				dice: 2,
+				to_hit: 4,
+				ap: 2,
+				traits: [{ name: WeaponTraits.barrage }, { name: WeaponTraits.lightAT }],
+			},
+		],
+	},
+	{
+		id: 1070,
+		name: "Whirlwind missile launcher",
+		profiles: [
+			{
+				range: '30"',
+				dice: 2,
+				to_hit: 4,
+				ap: 0,
+				traits: [
+					{ name: WeaponTraits.barrage },
+					{ name: WeaponTraits.ignoresCover },
+					{ name: WeaponTraits.rapidFire },
+				],
+			},
+		],
+	},
+	{
+		id: 1071,
+		name: "Siege melta array",
+		profiles: [
+			{
+				range: '6"',
+				dice: 1,
+				to_hit: 3,
+				ap: 4,
+				traits: [
+					{ name: WeaponTraits.arc, value: "Front" },
+					{ name: WeaponTraits.antitank },
+					{ name: WeaponTraits.demolisher },
+					{ name: WeaponTraits.engineKiller, value: 2 },
+				],
+			},
+		],
+	},
+	{
+		id: 1072,
+		name: "Skyreaper battery",
+		profiles: [
+			{
+				range: '20"',
+				dice: 3,
+				to_hit: 5,
+				ap: 1,
+				traits: [
+					{ name: WeaponTraits.lightAT },
+					{ name: WeaponTraits.skyfire },
+					{ name: WeaponTraits.tracking },
+				],
+			},
+		],
+	},
+	{
+		id: 1073,
+		name: "Sponson Mounted heavy flamers",
+		profiles: [
+			{
+				range: '6"',
+				dice: 2,
+				to_hit: 4,
+				ap: 0,
+				traits: [
+					{ name: WeaponTraits.arc, value: "Front" },
+					{ name: WeaponTraits.light },
+					{ name: WeaponTraits.ignoresCover },
+					{ name: WeaponTraits.pointDefence },
+				],
+			},
+		],
+	},
+	{
+		id: 1074,
+		name: "Hull Mounted dreadhammer siege cannon",
+		profiles: [
+			{
+				range: '16"',
+				dice: 2,
+				to_hit: 3,
+				ap: 4,
+				traits: [
+					{ name: WeaponTraits.arc, value: "Front" },
+					{ name: WeaponTraits.demolisher },
+					{ name: WeaponTraits.ignoresCover },
+				],
+			},
+		],
+	},
+	{
+		id: 1075,
+		name: "Pintle Mounted heavy bolter",
+		profiles: [
+			{
+				range: '12"',
+				dice: 2,
+				to_hit: 5,
+				ap: 0,
+				traits: [{ name: WeaponTraits.light }, { name: WeaponTraits.pointDefence }],
+			},
+		],
+	},
+	{
+		id: 1076,
+		name: "Hull Mounted neutron laser battery",
+		profiles: [
+			{
+				range: '24"',
+				dice: 3,
+				to_hit: 4,
+				ap: 3,
+				traits: [{ name: WeaponTraits.arc }, { name: WeaponTraits.shockPulse }],
 			},
 		],
 	},
@@ -2976,7 +3094,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 	},
 	{
 		id: 4021,
-		name: "Ionstorm missile pod",
+		name: "Ironstorm missile pod",
 		profiles: [
 			{
 				range: '25"',
@@ -3430,8 +3548,8 @@ export const weapons: WEAPON_DATASHEET[] = [
 				to_hit: 4,
 				ap: 3,
 				traits: [
-					{ name: WeaponTraits.antitank },
 					{ name: WeaponTraits.arc, value: "Front" },
+					{ name: WeaponTraits.antitank },
 					{ name: WeaponTraits.demolisher },
 				],
 			},
@@ -3441,8 +3559,8 @@ export const weapons: WEAPON_DATASHEET[] = [
 				to_hit: 3,
 				ap: 4,
 				traits: [
-					{ name: WeaponTraits.antitank },
 					{ name: WeaponTraits.arc, value: "Front" },
+					{ name: WeaponTraits.antitank },
 					{ name: WeaponTraits.demolisher },
 					{ name: WeaponTraits.engineKiller, value: 4 },
 				],

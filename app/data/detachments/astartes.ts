@@ -679,7 +679,7 @@ export const astartes: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.heavy],
-		base_cost: 150,
+		base_cost: 140,
 		base_size: 2,
 		max_size: 6,
 		main_unit: [1014],
@@ -688,7 +688,7 @@ export const astartes: DETACHMENT[] = [
 			{
 				text_option: [
 					"Kratos battlecannon with Co-axial autocannon or Melta blastgun with Co-axial autocannon",
-					"Two Hull Mounted heavy bolter or two Kratos lascannon or two Kratos autocannon",
+					"Hull Mounted heavy bolter or Kratos lascannon or Kratos autocannon",
 					"Sponson Mounted heavy bolters or Sponson Mounted lascannon",
 				],
 			},
@@ -698,10 +698,10 @@ export const astartes: DETACHMENT[] = [
 				name: "Additional Kratos",
 				unit_ref: 1014,
 				options: [
-					{ number: 1, cost: 60, size: 1 },
-					{ number: 2, cost: 110, size: 2 },
-					{ number: 3, cost: 170, size: 3 },
-					{ number: 4, cost: 200, size: 4 },
+					{ number: 1, cost: 65, size: 1 },
+					{ number: 2, cost: 130, size: 2 },
+					{ number: 3, cost: 205, size: 3 },
+					{ number: 4, cost: 250, size: 4 },
 				],
 			},
 		],
@@ -728,15 +728,25 @@ export const astartes: DETACHMENT[] = [
 					{ name: "Autocannons", cost: 0 },
 				],
 			},
+			{
+				location: "Pintle",
+				options: [
+					{ name: "None", cost: 0 },
+					{ name: "Heavy bolter", cost: 0 },
+				],
+			},
 		],
 		datasheet_info: [
 			{
 				text: "A Legion Kratos Squadron can purchase the following upgrades: The same upgrade may be taken more than once",
 				options: [
-					{ text: "1 additional Kratos", cost: 60 },
-					{ text: "2 additional Kratos", cost: 110 },
-					{ text: "4 additional Kratos", cost: 200 },
+					{ text: "1 additional Kratos", cost: 65 },
+					{ text: "2 additional Kratos", cost: 130 },
+					{ text: "4 additional Kratos", cost: 250 },
 				],
+			},
+			{
+				text: "Any Legion Kratos may be equipped with one Pintle Mounted heavy bolter for +5pts per model",
 			},
 		],
 	},
@@ -1680,5 +1690,316 @@ export const astartes: DETACHMENT[] = [
 			},
 		],
 		datasheet_info: [],
+	},
+	{
+		id: 1035,
+		name: "Legion Scorpius Battery",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: [DETACHMENT_TYPE.artillery],
+		base_cost: 100,
+		base_size: 2,
+		max_size: 8,
+		main_unit: [1036],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: ["Scorpius missile launcher", "Pintle Mounted twin-linked bolter"],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Legion Scorpius",
+				unit_ref: 1036,
+				options: [
+					{ number: 2, cost: 90, size: 2 },
+					{ number: 4, cost: 180, size: 4 },
+					{ number: 6, cost: 270, size: 6 },
+				],
+			},
+		],
+		loadout_options: [],
+		datasheet_info: [
+			{
+				text: "A Legion Scorpius Battery can purchase one of the following upgrades:",
+				options: [
+					{ text: "Increase the Detachment size by 2", cost: 90 },
+					{ text: "Increase the Detachment size by 4", cost: 180 },
+					{ text: "Increase the Detachment size by 6", cost: 270 },
+				],
+			},
+		],
+	},
+	{
+		id: 1036,
+		name: "Legion Whirlwind Battery",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: [DETACHMENT_TYPE.artillery],
+		base_cost: 90,
+		base_size: 2,
+		max_size: 8,
+		main_unit: [1037],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: ["Whirlwind missile launcher", "Pintle Mounted twin-linked bolter"],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Whirlwind",
+				unit_ref: 1037,
+				options: [
+					{ number: 2, cost: 80, size: 2 },
+					{ number: 4, cost: 160, size: 4 },
+					{ number: 6, cost: 240, size: 6 },
+				],
+			},
+		],
+		loadout_options: [],
+		datasheet_info: [
+			{
+				text: "A Legion Whirlwind Battery can purchase one of the following upgrades:",
+				options: [
+					{ text: "Increase the Detachment size by 2", cost: 80 },
+					{ text: "Increase the Detachment size by 4", cost: 160 },
+					{ text: "Increase the Detachment size by 6", cost: 240 },
+				],
+			},
+		],
+	},
+	{
+		id: 1037,
+		name: "Legion Mastodon Squadron",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: [DETACHMENT_TYPE.heavy],
+		base_cost: 130,
+		base_size: 1,
+		max_size: 4,
+		main_unit: [1038],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: [
+					"Siege melta array",
+					"Skyreaper battery",
+					"Sponson Mounted heavy flamers",
+					"Sponson Mounted heavy bolter or Sponson Mounted lascannon",
+				],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Mastadon",
+				unit_ref: 1038,
+				options: [
+					{ number: 1, cost: 120, size: 1 },
+					{ number: 2, cost: 240, size: 2 },
+					{ number: 3, cost: 360, size: 3 },
+				],
+			},
+		],
+		loadout_options: [
+			{
+				location: "Sponsons",
+				options: [
+					{ name: "Heavy bolters", cost: 0 },
+					{ name: "Lascannons", cost: 0 },
+				],
+			},
+		],
+		datasheet_info: [
+			{
+				text: "A Legion Mastodon Squadron can purchase one of the following upgrades:",
+				options: [
+					{ text: "Increase the Detachment size by 1", cost: 120 },
+					{ text: "Increase the Detachment size by 2", cost: 240 },
+					{ text: "Increase the Detachment size by 3", cost: 360 },
+				],
+			},
+		],
+	},
+	{
+		id: 1038,
+		name: "Legion Typhon Squadron",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: [DETACHMENT_TYPE.heavy],
+		base_cost: 80,
+		base_size: 1,
+		max_size: 4,
+		main_unit: [1039],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: [
+					"Hull Mounted dreadhammer siege cannon",
+					"Sponson Mounted heavy bolters or Sponson Mounted lascannon",
+				],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Typhon",
+				unit_ref: 1039,
+				options: [
+					{ number: 1, cost: 75, size: 1 },
+					{ number: 2, cost: 140, size: 2 },
+					{ number: 3, cost: 200, size: 3 },
+				],
+			},
+		],
+		loadout_options: [
+			{
+				location: "Sponsons",
+				options: [
+					{ name: "Heavy bolters", cost: 0 },
+					{ name: "Lascannons", cost: 0 },
+				],
+			},
+			{
+				location: "Pintle",
+				options: [
+					{ name: "None", cost: 0 },
+					{ name: "Heavy bolter", cost: 5 },
+					{ name: "Multi-melta", cost: 5 },
+				],
+			},
+		],
+		datasheet_info: [
+			{
+				text: "Any Typhon may be equipped with one of the following:",
+				options: [
+					{ text: "Pintle Mounted heavy bolter", cost: 5 },
+					{ text: "Pintle Mounted multi-melta", cost: 5 },
+				],
+			},
+			{
+				text: "A Legion Typhon Squadron can purchase one of the following upgrades:",
+				options: [
+					{ text: "Increase the Detachment size by 1", cost: 75 },
+					{ text: "Increase the Detachment size by 2", cost: 140 },
+					{ text: "Increase the Detachment size by 3", cost: 200 },
+				],
+			},
+		],
+	},
+	{
+		id: 1039,
+		name: "Legion Cerberus Squadron",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: [DETACHMENT_TYPE.heavy],
+		base_cost: 85,
+		base_size: 1,
+		max_size: 4,
+		main_unit: [1040],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: [
+					"Hull Mounted neutron laser battery",
+					"Sponson Mounted heavy bolters or Sponson Mounted lascannon",
+				],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Cerberus",
+				unit_ref: 1040,
+				options: [
+					{ number: 1, cost: 80, size: 1 },
+					{ number: 2, cost: 150, size: 2 },
+					{ number: 3, cost: 210, size: 3 },
+				],
+			},
+		],
+		loadout_options: [
+			{
+				location: "Sponsons",
+				options: [
+					{ name: "Heavy bolters", cost: 0 },
+					{ name: "Lascannons", cost: 0 },
+				],
+			},
+			{
+				location: "Pintle",
+				options: [
+					{ name: "None", cost: 0 },
+					{ name: "Heavy bolter", cost: 5 },
+					{ name: "Multi-melta", cost: 5 },
+				],
+			},
+		],
+		datasheet_info: [
+			{
+				text: "Any Cerberus may be equipped with one of the following:",
+				options: [
+					{ text: "Pintle Mounted heavy bolter", cost: 5 },
+					{ text: "Pintle Mounted multi-melta", cost: 5 },
+				],
+			},
+			{
+				text: "A Legion Cerberus Squadron can purchase one of the following upgrades:",
+				options: [
+					{ text: "Increase the Detachment size by 1", cost: 80 },
+					{ text: "Increase the Detachment size by 2", cost: 150 },
+					{ text: "Increase the Detachment size by 3", cost: 210 },
+				],
+			},
+		],
+	},
+	{
+		id: 1040,
+		name: "Legion Vindicator Squadron",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: [DETACHMENT_TYPE.battle],
+		base_cost: 140,
+		base_size: 4,
+		max_size: 10,
+		main_unit: [1041],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: ["Hull Mounted demolisher cannon", "Pintle Mounted twin-linked bolter"],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Vindicator",
+				unit_ref: 1041,
+				options: [
+					{ number: 2, cost: 65, size: 2 },
+					{ number: 4, cost: 130, size: 4 },
+					{ number: 6, cost: 180, size: 6 },
+				],
+			},
+		],
+		loadout_options: [],
+		datasheet_info: [
+			{
+				text: "A Legion Vindicator Squadron can purchase one of the following upgrades:",
+				options: [
+					{ text: "Increase the Detachment size by 2", cost: 65 },
+					{ text: "Increase the Detachment size by 4", cost: 130 },
+					{ text: "Increase the Detachment size by 6", cost: 180 },
+				],
+			},
+		],
 	},
 ]

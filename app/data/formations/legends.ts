@@ -6,6 +6,15 @@ const legendRules: FORMATION_RULES = {
 }
 
 // 7000-7999
+// 7000 - Astartes - Seeker-Killer Clave Ultor
+// 7001 - Astartes - Proioxis Macro-Assault Wing
+// 7002 - Astartes - Harrow Group Arcadus
+// 7003 - Solar - Tallarn Reborn Carmine Ambush Tercio
+// 7004 - Solar - Galibed Oathsworn Thyreos Siege Breaker Company
+// 7005 - Mechanicum - Demi-manaple Aeterna
+// 7006 - Mechanicum - Exsomnis-tertia Cybernetica Cohort
+// 7007 - DarkMech - Sibilans Taghma
+// 7008 - Astartes - Death Guard Reaping Host
 export const legends: FORMATION[] = [
 	{
 		id: 7000,
@@ -179,6 +188,49 @@ export const legends: FORMATION[] = [
 			{
 				name: "Protocol - Scourge",
 				text: `While a Detachment from this Formation with the Networked Anima special rule is within 8" of a model with the Noosphere Controller special rule from this Formation, all models in that Detachment increase the range of their weapons by 4"`,
+			},
+		],
+		legend: true,
+	},
+	{
+		id: 7008,
+		name: "Death Guard Reaping Host",
+		faction: FACTION.astartes,
+		subfaction: SUBFACTION_TYPE.deathGuard,
+		allegiance: null,
+		formation_slots: [
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [7035, 7036, 7037, 7038] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [7036, 7039, 7039, 7037, 7038] },
+		],
+		rules: [
+			legendRules,
+			{
+				name: "Sons of the Pale King",
+				text: "This Formation must be from the Death Guard Legion.",
+			},
+			{
+				name: "Shattering Volleys",
+				text: "Missile Launchers models in this Formation are equipped with gain the Demolisher special rule while their Detachment is not Garrisoned within a Structure.",
+			},
+		],
+		legend: true,
+	},
+	{
+		id: 7009,
+		name: "White Scars Chogorian Warband",
+		faction: FACTION.astartes,
+		subfaction: SUBFACTION_TYPE.whiteScars,
+		allegiance: null,
+		formation_slots: [
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [7040, 7040, 7041, 7042] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [7043, 7044, 7045, 7046] },
+		],
+		rules: [
+			legendRules,
+			{ name: "Sons of the Khan", text: "This Formation must be from the White Scars Legion." },
+			{
+				name: "Ride the Wind",
+				text: "Standard Detachments in this Formation gain the Forward Deployment special rule.",
 			},
 		],
 		legend: true,
