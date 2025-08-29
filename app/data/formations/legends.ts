@@ -15,6 +15,10 @@ const legendRules: FORMATION_RULES = {
 // 7006 - Mechanicum - Exsomnis-tertia Cybernetica Cohort
 // 7007 - DarkMech - Sibilans Taghma
 // 7008 - Astartes - Death Guard Reaping Host
+// 7009 - Astartes - White Scars Chogorian Warband
+// 7010 - Astartes - Legion Tactical Strike Force
+// 7011 - Astartes - Legion Stonebreaker Siege Force
+// 7012 - Astartes - Legion Speartip Assault
 export const legends: FORMATION[] = [
 	{
 		id: 7000,
@@ -231,6 +235,67 @@ export const legends: FORMATION[] = [
 			{
 				name: "Ride the Wind",
 				text: "Standard Detachments in this Formation gain the Forward Deployment special rule.",
+			},
+		],
+		legend: true,
+	},
+	{
+		id: 7010,
+		name: "Legion Tactical Strike Force",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		formation_slots: [
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [7047, 7048, 7044, 7045, 7044, 7045] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [7049, 7052, 7050, 7053, 7051] },
+		],
+		rules: [
+			legendRules,
+			{
+				name: "Officer of the Line",
+				text: "The Command Squad model in this Formation can use the Master Tactician special rule twice when it is activated, but it if does, both Detachments selected to have their order replaced must be from this Formation",
+			},
+			{
+				name: "Backbone of the Legion",
+				text: "Legion Tactical Detachments from this Formation have the Line special rule.",
+			},
+		],
+		legend: true,
+	},
+	{
+		id: 7011,
+		name: "Legion Stonebreaker Siege Force",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		formation_slots: [
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [7054, 7044, 7055, 7056] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [7057, 7058, 7059, 7056] },
+		],
+		rules: [
+			legendRules,
+			{
+				name: "Shattering Barrage",
+				text: "When making a Fight roll for an enemy model that is Garrisoned within a Structure that is in a Fight against an Infantry model from this Formation, the controlling player does not gain the Structure Bonus to that model's CAF if that Structure has lost any wounds",
+			},
+		],
+		legend: true,
+	},
+	{
+		id: 7012,
+		name: "Legion Speartip Assault",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		formation_slots: [
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [7060, 7061, 7062, 7061, 7062, 7063] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [7064, 7066, 7065, 7066, 7063] },
+		],
+		rules: [
+			legendRules,
+			{
+				name: "Tip of the Spear",
+				text: "All Detachments in this Formation must start the battle deployed within their Dedicated Transports. WHen a Detachment from this Formation Deep Strikes, after placing the first model, that model does not Scatter",
 			},
 		],
 		legend: true,

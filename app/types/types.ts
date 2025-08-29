@@ -208,12 +208,14 @@ export interface DETACHMENT_UPGRADE {
 		size: number
 		text?: string
 		break_strength?: number
+		required?: boolean
 	}[]
 }
 
 export interface DETACHMENT_LOADOUT {
 	location: string
 	options: DETACHMENT_LOADOUT_WEAPON[]
+	required?: number
 }
 
 export interface DETACHMENT_LOADOUT_WEAPON {

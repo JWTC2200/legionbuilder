@@ -1,6 +1,14 @@
 import { detachmentData } from "@/app/data/detachment_data"
-import { List, ListDetachment, ListDetachmentSlot, ListLoadout, ListLoadouts, ListUpgrades } from "@type/listTypes"
-import { ALLEGIANCE, DETACHMENT, SUBFACTION_TYPE } from "@type/types"
+import {
+	List,
+	ListDetachment,
+	ListDetachmentSlot,
+	ListLoadout,
+	ListLoadouts,
+	ListUpgrade,
+	ListUpgrades,
+} from "@type/listTypes"
+import { ALLEGIANCE, DETACHMENT, DETACHMENT_LOADOUT, SUBFACTION_TYPE } from "@type/types"
 import { emptyDetachment, emptyLoadouts, emptyUpgrade } from "@/app/data/empty_objects"
 import { toast } from "react-toastify"
 
@@ -62,17 +70,12 @@ export const updateAllSlotInfo = (
 			: newDetachmentObject(currentDetachment, detachmentData, list)
 
 	const upgradeUpdate =
-		detachmentData === "clear"
-			? resetUpgrade(currentUpgrade)
-			: { ...resetUpgrade(currentUpgrade), id: detachmentData.id }
+		detachmentData === "clear" ? resetUpgrade(currentUpgrade) : requiredUpgrades(currentUpgrade, detachmentData)
 
 	const loadoutUpdate =
 		detachmentData === "clear"
 			? resetLoadout(currentLoadouts)
-			: {
-					...resetLoadout(currentLoadouts),
-					id: detachmentData.id,
-				}
+			: { ...requiredLoadouts(currentLoadouts, detachmentData), id: detachmentData.id }
 
 	return {
 		...list,
@@ -80,6 +83,56 @@ export const updateAllSlotInfo = (
 		upgrades: updateUpgradeArray(list, upgradeUpdate),
 		loadouts: updateLoadoutsArray(list, loadoutUpdate),
 	}
+}
+
+// check if the first upgrade option is marked required and adds it automatically
+const requiredUpgrades = (current: ListUpgrades, detachment: DETACHMENT): ListUpgrades => {
+	const required = (): ListUpgrade[] => {
+		return detachment.upgrade_options
+			.filter((upgrade) => {
+				if (upgrade.options[0].required) return upgrade.options[0]
+			})
+			.map((result) => {
+				return { name: result.name, unit_ref: result.unit_ref, ...result.options[0] }
+			})
+	}
+
+	return { ...resetUpgrade(current), id: detachment.id, upgrades: required() }
+}
+
+// check if there are any required loadouts to be applied
+const requiredLoadouts = (current: ListLoadouts, detachment: DETACHMENT): ListLoadouts => {
+	const required = detachment.loadout_options.filter((location) => {
+		if (location.required) return location
+	})
+
+	console.log(required)
+
+	const listLoadouts = (required: DETACHMENT_LOADOUT[]) => {
+		const id = required
+			.map((location) =>
+				String(location.options[0].name + location.location)
+					.replaceAll(" ", "")
+					.trim()
+			)
+			.sort()
+			.join("")
+
+		const loadouts: ListLoadout[] = [
+			{
+				id: id,
+				number: required[0].required!,
+				weapons: required.map((location) => {
+					return { location: location.location, weapon: location.options[0].name, cost: 0 }
+				}),
+			},
+		]
+		return { id: detachment.id, loadouts, formation_id: current.formation_id, slot_id: current.slot_id }
+	}
+
+	if (required.length) return listLoadouts(required)
+
+	return { ...resetLoadout(current) }
 }
 
 const updateDetachmentArray = (list: List, newDetachment: ListDetachment): ListDetachment[] => {
@@ -185,6 +238,8 @@ export const incrementLoadout = (list: List, loadoutSlot: ListLoadouts, id: stri
 		toast.warning("Cannot add any more")
 		return list
 	}
+
+	console.log(loadoutSlot)
 
 	const newLoadoutSlot = {
 		...loadoutSlot,
