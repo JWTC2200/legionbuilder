@@ -199,7 +199,7 @@ export const uniqueDetachments: DETACHMENT[] = [
 		allegiance: null,
 		unique: true,
 		detachment_type: [DETACHMENT_TYPE.dedicated],
-		base_cost: 37,
+		base_cost: 42,
 		base_size: 1,
 		max_size: 30,
 		main_unit: [2019],
@@ -213,7 +213,7 @@ export const uniqueDetachments: DETACHMENT[] = [
 			{
 				name: "Additional Dracosan",
 				unit_ref: 2019,
-				options: optionsArray(29, 37, 1),
+				options: optionsArray(29, 42, 1),
 			},
 		],
 		loadout_options: [
@@ -224,10 +224,20 @@ export const uniqueDetachments: DETACHMENT[] = [
 					{ name: "Demolisher Cannon", cost: 5 },
 				],
 			},
+			{
+				location: "Pintle",
+				options: [
+					{ name: "None", cost: 0 },
+					{ name: "Multi-laser", cost: 5 },
+				],
+			},
 		],
 		datasheet_info: [
 			{
 				text: "Any Dracosan may exchange its Hull Mounted twin lascannon for a Hull Mounted demolisher cannon for +5pts per model. Any model that does replaces its Transport (4) special rule with the Transport (2) special rule",
+			},
+			{
+				text: "Any Dracosan may be equipped with one Pintle Mounted multi-laser for +5 points per model",
 			},
 		],
 	},

@@ -1280,7 +1280,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 		name: "Multi-laser",
 		profiles: [
 			{
-				range: '14"',
+				range: '12"',
 				dice: 2,
 				to_hit: 5,
 				ap: 0,
@@ -1295,7 +1295,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 			{
 				range: '20"',
 				dice: 2,
-				to_hit: 4,
+				to_hit: 5,
 				ap: 0,
 				traits: [{ name: WeaponTraits.light }, { name: WeaponTraits.ignoresCover }],
 			},
@@ -2174,6 +2174,76 @@ export const weapons: WEAPON_DATASHEET[] = [
 			},
 		],
 	},
+	{
+		id: 2070,
+		name: "Pintle Mounted heavy stubber",
+		profiles: [
+			{
+				range: '14"',
+				dice: 2,
+				to_hit: 6,
+				ap: 0,
+				traits: [{ name: WeaponTraits.light }, { name: WeaponTraits.pointDefence }],
+			},
+		],
+	},
+	{
+		id: 2071,
+		name: "Super-heavy heavy bolter sponsons",
+		profiles: [
+			{
+				range: '12"',
+				dice: 4,
+				to_hit: 5,
+				ap: 0,
+				traits: [{ name: WeaponTraits.light }, { name: WeaponTraits.pointDefence }],
+			},
+		],
+	},
+	{
+		id: 2072,
+		name: "Super-heavy autocannon sponsons",
+		profiles: [
+			{
+				range: '16"',
+				dice: 2,
+				to_hit: 5,
+				ap: 1,
+				traits: [{ name: WeaponTraits.lightAT }, { name: WeaponTraits.pointDefence }],
+			},
+		],
+	},
+	{
+		id: 2073,
+		name: "Super-heavy heavy flamer sponsons",
+		profiles: [
+			{
+				range: '6"',
+				dice: 2,
+				to_hit: 4,
+				ap: 0,
+				traits: [
+					{ name: WeaponTraits.light },
+					{ name: WeaponTraits.ignoresCover },
+					{ name: WeaponTraits.pointDefence },
+				],
+			},
+		],
+	},
+	{
+		id: 2074,
+		name: "Pintle Mounted multi-laser",
+		profiles: [
+			{
+				range: '12"',
+				dice: 2,
+				to_hit: 5,
+				ap: 0,
+				traits: [{ name: WeaponTraits.lightAT }, { name: WeaponTraits.pointDefence }],
+			},
+		],
+	},
+
 	// ********************************************************************
 	// ********************** MECHANICUM WEAPONS **************************
 	// ********************************************************************

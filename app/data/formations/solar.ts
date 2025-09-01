@@ -59,7 +59,7 @@ export const solar: FORMATION[] = [
 		rules: [
 			{
 				name: "Forward Positions",
-				text: "Compulsory Core Detachment slots in this Formation must be filled with Auxilia Veletaris Storm Sections. All Solar Auxilia Detachments within a Solar Auxilia Pioneer Company that consist entirely of Infantry models gain the Infiltrate special rule. All other Solar Auxilia Detachments within the Solar Auxilia Pioneer Company gain the Forward Deployment special rule",
+				text: "Compulsory Core Detachment slots in this Formation must be filled with Auxilia Veletaris Storm Sections. All Solar Auxilia Detachments within a Solar Auxilia Pioneer Company that consist entirely of Infantry models without the Bulky special rule gain the Infiltrate special rule. All other Solar Auxilia Detachments within the Solar Auxilia Pioneer Company gain the Forward Deployment special rule",
 			},
 		],
 	},
@@ -131,7 +131,7 @@ export const solar: FORMATION[] = [
 		rules: [
 			{
 				name: "Armored Company",
-				text: "Leman Russ slots in this Formation must be filled with Leman Russ Strike Squadrons, Leman Russ Executioner Squadrons, Leman Russ Demolisher Squadrons, Leman Russ Annihilator Squadrons or Leman Russ Exterminator Squadrons",
+				text: "Leman Russ slots in this Formation must be filled with Leman Russ Strike Squadrons, Leman Russ Vanquisher Squadrons, Leman Russ Executioner Squadrons, Leman Russ Demolisher Squadrons, Leman Russ Annihilator Squadrons or Leman Russ Exterminator Squadrons",
 			},
 			{
 				name: "Tank Commander",

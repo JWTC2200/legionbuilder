@@ -20,3 +20,19 @@ export const optionsArray = (
 
 	return options
 }
+
+export const oneFollowingUpgrade = (name: string): string => {
+	return `An ${name} can purchase one of the following upgrades:`
+}
+
+export const pintleStubberTxt = (name: string): string => {
+	return `An ${name} may be equipped with one Pintle Mounted heavy stubber for +5 points per model`
+}
+
+export const pintleStubberLd = {
+	location: "Pintle",
+	options: [
+		{ name: "None", cost: 0 },
+		{ name: "Heavy Stubber", cost: 5 },
+	],
+}
