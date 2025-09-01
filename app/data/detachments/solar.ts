@@ -1414,12 +1414,13 @@ export const solar: DETACHMENT[] = [
 		loadout_options: [pintleStubberLd],
 		datasheet_info: [
 			{
-				text: "A Auxilia Stormblade Squadron can purchase the following upgrades:",
+				text: oneFollowingUpgrade("Auxilia Stormblade Squadron"),
 				options: [
 					{ text: "Increase the Detachment size by 1", cost: 110 },
 					{ text: "Increase the Detachment size by 2", cost: 220 },
 				],
 			},
+			{ text: pintleStubberTxt("Stormblade") },
 		],
 	},
 	{

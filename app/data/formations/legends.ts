@@ -6,6 +6,9 @@ const legendRules: FORMATION_RULES = {
 }
 
 // 7000-7999
+
+// CONTENTS //
+
 // 7000 - Astartes - Seeker-Killer Clave Ultor
 // 7001 - Astartes - Proioxis Macro-Assault Wing
 // 7002 - Astartes - Harrow Group Arcadus
@@ -19,6 +22,11 @@ const legendRules: FORMATION_RULES = {
 // 7010 - Astartes - Legion Tactical Strike Force
 // 7011 - Astartes - Legion Stonebreaker Siege Force
 // 7012 - Astartes - Legion Speartip Assault
+// 7013 - Solar - Solar Pattern Sub-Cohort
+// 7014 - Solar - Ultima Pattern Sub-Cohort
+// 7015 - Solar - Mechanised Pattern Sub-Cohort
+// 7016 - Solar - Cthonian Headhunters Sub-Cohort
+// 7017 - Solar - Theta-Garmon Deathless Sub-Cohort
 export const legends: FORMATION[] = [
 	{
 		id: 7000,
@@ -180,7 +188,7 @@ export const legends: FORMATION[] = [
 		subfaction: null,
 		allegiance: ALLEGIANCE.traitor,
 		formation_slots: [
-			{ slot_type: SLOT_TYPE.compulsory, slot_id: [7029, 7030, 7030, 7031, 7032] },
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [7029, 7030, 7030, 7031, 7032, 7033] },
 			{ slot_type: SLOT_TYPE.optional, slot_id: [7034, 7032, 7032, 7031] },
 		],
 		rules: [
@@ -296,6 +304,109 @@ export const legends: FORMATION[] = [
 			{
 				name: "Tip of the Spear",
 				text: "All Detachments in this Formation must start the battle deployed within their Dedicated Transports. WHen a Detachment from this Formation Deep Strikes, after placing the first model, that model does not Scatter",
+			},
+		],
+		legend: true,
+	},
+	{
+		id: 7013,
+		name: "Solar Pattern Sub-Cohort",
+		faction: FACTION.solar,
+		subfaction: null,
+		allegiance: null,
+		formation_slots: [
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [7067, 7068, 7069, 7070, 7069, 7070] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [7067, 7068, 7071, 7070, 7069, 7070] },
+		],
+		rules: [
+			legendRules,
+			{
+				name: "Elite Commander",
+				text: "Legate Commander Detachments from the Expanded Detachments in this Formation do not count towards the maximum number permitted in an Army.",
+			},
+		],
+		legend: true,
+	},
+	{
+		id: 7014,
+		name: "Ultima Pattern Sub-Cohort",
+		faction: FACTION.solar,
+		subfaction: null,
+		allegiance: null,
+		formation_slots: [
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [7072, 7073, 7074, 7074, 7074] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [7073, 7075, 7075, 7075] },
+		],
+		rules: [
+			legendRules,
+			{
+				name: "Volley Fire",
+				text: "While an Auxilia Lasrile Tercio Detachment in this Formation contains 5 or more Auxiliaries models, Auxilia lasrifles that models in that Detachment are equipped with have the Rapid Fire rule",
+			},
+		],
+		legend: true,
+	},
+	{
+		id: 7015,
+		name: "Mechanised Pattern Sub-Cohort",
+		faction: FACTION.solar,
+		subfaction: null,
+		allegiance: null,
+		formation_slots: [
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [7076, 7077, 7078] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [7079, 7080, 7081] },
+		],
+		rules: [
+			legendRules,
+			{
+				name: "Mechanised Tercios",
+				text: "While a Detachment from this Formation contains a Tank Commander model, that Detachment has the Nimble and Steadfast special rules.",
+			},
+		],
+		legend: true,
+	},
+	{
+		id: 7016,
+		name: "Cthonian Headhunters Sub-Cohort",
+		faction: FACTION.solar,
+		subfaction: null,
+		allegiance: ALLEGIANCE.traitor,
+		formation_slots: [
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [7082, 7083, 7084, 7085, 7086] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [7082, 7083, 7084, 7085, 7087] },
+		],
+		rules: [
+			legendRules,
+			{
+				name: "Favoured of the Warmaster",
+				text: "This Formation can only be included in an Army with the Traitor Allegiance",
+			},
+			{
+				name: "Overwhelming Aggression",
+				text: "Infantry and Walker Detachments in this Formation gain the Furious Charge special rule",
+			},
+		],
+		legend: true,
+	},
+	{
+		id: 7017,
+		name: "Theta-Garmon Deathless Sub-Cohort",
+		faction: FACTION.solar,
+		subfaction: null,
+		allegiance: ALLEGIANCE.loyalist,
+		formation_slots: [
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [7088, 7089, 7089, 7089, 7090] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [7091, 7090, 7092, 7092] },
+		],
+		rules: [
+			legendRules,
+			{
+				name: "Defenders of Beta-Garmon",
+				text: "This Formation can only be included in an Army with the Loyalist Allegiance.",
+			},
+			{
+				name: "Deathless",
+				text: 'Detachments in this Formation gain the Feel No Pain special rule while any models from that Detachment are within 10" of any enemy Deatchments in an Army with the Traitor Allegiance.',
 			},
 		],
 		legend: true,
