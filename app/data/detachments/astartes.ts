@@ -5,6 +5,7 @@
 // ********************************************************************
 
 import { DETACHMENT, DETACHMENT_TYPE, FACTION } from "@type/types"
+import { optionsArray } from "@data/utils"
 
 export const astartes: DETACHMENT[] = [
 	{
@@ -20,7 +21,7 @@ export const astartes: DETACHMENT[] = [
 		max_size: 1,
 		main_unit: [1000],
 		related_unit: [],
-		dataslate_loadout: [{ text_option: ["Legion combi-bolters"] }],
+		dataslate_loadout: [{ text_option: ["Legion combi-bolters", "Volkite chargers"] }],
 		upgrade_options: [],
 		loadout_options: [],
 		datasheet_info: [],
@@ -43,15 +44,7 @@ export const astartes: DETACHMENT[] = [
 			{
 				name: "Additional Rhino",
 				unit_ref: 1001,
-				options: [
-					{ number: 1, cost: 10, size: 1 },
-					{ number: 2, cost: 20, size: 2 },
-					{ number: 3, cost: 30, size: 3 },
-					{ number: 4, cost: 40, size: 4 },
-					{ number: 5, cost: 50, size: 5 },
-					{ number: 6, cost: 60, size: 6 },
-					{ number: 7, cost: 70, size: 7 },
-				],
+				options: optionsArray(7, 10, 1),
 			},
 		],
 		loadout_options: [
@@ -86,7 +79,7 @@ export const astartes: DETACHMENT[] = [
 		base_size: 4,
 		max_size: 12,
 		main_unit: [1002],
-		related_unit: [1003, 1004],
+		related_unit: [1005, 1003, 1004, 1006],
 		dataslate_loadout: [{ text_option: ["Legion bolters"] }],
 		upgrade_options: [
 			{
@@ -113,20 +106,20 @@ export const astartes: DETACHMENT[] = [
 				name: "Additional Missile Support",
 				unit_ref: 1006,
 				options: [
-					{ number: 2, cost: 15, size: 2 },
-					{ number: 4, cost: 30, size: 4 },
-					{ number: 6, cost: 45, size: 6 },
-					{ number: 8, cost: 60, size: 8 },
+					{ number: 2, cost: 20, size: 2 },
+					{ number: 4, cost: 40, size: 4 },
+					{ number: 6, cost: 60, size: 6 },
+					{ number: 8, cost: 80, size: 8 },
 				],
 			},
 			{
 				name: "Additional Legion Terminators",
 				unit_ref: 1003,
 				options: [
-					{ number: 2, cost: 15, size: 2 },
-					{ number: 4, cost: 30, size: 4 },
-					{ number: 6, cost: 45, size: 6 },
-					{ number: 8, cost: 60, size: 8 },
+					{ number: 2, cost: 20, size: 2 },
+					{ number: 4, cost: 40, size: 4 },
+					{ number: 6, cost: 60, size: 6 },
+					{ number: 8, cost: 80, size: 8 },
 				],
 			},
 			{
@@ -140,17 +133,26 @@ export const astartes: DETACHMENT[] = [
 				],
 			},
 		],
-		loadout_options: [],
+		loadout_options: [
+			{
+				location: "specialist",
+				options: [{ name: "Apothecary", cost: 10 }],
+			},
+		],
 		datasheet_info: [
 			{
-				text: "A Legion Tactical Detachment can purchase up to four upgrades. It may purchase the same upgrade multiple times: Each upgrade increases the Detachment size by 2.",
+				text: "A Legion Tactical Detachment can purchase up to four upgrades. It may purchase the same upgrade multiple times: Each upgrade increases the Detachment size by 2, adding the respective models:",
 				options: [
 					{ text: "Tactical Legionaries", cost: 12 },
 					{ text: "Plasma Tactical Suport Legionaries", cost: 15 },
-					{ text: "Missile Launcher Heavy Support Legionaries", cost: 15 },
-					{ text: "Legion Terminators", cost: 15 },
+					{ text: "Missile Launcher Heavy Support Legionaries", cost: 20 },
+					{ text: "Legion Terminators", cost: 20 },
 					{ text: "Assault Marines", cost: 12 },
 				],
+				info: "*Models added via this upgrade use their respective profiles below",
+			},
+			{
+				text: "For every four Tactical Legionaries models in this Detachment, one Tactical Legionaries may be upgraded to include an Apothecary for +10point. A model with an Apothecary has the Medicae special rule.",
 			},
 		],
 	},
@@ -183,8 +185,8 @@ export const astartes: DETACHMENT[] = [
 			{
 				text: "A Legion Plasma Gun Support Detachment can purchase the following upgrades:",
 				options: [
-					{ text: "2 additional Legionaries", cost: 15 },
-					{ text: "4 additional Legionaries", cost: 30 },
+					{ text: "Increase the Detachment size by 2", cost: 15 },
+					{ text: "Increase the Detachment size by 4", cost: 30 },
 				],
 			},
 		],
@@ -197,7 +199,7 @@ export const astartes: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.support],
-		base_cost: 40,
+		base_cost: 50,
 		base_size: 4,
 		max_size: 8,
 		main_unit: [1006],
@@ -208,8 +210,8 @@ export const astartes: DETACHMENT[] = [
 				name: "Additional Legionaries",
 				unit_ref: 1006,
 				options: [
-					{ number: 2, cost: 15, size: 2 },
-					{ number: 4, cost: 30, size: 4 },
+					{ number: 2, cost: 20, size: 2 },
+					{ number: 4, cost: 40, size: 4 },
 				],
 			},
 		],
@@ -218,8 +220,8 @@ export const astartes: DETACHMENT[] = [
 			{
 				text: "A Legion Missile Launcher Support Detachment can purchase the following upgrades:",
 				options: [
-					{ text: "2 additional Legionaries", cost: 15 },
-					{ text: "4 additional Legionaries", cost: 30 },
+					{ text: "Increase the Detachment size by 2", cost: 20 },
+					{ text: "Increase the Detachment size by 4", cost: 40 },
 				],
 			},
 		],
@@ -253,8 +255,8 @@ export const astartes: DETACHMENT[] = [
 			{
 				text: "A Legion Assault Detachment can purchase the following upgrades:",
 				options: [
-					{ text: "2 additional Assault Marines", cost: 12 },
-					{ text: "4 additional Assault Marines", cost: 24 },
+					{ text: "Increase the Detachment size by 2", cost: 12 },
+					{ text: "Increase the Detachment size by 4", cost: 24 },
 				],
 			},
 		],
@@ -278,8 +280,8 @@ export const astartes: DETACHMENT[] = [
 				name: "Additional Terminators",
 				unit_ref: 1003,
 				options: [
-					{ number: 2, cost: 15, size: 2 },
-					{ number: 4, cost: 30, size: 4 },
+					{ number: 2, cost: 20, size: 2 },
+					{ number: 4, cost: 40, size: 4 },
 				],
 			},
 		],
@@ -288,8 +290,8 @@ export const astartes: DETACHMENT[] = [
 			{
 				text: "A Legion Terminator Detachment can purchase the following upgrades:",
 				options: [
-					{ text: "2 additional Terminators", cost: 15 },
-					{ text: "4 additional Terminators", cost: 30 },
+					{ text: "Increase the Detachment size by 2", cost: 20 },
+					{ text: "Increase the Detachment size by 4", cost: 40 },
 				],
 			},
 		],
@@ -392,7 +394,7 @@ export const astartes: DETACHMENT[] = [
 	},
 	{
 		id: 1009,
-		name: "Legion Dreadnought Talon",
+		name: "Legion Contemptor Dreadnought Talon",
 		faction: FACTION.astartes,
 		subfaction: null,
 		allegiance: null,
@@ -402,7 +404,7 @@ export const astartes: DETACHMENT[] = [
 		base_size: 4,
 		max_size: 10,
 		main_unit: [1009],
-		related_unit: [1008],
+		related_unit: [],
 		dataslate_loadout: [
 			{
 				text_option: ["Kheres assault cannon or Twin-linked lascannons", "In-built twin-linked bolters"],
@@ -418,15 +420,6 @@ export const astartes: DETACHMENT[] = [
 					{ number: 6, cost: 90, size: 6 },
 				],
 			},
-			{
-				name: "Additional Leviathan",
-				unit_ref: 1008,
-				options: [
-					{ number: 2, cost: 35, size: 2 },
-					{ number: 4, cost: 70, size: 4 },
-					{ number: 6, cost: 105, size: 6 },
-				],
-			},
 		],
 		loadout_options: [
 			{
@@ -434,17 +427,16 @@ export const astartes: DETACHMENT[] = [
 				options: [
 					{ name: "Kheres assault cannon", cost: 0 },
 					{ name: "Twin-linked lascannons", cost: 0 },
-					{ name: "Leviathan storm cannon", cost: 0 },
-					{ name: "Cyclone melta lance", cost: 0 },
 				],
 			},
 		],
 		datasheet_info: [
 			{
-				text: "A Legion Dreadnought Talon can purchase up to three upgrades. It may purchase the same upgrade multiple times: Each upgrade increases the Detachment size by 2.",
+				text: "A Legion Contemptor Dreadnought Talon can purchase one of the following upgrades:",
 				options: [
-					{ text: "2 Additional Contemptors", cost: 30 },
-					{ text: "2 Additional Leviathans", cost: 35 },
+					{ text: "Increase the Detachment size by 2", cost: 30 },
+					{ text: "Increase the Detachment size by 2", cost: 60 },
+					{ text: "Increase the Detachment size by 2", cost: 90 },
 				],
 			},
 		],
@@ -601,12 +593,15 @@ export const astartes: DETACHMENT[] = [
 		],
 		datasheet_info: [
 			{
-				text: "A Legion Predator Squadron can purchase the following upgrades: The same upgrade may be taken more than once",
+				text: "A Legion Predator Squadron can purchase any of the following upgrades. It may purchase the same upgrade multiple times, to a maximum Detachment size of 9.",
 				options: [
 					{ text: "1 additional Predator", cost: 35 },
 					{ text: "3 additional Predator", cost: 95 },
 					{ text: "6 additional Predator", cost: 185 },
 				],
+			},
+			{
+				text: "Any Legion Predator may be equipped with one Pintle Mounted heavy bolter for +5 points per model.",
 			},
 		],
 	},
@@ -618,7 +613,7 @@ export const astartes: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.battle],
-		base_cost: 105,
+		base_cost: 90,
 		base_size: 2,
 		max_size: 6,
 		main_unit: [1013],
@@ -627,7 +622,7 @@ export const astartes: DETACHMENT[] = [
 			{
 				text_option: [
 					"Hull Mounted heavy bolter",
-					"Twin-linked accelerator autocannon or Omega plasma array",
+					"Twin-linked accelerator autocannon",
 					"Sponson Mounted heavy bolters or Sponson Mounted lascannon",
 				],
 			},
@@ -638,20 +633,13 @@ export const astartes: DETACHMENT[] = [
 				unit_ref: 1013,
 				options: [
 					{ number: 1, cost: 40, size: 1 },
-					{ number: 2, cost: 70, size: 2 },
-					{ number: 3, cost: 110, size: 3 },
-					{ number: 4, cost: 140, size: 4 },
+					{ number: 2, cost: 80, size: 2 },
+					{ number: 3, cost: 120, size: 3 },
+					{ number: 4, cost: 150, size: 4 },
 				],
 			},
 		],
 		loadout_options: [
-			{
-				location: "Turret",
-				options: [
-					{ name: "Twin-linked accelerator autocannon", cost: 0 },
-					{ name: "Omega plasma array", cost: 0 },
-				],
-			},
 			{
 				location: "Sponsons",
 				options: [
@@ -659,16 +647,24 @@ export const astartes: DETACHMENT[] = [
 					{ name: "Lascannons", cost: 0 },
 				],
 			},
+			{
+				location: "Pintle",
+				options: [
+					{ name: "None", cost: 0 },
+					{ name: "Heavy bolter", cost: 0 },
+				],
+			},
 		],
 		datasheet_info: [
 			{
-				text: "A Legion Sicaran Squadron can purchase the following upgrades: The same upgrade may be taken more than once",
+				text: "A Legion Sicaran Squadron can purchase any of the following upgrades. It may purchase the same upgrade multiple times, to a maximum Detachment size of 6.",
 				options: [
 					{ text: "1 additional Sicaran", cost: 40 },
-					{ text: "2 additional Sicaran", cost: 70 },
-					{ text: "4 additional Sicaran", cost: 140 },
+					{ text: "2 additional Sicaran", cost: 80 },
+					{ text: "4 additional Sicaran", cost: 150 },
 				],
 			},
+			{ text: "A Legion Sicaran may be equipped with one Pintle Mounted heavy bolter for +5 points per model." },
 		],
 	},
 	{
@@ -799,7 +795,7 @@ export const astartes: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.air],
-		base_cost: 100,
+		base_cost: 85,
 		base_size: 1,
 		max_size: 4,
 		main_unit: [1016],
@@ -814,8 +810,8 @@ export const astartes: DETACHMENT[] = [
 				name: "Additional Storm Eagle",
 				unit_ref: 1016,
 				options: [
-					{ number: 1, cost: 100, size: 1 },
-					{ number: 2, cost: 190, size: 2 },
+					{ number: 1, cost: 75, size: 1 },
+					{ number: 2, cost: 150, size: 2 },
 				],
 			},
 		],
@@ -824,8 +820,8 @@ export const astartes: DETACHMENT[] = [
 			{
 				text: "A Legion Storm Eagle Squadron can purchase the following upgrades:",
 				options: [
-					{ text: "1 additional Storm Eagle", cost: 100 },
-					{ text: "2 additional Storm Eagle", cost: 190 },
+					{ text: "1 additional Storm Eagle", cost: 75 },
+					{ text: "2 additional Storm Eagle", cost: 150 },
 				],
 			},
 		],
@@ -857,7 +853,7 @@ export const astartes: DETACHMENT[] = [
 				name: "Additional Fire Raptor",
 				unit_ref: 1017,
 				options: [
-					{ number: 1, cost: 100, size: 1 },
+					{ number: 1, cost: 90, size: 1 },
 					{ number: 2, cost: 190, size: 2 },
 				],
 			},
@@ -876,8 +872,8 @@ export const astartes: DETACHMENT[] = [
 			{
 				text: "A Legion Fire Raptor Squadron can purchase the following upgrades:",
 				options: [
-					{ text: "1 additional Fire Raptor", cost: 100 },
-					{ text: "2 additional Fire Raptor", cost: 190 },
+					{ text: "1 additional Fire Raptor", cost: 90 },
+					{ text: "2 additional Fire Raptor", cost: 180 },
 				],
 			},
 		],
@@ -910,7 +906,7 @@ export const astartes: DETACHMENT[] = [
 				name: "Additional Thunderhawk Gunship",
 				unit_ref: 1018,
 				options: [
-					{ number: 1, cost: 150, size: 1 },
+					{ number: 1, cost: 140, size: 1 },
 					{ number: 2, cost: 280, size: 2 },
 				],
 			},
@@ -920,7 +916,7 @@ export const astartes: DETACHMENT[] = [
 			{
 				text: "A Legion Thunderhawk Squadron can purchase the following upgrades:",
 				options: [
-					{ text: "1 additional Thunderhawk Gunship", cost: 150 },
+					{ text: "1 additional Thunderhawk Gunship", cost: 140 },
 					{ text: "2 additional Thunderhawk Gunship", cost: 280 },
 				],
 			},
@@ -934,7 +930,7 @@ export const astartes: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.vanguard],
-		base_cost: 30,
+		base_cost: 25,
 		base_size: 2,
 		max_size: 6,
 		main_unit: [1019],
@@ -949,8 +945,8 @@ export const astartes: DETACHMENT[] = [
 				name: "Additional Outriders",
 				unit_ref: 1019,
 				options: [
-					{ number: 2, cost: 30, size: 2 },
-					{ number: 4, cost: 60, size: 4 },
+					{ number: 2, cost: 20, size: 2 },
+					{ number: 4, cost: 40, size: 4 },
 				],
 			},
 		],
@@ -959,8 +955,8 @@ export const astartes: DETACHMENT[] = [
 			{
 				text: "A Legion Outrider Squadron can purchase one of the following upgrades:",
 				options: [
-					{ text: "Increase the Detachment size by 2", cost: 30 },
-					{ text: "Increase the Detachment size by 4", cost: 60 },
+					{ text: "Increase the Detachment size by 2", cost: 20 },
+					{ text: "Increase the Detachment size by 4", cost: 40 },
 				],
 			},
 		],
@@ -988,8 +984,8 @@ export const astartes: DETACHMENT[] = [
 				name: "Additional Jetbike",
 				unit_ref: 1020,
 				options: [
-					{ number: 3, cost: 35, size: 3 },
-					{ number: 6, cost: 70, size: 6 },
+					{ number: 3, cost: 30, size: 3 },
+					{ number: 6, cost: 60, size: 6 },
 				],
 			},
 		],
@@ -998,8 +994,8 @@ export const astartes: DETACHMENT[] = [
 			{
 				text: "A Legion Scimitar Jetbike Squadron can purchase one of the following upgrades:",
 				options: [
-					{ text: "Increase the Detachment size by 3", cost: 35 },
-					{ text: "Increase the Detachment size by 6", cost: 70 },
+					{ text: "Increase the Detachment size by 3", cost: 30 },
+					{ text: "Increase the Detachment size by 6", cost: 60 },
 				],
 			},
 		],
@@ -1027,8 +1023,8 @@ export const astartes: DETACHMENT[] = [
 				name: "Additional Land Speeder",
 				unit_ref: 1021,
 				options: [
-					{ number: 2, cost: 30, size: 2 },
-					{ number: 4, cost: 60, size: 4 },
+					{ number: 2, cost: 25, size: 2 },
+					{ number: 4, cost: 50, size: 4 },
 				],
 			},
 		],
@@ -1043,13 +1039,13 @@ export const astartes: DETACHMENT[] = [
 		],
 		datasheet_info: [
 			{
-				text: "One in every two Landspeeders can exchange its plasma cannon and heavy bolter for a Nose Mounted heavy flamer and a Multi-melta for no additional cost",
+				text: "One in every two Landspeeders can exchange its plasma cannon and heavy bolter for a Nose Mounted heavy flamer and a Multi-melta for no free",
 			},
 			{
 				text: "A Legion Land Speeder Squadron can purchase one of the following upgrades:",
 				options: [
-					{ text: "Increase the Detachment size by 2", cost: 30 },
-					{ text: "Increase the Detachment size by 4", cost: 60 },
+					{ text: "Increase the Detachment size by 2", cost: 25 },
+					{ text: "Increase the Detachment size by 4", cost: 50 },
 				],
 			},
 		],
@@ -1062,14 +1058,14 @@ export const astartes: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.vanguard],
-		base_cost: 33,
+		base_cost: 35,
 		base_size: 2,
 		max_size: 6,
 		main_unit: [1022],
 		related_unit: [],
 		dataslate_loadout: [
 			{
-				text_option: ["Nose Mounted heavy flamer", "Sponson Mounted lascannon"],
+				text_option: ["Nose Mounted heavy flamer", "Sponson Mounted lascannon or cyclone missile launcher"],
 			},
 		],
 		upgrade_options: [
@@ -1077,8 +1073,8 @@ export const astartes: DETACHMENT[] = [
 				name: "Additional Javelin",
 				unit_ref: 1022,
 				options: [
-					{ number: 2, cost: 33, size: 2 },
-					{ number: 4, cost: 66, size: 4 },
+					{ number: 2, cost: 30, size: 2 },
+					{ number: 4, cost: 60, size: 4 },
 				],
 			},
 		],
@@ -1087,19 +1083,16 @@ export const astartes: DETACHMENT[] = [
 				location: "Sponsons",
 				options: [
 					{ name: "Lascannons", cost: 0 },
-					{ name: "Missile launcher", cost: 2 },
+					{ name: "Missile launcher", cost: 0 },
 				],
 			},
 		],
 		datasheet_info: [
 			{
-				text: "Any Javelin may exchange its Sponson Mounted lascannon for a Cyclone missile launcher for +2pts per model",
-			},
-			{
 				text: "A Legion Javelin Squadron can purchase one of the following upgrades:",
 				options: [
-					{ text: "Increase the Detachment size by 2", cost: 33 },
-					{ text: "Increase the Detachment size by 4", cost: 66 },
+					{ text: "Increase the Detachment size by 2", cost: 30 },
+					{ text: "Increase the Detachment size by 4", cost: 60 },
 				],
 			},
 		],
@@ -1112,7 +1105,7 @@ export const astartes: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.transport],
-		base_cost: 80,
+		base_cost: 70,
 		base_size: 1,
 		max_size: 8,
 		main_unit: [1023],
@@ -1129,15 +1122,7 @@ export const astartes: DETACHMENT[] = [
 			{
 				name: "Additional Spartan",
 				unit_ref: 1023,
-				options: [
-					{ number: 1, cost: 80, size: 1 },
-					{ number: 2, cost: 160, size: 2 },
-					{ number: 3, cost: 240, size: 3 },
-					{ number: 4, cost: 320, size: 4 },
-					{ number: 5, cost: 400, size: 5 },
-					{ number: 6, cost: 480, size: 6 },
-					{ number: 7, cost: 560, size: 7 },
-				],
+				options: optionsArray(7, 70, 1),
 			},
 		],
 		loadout_options: [
@@ -1152,7 +1137,7 @@ export const astartes: DETACHMENT[] = [
 				location: "Hull",
 				options: [
 					{ name: "Heavy bolter", cost: 0 },
-					{ name: "Lascannon", cost: 2 },
+					{ name: "Lascannon", cost: 0 },
 				],
 			},
 			{
@@ -1160,16 +1145,17 @@ export const astartes: DETACHMENT[] = [
 				options: [
 					{ name: "None", cost: 0 },
 					{ name: "Multi-melta", cost: 5 },
+					{ name: "Heavy bolter", cost: 5 },
 				],
 			},
 		],
 		datasheet_info: [
 			{
-				text: "Any Spartan may exchange its Hull Mounted heavy bolter for a Hull Mounted lascannon  for +2pts per model",
-			},
-			{
 				text: "Any Spartan may be equipped with one of the following:",
-				options: [{ text: "Pintle Mounted multi-melta", cost: 5 }],
+				options: [
+					{ text: "Pintle Mounted multi-melta", cost: 5 },
+					{ text: "Pintle Mounted heavy boler", cost: 5 },
+				],
 			},
 		],
 	},
@@ -1181,7 +1167,7 @@ export const astartes: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.transport],
-		base_cost: 40,
+		base_cost: 35,
 		base_size: 1,
 		max_size: 8,
 		main_unit: [1024],
@@ -1195,15 +1181,7 @@ export const astartes: DETACHMENT[] = [
 			{
 				name: "Additional Land Raider",
 				unit_ref: 1024,
-				options: [
-					{ number: 1, cost: 40, size: 1 },
-					{ number: 2, cost: 80, size: 2 },
-					{ number: 3, cost: 120, size: 3 },
-					{ number: 4, cost: 160, size: 4 },
-					{ number: 5, cost: 200, size: 5 },
-					{ number: 6, cost: 240, size: 6 },
-					{ number: 7, cost: 280, size: 7 },
-				],
+				options: optionsArray(7, 35, 1),
 			},
 		],
 		loadout_options: [
@@ -1212,12 +1190,17 @@ export const astartes: DETACHMENT[] = [
 				options: [
 					{ name: "None", cost: 0 },
 					{ name: "Multi-melta", cost: 5 },
+					{ name: "Heavy bolter", cost: 5 },
 				],
 			},
 		],
 		datasheet_info: [
 			{
-				text: "For every three Land Raiders in the Detachment, one Land Raider can be equipped with a Pintle Mounted multi-melta for +5pts per model.",
+				text: "Any Land Raider may be equipped with one of the following:",
+				options: [
+					{ text: "Pintle Mounted heavy flamer", cost: 5 },
+					{ text: "Pintle Mounted heavy bolter", cost: 5 },
+				],
 			},
 		],
 	},
@@ -1229,12 +1212,12 @@ export const astartes: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.transport],
-		base_cost: 6,
+		base_cost: 10,
 		base_size: 1,
 		max_size: 8,
 		break_strength: 0,
 		main_unit: [1025],
-		related_unit: [1027],
+		related_unit: [],
 		dataslate_loadout: [
 			{
 				text_option: ["Turret Mounted twin bolter"],
@@ -1244,33 +1227,11 @@ export const astartes: DETACHMENT[] = [
 			{
 				name: "Additional Drop Pod",
 				unit_ref: 1025,
-				options: [
-					{ number: 1, cost: 6, size: 1, break_strength: 0 },
-					{ number: 2, cost: 12, size: 2, break_strength: 0 },
-					{ number: 3, cost: 18, size: 3, break_strength: 0 },
-					{ number: 4, cost: 24, size: 4, break_strength: 0 },
-					{ number: 5, cost: 30, size: 5, break_strength: 0 },
-					{ number: 6, cost: 36, size: 6, break_strength: 0 },
-					{ number: 7, cost: 42, size: 7, break_strength: 0 },
-				],
-			},
-			{
-				name: "Palisade Drop Pod",
-				unit_ref: 1027,
-				options: [
-					{ number: 1, cost: 32, size: 1, break_strength: 0 },
-					{ number: 2, cost: 64, size: 2, break_strength: 0 },
-					{ number: 3, cost: 96, size: 3, break_strength: 0 },
-					{ number: 4, cost: 128, size: 4, break_strength: 0 },
-				],
+				options: optionsArray(7, 10, 1, 0),
 			},
 		],
 		loadout_options: [],
-		datasheet_info: [
-			{
-				text: "A Legion Drop Pod Detachment can purchase one Palisade Drop Pod for each Drop Pod in this Detachment for +32pts per model.",
-			},
-		],
+		datasheet_info: [],
 	},
 	{
 		id: 1026,
@@ -1280,7 +1241,7 @@ export const astartes: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.transport],
-		base_cost: 7,
+		base_cost: 12,
 		base_size: 1,
 		max_size: 8,
 		break_strength: 0,
@@ -1291,33 +1252,11 @@ export const astartes: DETACHMENT[] = [
 			{
 				name: "Additional Drop Pod",
 				unit_ref: 1026,
-				options: [
-					{ number: 1, cost: 7, size: 1, break_strength: 0 },
-					{ number: 2, cost: 14, size: 2, break_strength: 0 },
-					{ number: 3, cost: 21, size: 3, break_strength: 0 },
-					{ number: 4, cost: 28, size: 4, break_strength: 0 },
-					{ number: 5, cost: 35, size: 5, break_strength: 0 },
-					{ number: 6, cost: 42, size: 6, break_strength: 0 },
-					{ number: 7, cost: 49, size: 7, break_strength: 0 },
-				],
-			},
-			{
-				name: "Palisade Drop Pod",
-				unit_ref: 1027,
-				options: [
-					{ number: 1, cost: 32, size: 1, break_strength: 0 },
-					{ number: 2, cost: 64, size: 2, break_strength: 0 },
-					{ number: 3, cost: 96, size: 3, break_strength: 0 },
-					{ number: 4, cost: 128, size: 4, break_strength: 0 },
-				],
+				options: optionsArray(7, 12, 1, 0),
 			},
 		],
 		loadout_options: [],
-		datasheet_info: [
-			{
-				text: "A Dreadnought Drop Pod Detachment can purchase one Palisade Drop Pod for each Drop Pod in this Detachment for +32pts per model.",
-			},
-		],
+		datasheet_info: [],
 	},
 	{
 		id: 1027,
@@ -1327,7 +1266,7 @@ export const astartes: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.support],
-		base_cost: 32,
+		base_cost: 40,
 		base_size: 2,
 		max_size: 6,
 		main_unit: [1028],
@@ -1342,8 +1281,8 @@ export const astartes: DETACHMENT[] = [
 				name: "Additional drop pod",
 				unit_ref: 1028,
 				options: [
-					{ number: 2, cost: 32, size: 2 },
-					{ number: 4, cost: 64, size: 4 },
+					{ number: 2, cost: 35, size: 2 },
+					{ number: 4, cost: 70, size: 4 },
 				],
 			},
 		],
@@ -1352,8 +1291,8 @@ export const astartes: DETACHMENT[] = [
 			{
 				text: "A Legion Deathstorm Drop Pod Battery can purchase one of the following upgrades:",
 				options: [
-					{ text: "Increase the Detachment size by 2", cost: 32 },
-					{ text: "Increase the Detachment size by 4", cost: 64 },
+					{ text: "Increase the Detachment size by 2", cost: 35 },
+					{ text: "Increase the Detachment size by 4", cost: 70 },
 				],
 			},
 		],
@@ -1366,7 +1305,7 @@ export const astartes: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.battle],
-		base_cost: 110,
+		base_cost: 90,
 		base_size: 2,
 		max_size: 6,
 		main_unit: [1029],
@@ -1385,10 +1324,10 @@ export const astartes: DETACHMENT[] = [
 				name: "Additional Sicaran",
 				unit_ref: 1029,
 				options: [
-					{ number: 1, cost: 50, size: 1 },
-					{ number: 2, cost: 100, size: 2 },
-					{ number: 3, cost: 150, size: 3 },
-					{ number: 4, cost: 200, size: 4 },
+					{ number: 1, cost: 40, size: 1 },
+					{ number: 2, cost: 80, size: 2 },
+					{ number: 3, cost: 120, size: 3 },
+					{ number: 4, cost: 150, size: 4 },
 				],
 			},
 		],
@@ -1400,15 +1339,25 @@ export const astartes: DETACHMENT[] = [
 					{ name: "Lascannons", cost: 0 },
 				],
 			},
+			{
+				location: "Pintle",
+				options: [
+					{ name: "None", cost: 0 },
+					{ name: "Heavy bolter", cost: 0 },
+				],
+			},
 		],
 		datasheet_info: [
 			{
-				text: "A Legion Sicaran Punisher Squadron can purchase any of the following upgrades. It may purchase the same upgrade multiple times, to a maximum Detachment size of 6:",
+				text: "A Legion Sicaran Punisher Squadron can purchase any of the following upgrades. It may purchase the same upgrade multiple times, to a maximum Detachment size of 6.",
 				options: [
-					{ text: "1 additional Sicaran", cost: 50 },
-					{ text: "2 additional Sicaran", cost: 100 },
-					{ text: "4 additional Sicaran", cost: 200 },
+					{ text: "1 additional Sicaran", cost: 40 },
+					{ text: "2 additional Sicaran", cost: 80 },
+					{ text: "4 additional Sicaran", cost: 150 },
 				],
+			},
+			{
+				text: "Any Sicaran Punisher may be equipped with one Pintle Mounted heavy bolter for +5 points per model.",
 			},
 		],
 	},
@@ -1420,7 +1369,7 @@ export const astartes: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.battle],
-		base_cost: 115,
+		base_cost: 95,
 		base_size: 2,
 		max_size: 6,
 		main_unit: [1030],
@@ -1439,10 +1388,10 @@ export const astartes: DETACHMENT[] = [
 				name: "Additional Sicaran",
 				unit_ref: 1030,
 				options: [
-					{ number: 1, cost: 60, size: 1 },
-					{ number: 2, cost: 110, size: 2 },
-					{ number: 3, cost: 170, size: 3 },
-					{ number: 4, cost: 220, size: 4 },
+					{ number: 1, cost: 45, size: 1 },
+					{ number: 2, cost: 90, size: 2 },
+					{ number: 3, cost: 135, size: 3 },
+					{ number: 4, cost: 170, size: 4 },
 				],
 			},
 		],
@@ -1457,12 +1406,15 @@ export const astartes: DETACHMENT[] = [
 		],
 		datasheet_info: [
 			{
-				text: "A Legion Sicaran Punisher Squadron can purchase any of the following upgrades. It may purchase the same upgrade multiple times, to a maximum Detachment size of 6:",
+				text: "A Legion Sicaran Arcus Squadron can purchase any of the following upgrades. It may purchase the same upgrade multiple times, to a maximum Detachment size of 6.",
 				options: [
-					{ text: "1 additional Sicaran", cost: 60 },
-					{ text: "2 additional Sicaran", cost: 110 },
-					{ text: "4 additional Sicaran", cost: 220 },
+					{ text: "1 additional Sicaran", cost: 45 },
+					{ text: "2 additional Sicaran", cost: 90 },
+					{ text: "4 additional Sicaran", cost: 170 },
 				],
+			},
+			{
+				text: "Any Sicaran Arcus may be equipped with one Pintle Mounted heavy bolter for +5 points per model.",
 			},
 		],
 	},
@@ -1532,7 +1484,7 @@ export const astartes: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.transport],
-		base_cost: 18,
+		base_cost: 14,
 		base_size: 1,
 		max_size: 8,
 		main_unit: [1032],
@@ -1546,15 +1498,7 @@ export const astartes: DETACHMENT[] = [
 			{
 				name: "Additional Termite",
 				unit_ref: 1032,
-				options: [
-					{ number: 1, cost: 18, size: 1 },
-					{ number: 2, cost: 36, size: 2 },
-					{ number: 3, cost: 54, size: 3 },
-					{ number: 4, cost: 72, size: 4 },
-					{ number: 5, cost: 90, size: 5 },
-					{ number: 6, cost: 108, size: 6 },
-					{ number: 7, cost: 126, size: 7 },
-				],
+				options: optionsArray(1, 14, 1),
 			},
 		],
 		loadout_options: [],
@@ -1606,8 +1550,19 @@ export const astartes: DETACHMENT[] = [
 					{ name: "Autocannons", cost: 0 },
 				],
 			},
+			{
+				location: "Pintle",
+				options: [
+					{ name: "None", cost: 0 },
+					{ name: "Heavy bolter", cost: 5 },
+				],
+			},
 		],
-		datasheet_info: [],
+		datasheet_info: [
+			{
+				text: "Any Kratos Commander may be equipped with one Pintle Mounted heavy bolter for +5 points.",
+			},
+		],
 	},
 	{
 		id: 1033,
@@ -1648,8 +1603,19 @@ export const astartes: DETACHMENT[] = [
 					{ name: "Lascannons", cost: 0 },
 				],
 			},
+			{
+				location: "Pintle",
+				options: [
+					{ name: "None", cost: 0 },
+					{ name: "Heavy bolter", cost: 5 },
+				],
+			},
 		],
-		datasheet_info: [],
+		datasheet_info: [
+			{
+				text: "Any Sicaran Commander may be equipped with one Pintle Mounted heavy bolter for +5 points.",
+			},
+		],
 	},
 	{
 		id: 1034,
@@ -1688,8 +1654,19 @@ export const astartes: DETACHMENT[] = [
 					{ name: "Lascannons", cost: 0 },
 				],
 			},
+			{
+				location: "Pintle",
+				options: [
+					{ name: "None", cost: 0 },
+					{ name: "Heavy bolter", cost: 5 },
+				],
+			},
 		],
-		datasheet_info: [],
+		datasheet_info: [
+			{
+				text: "Any Predator Commander may be equipped with one Pintle Mounted heavy bolter for +5 points.",
+			},
+		],
 	},
 	{
 		id: 1035,
@@ -2000,6 +1977,91 @@ export const astartes: DETACHMENT[] = [
 					{ text: "Increase the Detachment size by 6", cost: 180 },
 				],
 			},
+		],
+	},
+	{
+		id: 1041,
+		name: "Legion Palisade Drop Pod",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: [DETACHMENT_TYPE.support],
+		base_cost: 25,
+		base_size: 1,
+		break_strength: 0,
+		max_size: 1,
+		main_unit: [1027],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: ["None"],
+			},
+		],
+		upgrade_options: [],
+		loadout_options: [],
+		datasheet_info: [],
+	},
+	{
+		id: 1013,
+		name: "Legion Sicaran Omega Squadron",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: [DETACHMENT_TYPE.battle],
+		base_cost: 90,
+		base_size: 2,
+		max_size: 6,
+		main_unit: [1042],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: [
+					"Hull Mounted heavy bolter",
+					"Omega plasma array",
+					"Sponson Mounted heavy bolters or Sponson Mounted lascannon",
+				],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Sicaran",
+				unit_ref: 1042,
+				options: [
+					{ number: 1, cost: 40, size: 1 },
+					{ number: 2, cost: 80, size: 2 },
+					{ number: 3, cost: 120, size: 3 },
+					{ number: 4, cost: 150, size: 4 },
+				],
+			},
+		],
+		loadout_options: [
+			{
+				location: "Sponsons",
+				options: [
+					{ name: "Heavy bolters", cost: 0 },
+					{ name: "Lascannons", cost: 0 },
+				],
+			},
+			{
+				location: "Pintle",
+				options: [
+					{ name: "None", cost: 0 },
+					{ name: "Heavy bolter", cost: 0 },
+				],
+			},
+		],
+		datasheet_info: [
+			{
+				text: "A Legion Sicaran Omega Squadron can purchase any of the following upgrades. It may purchase the same upgrade multiple times, to a maximum Detachment size of 6.",
+				options: [
+					{ text: "1 additional Sicaran", cost: 40 },
+					{ text: "2 additional Sicaran", cost: 80 },
+					{ text: "4 additional Sicaran", cost: 150 },
+				],
+			},
+			{ text: "Any Sicaran Omega may be equipped with one Pintle Mounted heavy bolter for +5 points per model." },
 		],
 	},
 ]

@@ -527,7 +527,7 @@ export const legends: FORMATION_SLOT[] = [
 		type: DETACHMENT_TYPE.core,
 		faction: FACTION.astartes,
 		restricted: true,
-		options: [1002, 7061],
+		options: [7061],
 		description: "Legion Tactical Detachment",
 	},
 	{

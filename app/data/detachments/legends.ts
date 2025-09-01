@@ -1131,7 +1131,13 @@ export const legends: DETACHMENT[] = [
 		related_unit: [],
 		dataslate_loadout: [{ text_option: ["One model has an Apothecary"] }],
 		upgrade_options: [],
-		loadout_options: [],
+		loadout_options: [
+			{
+				location: "specialist",
+				options: [{ name: "Apothecary", cost: 10 }],
+				required: 1,
+			},
+		],
 		datasheet_info: [],
 	},
 	{
@@ -1493,7 +1499,13 @@ export const legends: DETACHMENT[] = [
 				options: [{ number: 2, cost: 0, size: 2, required: true }],
 			},
 		],
-		loadout_options: [],
+		loadout_options: [
+			{
+				location: "specialist",
+				options: [{ name: "Apothecary", cost: 10 }],
+				required: 1,
+			},
+		],
 		datasheet_info: [],
 	},
 	{

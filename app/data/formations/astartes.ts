@@ -50,7 +50,7 @@ export const astartes: FORMATION[] = [
 		subfaction: null,
 		allegiance: null,
 		formation_slots: [
-			{ slot_type: SLOT_TYPE.compulsory, slot_id: [1005, 1005, 1006] },
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [1015, 1005, 1005, 1006] },
 			{ slot_type: SLOT_TYPE.optional, slot_id: [1004, 1005, 1005, 1006] },
 			{ slot_type: SLOT_TYPE.choice, slot_id: [1008, 1006], text: "Up to one of the following" },
 		],
@@ -68,12 +68,8 @@ export const astartes: FORMATION[] = [
 		],
 		rules: [
 			{
-				name: "Legionbuilder note",
-				text: "There is some ambiguity regarding the optional Vanguard slot. There are differences between the physical and digital copies of the rulebook (which have a Core slot). I own the physical copy so I'll leave it as a Vanguard slot until an official Errata. For now the Vanguard slot has no valid options due to the 'Aerial Assault' formation rule",
-			},
-			{
 				name: "Dedicated Transports",
-				text: "Any Legiones Astartes Detachment within a Legion Aerial Assault Formation can be upgraded with Legion Storm Eagles or Legion Thunderhawks as Dedicated Transports, at a cost of +100 points per Storm Eagle and +150 points per Legion Thunderhawk",
+				text: "Any Legiones Astartes Detachment within a Legion Aerial Assault Formation can be upgraded with Legion Storm Eagles or Legion Thunderhawks as Dedicated Transports, at a cost of +85 points per Storm Eagle and +150 points per Legion Thunderhawk",
 			},
 			{
 				name: "Aerial Assault",
@@ -132,7 +128,7 @@ export const astartes: FORMATION[] = [
 		rules: [
 			{
 				name: "Heavy Assault",
-				text: "Support Detachment slots in this Formation must be filled with Legion Terminator Detachments, Legion Dreadnought Talons or Leviathan Siege Dreadnought Detachments.",
+				text: "At least two Compulsory Support Detachments slots in this Formation mus be filled with Legion Terminator Detachments. Any remaining Compulsory Support Detachment slots in this Formation must be filled with Legion Terminator Detachments, Legion Contemptor Dreadnought Talons or Leviathan Siege Dreadnought Detachments.",
 			},
 			{
 				name: "Dedicated Transports",

@@ -86,11 +86,11 @@ export const weapons: WEAPON_DATASHEET[] = [
 		name: "Plasma gun",
 		profiles: [
 			{
-				range: '10"',
+				range: '8"',
 				dice: 1,
 				to_hit: 4,
 				ap: 1,
-				traits: [{ name: WeaponTraits.lightAT }],
+				traits: [{ name: WeaponTraits.assault }, { name: WeaponTraits.lightAT }],
 			},
 		],
 	},
@@ -101,7 +101,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 			{
 				range: '20"',
 				dice: 2,
-				to_hit: 4,
+				to_hit: 5,
 				ap: 0,
 				traits: [{ name: WeaponTraits.ignoresCover }, { name: WeaponTraits.light }],
 			},
@@ -222,7 +222,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 		profiles: [
 			{
 				range: '10"',
-				dice: 1,
+				dice: 2,
 				to_hit: 5,
 				ap: 1,
 				traits: [{ name: WeaponTraits.lightAT }, { name: WeaponTraits.rapidFire }],
@@ -344,7 +344,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 			{
 				range: '18"',
 				dice: 2,
-				to_hit: 5,
+				to_hit: 4,
 				ap: 1,
 				traits: [{ name: WeaponTraits.lightAT }],
 			},
@@ -920,8 +920,8 @@ export const weapons: WEAPON_DATASHEET[] = [
 		profiles: [
 			{
 				range: '10"',
-				dice: "D3+2",
-				to_hit: 6,
+				dice: "2",
+				to_hit: 5,
 				ap: 1,
 				traits: [
 					{ name: WeaponTraits.lightAT },
