@@ -21,7 +21,7 @@ export const optionsArray = (
 	return options
 }
 
-export const oneFollowingUpgrade = (name: string): string => {
+export const oneUpgrade = (name: string): string => {
 	return `An ${name} can purchase one of the following upgrades:`
 }
 

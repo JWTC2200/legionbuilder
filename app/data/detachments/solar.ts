@@ -1,5 +1,5 @@
 import { DETACHMENT, DETACHMENT_TYPE, FACTION } from "@type/types"
-import { oneFollowingUpgrade, optionsArray, pintleStubberLd, pintleStubberTxt } from "@data/utils"
+import { oneUpgrade, optionsArray, pintleStubberLd, pintleStubberTxt } from "@data/utils"
 
 // solar 2000-2999,
 export const solar: DETACHMENT[] = [
@@ -129,7 +129,7 @@ export const solar: DETACHMENT[] = [
 		loadout_options: [],
 		datasheet_info: [
 			{
-				text: oneFollowingUpgrade("Auxilia Ogryn Charonite Section"),
+				text: oneUpgrade("Auxilia Ogryn Charonite Section"),
 				options: [
 					{ text: "2 additional Charonite Ogryn", cost: 30 },
 					{ text: "4 additional Charonite Ogryn", cost: 60 },
@@ -165,7 +165,7 @@ export const solar: DETACHMENT[] = [
 		loadout_options: [],
 		datasheet_info: [
 			{
-				text: oneFollowingUpgrade("Veletaris Storm Section"),
+				text: oneUpgrade("Veletaris Storm Section"),
 				options: [
 					{ text: "2 additional Veletarii", cost: 15 },
 					{ text: "4 additional Veletarii", cost: 30 },
@@ -465,7 +465,7 @@ export const solar: DETACHMENT[] = [
 		],
 		datasheet_info: [
 			{
-				text: oneFollowingUpgrade("Auxilia Baneblade Squadron"),
+				text: oneUpgrade("Auxilia Baneblade Squadron"),
 				options: [
 					{ text: "Increase the Detachment size by 1", cost: 90 },
 					{ text: "Increase the Detachment size by 1", cost: 180 },
@@ -861,7 +861,7 @@ export const solar: DETACHMENT[] = [
 		],
 		datasheet_info: [
 			{
-				text: oneFollowingUpgrade("Auxilia Cyclops Battery"),
+				text: oneUpgrade("Auxilia Cyclops Battery"),
 				options: [
 					{ text: "Increase the Detachment size by 2", cost: 35 },
 					{ text: "Increase the Detachment size by 5", cost: 70 },
@@ -1414,7 +1414,7 @@ export const solar: DETACHMENT[] = [
 		loadout_options: [pintleStubberLd],
 		datasheet_info: [
 			{
-				text: oneFollowingUpgrade("Auxilia Stormblade Squadron"),
+				text: oneUpgrade("Auxilia Stormblade Squadron"),
 				options: [
 					{ text: "Increase the Detachment size by 1", cost: 110 },
 					{ text: "Increase the Detachment size by 2", cost: 220 },
@@ -1645,7 +1645,7 @@ export const solar: DETACHMENT[] = [
 		],
 		datasheet_info: [
 			{
-				text: oneFollowingUpgrade("Auxilia Hellhammer Squadron"),
+				text: oneUpgrade("Auxilia Hellhammer Squadron"),
 				options: [
 					{ text: "Increase the Detachment size by 1", cost: 90 },
 					{ text: "Increase the Detachment size by 1", cost: 180 },

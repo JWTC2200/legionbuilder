@@ -79,6 +79,10 @@ export const mechanicum: FORMATION[] = [
 				name: "Dedicated Transports",
 				text: "Detachments within the Formation that contain only Infantry or Walker models may be upgraded with Triaros Armoured Conveyors as Dedicated Transports",
 			},
+			{
+				name: "Servants of the Lacrymaerta",
+				text: "Compulsory Core Detachment slots in this Formation must be filled with Adsecularis Tech-thrall Covenant Detachments.",
+			},
 		],
 	},
 	{
@@ -141,6 +145,23 @@ export const mechanicum: FORMATION[] = [
 			},
 			{
 				text: `All Detachments included in this Support Formation must have the Cybernetica Cortex (X) special rule. Detachments within this Support Formation cannot benefit from the Cortex Controller special rule – they cannot be issued Orders other than those from their variant of the Cybernetica Cortex (X) special rule or another variant through the Order Cascade special rule.`,
+			},
+		],
+	},
+	{
+		id: 3006,
+		name: "Myrmidax Conclave",
+		faction: FACTION.mechanicum,
+		subfaction: null,
+		allegiance: null,
+		formation_slots: [
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [3000, 3020, 3020, 3020] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [3000, 310, 3020, 3020] },
+		],
+		rules: [
+			{
+				name: "Cult of Destruction",
+				text: "Support Detachment slots within this Formation must be filled with Myrmidon Secutor Host or  Myrmidon Destructor Host Detachments.",
 			},
 		],
 	},

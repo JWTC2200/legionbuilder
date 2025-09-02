@@ -5,6 +5,7 @@
 // mechanicum 3000-3999
 
 import { DETACHMENT, DETACHMENT_TYPE, FACTION } from "@type/types"
+import { oneUpgrade, optionsArray } from "@data/utils"
 
 export const mechanicum: DETACHMENT[] = [
 	{
@@ -51,9 +52,9 @@ export const mechanicum: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.core],
-		base_cost: 30,
-		base_size: 4,
-		max_size: 10,
+		base_cost: 40,
+		base_size: 5,
+		max_size: 15,
 		main_unit: [3002],
 		related_unit: [],
 		dataslate_loadout: [{ text_option: ["Las-locks"] }],
@@ -61,11 +62,7 @@ export const mechanicum: DETACHMENT[] = [
 			{
 				name: "Additional Tech-Thralls",
 				unit_ref: 3002,
-				options: [
-					{ number: 2, cost: 12, size: 2 },
-					{ number: 4, cost: 22, size: 4 },
-					{ number: 6, cost: 30, size: 6 },
-				],
+				options: optionsArray(2, 35, 5),
 			},
 		],
 		loadout_options: [],
@@ -73,9 +70,8 @@ export const mechanicum: DETACHMENT[] = [
 			{
 				text: "A Adsecularis Tech-thrall Covenant can purchase one of the following upgrades:",
 				options: [
-					{ text: "2 additional Tech-Thralls", cost: 12 },
-					{ text: "4 additional Tech-Thralls", cost: 22 },
-					{ text: "6 additional Tech-Thralls", cost: 30 },
+					{ text: "Increase the Detachment size by 5", cost: 35 },
+					{ text: "Increase the Detachment size by 10", cost: 70 },
 				],
 			},
 		],
@@ -98,21 +94,17 @@ export const mechanicum: DETACHMENT[] = [
 			{
 				name: "Additional Thallax",
 				unit_ref: 3003,
-				options: [
-					{ number: 2, cost: 25, size: 2 },
-					{ number: 4, cost: 40, size: 4 },
-					{ number: 6, cost: 60, size: 6 },
-				],
+				options: optionsArray(3, 20, 2),
 			},
 		],
 		loadout_options: [],
 		datasheet_info: [
 			{
-				text: "A Thallax Cohort can purchase one of the following upgrades:",
+				text: oneUpgrade("Thallax Cohort"),
 				options: [
-					{ text: "2 additional Thallax", cost: 25 },
-					{ text: "4 additional Thallax", cost: 40 },
-					{ text: "6 additional Thallax", cost: 60 },
+					{ text: "Increase the Detachment size by 2", cost: 20 },
+					{ text: "Increase the Detachment size by 4", cost: 40 },
+					{ text: "Increase the Detachment size by 6", cost: 60 },
 				],
 			},
 		],
@@ -162,21 +154,17 @@ export const mechanicum: DETACHMENT[] = [
 			{
 				name: "Additional Myrmidon",
 				unit_ref: 3005,
-				options: [
-					{ number: 2, cost: 25, size: 2 },
-					{ number: 4, cost: 40, size: 4 },
-					{ number: 6, cost: 60, size: 6 },
-				],
+				options: optionsArray(3, 25, 2),
 			},
 		],
 		loadout_options: [],
 		datasheet_info: [
 			{
-				text: "A Myrmidon Secutor Host can purchase one of the following upgrades:",
+				text: oneUpgrade("Myrmidon Secutor Host"),
 				options: [
-					{ text: "2 additional Myrmidon", cost: 25 },
-					{ text: "4 additional Myrmidon", cost: 40 },
-					{ text: "6 additional Myrmidon", cost: 60 },
+					{ text: "Increase the Detachment size by 2", cost: 25 },
+					{ text: "Increase the Detachment size by 4", cost: 50 },
+					{ text: "Increase the Detachment size by 6", cost: 75 },
 				],
 			},
 		],
@@ -199,11 +187,7 @@ export const mechanicum: DETACHMENT[] = [
 			{
 				name: "Additional Myrmidon",
 				unit_ref: 3006,
-				options: [
-					{ number: 2, cost: 25, size: 2 },
-					{ number: 4, cost: 40, size: 4 },
-					{ number: 6, cost: 60, size: 6 },
-				],
+				options: optionsArray(3, 25, 2),
 			},
 		],
 		loadout_options: [
@@ -217,11 +201,11 @@ export const mechanicum: DETACHMENT[] = [
 		],
 		datasheet_info: [
 			{
-				text: "A Myrmidon Destructor Host can purchase one of the following upgrades:",
+				text: oneUpgrade("Myrmidon Destructor Host"),
 				options: [
-					{ text: "2 additional Myrmidon", cost: 25 },
-					{ text: "4 additional Myrmidon", cost: 40 },
-					{ text: "6 additional Myrmidon", cost: 60 },
+					{ text: "Increase the Detachment size by 2", cost: 25 },
+					{ text: "Increase the Detachment size by 4", cost: 50 },
+					{ text: "Increase the Detachment size by 6", cost: 75 },
 				],
 			},
 		],
@@ -278,7 +262,7 @@ export const mechanicum: DETACHMENT[] = [
 		max_size: 6,
 		main_unit: [3008],
 		related_unit: [],
-		dataslate_loadout: [{ text_option: ["Missile launchers", "Graviton hammers"] }],
+		dataslate_loadout: [{ text_option: ["Domitar missile launchers", "Graviton hammers"] }],
 		upgrade_options: [
 			{
 				name: "Additional Domitar",
@@ -295,11 +279,11 @@ export const mechanicum: DETACHMENT[] = [
 		loadout_options: [],
 		datasheet_info: [
 			{
-				text: "An Domitar Battle-automata Maniple can purchase any of the following upgrades. It may purchase the same upgrade multiple times, to a maximum Detachment size of 6",
+				text: "A Domitar Battle-automata Maniple can purchase any of the following upgrades. It may purchase the same upgrade multiple times, to a maximum Detachment size of 6:",
 				options: [
-					{ text: "1 additional Domitar", cost: 30 },
-					{ text: "2 additional Domitar", cost: 55 },
-					{ text: "4 additional Domitar", cost: 105 },
+					{ text: "Increase the Detachment size by 1", cost: 30 },
+					{ text: "Increase the Detachment size by 2", cost: 55 },
+					{ text: "Increase the Detachment size by 4", cost: 105 },
 				],
 			},
 		],
@@ -323,41 +307,20 @@ export const mechanicum: DETACHMENT[] = [
 				name: "Additional Castellax",
 				unit_ref: 3009,
 				options: [
-					{
-						number: 2,
-						cost: 70,
-						size: 2,
-					},
-					{
-						number: 4,
-						cost: 130,
-						size: 4,
-					},
-					{
-						number: 6,
-						cost: 180,
-						size: 6,
-					},
+					{ number: 2, cost: 65, size: 2 },
+					{ number: 4, cost: 130, size: 4 },
+					{ number: 6, cost: 180, size: 6 },
 				],
 			},
 		],
 		loadout_options: [],
 		datasheet_info: [
 			{
-				text: "A Castellax Battle-automata Maniple can purchase one of the following upgrades:",
+				text: oneUpgrade("Castellax Battle-automata Maniple"),
 				options: [
-					{
-						text: "2 additional Castellax",
-						cost: 70,
-					},
-					{
-						text: "4 additional Castellax",
-						cost: 130,
-					},
-					{
-						text: "6 additional Castellax",
-						cost: 180,
-					},
+					{ text: "Increase Detachment size by 2", cost: 65 },
+					{ text: "Increase Detachment size by 4", cost: 130 },
+					{ text: "Increase Detachment size by 6", cost: 180 },
 				],
 			},
 		],
@@ -370,21 +333,17 @@ export const mechanicum: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.vanguard],
-		base_cost: 20,
+		base_cost: 30,
 		base_size: 2,
 		max_size: 8,
 		main_unit: [3010],
 		related_unit: [],
-		dataslate_loadout: [{ text_option: ["Volkite incinerators"] }],
+		dataslate_loadout: [{ text_option: ["Ursarax claws", "Volkite incinerators"] }],
 		upgrade_options: [
 			{
 				name: "Additional Ursarax",
 				unit_ref: 3010,
-				options: [
-					{ number: 2, cost: 20, size: 2 },
-					{ number: 4, cost: 35, size: 4 },
-					{ number: 6, cost: 50, size: 6 },
-				],
+				options: optionsArray(3, 25, 2),
 			},
 		],
 		loadout_options: [],
@@ -392,9 +351,9 @@ export const mechanicum: DETACHMENT[] = [
 			{
 				text: "A Ursarax Cohort can purchase one of the following upgrades:",
 				options: [
-					{ text: "2 additional Ursarax", cost: 20 },
-					{ text: "4 additional Ursarax", cost: 35 },
-					{ text: "6 additional Ursarax", cost: 50 },
+					{ text: "Increase the Detachment size by 2", cost: 25 },
+					{ text: "Increase the Detachment size by 4", cost: 50 },
+					{ text: "Increase the Detachment size by 6", cost: 75 },
 				],
 			},
 		],
@@ -417,11 +376,7 @@ export const mechanicum: DETACHMENT[] = [
 			{
 				name: "Additional Vorax",
 				unit_ref: 3011,
-				options: [
-					{ number: 1, cost: 40, size: 1 },
-					{ number: 2, cost: 70, size: 2 },
-					{ number: 3, cost: 105, size: 3 },
-				],
+				options: optionsArray(3, 35, 1),
 			},
 		],
 		loadout_options: [],
@@ -429,9 +384,9 @@ export const mechanicum: DETACHMENT[] = [
 			{
 				text: "A Vorax Battle-automata Maniple can purchase one of the following upgrades:",
 				options: [
-					{ text: "1 additional Vorax", cost: 40 },
-					{ text: "2 additional Vorax", cost: 70 },
-					{ text: "3 additional Vorax", cost: 105 },
+					{ text: "Increase the Detachment size by 1", cost: 40 },
+					{ text: "Increase the Detachment size by 2", cost: 70 },
+					{ text: "Increase the Detachment size by 3", cost: 105 },
 				],
 			},
 		],
@@ -501,11 +456,11 @@ export const mechanicum: DETACHMENT[] = [
 				name: "Additional Thanatar",
 				unit_ref: 3013,
 				options: [
-					{ number: 1, cost: 55, size: 1 },
+					{ number: 1, cost: 50, size: 1 },
 					{ number: 2, cost: 100, size: 2 },
-					{ number: 3, cost: 155, size: 3 },
+					{ number: 3, cost: 150, size: 3 },
 					{ number: 4, cost: 185, size: 4 },
-					{ number: 5, cost: 240, size: 5 },
+					{ number: 5, cost: 235, size: 5 },
 					{ number: 6, cost: 285, size: 6 },
 				],
 			},
@@ -515,7 +470,7 @@ export const mechanicum: DETACHMENT[] = [
 				location: "Weapons",
 				options: [
 					{ name: "Plasma mortar", cost: 0 },
-					{ name: "Sollex heavy-las", cost: 5 },
+					{ name: "Heavy las & ram", cost: 5 },
 				],
 			},
 		],
@@ -523,9 +478,9 @@ export const mechanicum: DETACHMENT[] = [
 			{
 				text: "An Thanatar Siege-automata Maniple can purchase any of the following upgrades. It may purchase the same upgrade multiple times, to a maximum Detachment size of 8",
 				options: [
-					{ text: "1 additional Thanatar", cost: 55 },
-					{ text: "2 additional Thanatar", cost: 100 },
-					{ text: "4 additional Thanatar", cost: 185 },
+					{ text: "Increase the Detachment size by 1", cost: 50 },
+					{ text: "Increase the Detachment size by 2", cost: 100 },
+					{ text: "Increase the Detachment size by 4", cost: 185 },
 				],
 			},
 		],
@@ -548,11 +503,7 @@ export const mechanicum: DETACHMENT[] = [
 			{
 				name: "Additional Karacnos",
 				unit_ref: 3014,
-				options: [
-					{ number: 1, cost: 40, size: 1 },
-					{ number: 2, cost: 70, size: 2 },
-					{ number: 3, cost: 100, size: 3 },
-				],
+				options: [...optionsArray(2, 35, 1), { number: 3, cost: 100, size: 3 }],
 			},
 		],
 		loadout_options: [],
@@ -560,9 +511,9 @@ export const mechanicum: DETACHMENT[] = [
 			{
 				text: "A Karacnos Assault-tank Squadron can purchase one of the following upgrades:",
 				options: [
-					{ text: "1 additional Karacnos", cost: 40 },
-					{ text: "2 additional Karacnos", cost: 70 },
-					{ text: "3 additional Karacnos", cost: 100 },
+					{ text: "Increase the Detachment size by 1", cost: 35 },
+					{ text: "Increase the Detachment size by 2", cost: 70 },
+					{ text: "Increase the Detachment size by 3", cost: 100 },
 				],
 			},
 		],
@@ -629,7 +580,7 @@ export const mechanicum: DETACHMENT[] = [
 				name: "Additional Krios",
 				unit_ref: 3016,
 				options: [
-					{ number: 2, cost: 60, size: 2 },
+					{ number: 2, cost: 55, size: 2 },
 					{ number: 4, cost: 110, size: 4 },
 					{ number: 6, cost: 160, size: 6 },
 				],
@@ -640,9 +591,9 @@ export const mechanicum: DETACHMENT[] = [
 			{
 				text: "A Krios Venator Squadron can purchase one of the following upgrades:",
 				options: [
-					{ text: "2 additional Krios", cost: 60 },
-					{ text: "4 additional Krios", cost: 110 },
-					{ text: "6 additional Krios", cost: 160 },
+					{ text: "Increase the Detachment size by 2", cost: 55 },
+					{ text: "Increase the Detachment size by 4", cost: 110 },
+					{ text: "Increase the Detachment size by 6", cost: 160 },
 				],
 			},
 		],
@@ -655,7 +606,7 @@ export const mechanicum: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.transport],
-		base_cost: 15,
+		base_cost: 22,
 		base_size: 1,
 		max_size: 20,
 		main_unit: [3017],
@@ -665,19 +616,11 @@ export const mechanicum: DETACHMENT[] = [
 			{
 				name: "Additional Triaros",
 				unit_ref: 3017,
-				options: [
-					{ number: 1, cost: 15, size: 1 },
-					{ number: 2, cost: 30, size: 2 },
-					{ number: 3, cost: 45, size: 3 },
-					{ number: 4, cost: 60, size: 4 },
-					{ number: 5, cost: 75, size: 5 },
-					{ number: 6, cost: 90, size: 6 },
-					{ number: 7, cost: 105, size: 7 },
-				],
+				options: optionsArray(7, 22, 1),
 			},
 		],
 		loadout_options: [],
-		datasheet_info: [{ text: "Additional Triaros at 15pts per model." }],
+		datasheet_info: [],
 	},
 	/// UNIQUE MECHANICUM DETACHMENTS
 	{

@@ -167,7 +167,7 @@ export const mechanicum: UNIT_DATASHEET[] = [
 		caf: 4,
 		morale: null,
 		wounds: 2,
-		weapons: [1006, 3009],
+		weapons: [5013, 3009],
 		special_rules: [
 			{ name: SpecialRule.armoured },
 			{ name: SpecialRule.cyberneticaCortex, value: "Advance, March" },
@@ -207,7 +207,7 @@ export const mechanicum: UNIT_DATASHEET[] = [
 		caf: 3,
 		morale: 3,
 		wounds: 1,
-		weapons: [3012],
+		weapons: [3012, 5014],
 		special_rules: [{ name: SpecialRule.jumpPacks }],
 	},
 	{

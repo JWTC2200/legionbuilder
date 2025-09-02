@@ -2854,6 +2854,39 @@ export const weapons: WEAPON_DATASHEET[] = [
 			},
 		],
 	},
+	{
+		id: 5013,
+		name: "Domitar missile launcher",
+		profiles: [
+			{
+				range: '20"',
+				dice: 1,
+				to_hit: 4,
+				ap: 0,
+				traits: [{ name: WeaponTraits.light }, { name: WeaponTraits.ignoresCover }],
+			},
+			{
+				range: '20"',
+				dice: 1,
+				to_hit: 4,
+				ap: 1,
+				traits: [{ name: WeaponTraits.antitank }],
+			},
+		],
+	},
+	{
+		id: 5014,
+		name: "Ursarax claws",
+		profiles: [
+			{
+				range: "-",
+				dice: null,
+				to_hit: null,
+				ap: "-",
+				traits: [{ name: WeaponTraits.rend }],
+			},
+		],
+	},
 
 	// ********************************************************************
 	// ***********************KNIGHT & TITAN WEAPONS **********************

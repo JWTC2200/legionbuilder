@@ -701,7 +701,7 @@ export const legends: DETACHMENT[] = [
 		max_size: 3,
 		main_unit: [3008],
 		related_unit: [],
-		dataslate_loadout: [{ text_option: ["Missile launchers", "Graviton hammers"] }],
+		dataslate_loadout: [{ text_option: ["Domitar missile launchers", "Graviton hammers"] }],
 		upgrade_options: [],
 		loadout_options: [],
 		datasheet_info: [],
