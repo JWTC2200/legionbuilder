@@ -607,7 +607,7 @@ export const solar: UNIT_DATASHEET[] = [
 		caf: 2,
 		morale: 4,
 		wounds: 1,
-		weapons: [2010, 1027, 2012, 2070],
+		weapons: [2011, 1027, 2012, 2070],
 		special_rules: [{ name: SpecialRule.chainOfCommand }, { name: SpecialRule.exploratorAdaptation }],
 	},
 	{

@@ -1,8 +1,8 @@
 import { ALLEGIANCE, FACTION, FORMATION, FORMATION_RULES, SLOT_TYPE, SUBFACTION_TYPE } from "@type/types"
 
-const legendRules: FORMATION_RULES = {
-	name: "Formation of Legend",
-	text: "Each Formation of Legend consists of two elements: Standard Detachments and Expanded Detachments. When a Formation of Legend is added to your Army Roster, you can either add only the Standard Detachments for the points cost listed, or the Standard Detachments and the Expanded Detachments, paying the total points cost for the Standard Detachments, plus the additional points cost for the Expanded Detachments. A player may choose not to include every Detachment listed under the Expanded Detachments section, but the points cost is not reduced if they do so. You can only include each Formation of Legend once in your army.",
+const iconicFormation: FORMATION_RULES = {
+	name: "Iconic Formation",
+	text: "Each Iconic Formation consists of two elements: Standard Detachments and Expanded Detachments. When an Iconic Formation is added to your Army Roster, you can either add only the Standard Detachments for the points cost listed, or the Standard Detachments and the Expanded Detachments, paying the additional points cost for the Expanded Detachments. A player may choose not to include every Detachment listed under the Expanded Detachments section, but the points cost is not reduced if they do so.",
 }
 
 // 7000-7999
@@ -39,10 +39,10 @@ export const legends: FORMATION[] = [
 			{ slot_type: SLOT_TYPE.optional, slot_id: [7000, 7002] },
 		],
 		rules: [
-			legendRules,
+			iconicFormation,
 			{
 				name: "Sons of Ferrus Manus",
-				text: "This Formation must be from the Iron Hands Legion and can only be included in an Army with the Loyalist Allegiance.",
+				text: "This Formation must be from the Iron Hands Legion and can only be included in an Army with the Loyalist Allegiance. In addition, an Army can only include one Iron Hands Seeker-Killer Clave Ultor Formation.",
 			},
 			{
 				name: "Seeker-killers",
@@ -62,10 +62,10 @@ export const legends: FORMATION[] = [
 			{ slot_type: SLOT_TYPE.optional, slot_id: [7003, 7004, 7005] },
 		],
 		rules: [
-			legendRules,
+			iconicFormation,
 			{
 				name: "Sons of Perturabo",
-				text: "This Formation must be from the Iron Warriors Legion and can only be included in an Army with the Traitor Allegiance",
+				text: "This Formation must be from the Iron Warriors Legion and can only be included in an Army with the Traitor Allegiance. In addition, an Army can only include one Iron Warriors Proioxis Macro-Assault Wing Formation",
 			},
 			{
 				name: "Hammerblow Assault",
@@ -85,10 +85,10 @@ export const legends: FORMATION[] = [
 			{ slot_type: SLOT_TYPE.optional, slot_id: [7009, 7007, 7008] },
 		],
 		rules: [
-			legendRules,
+			iconicFormation,
 			{
 				name: "Protean Instrument",
-				text: "This Formation must be from the Alpha Legion",
+				text: "This Formation must be from the Alpha Legion. In addition, an Army can only include one Alpha Legion Harrow Group Arcadus Formation.",
 			},
 			{
 				name: "Obfuscation Protocols",
@@ -104,14 +104,14 @@ export const legends: FORMATION[] = [
 		subfaction: null,
 		allegiance: ALLEGIANCE.loyalist,
 		formation_slots: [
-			{ slot_type: SLOT_TYPE.compulsory, slot_id: [9004, 7010, 7011, 7012] },
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [7010, 7011, 7012] },
 			{ slot_type: SLOT_TYPE.optional, slot_id: [7013, 7013] },
 		],
 		rules: [
-			legendRules,
+			iconicFormation,
 			{
 				name: "Defenders of Tallarn",
-				text: "This formation can only be included in an Army with the Loyalist Allegiance",
+				text: "This formation can only be included in an Army with the Loyalist Allegiance. In addition, an Army can only include one Tallarn Reborn Carmine Ambush Tercio.",
 			},
 			{
 				name: "Ambush Tercio",
@@ -131,10 +131,14 @@ export const legends: FORMATION[] = [
 			{ slot_type: SLOT_TYPE.optional, slot_id: [7014, 7015] },
 		],
 		rules: [
-			legendRules,
+			iconicFormation,
 			{
 				name: "Despoilers of Tallarn",
-				text: "This formation can only be included in an Army with the Traitor Allegiance",
+				text: "This formation can only be included in an Army with the Traitor Allegiance. In addition, an Army can only include one Galibed Oathsworn Thyreos Siege Breaker Company",
+			},
+			{
+				name: "Thyreos Doctrine",
+				text: `While an Auxilia Medusa Battery or Auxilia Basilik Battery Detachment from this Formation is within 2" of an Auxilia Stormsword Squadron from this Formation, each time a hit is scored against that Auxilia Medusa Battery or Auxilia Basilisk Battery Detachment, unless that hit was from a weapon with the Barrage or Heavy Barrage trait, you can allocated that hit to a Stormsword model from this Formation that is also visible to the firing Detachment.`,
 			},
 		],
 		legend: true,
@@ -150,10 +154,10 @@ export const legends: FORMATION[] = [
 			{ slot_type: SLOT_TYPE.optional, slot_id: [7020, 7021, 7022] },
 		],
 		rules: [
-			legendRules,
+			iconicFormation,
 			{
 				name: "Defenders of Magma City",
-				text: "This Formation can only be included in an Army with the Loyalist Allegiance",
+				text: "This Formation can only be included in an Army with the Loyalist Allegiance. In addition, an Army can only include one Demi-maniple Aeterna.",
 			},
 			{
 				name: "Children of the Storm",
@@ -173,10 +177,14 @@ export const legends: FORMATION[] = [
 			{ slot_type: SLOT_TYPE.optional, slot_id: [7027, 7025, 7025, 7024, 7026, 7028] },
 		],
 		rules: [
-			legendRules,
+			iconicFormation,
 			{
 				name: "Defenders of Magma City",
 				text: "This Formation can only be included in an Army with the Loyalist Allegiance",
+			},
+			{
+				name: "Adaptive Protocols",
+				text: "When a Detachment from this Formation that has the Cybernetica Cortex (X) special rule is activated, its Order may be replaced with a new Order. The new Order must be the same Order as one issued to a friendly Detachment from this Formation that has the Cybernetica Cortex (X) special rule and is within 6\" of the activated Detachment. The new Order can be an Order other than those show in the activated Detachment's Cybernetica Cortex (X) special rule, even oif the activated Detachment is not within range of a Cyber Controller.",
 			},
 		],
 		legend: true,
@@ -192,7 +200,7 @@ export const legends: FORMATION[] = [
 			{ slot_type: SLOT_TYPE.optional, slot_id: [7034, 7032, 7032, 7031] },
 		],
 		rules: [
-			legendRules,
+			iconicFormation,
 			{
 				name: "Servants of Kelbor-Hal",
 				text: "This Formation can only be included in an Army with the Traitor Allegiance",
@@ -215,7 +223,7 @@ export const legends: FORMATION[] = [
 			{ slot_type: SLOT_TYPE.optional, slot_id: [7036, 7039, 7039, 7037, 7038] },
 		],
 		rules: [
-			legendRules,
+			iconicFormation,
 			{
 				name: "Sons of the Pale King",
 				text: "This Formation must be from the Death Guard Legion.",
@@ -238,7 +246,7 @@ export const legends: FORMATION[] = [
 			{ slot_type: SLOT_TYPE.optional, slot_id: [7043, 7044, 7045, 7046] },
 		],
 		rules: [
-			legendRules,
+			iconicFormation,
 			{ name: "Sons of the Khan", text: "This Formation must be from the White Scars Legion." },
 			{
 				name: "Ride the Wind",
@@ -258,7 +266,7 @@ export const legends: FORMATION[] = [
 			{ slot_type: SLOT_TYPE.optional, slot_id: [7049, 7052, 7050, 7053, 7051] },
 		],
 		rules: [
-			legendRules,
+			iconicFormation,
 			{
 				name: "Officer of the Line",
 				text: "The Command Squad model in this Formation can use the Master Tactician special rule twice when it is activated, but it if does, both Detachments selected to have their order replaced must be from this Formation",
@@ -281,7 +289,7 @@ export const legends: FORMATION[] = [
 			{ slot_type: SLOT_TYPE.optional, slot_id: [7057, 7058, 7059, 7056] },
 		],
 		rules: [
-			legendRules,
+			iconicFormation,
 			{
 				name: "Shattering Barrage",
 				text: "When making a Fight roll for an enemy model that is Garrisoned within a Structure that is in a Fight against an Infantry model from this Formation, the controlling player does not gain the Structure Bonus to that model's CAF if that Structure has lost any wounds",
@@ -300,7 +308,7 @@ export const legends: FORMATION[] = [
 			{ slot_type: SLOT_TYPE.optional, slot_id: [7064, 7066, 7065, 7066, 7063] },
 		],
 		rules: [
-			legendRules,
+			iconicFormation,
 			{
 				name: "Tip of the Spear",
 				text: "All Detachments in this Formation must start the battle deployed within their Dedicated Transports. WHen a Detachment from this Formation Deep Strikes, after placing the first model, that model does not Scatter",
@@ -319,7 +327,7 @@ export const legends: FORMATION[] = [
 			{ slot_type: SLOT_TYPE.optional, slot_id: [7067, 7068, 7071, 7070, 7069, 7070] },
 		],
 		rules: [
-			legendRules,
+			iconicFormation,
 			{
 				name: "Elite Commander",
 				text: "Legate Commander Detachments from the Expanded Detachments in this Formation do not count towards the maximum number permitted in an Army.",
@@ -338,7 +346,7 @@ export const legends: FORMATION[] = [
 			{ slot_type: SLOT_TYPE.optional, slot_id: [7073, 7075, 7075, 7075] },
 		],
 		rules: [
-			legendRules,
+			iconicFormation,
 			{
 				name: "Volley Fire",
 				text: "While an Auxilia Lasrile Tercio Detachment in this Formation contains 5 or more Auxiliaries models, Auxilia lasrifles that models in that Detachment are equipped with have the Rapid Fire rule",
@@ -357,7 +365,7 @@ export const legends: FORMATION[] = [
 			{ slot_type: SLOT_TYPE.optional, slot_id: [7079, 7080, 7081] },
 		],
 		rules: [
-			legendRules,
+			iconicFormation,
 			{
 				name: "Mechanised Tercios",
 				text: "While a Detachment from this Formation contains a Tank Commander model, that Detachment has the Nimble and Steadfast special rules.",
@@ -376,7 +384,7 @@ export const legends: FORMATION[] = [
 			{ slot_type: SLOT_TYPE.optional, slot_id: [7082, 7083, 7084, 7085, 7087] },
 		],
 		rules: [
-			legendRules,
+			iconicFormation,
 			{
 				name: "Favoured of the Warmaster",
 				text: "This Formation can only be included in an Army with the Traitor Allegiance",
@@ -399,7 +407,7 @@ export const legends: FORMATION[] = [
 			{ slot_type: SLOT_TYPE.optional, slot_id: [7091, 7090, 7092, 7092] },
 		],
 		rules: [
-			legendRules,
+			iconicFormation,
 			{
 				name: "Defenders of Beta-Garmon",
 				text: "This Formation can only be included in an Army with the Loyalist Allegiance.",

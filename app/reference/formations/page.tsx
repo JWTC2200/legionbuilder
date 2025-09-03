@@ -31,7 +31,7 @@ const page = () => {
 										href={`/reference/formations/${formation.name.replaceAll(" ", "_")} `}
 										className="flex items-center gap-2 w-full py-1">
 										<span>
-											{formation.legend ? <span className={"italic"}>FoL:</span> : null}{" "}
+											{formation.legend ? <span className={"italic"}>IF:</span> : null}{" "}
 											{formation.subfaction ? formation.subfaction : ""} {formation.name}
 										</span>
 									</Link>

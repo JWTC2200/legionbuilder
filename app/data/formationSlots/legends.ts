@@ -101,7 +101,7 @@ export const legends: FORMATION_SLOT[] = [
 		faction: FACTION.solar,
 		restricted: true,
 		options: [7010],
-		description: "Leman Russ Strike Squadron",
+		description: "Leman Russ Vanquisher Squadron",
 	},
 	{
 		id: 7011,

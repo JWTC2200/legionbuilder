@@ -3128,7 +3128,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 		profiles: [
 			{
 				range: '16"',
-				dice: 2,
+				dice: 3,
 				to_hit: 5,
 				ap: 1,
 				traits: [{ name: WeaponTraits.arc, value: "Front" }, { name: WeaponTraits.lightAT }],

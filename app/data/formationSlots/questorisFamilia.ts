@@ -12,7 +12,7 @@ export const questorisFamilia: FORMATION_SLOT[] = [
 		type: DETACHMENT_TYPE.knight,
 		faction: FACTION.questorisFamilia,
 		restricted: true,
-		options: [8102],
+		options: [8102, 8015],
 		description: "Questoris Knight Banner",
 	},
 	{
@@ -20,7 +20,7 @@ export const questorisFamilia: FORMATION_SLOT[] = [
 		type: DETACHMENT_TYPE.knight,
 		faction: FACTION.questorisFamilia,
 		restricted: true,
-		options: [8103],
+		options: [8103, 8106],
 		description: "Cerastus Knight Banner",
 	},
 	{
@@ -28,7 +28,7 @@ export const questorisFamilia: FORMATION_SLOT[] = [
 		type: DETACHMENT_TYPE.knight,
 		faction: FACTION.questorisFamilia,
 		restricted: true,
-		options: [8104],
+		options: [8104, 8107],
 		description: "Acastus Knight Banner",
 	},
 	{
@@ -37,7 +37,7 @@ export const questorisFamilia: FORMATION_SLOT[] = [
 		faction: FACTION.questorisFamilia,
 		restricted: true,
 		options: [8100, 8101],
-		description: "Armiger",
+		description: "Armiger Knight Banner",
 	},
 	{
 		id: 8104,
