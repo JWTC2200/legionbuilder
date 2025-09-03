@@ -1034,6 +1034,7 @@ export const legends: DETACHMENT[] = [
 			{
 				location: "Main",
 				options: [{ name: "Quad-launcher", cost: 0 }],
+				required: 4,
 			},
 		],
 		datasheet_info: [],
@@ -1077,6 +1078,7 @@ export const legends: DETACHMENT[] = [
 			{
 				location: "Weapon pair",
 				options: [{ name: "Melta/flamer", cost: 0 }],
+				required: 4,
 			},
 		],
 		datasheet_info: [],
@@ -1100,6 +1102,7 @@ export const legends: DETACHMENT[] = [
 			{
 				location: "Sponsons",
 				options: [{ name: "Lascannons", cost: 0 }],
+				required: 6,
 			},
 		],
 		datasheet_info: [],
@@ -1217,7 +1220,7 @@ export const legends: DETACHMENT[] = [
 	},
 	{
 		id: 7048,
-		name: "Rhino Dedicated Transports",
+		name: "Command Squad Rhino",
 		faction: FACTION.astartes,
 		subfaction: null,
 		allegiance: null,
@@ -1234,6 +1237,7 @@ export const legends: DETACHMENT[] = [
 			{
 				location: "Pintle",
 				options: [{ name: "Multi-melta", cost: 0 }],
+				required: 1,
 			},
 		],
 		datasheet_info: [],
@@ -1311,6 +1315,7 @@ export const legends: DETACHMENT[] = [
 			{
 				location: "Pintle",
 				options: [{ name: "Havoc launcher", cost: 0 }],
+				required: 2,
 			},
 		],
 		datasheet_info: [],
