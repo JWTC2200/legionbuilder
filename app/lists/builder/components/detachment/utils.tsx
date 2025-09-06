@@ -106,8 +106,6 @@ const requiredLoadouts = (current: ListLoadouts, detachment: DETACHMENT): ListLo
 		if (location.required) return location
 	})
 
-	console.log(required)
-
 	const listLoadouts = (required: DETACHMENT_LOADOUT[]) => {
 		const id = required
 			.map((location) =>
@@ -238,8 +236,6 @@ export const incrementLoadout = (list: List, loadoutSlot: ListLoadouts, id: stri
 		toast.warning("Cannot add any more")
 		return list
 	}
-
-	console.log(loadoutSlot)
 
 	const newLoadoutSlot = {
 		...loadoutSlot,

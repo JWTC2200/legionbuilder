@@ -28,8 +28,9 @@ export const uniqueDetachments: DETACHMENT[] = [
 		],
 		loadout_options: [
 			{
-				location: "Hull",
+				location: "Pintle",
 				options: [
+					{ name: "None", cost: 0 },
 					{ name: "Havoc launcher", cost: 5 },
 					{ name: "Multi-melta", cost: 5 },
 				],

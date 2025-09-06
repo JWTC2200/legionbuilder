@@ -51,6 +51,7 @@ export const astartes: DETACHMENT[] = [
 			{
 				location: "Pintle",
 				options: [
+					{ name: "None", cost: 0 },
 					{ name: "Havoc launcher", cost: 5 },
 					{ name: "Multi-melta", cost: 5 },
 				],
