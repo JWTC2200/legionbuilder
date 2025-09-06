@@ -5,6 +5,7 @@
 // 5000-5999
 
 import { ALLEGIANCE, DETACHMENT, DETACHMENT_TYPE, FACTION } from "@type/types"
+import { oneUpgrade, optionsArray } from "@data/utils"
 
 export const darkMechanicum: DETACHMENT[] = [
 	{
@@ -51,7 +52,7 @@ export const darkMechanicum: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.core],
-		base_cost: 30,
+		base_cost: 40,
 		base_size: 4,
 		max_size: 10,
 		main_unit: [3002],
@@ -61,11 +62,7 @@ export const darkMechanicum: DETACHMENT[] = [
 			{
 				name: "Additional Tech-Thralls",
 				unit_ref: 3002,
-				options: [
-					{ number: 2, cost: 12, size: 2 },
-					{ number: 4, cost: 22, size: 4 },
-					{ number: 6, cost: 30, size: 6 },
-				],
+				options: optionsArray(2, 35, 5),
 			},
 		],
 		loadout_options: [],
@@ -73,9 +70,8 @@ export const darkMechanicum: DETACHMENT[] = [
 			{
 				text: "A Adsecularis Tech-thrall Covenant can purchase one of the following upgrades:",
 				options: [
-					{ text: "2 additional Tech-Thralls", cost: 12 },
-					{ text: "4 additional Tech-Thralls", cost: 22 },
-					{ text: "6 additional Tech-Thralls", cost: 30 },
+					{ text: "Increase the Detachment size by 5", cost: 35 },
+					{ text: "Increase the Detachment size by 10", cost: 70 },
 				],
 			},
 		],
@@ -98,21 +94,17 @@ export const darkMechanicum: DETACHMENT[] = [
 			{
 				name: "Additional Thallax",
 				unit_ref: 3003,
-				options: [
-					{ number: 2, cost: 25, size: 2 },
-					{ number: 4, cost: 40, size: 4 },
-					{ number: 6, cost: 60, size: 6 },
-				],
+				options: optionsArray(3, 20, 2),
 			},
 		],
 		loadout_options: [],
 		datasheet_info: [
 			{
-				text: "A Thallax Cohort can purchase one of the following upgrades:",
+				text: oneUpgrade("Thallax Cohort"),
 				options: [
-					{ text: "2 additional Thallax", cost: 25 },
-					{ text: "4 additional Thallax", cost: 40 },
-					{ text: "6 additional Thallax", cost: 60 },
+					{ text: "Increase the Detachment size by 2", cost: 20 },
+					{ text: "Increase the Detachment size by 4", cost: 40 },
+					{ text: "Increase the Detachment size by 6", cost: 60 },
 				],
 			},
 		],
@@ -162,21 +154,17 @@ export const darkMechanicum: DETACHMENT[] = [
 			{
 				name: "Additional Myrmidon",
 				unit_ref: 3005,
-				options: [
-					{ number: 2, cost: 25, size: 2 },
-					{ number: 4, cost: 40, size: 4 },
-					{ number: 6, cost: 60, size: 6 },
-				],
+				options: optionsArray(3, 25, 2),
 			},
 		],
 		loadout_options: [],
 		datasheet_info: [
 			{
-				text: "A Myrmidon Secutor Host can purchase one of the following upgrades:",
+				text: oneUpgrade("Myrmidon Secutor Host"),
 				options: [
-					{ text: "2 additional Myrmidon", cost: 25 },
-					{ text: "4 additional Myrmidon", cost: 40 },
-					{ text: "6 additional Myrmidon", cost: 60 },
+					{ text: "Increase the Detachment size by 2", cost: 25 },
+					{ text: "Increase the Detachment size by 4", cost: 50 },
+					{ text: "Increase the Detachment size by 6", cost: 75 },
 				],
 			},
 		],
@@ -199,11 +187,7 @@ export const darkMechanicum: DETACHMENT[] = [
 			{
 				name: "Additional Myrmidon",
 				unit_ref: 3006,
-				options: [
-					{ number: 2, cost: 25, size: 2 },
-					{ number: 4, cost: 40, size: 4 },
-					{ number: 6, cost: 60, size: 6 },
-				],
+				options: optionsArray(3, 25, 2),
 			},
 		],
 		loadout_options: [
@@ -217,11 +201,11 @@ export const darkMechanicum: DETACHMENT[] = [
 		],
 		datasheet_info: [
 			{
-				text: "A Myrmidon Destructor Host can purchase one of the following upgrades:",
+				text: oneUpgrade("Myrmidon Destructor Host"),
 				options: [
-					{ text: "2 additional Myrmidon", cost: 25 },
-					{ text: "4 additional Myrmidon", cost: 40 },
-					{ text: "6 additional Myrmidon", cost: 60 },
+					{ text: "Increase the Detachment size by 2", cost: 25 },
+					{ text: "Increase the Detachment size by 4", cost: 50 },
+					{ text: "Increase the Detachment size by 6", cost: 75 },
 				],
 			},
 		],
@@ -234,21 +218,17 @@ export const darkMechanicum: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.vanguard],
-		base_cost: 20,
+		base_cost: 30,
 		base_size: 2,
 		max_size: 8,
 		main_unit: [3010],
 		related_unit: [],
-		dataslate_loadout: [{ text_option: ["Volkite incinerators"] }],
+		dataslate_loadout: [{ text_option: ["Ursarax claws", "Volkite incinerators"] }],
 		upgrade_options: [
 			{
 				name: "Additional Ursarax",
 				unit_ref: 3010,
-				options: [
-					{ number: 2, cost: 20, size: 2 },
-					{ number: 4, cost: 35, size: 4 },
-					{ number: 6, cost: 50, size: 6 },
-				],
+				options: optionsArray(3, 25, 2),
 			},
 		],
 		loadout_options: [],
@@ -256,9 +236,9 @@ export const darkMechanicum: DETACHMENT[] = [
 			{
 				text: "A Ursarax Cohort can purchase one of the following upgrades:",
 				options: [
-					{ text: "2 additional Ursarax", cost: 20 },
-					{ text: "4 additional Ursarax", cost: 35 },
-					{ text: "6 additional Ursarax", cost: 50 },
+					{ text: "Increase the Detachment size by 2", cost: 25 },
+					{ text: "Increase the Detachment size by 4", cost: 50 },
+					{ text: "Increase the Detachment size by 6", cost: 75 },
 				],
 			},
 		],
@@ -351,7 +331,7 @@ export const darkMechanicum: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.transport],
-		base_cost: 15,
+		base_cost: 22,
 		base_size: 1,
 		max_size: 20,
 		main_unit: [3017],
@@ -361,19 +341,11 @@ export const darkMechanicum: DETACHMENT[] = [
 			{
 				name: "Additional Triaros",
 				unit_ref: 3017,
-				options: [
-					{ number: 1, cost: 15, size: 1 },
-					{ number: 2, cost: 30, size: 2 },
-					{ number: 3, cost: 45, size: 3 },
-					{ number: 4, cost: 60, size: 4 },
-					{ number: 5, cost: 75, size: 5 },
-					{ number: 6, cost: 90, size: 6 },
-					{ number: 7, cost: 105, size: 7 },
-				],
+				options: optionsArray(7, 22, 1),
 			},
 		],
 		loadout_options: [],
-		datasheet_info: [{ text: "Additional Triaros at 15pts per model." }],
+		datasheet_info: [],
 	},
 	{
 		id: 5011,

@@ -5,7 +5,9 @@ import { TfiEmail } from "react-icons/tfi"
 import { FaCoffee } from "react-icons/fa"
 import FrontpageUpdates from "@components/FrontpageUpdates"
 import React from "react"
-import { IoDuplicateSharp } from "react-icons/io5"
+import Italic from "@components/text/Italic"
+import { updateData } from "@data/updates"
+import UpdateEntry from "@components/UpdateEntry"
 
 export default function Home() {
 	return (
@@ -18,14 +20,46 @@ export default function Home() {
 
 			<div className="m-4 flex flex-col gap-4 text-lg sm:text-xl">
 				<div>
-					A new duplicate formation button has been added to the list builder! This has been requested a lot,
-					sorry it's taken so long.
+					The new units, formations and changes from the new Liber Strategia book have been added to the site!
 				</div>
-				<div className={"flex gap-2 items-center mb-8"}>
-					To the right of the formation selector is a <IoDuplicateSharp /> button which will add the exact
-					same formation to the list, with all upgrades and loadouts.
+				<div>
+					I'd like to thank everyone who as donated and helped me to add these changes early. It was super
+					nice to get everyone's encouragement and support. Also saved me from a very hectic weekend!
+				</div>
+				<div>
+					If there are any errors, bugs or issues please feel free to pop me a message, preferably in Discord!
+					I expect there will be a few and will plan to have a patch on Monday, 8th after the weekend.
 				</div>
 
+				<div className="mt-4 mx-4 border">
+					<h2 className="text-xl text-center border-b py-2 font-graduate">ISSUES:</h2>
+					<div className="text-base max-h-96 overflow-y-scroll p-2">
+						<ol className="flex flex-col gap-2 list-disc">
+							<li>
+								If your list is unable to load or broken the unfortunately you will have to delete it. I
+								believe this will affect lists that use single knight detachment strategic asset slot as
+								I've merged entries for the knight detachments.{" "}
+								<Italic text={" (Questoris Familia had different options)"} />
+							</li>
+							<li>
+								Legion Typhon has a 2+ Morale instead of 3+ like other Astartes tanks
+								<Italic text={" (I've left this alone for now)"} />
+							</li>
+							<li>
+								Questoris Mechanicum Knight Banners weapons formatting. Graviton gun Graviton Pulse rule
+								has been pushed down and Lightning cannon has lost blast(3)
+								<Italic
+									text={" (Left the Graviton gun alone. Removed Blast(3) from Lightning cannon)"}
+								/>
+							</li>
+							<li>
+								The Auxilia Valdor, Baneblade and Hellhammer Squadron's Pintle Mounted heavy stubber
+								options has a range of 12" instead of 14" like every other stubber weapon
+								<Italic text={' (Decided to have them use the 14" range stubber for now)'} />
+							</li>
+						</ol>
+					</div>
+				</div>
 				<div>
 					LegionBuilder has an official{" "}
 					<Link

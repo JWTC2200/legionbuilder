@@ -5,6 +5,10 @@ interface update {
 
 export const updateData: update[] = [
 	{
+		date: "06/09/25",
+		updates: ["Added new units and formations for the Liber Strategia"],
+	},
+	{
 		date: "14/05/25",
 		updates: ["Added a button to duplicate a formation in the List Builder"],
 	},

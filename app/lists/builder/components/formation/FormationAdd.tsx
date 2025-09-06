@@ -57,6 +57,8 @@ const FormationAdd = () => {
 	return (
 		<div className="text-primary-50 w-full flex flex-wrap justify-evenly gap-4 sm:px-4 py-2 bg-secondary-800 ">
 			{/* <Filter /> */}
+
+			{/* Faction filter */}
 			<select
 				value={select.faction}
 				onChange={(e) => handleFactionChange(e.target.value as FACTION)}
@@ -75,6 +77,8 @@ const FormationAdd = () => {
 					))}
 				{list.gamemode === "titandeath" && <option value={FACTION.strategic}>{FACTION.strategic}</option>}
 			</select>
+
+			{/* Formation selector */}
 			<select
 				value={select.formation}
 				onChange={(e) => setSelect({ ...select, formation: Number(e.target.value) })}
@@ -84,6 +88,7 @@ const FormationAdd = () => {
 				}>
 				{filteredFactions.map((entry) => (
 					<option value={entry.id} key={`formation-add-formation-${entry.name}`} className={"text-right"}>
+						{entry.legend && "IF: "}
 						{entry.name}
 					</option>
 				))}

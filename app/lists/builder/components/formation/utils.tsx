@@ -65,12 +65,12 @@ export const setFormation = (id: number, formation: ListFormation, list: List, s
 				}
 			})
 
+			// checks each compulsory slot, checks if they only have one valid option and adds it
 			const listUpdate = (list: List, options: SlotOptions[], rounds: number): List => {
 				if (rounds >= options.length) return list
 
 				if (options[rounds].id) {
 					const data = detachmentData.find((det) => det.id === options[rounds].id!.id)!
-
 					return listUpdate(updateAllSlotInfo(list, options[rounds].detachment, data), options, rounds + 1)
 				}
 

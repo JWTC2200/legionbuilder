@@ -86,11 +86,11 @@ export const weapons: WEAPON_DATASHEET[] = [
 		name: "Plasma gun",
 		profiles: [
 			{
-				range: '10"',
+				range: '8"',
 				dice: 1,
 				to_hit: 4,
 				ap: 1,
-				traits: [{ name: WeaponTraits.lightAT }],
+				traits: [{ name: WeaponTraits.assault }, { name: WeaponTraits.lightAT }],
 			},
 		],
 	},
@@ -101,7 +101,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 			{
 				range: '20"',
 				dice: 2,
-				to_hit: 4,
+				to_hit: 5,
 				ap: 0,
 				traits: [{ name: WeaponTraits.ignoresCover }, { name: WeaponTraits.light }],
 			},
@@ -222,7 +222,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 		profiles: [
 			{
 				range: '10"',
-				dice: 1,
+				dice: 2,
 				to_hit: 5,
 				ap: 1,
 				traits: [{ name: WeaponTraits.lightAT }, { name: WeaponTraits.rapidFire }],
@@ -344,7 +344,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 			{
 				range: '18"',
 				dice: 2,
-				to_hit: 5,
+				to_hit: 4,
 				ap: 1,
 				traits: [{ name: WeaponTraits.lightAT }],
 			},
@@ -451,7 +451,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 				range: '10"',
 				dice: 1,
 				to_hit: 4,
-				ap: 4,
+				ap: 2,
 				traits: [{ name: WeaponTraits.antitank }, { name: WeaponTraits.armourbane }],
 			},
 		],
@@ -495,11 +495,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 				dice: 2,
 				to_hit: 5,
 				ap: 1,
-				traits: [
-					{ name: WeaponTraits.accurate },
-					{ name: WeaponTraits.arc, value: "Front" },
-					{ name: WeaponTraits.lightAT },
-				],
+				traits: [{ name: WeaponTraits.arc, value: "Front" }, { name: WeaponTraits.lightAT }],
 			},
 		],
 	},
@@ -512,11 +508,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 				dice: 1,
 				to_hit: 4,
 				ap: 1,
-				traits: [
-					{ name: WeaponTraits.accurate },
-					{ name: WeaponTraits.arc, value: "Front" },
-					{ name: WeaponTraits.antitank },
-				],
+				traits: [{ name: WeaponTraits.arc, value: "Front" }, { name: WeaponTraits.antitank }],
 			},
 		],
 	},
@@ -928,8 +920,8 @@ export const weapons: WEAPON_DATASHEET[] = [
 		profiles: [
 			{
 				range: '10"',
-				dice: "D3+2",
-				to_hit: 6,
+				dice: "2",
+				to_hit: 5,
 				ap: 1,
 				traits: [
 					{ name: WeaponTraits.lightAT },
@@ -1050,6 +1042,132 @@ export const weapons: WEAPON_DATASHEET[] = [
 			},
 		],
 	},
+	{
+		id: 1069,
+		name: "Scorpius missile launcher",
+		profiles: [
+			{
+				range: '18"',
+				dice: 2,
+				to_hit: 4,
+				ap: 2,
+				traits: [{ name: WeaponTraits.barrage }, { name: WeaponTraits.lightAT }],
+			},
+		],
+	},
+	{
+		id: 1070,
+		name: "Whirlwind missile launcher",
+		profiles: [
+			{
+				range: '30"',
+				dice: 2,
+				to_hit: 4,
+				ap: 0,
+				traits: [
+					{ name: WeaponTraits.barrage },
+					{ name: WeaponTraits.ignoresCover },
+					{ name: WeaponTraits.rapidFire },
+				],
+			},
+		],
+	},
+	{
+		id: 1071,
+		name: "Siege melta array",
+		profiles: [
+			{
+				range: '6"',
+				dice: 1,
+				to_hit: 3,
+				ap: 4,
+				traits: [
+					{ name: WeaponTraits.arc, value: "Front" },
+					{ name: WeaponTraits.antitank },
+					{ name: WeaponTraits.demolisher },
+					{ name: WeaponTraits.engineKiller, value: 2 },
+				],
+			},
+		],
+	},
+	{
+		id: 1072,
+		name: "Skyreaper battery",
+		profiles: [
+			{
+				range: '20"',
+				dice: 3,
+				to_hit: 5,
+				ap: 1,
+				traits: [
+					{ name: WeaponTraits.lightAT },
+					{ name: WeaponTraits.skyfire },
+					{ name: WeaponTraits.tracking },
+				],
+			},
+		],
+	},
+	{
+		id: 1073,
+		name: "Sponson Mounted heavy flamers",
+		profiles: [
+			{
+				range: '6"',
+				dice: 2,
+				to_hit: 4,
+				ap: 0,
+				traits: [
+					{ name: WeaponTraits.arc, value: "Front" },
+					{ name: WeaponTraits.light },
+					{ name: WeaponTraits.ignoresCover },
+					{ name: WeaponTraits.pointDefence },
+				],
+			},
+		],
+	},
+	{
+		id: 1074,
+		name: "Hull Mounted dreadhammer siege cannon",
+		profiles: [
+			{
+				range: '16"',
+				dice: 2,
+				to_hit: 3,
+				ap: 4,
+				traits: [
+					{ name: WeaponTraits.arc, value: "Front" },
+					{ name: WeaponTraits.demolisher },
+					{ name: WeaponTraits.ignoresCover },
+				],
+			},
+		],
+	},
+	{
+		id: 1075,
+		name: "Pintle Mounted heavy bolter",
+		profiles: [
+			{
+				range: '12"',
+				dice: 2,
+				to_hit: 5,
+				ap: 0,
+				traits: [{ name: WeaponTraits.light }, { name: WeaponTraits.pointDefence }],
+			},
+		],
+	},
+	{
+		id: 1076,
+		name: "Hull Mounted neutron laser battery",
+		profiles: [
+			{
+				range: '24"',
+				dice: 3,
+				to_hit: 4,
+				ap: 3,
+				traits: [{ name: WeaponTraits.arc }, { name: WeaponTraits.shockPulse }],
+			},
+		],
+	},
 	// ********************************************************************
 	// ************************ SOlAR AUXLIA WEAPONS **********************
 	// ********************************************************************
@@ -1162,7 +1280,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 		name: "Multi-laser",
 		profiles: [
 			{
-				range: '14"',
+				range: '12"',
 				dice: 2,
 				to_hit: 5,
 				ap: 0,
@@ -1177,7 +1295,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 			{
 				range: '20"',
 				dice: 2,
-				to_hit: 4,
+				to_hit: 5,
 				ap: 0,
 				traits: [{ name: WeaponTraits.light }, { name: WeaponTraits.ignoresCover }],
 			},
@@ -2056,6 +2174,76 @@ export const weapons: WEAPON_DATASHEET[] = [
 			},
 		],
 	},
+	{
+		id: 2070,
+		name: "Pintle Mounted heavy stubber",
+		profiles: [
+			{
+				range: '14"',
+				dice: 2,
+				to_hit: 6,
+				ap: 0,
+				traits: [{ name: WeaponTraits.light }, { name: WeaponTraits.pointDefence }],
+			},
+		],
+	},
+	{
+		id: 2071,
+		name: "Super-heavy heavy bolter sponsons",
+		profiles: [
+			{
+				range: '12"',
+				dice: 4,
+				to_hit: 5,
+				ap: 0,
+				traits: [{ name: WeaponTraits.light }, { name: WeaponTraits.pointDefence }],
+			},
+		],
+	},
+	{
+		id: 2072,
+		name: "Super-heavy autocannon sponsons",
+		profiles: [
+			{
+				range: '16"',
+				dice: 2,
+				to_hit: 5,
+				ap: 1,
+				traits: [{ name: WeaponTraits.lightAT }, { name: WeaponTraits.pointDefence }],
+			},
+		],
+	},
+	{
+		id: 2073,
+		name: "Super-heavy heavy flamer sponsons",
+		profiles: [
+			{
+				range: '6"',
+				dice: 2,
+				to_hit: 4,
+				ap: 0,
+				traits: [
+					{ name: WeaponTraits.light },
+					{ name: WeaponTraits.ignoresCover },
+					{ name: WeaponTraits.pointDefence },
+				],
+			},
+		],
+	},
+	{
+		id: 2074,
+		name: "Pintle Mounted multi-laser",
+		profiles: [
+			{
+				range: '12"',
+				dice: 2,
+				to_hit: 5,
+				ap: 0,
+				traits: [{ name: WeaponTraits.lightAT }, { name: WeaponTraits.pointDefence }],
+			},
+		],
+	},
+
 	// ********************************************************************
 	// ********************** MECHANICUM WEAPONS **************************
 	// ********************************************************************
@@ -2666,6 +2854,39 @@ export const weapons: WEAPON_DATASHEET[] = [
 			},
 		],
 	},
+	{
+		id: 5013,
+		name: "Domitar missile launcher",
+		profiles: [
+			{
+				range: '20"',
+				dice: 1,
+				to_hit: 4,
+				ap: 0,
+				traits: [{ name: WeaponTraits.light }, { name: WeaponTraits.ignoresCover }],
+			},
+			{
+				range: '20"',
+				dice: 1,
+				to_hit: 4,
+				ap: 1,
+				traits: [{ name: WeaponTraits.antitank }],
+			},
+		],
+	},
+	{
+		id: 5014,
+		name: "Ursarax claws",
+		profiles: [
+			{
+				range: "-",
+				dice: null,
+				to_hit: null,
+				ap: "-",
+				traits: [{ name: WeaponTraits.rend }],
+			},
+		],
+	},
 
 	// ********************************************************************
 	// ***********************KNIGHT & TITAN WEAPONS **********************
@@ -2851,10 +3072,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 				dice: 2,
 				to_hit: 5,
 				ap: 2,
-				traits: [
-					{ name: WeaponTraits.arc, value: "Front" },
-					{ name: WeaponTraits.blast, value: 3 },
-				],
+				traits: [{ name: WeaponTraits.arc, value: "Front" }],
 			},
 		],
 	},
@@ -2907,7 +3125,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 		profiles: [
 			{
 				range: '16"',
-				dice: 2,
+				dice: 3,
 				to_hit: 5,
 				ap: 1,
 				traits: [{ name: WeaponTraits.arc, value: "Front" }, { name: WeaponTraits.lightAT }],
@@ -2976,7 +3194,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 	},
 	{
 		id: 4021,
-		name: "Ionstorm missile pod",
+		name: "Ironstorm missile pod",
 		profiles: [
 			{
 				range: '25"',
@@ -3430,8 +3648,8 @@ export const weapons: WEAPON_DATASHEET[] = [
 				to_hit: 4,
 				ap: 3,
 				traits: [
-					{ name: WeaponTraits.antitank },
 					{ name: WeaponTraits.arc, value: "Front" },
+					{ name: WeaponTraits.antitank },
 					{ name: WeaponTraits.demolisher },
 				],
 			},
@@ -3441,8 +3659,8 @@ export const weapons: WEAPON_DATASHEET[] = [
 				to_hit: 3,
 				ap: 4,
 				traits: [
-					{ name: WeaponTraits.antitank },
 					{ name: WeaponTraits.arc, value: "Front" },
+					{ name: WeaponTraits.antitank },
 					{ name: WeaponTraits.demolisher },
 					{ name: WeaponTraits.engineKiller, value: 4 },
 				],

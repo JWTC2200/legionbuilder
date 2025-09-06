@@ -159,4 +159,12 @@ export const mechanicum: FORMATION_SLOT[] = [
 		options: [4001],
 		description: "Acastus Knight Banner",
 	},
+	{
+		id: 3020,
+		type: DETACHMENT_TYPE.support,
+		faction: FACTION.mechanicum,
+		restricted: true,
+		options: [3005, 3006],
+		description: "Myrmidon Host",
+	},
 ]

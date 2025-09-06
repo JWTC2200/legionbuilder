@@ -28,6 +28,10 @@ export const darkMechanicum: FORMATION[] = [
 				name: "Command - Urgency",
 				text: `When a Detachment with the Networked Anima special rule is activated during the Movement phase, all models within it increase their Movement characteristic by 2" if the detachment is within 6" of a model with the Noosphere Controller special rule. This effect lasts until the end of the round.`,
 			},
+			{
+				name: "Terror Protocol",
+				text: "Compulsory Core Detachment slots in this Formation must be filled with Errax 'Butcher' Assault Stalker Cohort Detachments.",
+			},
 		],
 	},
 	{
@@ -81,6 +85,9 @@ export const darkMechanicum: FORMATION[] = [
 				name: "Command - Overwhelm",
 				text: `Harpax 'Swarmer' Scout Host Detachments within this Formation gain the Infiltrate special rule. All Detachments from this FOrmation with the Networked Anima special rule count their Scale as 1 higher for purposes of determining if enemy Detachments are Engaged and Pinnd while within 8" of a model from this Formation with the Noosphere Controller rule.`,
 			},
+			{
+				text: "*Note: This is only ot determine if the enemy Detachment is Engaged and Pinned - the Harpax Swarms are still Engaged and Pinned by enemy Detachments of Scale (1).",
+			},
 		],
 	},
 	{
@@ -107,6 +114,10 @@ export const darkMechanicum: FORMATION[] = [
 			{
 				name: "Dedicated Transports",
 				text: "Any Dark Mechanicum Detachment within the Formation that contain only Infantry or Walker models may be upgraded with Triaros Armoured Conveyors as Dedicated Transports",
+			},
+			{
+				name: "Augumented Thralls",
+				text: "Compulsory Core Detachment slots in this Formation must be filled with Adsecularis Tech-thrall Covenant Detachments.",
 			},
 		],
 	},

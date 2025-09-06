@@ -1,4 +1,5 @@
 import { DETACHMENT, DETACHMENT_TYPE, FACTION } from "@type/types"
+import { oneUpgrade, optionsArray, pintleStubberLd, pintleStubberTxt } from "@data/utils"
 
 // solar 2000-2999,
 export const solar: DETACHMENT[] = [
@@ -39,7 +40,7 @@ export const solar: DETACHMENT[] = [
 		related_unit: [],
 		dataslate_loadout: [
 			{
-				text_option: ["Auxillia lasrifles"],
+				text_option: ["Volkite chargers"],
 			},
 		],
 		upgrade_options: [],
@@ -58,7 +59,7 @@ export const solar: DETACHMENT[] = [
 		base_size: 4,
 		max_size: 16,
 		main_unit: [2002],
-		related_unit: [9000, 9001],
+		related_unit: [9000, 9001, 9002],
 		dataslate_loadout: [
 			{
 				text_option: ["Auxillia lasrifles"],
@@ -68,62 +69,35 @@ export const solar: DETACHMENT[] = [
 			{
 				name: "Additional Auxiliaries",
 				unit_ref: 2002,
-				options: [
-					{ number: 2, cost: 12, size: 2 },
-					{ number: 4, cost: 24, size: 4 },
-					{ number: 6, cost: 36, size: 6 },
-					{ number: 8, cost: 48, size: 8 },
-					{ number: 10, cost: 60, size: 10 },
-					{ number: 12, cost: 72, size: 12 },
-				],
+				options: optionsArray(6, 12, 2),
 			},
 			{
 				name: "Additional Auxiliaries with Flamers",
 				unit_ref: 9002,
-				options: [
-					{ number: 2, cost: 12, size: 2 },
-					{ number: 4, cost: 24, size: 4 },
-					{ number: 6, cost: 36, size: 6 },
-					{ number: 8, cost: 48, size: 8 },
-					{ number: 10, cost: 60, size: 10 },
-					{ number: 12, cost: 72, size: 12 },
-				],
+				options: optionsArray(6, 12, 2),
 			},
 			{
 				name: "Additional Veletarii",
 				unit_ref: 9000,
-				options: [
-					{ number: 2, cost: 12, size: 2 },
-					{ number: 4, cost: 24, size: 4 },
-					{ number: 6, cost: 36, size: 6 },
-					{ number: 8, cost: 48, size: 8 },
-					{ number: 10, cost: 60, size: 10 },
-					{ number: 12, cost: 72, size: 12 },
-				],
+				options: optionsArray(6, 12, 2),
 			},
 			{
 				name: "Additional Charonite Ogryns",
 				unit_ref: 9001,
-				options: [
-					{ number: 2, cost: 15, size: 2 },
-					{ number: 4, cost: 30, size: 4 },
-					{ number: 6, cost: 45, size: 6 },
-					{ number: 8, cost: 60, size: 8 },
-					{ number: 10, cost: 75, size: 10 },
-					{ number: 12, cost: 90, size: 12 },
-				],
+				options: optionsArray(6, 30, 2),
 			},
 		],
 		loadout_options: [],
 		datasheet_info: [
 			{
-				text: "An Auxilia Lasrifle Tercio can purchase up to six upgrades. It may purchase the same upgrade multiple times: Each upgrade increases the Detachment size by 2.",
+				text: "An Auxilia Lasrifle Tercio can purchase up to six upgrades from the list below. It may purchase the same upgrade multiple times: Each upgrade increases the Detachment size by 2, by adding the respective models:",
 				options: [
 					{ text: "Auxiliaries", cost: 12 },
 					{ text: "Auxiliaries with Flamers", cost: 12 },
 					{ text: "Veletarii", cost: 12 },
-					{ text: "Charonite Ogryns", cost: 15 },
+					{ text: "Charonite Ogryns", cost: 30 },
 				],
+				info: "*Models added via these upgrades use the respective profiles below.",
 			},
 		],
 	},
@@ -135,7 +109,7 @@ export const solar: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.support],
-		base_cost: 50,
+		base_cost: 70,
 		base_size: 4,
 		max_size: 8,
 		main_unit: [2004],
@@ -149,19 +123,16 @@ export const solar: DETACHMENT[] = [
 			{
 				name: "Additional Charonite Ogryn",
 				unit_ref: 2004,
-				options: [
-					{ number: 2, cost: 15, size: 2 },
-					{ number: 4, cost: 30, size: 4 },
-				],
+				options: optionsArray(2, 30, 2),
 			},
 		],
 		loadout_options: [],
 		datasheet_info: [
 			{
-				text: "An Auxilia Charonite Ogryn Section can purchase the following upgrades:",
+				text: oneUpgrade("Auxilia Ogryn Charonite Section"),
 				options: [
-					{ text: "2 additional Charonite Ogryn", cost: 15 },
-					{ text: "4 additional Charonite Ogryn", cost: 30 },
+					{ text: "2 additional Charonite Ogryn", cost: 30 },
+					{ text: "4 additional Charonite Ogryn", cost: 60 },
 				],
 			},
 		],
@@ -188,19 +159,16 @@ export const solar: DETACHMENT[] = [
 			{
 				name: "Additional Veletarii",
 				unit_ref: 2003,
-				options: [
-					{ number: 2, cost: 10, size: 2 },
-					{ number: 4, cost: 20, size: 4 },
-				],
+				options: optionsArray(2, 15, 2),
 			},
 		],
 		loadout_options: [],
 		datasheet_info: [
 			{
-				text: "An Auxilia Veletaris Storm Section can purchase the following upgrades:",
+				text: oneUpgrade("Veletaris Storm Section"),
 				options: [
-					{ text: "2 additional Veletarii", cost: 10 },
-					{ text: "4 additional Veletarii", cost: 20 },
+					{ text: "2 additional Veletarii", cost: 15 },
+					{ text: "4 additional Veletarii", cost: 30 },
 				],
 			},
 		],
@@ -213,9 +181,9 @@ export const solar: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.bastion],
-		base_cost: 50,
-		base_size: 3,
-		max_size: 9,
+		base_cost: 60,
+		base_size: 4,
+		max_size: 12,
 		main_unit: [2005],
 		related_unit: [],
 		dataslate_loadout: [
@@ -227,10 +195,7 @@ export const solar: DETACHMENT[] = [
 			{
 				name: "Additional Rapier",
 				unit_ref: 2005,
-				options: [
-					{ number: 3, cost: 40, size: 3 },
-					{ number: 6, cost: 70, size: 6 },
-				],
+				options: optionsArray(2, 50, 4),
 			},
 		],
 		loadout_options: [
@@ -247,8 +212,8 @@ export const solar: DETACHMENT[] = [
 			{
 				text: "An Auxilia Rapier Battery can purchase the following upgrades:",
 				options: [
-					{ text: "3 additional Rapier", cost: 40 },
-					{ text: "6 additional Rapier", cost: 70 },
+					{ text: "4 additional Rapier", cost: 50 },
+					{ text: "7 additional Rapier", cost: 100 },
 				],
 			},
 		],
@@ -261,9 +226,9 @@ export const solar: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.bastion],
-		base_cost: 36,
-		base_size: 4,
-		max_size: 8,
+		base_cost: 30,
+		base_size: 3,
+		max_size: 9,
 		break_strength: 0,
 		main_unit: [2006],
 		related_unit: [],
@@ -276,10 +241,7 @@ export const solar: DETACHMENT[] = [
 			{
 				name: "Additional Tarantula",
 				unit_ref: 2006,
-				options: [
-					{ number: 2, cost: 15, size: 2, break_strength: 0 },
-					{ number: 4, cost: 25, size: 4, break_strength: 0 },
-				],
+				options: optionsArray(2, 25, 3, 0),
 			},
 		],
 		loadout_options: [
@@ -295,8 +257,8 @@ export const solar: DETACHMENT[] = [
 			{
 				text: "An Auxilia Tarantula Battery can purchase the following upgrades:",
 				options: [
-					{ text: "2 additional Tarantula", cost: 15 },
-					{ text: "4 additional Tarantula", cost: 25 },
+					{ text: "3 additional Tarantula", cost: 25 },
+					{ text: "6 additional Tarantula", cost: 50 },
 				],
 			},
 		],
@@ -350,38 +312,24 @@ export const solar: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.battle],
-		base_cost: 175,
+		base_cost: 160,
 		base_size: 4,
 		max_size: 10,
 		main_unit: [2008],
 		related_unit: [],
 		dataslate_loadout: [
 			{
-				text_option: [
-					"Leman Russ battlecannon or Vanquisher battlecannon",
-					"Hull Mounted heavy bolter or Hull Mounted lascannon",
-				],
+				text_option: ["Leman Russ battlecannon", "Hull Mounted heavy bolter or Hull Mounted lascannon"],
 			},
 		],
 		upgrade_options: [
 			{
 				name: "Additional Leman Russ",
 				unit_ref: 2008,
-				options: [
-					{ number: 2, cost: 85, size: 2 },
-					{ number: 4, cost: 160, size: 4 },
-					{ number: 6, cost: 220, size: 6 },
-				],
+				options: optionsArray(3, 70, 2),
 			},
 		],
 		loadout_options: [
-			{
-				location: "Turret",
-				options: [
-					{ name: "Leman Russ battlecannon", cost: 0 },
-					{ name: "Vanquisher battlecannon", cost: 0 },
-				],
-			},
 			{
 				location: "Hull",
 				options: [
@@ -389,15 +337,19 @@ export const solar: DETACHMENT[] = [
 					{ name: "Lascannons", cost: 0 },
 				],
 			},
+			pintleStubberLd,
 		],
 		datasheet_info: [
 			{
 				text: "A Leman Russ Strike Squadron can purchase the following upgrades:",
 				options: [
-					{ text: "2 additional Leman Russ", cost: 85 },
-					{ text: "4 additional Leman Russ", cost: 160 },
-					{ text: "6 additional Leman Russ", cost: 220 },
+					{ text: "2 additional Leman Russ", cost: 70 },
+					{ text: "4 additional Leman Russ", cost: 140 },
+					{ text: "6 additional Leman Russ", cost: 210 },
 				],
+			},
+			{
+				text: pintleStubberTxt("Leman Russ Tank"),
 			},
 		],
 	},
@@ -409,7 +361,7 @@ export const solar: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.battle],
-		base_cost: 165,
+		base_cost: 150,
 		base_size: 2,
 		max_size: 6,
 		main_unit: [2009],
@@ -417,7 +369,7 @@ export const solar: DETACHMENT[] = [
 		dataslate_loadout: [
 			{
 				text_option: [
-					"Malcador battlecannon or Malcador Vanquisher battlecannon or Malcador lascannon turret",
+					"Malcador battlecannon",
 					"Hull Mounted heavy bolter or Hull Mounted lascannon or Hull Mounted autocannon or Hull Mounted demolisher cannon",
 					"Malcador heavy bolter sponsons or Malcador lascannon sponsons or Malcador autocannon sponsons",
 				],
@@ -429,21 +381,13 @@ export const solar: DETACHMENT[] = [
 				unit_ref: 2009,
 				options: [
 					{ number: 1, cost: 70, size: 1 },
-					{ number: 2, cost: 130, size: 2 },
-					{ number: 3, cost: 200, size: 3 },
-					{ number: 4, cost: 240, size: 4 },
+					{ number: 2, cost: 140, size: 2 },
+					{ number: 3, cost: 210, size: 3 },
+					{ number: 4, cost: 260, size: 4 },
 				],
 			},
 		],
 		loadout_options: [
-			{
-				location: "Turret",
-				options: [
-					{ name: "Malcador battlecannon", cost: 0 },
-					{ name: "Vanquisher battlecannon", cost: 0 },
-					{ name: "Lascannon turret", cost: 0 },
-				],
-			},
 			{
 				location: "Hull",
 				options: [
@@ -461,21 +405,25 @@ export const solar: DETACHMENT[] = [
 					{ name: "Autocannons", cost: 0 },
 				],
 			},
+			pintleStubberLd,
 		],
 		datasheet_info: [
 			{
-				text: "A Malcador Tank Squadron can purchase any of the following upgrades: The same upgrade may be taken more than once.",
+				text: "A Malcador Tank Squadron can purchase any of the following upgrades. It may purchase the same upgrade multiple times, to a maximum Detachment size of 6.",
 				options: [
 					{ text: "1 additional Malcador", cost: 70 },
-					{ text: "2 additional Malcador", cost: 130 },
-					{ text: "4 additional Malcador", cost: 240 },
+					{ text: "2 additional Malcador", cost: 140 },
+					{ text: "4 additional Malcador", cost: 260 },
 				],
+			},
+			{
+				text: pintleStubberTxt("Malcador Tank"),
 			},
 		],
 	},
 	{
 		id: 2010,
-		name: "Auxilia Super-Heavy Tank Squadron",
+		name: "Auxilia Baneblade Squadron",
 		faction: FACTION.solar,
 		subfaction: null,
 		allegiance: null,
@@ -483,15 +431,16 @@ export const solar: DETACHMENT[] = [
 		detachment_type: [DETACHMENT_TYPE.heavy],
 		base_cost: 100,
 		base_size: 1,
-		max_size: 6,
+		max_size: 3,
 		main_unit: [2010],
 		related_unit: [],
 		dataslate_loadout: [
 			{
 				text_option: [
-					"Hull Mounted demolisher cannon and Hull Mounted heavy bolter",
-					"Baneblade cannon with Co-axial autocannon or Hellhammer cannon with Co-axial autocannon",
-					"Baneblade heavy bolter sponsons or Baneblade autocannon sponsons or Baneblade heavy flamer sponsons",
+					"Hull Mounted demolisher cannon",
+					"Hull Mounted heavy bolter turret",
+					"Baneblade cannon with Co-axial autocannon",
+					"Super-heavy heavy bolter sponsons or super-heavy flamer sponsons or super-heavy autocannon sponsons",
 					"Lascannon sponson turrets",
 				],
 			},
@@ -500,23 +449,10 @@ export const solar: DETACHMENT[] = [
 			{
 				name: "Additional Super-heavy",
 				unit_ref: 2010,
-				options: [
-					{ number: 1, cost: 90, size: 1 },
-					{ number: 2, cost: 180, size: 2 },
-					{ number: 3, cost: 255, size: 3 },
-					{ number: 4, cost: 345, size: 4 },
-					{ number: 5, cost: 390, size: 5 },
-				],
+				options: optionsArray(2, 90, 1),
 			},
 		],
 		loadout_options: [
-			{
-				location: "Turret",
-				options: [
-					{ name: "Baneblade cannon", cost: 0 },
-					{ name: "Hellhammer cannon", cost: 0 },
-				],
-			},
 			{
 				location: "Sponsons",
 				options: [
@@ -525,15 +461,18 @@ export const solar: DETACHMENT[] = [
 					{ name: "Autocannons", cost: 0 },
 				],
 			},
+			pintleStubberLd,
 		],
 		datasheet_info: [
 			{
-				text: "An Auxilia Super-Heavy Tank Squadron can purchase any of the following upgrades: The same upgrade may be taken more than once.",
+				text: oneUpgrade("Auxilia Baneblade Squadron"),
 				options: [
-					{ text: "1 additional Super-heavy", cost: 90 },
-					{ text: "3 additional Super-heavy", cost: 255 },
-					{ text: "5 additional Super-heavy", cost: 390 },
+					{ text: "Increase the Detachment size by 1", cost: 90 },
+					{ text: "Increase the Detachment size by 1", cost: 180 },
 				],
+			},
+			{
+				text: pintleStubberTxt("Auxilia Baneblade"),
 			},
 		],
 	},
@@ -794,19 +733,14 @@ export const solar: DETACHMENT[] = [
 		],
 		datasheet_info: [
 			{
-				text: "Any Marauder be upgraded to  one of the following Marauder variants:",
-				options: [
-					{ text: "Marauder Pathfinder", cost: 0 },
-					{ text: "Marauder Colossus", cost: 0 },
-					{ text: "Marauder Destroyer", cost: 10 },
-				],
+				text: "Any Marauder Bomber can be upgraded o a Marauder Pathfinder, Marauder Colossus or Marauder Destroyer, using the respective profile shown below, for free",
 			},
 			{
-				text: "An Auxilia Marauder Bomber Squadron can purchase the following upgrades:",
+				text: "An Auxilia Marauder Squadron Squadron can purchase one of the following upgrades:",
 				options: [
-					{ text: "1 additional Marauder", cost: 85 },
-					{ text: "2 additional Marauder", cost: 160 },
-					{ text: "3 additional Marauder", cost: 220 },
+					{ text: "Increase the Detachment size by 1", cost: 85 },
+					{ text: "Increase the Detachment size by 2", cost: 160 },
+					{ text: "Increase the Detachment size by 3", cost: 220 },
 				],
 			},
 		],
@@ -829,15 +763,7 @@ export const solar: DETACHMENT[] = [
 			{
 				name: "Additional Arvus Lighter",
 				unit_ref: 2018,
-				options: [
-					{ number: 1, cost: 12, size: 1 },
-					{ number: 2, cost: 24, size: 2 },
-					{ number: 3, cost: 36, size: 3 },
-					{ number: 4, cost: 48, size: 4 },
-					{ number: 5, cost: 60, size: 5 },
-					{ number: 6, cost: 72, size: 6 },
-					{ number: 7, cost: 84, size: 7 },
-				],
+				options: optionsArray(7, 12, 1),
 			},
 		],
 		loadout_options: [],
@@ -855,7 +781,7 @@ export const solar: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.transport],
-		base_cost: 37,
+		base_cost: 42,
 		base_size: 1,
 		max_size: 8,
 		main_unit: [2019],
@@ -869,15 +795,7 @@ export const solar: DETACHMENT[] = [
 			{
 				name: "Additional Dracosan",
 				unit_ref: 2019,
-				options: [
-					{ number: 1, cost: 37, size: 1 },
-					{ number: 2, cost: 74, size: 2 },
-					{ number: 3, cost: 111, size: 3 },
-					{ number: 4, cost: 148, size: 4 },
-					{ number: 5, cost: 185, size: 5 },
-					{ number: 6, cost: 222, size: 6 },
-					{ number: 7, cost: 259, size: 7 },
-				],
+				options: optionsArray(7, 42, 1),
 			},
 		],
 		loadout_options: [
@@ -888,10 +806,20 @@ export const solar: DETACHMENT[] = [
 					{ name: "Demolisher Cannon", cost: 5 },
 				],
 			},
+			{
+				location: "Pintle",
+				options: [
+					{ name: "None", cost: 0 },
+					{ name: "Multi-laser", cost: 5 },
+				],
+			},
 		],
 		datasheet_info: [
 			{
 				text: "Any Dracosan may exchange its Hull Mounted twin lascannon for a Hull Mounted demolisher cannon for +5pts per model. Any model that does replaces its Transport (4) special rule with the Transport (2) special rule",
+			},
+			{
+				text: "Any Dracosan may be equipped with one Pintle Mounted multi-laser for +5 points per model",
 			},
 		],
 	},
@@ -919,10 +847,7 @@ export const solar: DETACHMENT[] = [
 			{
 				name: "Additional Cyclops",
 				unit_ref: 2020,
-				options: [
-					{ number: 2, cost: 40, size: 2 },
-					{ number: 4, cost: 80, size: 4 },
-				],
+				options: optionsArray(2, 35, 2),
 			},
 		],
 		loadout_options: [
@@ -936,10 +861,10 @@ export const solar: DETACHMENT[] = [
 		],
 		datasheet_info: [
 			{
-				text: "An Auxilia Cyclops Battery can purchase one of the following upgrades:",
+				text: oneUpgrade("Auxilia Cyclops Battery"),
 				options: [
-					{ text: "Increase the Detachment size by 2", cost: 40 },
-					{ text: "Increase the Detachment size by 5", cost: 80 },
+					{ text: "Increase the Detachment size by 2", cost: 35 },
+					{ text: "Increase the Detachment size by 5", cost: 70 },
 				],
 			},
 		],
@@ -952,7 +877,7 @@ export const solar: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.battle],
-		base_cost: 70,
+		base_cost: 60,
 		base_size: 1,
 		max_size: 3,
 		main_unit: [2021],
@@ -966,10 +891,7 @@ export const solar: DETACHMENT[] = [
 			{
 				name: "Additional Malcador",
 				unit_ref: 2021,
-				options: [
-					{ number: 1, cost: 70, size: 1 },
-					{ number: 2, cost: 140, size: 2 },
-				],
+				options: optionsArray(2, 55, 1),
 			},
 		],
 		loadout_options: [
@@ -980,15 +902,17 @@ export const solar: DETACHMENT[] = [
 					{ name: "Autocannons", cost: 0 },
 				],
 			},
+			pintleStubberLd,
 		],
 		datasheet_info: [
 			{
 				text: "A Malcador Infernus Squadron can purchase one of the following upgrades.",
 				options: [
-					{ text: "Increase the Detachment size by 1", cost: 70 },
-					{ text: "Increase the Detachment size by 2", cost: 140 },
+					{ text: "Increase the Detachment size by 1", cost: 55 },
+					{ text: "Increase the Detachment size by 2", cost: 110 },
 				],
 			},
+			{ text: pintleStubberTxt("Malcador Infernus") },
 		],
 	},
 	{
@@ -999,7 +923,7 @@ export const solar: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.battle],
-		base_cost: 70,
+		base_cost: 60,
 		base_size: 1,
 		max_size: 3,
 		main_unit: [2022],
@@ -1013,10 +937,7 @@ export const solar: DETACHMENT[] = [
 			{
 				name: "Additional Valdor",
 				unit_ref: 2022,
-				options: [
-					{ number: 1, cost: 70, size: 1 },
-					{ number: 2, cost: 140, size: 2 },
-				],
+				options: optionsArray(2, 55, 1),
 			},
 		],
 		loadout_options: [
@@ -1027,6 +948,7 @@ export const solar: DETACHMENT[] = [
 					{ name: "Autocannons", cost: 0 },
 				],
 			},
+			pintleStubberLd,
 		],
 		datasheet_info: [
 			{
@@ -1035,6 +957,9 @@ export const solar: DETACHMENT[] = [
 					{ text: "Increase the Detachment size by 1", cost: 70 },
 					{ text: "Increase the Detachment size by 2", cost: 140 },
 				],
+			},
+			{
+				text: pintleStubberTxt("Auxilia Valdor"),
 			},
 		],
 	},
@@ -1065,10 +990,7 @@ export const solar: DETACHMENT[] = [
 			{
 				name: "Additional Stormhammer",
 				unit_ref: 2023,
-				options: [
-					{ number: 1, cost: 100, size: 1 },
-					{ number: 2, cost: 200, size: 2 },
-				],
+				options: optionsArray(2, 90, 1),
 			},
 		],
 		loadout_options: [
@@ -1076,7 +998,14 @@ export const solar: DETACHMENT[] = [
 				location: "Sponsons",
 				options: [
 					{ name: "Multi-lasers", cost: 0 },
-					{ name: "Lascannons", cost: 4 },
+					{ name: "Lascannons", cost: 5 },
+				],
+			},
+			{
+				location: "Pintle",
+				options: [
+					{ name: "None", cost: 0 },
+					{ name: "Multi-laser", cost: 5 },
 				],
 			},
 		],
@@ -1084,12 +1013,15 @@ export const solar: DETACHMENT[] = [
 			{
 				text: "An Auxilia Stormhammer Squadron can purchase one of the following upgrades.",
 				options: [
-					{ text: "Increase the Detachment size by 1", cost: 100 },
-					{ text: "Increase the Detachment size by 2", cost: 200 },
+					{ text: "Increase the Detachment size by 1", cost: 90 },
+					{ text: "Increase the Detachment size by 2", cost: 180 },
 				],
 			},
 			{
-				text: "Any Stormhammer may exchange its Stormhammer multi-laser sponsons for Stormhammer lascannon sponsons for +4pts per model",
+				text: "Any Stormhammer may exchange its Stormhammer multi-laser sponsons for Stormhammer lascannon sponsons for +5pts per model",
+			},
+			{
+				text: "Any Stormhammer may be equipped with one Pintle Mounted multi-laser for +5 points per model.",
 			},
 		],
 	},
@@ -1101,7 +1033,7 @@ export const solar: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.artillery],
-		base_cost: 130,
+		base_cost: 120,
 		base_size: 4,
 		max_size: 12,
 		main_unit: [2024],
@@ -1115,10 +1047,7 @@ export const solar: DETACHMENT[] = [
 			{
 				name: "Additional Medusa",
 				unit_ref: 2024,
-				options: [
-					{ number: 4, cost: 130, size: 4 },
-					{ number: 8, cost: 260, size: 8 },
-				],
+				options: optionsArray(2, 110, 4),
 			},
 		],
 		loadout_options: [],
@@ -1126,8 +1055,8 @@ export const solar: DETACHMENT[] = [
 			{
 				text: "An Auxilia Medusa Battery can purchase one of the following upgrades.",
 				options: [
-					{ text: "Increase the Detachment size by 4", cost: 130 },
-					{ text: "Increase the Detachment size by 8", cost: 260 },
+					{ text: "Increase the Detachment size by 4", cost: 110 },
+					{ text: "Increase the Detachment size by 8", cost: 220 },
 				],
 			},
 		],
@@ -1140,7 +1069,7 @@ export const solar: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.artillery],
-		base_cost: 140,
+		base_cost: 130,
 		base_size: 4,
 		max_size: 12,
 		main_unit: [2025],
@@ -1154,10 +1083,7 @@ export const solar: DETACHMENT[] = [
 			{
 				name: "Additional Basilisk",
 				unit_ref: 2025,
-				options: [
-					{ number: 4, cost: 140, size: 4 },
-					{ number: 8, cost: 280, size: 8 },
-				],
+				options: optionsArray(2, 120, 4),
 			},
 		],
 		loadout_options: [],
@@ -1165,8 +1091,8 @@ export const solar: DETACHMENT[] = [
 			{
 				text: "An Auxilia Basilisk Battery can purchase one of the following upgrades.",
 				options: [
-					{ text: "Increase the Detachment size by 4", cost: 140 },
-					{ text: "Increase the Detachment size by 8", cost: 280 },
+					{ text: "Increase the Detachment size by 4", cost: 120 },
+					{ text: "Increase the Detachment size by 8", cost: 240 },
 				],
 			},
 		],
@@ -1179,7 +1105,7 @@ export const solar: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.battle],
-		base_cost: 175,
+		base_cost: 160,
 		base_size: 4,
 		max_size: 10,
 		main_unit: [2026],
@@ -1193,11 +1119,7 @@ export const solar: DETACHMENT[] = [
 			{
 				name: "Additional Leman Russ",
 				unit_ref: 2026,
-				options: [
-					{ number: 2, cost: 85, size: 2 },
-					{ number: 4, cost: 160, size: 4 },
-					{ number: 6, cost: 220, size: 6 },
-				],
+				options: optionsArray(3, 70, 2),
 			},
 		],
 		loadout_options: [
@@ -1208,15 +1130,19 @@ export const solar: DETACHMENT[] = [
 					{ name: "Lascannons", cost: 0 },
 				],
 			},
+			pintleStubberLd,
 		],
 		datasheet_info: [
 			{
 				text: "A Leman Russ Exterminator Squadron can purchase the following upgrades:",
 				options: [
-					{ text: "2 additional Leman Russ", cost: 85 },
-					{ text: "4 additional Leman Russ", cost: 160 },
-					{ text: "6 additional Leman Russ", cost: 220 },
+					{ text: "2 additional Leman Russ", cost: 70 },
+					{ text: "4 additional Leman Russ", cost: 140 },
+					{ text: "6 additional Leman Russ", cost: 210 },
 				],
+			},
+			{
+				text: pintleStubberTxt("Leman Russ Exterminator"),
 			},
 		],
 	},
@@ -1228,7 +1154,7 @@ export const solar: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.battle],
-		base_cost: 175,
+		base_cost: 160,
 		base_size: 4,
 		max_size: 10,
 		main_unit: [2027],
@@ -1242,11 +1168,7 @@ export const solar: DETACHMENT[] = [
 			{
 				name: "Additional Leman Russ",
 				unit_ref: 2027,
-				options: [
-					{ number: 2, cost: 85, size: 2 },
-					{ number: 4, cost: 160, size: 4 },
-					{ number: 6, cost: 220, size: 6 },
-				],
+				options: optionsArray(3, 70, 2),
 			},
 		],
 		loadout_options: [
@@ -1257,15 +1179,19 @@ export const solar: DETACHMENT[] = [
 					{ name: "Lascannons", cost: 0 },
 				],
 			},
+			pintleStubberLd,
 		],
 		datasheet_info: [
 			{
 				text: "A Leman Russ Executioner Squadron can purchase the following upgrades:",
 				options: [
-					{ text: "2 additional Leman Russ", cost: 85 },
-					{ text: "4 additional Leman Russ", cost: 160 },
-					{ text: "6 additional Leman Russ", cost: 220 },
+					{ text: "2 additional Leman Russ", cost: 70 },
+					{ text: "4 additional Leman Russ", cost: 140 },
+					{ text: "6 additional Leman Russ", cost: 210 },
 				],
+			},
+			{
+				text: pintleStubberTxt("Leman Russ Executioner"),
 			},
 		],
 	},
@@ -1277,7 +1203,7 @@ export const solar: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.battle],
-		base_cost: 175,
+		base_cost: 165,
 		base_size: 4,
 		max_size: 10,
 		main_unit: [2028],
@@ -1291,11 +1217,7 @@ export const solar: DETACHMENT[] = [
 			{
 				name: "Additional Leman Russ",
 				unit_ref: 2028,
-				options: [
-					{ number: 2, cost: 85, size: 2 },
-					{ number: 4, cost: 160, size: 4 },
-					{ number: 6, cost: 220, size: 6 },
-				],
+				options: optionsArray(3, 75, 2),
 			},
 		],
 		loadout_options: [
@@ -1306,15 +1228,19 @@ export const solar: DETACHMENT[] = [
 					{ name: "Lascannons", cost: 0 },
 				],
 			},
+			pintleStubberLd,
 		],
 		datasheet_info: [
 			{
 				text: "A Leman Russ Demolisher Squadron can purchase the following upgrades:",
 				options: [
-					{ text: "2 additional Leman Russ", cost: 85 },
-					{ text: "4 additional Leman Russ", cost: 160 },
-					{ text: "6 additional Leman Russ", cost: 220 },
+					{ text: "2 additional Leman Russ", cost: 75 },
+					{ text: "4 additional Leman Russ", cost: 150 },
+					{ text: "6 additional Leman Russ", cost: 225 },
 				],
+			},
+			{
+				text: pintleStubberTxt("Leman Russ Demolisher"),
 			},
 		],
 	},
@@ -1326,7 +1252,7 @@ export const solar: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.battle],
-		base_cost: 175,
+		base_cost: 170,
 		base_size: 4,
 		max_size: 10,
 		main_unit: [2029],
@@ -1340,11 +1266,7 @@ export const solar: DETACHMENT[] = [
 			{
 				name: "Additional Leman Russ",
 				unit_ref: 2029,
-				options: [
-					{ number: 2, cost: 85, size: 2 },
-					{ number: 4, cost: 160, size: 4 },
-					{ number: 6, cost: 220, size: 6 },
-				],
+				options: optionsArray(3, 75, 2),
 			},
 		],
 		loadout_options: [
@@ -1355,15 +1277,19 @@ export const solar: DETACHMENT[] = [
 					{ name: "Lascannons", cost: 0 },
 				],
 			},
+			pintleStubberLd,
 		],
 		datasheet_info: [
 			{
 				text: "A Leman Russ Annihilator Squadron can purchase the following upgrades:",
 				options: [
-					{ text: "2 additional Leman Russ", cost: 85 },
-					{ text: "4 additional Leman Russ", cost: 160 },
-					{ text: "6 additional Leman Russ", cost: 220 },
+					{ text: "2 additional Leman Russ", cost: 75 },
+					{ text: "4 additional Leman Russ", cost: 150 },
+					{ text: "6 additional Leman Russ", cost: 225 },
 				],
+			},
+			{
+				text: pintleStubberTxt("Leman Russ Demolisher"),
 			},
 		],
 	},
@@ -1375,7 +1301,7 @@ export const solar: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.heavy],
-		base_cost: 140,
+		base_cost: 120,
 		base_size: 1,
 		max_size: 3,
 		main_unit: [2030],
@@ -1394,20 +1320,20 @@ export const solar: DETACHMENT[] = [
 			{
 				name: "Additional Shadowsword",
 				unit_ref: 2030,
-				options: [
-					{ number: 1, cost: 130, size: 1 },
-					{ number: 2, cost: 260, size: 2 },
-				],
+				options: optionsArray(2, 110, 1),
 			},
 		],
-		loadout_options: [],
+		loadout_options: [pintleStubberLd],
 		datasheet_info: [
 			{
 				text: "A Auxilia Shadowsword Squadron can purchase the following upgrades:",
 				options: [
-					{ text: "1 additional Shadowsword", cost: 130 },
-					{ text: "2 additional Shadowsword", cost: 260 },
+					{ text: "Increase the Detachment size by 1", cost: 110 },
+					{ text: "Increase the Detachment size by 2", cost: 220 },
 				],
+			},
+			{
+				text: pintleStubberTxt("Shadowsword"),
 			},
 		],
 	},
@@ -1438,20 +1364,20 @@ export const solar: DETACHMENT[] = [
 			{
 				name: "Additional Stormsword",
 				unit_ref: 2031,
-				options: [
-					{ number: 1, cost: 90, size: 1 },
-					{ number: 2, cost: 180, size: 2 },
-				],
+				options: optionsArray(2, 90, 1),
 			},
 		],
-		loadout_options: [],
+		loadout_options: [pintleStubberLd],
 		datasheet_info: [
 			{
 				text: "A Auxilia Stormsword Squadron can purchase the following upgrades:",
 				options: [
-					{ text: "1 additional Stormsword", cost: 90 },
-					{ text: "2 additional Stormsword", cost: 180 },
+					{ text: "Increase the Detachment size by 1", cost: 90 },
+					{ text: "Increase the Detachment size by 2", cost: 180 },
 				],
+			},
+			{
+				text: pintleStubberTxt("Stormsword"),
 			},
 		],
 	},
@@ -1463,7 +1389,7 @@ export const solar: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.heavy],
-		base_cost: 120,
+		base_cost: 110,
 		base_size: 1,
 		max_size: 3,
 		main_unit: [2032],
@@ -1482,20 +1408,251 @@ export const solar: DETACHMENT[] = [
 			{
 				name: "Additional Stormblade",
 				unit_ref: 2032,
+				options: optionsArray(2, 100, 1),
+			},
+		],
+		loadout_options: [pintleStubberLd],
+		datasheet_info: [
+			{
+				text: oneUpgrade("Auxilia Stormblade Squadron"),
 				options: [
-					{ number: 1, cost: 110, size: 1 },
-					{ number: 2, cost: 220, size: 2 },
+					{ text: "Increase the Detachment size by 1", cost: 110 },
+					{ text: "Increase the Detachment size by 2", cost: 220 },
+				],
+			},
+			{ text: pintleStubberTxt("Stormblade") },
+		],
+	},
+	{
+		id: 2030,
+		name: "Leman Russ Vanquisher Squadron",
+		faction: FACTION.solar,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: [DETACHMENT_TYPE.battle],
+		base_cost: 175,
+		base_size: 4,
+		max_size: 10,
+		main_unit: [2033],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: ["Vanquisher battlecannon", "Hull Mounted heavy bolter or Hull Mounted lascannon"],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Leman Russ",
+				unit_ref: 2033,
+				options: [
+					{ number: 2, cost: 85, size: 2 },
+					{ number: 4, cost: 170, size: 4 },
+					{ number: 6, cost: 230, size: 6 },
 				],
 			},
 		],
-		loadout_options: [],
+		loadout_options: [
+			{
+				location: "Hull",
+				options: [
+					{ name: "Heavy bolters", cost: 0 },
+					{ name: "Lascannons", cost: 0 },
+				],
+			},
+			pintleStubberLd,
+		],
 		datasheet_info: [
 			{
-				text: "A Auxilia Stormblade Squadron can purchase the following upgrades:",
+				text: "A Leman Russ Vanquisher Squadron can purchase the following upgrades:",
 				options: [
-					{ text: "1 additional Stormblade", cost: 110 },
-					{ text: "2 additional Stormblade", cost: 220 },
+					{ text: "2 additional Leman Russ", cost: 85 },
+					{ text: "4 additional Leman Russ", cost: 170 },
+					{ text: "6 additional Leman Russ", cost: 230 },
 				],
+			},
+			{
+				text: pintleStubberTxt("Leman Russ Vanquisher"),
+			},
+		],
+	},
+	{
+		id: 2031,
+		name: "Malcador Vanquisher Squadron",
+		faction: FACTION.solar,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: [DETACHMENT_TYPE.battle],
+		base_cost: 160,
+		base_size: 2,
+		max_size: 6,
+		main_unit: [2034],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: [
+					"Malcador Vanquisher Battlecanon",
+					"Hull Mounted heavy bolter or Hull Mounted lascannon or Hull Mounted autocannon or Hull Mounted demolisher cannon",
+					"Malcador heavy bolter sponsons or Malcador lascannon sponsons or Malcador autocannon sponsons",
+				],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Malcador",
+				unit_ref: 2034,
+				options: [...optionsArray(3, 75, 1), { number: 4, cost: 280, size: 4 }],
+			},
+		],
+		loadout_options: [
+			{
+				location: "Hull",
+				options: [
+					{ name: "Heavy bolter", cost: 0 },
+					{ name: "Lascannon", cost: 0 },
+					{ name: "Autocannon", cost: 0 },
+					{ name: "Demolisher cannon", cost: 0 },
+				],
+			},
+			{
+				location: "Sponsons",
+				options: [
+					{ name: "Heavy bolters", cost: 0 },
+					{ name: "Lascannons", cost: 0 },
+					{ name: "Autocannons", cost: 0 },
+				],
+			},
+			pintleStubberLd,
+		],
+		datasheet_info: [
+			{
+				text: "A Malcador Vanquisher Squadron can purchase any of the following upgrades. It may purchase the same upgrade multiple times, to a maximum Detachment size of 6.",
+				options: [
+					{ text: "1 additional Malcador", cost: 75 },
+					{ text: "2 additional Malcador", cost: 150 },
+					{ text: "4 additional Malcador", cost: 280 },
+				],
+			},
+			{
+				text: pintleStubberTxt("Malcador Vanquisher"),
+			},
+		],
+	},
+	{
+		id: 2032,
+		name: "Malcador Annihilator Squadron",
+		faction: FACTION.solar,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: [DETACHMENT_TYPE.battle],
+		base_cost: 160,
+		base_size: 2,
+		max_size: 6,
+		main_unit: [2035],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: [
+					"Malcador Annihilator Battlecanon",
+					"Hull Mounted heavy bolter or Hull Mounted lascannon or Hull Mounted autocannon or Hull Mounted demolisher cannon",
+					"Malcador heavy bolter sponsons or Malcador lascannon sponsons or Malcador autocannon sponsons",
+				],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Malcador",
+				unit_ref: 2035,
+				options: [...optionsArray(3, 70, 1), { number: 4, cost: 260, size: 4 }],
+			},
+		],
+		loadout_options: [
+			{
+				location: "Hull",
+				options: [
+					{ name: "Heavy bolter", cost: 0 },
+					{ name: "Lascannon", cost: 0 },
+					{ name: "Autocannon", cost: 0 },
+					{ name: "Demolisher cannon", cost: 0 },
+				],
+			},
+			{
+				location: "Sponsons",
+				options: [
+					{ name: "Heavy bolters", cost: 0 },
+					{ name: "Lascannons", cost: 0 },
+					{ name: "Autocannons", cost: 0 },
+				],
+			},
+			pintleStubberLd,
+		],
+		datasheet_info: [
+			{
+				text: "A Malcador Annihilator Squadron can purchase any of the following upgrades. It may purchase the same upgrade multiple times, to a maximum Detachment size of 6.",
+				options: [
+					{ text: "1 additional Malcador", cost: 70 },
+					{ text: "2 additional Malcador", cost: 140 },
+					{ text: "4 additional Malcador", cost: 260 },
+				],
+			},
+			{
+				text: pintleStubberTxt("Malcador Annihilator"),
+			},
+		],
+	},
+	{
+		id: 2033,
+		name: "Auxilia Hellhammer Squadron",
+		faction: FACTION.solar,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: [DETACHMENT_TYPE.heavy],
+		base_cost: 100,
+		base_size: 1,
+		max_size: 3,
+		main_unit: [2036],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: [
+					"Hull Mounted demolisher cannon",
+					"Hull Mounted heavy bolter turret",
+					"Hellhammer cannon with Co-axial autocannon",
+					"Super-heavy heavy bolter sponsons or super-heavy flamer sponsons or super-heavy autocannon sponsons",
+					"Lascannon sponson turrets",
+				],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Super-heavy",
+				unit_ref: 2036,
+				options: optionsArray(2, 90, 1),
+			},
+		],
+		loadout_options: [
+			{
+				location: "Sponsons",
+				options: [
+					{ name: "Heavy bolters", cost: 0 },
+					{ name: "Heavy flamers", cost: 0 },
+					{ name: "Autocannons", cost: 0 },
+				],
+			},
+		],
+		datasheet_info: [
+			{
+				text: oneUpgrade("Auxilia Hellhammer Squadron"),
+				options: [
+					{ text: "Increase the Detachment size by 1", cost: 90 },
+					{ text: "Increase the Detachment size by 1", cost: 180 },
+				],
+			},
+			{
+				text: pintleStubberTxt("Auxilia Hellhammer"),
 			},
 		],
 	},

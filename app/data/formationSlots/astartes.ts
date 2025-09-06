@@ -119,4 +119,13 @@ export const astartes: FORMATION_SLOT[] = [
 		options: [3011, 3012],
 		description: "Brethren of Iron",
 	},
+
+	// Legion Armoured Company HQ
+	{
+		id: 1015,
+		type: DETACHMENT_TYPE.hq,
+		faction: FACTION.astartes,
+		restricted: true,
+		options: [1032, 1033, 1034],
+	},
 ]

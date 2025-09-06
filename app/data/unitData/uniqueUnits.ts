@@ -36,7 +36,11 @@ export const uniqueUnits: UNIT_DATASHEET[] = [
 		morale: 4,
 		wounds: 1,
 		weapons: [2006],
-		special_rules: [{ name: SpecialRule.furiousCharge }, { name: SpecialRule.independent }],
+		special_rules: [
+			{ name: SpecialRule.bulky },
+			{ name: SpecialRule.furiousCharge },
+			{ name: SpecialRule.independent },
+		],
 	},
 	{
 		id: 9002,
