@@ -2018,7 +2018,7 @@ export const astartes: DETACHMENT[] = [
 		datasheet_info: [],
 	},
 	{
-		id: 1013,
+		id: 1042,
 		name: "Legion Sicaran Omega Squadron",
 		faction: FACTION.astartes,
 		subfaction: null,
