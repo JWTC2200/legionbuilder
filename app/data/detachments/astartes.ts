@@ -51,20 +51,27 @@ export const astartes: DETACHMENT[] = [
 			{
 				location: "Pintle",
 				options: [
-					{ name: "Havoc launcher", cost: 2 },
-					{ name: "Multi-melta", cost: 4 },
+					{ name: "Havoc launcher", cost: 5 },
+					{ name: "Multi-melta", cost: 5 },
+				],
+			},
+			{
+				location: "Hull",
+				options: [
+					{ name: "None", cost: 0 },
+					{ name: "Hunter-killer", cost: 5 },
 				],
 			},
 		],
 		datasheet_info: [
-			{ text: "Additional Rhino at 10pts per model." },
 			{
 				text: "A Rhino may change its Pintle Mounted twin-linked bolter for one of the following",
 				options: [
-					{ text: "Pintle mounted havoc launcher", cost: 2 },
-					{ text: "Pintle mounted multi-melta", cost: 4 },
+					{ text: "Pintle mounted havoc launcher", cost: 5 },
+					{ text: "Pintle mounted multi-melta", cost: 5 },
 				],
 			},
+			{ text: "A Rhino may be equipped with one hunter-killed missile for +5 points per model." },
 		],
 	},
 	{
@@ -728,7 +735,7 @@ export const astartes: DETACHMENT[] = [
 				location: "Pintle",
 				options: [
 					{ name: "None", cost: 0 },
-					{ name: "Heavy bolter", cost: 0 },
+					{ name: "Heavy bolter", cost: 5 },
 				],
 			},
 		],
@@ -1343,7 +1350,7 @@ export const astartes: DETACHMENT[] = [
 				location: "Pintle",
 				options: [
 					{ name: "None", cost: 0 },
-					{ name: "Heavy bolter", cost: 0 },
+					{ name: "Heavy bolter", cost: 5 },
 				],
 			},
 		],
@@ -2048,7 +2055,7 @@ export const astartes: DETACHMENT[] = [
 				location: "Pintle",
 				options: [
 					{ name: "None", cost: 0 },
-					{ name: "Heavy bolter", cost: 0 },
+					{ name: "Heavy bolter", cost: 5 },
 				],
 			},
 		],

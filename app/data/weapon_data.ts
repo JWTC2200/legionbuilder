@@ -1168,6 +1168,19 @@ export const weapons: WEAPON_DATASHEET[] = [
 			},
 		],
 	},
+	{
+		id: 1077,
+		name: "Hunter-killer missile",
+		profiles: [
+			{
+				range: '12"',
+				dice: 1,
+				to_hit: 5,
+				ap: 2,
+				traits: [{ name: WeaponTraits.antitank }, { name: WeaponTraits.limited, value: 1 }],
+			},
+		],
+	},
 	// ********************************************************************
 	// ************************ SOlAR AUXLIA WEAPONS **********************
 	// ********************************************************************

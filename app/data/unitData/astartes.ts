@@ -40,7 +40,7 @@ export const astartes: UNIT_DATASHEET[] = [
 		caf: 0,
 		morale: 3,
 		wounds: 1,
-		weapons: [1001, 1002, 1003],
+		weapons: [1001, 1002, 1003, 1077],
 		special_rules: [{ name: SpecialRule.transport, value: 2 }],
 	},
 	{
