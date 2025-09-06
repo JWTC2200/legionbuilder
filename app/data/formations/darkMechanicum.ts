@@ -68,8 +68,8 @@ export const darkMechanicum: FORMATION[] = [
 		subfaction: null,
 		allegiance: ALLEGIANCE.traitor,
 		formation_slots: [
-			{ slot_type: SLOT_TYPE.compulsory, slot_id: [5003, 5003, 5003] },
-			{ slot_type: SLOT_TYPE.optional, slot_id: [5901, 5003, 5003, 5003, 5004, 5004] },
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [5901, 5901, 5901] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [5003, 5003, 5003, 5004, 5004] },
 			{ slot_type: SLOT_TYPE.optional, slot_id: [4000] },
 		],
 		rules: [
@@ -78,7 +78,10 @@ export const darkMechanicum: FORMATION[] = [
 				text: "Due to how some of the compulsory slots can only be filled with Traitor allegiance detachments this Formation will also be classed as a Traitor Formation.",
 			},
 			{
-				name: "Controller Host",
+				name: "Swarm Protocol",
+				text: "Compulsory Vanguard Detachment slots in this Formation must be filled with Harpax 'Swarmer' Scout Host Detachments.",
+			},
+			{
 				text: "Any Harpax 'Swarmer' Scout Host selected within a Complusory Detachment slot may be upgraded to a 'Controller Host' for +15pts. A Detachment upgraded in this way gains the Noosphere Controller and Invulnerable Save (6+) special rules.",
 			},
 			{

@@ -250,7 +250,7 @@ export interface DB_ENTRY {
 }
 
 export interface ListModel {
-	name: string
+	id: number
 	number: number
 	faction: FACTION
 }

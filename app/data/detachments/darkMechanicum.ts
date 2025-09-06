@@ -607,31 +607,53 @@ export const darkMechanicum: DETACHMENT[] = [
 	// unique detachments
 	{
 		id: 5900,
-		name: "Controller Host",
-		faction: FACTION.mechanicum,
+		name: "Harpax 'Swarmer' Scout Host",
+		faction: FACTION.darkMechanicum,
 		subfaction: null,
-		allegiance: null,
+		allegiance: ALLEGIANCE.traitor,
 		unique: true,
-		detachment_type: [DETACHMENT_TYPE.hq],
-		base_cost: 15,
-		base_size: 1,
-		max_size: 1,
-		break_strength: 0,
-		main_unit: [],
+		detachment_type: [DETACHMENT_TYPE.vanguard],
+		base_cost: 30,
+		base_size: 4,
+		max_size: 10,
+		main_unit: [5002],
 		related_unit: [],
-		dataslate_loadout: [],
+		dataslate_loadout: [{ text_option: ["Exo-planar repeaters or Harpax lascutters"] }],
 		upgrade_options: [
 			{
-				name: "Additional Controller Hosts",
+				name: "Additional Harpax",
 				unit_ref: 5002,
 				options: [
-					{ number: 1, cost: 15, size: 0 },
-					{ number: 2, cost: 30, size: 0 },
+					{ number: 2, cost: 15, size: 2 },
+					{ number: 4, cost: 25, size: 4 },
+					{ number: 6, cost: 35, size: 6 },
+				],
+			},
+			{
+				name: "Controller Host",
+				unit_ref: 5002,
+				options: [{ number: 1, cost: 15, size: 0 }],
+			},
+		],
+		loadout_options: [
+			{
+				location: "Weapon",
+				options: [
+					{ name: "Exo-planar repeaters", cost: 0 },
+					{ name: "Harpax Lascutter", cost: 0 },
 				],
 			},
 		],
-		loadout_options: [],
-		datasheet_info: [],
+		datasheet_info: [
+			{
+				text: "A Harpax 'Swarmer' Scout Host can purchase one of the following upgrades:",
+				options: [
+					{ text: "2 additional Harpax", cost: 15 },
+					{ text: "4 additional Harpax", cost: 25 },
+					{ text: "6 additional Harpax", cost: 35 },
+				],
+			},
+		],
 	},
 	{
 		id: 5901,

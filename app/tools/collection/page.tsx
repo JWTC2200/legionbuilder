@@ -50,6 +50,7 @@ const page = () => {
 						}>
 						Save collection
 					</button>
+					<button onClick={() => console.log(collection)}>log</button>
 				</div>
 				<div className={"px-2"}>
 					<select

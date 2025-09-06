@@ -290,7 +290,7 @@ export const uniqueDetachments: DETACHMENT[] = [
 				location: "Hull",
 				options: [
 					{ name: "Heavy bolter", cost: 0 },
-					{ name: "Lascannon", cost: 2 },
+					{ name: "Lascannon", cost: 0 },
 				],
 			},
 			{

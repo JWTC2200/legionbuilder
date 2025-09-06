@@ -34,7 +34,7 @@ export const uniqueUnits: UNIT_DATASHEET[] = [
 		save: 6,
 		caf: 3,
 		morale: 4,
-		wounds: 1,
+		wounds: 2,
 		weapons: [2006],
 		special_rules: [
 			{ name: SpecialRule.bulky },

@@ -45,7 +45,7 @@ export const questorisFamilia: DETACHMENT[] = [
 		faction: FACTION.strategic,
 		subfaction: null,
 		allegiance: null,
-		unique: true,
+		unique: false,
 		detachment_type: [DETACHMENT_TYPE.knight],
 		base_cost: 135,
 		base_size: 3,
@@ -97,20 +97,12 @@ export const questorisFamilia: DETACHMENT[] = [
 			{
 				text: "Each Questoris Knight has one of the following weapon loadouts:",
 				text_option: [
-					"Knight Errant: Thermal Cannon, heavy stubber and a Reaper chainsword*",
-					"Knight Paladin: Rapid-fire battlecannon, heavy stubber and a Reaper chainsword*",
-					"Knight Warden: Questoris-avenger gatling cannon, meltagun and a Reaper chainsword*",
-					"Knight Gallant: Thunderstrike gauntlet, meltagun and a Reaper chainsword*",
-					"Knight Crusader: Heavy stubber and either a Questoris-avenger gatling cannon and thermal cannon, or a rapid-fire battlecannon and thermal cannon*",
+					"Knight Errant: Thermal Cannon, heavy stubber and a Reaper chainsword",
+					"Knight Paladin: Rapid-fire battlecannon, heavy stubber and a Reaper chainsword",
+					"Knight Warden: Questoris-avenger gatling cannon, meltagun and a Reaper chainsword",
+					"Knight Gallant: Thunderstrike gauntlet, meltagun and a Reaper chainsword",
+					"Knight Crusader: Heavy stubber and either a Questoris-avenger gatling cannon and thermal cannon, or a rapid-fire battlecannon and thermal cannon",
 				],
-			},
-			{
-				text: "For +15pts, a Questoris Knight may have one of the following weapon loadouts instead:",
-				text_option: ["Knight Styrix", "Knight magaera"],
-			},
-			{
-				itallic_text:
-					"* A Questoris Knight with this loadout may also be equipped with rocket pods for +5 points",
 			},
 		],
 		upgrade_options: [
@@ -129,8 +121,6 @@ export const questorisFamilia: DETACHMENT[] = [
 					{ name: "Knight Crusader", cost: 0, td_ek: 10 },
 					{ name: "Knight Paladin", cost: 0 },
 					{ name: "Knight Gallant", cost: 0 },
-					{ name: "Knight Styrix", cost: 15 },
-					{ name: "Knight Magaera", cost: 15 },
 				],
 			},
 			{

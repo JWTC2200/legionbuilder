@@ -17,11 +17,7 @@ function ListModelsList() {
 		.map((detachment) => {
 			const detachmentInfo = detachmentData.filter((entry) => entry.id === detachment.id)[0]
 
-			const unitName = detachmentInfo.main_unit.length
-				? unitData.filter((entry) => entry.id === detachmentInfo.main_unit[0])[0].name
-				: ""
-
-			return { name: unitName, number: detachment.size, faction: detachmentInfo.faction }
+			return { id: detachmentInfo.main_unit[0], number: detachment.size, faction: detachmentInfo.faction }
 		})
 
 	const upgradeModels: ListModel[] = list.upgrades
@@ -29,28 +25,28 @@ function ListModelsList() {
 		.map((upgrade) =>
 			upgrade.upgrades.map((entry) => {
 				const unitInfo = unitData.filter((unit) => unit.id === entry.unit_ref)[0]
-				return { name: unitInfo.name, number: entry.size, faction: unitInfo.faction }
+				return { id: entry.unit_ref, number: entry.size, faction: unitInfo.faction }
 			})
 		)
 		.flat()
 
-	const allModels: ListModel[] = [...detachmentModels, ...upgradeModels].filter((model) => model.name)
+	const allModels: ListModel[] = [...detachmentModels, ...upgradeModels].filter((model) => model.id)
 
-	const uniqueModelNames = Array.from(new Set(allModels.map((model) => model.name)))
+	const uniqueModelNames = Array.from(new Set(allModels.map((model) => model.id)))
 
-	const groupByModelNames: ListModel[] = uniqueModelNames.map((modelName) => {
-		const matchedModels: ListModel[] = allModels.filter((model) => model.name === modelName)
+	const groupById: ListModel[] = uniqueModelNames.map((modelName) => {
+		const matchedModels: ListModel[] = allModels.filter((model) => model.id === modelName)
 
 		return {
-			name: modelName,
+			id: modelName,
 			number: matchedModels.reduce((acc, sum) => acc + sum.number, 0),
 			faction: matchedModels[0].faction,
 		}
 	})
 
-	const sortByModelName: ListModel[] = groupByModelNames.sort((a, b) => {
-		const nameA = a.name.toUpperCase()
-		const nameB = b.name.toUpperCase()
+	const sortByModelName: ListModel[] = groupById.sort((a, b) => {
+		const nameA = a.id
+		const nameB = b.id
 
 		if (nameA < nameB) {
 			return -1
@@ -77,12 +73,14 @@ function ListModelsList() {
 					</div>
 					<div className="px-2 pt-1 text-lg">
 						{faction.map((model) => {
+							const modelName = unitData.find((unit) => unit.id === model.id)!.name
+
 							return (
 								<div
-									key={`${model.name}xx${model.number}`}
+									key={`${model.id}xx${model.number}`}
 									className={"border-b border-backgrounds-950 last:border-none"}>
-									{model.name}, {model.number}
-									{compare ? <ListModelsOwned name={model.name} number={model.number} /> : null}
+									{modelName}, {model.number}
+									{compare ? <ListModelsOwned id={model.id} number={model.number} /> : null}
 								</div>
 							)
 						})}

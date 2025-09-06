@@ -1,14 +1,14 @@
 import { collectionState } from "@app/tools/collection/state"
 
 interface properties {
-	name: string
+	id: number
 	number: number
 }
 
-const ListModelsOwned = ({ name, number }: properties) => {
+const ListModelsOwned = ({ id, number }: properties) => {
 	const { collection } = collectionState()
 
-	const collectionModel = collection.find((model) => model.name === name)
+	const collectionModel = collection.find((model) => model.id === id)
 	const owned = collectionModel ? collectionModel.number : 0
 	const insufficient = owned < number
 

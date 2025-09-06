@@ -366,7 +366,7 @@ export const solar: UNIT_DATASHEET[] = [
 		special_rules: [
 			{ name: SpecialRule.flyer },
 			{ name: SpecialRule.hover },
-			{ name: SpecialRule.jink, value: "5+" },
+			{ name: SpecialRule.jink, value: "6+" },
 			{ name: SpecialRule.transport, value: 2 },
 		],
 	},
