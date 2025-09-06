@@ -597,6 +597,13 @@ export const astartes: DETACHMENT[] = [
 					{ name: "Lascannons", cost: 0 },
 				],
 			},
+			{
+				location: "Pintle",
+				options: [
+					{ name: "None", cost: 0 },
+					{ name: "Heavy bolter", cost: 5 },
+				],
+			},
 		],
 		datasheet_info: [
 			{
@@ -658,7 +665,7 @@ export const astartes: DETACHMENT[] = [
 				location: "Pintle",
 				options: [
 					{ name: "None", cost: 0 },
-					{ name: "Heavy bolter", cost: 0 },
+					{ name: "Heavy bolter", cost: 5 },
 				],
 			},
 		],
