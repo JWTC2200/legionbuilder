@@ -3072,10 +3072,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 				dice: 2,
 				to_hit: 5,
 				ap: 2,
-				traits: [
-					{ name: WeaponTraits.arc, value: "Front" },
-					{ name: WeaponTraits.blast, value: 3 },
-				],
+				traits: [{ name: WeaponTraits.arc, value: "Front" }],
 			},
 		],
 	},
