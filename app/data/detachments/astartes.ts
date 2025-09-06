@@ -65,7 +65,7 @@ export const astartes: DETACHMENT[] = [
 		],
 		datasheet_info: [
 			{
-				text: "A Rhino may change its Pintle Mounted twin-linked bolter for one of the following",
+				text: "A Rhino may be equipped with one of the following:",
 				options: [
 					{ text: "Pintle mounted havoc launcher", cost: 5 },
 					{ text: "Pintle mounted multi-melta", cost: 5 },
