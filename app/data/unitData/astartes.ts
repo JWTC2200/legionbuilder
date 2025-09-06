@@ -18,7 +18,7 @@ export const astartes: UNIT_DATASHEET[] = [
 		caf: 4,
 		morale: 2,
 		wounds: 1,
-		weapons: [1000, 2001],
+		weapons: [1004, 2001],
 		special_rules: [
 			{ name: SpecialRule.commander },
 			{ name: SpecialRule.inspire, value: '8"' },
@@ -400,7 +400,7 @@ export const astartes: UNIT_DATASHEET[] = [
 		unique: false,
 		unit_type: { type: UNIT_TYPE.cavalry, value: 1 },
 		name: "Javelin",
-		movement: '10"',
+		movement: '11"',
 		save: 4,
 		caf: 1,
 		morale: 3,
@@ -437,7 +437,7 @@ export const astartes: UNIT_DATASHEET[] = [
 		caf: 2,
 		morale: 3,
 		wounds: 1,
-		weapons: [1059, 1002],
+		weapons: [1059, 1002, 1075],
 		special_rules: [{ name: SpecialRule.forwardDeployment }, { name: SpecialRule.assaultTransport, value: "2" }],
 	},
 	{
@@ -486,7 +486,7 @@ export const astartes: UNIT_DATASHEET[] = [
 		morale: null,
 		wounds: 1,
 		weapons: [],
-		special_rules: [{ name: SpecialRule.dropPod }, { name: SpecialRule.shieldGenerator, value: "5" }],
+		special_rules: [{ name: SpecialRule.dropPod }, { name: SpecialRule.shieldGenerator, value: "+5" }],
 	},
 	{
 		id: 1028,
@@ -678,7 +678,7 @@ export const astartes: UNIT_DATASHEET[] = [
 		wounds: 3,
 		weapons: [1071, 1072, 1024, 1073, 1026],
 		special_rules: [
-			{ name: SpecialRule.largeTransport, value: 8 },
+			{ name: SpecialRule.largeAssaultTransport, value: 8 },
 			{ name: SpecialRule.voidShields, value: 2 },
 		],
 	},
@@ -709,9 +709,9 @@ export const astartes: UNIT_DATASHEET[] = [
 		movement: '8"',
 		save: 2,
 		caf: 3,
-		morale: 2,
+		morale: 3,
 		wounds: 2,
-		weapons: [1074, 1024, 1026, 1075, 1002],
+		weapons: [1076, 1024, 1026, 1075, 1002],
 		special_rules: [],
 	},
 	{

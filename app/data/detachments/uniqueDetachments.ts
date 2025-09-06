@@ -260,7 +260,7 @@ export const uniqueDetachments: DETACHMENT[] = [
 		detachment_type: [DETACHMENT_TYPE.transport],
 		base_cost: 70,
 		base_size: 1,
-		max_size: 10,
+		max_size: 20,
 		main_unit: [1023],
 		related_unit: [],
 		dataslate_loadout: [

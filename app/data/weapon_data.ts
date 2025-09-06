@@ -47,7 +47,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 				dice: 1,
 				to_hit: 5,
 				ap: 3,
-				traits: [{ name: WeaponTraits.antitank }, { name: WeaponTraits.arc, value: "Front" }],
+				traits: [{ name: WeaponTraits.antitank }],
 			},
 		],
 	},
@@ -167,7 +167,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 			{
 				range: '10"',
 				dice: 2,
-				to_hit: 5,
+				to_hit: 4,
 				ap: 1,
 				traits: [{ name: WeaponTraits.lightAT }, { name: WeaponTraits.rapidFire }],
 			},
@@ -265,10 +265,10 @@ export const weapons: WEAPON_DATASHEET[] = [
 		profiles: [
 			{
 				range: '22"',
-				dice: 2,
+				dice: 1,
 				to_hit: 5,
 				ap: 1,
-				traits: [{ name: WeaponTraits.antitank }],
+				traits: [{ name: WeaponTraits.accurate }, { name: WeaponTraits.antitank }],
 			},
 		],
 	},
@@ -752,11 +752,11 @@ export const weapons: WEAPON_DATASHEET[] = [
 		name: "Twin plasma guns",
 		profiles: [
 			{
-				range: '10"',
+				range: '8"',
 				dice: 1,
 				to_hit: 4,
 				ap: 1,
-				traits: [{ name: WeaponTraits.lightAT }],
+				traits: [{ name: WeaponTraits.assault }, { name: WeaponTraits.lightAT }],
 			},
 		],
 	},
@@ -1018,7 +1018,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 			{
 				range: '6"',
 				dice: 1,
-				to_hit: 4,
+				to_hit: 5,
 				ap: 3,
 				traits: [{ name: WeaponTraits.arc, value: "Front" }, { name: WeaponTraits.antitank }],
 			},
@@ -1219,7 +1219,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 				dice: 1,
 				to_hit: 5,
 				ap: 0,
-				traits: [{ name: WeaponTraits.light }],
+				traits: [{ name: WeaponTraits.light }, { name: WeaponTraits.rippleFire }],
 			},
 		],
 	},
@@ -1693,7 +1693,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 		name: "Lightning twin multi-laser",
 		profiles: [
 			{
-				range: '14"',
+				range: '12"',
 				dice: 4,
 				to_hit: 5,
 				ap: 0,
@@ -2028,11 +2028,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 				dice: 1,
 				to_hit: 4,
 				ap: 3,
-				traits: [
-					{ name: WeaponTraits.arc, value: "Front" },
-					{ name: WeaponTraits.demolisher },
-					{ name: WeaponTraits.barrage },
-				],
+				traits: [{ name: WeaponTraits.arc, value: "Front" }, { name: WeaponTraits.heavyBarrage }],
 			},
 		],
 	},
@@ -3347,7 +3343,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 		profiles: [
 			{
 				range: '20"',
-				dice: 2,
+				dice: 3,
 				to_hit: 3,
 				ap: 3,
 				traits: [{ name: WeaponTraits.arc, value: "Front" }],

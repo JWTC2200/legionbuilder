@@ -149,13 +149,13 @@ export const astartes: DETACHMENT[] = [
 		],
 		datasheet_info: [
 			{
-				text: "A Legion Tactical Detachment can purchase up to four upgrades. It may purchase the same upgrade multiple times: Each upgrade increases the Detachment size by 2, adding the respective models:",
+				text: "A Legion Tactical Detachment can purchase up to four upgrades chosen from the list below. It may purchase the same upgrade multiple times. Each upgrade increases the Detachment size by 2, adding the respective models:",
 				options: [
 					{ text: "Tactical Legionaries", cost: 12 },
-					{ text: "Plasma Tactical Suport Legionaries", cost: 15 },
-					{ text: "Missile Launcher Heavy Support Legionaries", cost: 20 },
+					{ text: "Plasma Gun support Legionaries", cost: 15 },
+					{ text: "Missile Launcher Support Legionaries", cost: 20 },
 					{ text: "Legion Terminators", cost: 20 },
-					{ text: "Assault Marines", cost: 12 },
+					{ text: "Assault Legionaries", cost: 12 },
 				],
 				info: "*Models added via this upgrade use their respective profiles below",
 			},
@@ -1054,7 +1054,7 @@ export const astartes: DETACHMENT[] = [
 		],
 		datasheet_info: [
 			{
-				text: "One in every two Landspeeders can exchange its plasma cannon and heavy bolter for a Nose Mounted heavy flamer and a Multi-melta for no free",
+				text: "One in every two Landspeeders can exchange its plasma cannon and heavy bolter for a Nose Mounted heavy flamer and a Multi-melta for free",
 			},
 			{
 				text: "A Legion Land Speeder Squadron can purchase one of the following upgrades:",
@@ -1213,7 +1213,7 @@ export const astartes: DETACHMENT[] = [
 			{
 				text: "Any Land Raider may be equipped with one of the following:",
 				options: [
-					{ text: "Pintle Mounted heavy flamer", cost: 5 },
+					{ text: "Pintle Mounted multi-melta", cost: 5 },
 					{ text: "Pintle Mounted heavy bolter", cost: 5 },
 				],
 			},
@@ -1513,7 +1513,7 @@ export const astartes: DETACHMENT[] = [
 			{
 				name: "Additional Termite",
 				unit_ref: 1032,
-				options: optionsArray(1, 14, 1),
+				options: optionsArray(7, 14, 1),
 			},
 		],
 		loadout_options: [],
@@ -1536,7 +1536,7 @@ export const astartes: DETACHMENT[] = [
 			{
 				text_option: [
 					"Kratos battlecannon with Co-axial autocannon or Melta blastgun with Co-axial autocannon",
-					"Two Hull Mounted heavy bolter or two Kratos lascannon or two Kratos autocannon",
+					"Hull Mounted heavy bolter or Kratos lascannon or Kratos autocannon",
 					"Sponson Mounted heavy bolters or Sponson Mounted lascannon",
 				],
 			},
@@ -1795,7 +1795,7 @@ export const astartes: DETACHMENT[] = [
 				options: [
 					{ number: 1, cost: 120, size: 1 },
 					{ number: 2, cost: 240, size: 2 },
-					{ number: 3, cost: 360, size: 3 },
+					{ number: 3, cost: 350, size: 3 },
 				],
 			},
 		],
@@ -1814,7 +1814,7 @@ export const astartes: DETACHMENT[] = [
 				options: [
 					{ text: "Increase the Detachment size by 1", cost: 120 },
 					{ text: "Increase the Detachment size by 2", cost: 240 },
-					{ text: "Increase the Detachment size by 3", cost: 360 },
+					{ text: "Increase the Detachment size by 3", cost: 350 },
 				],
 			},
 		],
