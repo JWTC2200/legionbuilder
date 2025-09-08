@@ -1289,7 +1289,7 @@ export const solar: DETACHMENT[] = [
 				],
 			},
 			{
-				text: pintleStubberTxt("Leman Russ Demolisher"),
+				text: pintleStubberTxt("Leman Russ Annihilator"),
 			},
 		],
 	},
@@ -1555,7 +1555,7 @@ export const solar: DETACHMENT[] = [
 		dataslate_loadout: [
 			{
 				text_option: [
-					"Malcador Annihilator Battlecanon",
+					"Malcador lascannon turret",
 					"Hull Mounted heavy bolter or Hull Mounted lascannon or Hull Mounted autocannon or Hull Mounted demolisher cannon",
 					"Malcador heavy bolter sponsons or Malcador lascannon sponsons or Malcador autocannon sponsons",
 				],
@@ -1640,6 +1640,13 @@ export const solar: DETACHMENT[] = [
 					{ name: "Heavy bolters", cost: 0 },
 					{ name: "Heavy flamers", cost: 0 },
 					{ name: "Autocannons", cost: 0 },
+				],
+			},
+			{
+				location: "Pintle",
+				options: [
+					{ name: "None", cost: 0 },
+					{ name: "Heavy Stubber", cost: 0 },
 				],
 			},
 		],

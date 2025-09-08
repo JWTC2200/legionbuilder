@@ -640,7 +640,7 @@ export const legends: FORMATION_SLOT[] = [
 	},
 	{
 		id: 7075,
-		type: DETACHMENT_TYPE.dedicated,
+		type: DETACHMENT_TYPE.bastion,
 		faction: FACTION.solar,
 		restricted: true,
 		options: [7075],

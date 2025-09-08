@@ -78,10 +78,10 @@ export const questorisFamilia: FORMATION[] = [
 		subfaction: null,
 		allegiance: null,
 		formation_slots: [
-			{ slot_type: SLOT_TYPE.compulsory, slot_id: [8106, 8107, 8107] },
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [4000, 8107, 8107] },
 			{
 				slot_type: SLOT_TYPE.optional,
-				slot_id: [8106, 8106, 8103, 8103, 8107, 8107, 8107],
+				slot_id: [4000, 4000, 8103, 8103, 8107, 8107, 8107],
 			},
 		],
 		rules: [
@@ -111,8 +111,8 @@ export const questorisFamilia: FORMATION[] = [
 		subfaction: null,
 		allegiance: null,
 		formation_slots: [
-			{ slot_type: SLOT_TYPE.compulsory, slot_id: [8106, 8108, 8108] },
-			{ slot_type: SLOT_TYPE.optional, slot_id: [8106, 8108, 8108, 8109, 8109] },
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [4000, 8108, 8108] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [4000, 8108, 8108, 8109, 8109] },
 		],
 		rules: [
 			supportFormationText(FACTION.questorisFamilia),

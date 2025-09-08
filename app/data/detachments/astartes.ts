@@ -93,52 +93,27 @@ export const astartes: DETACHMENT[] = [
 			{
 				name: "Additional Tactical Legionaries",
 				unit_ref: 1002,
-				options: [
-					{ number: 2, cost: 12, size: 2 },
-					{ number: 4, cost: 24, size: 4 },
-					{ number: 6, cost: 36, size: 6 },
-					{ number: 8, cost: 48, size: 8 },
-				],
+				options: optionsArray(4, 12, 2),
 			},
 			{
 				name: "Additional Plasma Support",
 				unit_ref: 1005,
-				options: [
-					{ number: 2, cost: 15, size: 2 },
-					{ number: 4, cost: 30, size: 4 },
-					{ number: 6, cost: 45, size: 6 },
-					{ number: 8, cost: 60, size: 8 },
-				],
+				options: optionsArray(4, 15, 2),
 			},
 			{
 				name: "Additional Missile Support",
 				unit_ref: 1006,
-				options: [
-					{ number: 2, cost: 20, size: 2 },
-					{ number: 4, cost: 40, size: 4 },
-					{ number: 6, cost: 60, size: 6 },
-					{ number: 8, cost: 80, size: 8 },
-				],
+				options: optionsArray(4, 20, 2),
 			},
 			{
 				name: "Additional Legion Terminators",
 				unit_ref: 1003,
-				options: [
-					{ number: 2, cost: 20, size: 2 },
-					{ number: 4, cost: 40, size: 4 },
-					{ number: 6, cost: 60, size: 6 },
-					{ number: 8, cost: 80, size: 8 },
-				],
+				options: optionsArray(4, 20, 2),
 			},
 			{
 				name: "Additional Assault Marines",
 				unit_ref: 1004,
-				options: [
-					{ number: 2, cost: 12, size: 2 },
-					{ number: 4, cost: 24, size: 4 },
-					{ number: 6, cost: 36, size: 6 },
-					{ number: 8, cost: 48, size: 8 },
-				],
+				options: optionsArray(4, 12, 2),
 			},
 		],
 		loadout_options: [
@@ -1427,9 +1402,6 @@ export const astartes: DETACHMENT[] = [
 					{ text: "2 additional Sicaran", cost: 90 },
 					{ text: "4 additional Sicaran", cost: 170 },
 				],
-			},
-			{
-				text: "Any Sicaran Arcus may be equipped with one Pintle Mounted heavy bolter for +5 points per model.",
 			},
 		],
 	},

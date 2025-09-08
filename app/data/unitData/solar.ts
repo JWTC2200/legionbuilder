@@ -384,7 +384,7 @@ export const solar: UNIT_DATASHEET[] = [
 		morale: 4,
 		wounds: 2,
 		weapons: [2048, 2020, 2074],
-		special_rules: [{ name: SpecialRule.exploratorAdaptation }, { name: SpecialRule.transport, value: 4 }],
+		special_rules: [{ name: SpecialRule.exploratorAdaptation }, { name: SpecialRule.largeTransport, value: 4 }],
 	},
 	{
 		id: 2020,

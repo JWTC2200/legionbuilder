@@ -1565,7 +1565,7 @@ export const legends: DETACHMENT[] = [
 		allegiance: null,
 		unique: true,
 		detachment_type: [DETACHMENT_TYPE.support],
-		base_cost: 0,
+		base_cost: 205,
 		base_size: 4,
 		max_size: 4,
 		main_unit: [1008],

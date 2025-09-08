@@ -298,16 +298,17 @@ export const uniqueDetachments: DETACHMENT[] = [
 				options: [
 					{ name: "None", cost: 0 },
 					{ name: "Multi-melta", cost: 5 },
+					{ name: "Heavy bolter", cost: 5 },
 				],
 			},
 		],
 		datasheet_info: [
 			{
-				text: "Any Spartan may exchange its Hull Mounted heavy bolter for a Hull Mounted lascannon  for +2pts per model",
-			},
-			{
 				text: "Any Spartan may be equipped with one of the following:",
-				options: [{ text: "Pintle Mounted multi-melta", cost: 5 }],
+				options: [
+					{ text: "Pintle Mounted multi-melta", cost: 5 },
+					{ text: "Pintle Mounted heavy boler", cost: 5 },
+				],
 			},
 		],
 	},

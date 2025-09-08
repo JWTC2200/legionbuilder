@@ -131,7 +131,7 @@ export const uniqueSlots: FORMATION_SLOT[] = [
 		type: DETACHMENT_TYPE.battle,
 		faction: FACTION.solar,
 		restricted: true,
-		options: [2008, 2023, 2024, 2025, 2026],
+		options: [2008, 2023, 2024, 2025, 2026, 2030],
 		description: "Leman Russ",
 	},
 	{
