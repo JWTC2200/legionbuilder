@@ -1959,7 +1959,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 				dice: 2,
 				to_hit: 4,
 				ap: 2,
-				traits: [{ name: WeaponTraits.arc, value: "Front" }, { name: WeaponTraits.shred }],
+				traits: [{ name: WeaponTraits.shred }],
 			},
 		],
 	},
@@ -1981,15 +1981,11 @@ export const weapons: WEAPON_DATASHEET[] = [
 		name: "Co-axial multi-laser",
 		profiles: [
 			{
-				range: '14"',
+				range: '12"',
 				dice: 2,
 				to_hit: 4,
 				ap: 0,
-				traits: [
-					{ name: WeaponTraits.arc, value: "Front" },
-					{ name: WeaponTraits.coaxial },
-					{ name: WeaponTraits.lightAT },
-				],
+				traits: [{ name: WeaponTraits.coaxial }, { name: WeaponTraits.lightAT }],
 			},
 		],
 	},
@@ -1998,7 +1994,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 		name: "Stormhammer multi-laser sponsons",
 		profiles: [
 			{
-				range: '14"',
+				range: '12"',
 				dice: 5,
 				to_hit: 4,
 				ap: 0,

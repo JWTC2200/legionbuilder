@@ -213,7 +213,7 @@ export const solar: DETACHMENT[] = [
 				text: "An Auxilia Rapier Battery can purchase the following upgrades:",
 				options: [
 					{ text: "4 additional Rapier", cost: 50 },
-					{ text: "7 additional Rapier", cost: 100 },
+					{ text: "8 additional Rapier", cost: 100 },
 				],
 			},
 		],
@@ -954,8 +954,8 @@ export const solar: DETACHMENT[] = [
 			{
 				text: "An Auxilia Valdor Squadron can purchase one of the following upgrades.",
 				options: [
-					{ text: "Increase the Detachment size by 1", cost: 70 },
-					{ text: "Increase the Detachment size by 2", cost: 140 },
+					{ text: "Increase the Detachment size by 1", cost: 55 },
+					{ text: "Increase the Detachment size by 2", cost: 110 },
 				],
 			},
 			{
@@ -1547,7 +1547,7 @@ export const solar: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.battle],
-		base_cost: 160,
+		base_cost: 150,
 		base_size: 2,
 		max_size: 6,
 		main_unit: [2035],

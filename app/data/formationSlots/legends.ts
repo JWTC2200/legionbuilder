@@ -473,6 +473,14 @@ export const legends: FORMATION_SLOT[] = [
 		description: "Legion Command Detachment",
 	},
 	{
+		id: 70540,
+		type: DETACHMENT_TYPE.dedicated,
+		faction: FACTION.astartes,
+		restricted: true,
+		options: [70540],
+		description: "Command Land Raider",
+	},
+	{
 		id: 7055,
 		type: DETACHMENT_TYPE.dedicated,
 		faction: FACTION.astartes,

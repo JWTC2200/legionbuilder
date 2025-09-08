@@ -1359,6 +1359,34 @@ export const legends: DETACHMENT[] = [
 		datasheet_info: [],
 	},
 	{
+		id: 70540,
+		name: "Legion Land Raider Detachment",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		unique: true,
+		detachment_type: [DETACHMENT_TYPE.dedicated],
+		base_cost: 0,
+		base_size: 1,
+		max_size: 1,
+		main_unit: [1024],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: ["Sponson Mounted twin-linked lascannon"],
+			},
+		],
+		upgrade_options: [],
+		loadout_options: [
+			{
+				location: "Pintle",
+				options: [{ name: "Multi-melta", cost: 0 }],
+				required: 1,
+			},
+		],
+		datasheet_info: [],
+	},
+	{
 		id: 7055,
 		name: "Legion Land Raider Detachment",
 		faction: FACTION.astartes,

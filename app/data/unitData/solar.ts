@@ -263,7 +263,7 @@ export const solar: UNIT_DATASHEET[] = [
 		save: 3,
 		caf: 0,
 		morale: null,
-		wounds: 1,
+		wounds: 2,
 		weapons: [2039, 2040, 2041, 1048, 2031, 2032],
 		special_rules: [{ name: SpecialRule.flyer }, { name: SpecialRule.jink, value: "5+" }],
 	},
@@ -279,7 +279,7 @@ export const solar: UNIT_DATASHEET[] = [
 		save: 3,
 		caf: 0,
 		morale: null,
-		wounds: 1,
+		wounds: 2,
 		weapons: [2042, 2043],
 		loadout: [
 			{
@@ -308,7 +308,7 @@ export const solar: UNIT_DATASHEET[] = [
 		save: 3,
 		caf: 0,
 		morale: null,
-		wounds: 1,
+		wounds: 2,
 		weapons: [2042, 2043, 2044],
 		loadout: [
 			{
@@ -334,7 +334,7 @@ export const solar: UNIT_DATASHEET[] = [
 		save: 3,
 		caf: 0,
 		morale: null,
-		wounds: 1,
+		wounds: 2,
 		weapons: [2045, 2040, 2046, 2047],
 		loadout: [
 			{
@@ -635,7 +635,7 @@ export const solar: UNIT_DATASHEET[] = [
 		unit_type: { type: UNIT_TYPE.vehicle, value: 2 },
 		name: "Malcador Annihilator",
 		movement: '2"',
-		save: 3,
+		save: 2,
 		caf: 2,
 		morale: 4,
 		wounds: 2,
