@@ -92,7 +92,7 @@ export const questorisFamilia: DETACHMENT[] = [
 		max_size: 3,
 		break_strength: 3,
 		main_unit: [4000],
-		related_unit: [4001, 4002],
+		related_unit: [],
 		dataslate_loadout: [
 			{
 				text: "Each Questoris Knight has one of the following weapon loadouts:",
@@ -135,6 +135,8 @@ export const questorisFamilia: DETACHMENT[] = [
 				options: [
 					{ name: "None", cost: 0 },
 					{ name: "Thunderstrike Gauntlet", cost: 10 },
+					{ name: "Gatling cannon", cost: 0 },
+					{ name: "Battlecannon", cost: 0 },
 				],
 			},
 		],

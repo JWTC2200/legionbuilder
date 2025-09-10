@@ -427,7 +427,7 @@ export const solar: UNIT_DATASHEET[] = [
 		unit_type: { type: UNIT_TYPE.vehicle, value: 2 },
 		name: "Valdor",
 		movement: '8"',
-		save: 3,
+		save: 2,
 		caf: 1,
 		morale: 4,
 		wounds: 2,

@@ -1646,7 +1646,7 @@ export const solar: DETACHMENT[] = [
 				location: "Pintle",
 				options: [
 					{ name: "None", cost: 0 },
-					{ name: "Heavy Stubber", cost: 0 },
+					{ name: "Heavy Stubber", cost: 5 },
 				],
 			},
 		],

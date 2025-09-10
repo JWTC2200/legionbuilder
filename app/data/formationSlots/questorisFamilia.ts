@@ -12,7 +12,7 @@ export const questorisFamilia: FORMATION_SLOT[] = [
 		type: DETACHMENT_TYPE.knight,
 		faction: FACTION.questorisFamilia,
 		restricted: true,
-		options: [8102, 8015],
+		options: [8102, 8105],
 		description: "Questoris Knight Banner",
 	},
 	{
