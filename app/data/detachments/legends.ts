@@ -1039,6 +1039,24 @@ export const legends: DETACHMENT[] = [
 		],
 		datasheet_info: [],
 	},
+	{
+		id: 70390,
+		name: "Legion Missile Support Detachment",
+		faction: FACTION.astartes,
+		subfaction: SUBFACTION_TYPE.deathGuard,
+		allegiance: null,
+		unique: true,
+		detachment_type: [DETACHMENT_TYPE.support],
+		base_cost: 0,
+		base_size: 4,
+		max_size: 4,
+		main_unit: [1006],
+		related_unit: [],
+		dataslate_loadout: [],
+		upgrade_options: [],
+		loadout_options: [],
+		datasheet_info: [],
+	},
 
 	// White Scars Chogorian Warband
 	{

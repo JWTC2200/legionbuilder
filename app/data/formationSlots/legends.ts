@@ -345,6 +345,14 @@ export const legends: FORMATION_SLOT[] = [
 		options: [7039],
 		description: "Legion Rapier Battery",
 	},
+	{
+		id: 70390,
+		type: DETACHMENT_TYPE.support,
+		faction: FACTION.astartes,
+		restricted: true,
+		options: [70390],
+		description: "Legion Missile Launcher Support Detachment",
+	},
 
 	// White Scars Chogorian Warband
 	{
