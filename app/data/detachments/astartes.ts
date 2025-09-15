@@ -418,8 +418,8 @@ export const astartes: DETACHMENT[] = [
 				text: "A Legion Contemptor Dreadnought Talon can purchase one of the following upgrades:",
 				options: [
 					{ text: "Increase the Detachment size by 2", cost: 30 },
-					{ text: "Increase the Detachment size by 2", cost: 60 },
-					{ text: "Increase the Detachment size by 2", cost: 90 },
+					{ text: "Increase the Detachment size by 4", cost: 60 },
+					{ text: "Increase the Detachment size by 6", cost: 90 },
 				],
 			},
 		],

@@ -306,7 +306,7 @@ export const questorisFamilia: DETACHMENT[] = [
 	},
 	{
 		id: 8106,
-		name: "Cerastus Knight Atropos Banner",
+		name: "Cerastus Knight Atrapos Banner",
 		faction: FACTION.strategic,
 		subfaction: null,
 		allegiance: null,
@@ -320,7 +320,7 @@ export const questorisFamilia: DETACHMENT[] = [
 		related_unit: [],
 		dataslate_loadout: [
 			{
-				text_option: ["Graviton Singularity cannon", "Atropos lascutter"],
+				text_option: ["Graviton Singularity cannon", "Atrapos lascutter"],
 			},
 		],
 		upgrade_options: [

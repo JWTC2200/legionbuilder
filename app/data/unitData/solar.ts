@@ -634,7 +634,7 @@ export const solar: UNIT_DATASHEET[] = [
 		unique: false,
 		unit_type: { type: UNIT_TYPE.vehicle, value: 2 },
 		name: "Malcador Annihilator",
-		movement: '2"',
+		movement: '9"',
 		save: 2,
 		caf: 2,
 		morale: 4,
