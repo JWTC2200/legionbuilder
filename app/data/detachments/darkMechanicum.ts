@@ -190,15 +190,7 @@ export const darkMechanicum: DETACHMENT[] = [
 				options: optionsArray(3, 25, 2),
 			},
 		],
-		loadout_options: [
-			{
-				location: "Arm",
-				options: [
-					{ name: "Myrmidon volkites", cost: 0 },
-					{ name: "Conversion beamers", cost: 0 },
-				],
-			},
-		],
+		loadout_options: [],
 		datasheet_info: [
 			{
 				text: oneUpgrade("Myrmidon Destructor Host"),

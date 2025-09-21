@@ -1762,7 +1762,7 @@ export const astartes: DETACHMENT[] = [
 		],
 		upgrade_options: [
 			{
-				name: "Additional Mastadon",
+				name: "Additional Mastodon",
 				unit_ref: 1038,
 				options: [
 					{ number: 1, cost: 120, size: 1 },

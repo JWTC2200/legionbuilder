@@ -468,7 +468,7 @@ export const solar: DETACHMENT[] = [
 				text: oneUpgrade("Auxilia Baneblade Squadron"),
 				options: [
 					{ text: "Increase the Detachment size by 1", cost: 90 },
-					{ text: "Increase the Detachment size by 1", cost: 180 },
+					{ text: "Increase the Detachment size by 2", cost: 180 },
 				],
 			},
 			{
@@ -711,7 +711,7 @@ export const solar: DETACHMENT[] = [
 					{ name: "Marauder Bomber", cost: 0 },
 					{ name: "Marauder Pathfinder", cost: 0 },
 					{ name: "Marauder Colossus", cost: 0 },
-					{ name: "Marauder Destroyer", cost: 10 },
+					{ name: "Marauder Destroyer", cost: 0 },
 				],
 			},
 			{
@@ -733,7 +733,7 @@ export const solar: DETACHMENT[] = [
 		],
 		datasheet_info: [
 			{
-				text: "Any Marauder Bomber can be upgraded o a Marauder Pathfinder, Marauder Colossus or Marauder Destroyer, using the respective profile shown below, for free",
+				text: "Any Marauder Bomber can be upgraded to a Marauder Pathfinder, Marauder Colossus or Marauder Destroyer, using the respective profile shown below, for free",
 			},
 			{
 				text: "An Auxilia Marauder Squadron Squadron can purchase one of the following upgrades:",
@@ -1655,7 +1655,7 @@ export const solar: DETACHMENT[] = [
 				text: oneUpgrade("Auxilia Hellhammer Squadron"),
 				options: [
 					{ text: "Increase the Detachment size by 1", cost: 90 },
-					{ text: "Increase the Detachment size by 1", cost: 180 },
+					{ text: "Increase the Detachment size by 2", cost: 180 },
 				],
 			},
 			{
