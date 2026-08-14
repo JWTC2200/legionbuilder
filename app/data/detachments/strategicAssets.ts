@@ -338,6 +338,8 @@ export const strategicAssets: DETACHMENT[] = [
 					"Reaver gatling blaster",
 					"Reaver volcano cannon",
 					"Reaver melta cannon",
+					"Reaver graviton obliterator",
+					"Reaver volkite annihilator",
 					"Reaver power fist",
 					"Reaver chainfist",
 				],
@@ -366,6 +368,8 @@ export const strategicAssets: DETACHMENT[] = [
 					{ name: "Reaver melta cannon", cost: 0, td_ek: 40 },
 					{ name: "Reaver power fist", cost: 0 },
 					{ name: "Reaver chainfist", cost: 0 },
+					{ name: "Reaver graviton obliterator", cost: 0 },
+					{ name: "Reaver volkite annihilator", cost: 0 },
 				],
 			},
 			{
@@ -377,6 +381,8 @@ export const strategicAssets: DETACHMENT[] = [
 					{ name: "Reaver melta cannon", cost: 0, td_ek: 40 },
 					{ name: "Reaver power fist", cost: 0 },
 					{ name: "Reaver chainfist", cost: 0 },
+					{ name: "Reaver graviton obliterator", cost: 0 },
+					{ name: "Reaver volkite annihilator", cost: 0 },
 				],
 			},
 			{
@@ -423,6 +429,8 @@ export const strategicAssets: DETACHMENT[] = [
 					"Reaver gatling blaster",
 					"Reaver volcano cannon",
 					"Reaver melta cannon",
+					"Reaver graviton obliterator",
+					"Reaver volkite annihilator",
 				],
 			},
 		],
@@ -435,6 +443,8 @@ export const strategicAssets: DETACHMENT[] = [
 					{ name: "Reaver gatling blaster", cost: 0 },
 					{ name: "Reaver volcano cannon", cost: 0, td_ek: 30 },
 					{ name: "Reaver melta cannon", cost: 0, td_ek: 40 },
+					{ name: "Reaver graviton obliterator", cost: 0 },
+					{ name: "Reaver volkite annihilator", cost: 0 },
 				],
 			},
 			{
@@ -444,6 +454,8 @@ export const strategicAssets: DETACHMENT[] = [
 					{ name: "Reaver gatling blaster", cost: 0 },
 					{ name: "Reaver volcano cannon", cost: 0, td_ek: 30 },
 					{ name: "Reaver melta cannon", cost: 0, td_ek: 40 },
+					{ name: "Reaver graviton obliterator", cost: 0 },
+					{ name: "Reaver volkite annihilator", cost: 0 },
 				],
 			},
 			{
