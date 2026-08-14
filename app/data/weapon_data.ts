@@ -3674,7 +3674,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 		name: "Plasma blastgun",
 		profiles: [
 			{
-				range: '20"',
+				range: '25"',
 				dice: 3,
 				to_hit: 3,
 				ap: 3,
@@ -3790,7 +3790,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 		name: "Ursus claw",
 		profiles: [
 			{
-				range: '6"',
+				range: '10"',
 				dice: 1,
 				to_hit: 4,
 				ap: "SP",
@@ -3803,7 +3803,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 		name: "Natrix shock lance",
 		profiles: [
 			{
-				range: '6"',
+				range: '8"',
 				dice: 1,
 				to_hit: 2,
 				ap: 1,
@@ -4079,7 +4079,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 		profiles: [
 			{
 				range: '22"',
-				dice: 9,
+				dice: 10,
 				to_hit: 5,
 				ap: 1,
 				traits: [
@@ -4225,8 +4225,8 @@ export const weapons: WEAPON_DATASHEET[] = [
 		name: "Sunfury plasma annihilator",
 		profiles: [
 			{
-				range: '25"',
-				dice: 3,
+				range: '30"',
+				dice: 4,
 				to_hit: 3,
 				ap: 3,
 				traits: [{ name: WeaponTraits.arc, value: "Front" }],
@@ -4412,7 +4412,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 		profiles: [
 			{
 				range: '16"',
-				dice: 4,
+				dice: 5,
 				to_hit: 4,
 				ap: 2,
 				traits: [
@@ -4779,6 +4779,42 @@ export const weapons: WEAPON_DATASHEET[] = [
 					{ name: WeaponTraits.engineKiller, value: 1 },
 					{ name: WeaponTraits.rend },
 					{ name: WeaponTraits.wrecker, value: 3 },
+				],
+			},
+		],
+	},
+	{
+		id: 4095,
+		name: "Reaver graviton obliterator",
+		profiles: [
+			{
+				range: '30"',
+				dice: 2,
+				to_hit: null,
+				ap: 3,
+				traits: [
+					{ name: WeaponTraits.arc, value: "Front" },
+					{ name: WeaponTraits.demolisher },
+					{ name: WeaponTraits.gravitonPulse },
+				],
+			},
+		],
+	},
+	{
+		id: 4096,
+		name: "Reaver volkite annihilator",
+		profiles: [
+			{
+				range: '16"',
+				dice: 4,
+				to_hit: 4,
+				ap: 2,
+				traits: [
+					{ name: WeaponTraits.arc, value: "Front" },
+					{ name: WeaponTraits.beam },
+					{ name: WeaponTraits.deflagrate },
+					{ name: WeaponTraits.lightAT },
+					{ name: WeaponTraits.shieldbane },
 				],
 			},
 		],
