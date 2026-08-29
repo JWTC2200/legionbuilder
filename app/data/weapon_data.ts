@@ -446,7 +446,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 				range: '10"',
 				dice: 1,
 				to_hit: 4,
-				ap: 2,
+				ap: 4,
 				traits: [{ name: WeaponTraits.antitank }, { name: WeaponTraits.armourbane }],
 			},
 		],
