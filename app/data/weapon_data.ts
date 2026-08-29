@@ -3909,7 +3909,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 			{
 				range: '6"',
 				dice: 2,
-				to_hit: 3,
+				to_hit: 4,
 				ap: 2,
 				traits: [{ name: WeaponTraits.arc, value: "Front" }, { name: WeaponTraits.accurate }],
 			},
